@@ -288,6 +288,7 @@
       background:
         radial-gradient(circle at 92% 15%, rgba(101,247,173,.10), transparent 19rem),
         linear-gradient(145deg, #111a23, #0b1118);
+      text-decoration: none;
     }
     .kolfat h3 { font-size: clamp(1.7rem, 4vw, 2.6rem); letter-spacing: -.05em; }
     .kolfat .mono { color: var(--accent); font: 800 .78rem ui-monospace, monospace; text-transform: uppercase; letter-spacing: .14em; }
@@ -385,7 +386,7 @@
             <div><span class="key">platforms</span>=Linux,Proxmox,Docker,Networks</div>
             <div><span class="key">method</span>=Document_Test_Rebuild</div>
             <br>
-            <div><span class="cmd">$</span> security-check</div>
+            <div><span class="cmd">$</span> security_check</div>
             <div><span class="ok">✓</span> least_privilege</div>
             <div><span class="ok">✓</span> secrets_out_of_git</div>
             <div><span class="ok">✓</span> backup_before_change</div>
@@ -437,13 +438,13 @@
           </a>
 
           <article class="card project">
-            <div class="project-top"><span class="project-name">automation-lab</span><span class="arrow">⌛</span></div>
+            <div class="project-top"><span class="project-name">automation_lab</span><span class="arrow">⌛</span></div>
             <p>Repeatable Linux hardening, configuration management, infrastructure validation, and operational automation.</p>
             <div class="tags"><span class="tag plan">planned</span><span class="tag">ansible</span><span class="tag">linux</span></div>
           </article>
 
           <article class="card project">
-            <div class="project-top"><span class="project-name">observability-lab</span><span class="arrow">⌛</span></div>
+            <div class="project-top"><span class="project-name">observability_lab</span><span class="arrow">⌛</span></div>
             <p>Monitoring, logging, alerting, dashboards, service health visibility, and troubleshooting workflows.</p>
             <div class="tags"><span class="tag plan">planned</span><span class="tag">monitoring</span><span class="tag">operations</span></div>
           </article>
@@ -472,14 +473,14 @@
       </section>
 
       <section aria-labelledby="software-title">
-        <article class="card kolfat">
+        <a class="card kolfat" href="/kolfat/">
           <div>
             <div class="mono">Software / New chapter</div>
             <h3 id="software-title">Kolfat</h3>
-            <p>Building a separate software identity alongside my infrastructure and security work. Product pages and public repositories will be added here as they are ready.</p>
+            <p>Building a separate software identity alongside my infrastructure and security work. Media_Kolfat is public, while Car_Kolfat remains private for now.</p>
           </div>
-          <div class="status">COMING SOON</div>
-        </article>
+          <div class="status">VIEW KOLFAT</div>
+        </a>
       </section>
     </div>
   </main>
