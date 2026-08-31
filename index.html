@@ -3,12 +3,496 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>1n50mn14c933k</title>
+  <meta name="description" content="1n50mn14c933k — IT System Administrator focused on secure infrastructure, homelab engineering, automation, monitoring, and resilient self-hosting.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#090d12">
+  <title>1n50mn14c933k | Infrastructure · Security · Homelab</title>
+  <style>
+    :root {
+      --bg: #090d12;
+      --bg-soft: #0d131b;
+      --surface: rgba(16, 23, 33, 0.78);
+      --surface-strong: #111923;
+      --border: #253244;
+      --border-bright: #34485f;
+      --text: #e7edf5;
+      --muted: #95a3b5;
+      --accent: #65f7ad;
+      --accent-soft: rgba(101, 247, 173, 0.12);
+      --blue: #72b7ff;
+      --warning: #f5d76e;
+      --shadow: 0 20px 70px rgba(0, 0, 0, 0.34);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 82% 6%, rgba(63, 122, 173, 0.13), transparent 30rem),
+        radial-gradient(circle at 8% 24%, rgba(101, 247, 173, 0.075), transparent 28rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.16;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+      z-index: -1;
+    }
+
+    a { color: inherit; }
+    .wrap { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(9, 13, 18, 0.76);
+      border-bottom: 1px solid rgba(52, 72, 95, 0.55);
+    }
+
+    nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      font-size: 1.02rem;
+      white-space: nowrap;
+    }
+    .brand .prompt { color: var(--accent); }
+
+    .nav-links { display: flex; gap: 22px; align-items: center; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: .9rem;
+      font-weight: 650;
+      transition: .18s ease;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      min-height: 620px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 64px;
+      padding: 88px 0 66px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 20px;
+      color: var(--accent);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .86rem;
+      font-weight: 700;
+    }
+
+    .pulse {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(101,247,173,.10), 0 0 20px rgba(101,247,173,.55);
+    }
+
+    h1, h2, h3 { line-height: 1.12; }
+    h1 {
+      margin: 0;
+      max-width: 800px;
+      font-size: clamp(3rem, 8vw, 6.6rem);
+      letter-spacing: -0.075em;
+      font-weight: 850;
+    }
+    h1 span { color: var(--accent); }
+
+    .hero-copy {
+      max-width: 700px;
+      margin: 25px 0 0;
+      color: #b2bdcb;
+      font-size: clamp(1rem, 2vw, 1.18rem);
+    }
+    .hero-copy strong { color: var(--text); }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 45px;
+      padding: 0 17px;
+      border: 1px solid var(--border-bright);
+      border-radius: 11px;
+      text-decoration: none;
+      font-weight: 750;
+      font-size: .91rem;
+      background: rgba(17,25,35,.72);
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .button:hover { transform: translateY(-2px); border-color: #55708d; background: #121c28; }
+    .button.primary { color: #07110c; background: var(--accent); border-color: var(--accent); }
+    .button.primary:hover { background: #7effbd; border-color: #7effbd; }
+
+    .terminal {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: rgba(7, 11, 16, .82);
+      box-shadow: var(--shadow);
+      transform: rotate(.6deg);
+    }
+    .terminal-top {
+      min-height: 43px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 15px;
+      background: #111720;
+      border-bottom: 1px solid var(--border);
+    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: #455466; }
+    .terminal-title { margin-left: 8px; color: #718096; font: 600 .72rem ui-monospace, monospace; }
+    .terminal-body {
+      padding: 26px 25px 30px;
+      color: #aebaca;
+      font: 500 .88rem/1.9 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .terminal-body .cmd { color: var(--accent); }
+    .terminal-body .key { color: var(--blue); }
+    .terminal-body .ok { color: var(--accent); }
+    .terminal-body .dim { color: #68778a; }
+
+    section { padding: 78px 0; }
+    .section-head { display: flex; justify-content: space-between; gap: 30px; align-items: end; margin-bottom: 30px; }
+    .section-kicker {
+      margin: 0 0 9px;
+      color: var(--accent);
+      font: 700 .78rem ui-monospace, monospace;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+    h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.05rem); letter-spacing: -0.05em; }
+    .section-note { max-width: 480px; margin: 0; color: var(--muted); }
+
+    .grid { display: grid; gap: 16px; }
+    .grid.three { grid-template-columns: repeat(3, 1fr); }
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, rgba(19,28,39,.88), rgba(11,16,23,.82));
+      box-shadow: 0 14px 44px rgba(0,0,0,.14);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .card:hover { transform: translateY(-3px); border-color: #3f5269; }
+    .card .icon { font-size: 1.45rem; margin-bottom: 17px; }
+    .card h3 { margin: 0 0 10px; font-size: 1.12rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+
+    .project {
+      text-decoration: none;
+      min-height: 208px;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-top { display: flex; justify-content: space-between; align-items: start; gap: 20px; }
+    .project-name { font: 800 1.08rem ui-monospace, monospace; letter-spacing: -.02em; }
+    .arrow { color: var(--muted); font-size: 1.2rem; transition: .18s ease; }
+    .project:hover .arrow { color: var(--accent); transform: translate(3px,-3px); }
+    .project p { margin-top: 15px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; padding-top: 22px; }
+    .tag {
+      display: inline-flex;
+      padding: 5px 9px;
+      border: 1px solid #2c3b4d;
+      border-radius: 999px;
+      color: #9dacbe;
+      background: #0b1119;
+      font: 650 .72rem ui-monospace, monospace;
+    }
+    .tag.live { color: var(--accent); border-color: rgba(101,247,173,.28); background: var(--accent-soft); }
+    .tag.plan { color: var(--warning); border-color: rgba(245,215,110,.25); background: rgba(245,215,110,.08); }
+
+    .principles {
+      display: grid;
+      grid-template-columns: .84fr 1.16fr;
+      gap: 38px;
+      align-items: start;
+    }
+    .principle-list { border-top: 1px solid var(--border); }
+    .principle {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 13px;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .check { color: var(--accent); font: 800 1rem ui-monospace, monospace; }
+    .principle strong { display: block; margin-bottom: 2px; font-size: .94rem; }
+    .principle span { color: var(--muted); font-size: .86rem; }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 28px;
+    }
+    .stack span {
+      padding: 8px 11px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: #0d141d;
+      color: #a8b5c5;
+      font: 650 .78rem ui-monospace, monospace;
+    }
+
+    .kolfat {
+      padding: 38px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+      border-color: rgba(101,247,173,.23);
+      background:
+        radial-gradient(circle at 92% 15%, rgba(101,247,173,.10), transparent 19rem),
+        linear-gradient(145deg, #111a23, #0b1118);
+    }
+    .kolfat h3 { font-size: clamp(1.7rem, 4vw, 2.6rem); letter-spacing: -.05em; }
+    .kolfat .mono { color: var(--accent); font: 800 .78rem ui-monospace, monospace; text-transform: uppercase; letter-spacing: .14em; }
+    .status {
+      min-width: 128px;
+      text-align: center;
+      padding: 10px 13px;
+      border: 1px solid rgba(101,247,173,.27);
+      border-radius: 999px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font: 750 .78rem ui-monospace, monospace;
+    }
+
+    footer {
+      padding: 38px 0 48px;
+      border-top: 1px solid var(--border);
+      color: #738196;
+      font-size: .82rem;
+    }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    footer a { text-decoration: none; color: #9aa9bb; }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; gap: 38px; min-height: auto; padding-top: 76px; }
+      .terminal { max-width: 620px; transform: none; }
+      .grid.three { grid-template-columns: 1fr 1fr; }
+      .principles { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 650px) {
+      .wrap { width: min(calc(100% - 28px), var(--max)); }
+      .nav-links a:not(.github) { display: none; }
+      .hero { padding: 66px 0 40px; }
+      h1 { font-size: clamp(2.75rem, 15vw, 4.3rem); }
+      section { padding: 58px 0; }
+      .section-head { display: block; }
+      .section-note { margin-top: 15px; }
+      .grid.three, .grid.two { grid-template-columns: 1fr; }
+      .kolfat { grid-template-columns: 1fr; padding: 26px; }
+      .status { justify-self: start; }
+      .footer-row { display: block; }
+      .footer-row span:last-child { display: block; margin-top: 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <h1>1n50mn14c933k</h1>
-    <p>IT System Admin · Homelab · Security · Software</p>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Primary navigation">
+        <a class="brand" href="#top"><span class="prompt">$</span> 1n50mn14c933k</a>
+        <div class="nav-links">
+          <a href="#focus">Focus</a>
+          <a href="#projects">Projects</a>
+          <a href="#principles">Security</a>
+          <a class="github" href="https://github.com/1n50mn14c933k" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> SYSTEMS ONLINE · BUILDING & LEARNING</div>
+          <h1 id="hero-title">Infrastructure.<br><span>Security.</span><br>Repeatability.</h1>
+          <p class="hero-copy">
+            I’m <strong>1n50mn14c933k</strong>, an IT System Administrator building a security-focused homelab for infrastructure engineering, automation, monitoring, resilient self-hosting, and practical learning.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/1n50mn14c933k" target="_blank" rel="noopener noreferrer">View GitHub profile ↗</a>
+            <a class="button" href="#projects">Explore projects ↓</a>
+          </div>
+        </div>
+
+        <div class="terminal" aria-label="Terminal-style profile summary">
+          <div class="terminal-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="terminal-title">profile.sh</span>
+          </div>
+          <div class="terminal-body">
+            <div><span class="cmd">$</span> whoami</div>
+            <div>1n50mn14c933k</div>
+            <br>
+            <div><span class="cmd">$</span> cat focus.conf</div>
+            <div><span class="key">role</span>=IT_System_Administrator</div>
+            <div><span class="key">focus</span>=Infrastructure,Security,Automation</div>
+            <div><span class="key">platforms</span>=Linux,Proxmox,Docker,Networks</div>
+            <div><span class="key">method</span>=Document_Test_Rebuild</div>
+            <br>
+            <div><span class="cmd">$</span> security-check</div>
+            <div><span class="ok">✓</span> least_privilege</div>
+            <div><span class="ok">✓</span> secrets_out_of_git</div>
+            <div><span class="ok">✓</span> backup_before_change</div>
+            <div><span class="ok">✓</span> monitor_before_trust</div>
+            <div class="dim">exit 0</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="focus" aria-labelledby="focus-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">01 / Focus</p>
+            <h2 id="focus-title">What I work on</h2>
+          </div>
+          <p class="section-note">A hands-on lab built to behave more like real infrastructure than a collection of disconnected experiments.</p>
+        </div>
+
+        <div class="grid three">
+          <article class="card"><div class="icon">🧱</div><h3>Infrastructure</h3><p>Proxmox, virtual machines, containers, storage, networking, lifecycle management, and resilient architecture.</p></article>
+          <article class="card"><div class="icon">🔐</div><h3>Security</h3><p>Hardening, least privilege, identity, remote access, segmentation, patching, logging, and defensive controls.</p></article>
+          <article class="card"><div class="icon">⚙️</div><h3>Automation</h3><p>Ansible, repeatable configuration, documented change control, validation, and recoverable deployments.</p></article>
+          <article class="card"><div class="icon">📡</div><h3>Monitoring</h3><p>Health checks, logs, alerting, observability, troubleshooting, and visibility before production trust.</p></article>
+          <article class="card"><div class="icon">🐧</div><h3>Linux & Self-Hosting</h3><p>Linux administration, Docker, Compose, secure self-hosted services, DNS, access, and service operations.</p></article>
+          <article class="card"><div class="icon">🧯</div><h3>Recovery</h3><p>Snapshots, backups, restore testing, rollback procedures, disaster recovery, and learning from failures.</p></article>
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">02 / Projects</p>
+            <h2 id="projects-title">Public work</h2>
+          </div>
+          <p class="section-note">Public repositories contain sanitized documentation only. Sensitive infrastructure data stays private.</p>
+        </div>
+
+        <div class="grid two">
+          <a class="card project" href="https://github.com/1n50mn14c933k/homelab-core" target="_blank" rel="noopener noreferrer">
+            <div class="project-top"><span class="project-name">homelab-core</span><span class="arrow">↗</span></div>
+            <p>Main homelab documentation, architecture, standards, inventory templates, security guidance, and operational practices.</p>
+            <div class="tags"><span class="tag live">foundation</span><span class="tag">documentation</span><span class="tag">security</span></div>
+          </a>
+
+          <a class="card project" href="https://github.com/1n50mn14c933k/1n50mn14c933k" target="_blank" rel="noopener noreferrer">
+            <div class="project-top"><span class="project-name">1n50mn14c933k</span><span class="arrow">↗</span></div>
+            <p>GitHub profile repository describing my homelab focus, security principles, tooling, and current learning direction.</p>
+            <div class="tags"><span class="tag live">profile</span><span class="tag">homelab</span><span class="tag">learning</span></div>
+          </a>
+
+          <article class="card project">
+            <div class="project-top"><span class="project-name">automation-lab</span><span class="arrow">⌛</span></div>
+            <p>Repeatable Linux hardening, configuration management, infrastructure validation, and operational automation.</p>
+            <div class="tags"><span class="tag plan">planned</span><span class="tag">ansible</span><span class="tag">linux</span></div>
+          </article>
+
+          <article class="card project">
+            <div class="project-top"><span class="project-name">observability-lab</span><span class="arrow">⌛</span></div>
+            <p>Monitoring, logging, alerting, dashboards, service-health visibility, and troubleshooting workflows.</p>
+            <div class="tags"><span class="tag plan">planned</span><span class="tag">monitoring</span><span class="tag">operations</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="principles" aria-labelledby="principles-title">
+        <div class="principles">
+          <div>
+            <p class="section-kicker">03 / Security baseline</p>
+            <h2 id="principles-title">Build it so it can be trusted — and rebuilt.</h2>
+            <p class="section-note" style="margin-top:18px">The lab is a learning environment, but the operating principles are deliberately production-minded.</p>
+            <div class="stack" aria-label="Technology stack">
+              <span>Linux</span><span>Proxmox</span><span>Docker</span><span>Ansible</span><span>UniFi</span><span>WireGuard</span><span>NetBird</span><span>authentik</span><span>GitHub</span><span>Backup & DR</span>
+            </div>
+          </div>
+
+          <div class="principle-list">
+            <div class="principle"><div class="check">01</div><div><strong>No secrets in public Git</strong><span>Passwords, tokens, keys, private addressing, customer data, and sensitive configuration stay out.</span></div></div>
+            <div class="principle"><div class="check">02</div><div><strong>Least privilege by default</strong><span>Users, services, containers, integrations, and automation receive only the access they need.</span></div></div>
+            <div class="principle"><div class="check">03</div><div><strong>Back up before changing</strong><span>Snapshots, backups, and rollback planning come before potentially disruptive work.</span></div></div>
+            <div class="principle"><div class="check">04</div><div><strong>Monitor before trusting</strong><span>Logs, health checks, alerts, and observability are part of the deployment—not an afterthought.</span></div></div>
+            <div class="principle"><div class="check">05</div><div><strong>Document for recovery</strong><span>Documentation should explain what exists, why it exists, how it is secured, and how to rebuild it.</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="software-title">
+        <article class="card kolfat">
+          <div>
+            <div class="mono">Software / New chapter</div>
+            <h3 id="software-title">Kolfat</h3>
+            <p>Building a separate software identity alongside my infrastructure and security work. Product pages and public repositories will be added here as they are ready.</p>
+          </div>
+          <div class="status">COMING SOON</div>
+        </article>
+      </section>
+    </div>
   </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© <span id="year">2026</span> 1n50mn14c933k · Built as a static GitHub Pages site.</span>
+      <span><a href="https://github.com/1n50mn14c933k" target="_blank" rel="noopener noreferrer">github.com/1n50mn14c933k ↗</a></span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
