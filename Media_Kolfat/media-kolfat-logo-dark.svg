@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+<title id="title">Media Kolfat dark logo</title><desc id="desc">Media Kolfat maid mascot with media folders and photo, video and music icons.</desc>
+<defs>
+  <linearGradient id="folder" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#42d2dc"/><stop offset="1" stop-color="#16b7c5"/></linearGradient>
+  <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7a351a"/><stop offset="1" stop-color="#54210f"/></linearGradient>
+  <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffbd85"/><stop offset="1" stop-color="#f7ae73"/></linearGradient>
+  <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#000" flood-opacity=".22"/></filter>
+</defs>
+<circle cx="400" cy="323" r="286" fill="#06213f" stroke="#11c7d5" stroke-width="10"/>
+<circle cx="400" cy="323" r="270" fill="none" stroke="#31d9e4" stroke-width="3" opacity=".75"/>
+<g stroke="#061a31" stroke-width="7" stroke-linejoin="round" filter="url(#softShadow)">
+ <path d="M112 386Q112 366 132 363L206 352L230 323Q236 316 250 316H323Q338 316 340 331L363 514L166 548Q145 551 140 530Z" fill="url(#folder)"/>
+ <path d="M88 429Q88 409 110 405L202 390L221 363Q227 354 241 354H309Q323 354 326 370L349 523L139 560Q116 564 111 542Z" fill="#11c7d5"/>
+ <path d="M691 392Q694 373 674 368L590 348L570 320Q564 312 550 312H487Q472 312 469 327L445 510L635 554Q657 559 663 537Z" fill="url(#folder)"/>
+ <path d="M713 438Q716 418 695 412L605 389L585 361Q579 353 565 353H501Q486 353 483 369L458 522L663 571Q685 576 692 553Z" fill="#11c7d5"/>
+</g>
+<g stroke="#061a31" stroke-width="7" stroke-linejoin="round">
+ <g transform="rotate(-8 208 292)"><rect x="151" y="219" width="118" height="146" rx="15" fill="#f7fbff"/><rect x="167" y="236" width="86" height="112" rx="10" fill="#061a31"/><polygon points="197,264 197,321 235,292" fill="#f7fbff"/><g fill="#f7fbff"><rect x="158" y="242" width="8" height="14"/><rect x="158" y="270" width="8" height="14"/><rect x="158" y="298" width="8" height="14"/><rect x="158" y="326" width="8" height="14"/><rect x="254" y="242" width="8" height="14"/><rect x="254" y="270" width="8" height="14"/><rect x="254" y="298" width="8" height="14"/><rect x="254" y="326" width="8" height="14"/></g></g>
+ <g transform="rotate(9 593 293)"><rect x="531" y="226" width="124" height="134" rx="16" fill="#f7fbff"/><rect x="546" y="241" width="94" height="104" rx="10" fill="#061a31"/><circle cx="615" cy="269" r="11" fill="#f7fbff"/><path d="M553 333L578 304L593 319L611 295L635 333Z" fill="#f7fbff"/></g>
+ <g transform="rotate(10 623 416)"><rect x="573" y="354" width="105" height="126" rx="18" fill="#16b7c5"/><path d="M633 384V445Q633 460 616 463Q600 465 596 453Q592 440 607 434Q616 431 622 434V396L655 389V430Q655 444 640 448Q626 452 620 441Q615 429 628 422Q637 417 645 421V380Z" fill="#f7fbff" stroke="none"/></g>
+</g>
+<g stroke="#061a31" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+ <ellipse cx="404" cy="111" rx="62" ry="58" fill="url(#hair)"/>
+ <path d="M355 121Q366 73 407 66Q449 72 462 119Q445 102 424 104Q390 107 355 121Z" fill="#7a351a"/>
+ <path d="M341 161Q337 111 373 88Q420 59 463 90Q485 108 484 147Q487 173 471 197L461 168Q454 136 431 122Q394 100 360 126Q347 137 341 161Z" fill="url(#hair)"/>
+ <path d="M348 136Q358 90 403 82Q450 88 467 132L448 143Q437 108 403 103Q371 107 362 145Z" fill="#f7fbff"/>
+ <path d="M354 113Q365 76 405 72Q447 77 461 111Q447 97 432 94Q403 83 380 98Q365 106 354 113Z" fill="#f7fbff"/>
+ <ellipse cx="407" cy="213" rx="74" ry="85" fill="url(#skin)"/>
+ <path d="M343 172Q345 127 377 115Q394 110 413 116Q382 132 368 153Q355 173 359 207Q350 194 343 172Z" fill="url(#hair)"/>
+ <path d="M455 128Q483 145 480 187Q478 215 457 235Q466 202 456 179Q447 159 431 147Q447 140 455 128Z" fill="url(#hair)"/>
+ <path d="M470 208Q490 223 479 252Q472 268 459 278Q466 258 458 244Q452 233 442 227Q458 223 470 208Z" fill="url(#hair)"/>
+ <path d="M372 198Q385 187 399 197" fill="none" stroke-width="5"/>
+ <path d="M422 196Q437 185 450 196" fill="none" stroke-width="5"/>
+ <ellipse cx="388" cy="201" rx="6" ry="8" fill="#061a31" stroke="none"/><ellipse cx="438" cy="199" rx="6" ry="8" fill="#061a31" stroke="none"/>
+ <path d="M408 205Q402 221 409 226" fill="none" stroke-width="3"/>
+ <path d="M389 239Q409 255 430 238Q410 247 389 239Z" fill="#dc5c37" stroke-width="3"/>
+ <path d="M382 277L382 307Q403 326 425 307L425 276Z" fill="url(#skin)"/>
+ <path d="M336 318Q364 298 381 301Q405 321 427 301Q452 303 480 324L508 458Q484 523 407 532Q330 523 308 458Z" fill="#171a22"/>
+ <path d="M382 302L402 326L372 349L349 319Z" fill="#f7fbff"/>
+ <path d="M426 302L405 326L435 349L460 319Z" fill="#f7fbff"/>
+ <path d="M405 327L405 468" fill="none" stroke="#343a45" stroke-width="4"/>
+ <circle cx="407" cy="375" r="6" fill="#313744"/><circle cx="407" cy="414" r="6" fill="#313744"/>
+ <path d="M319 337Q292 356 297 398L342 412L360 362Z" fill="#252a35"/>
+ <path d="M475 338Q504 352 510 395L467 411L449 362Z" fill="#252a35"/>
+ <path d="M301 391L340 403L350 424L302 413Z" fill="#f7fbff"/>
+ <path d="M469 402L507 389L511 410L461 425Z" fill="#f7fbff"/>
+ <path d="M323 416Q351 454 403 465Q451 475 494 447" fill="none" stroke="#061a31" stroke-width="50"/>
+ <path d="M323 416Q351 454 403 465Q451 475 494 447" fill="none" stroke="url(#skin)" stroke-width="40"/>
+ <path d="M483 420Q454 450 410 453Q363 455 326 439" fill="none" stroke="#061a31" stroke-width="50"/>
+ <path d="M483 420Q454 450 410 453Q363 455 326 439" fill="none" stroke="url(#skin)" stroke-width="40"/>
+ <path d="M488 430Q507 417 521 427Q527 437 513 445Q500 450 488 446Z" fill="url(#skin)"/>
+ <path d="M318 427Q302 421 295 433Q298 446 313 451Q323 451 331 444Z" fill="url(#skin)"/>
+ <path d="M337 477Q405 499 477 477L464 558H347Z" fill="#f7fbff"/>
+ <path d="M347 492Q405 510 466 492" fill="none" stroke="#d8e2eb" stroke-width="4"/>
+ <path d="M344 492Q317 478 298 495Q307 522 344 518L363 505Z" fill="#f7fbff"/>
+ <path d="M462 492Q488 477 510 494Q499 520 462 518L444 505Z" fill="#f7fbff"/>
+</g>
+<path d="M74 566Q54 566 54 593V699Q54 732 86 732H272Q326 782 400 790Q474 782 528 732H714Q746 732 746 699V593Q746 566 726 566Z" fill="#06213f" stroke="#11c7d5" stroke-width="10" stroke-linejoin="round"/>
+<path d="M76 588Q76 578 90 578H710Q724 578 724 592V700Q724 713 708 713H520Q468 757 400 764Q332 757 280 713H92Q76 713 76 699Z" fill="none" stroke="#31d9e4" stroke-width="2" opacity=".75"/>
+<text x="91" y="666" fill="#ffffff" font-family="Arial Black,DejaVu Sans,sans-serif" font-size="77" font-weight="900" letter-spacing="-4">Media</text>
+<text x="390" y="666" fill="#10c7d5" font-family="Arial Black,DejaVu Sans,sans-serif" font-size="77" font-weight="900" letter-spacing="-5">Kolfat</text>
+<text x="400" y="709" fill="#10c7d5" text-anchor="middle" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" font-weight="800" letter-spacing="3">TAKES CARE OF YOUR MEDIA</text>
+<path d="M98 701H154M646 701H702" stroke="#10c7d5" stroke-width="5" stroke-linecap="round"/>
+</svg>
