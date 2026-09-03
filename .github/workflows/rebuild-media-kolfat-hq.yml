@@ -1,0 +1,72 @@
+name: Rebuild Media Kolfat HQ logos
+
+on:
+  push:
+    paths:
+      - '.github/workflows/rebuild-media-kolfat-hq.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild stored logo payloads
+        run: |
+          python3 - <<'PY'
+          import base64, gzip, pathlib, zipfile, io, shutil
+
+          root = pathlib.Path('Media_Kolfat')
+          out = root / 'hq-rebuilt'
+          out.mkdir(exist_ok=True)
+
+          def decode_chunks(folder, stem):
+              files = sorted(pathlib.Path(folder).glob('*.txt'))
+              payload = ''.join(p.read_text().strip() for p in files)
+              data = gzip.decompress(base64.b64decode(payload))
+              sig = data[:16]
+              ext = '.bin'
+              if data.startswith(b'\x89PNG\r\n\x1a\n'):
+                  ext = '.png'
+              elif data.startswith(b'RIFF') and data[8:12] == b'WEBP':
+                  ext = '.webp'
+              elif data.startswith(b'\xff\xd8\xff'):
+                  ext = '.jpg'
+              elif data.startswith(b'PK\x03\x04'):
+                  ext = '.zip'
+              path = out / f'{stem}{ext}'
+              path.write_bytes(data)
+              return path, sig, len(data)
+
+          report = []
+          for folder, stem in [
+              ('Media_Kolfat/logo-v4/light', 'logo-v4-light'),
+              ('Media_Kolfat/logo-v5', 'logo-v5-final'),
+          ]:
+              p, sig, size = decode_chunks(folder, stem)
+              report.append(f'{folder} -> {p.name} | {size} bytes | magic={sig.hex()}')
+              if p.suffix == '.zip':
+                  zdir = out / (p.stem + '-extracted')
+                  zdir.mkdir(exist_ok=True)
+                  with zipfile.ZipFile(p) as z:
+                      z.extractall(zdir)
+                  report.append('ZIP CONTENTS:')
+                  for q in sorted(zdir.rglob('*')):
+                      if q.is_file():
+                          report.append(f'  {q.relative_to(out)} | {q.stat().st_size} bytes')
+
+          (out / 'REPORT.txt').write_text('\n'.join(report) + '\n')
+          print('\n'.join(report))
+          PY
+
+      - name: Commit rebuilt assets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Media_Kolfat/hq-rebuilt
+          git commit -m 'Rebuild Media Kolfat HQ logo assets' || exit 0
+          git push
