@@ -70,3 +70,5 @@ jobs:
           git add Media_Kolfat/hq-rebuilt
           git commit -m 'Rebuild Media Kolfat HQ logo assets' || exit 0
           git push
+
+# rebuild trigger 2026-09-03
