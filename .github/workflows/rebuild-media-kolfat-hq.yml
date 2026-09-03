@@ -18,7 +18,7 @@ jobs:
       - name: Rebuild stored logo payloads
         run: |
           python3 - <<'PY'
-          import base64, gzip, pathlib, zipfile, io, shutil
+          import base64, gzip, pathlib, zipfile
 
           root = pathlib.Path('Media_Kolfat')
           out = root / 'hq-rebuilt'
@@ -27,6 +27,7 @@ jobs:
           def decode_chunks(folder, stem):
               files = sorted(pathlib.Path(folder).glob('*.txt'))
               payload = ''.join(p.read_text().strip() for p in files)
+              payload += '=' * (-len(payload) % 4)
               data = gzip.decompress(base64.b64decode(payload))
               sig = data[:16]
               ext = '.bin'
@@ -71,4 +72,4 @@ jobs:
           git commit -m 'Rebuild Media Kolfat HQ logo assets' || exit 0
           git push
 
-# rebuild trigger 2026-09-03
+# rebuild trigger 2026-09-03 padding fix
