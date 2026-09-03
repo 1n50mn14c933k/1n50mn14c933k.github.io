@@ -1,0 +1,56 @@
+name: Repository Hygiene Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  repository-hygiene:
+    name: Repository hygiene
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Verify required security files exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f ".github/CODEOWNERS"
+          test -f ".github/dependabot.yml"
+          test -f "SECURITY.md"
+          test -f "README.md"
+          test -f "CNAME"
+
+      - name: Check for dangerous secret file names
+        shell: bash
+        run: |
+          set -euo pipefail
+          blocked_files='
+          .env
+          .env.local
+          id_rsa
+          id_ed25519
+          passwords.txt
+          secrets.yml
+          secrets.yaml
+          *.pem
+          *.key
+          *.p12
+          *.pfx
+          '
+
+          for file in $blocked_files; do
+            if find . -name "$file" -print -quit | grep -q .; then
+              echo "Blocked sensitive file found: $file"
+              exit 1
+            fi
+          done
+
+          echo "No blocked sensitive file names found."
