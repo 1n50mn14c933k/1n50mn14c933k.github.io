@@ -1,0 +1,7 @@
+# Default owner
+* @1n50mn14c933k
+
+# Security-sensitive repository configuration
+/.github/ @1n50mn14c933k
+/SECURITY.md @1n50mn14c933k
+/CNAME @1n50mn14c933k
