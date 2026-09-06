@@ -211,9 +211,29 @@ html[lang="fa"] .eyebrow,html[lang="ar"] .eyebrow,html[lang="hi"] .eyebrow,
 html[lang="ja"] .eyebrow,html[lang="zh-CN"] .eyebrow{letter-spacing:.08em;font-size:.86rem}
 html[lang="fa"] .lead,html[lang="ar"] .lead,html[lang="hi"] .lead,
 html[lang="ja"] .lead,html[lang="zh-CN"] .lead{font-size:1.08rem;line-height:1.75}
+
+.contact-kolfat{
+  position:fixed;right:28px;bottom:24px;z-index:99998;
+  display:flex;flex-direction:column;gap:2px;min-width:205px;padding:10px 14px;
+  border:1px solid rgba(255,255,255,.42);background:rgba(0,0,0,.56);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  color:#fff;text-decoration:none;transition:.2s
+}
+.contact-kolfat:hover{background:#fff;color:#000;border-color:#fff}
+.contact-kolfat strong{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;line-height:1.25}
+.contact-kolfat span{font-size:.78rem;letter-spacing:.03em;line-height:1.3}
+@media(max-width:640px){
+  .contact-kolfat{right:12px;bottom:12px;min-width:0;padding:9px 11px}
+  .contact-kolfat strong{font-size:.62rem}
+  .contact-kolfat span{font-size:.72rem}
+}
 </style>
 </head>
 <body>
+<a class="contact-kolfat" href="mailto:contact@kolfat.app" aria-label="Email Kolfat at contact@kolfat.app">
+  <strong>CONTACT | KOLFAT.APP</strong>
+  <span>contact@kolfat.app</span>
+</a>
 <a class="site-logo" href="/" aria-label="Kolfat home">
   <img src="/assets/kolfat-logo.webp?v=d2c25ec0" alt="KOLFAT">
 </a>
