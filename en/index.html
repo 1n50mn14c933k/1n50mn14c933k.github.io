@@ -67,7 +67,7 @@ button{font:inherit}
   pointer-events:auto
 }
 .eyebrow{
-  margin:0 0 18px;text-transform:uppercase;letter-spacing:.42em;font-size:.68rem;font-weight:700;color:#ddd
+  margin:0 0 18px;text-transform:uppercase;letter-spacing:.30em;font-size:.80rem;font-weight:700;color:#f2f2ee;line-height:1.5
 }
 h1{
   font-family:Georgia,'Times New Roman',serif;
@@ -83,8 +83,8 @@ h1{
   min-width:150px;padding:0 28px 0 0;margin-right:28px;border-right:1px solid var(--line)
 }
 .feature:last-child{border-right:0}
-.feature strong{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;margin-bottom:4px}
-.feature span{color:#b9b9b4;font-size:.68rem}
+.feature strong{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:.80rem;line-height:1.4;margin-bottom:5px}
+.feature span{color:#d0d0ca;font-size:.78rem;line-height:1.45}
 .hero-foot{
   position:absolute;z-index:4;left:48px;right:48px;bottom:24px;
   display:flex;justify-content:space-between;align-items:center;
@@ -125,6 +125,27 @@ footer{padding:34px 0;background:#050505;border-top:1px solid rgba(255,255,255,.
 .lang-list{position:absolute;top:50px;right:0;width:176px;padding:7px;background:rgba(7,12,18,.96);border:1px solid rgba(255,255,255,.22);border-radius:14px;display:grid;gap:3px;box-shadow:0 18px 50px rgba(0,0,0,.45)}
 .lang-list a{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:9px;color:#fff;font-size:.86rem;font-weight:700;white-space:nowrap}
 .lang-list a:hover,.lang-list a[aria-current="page"]{background:rgba(255,255,255,.08)}
+
+/* Localized script compensation */
+html[lang="fa"] body,html[lang="ar"] body{font-family:Tahoma,"Segoe UI",Arial,sans-serif}
+html[lang="hi"] body{font-family:"Nirmala UI","Mangal","Segoe UI",Arial,sans-serif}
+html[lang="ja"] body{font-family:"Yu Gothic UI","Meiryo","Segoe UI",Arial,sans-serif}
+html[lang="zh-CN"] body{font-family:"Microsoft YaHei UI","Microsoft YaHei","Segoe UI",Arial,sans-serif}
+
+html[lang="fa"] .eyebrow,html[lang="ar"] .eyebrow,html[lang="hi"] .eyebrow,
+html[lang="ja"] .eyebrow,html[lang="zh-CN"] .eyebrow{font-size:.92rem;letter-spacing:.08em;line-height:1.65}
+html[lang="fa"] .lead,html[lang="ar"] .lead,html[lang="hi"] .lead,
+html[lang="ja"] .lead,html[lang="zh-CN"] .lead{font-size:1.28rem;line-height:1.65}
+html[lang="fa"] .feature strong,html[lang="ar"] .feature strong,html[lang="hi"] .feature strong,
+html[lang="ja"] .feature strong,html[lang="zh-CN"] .feature strong{font-size:.90rem;letter-spacing:.02em;line-height:1.5}
+html[lang="fa"] .feature span,html[lang="ar"] .feature span,html[lang="hi"] .feature span,
+html[lang="ja"] .feature span,html[lang="zh-CN"] .feature span{font-size:.86rem;line-height:1.55}
+html[lang="fa"] .hero .btn,html[lang="ar"] .hero .btn,html[lang="hi"] .hero .btn,
+html[lang="ja"] .hero .btn,html[lang="zh-CN"] .hero .btn{font-size:.84rem;letter-spacing:.06em}
+
+html[lang="de"] .eyebrow,html[lang="fr"] .eyebrow,html[lang="es"] .eyebrow,
+html[lang="pt"] .eyebrow,html[lang="ru"] .eyebrow{font-size:.82rem;letter-spacing:.20em}
+
 @media(max-height:850px) and (min-width:981px){
   .hero-copy{top:150px}
   h1{font-size:clamp(58px,4.1vw,80px);margin-bottom:20px}
