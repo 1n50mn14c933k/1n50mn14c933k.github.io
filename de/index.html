@@ -142,6 +142,8 @@ h1{
 footer{padding:34px 0;background:#050505;border-top:1px solid rgba(255,255,255,.08);color:#777;font-size:.75rem}
 .footer-inner{width:min(calc(100% - 72px),1260px);margin:auto;display:flex;justify-content:space-between;gap:20px}
 
+.support-top{position:fixed;top:18px;right:104px;z-index:100000;height:42px;padding:0 15px;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.5);backdrop-filter:blur(10px);color:#fff;display:flex;align-items:center;justify-content:center;border-radius:12px;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.support-top:hover{background:#fff;color:#000}
 .lang-menu{position:fixed;top:18px;right:28px;z-index:100000;direction:ltr}
 .lang-menu summary{list-style:none;min-width:64px;height:42px;padding:0 12px;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.5);backdrop-filter:blur(10px);color:#fff;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:12px;font-size:1rem}
 .lang-menu summary::-webkit-details-marker{display:none}
@@ -189,6 +191,7 @@ html[lang="pt"] .eyebrow,html[lang="ru"] .eyebrow{font-size:.82rem;letter-spacin
   .process{grid-template-columns:1fr}
 }
 @media(max-width:640px){
+  .support-top{top:14px;right:78px;height:38px;padding:0 10px;font-size:.60rem}
   .lang-menu{top:14px;right:12px}
   .lang-menu summary{height:38px;min-width:56px}
   .lang-list{top:44px;right:0}
@@ -240,6 +243,7 @@ html[lang="pt"] .eyebrow,html[lang="ru"] .eyebrow{font-size:.82rem;letter-spacin
   <span>contact@kolfat.app</span>
 </a>
 <a class="site-logo" href="/de/" aria-label="Kolfat home"><img src="/assets/kolfat-logo.webp?v=d2c25ec0" alt="KOLFAT"></a>
+<a class="support-top" href="/de/support/">SUPPORT</a>
 <details class="lang-menu">
   <summary aria-label="Change language" title="Change language">🇩🇪</summary>
   <div class="lang-list"><a href="/en/" data-lang="en">🇬🇧 English</a><a href="/fa/" data-lang="fa">🇮🇷 فارسی</a><a href="/de/" data-lang="de" aria-current="page">🇩🇪 Deutsch</a><a href="/es/" data-lang="es">🇪🇸 Español</a><a href="/it/" data-lang="it">🇮🇹 Italiano</a><a href="/fr/" data-lang="fr">🇫🇷 Français</a><a href="/pt/" data-lang="pt">🇵🇹 Português</a><a href="/ja/" data-lang="ja">🇯🇵 日本語</a><a href="/zh/" data-lang="zh">🇨🇳 中文</a><a href="/hi/" data-lang="hi">🇮🇳 हिन्दी</a><a href="/ru/" data-lang="ru">🇷🇺 Русский</a><a href="/ar/" data-lang="ar">🇸🇦 العربية</a></div>
