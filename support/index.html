@@ -8,6 +8,19 @@
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#050505">
 <link rel="canonical" href="https://kolfat.app/support/">
+<link rel="alternate" hreflang="en" href="https://kolfat.app/support/">
+<link rel="alternate" hreflang="fa" href="https://kolfat.app/fa/support/">
+<link rel="alternate" hreflang="de" href="https://kolfat.app/de/support/">
+<link rel="alternate" hreflang="es" href="https://kolfat.app/es/support/">
+<link rel="alternate" hreflang="it" href="https://kolfat.app/it/support/">
+<link rel="alternate" hreflang="fr" href="https://kolfat.app/fr/support/">
+<link rel="alternate" hreflang="pt" href="https://kolfat.app/pt/support/">
+<link rel="alternate" hreflang="ja" href="https://kolfat.app/ja/support/">
+<link rel="alternate" hreflang="zh-CN" href="https://kolfat.app/zh/support/">
+<link rel="alternate" hreflang="hi" href="https://kolfat.app/hi/support/">
+<link rel="alternate" hreflang="ru" href="https://kolfat.app/ru/support/">
+<link rel="alternate" hreflang="ar" href="https://kolfat.app/ar/support/">
+<link rel="alternate" hreflang="x-default" href="https://kolfat.app/support/">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="alternate icon" href="/favicon.svg" type="image/svg+xml">
 <style>
@@ -115,6 +128,14 @@ footer{
   .contact-kolfat strong{font-size:.62rem}
   .contact-kolfat span{font-size:.72rem}
 }
+
+.top-nav{position:fixed;top:18px;right:28px;z-index:10000;display:flex;align-items:start;gap:8px;direction:ltr}
+.support-top,.lang-menu summary{height:42px;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.55);backdrop-filter:blur(10px);color:#fff;border-radius:12px}
+.support-top{display:flex;align-items:center;padding:0 14px;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:700}
+.support-top:hover{background:#fff;color:#000}.lang-menu{position:relative}.lang-menu summary{list-style:none;min-width:64px;padding:0 12px;display:flex;align-items:center;justify-content:center;cursor:pointer}.lang-menu summary::-webkit-details-marker{display:none}
+.lang-list{position:absolute;top:50px;right:0;width:176px;padding:7px;background:rgba(7,12,18,.97);border:1px solid rgba(255,255,255,.22);border-radius:14px;display:grid;gap:3px;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.lang-list a{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:9px;text-decoration:none;color:#fff;font-size:.86rem;font-weight:700;white-space:nowrap}.lang-list a:hover,.lang-list a[aria-current="page"]{background:rgba(255,255,255,.08)}
+@media(max-width:640px){.top-nav{top:14px;right:12px;gap:6px}.support-top{height:38px;padding:0 9px;font-size:.58rem}.lang-menu summary{height:38px;min-width:54px}.lang-list{top:44px}}
 </style>
 </head>
 <body>
@@ -128,6 +149,7 @@ footer{
   <span>contact@kolfat.app</span>
 </a>
 
+<div class="top-nav"><a class="support-top" href="/support/">SUPPORT</a><details class="lang-menu"><summary aria-label="Change language">🇬🇧</summary><div class="lang-list"><a href="/support/" aria-current="page">🇬🇧 English</a><a href="/fa/support/">🇮🇷 فارسی</a><a href="/de/support/">🇩🇪 Deutsch</a><a href="/es/support/">🇪🇸 Español</a><a href="/it/support/">🇮🇹 Italiano</a><a href="/fr/support/">🇫🇷 Français</a><a href="/pt/support/">🇵🇹 Português</a><a href="/ja/support/">🇯🇵 日本語</a><a href="/zh/support/">🇨🇳 中文</a><a href="/hi/support/">🇮🇳 हिन्दी</a><a href="/ru/support/">🇷🇺 Русский</a><a href="/ar/support/">🇸🇦 العربية</a></div></details></div>
 <main>
   <div class="wrap">
     <p class="eyebrow">Kolfat.app</p>
