@@ -198,6 +198,13 @@ footer{
 /* Multilingual typography */
 html[dir="rtl"] .hero-copy{text-align:right;direction:rtl}
 html[dir="rtl"] .sources{direction:rtl}
+
+/* RTL footer alignment fix: keep copyright on the left like all other languages */
+html[dir="rtl"] footer .foot{
+  direction:ltr;
+  justify-content:flex-start;
+  text-align:left
+}
 html[lang="fa"] body,html[lang="ar"] body{font-family:Tahoma,"Segoe UI",Arial,sans-serif}
 html[lang="hi"] body{font-family:"Nirmala UI","Mangal","Segoe UI",Arial,sans-serif}
 html[lang="ja"] body{font-family:"Yu Gothic UI","Meiryo","Segoe UI",Arial,sans-serif}
