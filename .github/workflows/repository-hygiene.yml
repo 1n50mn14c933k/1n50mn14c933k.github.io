@@ -18,28 +18,41 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
-      - name: Verify required security files exist
+      - name: Verify production files exist
         shell: bash
         run: |
           set -euo pipefail
+
           test -f ".github/CODEOWNERS"
           test -f ".github/dependabot.yml"
-          test -f "SECURITY.md"
+          test -f ".nojekyll"
           test -f "README.md"
+          test -f "SECURITY.md"
           test -f "CNAME"
+          test -f "index.html"
+          test -f "robots.txt"
+          test -f "sitemap.xml"
+          test -f "en/index.html"
+          test -f "en/Media_Kolfat/index.html"
 
-      - name: Check for dangerous secret file names
+          test "$(tr -d '\r\n' < CNAME)" = "kolfat.app"
+
+      - name: Block dangerous secret file names
         shell: bash
         run: |
           set -euo pipefail
+
           blocked_files='
           .env
           .env.local
+          .env.production
           id_rsa
           id_ed25519
           passwords.txt
           secrets.yml
           secrets.yaml
+          credentials.yml
+          credentials.yaml
           *.pem
           *.key
           *.p12
@@ -53,4 +66,42 @@ jobs:
             fi
           done
 
-          echo "No blocked sensitive file names found."
+      - name: Reject obsolete reconstruction artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          blocked_paths='
+          Media_Kolfat/assets-v3
+          Media_Kolfat/assets-v4
+          Media_Kolfat/assets-vector
+          Media_Kolfat/logo-v4
+          Media_Kolfat/logo-v5
+          Media_Kolfat/vector-v2
+          Media_Kolfat/hq-rebuilt
+          en/assets/_order-upload
+          en/assets/hero-hq
+          en/assets/hero-hq55
+          en/assets/kolfat-hero
+          kolfat/Media_Kolfat/assets
+          '
+
+          for path in $blocked_paths; do
+            if [ -e "$path" ]; then
+              echo "Obsolete production artifact found: $path"
+              exit 1
+            fi
+          done
+
+      - name: Check tracked files for obvious credential markers
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git grep -nEI             '(BEGIN (RSA |OPENSSH |EC )?PRIVATE KEY|github_pat_[A-Za-z0-9_]+|ghp_[A-Za-z0-9]+|AKIA[0-9A-Z]{16})'             -- ':!*.md' ':!.github/workflows/repository-hygiene.yml'
+          then
+            echo "Potential credential material detected in tracked files."
+            exit 1
+          fi
+
+          echo "Repository hygiene checks passed."
