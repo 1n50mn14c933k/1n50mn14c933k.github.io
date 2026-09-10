@@ -44,10 +44,10 @@ html[dir="rtl"] .store-section{margin-left:auto;margin-right:0}
 /* END KOLFAT UI CONSISTENCY V4 */
 '''
 
-store_re=re.compile(r'\s*<a class="store-btn"\b[\s\S]*?</a>\s*')
+store_re=re.compile(r'\s*<a class="store-btn"[\s\S]*?</a>\s*')
 details_re=re.compile(r'<details class="lang-menu">[\s\S]*?</details>')
-support_re=re.compile(r'<a class="support-top"\b[^>]*>[\s\S]*?</a>')
-github_re=re.compile(r'<a class="github-top"\b[^>]*>[\s\S]*?</a>')
+support_re=re.compile(r'<a class="support-top"[^>]*>[\s\S]*?</a>')
+github_re=re.compile(r'<a class="github-top"[^>]*>[\s\S]*?</a>')
 topnav_re=re.compile(r'<div class="top-nav">[\s\S]*?</div>')
 marker_re=re.compile(r'\n?/\* KOLFAT UI CONSISTENCY V4 \*/[\s\S]*?/\* END KOLFAT UI CONSISTENCY V4 \*/\n?')
 feature_re=re.compile(r'(<div class="features">\s*(?:<div class="feature"[^>]*>[\s\S]*?</div>\s*)+</div>)')
@@ -62,7 +62,6 @@ for p in sorted(Path('.').rglob('index.html')):
     is_home=(rel=='index.html' or (len(parts)==2 and parts[0] in LANGS and parts[1]=='index.html'))
     is_product=(len(parts)==3 and parts[0] in LANGS and parts[1]=='Media_Kolfat' and parts[2]=='index.html')
 
-    # Normalize top navigation on every page that has a language selector.
     dm=details_re.search(text)
     if dm:
         details=dm.group(0)
@@ -70,8 +69,6 @@ for p in sorted(Path('.').rglob('index.html')):
         support_href=f'/{prefix}/support/' if prefix and prefix!='en' else '/support/'
         support=f'<a class="support-top" href="{support_href}">SUPPORT</a>'
         github=f'<a class="github-top" href="{GITHUB_URL}" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>'
-
-        # Remove current nav pieces so we can rebuild one canonical control group.
         text=topnav_re.sub('',text,1)
         text=support_re.sub('',text,1)
         text=github_re.sub('',text,1)
@@ -84,7 +81,6 @@ for p in sorted(Path('.').rglob('index.html')):
         else:
             text=text.replace('<body>', '<body>\n'+nav,1)
 
-    # Store changes only on home and localized product pages.
     if is_home:
         text=store_re.sub('\n',text)
         fm=feature_re.search(text)
