@@ -247,6 +247,33 @@ html[dir="rtl"] .store-btn{direction:ltr;margin-left:auto;margin-right:0}
   .store-copy strong{font-size:1rem}
 }
 
+
+/* KOLFAT UI CONSISTENCY V4 */
+.top-nav{position:fixed!important;top:18px!important;right:28px!important;z-index:100000!important;display:flex!important;align-items:center!important;gap:10px!important;direction:ltr!important}
+.top-nav .support-top,.top-nav .github-top,.top-nav .lang-menu{position:static!important;top:auto!important;right:auto!important}
+.support-top,.github-top,.lang-menu summary{height:44px!important;border:1px solid rgba(255,255,255,.48)!important;background:rgba(6,6,6,.68)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important;color:#fff!important;border-radius:14px!important}
+.support-top,.github-top{display:flex!important;align-items:center!important;justify-content:center!important;padding:0 16px!important;text-decoration:none!important;text-transform:uppercase!important;letter-spacing:.10em!important;font-size:.70rem!important;font-weight:700!important;white-space:nowrap!important}
+.support-top:hover,.github-top:hover{background:#fff!important;color:#050505!important;border-color:#fff!important}
+.lang-menu{position:relative!important;direction:ltr!important}
+.lang-menu summary{list-style:none!important;min-width:68px!important;padding:0 12px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;cursor:pointer!important}
+.lang-menu summary::-webkit-details-marker{display:none!important}
+.lang-menu summary::after{content:"⌄";font-size:.72rem;color:#cfcfcf;line-height:1;transform:translateY(-1px)}
+.lang-list{top:52px!important;right:0!important}
+.store-btn{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:16px!important;width:350px!important;max-width:100%!important;min-height:68px!important;margin-top:18px!important;padding:10px 18px!important;border:1px solid #fff!important;border-radius:10px!important;background:#fff!important;color:#050505!important;text-decoration:none!important;box-shadow:0 10px 30px rgba(0,0,0,.40)!important;transition:.22s!important;direction:ltr!important}
+.store-btn:hover{background:#f4f4f4!important;color:#050505!important;transform:translateY(-1px)!important;box-shadow:0 14px 34px rgba(0,0,0,.48)!important}
+.store-icon{width:40px!important;height:40px!important;flex:0 0 40px!important;display:block!important}
+.store-copy{display:flex!important;flex-direction:column!important;justify-content:center!important;line-height:1.05!important;text-align:left!important;min-width:0!important}
+.store-copy small{font-size:.56rem!important;letter-spacing:.13em!important;text-transform:uppercase!important;font-weight:700!important;margin-bottom:5px!important;white-space:nowrap!important;color:#111!important}
+.store-copy strong{font-size:1.12rem!important;letter-spacing:.01em!important;font-weight:700!important;white-space:nowrap!important;color:#050505!important}
+.store-section{width:100%;max-width:540px;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.34)}
+.store-section .store-btn{margin-top:0!important}
+html[dir="rtl"] .store-section{margin-left:auto;margin-right:0}
+.sources{position:relative!important;z-index:4!important;margin-bottom:0!important}
+.source{color:#f2f2ee!important;opacity:1!important;visibility:visible!important;background:rgba(5,5,5,.90)!important}
+.hero-copy>.sources+.store-btn{margin-top:18px!important}
+@media(max-height:850px) and (min-width:981px){.store-section{margin-top:10px;padding-top:10px}.store-section .store-btn{min-height:60px!important}}
+@media(max-width:640px){.top-nav{top:14px!important;right:12px!important;gap:6px!important}.support-top,.github-top{height:38px!important;padding:0 10px!important;font-size:.58rem!important}.lang-menu summary{height:38px!important;min-width:58px!important;padding:0 9px!important}.lang-list{top:44px!important}.store-btn{width:min(350px,100%)!important;min-height:64px!important;padding:9px 16px!important}.store-icon{width:36px!important;height:36px!important;flex-basis:36px!important}.store-copy small{font-size:.52rem!important}.store-copy strong{font-size:1rem!important}.store-section{max-width:100%;margin-top:14px;padding-top:14px}}
+/* END KOLFAT UI CONSISTENCY V4 */
 </style></head><body>
 <a class="contact-kolfat" href="mailto:contact@kolfat.app" aria-label="Email Kolfat at contact@kolfat.app">
   <strong>CONTACT | KOLFAT.APP</strong>
@@ -255,14 +282,16 @@ html[dir="rtl"] .store-btn{direction:ltr;margin-left:auto;margin-right:0}
 <a class="site-logo" href="/" aria-label="Kolfat home">
   <img src="/assets/kolfat-logo.webp?v=d2c25ec0" alt="KOLFAT">
 </a>
-<details class="lang-menu">
+
+<div class="top-nav"><a class="support-top" href="/ja/support/">SUPPORT</a><a class="github-top" href="https://github.com/1n50mn14c933k" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><details class="lang-menu">
   <summary aria-label="Change language" title="Change language">🇯🇵</summary>
   <div class="lang-list"><a href="/en/Media_Kolfat/">🇬🇧 English</a><a href="/fa/Media_Kolfat/">🇮🇷 فارسی</a><a href="/de/Media_Kolfat/">🇩🇪 Deutsch</a><a href="/es/Media_Kolfat/">🇪🇸 Español</a><a href="/it/Media_Kolfat/">🇮🇹 Italiano</a><a href="/fr/Media_Kolfat/">🇫🇷 Français</a><a href="/pt/Media_Kolfat/">🇵🇹 Português</a><a href="/ja/Media_Kolfat/" aria-current="page">🇯🇵 日本語</a><a href="/zh/Media_Kolfat/">🇨🇳 中文</a><a href="/hi/Media_Kolfat/">🇮🇳 हिन्दी</a><a href="/ru/Media_Kolfat/">🇷🇺 Русский</a><a href="/ar/Media_Kolfat/">🇸🇦 العربية</a></div>
-</details>
+</details></div>
 <main><section class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-copy"><span class="eyebrow"><span class="dot"></span>メディア管理ソフトウェア</span><h1>散らばった<em>大切な思い出</em>をもう一度整理。</h1><p class="lead">写真や動画は、PC、ノートパソコン、スマートフォン、タブレット、USB ドライブ、フラッシュストレージ、外付けディスク、クラウドフォルダーなど、さまざまな場所に散らばりがちです。時間がたつと、いつ撮影したのか、どの端末から来たのか、特定の思い出がどこに保存されているのか分かりにくくなります。</p><div class="story"><h2>すべてを一つのシンプルな流れで整理できたら？</h2><p><strong>Media Kolfat は、さまざまな場所にあるメディアを集め、散らばったライブラリを分かりやすく構造化されたアーカイブへ変えます。</strong> フォルダーを追加または接続し、整理方法を選ぶだけで、Media Kolfat が新しいフォルダー構造を準備します。</p><p>写真や動画は <strong>年 → 月 → 日</strong> のような分かりやすいフォルダーに整理でき、利用可能な情報に応じて <strong>カメラ名やデバイス名</strong> でも分類できます。何千ものファイルを手作業で並べ替える代わりに、見やすく理解しやすく、長期的に管理しやすい構造を作れます。</p></div><div class="actions"><a class="btn primary" href="#product">Media Kolfat の仕組みを見る</a><a class="btn secondary" href="https://github.com/1n50mn14c933k">開発をフォロー</a></div>
+<div class="sources"><div class="source">💻 PC とノートパソコンのフォルダー</div><div class="source">📱 スマートフォンとタブレット</div><div class="source">💾 USB と外部ストレージ</div><div class="source">☁️ クラウドフォルダー</div></div>
 <a class="store-btn" href="https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare" target="_blank" rel="noopener noreferrer" aria-label="Get MEDIA KOLFAT from the Microsoft Store">
   <svg class="store-icon" viewBox="0 0 44 44" aria-hidden="true">
     <rect x="2" y="2" width="18" height="18" fill="#f25022"/>
@@ -271,8 +300,7 @@ html[dir="rtl"] .store-btn{direction:ltr;margin-left:auto;margin-right:0}
     <rect x="24" y="24" width="18" height="18" fill="#ffb900"/>
   </svg>
   <span class="store-copy"><small>Get MEDIA KOLFAT from</small><strong>Microsoft Store</strong></span>
-</a>
-<div class="sources"><div class="source">💻 PC とノートパソコンのフォルダー</div><div class="source">📱 スマートフォンとタブレット</div><div class="source">💾 USB と外部ストレージ</div><div class="source">☁️ クラウドフォルダー</div></div></div>
+</a></div>
   </div>
 </section>
 <section class="section" id="features"><div class="wrap"><div class="section-title"><h2>Media Kolfat の仕組み</h2><p>長年にわたり、端末、フォルダー、バックアップ、さまざまな保存場所に蓄積したメディアを一つの流れで整理します。</p></div><div class="cards"><article class="card"><div class="icon">📥</div><h3>ソースを追加</h3><p>ローカルフォルダー、リムーバブルストレージ、接続済み端末、その他アクセス可能な場所から、事前に整理し直すことなくメディアを取り込めます。</p></article><article class="card"><div class="icon">🔎</div><h3>Media Kolfat が情報を整理</h3><p>利用可能なメタデータ、タイムスタンプ、デバイス情報を使って、写真と動画のライブラリをより分かりやすく整理します。</p></article><article class="card"><div class="icon">🗂️</div><h3>きれいなアーカイブを作成</h3><p>日付やその他の利用可能な情報でまとめた新しいフォルダー構造を作成し、分かりやすい流れを保ちます。</p></article></div></div></section><section class="section" id="product"><div class="wrap product-grid"><div class="panel"><span class="status">開発中</span><h2>メディアを一か所に</h2><p>目的はシンプルです。大規模なメディアコレクションを、より理解しやすく、整理しやすく、長期保存しやすくします。</p><div class="list"><div class="item"><strong>入力</strong><span>複数のフォルダーや保存場所にある写真と動画。</span></div><div class="item"><strong>整理</strong><span>年、月、日、および利用可能なカメラやデバイス情報で構造化。</span></div><div class="item"><strong>結果</strong><span>閲覧と管理がしやすい、新しく整理されたフォルダー構造。</span></div></div></div><div class="panel"><h2>シンプルな考え方を中心に設計</h2><p>大切な思い出が「DCIM」「New Folder (3)」「Phone Backup 2022」のようなランダムなフォルダーに埋もれるべきではありません。Media Kolfat は、そのようなコレクションをもう一度分かりやすくするために作られています。</p><div class="list"><div class="item"><strong>手作業の整理を減らす</strong><span>フォルダーごとの繰り返し作業を減らします。</span></div><div class="item"><strong>より多くの文脈</strong><span>利用可能な日付とデバイス情報を使って整理します。</span></div><div class="item"><strong>より高い安心感</strong><span>写真や動画がどこに属するのか、ライブラリがどう構成されているのかを把握できます。</span></div></div></div></div></section></main><footer><div class="foot"><span>© <span id="year">2026</span> Media Kolfat</span></div></footer><script>

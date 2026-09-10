@@ -182,6 +182,33 @@ html[lang="de"] .eyebrow,html[lang="fr"] .eyebrow,html[lang="es"] .eyebrow,html[
   .contact-kolfat strong{font-size:.62rem}
   .contact-kolfat span{font-size:.72rem}
 }
+
+/* KOLFAT UI CONSISTENCY V4 */
+.top-nav{position:fixed!important;top:18px!important;right:28px!important;z-index:100000!important;display:flex!important;align-items:center!important;gap:10px!important;direction:ltr!important}
+.top-nav .support-top,.top-nav .github-top,.top-nav .lang-menu{position:static!important;top:auto!important;right:auto!important}
+.support-top,.github-top,.lang-menu summary{height:44px!important;border:1px solid rgba(255,255,255,.48)!important;background:rgba(6,6,6,.68)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important;color:#fff!important;border-radius:14px!important}
+.support-top,.github-top{display:flex!important;align-items:center!important;justify-content:center!important;padding:0 16px!important;text-decoration:none!important;text-transform:uppercase!important;letter-spacing:.10em!important;font-size:.70rem!important;font-weight:700!important;white-space:nowrap!important}
+.support-top:hover,.github-top:hover{background:#fff!important;color:#050505!important;border-color:#fff!important}
+.lang-menu{position:relative!important;direction:ltr!important}
+.lang-menu summary{list-style:none!important;min-width:68px!important;padding:0 12px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;cursor:pointer!important}
+.lang-menu summary::-webkit-details-marker{display:none!important}
+.lang-menu summary::after{content:"⌄";font-size:.72rem;color:#cfcfcf;line-height:1;transform:translateY(-1px)}
+.lang-list{top:52px!important;right:0!important}
+.store-btn{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:16px!important;width:350px!important;max-width:100%!important;min-height:68px!important;margin-top:18px!important;padding:10px 18px!important;border:1px solid #fff!important;border-radius:10px!important;background:#fff!important;color:#050505!important;text-decoration:none!important;box-shadow:0 10px 30px rgba(0,0,0,.40)!important;transition:.22s!important;direction:ltr!important}
+.store-btn:hover{background:#f4f4f4!important;color:#050505!important;transform:translateY(-1px)!important;box-shadow:0 14px 34px rgba(0,0,0,.48)!important}
+.store-icon{width:40px!important;height:40px!important;flex:0 0 40px!important;display:block!important}
+.store-copy{display:flex!important;flex-direction:column!important;justify-content:center!important;line-height:1.05!important;text-align:left!important;min-width:0!important}
+.store-copy small{font-size:.56rem!important;letter-spacing:.13em!important;text-transform:uppercase!important;font-weight:700!important;margin-bottom:5px!important;white-space:nowrap!important;color:#111!important}
+.store-copy strong{font-size:1.12rem!important;letter-spacing:.01em!important;font-weight:700!important;white-space:nowrap!important;color:#050505!important}
+.store-section{width:100%;max-width:540px;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.34)}
+.store-section .store-btn{margin-top:0!important}
+html[dir="rtl"] .store-section{margin-left:auto;margin-right:0}
+.sources{position:relative!important;z-index:4!important;margin-bottom:0!important}
+.source{color:#f2f2ee!important;opacity:1!important;visibility:visible!important;background:rgba(5,5,5,.90)!important}
+.hero-copy>.sources+.store-btn{margin-top:18px!important}
+@media(max-height:850px) and (min-width:981px){.store-section{margin-top:10px;padding-top:10px}.store-section .store-btn{min-height:60px!important}}
+@media(max-width:640px){.top-nav{top:14px!important;right:12px!important;gap:6px!important}.support-top,.github-top{height:38px!important;padding:0 10px!important;font-size:.58rem!important}.lang-menu summary{height:38px!important;min-width:58px!important;padding:0 9px!important}.lang-list{top:44px!important}.store-btn{width:min(350px,100%)!important;min-height:64px!important;padding:9px 16px!important}.store-icon{width:36px!important;height:36px!important;flex-basis:36px!important}.store-copy small{font-size:.52rem!important}.store-copy strong{font-size:1rem!important}.store-section{max-width:100%;margin-top:14px;padding-top:14px}}
+/* END KOLFAT UI CONSISTENCY V4 */
 </style>
 </head>
 <body>
@@ -190,11 +217,12 @@ html[lang="de"] .eyebrow,html[lang="fr"] .eyebrow,html[lang="es"] .eyebrow,html[
   <span>contact@kolfat.app</span>
 </a>
 <a class="site-logo" href="/" aria-label="Kolfat home"><img src="/assets/kolfat-logo.webp?v=d2c25ec0" alt="KOLFAT"></a>
-<a class="support-top" href="/support/">SUPPORT</a>
-<details class="lang-menu">
+
+
+<div class="top-nav"><a class="support-top" href="/support/">SUPPORT</a><a class="github-top" href="https://github.com/1n50mn14c933k" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><details class="lang-menu">
   <summary aria-label="Change language" title="Change language">🇬🇧</summary>
   <div class="lang-list"><a href="/en/" data-lang="en" aria-current="page">🇬🇧 English</a><a href="/fa/" data-lang="fa">🇮🇷 فارسی</a><a href="/de/" data-lang="de">🇩🇪 Deutsch</a><a href="/es/" data-lang="es">🇪🇸 Español</a><a href="/it/" data-lang="it">🇮🇹 Italiano</a><a href="/fr/" data-lang="fr">🇫🇷 Français</a><a href="/pt/" data-lang="pt">🇵🇹 Português</a><a href="/ja/" data-lang="ja">🇯🇵 日本語</a><a href="/zh/" data-lang="zh">🇨🇳 中文</a><a href="/hi/" data-lang="hi">🇮🇳 हिन्दी</a><a href="/ru/" data-lang="ru">🇷🇺 Русский</a><a href="/ar/" data-lang="ar">🇸🇦 العربية</a></div>
-</details>
+</details></div>
 <main>
 <section class="hero" id="home">
   <div class="hero-bg" aria-hidden="true"></div>
@@ -204,19 +232,21 @@ html[lang="de"] .eyebrow,html[lang="fr"] .eyebrow,html[lang="es"] .eyebrow,html[
       <h1>ORDER<br>FROM CHAOS</h1>
       <p class="lead">We organize, preserve and bring your media back to life so your memories never fade.</p>
       <a class="btn" href="/en/Media_Kolfat/">Get Started <span>→</span></a>
-      <a class="store-btn" href="https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare" target="_blank" rel="noopener noreferrer" aria-label="Get MEDIA KOLFAT from the Microsoft Store">
-        <svg class="store-icon" viewBox="0 0 44 44" aria-hidden="true">
-          <rect x="2" y="2" width="18" height="18" fill="#f25022"/>
-          <rect x="24" y="2" width="18" height="18" fill="#7fba00"/>
-          <rect x="2" y="24" width="18" height="18" fill="#00a4ef"/>
-          <rect x="24" y="24" width="18" height="18" fill="#ffb900"/>
-        </svg>
-        <span class="store-copy"><small>Get MEDIA KOLFAT from</small><strong>Microsoft Store</strong></span>
-      </a>
-      <div class="features">
+<div class="features">
         <div class="feature"><strong>Digitize</strong><span>Old becomes new</span></div>
         <div class="feature"><strong>Organize</strong><span>Find what matters</span></div>
         <div class="feature"><strong>Preserve</strong><span>For generations</span></div>
+      </div>
+      <div class="store-section">
+<a class="store-btn" href="https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare" target="_blank" rel="noopener noreferrer" aria-label="Get MEDIA KOLFAT from the Microsoft Store">
+  <svg class="store-icon" viewBox="0 0 44 44" aria-hidden="true">
+    <rect x="2" y="2" width="18" height="18" fill="#f25022"/>
+    <rect x="24" y="2" width="18" height="18" fill="#7fba00"/>
+    <rect x="2" y="24" width="18" height="18" fill="#00a4ef"/>
+    <rect x="24" y="24" width="18" height="18" fill="#ffb900"/>
+  </svg>
+  <span class="store-copy"><small>Get MEDIA KOLFAT from</small><strong>Microsoft Store</strong></span>
+</a>
       </div>
     </div>
   </div>
