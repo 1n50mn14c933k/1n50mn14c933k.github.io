@@ -21,10 +21,18 @@ The repository publishes the public KOLFAT website, including:
 
 The site is hosted with **GitHub Pages** and uses the custom domain defined in `CNAME`.
 
+## MEDIA KOLFAT
+
+**MEDIA KOLFAT is now available on the Microsoft Store.** 🎉
+
+- Microsoft Store: https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare
+- Product page: https://kolfat.app/en/Media_Kolfat/
+
 ## Primary Pages
 
 - KOLFAT: https://kolfat.app/
 - MEDIA KOLFAT: https://kolfat.app/en/Media_Kolfat/
+- Microsoft Store: https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare
 - Support: https://kolfat.app/support/
 - Privacy: https://kolfat.app/privacy/
 - Terms: https://kolfat.app/terms/
