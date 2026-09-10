@@ -62,6 +62,13 @@ html[data-kolfat-page="product"] .hero-copy{
 html[dir="rtl"][data-kolfat-page="product"] .hero-copy{
   margin:0 clamp(150px,10vw,205px) 0 auto!important;
 }
+/* Keep Farsi and Arabic RTL text, but place the whole product copy block on the left darker side. */
+html[lang="fa"][data-kolfat-page="product"] .hero-copy,
+html[lang="ar"][data-kolfat-page="product"] .hero-copy{
+  margin:0 0 0 clamp(150px,10vw,205px)!important;
+  text-align:right!important;
+  direction:rtl!important;
+}
 html[data-kolfat-page="product"] .sources{margin-bottom:0!important}
 html[data-kolfat-page="product"] .sources + .store-btn{margin-top:18px!important;margin-bottom:0!important}
 
@@ -75,6 +82,11 @@ html[data-kolfat-page="product"] .sources + .store-btn{margin-top:18px!important
     margin-left:auto!important;
     margin-right:clamp(32px,7vw,72px)!important;
   }
+  html[lang="fa"][data-kolfat-page="product"] .hero-copy,
+  html[lang="ar"][data-kolfat-page="product"] .hero-copy{
+    margin-left:clamp(32px,7vw,72px)!important;
+    margin-right:0!important;
+  }
 }
 @media(max-width:640px){
   .store-btn{width:min(350px,100%)!important;min-height:64px!important;padding:9px 16px!important}
@@ -85,5 +97,7 @@ html[data-kolfat-page="product"] .sources + .store-btn{margin-top:18px!important
     margin:0!important;
   }
   html[dir="rtl"][data-kolfat-page="product"] .hero-copy{margin:0!important}
+  html[lang="fa"][data-kolfat-page="product"] .hero-copy,
+  html[lang="ar"][data-kolfat-page="product"] .hero-copy{margin:0!important}
 }
 /* END KOLFAT STORE / HERO FIX V5 */
