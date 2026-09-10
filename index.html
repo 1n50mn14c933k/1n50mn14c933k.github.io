@@ -44,6 +44,16 @@ button{font:inherit}
   font-size:.72rem;font-weight:700;transition:.22s;background:rgba(0,0,0,.18)
 }
 .btn:hover{background:#fff;color:#000}
+.store-btn{
+  display:flex;align-items:center;gap:12px;width:228px;min-height:48px;margin-top:10px;
+  padding:7px 14px;border:1px solid rgba(255,255,255,.8);background:#fff;color:#050505;
+  text-decoration:none;transition:.22s
+}
+.store-btn:hover{background:#050505;color:#fff}
+.store-icon{width:26px;height:26px;flex:0 0 26px}
+.store-copy{display:flex;flex-direction:column;line-height:1.05;text-align:left}
+.store-copy small{font-size:.48rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:3px}
+.store-copy strong{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
 .hero{
   position:relative;height:100vh;height:100svh;min-height:100vh;overflow:hidden;background:#050505
 }
@@ -90,7 +100,7 @@ h1{
 .lead{max-width:510px;font-size:1.25rem;line-height:1.45;color:#d3d3cf;margin:0 0 32px}
 .hero .btn{border-radius:0;min-width:228px;justify-content:space-between}
 .features{
-  display:flex;gap:0;margin-top:34px;border-top:1px solid transparent
+  display:flex;gap:0;margin-top:24px;border-top:1px solid transparent
 }
 .feature{
   min-width:150px;padding:0 28px 0 0;margin-right:28px;border-right:1px solid var(--line)
@@ -165,7 +175,7 @@ html[lang="pt"] .eyebrow,html[lang="ru"] .eyebrow{font-size:.82rem;letter-spacin
   .hero-copy{top:150px}
   h1{font-size:clamp(58px,4.1vw,80px);margin-bottom:20px}
   .lead{font-size:1rem;margin-bottom:22px}
-  .features{margin-top:22px}
+  .features{margin-top:18px}
 }
 @media(max-width:980px){
   .hero-inner{position:absolute;inset:0}
@@ -200,6 +210,7 @@ html[lang="pt"] .eyebrow,html[lang="ru"] .eyebrow{font-size:.82rem;letter-spacin
   .hero-bg:before{width:100%;background:linear-gradient(90deg,rgba(5,5,5,.98),rgba(5,5,5,.8) 68%,rgba(5,5,5,.28))}
   h1{font-size:clamp(52px,15vw,72px)}
   .lead{font-size:1rem;max-width:90%}
+  .store-btn{width:228px;max-width:100%}
   .features{flex-direction:column;gap:14px}
   .feature{border-right:0;border-bottom:1px solid var(--line);padding-bottom:12px}
   .hero-foot{left:16px;right:16px;font-size:.45rem;letter-spacing:.2em}
@@ -247,6 +258,16 @@ html[lang="pt"] .eyebrow,html[lang="ru"] .eyebrow{font-size:.82rem;letter-spacin
       <h1>ORDER<br>FROM CHAOS</h1>
       <p class="lead">We organize, preserve and bring your media back to life so your memories never fade.</p>
       <a class="btn" href="/en/Media_Kolfat/">Get Started <span>→</span></a>
+      <a class="store-btn" href="https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare" target="_blank" rel="noopener noreferrer" aria-label="Get MEDIA KOLFAT from the Microsoft Store">
+        <svg class="store-icon" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M8 10V8a8 8 0 0 1 16 0v2h3v18H5V10h3Zm3 0h10V8a5 5 0 0 0-10 0v2Z" fill="currentColor"/>
+          <rect x="10" y="15" width="5" height="5" fill="#050505"/>
+          <rect x="17" y="15" width="5" height="5" fill="#050505"/>
+          <rect x="10" y="22" width="5" height="5" fill="#050505"/>
+          <rect x="17" y="22" width="5" height="5" fill="#050505"/>
+        </svg>
+        <span class="store-copy"><small>Get MEDIA KOLFAT from</small><strong>Microsoft Store</strong></span>
+      </a>
       <div class="features">
         <div class="feature"><strong>Digitize</strong><span>Old becomes new</span></div>
         <div class="feature"><strong>Organize</strong><span>Find what matters</span></div>
@@ -258,4 +279,3 @@ html[lang="pt"] .eyebrow,html[lang="ru"] .eyebrow{font-size:.82rem;letter-spacin
 </section>
 </main>
 </body>
-</html>
