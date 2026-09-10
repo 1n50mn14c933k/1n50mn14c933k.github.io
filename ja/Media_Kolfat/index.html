@@ -226,6 +226,27 @@ html[lang="ja"] .lead,html[lang="zh-CN"] .lead{font-size:1.08rem;line-height:1.7
   .contact-kolfat span{font-size:.72rem}
 }
 
+
+.store-btn{
+  display:flex;align-items:center;justify-content:flex-start;gap:16px;
+  width:350px;min-height:68px;margin-top:12px;padding:10px 18px;
+  border:1px solid rgba(255,255,255,.95);border-radius:10px;
+  background:#fff;color:#050505;text-decoration:none;transition:.22s;
+  box-shadow:0 10px 30px rgba(0,0,0,.32)
+}
+.store-btn:hover{transform:translateY(-1px);box-shadow:0 14px 34px rgba(0,0,0,.42);background:#f6f6f6;color:#050505}
+.store-icon{width:40px;height:40px;flex:0 0 40px;display:block}
+.store-copy{display:flex;flex-direction:column;justify-content:center;line-height:1.05;text-align:left;min-width:0}
+.store-copy small{font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700;margin-bottom:5px;white-space:nowrap}
+.store-copy strong{font-size:1.12rem;letter-spacing:.01em;font-weight:700;white-space:nowrap}
+html[dir="rtl"] .store-btn{direction:ltr;margin-left:auto;margin-right:0}
+@media(max-width:640px){
+  .store-btn{width:min(350px,100%);min-height:64px;padding:9px 16px}
+  .store-icon{width:36px;height:36px;flex-basis:36px}
+  .store-copy small{font-size:.52rem}
+  .store-copy strong{font-size:1rem}
+}
+
 </style></head><body>
 <a class="contact-kolfat" href="mailto:contact@kolfat.app" aria-label="Email Kolfat at contact@kolfat.app">
   <strong>CONTACT | KOLFAT.APP</strong>
@@ -241,7 +262,17 @@ html[lang="ja"] .lead,html[lang="zh-CN"] .lead{font-size:1.08rem;line-height:1.7
 <main><section class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="hero-inner">
-    <div class="hero-copy"><span class="eyebrow"><span class="dot"></span>メディア管理ソフトウェア</span><h1>散らばった<em>大切な思い出</em>をもう一度整理。</h1><p class="lead">写真や動画は、PC、ノートパソコン、スマートフォン、タブレット、USB ドライブ、フラッシュストレージ、外付けディスク、クラウドフォルダーなど、さまざまな場所に散らばりがちです。時間がたつと、いつ撮影したのか、どの端末から来たのか、特定の思い出がどこに保存されているのか分かりにくくなります。</p><div class="story"><h2>すべてを一つのシンプルな流れで整理できたら？</h2><p><strong>Media Kolfat は、さまざまな場所にあるメディアを集め、散らばったライブラリを分かりやすく構造化されたアーカイブへ変えます。</strong> フォルダーを追加または接続し、整理方法を選ぶだけで、Media Kolfat が新しいフォルダー構造を準備します。</p><p>写真や動画は <strong>年 → 月 → 日</strong> のような分かりやすいフォルダーに整理でき、利用可能な情報に応じて <strong>カメラ名やデバイス名</strong> でも分類できます。何千ものファイルを手作業で並べ替える代わりに、見やすく理解しやすく、長期的に管理しやすい構造を作れます。</p></div><div class="actions"><a class="btn primary" href="#product">Media Kolfat の仕組みを見る</a><a class="btn secondary" href="https://github.com/1n50mn14c933k">開発をフォロー</a></div><div class="sources"><div class="source">💻 PC とノートパソコンのフォルダー</div><div class="source">📱 スマートフォンとタブレット</div><div class="source">💾 USB と外部ストレージ</div><div class="source">☁️ クラウドフォルダー</div></div></div>
+    <div class="hero-copy"><span class="eyebrow"><span class="dot"></span>メディア管理ソフトウェア</span><h1>散らばった<em>大切な思い出</em>をもう一度整理。</h1><p class="lead">写真や動画は、PC、ノートパソコン、スマートフォン、タブレット、USB ドライブ、フラッシュストレージ、外付けディスク、クラウドフォルダーなど、さまざまな場所に散らばりがちです。時間がたつと、いつ撮影したのか、どの端末から来たのか、特定の思い出がどこに保存されているのか分かりにくくなります。</p><div class="story"><h2>すべてを一つのシンプルな流れで整理できたら？</h2><p><strong>Media Kolfat は、さまざまな場所にあるメディアを集め、散らばったライブラリを分かりやすく構造化されたアーカイブへ変えます。</strong> フォルダーを追加または接続し、整理方法を選ぶだけで、Media Kolfat が新しいフォルダー構造を準備します。</p><p>写真や動画は <strong>年 → 月 → 日</strong> のような分かりやすいフォルダーに整理でき、利用可能な情報に応じて <strong>カメラ名やデバイス名</strong> でも分類できます。何千ものファイルを手作業で並べ替える代わりに、見やすく理解しやすく、長期的に管理しやすい構造を作れます。</p></div><div class="actions"><a class="btn primary" href="#product">Media Kolfat の仕組みを見る</a><a class="btn secondary" href="https://github.com/1n50mn14c933k">開発をフォロー</a></div>
+<a class="store-btn" href="https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare" target="_blank" rel="noopener noreferrer" aria-label="Get MEDIA KOLFAT from the Microsoft Store">
+  <svg class="store-icon" viewBox="0 0 44 44" aria-hidden="true">
+    <rect x="2" y="2" width="18" height="18" fill="#f25022"/>
+    <rect x="24" y="2" width="18" height="18" fill="#7fba00"/>
+    <rect x="2" y="24" width="18" height="18" fill="#00a4ef"/>
+    <rect x="24" y="24" width="18" height="18" fill="#ffb900"/>
+  </svg>
+  <span class="store-copy"><small>Get MEDIA KOLFAT from</small><strong>Microsoft Store</strong></span>
+</a>
+<div class="sources"><div class="source">💻 PC とノートパソコンのフォルダー</div><div class="source">📱 スマートフォンとタブレット</div><div class="source">💾 USB と外部ストレージ</div><div class="source">☁️ クラウドフォルダー</div></div></div>
   </div>
 </section>
 <section class="section" id="features"><div class="wrap"><div class="section-title"><h2>Media Kolfat の仕組み</h2><p>長年にわたり、端末、フォルダー、バックアップ、さまざまな保存場所に蓄積したメディアを一つの流れで整理します。</p></div><div class="cards"><article class="card"><div class="icon">📥</div><h3>ソースを追加</h3><p>ローカルフォルダー、リムーバブルストレージ、接続済み端末、その他アクセス可能な場所から、事前に整理し直すことなくメディアを取り込めます。</p></article><article class="card"><div class="icon">🔎</div><h3>Media Kolfat が情報を整理</h3><p>利用可能なメタデータ、タイムスタンプ、デバイス情報を使って、写真と動画のライブラリをより分かりやすく整理します。</p></article><article class="card"><div class="icon">🗂️</div><h3>きれいなアーカイブを作成</h3><p>日付やその他の利用可能な情報でまとめた新しいフォルダー構造を作成し、分かりやすい流れを保ちます。</p></article></div></div></section><section class="section" id="product"><div class="wrap product-grid"><div class="panel"><span class="status">開発中</span><h2>メディアを一か所に</h2><p>目的はシンプルです。大規模なメディアコレクションを、より理解しやすく、整理しやすく、長期保存しやすくします。</p><div class="list"><div class="item"><strong>入力</strong><span>複数のフォルダーや保存場所にある写真と動画。</span></div><div class="item"><strong>整理</strong><span>年、月、日、および利用可能なカメラやデバイス情報で構造化。</span></div><div class="item"><strong>結果</strong><span>閲覧と管理がしやすい、新しく整理されたフォルダー構造。</span></div></div></div><div class="panel"><h2>シンプルな考え方を中心に設計</h2><p>大切な思い出が「DCIM」「New Folder (3)」「Phone Backup 2022」のようなランダムなフォルダーに埋もれるべきではありません。Media Kolfat は、そのようなコレクションをもう一度分かりやすくするために作られています。</p><div class="list"><div class="item"><strong>手作業の整理を減らす</strong><span>フォルダーごとの繰り返し作業を減らします。</span></div><div class="item"><strong>より多くの文脈</strong><span>利用可能な日付とデバイス情報を使って整理します。</span></div><div class="item"><strong>より高い安心感</strong><span>写真や動画がどこに属するのか、ライブラリがどう構成されているのかを把握できます。</span></div></div></div></div></section></main><footer><div class="foot"><span>© <span id="year">2026</span> Media Kolfat</span></div></footer><script>
