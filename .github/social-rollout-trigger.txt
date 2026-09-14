@@ -1,0 +1,1 @@
+Trigger top-navigation social button rollout after workflow installation.
