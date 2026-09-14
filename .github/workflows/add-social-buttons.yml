@@ -1,0 +1,151 @@
+name: Add top navigation social buttons
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  rollout:
+    if: github.actor != 'github-actions[bot]' && contains(github.event.head_commit.message, 'Run top navigation social buttons rollout')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Add X and YouTube buttons to all localized production pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          langs = ["en","fa","de","es","it","fr","pt","ja","zh","hi","ru","ar"]
+          pages = [Path(lang)/"index.html" for lang in langs] + [Path(lang)/"Media_Kolfat"/"index.html" for lang in langs]
+
+          x_button = '<a class="social-top x-top" href="https://x.com/KOLFAT_APP" target="_blank" rel="noopener noreferrer" aria-label="KOLFAT on X">X</a>'
+          youtube_button = '<a class="social-top youtube-top" href="https://www.youtube.com/@KOLFAT_APP" target="_blank" rel="noopener noreferrer" aria-label="KOLFAT on YouTube"><span class="social-long">YOUTUBE</span><span class="social-short">YT</span></a>'
+
+          support_re = re.compile(r'(<a\s+class="support-top"\s+href="[^"]+"[^>]*>.*?</a>)', re.I | re.S)
+          changed = []
+
+          for path in pages:
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              # Remove an earlier copy if this rollout is ever re-run.
+              text = re.sub(r'<a\s+class="social-top x-top".*?</a>', '', text, flags=re.I | re.S)
+              text = re.sub(r'<a\s+class="social-top youtube-top".*?</a>', '', text, flags=re.I | re.S)
+
+              match = support_re.search(text)
+              if not match:
+                  raise RuntimeError(f'{path}: SUPPORT button not found')
+
+              replacement = match.group(1) + x_button + youtube_button
+              text = text[:match.start()] + replacement + text[match.end():]
+
+              # Cache-bust the shared stylesheet consistently.
+              text = re.sub(
+                  r'/assets/kolfat-ui-v5\.css\?v=[^"\']+',
+                  '/assets/kolfat-ui-v5.css?v=20260914-social1',
+                  text,
+                  count=1,
+              )
+
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  changed.append(str(path))
+
+          css_path = Path('assets/kolfat-ui-v5.css')
+          css = css_path.read_text(encoding='utf-8')
+          marker_start = '/* KOLFAT SOCIAL TOP NAV START */'
+          marker_end = '/* KOLFAT SOCIAL TOP NAV END */'
+          css = re.sub(
+              re.escape(marker_start) + r'.*?' + re.escape(marker_end) + r'\n?',
+              '',
+              css,
+              flags=re.S,
+          )
+
+          social_css = r'''
+/* KOLFAT SOCIAL TOP NAV START */
+.top-nav .social-top{
+  position:static!important;
+  height:44px!important;
+  padding:0 16px!important;
+  border:1px solid rgba(255,255,255,.48)!important;
+  background:rgba(6,6,6,.68)!important;
+  backdrop-filter:blur(12px)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+  color:#fff!important;
+  border-radius:14px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-decoration:none!important;
+  text-transform:uppercase!important;
+  letter-spacing:.10em!important;
+  font-size:.70rem!important;
+  font-weight:700!important;
+  white-space:nowrap!important;
+  transition:.2s!important;
+}
+.top-nav .social-top:hover{
+  background:#fff!important;
+  color:#050505!important;
+  border-color:#fff!important;
+}
+.top-nav .x-top{min-width:44px!important;padding-left:13px!important;padding-right:13px!important}
+.social-short{display:none}
+@media(max-width:640px){
+  .top-nav .social-top{height:38px!important;padding:0 10px!important;font-size:.58rem!important}
+  .top-nav .x-top{min-width:38px!important;padding-left:9px!important;padding-right:9px!important}
+}
+@media(max-width:420px){
+  .top-nav{gap:4px!important}
+  .top-nav .support-top,.top-nav .github-top,.top-nav .social-top{padding-left:8px!important;padding-right:8px!important;font-size:.55rem!important}
+  .top-nav .x-top{min-width:34px!important;padding-left:7px!important;padding-right:7px!important}
+  .top-nav .lang-menu summary{min-width:52px!important;padding-left:7px!important;padding-right:7px!important}
+  .youtube-top .social-long{display:none}
+  .youtube-top .social-short{display:inline}
+}
+/* KOLFAT SOCIAL TOP NAV END */
+'''
+          css = css.rstrip() + '\n\n' + social_css.lstrip()
+          css_path.write_text(css, encoding='utf-8')
+
+          # Validate every intended localized home and Media Kolfat page.
+          for path in pages:
+              t = path.read_text(encoding='utf-8')
+              if t.count('href="https://x.com/KOLFAT_APP"') != 1:
+                  raise RuntimeError(f'{path}: X button count is not exactly 1')
+              if t.count('href="https://www.youtube.com/@KOLFAT_APP"') != 1:
+                  raise RuntimeError(f'{path}: YouTube button count is not exactly 1')
+              if t.count('class="support-top"') != 1:
+                  raise RuntimeError(f'{path}: SUPPORT button count changed unexpectedly')
+              if t.count('class="github-top"') != 1:
+                  raise RuntimeError(f'{path}: GITHUB button count changed unexpectedly')
+              order = [
+                  t.index('class="support-top"'),
+                  t.index('class="social-top x-top"'),
+                  t.index('class="social-top youtube-top"'),
+                  t.index('class="github-top"'),
+              ]
+              if order != sorted(order):
+                  raise RuntimeError(f'{path}: top navigation order is incorrect')
+              if '/assets/kolfat-ui-v5.css?v=20260914-social1' not in t:
+                  raise RuntimeError(f'{path}: stylesheet cache-buster missing')
+
+          print(f'Updated {len(changed)} localized pages and shared top-navigation CSS')
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/kolfat-ui-v5.css */index.html */Media_Kolfat/index.html
+          git commit -m "Add X and YouTube buttons to localized top navigation"
+          git push
