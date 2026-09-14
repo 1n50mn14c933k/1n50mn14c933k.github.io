@@ -1,0 +1,113 @@
+name: Fix localized SEO metadata
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.actor != 'github-actions[bot]' && contains(github.event.head_commit.message, 'Run localized SEO metadata fix')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Correct localized Media Kolfat SEO metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          locale_paths = {
+              'zh': 'zh',
+              'hi': 'hi',
+              'ru': 'ru',
+              'ar': 'ar',
+          }
+
+          changed = []
+
+          # Fix og:url and SoftwareApplication.url without touching hreflang/x-default.
+          for lang, url_lang in locale_paths.items():
+              path = Path(lang) / 'Media_Kolfat' / 'index.html'
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              wrong_og = '<meta property="og:url" content="https://kolfat.app/en/Media_Kolfat/">'
+              right_og = f'<meta property="og:url" content="https://kolfat.app/{url_lang}/Media_Kolfat/">'
+              if wrong_og not in text:
+                  raise RuntimeError(f'{path}: expected wrong English og:url was not found')
+              text = text.replace(wrong_og, right_og, 1)
+
+              wrong_schema = '"name":"Media Kolfat","url":"https://kolfat.app/en/Media_Kolfat/"'
+              right_schema = f'"name":"Media Kolfat","url":"https://kolfat.app/{url_lang}/Media_Kolfat/"'
+              if wrong_schema not in text:
+                  raise RuntimeError(f'{path}: expected wrong English SoftwareApplication.url was not found')
+              text = text.replace(wrong_schema, right_schema, 1)
+
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  changed.append(str(path))
+
+          # Localize Italian Open Graph, Twitter, and SoftwareApplication description.
+          path = Path('it') / 'Media_Kolfat' / 'index.html'
+          text = path.read_text(encoding='utf-8')
+          original = text
+
+          replacements = {
+              '<meta property="og:title" content="Media Kolfat Photo & Video Organizer for Windows">':
+                  '<meta property="og:title" content="Media Kolfat — Organizzatore di foto e video per Windows">',
+              '<meta property="og:description" content="Organize scattered photo and video collections into a clean, date based structure with Media Kolfat for Windows.">':
+                  '<meta property="og:description" content="Organizza raccolte sparse di foto e video in una struttura ordinata basata sulle date con Media Kolfat per Windows.">',
+              '<meta name="twitter:title" content="Media Kolfat Photo & Video Organizer for Windows">':
+                  '<meta name="twitter:title" content="Media Kolfat — Organizzatore di foto e video per Windows">',
+              '<meta name="twitter:description" content="Organize scattered photo and video collections into a clean, date based structure with Media Kolfat for Windows.">':
+                  '<meta name="twitter:description" content="Organizza raccolte sparse di foto e video in una struttura ordinata basata sulle date con Media Kolfat per Windows.">',
+              '"description":"Media Kolfat helps organize photos and videos from multiple devices and storage locations into a clean, date based folder structure."':
+                  '"description":"Media Kolfat aiuta a organizzare foto e video provenienti da più dispositivi e posizioni di archiviazione in una struttura di cartelle ordinata basata sulle date."',
+          }
+
+          for old, new in replacements.items():
+              if old not in text:
+                  raise RuntimeError(f'{path}: expected metadata fragment not found: {old[:80]}')
+              text = text.replace(old, new, 1)
+
+          if text != original:
+              path.write_text(text, encoding='utf-8')
+              changed.append(str(path))
+
+          # Validate the five corrected pages.
+          expected = {
+              'zh': 'https://kolfat.app/zh/Media_Kolfat/',
+              'hi': 'https://kolfat.app/hi/Media_Kolfat/',
+              'ru': 'https://kolfat.app/ru/Media_Kolfat/',
+              'ar': 'https://kolfat.app/ar/Media_Kolfat/',
+          }
+          for lang, url in expected.items():
+              t = (Path(lang) / 'Media_Kolfat' / 'index.html').read_text(encoding='utf-8')
+              assert f'<link rel="canonical" href="{url}">' in t
+              assert f'<meta property="og:url" content="{url}">' in t
+              assert f'"name":"Media Kolfat","url":"{url}"' in t
+              assert '<link rel="alternate" hreflang="en" href="https://kolfat.app/en/Media_Kolfat/">' in t
+
+          it = (Path('it') / 'Media_Kolfat' / 'index.html').read_text(encoding='utf-8')
+          assert '<link rel="canonical" href="https://kolfat.app/it/Media_Kolfat/">' in it
+          assert '<meta property="og:url" content="https://kolfat.app/it/Media_Kolfat/">' in it
+          assert 'Media Kolfat — Organizzatore di foto e video per Windows' in it
+          assert 'Organizza raccolte sparse di foto e video' in it
+          assert 'Media Kolfat aiuta a organizzare foto e video' in it
+
+          print('Corrected localized SEO metadata:', ', '.join(changed))
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add zh/Media_Kolfat/index.html hi/Media_Kolfat/index.html ru/Media_Kolfat/index.html ar/Media_Kolfat/index.html it/Media_Kolfat/index.html
+          git commit -m "Fix localized Media Kolfat SEO metadata"
+          git push
