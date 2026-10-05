@@ -17,7 +17,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Add X and YouTube buttons to all localized production pages
+      - name: Add X, YouTube and TikTok buttons to all production pages
         shell: bash
         run: |
           set -euo pipefail
@@ -25,37 +25,47 @@ jobs:
           from pathlib import Path
           import re
 
-          langs = ["en","fa","de","es","it","fr","pt","ja","zh","hi","ru","ar"]
-          pages = [Path(lang)/"index.html" for lang in langs] + [Path(lang)/"Media_Kolfat"/"index.html" for lang in langs]
-
           x_button = '<a class="social-top x-top" href="https://x.com/KOLFAT_APP" target="_blank" rel="noopener noreferrer" aria-label="KOLFAT on X">X</a>'
           youtube_button = '<a class="social-top youtube-top" href="https://www.youtube.com/@KOLFAT_APP" target="_blank" rel="noopener noreferrer" aria-label="KOLFAT on YouTube"><span class="social-long">YOUTUBE</span><span class="social-short">YT</span></a>'
+          tiktok_button = '<a class="social-top tiktok-top" href="https://www.tiktok.com/@kolfat.app" target="_blank" rel="noopener noreferrer" aria-label="KOLFAT on TikTok"><span class="social-long">TIKTOK</span><span class="social-short">TT</span></a>'
 
           support_re = re.compile(r'(<a\s+class="support-top"\s+href="[^"]+"[^>]*>.*?</a>)', re.I | re.S)
+          pages = []
           changed = []
 
-          for path in pages:
+          for path in sorted(Path('.').rglob('index.html')):
               text = path.read_text(encoding='utf-8')
+
+              # Only touch real KOLFAT pages using the standard top navigation.
+              if 'class="top-nav"' not in text or 'class="support-top"' not in text or 'class="github-top"' not in text:
+                  continue
+
+              pages.append(path)
               original = text
 
-              # Remove an earlier copy if this rollout is ever re-run.
+              # Make this rollout idempotent.
               text = re.sub(r'<a\s+class="social-top x-top".*?</a>', '', text, flags=re.I | re.S)
               text = re.sub(r'<a\s+class="social-top youtube-top".*?</a>', '', text, flags=re.I | re.S)
+              text = re.sub(r'<a\s+class="social-top tiktok-top".*?</a>', '', text, flags=re.I | re.S)
 
               match = support_re.search(text)
               if not match:
                   raise RuntimeError(f'{path}: SUPPORT button not found')
 
-              replacement = match.group(1) + x_button + youtube_button
+              replacement = match.group(1) + x_button + youtube_button + tiktok_button
               text = text[:match.start()] + replacement + text[match.end():]
 
-              # Cache-bust the shared stylesheet consistently.
-              text = re.sub(
-                  r'/assets/kolfat-ui-v5\.css\?v=[^"\']+',
-                  '/assets/kolfat-ui-v5.css?v=20260914-social1',
-                  text,
-                  count=1,
-              )
+              css_link = '<link rel="stylesheet" href="/assets/kolfat-ui-v5.css?v=20261005-social4">'
+              if '/assets/kolfat-ui-v5.css' in text:
+                  text = re.sub(
+                      r'<link\s+rel="stylesheet"\s+href="/assets/kolfat-ui-v5\.css\?v=[^"]+"\s*/?>',
+                      css_link,
+                      text,
+                      count=1,
+                      flags=re.I,
+                  )
+              else:
+                  text = text.replace('</head>', css_link + '\n</head>', 1)
 
               if text != original:
                   path.write_text(text, encoding='utf-8')
@@ -111,21 +121,27 @@ jobs:
   .top-nav .support-top,.top-nav .github-top,.top-nav .social-top{padding-left:8px!important;padding-right:8px!important;font-size:.55rem!important}
   .top-nav .x-top{min-width:34px!important;padding-left:7px!important;padding-right:7px!important}
   .top-nav .lang-menu summary{min-width:52px!important;padding-left:7px!important;padding-right:7px!important}
-  .youtube-top .social-long{display:none}
-  .youtube-top .social-short{display:inline}
+  .youtube-top .social-long,.tiktok-top .social-long{display:none}
+  .youtube-top .social-short,.tiktok-top .social-short{display:inline}
 }
 /* KOLFAT SOCIAL TOP NAV END */
 '''
           css = css.rstrip() + '\n\n' + social_css.lstrip()
           css_path.write_text(css, encoding='utf-8')
 
-          # Validate every intended localized home and Media Kolfat page.
+          if not pages:
+              raise RuntimeError('No production pages with standard top navigation were found')
+
           for path in pages:
               t = path.read_text(encoding='utf-8')
-              if t.count('href="https://x.com/KOLFAT_APP"') != 1:
-                  raise RuntimeError(f'{path}: X button count is not exactly 1')
-              if t.count('href="https://www.youtube.com/@KOLFAT_APP"') != 1:
-                  raise RuntimeError(f'{path}: YouTube button count is not exactly 1')
+              checks = [
+                  ('X', 'href="https://x.com/KOLFAT_APP"'),
+                  ('YouTube', 'href="https://www.youtube.com/@KOLFAT_APP"'),
+                  ('TikTok', 'href="https://www.tiktok.com/@kolfat.app"'),
+              ]
+              for label, needle in checks:
+                  if t.count(needle) != 1:
+                      raise RuntimeError(f'{path}: {label} button count is not exactly 1')
               if t.count('class="support-top"') != 1:
                   raise RuntimeError(f'{path}: SUPPORT button count changed unexpectedly')
               if t.count('class="github-top"') != 1:
@@ -134,18 +150,19 @@ jobs:
                   t.index('class="support-top"'),
                   t.index('class="social-top x-top"'),
                   t.index('class="social-top youtube-top"'),
+                  t.index('class="social-top tiktok-top"'),
                   t.index('class="github-top"'),
               ]
               if order != sorted(order):
                   raise RuntimeError(f'{path}: top navigation order is incorrect')
-              if '/assets/kolfat-ui-v5.css?v=20260914-social1' not in t:
-                  raise RuntimeError(f'{path}: stylesheet cache-buster missing')
+              if '/assets/kolfat-ui-v5.css?v=20261005-social4' not in t:
+                  raise RuntimeError(f'{path}: shared stylesheet link missing')
 
-          print(f'Updated {len(changed)} localized pages and shared top-navigation CSS')
+          print(f'Updated {len(changed)} pages; validated {len(pages)} standard top-navigation pages')
           PY
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/kolfat-ui-v5.css */index.html */Media_Kolfat/index.html
-          git commit -m "Add X and YouTube buttons to localized top navigation"
+          git add -A
+          git commit -m "Add TikTok to all top navigation pages"
           git push
