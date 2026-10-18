@@ -228,3 +228,12 @@ html[data-kolfat-page="product"] .sources + .store-btn{margin-top:18px!important
   }
 }
 /* END KOLFAT MOBILE HEADER COLLISION FIX */
+
+
+/* KOLFAT DESKTOP CONTACT / SEO NAV COLLISION FIX */
+@media(min-width:821px){
+  html[data-kolfat-page="home"] .contact-kolfat{
+    bottom:78px!important;
+  }
+}
+/* END KOLFAT DESKTOP CONTACT / SEO NAV COLLISION FIX */
