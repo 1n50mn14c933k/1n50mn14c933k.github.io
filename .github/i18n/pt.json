@@ -1,0 +1,218 @@
+{
+  "labels": {
+    "menu": "MENU",
+    "home": "INÍCIO",
+    "download": "DOWNLOAD",
+    "about": "SOBRE",
+    "guides": "GUIAS",
+    "support": "SUPORTE",
+    "contact": "CONTATO",
+    "read": "Ler guia",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "licenses": "Licenças"
+  },
+  "about": {
+    "title": "Sobre a KOLFAT",
+    "desc": "Conheça a KOLFAT e o MEDIA KOLFAT para Windows.",
+    "intro": "A KOLFAT cria ferramentas práticas para organizar e preservar memórias digitais.",
+    "story_h": "Ordem a partir do caos",
+    "story": "Fotos e vídeos ficam espalhados por computadores, telefones, dispositivos USB, discos externos e cópias de segurança. A KOLFAT busca tornar essas coleções mais fáceis de organizar e explorar.",
+    "product": "O MEDIA KOLFAT é o primeiro aplicativo do projeto. Oferece modos guiado e avançado, cópia e movimentação, busca de duplicados, exploração da biblioteca, histórico de atividades e rotação de fotos. A edição básica é gratuita na Microsoft Store.",
+    "privacy_h": "Privacidade desde o início",
+    "privacy": "As tarefas habituais de organização são realizadas localmente nos seus arquivos, sem a obrigação de enviá-los a um serviço remoto.",
+    "social_h": "Canais oficiais",
+    "social": "Acompanhe demonstrações e notícias nos perfis oficiais da KOLFAT."
+  },
+  "download": {
+    "title": "Baixar MEDIA KOLFAT para Windows",
+    "desc": "Baixe gratuitamente o MEDIA KOLFAT pela Microsoft Store oficial.",
+    "intro": "Instale a edição oficial para organizar fotos e vídeos localmente no Windows.",
+    "why_h": "Por que Microsoft Store?",
+    "why": "A loja oficial oferece um caminho consistente para instalar e atualizar, reduzindo o risco de programas modificados em sites não oficiais.",
+    "features_h": "Recursos do MEDIA KOLFAT",
+    "steps_h": "Antes de organizar uma coleção grande",
+    "features": [
+      [
+        "Organizar",
+        "Crie pastas por data com os modos guiado e avançado."
+      ],
+      [
+        "Explorar",
+        "Navegue pela biblioteca, gire fotos e confira relatórios e histórico."
+      ],
+      [
+        "Duplicados",
+        "Encontre arquivos idênticos antes de decidir o que manter."
+      ],
+      [
+        "Processamento local",
+        "Trabalhe com arquivos e pastas sob seu controle."
+      ]
+    ],
+    "steps": [
+      "Mantenha uma cópia de segurança independente dos arquivos importantes.",
+      "Confirme o acesso e o espaço disponível na origem e no destino.",
+      "Comece pelo modo guiado de cópia quando a segurança for prioridade.",
+      "Confira os resultados e relatórios antes de remover originais."
+    ]
+  },
+  "hub": {
+    "title": "Guias do MEDIA KOLFAT",
+    "desc": "Guias úteis para organizar fotos, vídeos e duplicados com segurança no Windows.",
+    "intro": "Aprenda a organizar bibliotecas grandes sem perder o controle dos arquivos originais.",
+    "product_cta": "O MEDIA KOLFAT oferece organização local, detecção de duplicados e análise dos resultados."
+  },
+  "guides": [
+    {
+      "title": "Como organizar fotos por data no Windows",
+      "intro": "Pastas por ano, mês e dia facilitam encontrar fotos. Proteja os arquivos originais e confira datas ausentes.",
+      "steps": [
+        [
+          "Faça um backup",
+          "Guarde uma cópia independente das fotos importantes."
+        ],
+        [
+          "Escolha a data correta",
+          "Prefira metadados confiáveis da câmera a datas alteradas pelo sistema."
+        ],
+        [
+          "Defina as pastas",
+          "Ano, mês e dia formam uma estrutura simples de navegar."
+        ],
+        [
+          "Copie primeiro",
+          "Teste a nova organização sem remover os arquivos de origem."
+        ],
+        [
+          "Separe os duplicados",
+          "Nomes iguais não significam necessariamente conteúdo igual."
+        ],
+        [
+          "Verifique os resultados",
+          "Confira relatórios, contagens e fotos sem data antes de limpar."
+        ]
+      ]
+    },
+    {
+      "title": "Organizar uma biblioteca grande com segurança",
+      "intro": "Coleções grandes ficam espalhadas por dispositivos e backups. Divida a tarefa em etapas verificáveis.",
+      "steps": [
+        [
+          "Liste as fontes",
+          "Identifique telefones, discos, pastas e backups."
+        ],
+        [
+          "Proteja originais",
+          "Mantenha uma cópia de segurança e use cópia no primeiro teste."
+        ],
+        [
+          "Teste uma amostra",
+          "Inclua vídeos, fotos antigas, duplicados e dados incompletos."
+        ],
+        [
+          "Escolha um destino",
+          "Pastas por data são fáceis de compreender."
+        ],
+        [
+          "Examine exceções",
+          "Confira erros de acesso, datas ausentes e formatos incomuns."
+        ],
+        [
+          "Use relatórios",
+          "Registre o que foi copiado ou movido em cada tarefa."
+        ]
+      ]
+    },
+    {
+      "title": "Encontrar fotos duplicadas com segurança",
+      "intro": "Detectar um arquivo idêntico não significa que ele deva ser apagado imediatamente.",
+      "steps": [
+        [
+          "O nome não basta",
+          "Arquivos diferentes podem ter o mesmo nome."
+        ],
+        [
+          "Use hashes",
+          "SHA-256 ajuda a agrupar arquivos com bytes idênticos."
+        ],
+        [
+          "Parecido não é idêntico",
+          "Uma foto editada ou comprimida pode ser outro arquivo."
+        ],
+        [
+          "Preserve a cópia confiável",
+          "Defina a biblioteca principal e mantenha backup."
+        ],
+        [
+          "Revise cada grupo",
+          "Compare caminhos e datas dos duplicados."
+        ],
+        [
+          "Prefira limpeza reversível",
+          "Mover para revisão é mais seguro do que apagar definitivamente."
+        ]
+      ]
+    },
+    {
+      "title": "Organizar fotos de celular e USB",
+      "intro": "Reúna fotos de vários dispositivos sem perder a referência da origem.",
+      "steps": [
+        [
+          "Separe as fontes",
+          "Copie cada dispositivo para uma pasta temporária."
+        ],
+        [
+          "Não renomeie imediatamente",
+          "Nomes e caminhos originais ajudam a identificar problemas."
+        ],
+        [
+          "Espere duplicados",
+          "A mesma coleção pode existir em vários discos."
+        ],
+        [
+          "Observe metadados",
+          "Capturas de tela e imagens de mensagens podem não ter datas confiáveis."
+        ],
+        [
+          "Use destino claro",
+          "Uma estrutura por data facilita navegação e backup."
+        ],
+        [
+          "Verifique antes de arquivar",
+          "Só limpe fontes antigas após conferir a cópia organizada."
+        ]
+      ]
+    },
+    {
+      "title": "Como escolher um organizador de fotos para Windows",
+      "intro": "Segurança, clareza e facilidade de uso são mais importantes do que dezenas de recursos.",
+      "steps": [
+        [
+          "Trabalho local",
+          "Saiba se os arquivos precisam ser enviados para a nuvem."
+        ],
+        [
+          "Modo de cópia",
+          "É importante organizar sem remover imediatamente a origem."
+        ],
+        [
+          "Pastas transparentes",
+          "Os arquivos devem continuar acessíveis sem programas especiais."
+        ],
+        [
+          "Duplicados exatos",
+          "Somente nomes iguais não comprovam arquivos idênticos."
+        ],
+        [
+          "Relatórios e histórico",
+          "Tarefas grandes exigem resultados verificáveis."
+        ],
+        [
+          "Usabilidade",
+          "Fluxos guiados e controles legíveis ajudam todos os usuários."
+        ]
+      ]
+    }
+  ]
+}
