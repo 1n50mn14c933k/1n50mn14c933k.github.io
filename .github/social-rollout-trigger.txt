@@ -3,3 +3,5 @@ Trigger registered workflow for top-navigation social buttons.
 Run SEO growth pack trigger 2026-10-18.
 
 Run SEO growth pack trigger 2 2026-10-18.
+
+Run global navigation dropdown rollout on 2026-10-18.
