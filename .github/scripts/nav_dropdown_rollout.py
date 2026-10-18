@@ -25,8 +25,8 @@ TOPNAV_PATTERN = re.compile(
     re.S,
 )
 CONTENT_NAV_PATTERN = re.compile(r'<nav class="nav" aria-label="Primary">.*?</nav>', re.S)
-CONTACT_PATTERN = re.compile(r'<a class="contact-kolfat"\b[^>]*>.*?</a>', re.S)
-BOTTOM_NAV_PATTERN = re.compile(r'<nav class="(?:primary-seo-links|seo-footer-links)"\b[^>]*>.*?</nav>', re.S)
+CONTACT_PATTERN = re.compile(r'<a class="contact-kolfat"[^>]*>.*?</a>', re.S)
+BOTTOM_NAV_PATTERN = re.compile(r'<nav class="(?:primary-seo-links|seo-footer-links)"[^>]*>.*?</nav>', re.S)
 
 def link(url, label, current, *, external=False):
     # The links remain plain HTML, crawlable even when the details panel is closed.
