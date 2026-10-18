@@ -32,12 +32,23 @@ The site is hosted with **GitHub Pages** and uses the custom domain defined in `
 
 - KOLFAT: https://kolfat.app/
 - MEDIA KOLFAT: https://kolfat.app/en/Media_Kolfat/
+- Download: https://kolfat.app/download/
+- About KOLFAT: https://kolfat.app/about/
+- Guides: https://kolfat.app/guides/
 - Microsoft Store: https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare
 - Support: https://kolfat.app/support/
 - Privacy: https://kolfat.app/privacy/
 - Terms: https://kolfat.app/terms/
 - Disclaimer: https://kolfat.app/disclaimer/
 - Licenses: https://kolfat.app/licenses/
+
+## Website navigation (desktop and mobile)
+
+All supported website pages use the same **KOLFAT MENU** dropdown at the top right. The language switcher remains a separate control on localized pages, next to the MENU. The brand logo remains on the top left. There is no second link/button row in the homepage hero/footer and no floating CONTACT overlay.
+
+MENU contains Home, MEDIA KOLFAT, Download, About, Guides, Support, Contact (mailto), X, YouTube, TikTok and GitHub. Localized navigation maintains the current language for Home, MEDIA KOLFAT and Support; About, Download, and Guides currently serve English content.
+
+The site-wide implementation is documented at [docs/NAVIGATION.md](docs/NAVIGATION.md). The deployment stylesheet and script are `assets/nav-dropdown.css` and `assets/nav-dropdown.js`. Do not bring back the old separately positioned `support-top`, `social-top`, `github-top`, `contact-kolfat`, `primary-seo-links`, or `seo-footer-links` layouts.
 
 ## Production Repository Rules
 
@@ -67,6 +78,8 @@ Before changing production content:
 4. Keep canonical and hreflang URLs consistent
 5. Preserve `CNAME`, `.nojekyll`, `robots.txt`, and `sitemap.xml`
 6. Never place secrets in repository content or workflow files
+7. Verify both dropdowns, keyboard operation, and 320–430px mobile layout as well as desktop
+8. Check all 12 locales plus product, support, legal and guide pages using the navigation checklist
 
 ## Security
 
