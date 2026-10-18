@@ -1,0 +1,51 @@
+# KOLFAT website navigation — production specification
+
+## Design contract
+
+- **Desktop and mobile:** KOLFAT logo at upper left; a single **MENU** dropdown at upper right.
+- **Localized pages:** language chooser is immediately to the right of MENU, not embedded in it. Keep all twelve languages and their existing URL destinations.
+- **No second toolbar:** remove the old footer/hero `primary-seo-links` and `seo-footer-links` button bars. The existing descriptive homepage footer tagline stays.
+- **Contact:** `mailto:contact@kolfat.app` is inside MENU, not a fixed overlapping box. Keep the Microsoft Store call-to-action within page content.
+- **Links in menu:** Home (current language), MEDIA KOLFAT (current language), Download, About, Guides, Support (current language), Contact, X, YouTube, TikTok, GitHub.
+- **Language:** localize MENU and internal navigation labels; About/Download/Guides currently point to the English-only pages. Do not invent localized content pages.
+- **Styling:** monochrome, matches existing KOLFAT appearance; no animations required to navigate.
+- **Mobile:** all controls share one header row, with no overlap with the logo; dropdown scrolls vertically when the device screen is short. Test 320, 360, 375, 390 and 430 CSS-pixel widths.
+- **Desktop:** test 1024, 1280, 1440 and 1920 CSS-pixel widths.
+
+## Files
+
+- `assets/nav-dropdown.css`: shared responsive layout. Loaded after legacy inline styles and shared CSS.
+- `assets/nav-dropdown.js`: outside-click dismissal, Escape-key focus restoration and mutual exclusion of MENU/language.
+- `.github/scripts/nav_dropdown_rollout.py`: idempotent static-page upgrade with metadata preservation checks.
+- `.github/workflows/nav-dropdown-rollout.yml`: applies the upgrade after a specific trigger commit.
+- `README.md`: links to this specification.
+
+All anchors are ordinary server-rendered HTML, visible in page source and accessible to search crawlers even though MENU starts collapsed. The script is a progressive enhancement; the native HTML `<details>` remains functional without JavaScript.
+
+## Routes and SEO
+
+Localized landing pages: `/<lang>/`, localized MEDIA KOLFAT: `/<lang>/Media_Kolfat/` for `en fa de fr es pt it ja zh hi ru ar`. Localized support/legal pages retain their existing paths and language switcher. Do not modify canonical, hreflang, robots, JSON-LD, CNAME, sitemap, SEO titles, or descriptions when changing navigation.
+
+Nonlocalized pages `/about/`, `/download/`, `/guides/`, articles, and the getting-started guide use the same MENU pattern. Do not add a language switcher where translated content does not exist.
+
+## Acceptance checks
+
+1. On mobile, logo/MENU/language share one row, with no overlap. No horizontal scrolling caused by top navigation.
+2. MENU opens and closes with tap/click or keyboard Enter/Space. Escape closes the dropdown and restores focus.
+3. Opening the language dropdown closes MENU and vice versa; clicking outside closes any open dropdown.
+4. Every MENU link works. External links open in a separate tab and have `rel="noopener noreferrer"`.
+5. On all localized home/product/legal pages, language choice retains the current page type.
+6. HOME and MEDIA KOLFAT URLs stay localized; Download/About/Guides remain English-only until translations exist.
+7. Bottom SEO links and floating contact box do not reappear on mobile or desktop.
+8. Microsoft Store download link and page content remain available.
+9. Homepage hero and product hero remain usable at 320px and desktop widths.
+10. Canonical/hreflang/schema, sitemap, and robots file contents are unchanged by this navigation patch.
+11. The GitHub Pages build/deploy must pass; verify the deployed pages and hard-refresh if CSS caching persists.
+
+## Rollback
+
+Restore the prior page/asset versions from Git history if necessary. Do not delete the language selector or alter production URLs while rolling back. Review mobile and desktop screenshots before closing a regression.
+
+## Maintenance
+
+Edit shared menu generation in `.github/scripts/nav_dropdown_rollout.py` and shared layout in `assets/nav-dropdown.css`; keep all localized pages in sync. The rollout script is meant for a one-time migration, not as a perpetual workflow that mutates content on every push. For later updates, use reviewed Git changes and regression tests.
