@@ -144,7 +144,7 @@ def content(l,d,p):
     sections="".join(f'<section class="section"><h2>{i}. {e(h)}</h2><p>{e(b)}</p></section>' for i,(h,b) in enumerate(g["steps"],1))
     body=(f'<article class="hero"><p class="eyebrow">MEDIA KOLFAT</p><h1>{e(g["title"])}</h1>'
           f'<p class="lead">{e(g["intro"])}</p></article>'+sections
-          f'<section class="section"><h2>MEDIA KOLFAT</h2><p>{e(d["hub"]["product_cta"])}</p>'
+          +f'<section class="section"><h2>MEDIA KOLFAT</h2><p>{e(d["hub"]["product_cta"])}</p>'
           f'<div class="cta-row"><a class="cta primary" href="{path(l,"download")}">{e(a["download"])}</a>'
           f'<a class="cta" href="/{l}/Media_Kolfat/">MEDIA KOLFAT</a>'
           f'<a class="cta" href="{path(l,"guides")}">{e(a["guides"])}</a></div></section>')
