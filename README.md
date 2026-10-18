@@ -46,9 +46,15 @@ The site is hosted with **GitHub Pages** and uses the custom domain defined in `
 
 All supported website pages use the same **KOLFAT MENU** dropdown at the top right. The language switcher remains a separate control on localized pages, next to the MENU. The brand logo remains on the top left. There is no second link/button row in the homepage hero/footer and no floating CONTACT overlay.
 
-MENU contains Home, MEDIA KOLFAT, Download, About, Guides, Support, Contact (mailto), X, YouTube, TikTok and GitHub. Localized navigation maintains the current language for Home, MEDIA KOLFAT and Support; About, Download, and Guides currently serve English content.
+MENU contains Home, MEDIA KOLFAT, Download, About, Guides, Support, Contact (mailto), X, YouTube, TikTok and GitHub. Localized navigation maintains the current language for Home, MEDIA KOLFAT and Support; About, Download, Guides, and the five article pages are localized into all twelve site languages.
 
 The site-wide implementation is documented at [docs/NAVIGATION.md](docs/NAVIGATION.md). The deployment stylesheet and script are `assets/nav-dropdown.css` and `assets/nav-dropdown.js`. Do not bring back the old separately positioned `support-top`, `social-top`, `github-top`, `contact-kolfat`, `primary-seo-links`, or `seo-footer-links` layouts.
+
+## Multilingual About, Download, and Guides
+
+All **12 supported languages** have their own About, Download, Guides hub and five photo-organization guides. English uses `/about/`, `/download/`, and `/guides/`; other languages use `/<lang>/about/`, `/<lang>/download/`, and `/<lang>/guides/`. Every article has a corresponding localized path.
+
+The rollout keeps self-canonical URLs, reciprocal `hreflang` and `x-default`, structured data, and language-specific menu links. Translation sources live in `.github/i18n/`; see [docs/NAVIGATION.md](docs/NAVIGATION.md) for implementation and testing details.
 
 ## Production Repository Rules
 
