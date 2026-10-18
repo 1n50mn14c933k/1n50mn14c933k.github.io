@@ -7,7 +7,7 @@
 - **No second toolbar:** remove the old footer/hero `primary-seo-links` and `seo-footer-links` button bars. The existing descriptive homepage footer tagline stays.
 - **Contact:** `mailto:contact@kolfat.app` is inside MENU, not a fixed overlapping box. Keep the Microsoft Store call-to-action within page content.
 - **Links in menu:** Home (current language), MEDIA KOLFAT (current language), Download, About, Guides, Support (current language), Contact, X, YouTube, TikTok, GitHub.
-- **Language:** localize MENU and internal navigation labels; About/Download/Guides currently point to the English-only pages. Do not invent localized content pages.
+- **Language:** localize MENU and internal navigation labels; About, Download, the Guides hub, and all five guide articles now have genuine localized pages in every supported language. Each locale must link to its own translated route.
 - **Styling:** monochrome, matches existing KOLFAT appearance; no animations required to navigate.
 - **Mobile:** all controls share one header row, with no overlap with the logo; dropdown scrolls vertically when the device screen is short. Test 320, 360, 375, 390 and 430 CSS-pixel widths.
 - **Desktop:** test 1024, 1280, 1440 and 1920 CSS-pixel widths.
@@ -26,7 +26,7 @@ All anchors are ordinary server-rendered HTML, visible in page source and access
 
 Localized landing pages: `/<lang>/`, localized MEDIA KOLFAT: `/<lang>/Media_Kolfat/` for `en fa de fr es pt it ja zh hi ru ar`. Localized support/legal pages retain their existing paths and language switcher. Do not modify canonical, hreflang, robots, JSON-LD, CNAME, sitemap, SEO titles, or descriptions when changing navigation.
 
-Nonlocalized pages `/about/`, `/download/`, `/guides/`, articles, and the getting-started guide use the same MENU pattern. Do not add a language switcher where translated content does not exist.
+The original English URLs `/about/`, `/download/`, `/guides/` and five guide articles remain unchanged for backwards compatibility. Equivalent localized pages are `/<lang>/about/`, `/<lang>/download/`, `/<lang>/guides/` and `/<lang>/guides/<article>/` for every other supported language. The language selector must switch between these exact corresponding pages. The Getting Started help remains English-only until separately localized.
 
 ## Acceptance checks
 
@@ -35,7 +35,7 @@ Nonlocalized pages `/about/`, `/download/`, `/guides/`, articles, and the gettin
 3. Opening the language dropdown closes MENU and vice versa; clicking outside closes any open dropdown.
 4. Every MENU link works. External links open in a separate tab and have `rel="noopener noreferrer"`.
 5. On all localized home/product/legal pages, language choice retains the current page type.
-6. HOME and MEDIA KOLFAT URLs stay localized; Download/About/Guides remain English-only until translations exist.
+6. HOME, MEDIA KOLFAT, Download, About and Guides all lead to the selected language; article language switching preserves the article topic.
 7. Bottom SEO links and floating contact box do not reappear on mobile or desktop.
 8. Microsoft Store download link and page content remain available.
 9. Homepage hero and product hero remain usable at 320px and desktop widths.
@@ -49,3 +49,14 @@ Restore the prior page/asset versions from Git history if necessary. Do not dele
 ## Maintenance
 
 Edit shared menu generation in `.github/scripts/nav_dropdown_rollout.py` and shared layout in `assets/nav-dropdown.css`; keep all localized pages in sync. The rollout script is meant for a one-time migration, not as a perpetual workflow that mutates content on every push. For later updates, use reviewed Git changes and regression tests.
+
+
+## Localized content expansion (2026-10-18)
+
+- 88 additional translated URLs: 11 languages × (About, Download, Guides hub, five articles). 96 content URLs including the eight original English pages.
+- Translation sources: `.github/i18n/{fa,de,fr,es,pt,it,ja,zh,hi,ru,ar}.json`.
+- Generator and metadata validation: `.github/scripts/localize_content_pages.py`.
+- Localization styling: `assets/localized-content.css`; keep RTL for Persian and Arabic.
+- Every translated page has a self-canonical, reciprocal 12-language `hreflang` plus `x-default`, translated title/description and visible body text, valid JSON-LD, translated MENU and localized footer links.
+- All original 93 sitemap URLs are retained; 88 new canonical URLs increase expected sitemap count to **181**.
+- Avoid creating empty or English-only placeholder translations. Translation edits should be reviewed by a native speaker where practical.
