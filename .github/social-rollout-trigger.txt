@@ -9,3 +9,5 @@ Run global navigation dropdown rollout on 2026-10-18.
 Retry verified rollout after regex correction.
 
 Run multilingual page rollout 2026-10-18.
+
+Retry multilingual page rollout after syntax correction.
