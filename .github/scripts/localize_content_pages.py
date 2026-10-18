@@ -45,7 +45,7 @@ def menu(l,p,d):
        ("/support/" if l=="en" else f"/{l}/support/",a["support"]),
        ("mailto:contact@kolfat.app",a["contact"])
     ]
-    links="".join(f'<a href="{attrs(href)}" dir="auto"{" aria-current=\"page\"" if href==path(l,p) else ""}>{e(label)}</a>' for href,label in internal)
+    links="".join(f'<a href="{attrs(href)}" dir="auto">{e(label)}</a>' for href,label in internal)
     social=[("https://x.com/KOLFAT_APP","X"),("https://www.youtube.com/@KOLFAT_APP","YOUTUBE"),("https://www.tiktok.com/@kolfat.app","TIKTOK"),("https://github.com/1n50mn14c933k/Media_Kolfat","GITHUB")]
     links+='<span class="menu-section-label">FOLLOW KOLFAT</span>'
     links+="".join(f'<a href="{attrs(u)}" target="_blank" rel="noopener noreferrer" dir="auto">{v}</a>' for u,v in social)
