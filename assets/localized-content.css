@@ -1,0 +1,24 @@
+/* Localized About, Download, Guides pages: same brand and menu as the rest of KOLFAT. */
+html body .header-inner{position:relative;overflow:visible}
+html body .header-inner .top-nav{position:relative!important;top:auto!important;right:auto!important;left:auto!important;margin-left:auto!important;gap:9px!important}
+html body .header-inner .top-nav .lang-menu{display:block!important}
+html body .header-inner .top-nav .kolfat-menu-panel{top:52px!important}
+html[dir="rtl"] body{text-align:right}
+html[dir="rtl"] body main .breadcrumb{direction:rtl}
+html[dir="rtl"] body .section ol,html[dir="rtl"] body .section ul{padding-right:24px;padding-left:0}
+html[dir="rtl"] body .section,.hero{unicode-bidi:plaintext}
+html[dir="rtl"] body .grid{direction:rtl}
+html[dir="rtl"] body .header-inner{direction:ltr}
+html[dir="rtl"] body .header .top-nav{direction:ltr}
+html body .header-inner .top-nav .lang-list{display:block}
+html body .header-inner .top-nav .lang-list a{display:block;white-space:nowrap;padding:10px 13px;text-decoration:none}
+html body .header-inner .top-nav .lang-list a:hover{background:#fff!important;color:#050505!important}
+@media(max-width:720px){
+ html body .header-inner{flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:5px!important}
+ html body .header-inner .brand{margin-right:auto!important}
+ html body .header-inner .brand img{width:110px!important;max-width:31vw!important}
+ html body .header-inner .top-nav{margin-left:auto!important;gap:5px!important}
+ html body .header-inner .top-nav .kolfat-menu>summary{min-width:76px!important;padding:0 7px!important;font-size:10px!important}
+ html body .header-inner .top-nav .lang-menu>summary{min-width:40px!important;padding:0 5px!important}
+ html body .header-inner .top-nav .kolfat-menu-panel,html body .header-inner .top-nav .lang-list{top:46px!important}
+}
