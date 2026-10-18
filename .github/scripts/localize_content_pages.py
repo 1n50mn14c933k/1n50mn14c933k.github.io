@@ -207,6 +207,17 @@ for p in PAGES:
         text=text[:nav.start()]+updated+text[nav.end():]
         source.write_text(text,encoding="utf-8")
 
+# Give the existing eight English pages their complete reciprocal hreflang clusters.
+# Existing canonicals, body copy, and structured data stay unchanged.
+for p in PAGES:
+    source=Path(p)/"index.html"
+    text=source.read_text(encoding="utf-8")
+    if 'hreflang="x-default"' not in text:
+        canonical=f'<link rel="canonical" href="{url("en",p)}">'
+        assert text.count(canonical)==1,source
+        text=text.replace(canonical,canonical+"\n"+alternate(p),1)
+        source.write_text(text,encoding="utf-8")
+
 # Sitemap: keep all preexisting URLs and append 88 exact new localized URLs.
 sitemap=Path("sitemap.xml")
 text=sitemap.read_text(encoding="utf-8")
