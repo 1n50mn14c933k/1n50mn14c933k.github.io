@@ -1,0 +1,218 @@
+{
+  "labels": {
+    "menu": "MENÜ",
+    "home": "STARTSEITE",
+    "download": "DOWNLOAD",
+    "about": "ÜBER KOLFAT",
+    "guides": "ANLEITUNGEN",
+    "support": "SUPPORT",
+    "contact": "KONTAKT",
+    "read": "Anleitung lesen",
+    "privacy": "Datenschutz",
+    "terms": "Bedingungen",
+    "licenses": "Lizenzen"
+  },
+  "about": {
+    "title": "Über KOLFAT",
+    "desc": "Erfahren Sie mehr über das unabhängige Softwareprojekt KOLFAT und MEDIA KOLFAT für Windows.",
+    "intro": "KOLFAT entwickelt praktische Werkzeuge, um digitale Erinnerungen übersichtlich und kontrollierbar zu halten.",
+    "story_h": "Ordnung aus dem Chaos",
+    "story": "Fotos und Videos verteilen sich auf PCs, Smartphones, USB-Sticks, externe Festplatten und Backups. KOLFAT entwickelt Werkzeuge, mit denen sich diese Sammlungen besser organisieren, prüfen und bewahren lassen.",
+    "product": "MEDIA KOLFAT ist die erste Windows-Anwendung des Projekts. Sie bietet geführte und erweiterte Abläufe, Kopieren und Verschieben, Duplikaterkennung, Bibliotheksansicht, Aktivitätsverlauf und Bildrotation. Die Basisversion ist kostenlos im Microsoft Store erhältlich.",
+    "privacy_h": "Datenschutzorientiert",
+    "privacy": "Die gewöhnliche Medienverwaltung erfolgt lokal auf den eigenen Dateien und Ordnern. Eine Übertragung privater Fotos an einen entfernten Dienst ist für diesen Ablauf nicht nötig.",
+    "social_h": "Offizielle Kanäle",
+    "social": "Auf den offiziellen KOLFAT-Kanälen finden Sie Vorführungen, Updates und Produktinformationen."
+  },
+  "download": {
+    "title": "MEDIA KOLFAT für Windows herunterladen",
+    "desc": "Kostenloser offizieller Download von MEDIA KOLFAT über den Microsoft Store.",
+    "intro": "Installieren Sie MEDIA KOLFAT direkt über den offiziellen Microsoft Store. Die Windows-Anwendung organisiert Foto- und Videobibliotheken lokal.",
+    "why_h": "Warum Microsoft Store?",
+    "why": "Der offizielle Store bietet einen einheitlichen Installations- und Aktualisierungsweg und reduziert das Risiko manipulierter Installationspakete aus fremden Quellen.",
+    "features_h": "Das kann MEDIA KOLFAT",
+    "steps_h": "Vor großen Organisationsaufgaben",
+    "features": [
+      [
+        "Organisieren",
+        "Erstellen Sie klare datumsbasierte Ordner mit geführten oder erweiterten Abläufen."
+      ],
+      [
+        "Überprüfen",
+        "Durchsuchen Sie Ihre Bibliothek, drehen Sie Fotos und lesen Sie Berichte und Verlauf."
+      ],
+      [
+        "Duplikate erkennen",
+        "Finden und kontrollieren Sie identische Dateien vor einer Entscheidung."
+      ],
+      [
+        "Lokal arbeiten",
+        "Verwalten Sie Dateien und Ordner, die Sie selbst kontrollieren."
+      ]
+    ],
+    "steps": [
+      "Sichern Sie unersetzliche Fotos und Videos unabhängig.",
+      "Prüfen Sie Zugriff und freien Speicherplatz von Quelle und Ziel.",
+      "Beginnen Sie bei Unsicherheit mit dem geführten Kopiermodus.",
+      "Kontrollieren Sie Ergebnis und Berichte vor dem Löschen von Originalen."
+    ]
+  },
+  "hub": {
+    "title": "MEDIA KOLFAT Anleitungen",
+    "desc": "Praxisnahe Windows-Anleitungen für Fotoorganisation, Datumsordner und sichere Duplikatprüfung.",
+    "intro": "Diese Anleitungen helfen beim sicheren Organisieren großer Foto- und Videobibliotheken.",
+    "product_cta": "MEDIA KOLFAT bietet lokale Organisation, Duplikaterkennung und nachvollziehbare Ergebnisse unter Windows."
+  },
+  "guides": [
+    {
+      "title": "Fotos unter Windows nach Datum sortieren",
+      "intro": "Datumsbasierte Ordner machen umfangreiche Mediensammlungen verständlicher. Wichtig sind verlässliche Zeitangaben, Backups und eine abschließende Kontrolle.",
+      "steps": [
+        [
+          "Zuerst sichern",
+          "Bewahren Sie eine unabhängige Kopie unersetzlicher Aufnahmen auf."
+        ],
+        [
+          "Passendes Datum verwenden",
+          "Nutzen Sie zuverlässige Aufnahmemetadaten; Dateisystem-Zeitstempel können abweichen."
+        ],
+        [
+          "Ordnerstruktur festlegen",
+          "Jahr, Monat und Tag ergeben eine gut lesbare Struktur."
+        ],
+        [
+          "Anfangs kopieren",
+          "Erstellen Sie neue Ordner, ohne Originaldateien sofort zu verschieben."
+        ],
+        [
+          "Duplikate getrennt behandeln",
+          "Gleiche Namen beweisen keine Identität; Dateihashes sind aussagekräftiger."
+        ],
+        [
+          "Ergebnis prüfen",
+          "Kontrollieren Sie Stichproben, Dateianzahl, Berichte und fehlende Datumsangaben."
+        ]
+      ]
+    },
+    {
+      "title": "Große Fotobibliothek sicher organisieren",
+      "intro": "Viele Fotos liegen über Jahre auf unterschiedlichen Geräten und Backups. Teilen Sie die Organisation in überprüfbare Schritte auf.",
+      "steps": [
+        [
+          "Quellen erfassen",
+          "Listen Sie Geräte, Laufwerke, Ordner und vorhandene Sicherungen auf."
+        ],
+        [
+          "Originale schützen",
+          "Erstellen Sie Backups und beginnen Sie mit Kopieren."
+        ],
+        [
+          "Kleine Stichprobe testen",
+          "Nutzen Sie Fotos, Videos, ältere Dateien und schwierige Metadaten."
+        ],
+        [
+          "Ein klares Ziel wählen",
+          "Eine datumsbasierte Ablage vereinfacht die Navigation."
+        ],
+        [
+          "Ausnahmen sichtbar machen",
+          "Prüfen Sie Duplikate, fehlende Zeitangaben und unlesbare Dateien."
+        ],
+        [
+          "Berichte kontrollieren",
+          "Bei großen Aufgaben sollten Kopier- und Verschiebeergebnisse nachvollziehbar sein."
+        ]
+      ]
+    },
+    {
+      "title": "Doppelte Fotos sicher finden",
+      "intro": "Trennen Sie das Auffinden identischer Dateien von deren Entfernung, damit keine wichtigen Bilder verloren gehen.",
+      "steps": [
+        [
+          "Dateinamen reichen nicht",
+          "Verschiedene Bilder können denselben Namen tragen."
+        ],
+        [
+          "Hashes einsetzen",
+          "SHA-256 kann Dateien mit exakt identischem Inhalt gruppieren."
+        ],
+        [
+          "Ähnlichkeit ist keine Identität",
+          "Bearbeitete oder verkleinerte Bilder sind oft nicht bytegleich."
+        ],
+        [
+          "Verlässliche Kopie behalten",
+          "Prüfen Sie Speicherort und Backup vor jeder Bereinigung."
+        ],
+        [
+          "Gruppen vergleichen",
+          "Kontrollieren Sie Dateipfade und Daten aller identischen Dateien."
+        ],
+        [
+          "Rückgängig machbar bereinigen",
+          "Verschieben zur Prüfung ist sicherer als sofortiges endgültiges Löschen."
+        ]
+      ]
+    },
+    {
+      "title": "Fotos von Smartphone und USB-Laufwerk organisieren",
+      "intro": "Führen Sie Medien aus verschiedenen Geräten unter Windows zusammen, ohne die Herkunft der Dateien aus den Augen zu verlieren.",
+      "steps": [
+        [
+          "Quellen getrennt vorbereiten",
+          "Nutzen Sie zunächst für jedes Gerät einen eigenen Ordner."
+        ],
+        [
+          "Nicht sofort umbenennen",
+          "Ursprüngliche Pfade und Namen erleichtern die Fehlersuche."
+        ],
+        [
+          "Mit Duplikaten rechnen",
+          "Alte Smartphone-Kopien liegen oft auf mehreren Datenträgern."
+        ],
+        [
+          "Fehlende Metadaten beachten",
+          "Screenshots und Messenger-Bilder enthalten nicht immer Aufnahmedaten."
+        ],
+        [
+          "Klares Ziel verwenden",
+          "Eine zentrale datumsbasierte Ablage erleichtert Sicherungen."
+        ],
+        [
+          "Erst prüfen, dann archivieren",
+          "Bereinigen Sie alte Quellen erst nach Kontrolle und Backup."
+        ]
+      ]
+    },
+    {
+      "title": "Den passenden Foto-Organizer für Windows wählen",
+      "intro": "Eine gute Software muss nicht die meisten Funktionen haben: Sicherheit, Transparenz und Bedienbarkeit sind entscheidend.",
+      "steps": [
+        [
+          "Lokal verarbeiten",
+          "Klären Sie, ob Fotos hochgeladen werden müssen oder lokal bleiben."
+        ],
+        [
+          "Kopiermodus anbieten",
+          "Ein neues Ziel sollte entstehen können, ohne Originale zu entfernen."
+        ],
+        [
+          "Lesbare Ordner",
+          "Die Ablage sollte ohne proprietäre Datenbank verständlich sein."
+        ],
+        [
+          "Duplikate korrekt erkennen",
+          "Dateinamen allein sind zu wenig; exakte Hashes helfen."
+        ],
+        [
+          "Berichte und Verlauf",
+          "Große Vorgänge benötigen nachvollziehbare Berichte."
+        ],
+        [
+          "Einfach bedienbar",
+          "Geführte Schritte und gut lesbare Steuerelemente helfen allen Nutzern."
+        ]
+      ]
+    }
+  ]
+}
