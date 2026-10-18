@@ -1,0 +1,218 @@
+{
+  "labels": {
+    "menu": "MENÚ",
+    "home": "INICIO",
+    "download": "DESCARGAR",
+    "about": "ACERCA DE",
+    "guides": "GUÍAS",
+    "support": "SOPORTE",
+    "contact": "CONTACTO",
+    "read": "Leer guía",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "licenses": "Licencias"
+  },
+  "about": {
+    "title": "Acerca de KOLFAT",
+    "desc": "Conoce el proyecto independiente KOLFAT y MEDIA KOLFAT para Windows.",
+    "intro": "KOLFAT crea herramientas prácticas para organizar y conservar recuerdos digitales.",
+    "story_h": "Del caos al orden",
+    "story": "Las fotos y los vídeos terminan repartidos entre ordenadores, teléfonos, memorias USB, discos externos y copias de seguridad. Queremos facilitar su organización y conservación.",
+    "product": "MEDIA KOLFAT es la primera aplicación: modos guiado y avanzado, copia y movimiento, detección de duplicados, exploración de biblioteca, historial de actividad y rotación de fotos. La versión básica es gratuita en Microsoft Store.",
+    "privacy_h": "Privacidad desde el diseño",
+    "privacy": "La gestión habitual se realiza localmente con tus propios archivos, sin necesidad de subir tus recuerdos a un servidor.",
+    "social_h": "Canales oficiales",
+    "social": "Sigue las demostraciones, novedades y anuncios en los perfiles oficiales de KOLFAT."
+  },
+  "download": {
+    "title": "Descargar MEDIA KOLFAT para Windows",
+    "desc": "Descarga MEDIA KOLFAT gratis desde Microsoft Store oficial.",
+    "intro": "Instala la edición oficial de MEDIA KOLFAT y organiza fotos y vídeos localmente en Windows.",
+    "why_h": "¿Por qué Microsoft Store?",
+    "why": "Microsoft Store ofrece instalaciones y actualizaciones consistentes y reduce el riesgo de instaladores modificados de sitios no oficiales.",
+    "features_h": "Funciones de MEDIA KOLFAT",
+    "steps_h": "Antes de organizar una biblioteca grande",
+    "features": [
+      [
+        "Organizar",
+        "Crea carpetas por fecha mediante los modos guiado y avanzado."
+      ],
+      [
+        "Revisar",
+        "Explora tu biblioteca, gira fotos y consulta informes e historial."
+      ],
+      [
+        "Duplicados",
+        "Identifica archivos iguales antes de decidir qué conservar."
+      ],
+      [
+        "Trabajo local",
+        "Gestiona archivos y carpetas que están bajo tu control."
+      ]
+    ],
+    "steps": [
+      "Guarda una copia independiente de los recuerdos importantes.",
+      "Comprueba el acceso y el espacio de origen y destino.",
+      "Empieza copiando con el modo guiado si buscas máxima seguridad.",
+      "Revisa los resultados y los informes antes de borrar originales."
+    ]
+  },
+  "hub": {
+    "title": "Guías de MEDIA KOLFAT",
+    "desc": "Consejos prácticos para organizar fotos, fechas y duplicados en Windows.",
+    "intro": "Aprende a ordenar bibliotecas de fotos y vídeos de forma segura y comprensible.",
+    "product_cta": "MEDIA KOLFAT ayuda a organizar archivos localmente, detectar duplicados y revisar resultados."
+  },
+  "guides": [
+    {
+      "title": "Organizar fotos por fecha en Windows",
+      "intro": "Las carpetas por año, mes y día hacen que las colecciones grandes sean más fáciles de explorar.",
+      "steps": [
+        [
+          "Crea una copia de seguridad",
+          "Guarda tus archivos importantes en otro almacenamiento."
+        ],
+        [
+          "Elige la fecha adecuada",
+          "Usa metadatos fiables de captura y ten cuidado con fechas de modificación."
+        ],
+        [
+          "Define la estructura",
+          "Año, mes y día es una organización sencilla y escalable."
+        ],
+        [
+          "Copia primero",
+          "Crea el destino sin mover o borrar los archivos de origen."
+        ],
+        [
+          "Separa los duplicados",
+          "El mismo nombre no demuestra que dos archivos sean idénticos."
+        ],
+        [
+          "Comprueba el resultado",
+          "Revisa informes, ejemplos y archivos sin fecha antes de limpiar."
+        ]
+      ]
+    },
+    {
+      "title": "Organizar una biblioteca grande de fotos con seguridad",
+      "intro": "Las bibliotecas grandes suelen estar repartidas entre dispositivos. Divide el trabajo en pasos controlables.",
+      "steps": [
+        [
+          "Haz inventario",
+          "Apunta carpetas, móviles, discos y copias de seguridad."
+        ],
+        [
+          "Protege los originales",
+          "Conserva un respaldo y usa copia en la primera ejecución."
+        ],
+        [
+          "Prueba archivos variados",
+          "Incluye vídeos, fotos antiguas, duplicados y fechas ausentes."
+        ],
+        [
+          "Elige un destino",
+          "Una estructura por fechas facilita futuras búsquedas."
+        ],
+        [
+          "Revisa excepciones",
+          "Comprueba formatos extraños, errores de acceso y fechas faltantes."
+        ],
+        [
+          "Consulta los informes",
+          "Mantén un registro claro de cada operación grande."
+        ]
+      ]
+    },
+    {
+      "title": "Encontrar fotos duplicadas sin perder archivos",
+      "intro": "Detectar y borrar son decisiones distintas. Revisa bien antes de eliminar fotos.",
+      "steps": [
+        [
+          "Los nombres no bastan",
+          "Dispositivos distintos pueden crear archivos con el mismo nombre."
+        ],
+        [
+          "Usa hashes",
+          "SHA-256 puede identificar archivos con bytes exactamente iguales."
+        ],
+        [
+          "Parecido no es idéntico",
+          "Una imagen editada o comprimida puede tener contenido diferente."
+        ],
+        [
+          "Conserva una copia fiable",
+          "Identifica la ubicación principal y mantenla respaldada."
+        ],
+        [
+          "Examina los grupos",
+          "Compara rutas y fechas de los duplicados."
+        ],
+        [
+          "Limpia de forma reversible",
+          "Mover duplicados a revisión es más seguro que borrarlos definitivamente."
+        ]
+      ]
+    },
+    {
+      "title": "Organizar fotos del móvil y memorias USB",
+      "intro": "Agrupa archivos de teléfonos, tabletas y unidades externas sin perder el rastro del origen.",
+      "steps": [
+        [
+          "Separa las importaciones",
+          "Usa una carpeta provisional por cada dispositivo."
+        ],
+        [
+          "No renombres de inmediato",
+          "Los nombres originales ayudan a localizar problemas."
+        ],
+        [
+          "Espera duplicados",
+          "Los álbumes de móviles suelen estar copiados en varios discos."
+        ],
+        [
+          "Cuidado con los metadatos",
+          "Capturas y archivos de mensajería pueden carecer de fecha de cámara."
+        ],
+        [
+          "Usa un destino claro",
+          "Una biblioteca por fecha facilita explorar y respaldar."
+        ],
+        [
+          "Verifica antes de archivar",
+          "No borres fuentes antiguas hasta comprobar el resultado."
+        ]
+      ]
+    },
+    {
+      "title": "Cómo elegir un organizador de fotos para Windows",
+      "intro": "La seguridad y la claridad importan más que una lista extensa de funciones.",
+      "steps": [
+        [
+          "Procesamiento local",
+          "Averigua si tus fotos deben subirse a Internet."
+        ],
+        [
+          "Modo de copia",
+          "Debe permitir ordenar sin borrar la fuente original."
+        ],
+        [
+          "Carpetas transparentes",
+          "El archivo debe poder leerse fuera de la aplicación."
+        ],
+        [
+          "Duplicados exactos",
+          "Las comprobaciones deben ir más allá de los nombres."
+        ],
+        [
+          "Informes e historial",
+          "Es importante entender qué ocurrió en cada operación."
+        ],
+        [
+          "Facilidad de uso",
+          "Los pasos guiados y controles legibles sirven a más usuarios."
+        ]
+      ]
+    }
+  ]
+}
