@@ -1,0 +1,28 @@
+name: Roll out KOLFAT dropdown navigation
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  rollout:
+    if: ${{ github.actor != 'github-actions[bot]' && contains(github.event.head_commit.message, 'Run global navigation dropdown rollout') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Replace navigation and verify all pages
+        run: python3 .github/scripts/nav_dropdown_rollout.py
+      - name: Commit updated production pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "UI: replace site navigation with responsive menu"
+            git push
+          fi
