@@ -1,0 +1,218 @@
+{
+  "labels": {
+    "menu": "MENU",
+    "home": "ACCUEIL",
+    "download": "TÉLÉCHARGER",
+    "about": "À PROPOS",
+    "guides": "GUIDES",
+    "support": "ASSISTANCE",
+    "contact": "CONTACT",
+    "read": "Lire le guide",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "licenses": "Licences"
+  },
+  "about": {
+    "title": "À propos de KOLFAT",
+    "desc": "Découvrez KOLFAT et son logiciel MEDIA KOLFAT pour Windows.",
+    "intro": "KOLFAT développe des outils simples pour mieux gérer et préserver les souvenirs numériques.",
+    "story_h": "Du chaos à l’ordre",
+    "story": "Nos photos et vidéos sont dispersées entre ordinateurs, téléphones, clés USB, disques externes et sauvegardes. KOLFAT cherche à rendre ces collections plus faciles à organiser et à consulter.",
+    "product": "MEDIA KOLFAT est le premier logiciel du projet : parcours guidés et avancés, copie et déplacement, recherche de doublons, consultation de bibliothèque, historique et rotation des photos. La version de base est gratuite sur Microsoft Store.",
+    "privacy_h": "Respect de la vie privée",
+    "privacy": "Les opérations courantes se font localement, sur vos propres fichiers, sans devoir envoyer vos souvenirs vers un service distant.",
+    "social_h": "Canaux officiels",
+    "social": "Retrouvez nos démonstrations et annonces sur les comptes officiels KOLFAT."
+  },
+  "download": {
+    "title": "Télécharger MEDIA KOLFAT pour Windows",
+    "desc": "Téléchargez gratuitement MEDIA KOLFAT depuis sa fiche officielle Microsoft Store.",
+    "intro": "Installez la version officielle de MEDIA KOLFAT pour classer vos photos et vidéos sur Windows.",
+    "why_h": "Pourquoi le Microsoft Store ?",
+    "why": "La boutique officielle simplifie l’installation et les mises à jour et limite les risques liés aux installateurs modifiés proposés ailleurs.",
+    "features_h": "Fonctionnalités de MEDIA KOLFAT",
+    "steps_h": "Avant une grande réorganisation",
+    "features": [
+      [
+        "Organiser",
+        "Créer des dossiers par date avec un parcours guidé ou avancé."
+      ],
+      [
+        "Consulter",
+        "Parcourir la bibliothèque, pivoter des photos et consulter les rapports."
+      ],
+      [
+        "Doublons",
+        "Repérer les fichiers identiques avant de choisir ceux à conserver."
+      ],
+      [
+        "Rester en local",
+        "Travailler sur les fichiers et dossiers que vous contrôlez."
+      ]
+    ],
+    "steps": [
+      "Sauvegardez séparément vos souvenirs irremplaçables.",
+      "Vérifiez les accès et l’espace disponible sur les disques.",
+      "Pour commencer, privilégiez la copie en mode guidé.",
+      "Vérifiez les rapports et le résultat avant de supprimer les originaux."
+    ]
+  },
+  "hub": {
+    "title": "Guides MEDIA KOLFAT",
+    "desc": "Guides pratiques pour organiser les photos, gérer les doublons et protéger les originaux.",
+    "intro": "Apprenez à remettre de l’ordre dans une photothèque Windows sans perdre vos fichiers.",
+    "product_cta": "MEDIA KOLFAT propose une organisation locale, la détection de doublons et des rapports pour Windows."
+  },
+  "guides": [
+    {
+      "title": "Classer ses photos par date sur Windows",
+      "intro": "Des dossiers par année, mois et jour facilitent la recherche. Vérifiez les dates et protégez vos originaux.",
+      "steps": [
+        [
+          "Sauvegarder d’abord",
+          "Conservez une copie indépendante de vos photos importantes."
+        ],
+        [
+          "Choisir la bonne date",
+          "Privilégiez les métadonnées de prise de vue fiables aux horodatages incertains."
+        ],
+        [
+          "Définir les dossiers",
+          "Une structure année, mois et jour est simple à parcourir."
+        ],
+        [
+          "Copier avant de déplacer",
+          "Testez la nouvelle arborescence sans toucher aux fichiers source."
+        ],
+        [
+          "Traiter les doublons séparément",
+          "Un nom identique ne prouve pas que deux photos le sont."
+        ],
+        [
+          "Contrôler le résultat",
+          "Comparez les fichiers, rapports et cas sans date avant nettoyage."
+        ]
+      ]
+    },
+    {
+      "title": "Organiser une grande photothèque en sécurité",
+      "intro": "Une grande collection se répartit souvent entre appareils et sauvegardes. Travaillez par étapes vérifiables.",
+      "steps": [
+        [
+          "Recenser les sources",
+          "Listez disques, téléphones, dossiers et sauvegardes."
+        ],
+        [
+          "Protéger les originaux",
+          "Gardez une sauvegarde et commencez par copier."
+        ],
+        [
+          "Tester un échantillon",
+          "Incluez vidéos, anciennes photos, doublons et fichiers sans date."
+        ],
+        [
+          "Choisir une destination",
+          "Un classement chronologique reste facile à comprendre."
+        ],
+        [
+          "Examiner les exceptions",
+          "Repérez les formats inhabituels, dates manquantes et erreurs."
+        ],
+        [
+          "Conserver des rapports",
+          "Gardez une trace claire de ce qui a été copié ou déplacé."
+        ]
+      ]
+    },
+    {
+      "title": "Trouver les photos en double sans risque",
+      "intro": "Distinguez la détection des doublons de leur suppression pour éviter les pertes.",
+      "steps": [
+        [
+          "Le nom ne suffit pas",
+          "Deux appareils peuvent produire des fichiers portant le même nom."
+        ],
+        [
+          "Utiliser les empreintes",
+          "SHA-256 permet de regrouper des fichiers aux octets identiques."
+        ],
+        [
+          "Similarité et identité",
+          "Une image recadrée ou recompressée n’est pas forcément identique."
+        ],
+        [
+          "Conserver une bonne copie",
+          "Vérifiez le dossier de référence et la sauvegarde."
+        ],
+        [
+          "Comparer les groupes",
+          "Examinez emplacements et dates avant décision."
+        ],
+        [
+          "Nettoyer de façon réversible",
+          "Déplacer vers un dossier de vérification est plus prudent."
+        ]
+      ]
+    },
+    {
+      "title": "Organiser les photos du téléphone et des clés USB",
+      "intro": "Regroupez les médias de plusieurs appareils sur Windows sans perdre leur provenance.",
+      "steps": [
+        [
+          "Séparer les sources",
+          "Préparez d’abord un dossier par appareil."
+        ],
+        [
+          "Garder les noms d’origine",
+          "Les noms et chemins aident à retrouver la provenance."
+        ],
+        [
+          "Anticiper les doublons",
+          "Une même bibliothèque a parfois été copiée plusieurs fois."
+        ],
+        [
+          "Vérifier les métadonnées",
+          "Captures d’écran et photos de messagerie manquent parfois de dates fiables."
+        ],
+        [
+          "Créer une destination claire",
+          "Une archive chronologique simplifie les futures sauvegardes."
+        ],
+        [
+          "Vérifier avant d’archiver",
+          "Nettoyez les anciens dossiers uniquement après contrôle."
+        ]
+      ]
+    },
+    {
+      "title": "Bien choisir son organisateur de photos pour Windows",
+      "intro": "Privilégiez la sécurité, la lisibilité des dossiers et la simplicité plutôt que le nombre de fonctions.",
+      "steps": [
+        [
+          "Traitement local",
+          "Vérifiez si vos médias doivent être envoyés vers un cloud."
+        ],
+        [
+          "Option de copie",
+          "La source doit pouvoir rester intacte pendant l’organisation."
+        ],
+        [
+          "Dossiers transparents",
+          "Vos fichiers doivent rester lisibles sans base propriétaire."
+        ],
+        [
+          "Détection fiable",
+          "Un nom de fichier n’est pas une preuve de doublon."
+        ],
+        [
+          "Rapports et historique",
+          "Les grosses opérations demandent une trace vérifiable."
+        ],
+        [
+          "Ergonomie",
+          "Des étapes guidées et des contrôles lisibles sont essentiels."
+        ]
+      ]
+    }
+  ]
+}
