@@ -164,3 +164,67 @@ html[data-kolfat-page="product"] .sources + .store-btn{margin-top:18px!important
 .seo-footer-links{margin-left:auto}
 @media(max-width:820px){.hero-foot{gap:12px}.primary-seo-links{gap:5px}.primary-seo-links a{min-height:30px;padding:0 7px;font-size:.52rem}.seo-footer-links{margin-top:12px;margin-left:0}}
 @media(max-width:640px){.hero-foot{align-items:flex-end}.hero-foot>span{max-width:40%}.primary-seo-links{justify-content:flex-end;max-width:58%}.primary-seo-links a{min-height:28px;padding:0 6px;font-size:.48rem}}
+
+
+/* KOLFAT MOBILE HEADER COLLISION FIX */
+@media(max-width:640px){
+  .site-logo{
+    top:14px!important;
+    left:16px!important;
+    z-index:100001!important;
+  }
+  .site-logo img{
+    width:132px!important;
+    max-height:34px!important;
+  }
+  .top-nav{
+    top:60px!important;
+    left:12px!important;
+    right:12px!important;
+    width:auto!important;
+    justify-content:flex-start!important;
+    gap:5px!important;
+    flex-wrap:nowrap!important;
+  }
+  html[data-kolfat-page="home"] .hero-copy{
+    top:124px!important;
+  }
+  html[data-kolfat-page="product"] .hero-inner{
+    padding-top:145px!important;
+  }
+}
+@media(max-width:420px){
+  .top-nav{
+    top:58px!important;
+    left:10px!important;
+    right:10px!important;
+    gap:4px!important;
+  }
+  .top-nav .support-top,
+  .top-nav .github-top,
+  .top-nav .social-top{
+    height:36px!important;
+    padding-left:7px!important;
+    padding-right:7px!important;
+    font-size:.52rem!important;
+    letter-spacing:.06em!important;
+  }
+  .top-nav .x-top{
+    min-width:32px!important;
+    padding-left:6px!important;
+    padding-right:6px!important;
+  }
+  .top-nav .lang-menu summary{
+    height:36px!important;
+    min-width:46px!important;
+    padding-left:6px!important;
+    padding-right:6px!important;
+  }
+  html[data-kolfat-page="home"] .hero-copy{
+    top:118px!important;
+  }
+  html[data-kolfat-page="product"] .hero-inner{
+    padding-top:138px!important;
+  }
+}
+/* END KOLFAT MOBILE HEADER COLLISION FIX */
