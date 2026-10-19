@@ -1,0 +1,197 @@
+/*
+ * KOLFAT unified visual refinement — 2026-10-19
+ * Scope: typography, readability, spacing and restrained orange accents.
+ * No changes to backgrounds, imagery, mascot, logo artwork, DOM, routes or workflows.
+ * Loaded LAST on every sitemap-indexed page, after page/locale-specific styles.
+ */
+:root {
+  --kf-orange: #ff812e;
+  --kf-orange-strong: #ff741a;
+  --kf-white: #f7f7f5;
+  --kf-copy: #d2d2cd;
+  --kf-secondary: #bbbbba;
+  --kf-line: rgba(255,255,255,.26);
+  --kf-font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --kf-font-display: Georgia, "Times New Roman", serif;
+}
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+html body {
+  font-family: var(--kf-font-sans) !important;
+  font-size: 16px;
+  color: var(--kf-white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+html[lang="fa"] body,html[lang="ar"] body {
+  font-family: Tahoma, "Segoe UI", Arial, sans-serif !important;
+}
+html[lang="hi"] body {
+  font-family: "Nirmala UI", "Mangal", "Segoe UI", sans-serif !important;
+}
+html[lang="ja"] body {
+  font-family: "Yu Gothic UI", Meiryo, "Segoe UI", sans-serif !important;
+}
+html[lang="zh"],html[lang="zh-CN"] {
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Segoe UI", sans-serif;
+}
+html[lang="zh"] body,html[lang="zh-CN"] body {
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Segoe UI", sans-serif !important;
+}
+/* Preserve the existing editorial serif on Latin-language display headings only. */
+html:lang(en) h1,html:lang(de) h1,html:lang(fr) h1,
+html:lang(es) h1,html:lang(it) h1,html:lang(pt) h1,
+html:lang(ru) h1 {
+  font-family: var(--kf-font-display) !important;
+  font-weight: 400 !important;
+  letter-spacing: -.035em;
+}
+html:lang(fa) h1,html:lang(ar) h1,html:lang(hi) h1,
+html:lang(ja) h1,html:lang(zh) h1 {
+  font-family: inherit !important;
+  letter-spacing: normal !important;
+  font-weight: 600 !important;
+}
+html body h1,html body h2,html body h3 {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+html body h1 { text-wrap: balance; }
+html body p { overflow-wrap: break-word; }
+html body .lead,html body .story p,
+html body .section p,html body .section li,html body .section-title p {
+  color: var(--kf-copy) !important;
+  line-height: 1.65 !important;
+}
+html body .card p,html body .step p,html body .item span,
+html body .feature span,html body .panel > p {
+  color: var(--kf-secondary) !important;
+  line-height: 1.6 !important;
+}
+html body .eyebrow,html body .kicker {
+  color: var(--kf-orange) !important;
+  line-height: 1.5 !important;
+}
+/* Orange communicates interaction and hierarchy; white stays dominant. */
+html body a:focus-visible,html body button:focus-visible,
+html body summary:focus-visible {
+  outline: 2px solid var(--kf-orange) !important;
+  outline-offset: 3px !important;
+}
+html body .top-nav .kolfat-menu > summary,
+html body .top-nav .lang-menu > summary {
+  font-family: var(--kf-font-sans) !important;
+  font-weight: 700 !important;
+  letter-spacing: .055em !important;
+  border-color: var(--kf-line) !important;
+}
+html body .top-nav .kolfat-menu[open] > summary,
+html body .top-nav .lang-menu[open] > summary,
+html body .top-nav .kolfat-menu > summary:hover,
+html body .top-nav .lang-menu > summary:hover {
+  border-color: var(--kf-orange) !important;
+}
+html body .top-nav .kolfat-menu-panel a,
+html body .top-nav .lang-list a {
+  font-family: var(--kf-font-sans) !important;
+  font-size: .82rem !important;
+  letter-spacing: .015em !important;
+  line-height: 1.4 !important;
+}
+html:lang(fa) body .top-nav .kolfat-menu-panel a,
+html:lang(ar) body .top-nav .kolfat-menu-panel a,
+html:lang(hi) body .top-nav .kolfat-menu-panel a,
+html:lang(ja) body .top-nav .kolfat-menu-panel a,
+html:lang(zh) body .top-nav .kolfat-menu-panel a {
+  font-family: inherit !important;
+  letter-spacing: normal !important;
+}
+html body .top-nav .kolfat-menu-panel a[aria-current="page"] {
+  box-shadow: inset 3px 0 0 var(--kf-orange);
+}
+html body .top-nav .menu-section-label {
+  color: var(--kf-orange) !important;
+}
+html body .btn,html body .cta {
+  font-family: var(--kf-font-sans) !important;
+  font-weight: 700 !important;
+}
+html body .hero .btn:not(.store-btn),html body .cta:not(.store) {
+  border-color: rgba(255,129,46,.8) !important;
+}
+html body .hero .btn:not(.store-btn):hover,
+html body .cta:not(.store):hover {
+  border-color: var(--kf-orange) !important;
+}
+html body .store,html body .store-btn {
+  /* Keep the recognizable white Microsoft Store call-to-action. */
+  font-family: var(--kf-font-sans) !important;
+}
+html body .store-copy small { letter-spacing: .075em !important; }
+/* Small orange accents on existing feature dividers, without moving any elements. */
+html body .feature strong { color: var(--kf-white) !important; }
+html body .feature::before {
+  border-color: var(--kf-orange);
+}
+html body .breadcrumb { color: #b2b2af !important; font-size: .85rem !important; }
+html body .breadcrumb a:hover,html body .section a:not(.cta):hover {
+  color: var(--kf-orange) !important;
+}
+/* Keep dropdowns actually hidden until opened, including content and RTL pages. */
+html body details.kolfat-menu:not([open]) > .kolfat-menu-panel,
+html body details.lang-menu:not([open]) > .lang-list {
+  display: none !important;
+}
+html body details.kolfat-menu[open] > .kolfat-menu-panel { display: grid !important; }
+/* Native details remains keyboard accessible, with no third-party font/service. */
+@media (max-width: 720px) {
+  html body { font-size: 16px; }
+  html body .lead { font-size: 1rem !important; line-height: 1.6 !important; }
+  html body .story p,html body .section p,html body .section li,
+  html body .card p,html body .step p {
+    font-size: max(.94rem, 15px) !important;
+    line-height: 1.63 !important;
+  }
+  html body main .hero h1 {
+    font-size: clamp(2.1rem, 9.1vw, 3.6rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.025em !important;
+    overflow-wrap: anywhere;
+  }
+  html[data-kolfat-page="home"] body .hero-copy h1,
+  html[data-kolfat-page="product"] body .hero-copy h1 {
+    font-size: clamp(2.7rem, 12vw, 4.5rem) !important;
+    line-height: 1.02 !important;
+  }
+  html:lang(fa)[data-kolfat-page] body .hero-copy h1,
+  html:lang(ar)[data-kolfat-page] body .hero-copy h1,
+  html:lang(hi)[data-kolfat-page] body .hero-copy h1,
+  html:lang(ja)[data-kolfat-page] body .hero-copy h1,
+  html:lang(zh)[data-kolfat-page] body .hero-copy h1 {
+    font-size: clamp(2.15rem, 8.8vw, 3.4rem) !important;
+    line-height: 1.24 !important;
+  }
+  html body .top-nav .kolfat-menu-panel a,
+  html body .top-nav .lang-list a {
+    min-height: 42px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-size: .85rem !important;
+  }
+  html body .top-nav .kolfat-menu-panel .menu-section-label {
+    font-size: .68rem !important;
+  }
+  html body .hero .btn:not(.store-btn),html body .cta {
+    min-height: 44px;
+  }
+  html body .store, html body .store-btn {
+    max-width: 100% !important;
+  }
+  html body .store-copy strong { white-space: normal !important; }
+  /* Equal margins for LTR and RTL versions. */
+  html body main { max-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .btn,html body .cta,html body .top-nav summary {
+    transition-duration: .01ms !important;
+  }
+}
