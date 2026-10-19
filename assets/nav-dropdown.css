@@ -84,7 +84,7 @@ html body .header-inner .top-nav{
 html body .header-inner .top-nav .kolfat-menu-panel{
   top:52px!important
 }
-html body .header-inner .top-nav .lang-menu{display:none!important}
+html body .header-inner .top-nav .lang-menu{display:block!important}
 @media(max-width:640px){
   html body .top-nav{top:12px!important;right:12px!important;left:auto!important;gap:7px!important}
   html body .top-nav .kolfat-menu>summary{min-width:90px!important;height:38px!important;min-height:38px!important;padding:0 9px!important;font-size:11px!important;gap:6px!important}
@@ -108,3 +108,192 @@ html body .header-inner .top-nav .lang-menu{display:none!important}
   html body .top-nav .kolfat-menu>summary{min-width:77px!important;font-size:10px!important}
   html body .top-nav .lang-menu>summary{min-width:42px!important}
 }
+
+
+/* KOLFAT MOBILE HEADER v2 — consolidated content-page controls */
+/* Critical: hidden <details> children must stay hidden despite display:grid!important. */
+html body details.kolfat-menu:not([open]) > .kolfat-menu-panel,
+html body details.lang-menu:not([open]) > .lang-list {
+  display:none!important;
+}
+/* One horizontal header for English AND all translations; no 2nd row. */
+html body .header{
+  position:sticky!important;
+  top:0!important;
+  z-index:100040!important;
+  overflow:visible!important;
+}
+html body .header .header-inner{
+  position:relative!important;
+  display:flex!important;
+  flex-direction:row!important;
+  flex-wrap:nowrap!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  width:min(calc(100% - 36px),1040px)!important;
+  gap:10px!important;
+  min-width:0!important;
+  min-height:68px!important;
+  margin:0 auto!important;
+  padding:8px 0!important;
+  overflow:visible!important;
+  direction:ltr!important;
+}
+html body .header .header-inner > .brand{
+  display:flex!important;
+  flex:0 1 auto!important;
+  align-items:center!important;
+  min-width:0!important;
+  margin:0!important;
+}
+html body .header .header-inner > .brand img{
+  display:block!important;
+  width:clamp(110px,21vw,154px)!important;
+  max-width:100%!important;
+  height:auto!important;
+}
+html body .header .header-inner > .top-nav{
+  position:relative!important;
+  display:flex!important;
+  flex:0 0 auto!important;
+  flex-direction:row!important;
+  flex-wrap:nowrap!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  top:auto!important;
+  left:auto!important;
+  right:auto!important;
+  width:auto!important;
+  margin:0 0 0 auto!important;
+  padding:0!important;
+  gap:10px!important;
+  z-index:100050!important;
+  direction:ltr!important;
+}
+html body .header .header-inner .top-nav .lang-menu{
+  display:block!important;
+  visibility:visible!important;
+  position:relative!important;
+}
+html body .header .header-inner .top-nav .kolfat-menu-panel{
+  /* Anchor to MENU+language group's right edge; never disappear off screen left. */
+  left:auto!important;
+  right:-68px!important;
+  width:min(268px,calc(100vw - 24px))!important;
+  top:53px!important;
+}
+html body .header .header-inner .top-nav .lang-list{
+  right:0!important;
+  left:auto!important;
+  top:53px!important;
+  width:min(185px,calc(100vw - 24px))!important;
+  display:block!important;
+  overflow-y:auto!important;
+  padding:6px!important;
+}
+html body .header .header-inner .top-nav .lang-list a{
+  display:block!important;
+  padding:9px 10px!important;
+  font:600 13px/1.35 Arial,Helvetica,sans-serif!important;
+  color:#f5f5f5!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+  border-radius:7px!important;
+}
+html body .header .header-inner .top-nav .lang-list a:hover,
+html body .header .header-inner .top-nav .lang-list a:focus-visible{
+  background:#fff!important;
+  color:#050505!important;
+}
+html body .header .header-inner .top-nav .lang-menu:not([open]) > .lang-list{
+  display:none!important;
+}
+html body .header .header-inner .top-nav .kolfat-menu:not([open]) > .kolfat-menu-panel{
+  display:none!important;
+}
+html body .header .header-inner .top-nav .kolfat-menu-panel,
+html body .header .header-inner .top-nav .lang-list{
+  max-height:calc(100dvh - 82px)!important;
+  overscroll-behavior:contain;
+}
+html body .header .header-inner .top-nav .kolfat-menu-panel{
+  direction:ltr!important;
+  text-align:left!important;
+}
+html[dir="rtl"] body .header .header-inner .top-nav .kolfat-menu-panel a[dir="auto"]{
+  text-align:start!important;
+}
+@media(max-width:720px){
+  html body .header .header-inner{
+    width:calc(100% - 24px)!important;
+    min-height:60px!important;
+    padding:10px 0!important;
+    gap:7px!important;
+  }
+  html body .header .header-inner > .brand img{
+    width:clamp(96px,28vw,125px)!important;
+    max-width:32vw!important;
+  }
+  html body .header .header-inner > .top-nav{
+    gap:6px!important;
+  }
+  html body .header .header-inner .top-nav .kolfat-menu>summary{
+    box-sizing:border-box!important;
+    min-width:88px!important;
+    height:38px!important;
+    min-height:38px!important;
+    padding:0 9px!important;
+    gap:6px!important;
+    font-size:10px!important;
+    letter-spacing:.05em!important;
+  }
+  html body .header .header-inner .top-nav .lang-menu>summary{
+    box-sizing:border-box!important;
+    min-width:44px!important;
+    height:38px!important;
+    min-height:38px!important;
+    padding:0 6px!important;
+    font-size:14px!important;
+  }
+  html body .header .header-inner .top-nav .kolfat-menu-panel{
+    right:-50px!important;
+    top:45px!important;
+    width:min(268px,calc(100vw - 24px))!important;
+    max-height:calc(100dvh - 68px)!important;
+  }
+  html body .header .header-inner .top-nav .lang-list{
+    top:45px!important;
+    max-height:calc(100dvh - 68px)!important;
+  }
+  /* Avoid the huge multi-line headline on small-screen content pages. */
+  html body main .hero h1{
+    font-size:clamp(2.2rem,10vw,3.2rem)!important;
+    line-height:1.04!important;
+    overflow-wrap:break-word!important;
+    hyphens:auto;
+  }
+  html body main .lead{
+    font-size:1rem!important;
+    line-height:1.6!important;
+  }
+  html body main{
+    padding-top:42px!important;
+  }
+}
+@media(max-width:360px){
+  html body .header .header-inner > .brand img{
+    width:100px!important;
+  }
+  html body .header .header-inner .top-nav .kolfat-menu>summary{
+    min-width:78px!important;
+    padding:0 6px!important;
+    font-size:9px!important;
+  }
+  html body .header .header-inner .top-nav .lang-menu>summary{
+    min-width:40px!important;
+  }
+  html body .header .header-inner .top-nav .kolfat-menu-panel{
+    right:-46px!important;
+  }
+}
+/* END KOLFAT MOBILE HEADER v2 */
