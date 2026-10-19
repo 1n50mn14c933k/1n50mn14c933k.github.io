@@ -56,6 +56,10 @@ All **12 supported languages** have their own About, Download, Guides hub and fi
 
 The rollout keeps self-canonical URLs, reciprocal `hreflang` and `x-default`, structured data, and language-specific menu links. Translation sources live in `.github/i18n/`; see [docs/NAVIGATION.md](docs/NAVIGATION.md) for implementation and testing details.
 
+## Shared Visual Design System
+
+All 181 sitemap-listed pages across twelve languages load `assets/site-refinements.css` after their existing CSS. This shared layer unifies typography, contrast, button states, spacing and subtle orange accents without replacing KOLFAT backgrounds, logos, artwork, or content. See [docs/NAVIGATION.md](docs/NAVIGATION.md) for mobile/RTL checks and maintenance.
+
 ## Production Repository Rules
 
 This is a public production repository.
