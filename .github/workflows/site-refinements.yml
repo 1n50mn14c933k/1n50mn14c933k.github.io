@@ -1,0 +1,25 @@
+name: Apply unified KOLFAT visual refinements
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  refine:
+    if: ${{ github.actor != 'github-actions[bot]' && contains(github.event.head_commit.message, 'Run site refinements rollout') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Apply to all sitemap pages and verify metadata
+        run: python3 .github/scripts/apply_site_refinements.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "UI: unify typography and orange accents across 181 pages"
+            git push
+          fi
