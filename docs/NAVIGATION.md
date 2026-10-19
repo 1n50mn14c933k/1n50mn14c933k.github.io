@@ -69,3 +69,12 @@ The shared navigation stylesheet now explicitly hides the menu panel and languag
 English content pages and localized content pages now use the same single-row header layout at mobile widths: KOLFAT logo, MENU and the separate language selector. No extra navigation row or permanently visible overlay is permitted. The final selectors in `assets/nav-dropdown.css` override older conflicting layout rules in `assets/seo-content.css` and `assets/localized-content.css`.
 
 `assets/nav-dropdown.css?v=20261019-mobile3` is the versioned stylesheet used by all production pages after the rollout. Regression checks: closed MENU and language list must not be visible; each opens on demand; both can close via Escape/outside click; mobile widths 320/360/375/390/430px, tablet and desktop; English plus Persian/Arabic RTL pages.
+
+
+## Shared visual refinement system (2026-10-19)
+
+The same `assets/site-refinements.css` is loaded last on **all 181 sitemap-indexed pages** (all 12 languages, including home, product, legal, About, Download, Guides and articles). This is a restrained improvement only: typography, body readability, heading sizing, link focus, spacing, and orange `#ff812e` accents. Original background photography, CRT/mascot imagery, KOLFAT logo, page layouts, URLs, visible content, Microsoft Store button, and navigation architecture are intentionally unchanged.
+
+Use a single presentation system across screen sizes; only responsive text scaling and layout fit differ. Keep native font fallback per script for Persian/Arabic (RTL), Hindi, Japanese, and Chinese without loading external fonts. Do not overwrite all writing systems with one Latin font.
+
+Maintenance: edit `assets/site-refinements.css` and increment its query-string version in the static pages. The deployment script `.github/scripts/apply_site_refinements.py` validates the current sitemap and preserves canonical, hreflang, and JSON-LD exactly. Always check closed/open menu states, 320–430px mobile, tablet, desktop, LTR and RTL, and record screenshots before asserting visual QA.
