@@ -60,3 +60,12 @@ Edit shared menu generation in `.github/scripts/nav_dropdown_rollout.py` and sha
 - Every translated page has a self-canonical, reciprocal 12-language `hreflang` plus `x-default`, translated title/description and visible body text, valid JSON-LD, translated MENU and localized footer links.
 - All original 93 sitemap URLs are retained; 88 new canonical URLs increase expected sitemap count to **181**.
 - Avoid creating empty or English-only placeholder translations. Translation edits should be reviewed by a native speaker where practical.
+
+
+## Mobile header regression fix (2026-10-19)
+
+The shared navigation stylesheet now explicitly hides the menu panel and language list unless their native HTML `details` element is open. Previously `display:grid!important` on a closed panel overrode native hiding and resulted in a large dark overlay.
+
+English content pages and localized content pages now use the same single-row header layout at mobile widths: KOLFAT logo, MENU and the separate language selector. No extra navigation row or permanently visible overlay is permitted. The final selectors in `assets/nav-dropdown.css` override older conflicting layout rules in `assets/seo-content.css` and `assets/localized-content.css`.
+
+`assets/nav-dropdown.css?v=20261019-mobile3` is the versioned stylesheet used by all production pages after the rollout. Regression checks: closed MENU and language list must not be visible; each opens on demand; both can close via Escape/outside click; mobile widths 320/360/375/390/430px, tablet and desktop; English plus Persian/Arabic RTL pages.
