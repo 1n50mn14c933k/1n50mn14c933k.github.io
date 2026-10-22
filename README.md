@@ -25,8 +25,14 @@ The site is hosted with **GitHub Pages** and uses the custom domain defined in `
 
 **MEDIA KOLFAT is now available on the Microsoft Store.** 🎉
 
+**Current release:** **1.8.0** (Windows Microsoft Store package **1.8.0.0**, published October 19, 2026). The website's 12 localized product pages were refreshed on October 22, 2026. Read the [website update and audit log](docs/WEBSITE_UPDATES.md).
+
 - Microsoft Store: https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare
 - Product page: https://kolfat.app/en/Media_Kolfat/
+
+- User Wiki: https://github.com/1n50mn14c933k/MEDIA_KOLFAT/wiki
+- Community Discussions: https://github.com/1n50mn14c933k/MEDIA_KOLFAT/discussions
+- Website update history: [docs/WEBSITE_UPDATES.md](docs/WEBSITE_UPDATES.md)
 
 ## Primary Pages
 
@@ -75,6 +81,12 @@ Do not commit:
 - Local development artifacts that are not required by the deployed site
 
 MEDIA KOLFAT proprietary application source code is maintained separately in a private repository.
+
+## Auditing and Updates
+
+The full [October 22, 2026 website audit and MEDIA KOLFAT 1.8.0 update record](docs/WEBSITE_UPDATES.md) documents localized content changes, commits, audit limitations, deployment verification, and maintenance guidance.
+
+Run the read-only audit script with `python3 .github/scripts/site_content_audit.py`, or use the **KOLFAT Website Content Audit** GitHub Actions workflow. Review GitHub Pages deployment results after updating production pages.
 
 ## Deployment
 
