@@ -1,0 +1,27 @@
+name: KOLFAT Website Content Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/scripts/site_content_audit.py'
+      - '.github/workflows/site-content-audit.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Audit content and links
+        run: python3 .github/scripts/site_content_audit.py | tee website-content-audit.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kolfat-website-content-audit
+          path: website-content-audit.txt
+          retention-days: 14
