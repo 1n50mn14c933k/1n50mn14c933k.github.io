@@ -3,15 +3,15 @@ import {bytes,cleanName,parts,filenameDate,fileDate,inspectJpegExif,csv,makeZip,
 const $=id=>document.getElementById(id);
 const tool=document.body.dataset.tool;
 const picker=$("files"), action=$("run"), output=$("results"), status=$("status");
-const MAX_BATCH=200*1024*1024, MAX_DIGEST=256*1024*1024;
+const MAX_BATCH=120*1024*1024, MAX_DIGEST=64*1024*1024;
 let current=[],busy=false;
 function setStatus(message,kind="info"){status.textContent=message;status.dataset.kind=kind;}
-function clear(){output.replaceChildren();}
+let objectUrls=[];function clear(){for(const url of objectUrls)URL.revokeObjectURL(url);objectUrls=[];output.replaceChildren();}
 function node(tag,text,cls){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;return el;}
 function row(text){output.append(node("div",text,"result-row"));}
 function addLink(blob,name,label){
  const a=node("a",label||"Download result","download");
- a.href=URL.createObjectURL(blob);a.download=name;a.addEventListener("click",()=>setTimeout(()=>URL.revokeObjectURL(a.href),60000),{once:true});
+ a.href=URL.createObjectURL(blob);objectUrls.push(a.href);a.download=name;
  output.append(a);
 }
 function summary(message){output.prepend(node("p",message,"summary"));}
@@ -63,7 +63,7 @@ async function imageJobs(files,mode){
  const images=guardImages(files);
  if(images.length>60)throw Error("Choose 60 images or fewer in one batch.");
  const total=images.reduce((s,f)=>s+f.size,0);
- if(total>MAX_BATCH)throw Error("Batch exceeds 200 MiB browser safety limit. Select fewer files.");
+ if(total>MAX_BATCH)throw Error("Batch exceeds 120 MiB browser safety limit. Select fewer files.");
  const t=mode==="clean"?null:captureType();
  const entries=[],used=new Set();let saved=0;
  for(let i=0;i<images.length;i++){
@@ -76,7 +76,7 @@ async function imageJobs(files,mode){
   row(name+" • "+result.width+" × "+result.height+" • "+bytes(f.size)+" → "+bytes(result.blob.size)+(mode==="clean"&&info.hasGPS?" • source contained GPS metadata":""));
   entries.push({name,data:new Uint8Array(await result.blob.arrayBuffer())});
  }
- if(entries.length===1)download(new Blob([entries[0].data],{type:t||images[0].type||"application/octet-stream"}),entries[0].name);
+ if(entries.length===1)download(new Blob([entries[0].data],{type:extension(t||"")?t:(entries[0].name.endsWith(".png")?"image/png":entries[0].name.endsWith(".webp")?"image/webp":"image/jpeg")}),entries[0].name);
  else download(makeZip(entries),"kolfat-images.zip");
  summary("Created "+entries.length+" new file(s). "+(mode==="compress"?"Total size change: "+bytes(Math.abs(saved))+(saved>=0?" smaller.":" larger."):"Originals stay untouched."));
 }
@@ -98,7 +98,7 @@ async function dates(files){
 }
 async function duplicates(files){
  if(files.length>500)throw Error("Choose 500 files or fewer.");
- if(!crypto?.subtle)throw Error("SHA-256 requires a secure HTTPS browser context.");
+ if(!globalThis.crypto?.subtle)throw Error("SHA-256 requires a secure HTTPS browser context.");
  const groups=new Map();for(const f of files){const k=f.size;groups.set(k,[...(groups.get(k)||[]),f]);}
  const hashed=new Map();let scanned=0,skipped=0;
  for(const [size,matches] of groups){
@@ -118,12 +118,12 @@ async function duplicates(files){
   for(const name of names){row("  "+name);report.push([count,name,key.split(":")[0],key.split(":")[1]]);}
  }
  if(!count)row("No byte-identical duplicate groups found among inspected files.");
- if(skipped)row(skipped+" matching-size file(s) skipped (over 256 MiB each).");
+ if(skipped)row(skipped+" matching-size file(s) skipped (over 64 MiB each).");
  download(new Blob([csv(report)],{type:"text/csv;charset=utf-8"}),"kolfat-duplicates.csv");
  summary(count+" duplicate group(s); "+excess+" redundant copies identified. No files deleted. Different-size similar photos are not detected.");
 }
 async function renamer(files){
- if(files.length>250||files.reduce((s,f)=>s+f.size,0)>MAX_BATCH)throw Error("Maximum 250 files and 200 MiB total per ZIP batch.");
+ if(files.length>250||files.reduce((s,f)=>s+f.size,0)>MAX_BATCH)throw Error("Maximum 250 files and 120 MiB total per ZIP batch.");
  const prefix=cleanName($("prefix").value||"photo"),method=$("naming").value;
  const entries=[],used=new Set(),preview=[["Original","New name"]];
  for(let i=0;i<files.length;i++){
