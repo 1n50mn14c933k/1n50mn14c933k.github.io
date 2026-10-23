@@ -50,7 +50,7 @@ export function inspectJpegExif(buf){
     for(let i=0;i<n;i++){
      const e=p+2+i*12,tag=u16(e),type=u16(e+2),count=u32(e+4),v=u32(e+8);
      if(tag===0x8825&&v)result.hasGPS=true;
-     if((tag===0x9003||tag===0x0132||tag===0x9004)&&type===2&&count>0&&!result.captured)result.captured=exifDate(ascii(e,count));
+     if(type===2&&count>0&&(tag===0x9003||tag===0x0132||tag===0x9004)){const date=exifDate(ascii(e,count));if(tag===0x9003&&date){result.captured=date;result.originalFound=true;}else if(!result.originalFound&&date&&!result.captured)result.captured=date;}
      if(tag===0x8769&&type===4&&count===1)ifd(v,depth+1);
     }
    };
@@ -60,7 +60,7 @@ export function inspectJpegExif(buf){
  }
  result.note="No JPEG EXIF found";return result;
 }
-export function escapeCsv(x){const s=String(x??"");return /[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}
+export function escapeCsv(x){let s=String(x??"");if(/^[\x00-\x20]*[=+@-]/.test(s))s="'"+s;return /[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}
 export function csv(rows){return "\ufeff"+rows.map(r=>r.map(escapeCsv).join(",")).join("\r\n")+"\r\n";}
 const crcTable=(()=>{const t=[];for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xedb88320^(c>>>1):c>>>1;t[n]=c>>>0;}return t;})();
 export function crc32(a){let c=0xffffffff;for(const v of a)c=crcTable[(c^v)&255]^(c>>>8);return (c^0xffffffff)>>>0;}
