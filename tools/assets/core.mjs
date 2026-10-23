@@ -1,7 +1,7 @@
 /* KOLFAT TOOLS: local-only utilities. No network requests or dependencies. */
 const encoder = new TextEncoder();
 export function bytes(n){if(!Number.isFinite(n))return "unknown";const u=["B","KiB","MiB","GiB"];let i=0;while(n>=1024&&i<u.length-1){n/=1024;i++;}return n.toFixed(i?1:0)+" "+u[i];}
-export function cleanName(value){let x=String(value||"file").normalize("NFC").replace(/[<>:"/\\|?*\x00-\x1f\x7f]/g,"_").replace(/^\.+/,"").replace(/[. ]+$/,"").trim();return (x||"file").slice(0,140);}
+export function cleanName(value){let x=String(value||"file").normalize("NFC").replace(/[<>:"/\\|?*\x00-\x1f\x7f]/g,"_").replace(/^[._ ]+/,"").replace(/[. ]+$/,"").trim();return (x||"file").slice(0,140);}
 export function parts(name){const i=name.lastIndexOf(".");return i>0?{stem:name.slice(0,i),ext:name.slice(i).toLowerCase()}:{stem:name,ext:""};}
 export function fileDate(d){return Number.isFinite(d)&&d>0?new Date(d).toISOString().slice(0,10):"";}
 export function filenameDate(name){
