@@ -45,11 +45,11 @@ jobs:
           root=ET.fromstring(p.read_text())
           ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
           urls=[loc.text for loc in root.findall('s:url/s:loc',ns)]
-          expected=['https://kolfat.app/tools/']+[f'https://kolfat.app/tools/{slug}/' for slug in ['image-compressor','image-converter','exif-cleaner','photo-date-detective','duplicate-checker','batch-file-renamer','image-watermark','photo-rotator','image-to-pdf','sha256-verifier','qr-code-generator','photo-color-palette']] + ['code-data/'] + [f'code-data/{slug}/' for slug in ['json-formatter','yaml-json-converter','csv-json-converter','xml-formatter','base64-encoder','url-encoder','regex-tester','uuid-generator','html-entity-converter','sql-formatter','markdown-preview','json-schema-validator']]
+          expected=['https://kolfat.app/tools/','https://kolfat.app/tools/photo-file/']+[f'https://kolfat.app/tools/{slug}/' for slug in ['image-compressor','image-converter','exif-cleaner','photo-date-detective','duplicate-checker','batch-file-renamer','image-watermark','photo-rotator','image-to-pdf','sha256-verifier','qr-code-generator','photo-color-palette']] + ['https://kolfat.app/tools/code-data/'] + [f'https://kolfat.app/tools/code-data/{slug}/' for slug in ['json-formatter','yaml-json-converter','csv-json-converter','xml-formatter','base64-encoder','url-encoder','regex-tester','uuid-generator','html-entity-converter','sql-formatter','markdown-preview','json-schema-validator']]
           assert len(urls)==len(set(urls)),'duplicate URLs'
           for url in expected:
             assert url in urls, url
             page=Path(url.removeprefix('https://kolfat.app/'))/'index.html'
             assert page.is_file(), page
-          print('PASS:',len(urls),'sitemap URLs including all 7 KOLFAT Tools pages')
+          print('PASS:',len(urls),'sitemap URLs including all KOLFAT Tools category and utility pages')
           PY

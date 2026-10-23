@@ -1,0 +1,31 @@
+/* Compact KOLFAT TOOLS category directory. The category pages keep the existing full-size tool cards. */
+.kf-tools-hub .kf-hub-hero{padding:28px 0 12px;max-width:850px}
+.kf-tools-hub .kf-hub-hero h1{font-size:clamp(2.1rem,5vw,3.55rem);line-height:1.1;letter-spacing:-.025em;margin:8px 0 12px}
+.kf-tools-hub .kf-hub-hero .lead{font-size:clamp(.95rem,1.8vw,1.08rem);margin:0;max-width:690px}
+.kf-tools-hub .breadcrumb{padding-bottom:10px}
+.kf-categories{margin:14px 0 0}
+.kf-categories-heading{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:16px}
+.kf-categories-heading h2{font-size:1.45rem;margin:0 0 4px}
+.kf-categories-heading p{color:#bdbdb9;font-size:.85rem;margin:0}
+.kf-category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
+.kf-category-card{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);grid-template-rows:1fr auto;column-gap:15px;row-gap:14px;min-width:0;min-height:160px;padding:19px 20px;border:1px solid #3b3b3b;border-radius:16px;background:linear-gradient(130deg,#171411,#0d0d0d);color:#fff;text-decoration:none;transition:border-color .15s,transform .15s,background .15s}
+.kf-category-card:hover,.kf-category-card:focus-visible{border-color:#ff903f;background:linear-gradient(130deg,#24190f,#111);transform:translateY(-2px)}
+.kf-category-card:focus-visible{outline:2px solid #ffb06d;outline-offset:3px}
+.kf-category-icon{display:grid;place-items:center;width:54px;height:54px;border:1px solid #9e5b2d;border-radius:13px;background:linear-gradient(145deg,#332115,#13110f);color:#ffa266}
+.kf-category-icon svg{display:block;width:30px;height:30px}
+.kf-category-copy{display:flex;flex-direction:column;gap:3px;min-width:0}
+.kf-category-label{font-size:.66rem;letter-spacing:.12em;color:#ffa266;font-weight:800}
+.kf-category-name{font-size:1.17rem;line-height:1.25;letter-spacing:-.01em}
+.kf-category-description{color:#bcbcb9;font-size:.86rem;line-height:1.45}
+.kf-category-bottom{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #333;padding-top:11px}
+.kf-category-count{font-size:.75rem;color:#d0d0cc;font-weight:700}
+.kf-category-open{font-size:.82rem;color:#ffa266;font-weight:700}
+.kf-tools-hub .kf-hub-privacy{margin:22px 0 10px;padding:11px 15px;font-size:.85rem}
+.kf-tools-hub .kf-hub-promo{margin:28px 0 10px;padding:23px}
+.kf-tools-hub .kf-hub-promo h2{font-size:1.25rem}
+.kf-tools-hub .kf-hub-promo p{margin-bottom:12px}
+body:has(.kf-tools-hub)>a.kolfat-tools-direct--floating{display:none!important}
+@media(min-width:1150px){.kf-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.kf-category-grid{grid-template-columns:1fr}.kf-category-card{min-height:140px;padding:17px;row-gap:11px}.kf-tools-hub .kf-hub-hero{padding-top:15px}}
+@media(max-width:410px){.kf-category-card{grid-template-columns:46px minmax(0,1fr);column-gap:11px}.kf-category-icon{width:46px;height:46px}.kf-category-icon svg{width:27px;height:27px}.kf-category-name{font-size:1.04rem}.kf-category-open{font-size:.78rem}}
+@media(prefers-reduced-motion:reduce){.kf-category-card{transition:none}.kf-category-card:hover{transform:none}}
