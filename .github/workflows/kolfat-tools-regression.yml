@@ -28,6 +28,8 @@ jobs:
         run: |
           node --check tools/assets/core.mjs
           node --check tools/assets/app.mjs
+          node --check tools/assets/phase2.mjs
+          node --check tools/assets/vendor/qrcode.mjs
       - name: Run core utility tests
         run: node --test tools/tests/core.test.mjs
       - name: Validate public tools in sitemap
@@ -39,7 +41,7 @@ jobs:
           root=ET.fromstring(p.read_text())
           ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
           urls=[loc.text for loc in root.findall('s:url/s:loc',ns)]
-          expected=['https://kolfat.app/tools/']+[f'https://kolfat.app/tools/{slug}/' for slug in ['image-compressor','image-converter','exif-cleaner','photo-date-detective','duplicate-checker','batch-file-renamer']]
+          expected=['https://kolfat.app/tools/']+[f'https://kolfat.app/tools/{slug}/' for slug in ['image-compressor','image-converter','exif-cleaner','photo-date-detective','duplicate-checker','batch-file-renamer','image-watermark','photo-rotator','image-to-pdf','sha256-verifier','qr-code-generator','photo-color-palette']]
           assert len(urls)==len(set(urls)),'duplicate URLs'
           for url in expected:
             assert url in urls, url
