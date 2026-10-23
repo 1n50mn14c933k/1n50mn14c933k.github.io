@@ -60,3 +60,12 @@ footer a:hover{color:var(--orange)}
 @media(max-width:760px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-tools{padding:44px 0 24px}.controls{grid-template-columns:1fr}}
 @media(max-width:490px){.tool-grid{grid-template-columns:1fr}.tool-card{min-height:auto}.header .brand img{width:114px}.workspace{padding:17px}.drop{padding:20px 10px}.hero-tools h1{font-size:clamp(2.05rem,11vw,3rem)}}
 @media(prefers-reduced-motion:reduce){.tool-card{transition:none}}
+
+
+/* Distinct lightweight vector icons for the six Photo & File Tools cards. */
+.tool-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;min-height:80px}
+.tool-card-top .card-label{align-self:center;max-width:calc(100% - 94px);text-align:right;line-height:1.35}
+.tool-icon{display:grid;flex:0 0 76px;place-items:center;width:76px;height:76px;border-radius:19px;background:linear-gradient(135deg,#35200f 0%,#171310 64%,#0d0d0d 100%);border:1px solid #ba682b;color:#ff9b55;box-shadow:inset 0 1px 0 rgba(255,186,122,.15),0 6px 18px rgba(0,0,0,.3)}
+.tool-icon svg{display:block;width:47px;height:47px}
+.tool-card h2{margin-top:12px}
+@media(max-width:490px){.tool-card-top{min-height:70px}.tool-icon{width:68px;height:68px;flex-basis:68px;border-radius:17px}.tool-icon svg{width:42px;height:42px}.tool-card-top .card-label{max-width:calc(100% - 80px)}}
