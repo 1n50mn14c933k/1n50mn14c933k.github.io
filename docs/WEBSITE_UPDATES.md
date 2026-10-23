@@ -2,6 +2,15 @@
 
 This file documents updates to the **public KOLFAT website** at https://kolfat.app/. It does not replace the application release notes in the [MEDIA KOLFAT repository](https://github.com/1n50mn14c933k/MEDIA_KOLFAT).
 
+## 2026-10-23 — Compact KOLFAT TOOLS category dashboard
+
+- Reorganized `/tools/` as a compact **category overview** rather than a long list of 24 individual utility cards. Every new tool category gets an equally prominent dedicated card, designed to scale as categories are added.
+- Added `/tools/photo-file/`, a dedicated landing page containing the existing 12 Photo & File Tools with their original cards and SVG icons.
+- Kept the existing `/tools/code-data/` category page with its 12 tools; improved its cross-category link.
+- Added `assets/tools-categories.css` under `tools/` to style the overview only, preserving original individual utility functionality, navigation, 12-language marketing website, and MEDIA KOLFAT product calls-to-action.
+- Added the new photo category URL to the sitemap and extended regression checks for category navigation, destination routes, tool counts, and preservation of the MEDIA KOLFAT marketing link.
+- English-only tool interfaces remain intentional for this release; the public 12-language marketing pages are unchanged.
+
 ## 2026-10-22 — MEDIA KOLFAT 1.8.0 website refresh
 
 **Application release:** MEDIA KOLFAT **1.8.0** (Microsoft Store package `1.8.0.0`, published October 19, 2026)  
