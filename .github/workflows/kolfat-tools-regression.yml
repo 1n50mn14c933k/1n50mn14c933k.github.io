@@ -1,0 +1,49 @@
+name: KOLFAT Tools Regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/**'
+      - 'sitemap.xml'
+      - '.github/workflows/kolfat-tools-regression.yml'
+  pull_request:
+    paths:
+      - 'tools/**'
+      - 'sitemap.xml'
+      - '.github/workflows/kolfat-tools-regression.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check source syntax
+        run: |
+          node --check tools/assets/core.mjs
+          node --check tools/assets/app.mjs
+      - name: Run core utility tests
+        run: node --test tools/tests/core.test.mjs
+      - name: Validate public tools in sitemap
+        run: |
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          p=Path('sitemap.xml')
+          root=ET.fromstring(p.read_text())
+          ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[loc.text for loc in root.findall('s:url/s:loc',ns)]
+          expected=['https://kolfat.app/tools/']+[f'https://kolfat.app/tools/{slug}/' for slug in ['image-compressor','image-converter','exif-cleaner','photo-date-detective','duplicate-checker','batch-file-renamer']]
+          assert len(urls)==len(set(urls)),'duplicate URLs'
+          for url in expected:
+            assert url in urls, url
+            page=Path(url.removeprefix('https://kolfat.app/'))/'index.html'
+            assert page.is_file(), page
+          print('PASS:',len(urls),'sitemap URLs including all 7 KOLFAT Tools pages')
+          PY
