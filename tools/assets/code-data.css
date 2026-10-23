@@ -1,0 +1,21 @@
+/* KOLFAT Code & Data: extensions only, inherits Photo & File design. */
+.kf-section-title{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px}
+.kf-section-title h2{font-size:1.5rem;font-weight:650;margin:0}
+.kf-section-title a,.kf-section-title span{font-size:.9rem;color:#ff9c58}
+#code-data{margin-top:42px;border-top:1px solid #353535;padding-top:35px}
+.kf-editor{display:flex;flex-direction:column;gap:14px}
+.kf-field,.kf-controls label,.kf-loader{display:block;font-size:.95rem;color:#f5f5f5;font-weight:600}
+.kf-field textarea{display:block;width:100%;margin-top:8px;min-height:150px;padding:15px;border:1px solid #525252;border-radius:11px;background:#080808;color:#fff;font:14px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;resize:vertical;overflow-wrap:anywhere}
+.kf-field textarea:focus-visible,.kf-controls input:focus-visible,.kf-controls select:focus-visible{outline:2px solid #ff9c58;outline-offset:2px}
+.kf-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.kf-controls label input,.kf-controls label select{display:block;width:100%;margin-top:7px;min-height:44px;border-radius:9px;border:1px solid #555;background:#080808;color:#fff;padding:9px 12px;font:inherit}
+.kf-loader{font-weight:400}.kf-loader input{display:block;margin-top:7px;max-width:100%}
+.kf-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:15px 0 25px}
+.kf-actions>button{cursor:pointer;min-height:44px;padding:8px 14px;border:1px solid #777;background:#171717;color:#fff;border-radius:9px;font-weight:650}
+.kf-actions>button:hover{border-color:#ff9c58}
+.kf-actions #downloads{display:flex;gap:10px;flex-wrap:wrap}
+.kf-preview{border-top:1px solid #333;margin-top:24px;padding-top:16px}
+.kf-preview h2{font-size:1.1rem}
+.kf-preview iframe{display:block;width:100%;height:300px;border:1px solid #555;border-radius:10px;background:#101010}
+#output{min-height:190px}
+@media(max-width:560px){.kf-controls{grid-template-columns:1fr}.kf-field textarea{font-size:13px}.kf-actions #downloads{width:100%}}
