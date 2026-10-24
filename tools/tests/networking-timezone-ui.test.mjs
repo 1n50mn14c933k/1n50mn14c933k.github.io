@@ -11,7 +11,7 @@ test("Time Zone Converter keeps all 11 zone options and five default selections"
  assert.match(page,/<body data-network-tool="timezone">/);
  assert.match(page,/class="zone-grid"/);
  assert.match(page,/class="zone-picker"/);
- assert.match(page,/src="\/tools\/assets\/networking\.css\?v=2"/);
+ assert.match(page,/href="\/tools\/assets\/networking\.css\?v=2"/);
  const match=[...page.matchAll(/<input type="checkbox" name="zone" value="([^"]+)"( checked)?>/g)];
  assert.deepEqual(match.map(x=>x[1]),zones);
  assert.deepEqual(match.filter(x=>x[2]).map(x=>x[1]),zones.slice(0,5));
