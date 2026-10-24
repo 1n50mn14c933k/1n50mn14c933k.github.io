@@ -208,4 +208,17 @@
   <url><loc>https://kolfat.app/tools/code-data/markdown-preview/</loc><lastmod>2026-10-23</lastmod></url>
   <url><loc>https://kolfat.app/tools/code-data/json-schema-validator/</loc><lastmod>2026-10-23</lastmod></url>
   <url><loc>https://kolfat.app/tools/photo-file/</loc><lastmod>2026-10-23</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/ipv4-subnet-calculator/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/ipv6-prefix-calculator/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/vlsm-subnet-planner/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/ip-range-cidr-converter/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/vlan-ip-planner/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/network-port-reference/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/cron-expression-builder/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/systemd-timer-builder/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/unix-timestamp-converter/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/time-zone-converter/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/linux-chmod-calculator/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/networking/docker-compose-checker/</loc><lastmod>2026-10-24</lastmod></url>
 </urlset>
