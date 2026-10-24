@@ -1,5 +1,13 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-24 — Time Zone Converter selection UI refresh
+
+- Replaced eleven cramped checkboxes with keyboard-accessible, full-width clickable timezone tiles, grouped in a responsive two-column grid (single-column on small screens).
+- Retained all eleven IANA time-zone values, the five original default selections, and the existing local conversion engine.
+- Display city names and IANA identifiers separately, with KOLFAT orange selected states and visible keyboard focus.
+- Restricted CSS changes to the Time Zone Converter selection controls and added automated page / styling contract tests. No translation changes or new dependencies.
+
+
 This file documents updates to the **public KOLFAT website** at https://kolfat.app/. It does not replace the application release notes in the [MEDIA KOLFAT repository](https://github.com/1n50mn14c933k/MEDIA_KOLFAT).
 
 ## 2026-10-23 — Compact KOLFAT TOOLS category dashboard
