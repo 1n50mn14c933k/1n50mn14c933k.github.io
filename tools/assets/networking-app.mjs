@@ -12,7 +12,7 @@ function produce(s){
 run.addEventListener("click",()=>{
  run.disabled=true;reset();result.value="";message("Calculating locally…");
  try{
-  const s=tool==="ports"?"":input.value;
+  const s=input?.value||"";
   if(s.length>50000||value("secondary").length>50000)throw Error("Input exceeds 50,000 characters.");
   const fn={
    ipv4:()=>ipv4Report(s),ipv6:()=>ipv6Report(s),vlsm:()=>vlsmReport(s,value("secondary")),
