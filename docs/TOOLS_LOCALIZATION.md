@@ -25,3 +25,7 @@ Run the generator; verify all 583 static pages, unique sitemap URLs and canonica
 ## English-language entry point
 
 The shared `assets/nav-dropdown.js` now adds a 12-language selector to the original English tool pages. Visitors can switch directly from an English utility to the corresponding localized URL and back. Both mobile navigation and preservation of active tool route need Chromium QA. This change is part of this draft PR only; no other marketing page receives the extra selector.
+
+## October 25 interface expansion
+
+Added `tools/assets/i18n-text.mjs`: 78 shared interface labels/statuses translated into 11 languages (858 dictionary entries), including file-selection controls, results, common commands and process messages. The browser translator now also traverses safe plain text nodes, fixes the Photo & File category mapping and keeps original technical limitations in a clearly labeled expandable English section rather than silently dropping critical safety warnings. This does **not** constitute translation of all 48 tool-specific warnings, dynamic errors or generated result explanations. Release approval remains blocked until full locale review. Rollback: revert the feature PR or remove the additional text pack import and shared-text traversal; English originals are unchanged.
