@@ -26,3 +26,15 @@ test("localized controls, menu icons and safeguards",async({page})=>{
   await expect(page.locator(".kolfat-menu-panel .kf-menu-icon").first()).toBeVisible();
   await expect(page.locator(".kolfat-menu-panel a").filter({hasText:"Werkzeuge"})).toHaveCount(1);
 });
+
+for(const lang of ["de","fr","es","pt","it","ru","zh","ja","hi","fa","ar"]){
+ test("localized safety banners "+lang,async({page})=>{
+  for(const path of ["/tools/exif-cleaner/","/tools/code-data/base64-encoder/","/tools/networking/ipv4-subnet-calculator/","/tools/security/jwt-inspector/"]){
+   await page.goto("http://127.0.0.1:8765/"+lang+path);
+   await expect(page.locator(".kf-i18n-safety")).toHaveCount(1);
+   const text=await page.locator(".kf-i18n-safety").innerText();
+   expect(text.trim().length).toBeGreaterThan(60);
+   await expect(page.locator(".kf-tools-language")).toHaveCount(1);
+  }
+ });
+}
