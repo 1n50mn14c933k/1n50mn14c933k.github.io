@@ -78,3 +78,130 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initSupportLink, {once:true});
   else initSupportLink();
 })();
+
+
+/* KOLFAT unified navigation artwork and footer, 2026-10-25.
+   Only static DOM and inline SVG: no trackers, downloads, or external requests. */
+(() => {
+  const icons = Object.freeze({
+    home: '<path d="m3 10 9-7 9 7v10H3z"/><path d="M9 20v-7h6v7"/>',
+    media: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m4 17 5-5 4 4 3-3 4 4"/>',
+    download: '<path d="M12 3v12m-5-5 5 5 5-5"/><path d="M5 17v4h14v-4"/>',
+    about: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/>',
+    guides: '<path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Z"/><path d="M12 5v15"/>',
+    tools: '<path d="M13 5a6 6 0 0 0 6 7l-7 7a3 3 0 0 1-4-4l7-7a6 6 0 0 0-2-3Z"/><path d="m6 8 3 3"/>',
+    support: '<path d="M20.8 8.5c0 5-8.8 11-8.8 11S3.2 13.5 3.2 8.5a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/>',
+    mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/>',
+    privacy: '<path d="m12 2 8 4v6c0 5-3 8-8 10-5-2-8-5-8-10V6z"/><path d="m9 12 2 2 4-4"/>',
+    terms: '<path d="M7 3h9l4 4v14H7z"/><path d="M16 3v5h4M10 12h7m-7 4h7"/>',
+    licenses: '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6m-4 5 1 1 3-3"/>',
+    x: '<path d="M4 3 20 21M20 3 4 21M4 3h5l11 18h-5"/>',
+    youtube: '<rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/>',
+    tiktok: '<path d="M13 3v12a5 5 0 1 1-5-5"/><path d="M13 3c1 4 3 6 7 6"/>',
+    github: '<path d="M9 20c-5 1-6-2-6-2m12 2v-3c4-1 5-3 5-6 0-2-1-3-2-4 0-1 0-3-1-4l-4 2h-2L7 3C6 4 6 6 6 7c-1 1-2 2-2 4 0 3 2 5 5 6v3"/>',
+    link: '<path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-2 2"/><path d="M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l2-2"/>'
+  });
+  const iconFor = href => {
+    const target = new URL(href, document.baseURI);
+    const host = target.hostname.toLowerCase();
+    if (target.protocol === "mailto:") return "mail";
+    if (host === "x.com" || host === "twitter.com") return "x";
+    if (host.includes("youtube.com") || host === "youtu.be") return "youtube";
+    if (host.includes("tiktok.com")) return "tiktok";
+    if (host === "github.com") return "github";
+    const path = target.pathname.toLowerCase().replace(/\/+$/, "");
+    if (path.includes("/media_kolfat")) return "media";
+    if (path.includes("/download")) return "download";
+    if (path.includes("/about")) return "about";
+    if (path.includes("/guides")) return "guides";
+    if (path.includes("/tools")) return "tools";
+    if (path.includes("/support")) return "support";
+    if (path.includes("/contact")) return "mail";
+    if (path.includes("/privacy")) return "privacy";
+    if (path.includes("/terms")) return "terms";
+    if (path.includes("/licenses")) return "licenses";
+    if (!path || /^\/(?:en|fa|de|fr|es|pt|it|ja|zh|hi|ru|ar)$/.test(path)) return "home";
+    return "link";
+  };
+  const locales = {
+    en:["Privacy","Terms","Licenses","Support","Contact"],
+    fa:["حریم خصوصی","شرایط","مجوزها","پشتیبانی","تماس"],
+    de:["Datenschutz","Nutzungsbedingungen","Lizenzen","Support","Kontakt"],
+    fr:["Confidentialité","Conditions","Licences","Assistance","Contact"],
+    es:["Privacidad","Términos","Licencias","Soporte","Contacto"],
+    pt:["Privacidade","Termos","Licenças","Suporte","Contato"],
+    it:["Privacy","Termini","Licenze","Supporto","Contatti"],
+    ja:["プライバシー","利用規約","ライセンス","サポート","お問い合わせ"],
+    zh:["隐私","条款","许可证","支持","联系"],
+    hi:["गोपनीयता","शर्तें","लाइसेंस","सहायता","संपर्क"],
+    ru:["Конфиденциальность","Условия","Лицензии","Поддержка","Контакты"],
+    ar:["الخصوصية","الشروط","التراخيص","الدعم","اتصل بنا"]
+  };
+  const initUnifiedChrome = () => {
+    // Existing site sections keep their semantic meaning; hide only superseded
+    // footer markup, never content or page sections.
+    const menu = document.querySelector(".top-nav .kolfat-menu-panel");
+    if (menu) {
+      for (const anchor of menu.querySelectorAll("a[href]")) {
+        if (anchor.querySelector(".kf-menu-icon")) continue;
+        const key = iconFor(anchor.getAttribute("href"));
+        const svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
+        svg.classList.add("kf-menu-icon");
+        svg.setAttribute("viewBox","0 0 24 24");
+        svg.setAttribute("fill","none");
+        svg.setAttribute("stroke","currentColor");
+        svg.setAttribute("stroke-width","1.8");
+        svg.setAttribute("stroke-linecap","round");
+        svg.setAttribute("stroke-linejoin","round");
+        svg.setAttribute("aria-hidden","true");
+        svg.innerHTML=icons[key];
+        anchor.prepend(svg);
+      }
+    }
+    if (!document.querySelector(".header") && !document.querySelector(".kf-global-top-rule")) {
+      const line=document.createElement("div");
+      line.className="kf-global-top-rule";
+      line.setAttribute("aria-hidden","true");
+      document.body.append(line);
+    }
+    if (document.querySelector("footer.kf-global-footer")) return;
+    const lang=(document.documentElement.lang||"en").toLowerCase().split("-")[0];
+    const locale=Object.hasOwn(locales,lang)?lang:"en";
+    const labels=locales[locale];
+    const prefix=locale==="en"?"":"/"+locale;
+    const items=[
+      [prefix+"/privacy/",labels[0]],
+      [prefix+"/terms/",labels[1]],
+      [prefix+"/licenses/",labels[2]],
+      [prefix+"/support/",labels[3]],
+      ["mailto:contact@kolfat.app",labels[4]]
+    ];
+    const footer=document.createElement("footer");
+    footer.className="kf-global-footer";
+    footer.setAttribute("aria-label","KOLFAT website information");
+    footer.dir=document.documentElement.dir||"ltr";
+    const inner=document.createElement("div");
+    inner.className="kf-global-footer-inner";
+    const copy=document.createElement("span");
+    copy.className="kf-footer-copyright";
+    copy.textContent="© 2026 KOLFAT";
+    const nav=document.createElement("nav");
+    nav.className="kf-footer-links";
+    nav.setAttribute("aria-label","Legal, support and contact");
+    for(const [url,label] of items){
+      const a=document.createElement("a");
+      a.href=url;
+      a.textContent=label;
+      nav.append(a);
+    }
+    inner.append(copy,nav);
+    footer.append(inner);
+    for(const old of document.querySelectorAll("footer:not(.kf-global-footer)")){
+      old.hidden=true;
+      old.setAttribute("aria-hidden","true");
+    }
+    document.body.append(footer);
+  };
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",initUnifiedChrome,{once:true});
+  else initUnifiedChrome();
+})();
