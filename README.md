@@ -66,6 +66,10 @@ KOLFAT TOOLS has **four collections of twelve individual tools each**. The main 
 
 For changes affecting tools, run `node --test tools/tests/*.test.mjs` and the **KOLFAT Tools Regression** GitHub Actions workflow, which also runs Chromium browser checks and sitemap assertions. Browser tests exercise representative pages and interactions; they do **not** constitute a manual visual review of every one of the 238 committed HTML pages.
 
+## Shared header, footer and icons
+
+Every rendered page uses the shared header and an aligned divider. MENU entries have consistent SVG icons while preserving existing localized labels and destinations. The footer contains only **Privacy · Terms · Licenses · Support · Contact**, with localized routes where available; social networks remain in MENU. The implementation is centralized in `assets/nav-dropdown.js` and `assets/nav-dropdown.css`, documented in [docs/NAVIGATION.md](docs/NAVIGATION.md), and includes responsive/browser tests and a documented rollback in [docs/WEBSITE_UPDATES.md](docs/WEBSITE_UPDATES.md).
+
 ## Website navigation (desktop and mobile)
 
 The site uses a common **KOLFAT MENU** dropdown at the top right. The language switcher is a separate control on multilingual marketing pages, next to MENU. The current English-only tools template has its own shared header without a localized tools language switcher. The brand logo remains on the top left. There is no second link/button row in the homepage hero/footer and no floating CONTACT overlay.

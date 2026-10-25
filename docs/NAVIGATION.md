@@ -95,3 +95,11 @@ Maintenance: edit `assets/site-refinements.css` and increment its query-string v
 - The URL is `https://ko-fi.com/kolfat_app` with `target="_blank"` and `rel="noopener noreferrer"`. It never opens a popup, runs a third-party widget or blocks tool actions.
 - The shared navigation script must be loaded by every visible HTML page, including all 12 language variants and all 48 tools; redirect-only entry files are exempt. The Node contract tests and Chromium checks enforce presence and geometry.
 - For rollback, remove only the `kolfat-support-link` initializer and CSS rules, not the general navigation script.
+
+## Unified site chrome — October 25, 2026
+
+All rendered KOLFAT pages share a top separator and a consistent bottom separator/footer, generated from `assets/nav-dropdown.js` and styled by `assets/nav-dropdown.css`. The footer has exactly five links: Privacy, Terms, Licenses, Support and Contact. Legal and Support destinations use the current page's locale, while Contact uses `mailto:contact@kolfat.app`; TOOLS pages remain English. Language-specific labels render for all 12 website languages.
+
+The MENU dropdown retains its original localized labels and hrefs, but now includes one small orange-accent inline SVG icon per link (home, app, download, about, guides, tools, help, contact, social networks, and fallback). Social networks stay inside MENU and are intentionally absent from the footer. The existing Support KOLFAT button stays in the header. On narrow screens legal links wrap without overflowing.
+
+Rollback: remove the site-chrome initializer and matching CSS block or revert the associated commit. Do not remove the base navigation and Ko-fi handlers.

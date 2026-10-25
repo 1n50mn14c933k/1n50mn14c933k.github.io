@@ -1,5 +1,19 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-25 — Consistent site-wide header/footer borders and menu icons
+
+**Purpose:** Eliminate inconsistent small/empty footer templates and styling across KOLFAT pages. Keep all five requested links visible (Privacy, Terms, Licenses, Support, Contact), without social links in the footer. Add SVG icons to every item in the dropdown MENU.
+
+**Files:** `assets/nav-dropdown.js`, `assets/nav-dropdown.css`, `.github/workflows/kolfat-tools-regression.yml`, `tools/tests/site-chrome.test.mjs`, `tools/tests/site-chrome.spec.mjs`, `docs/WEBSITE_UPDATES.md`, `docs/NAVIGATION.md`, and `README.md`.
+
+**Additional layout correction:** The browser suite found that pages without a language switcher could push the MENU dropdown outside the viewport when opened. On these tool pages the dropdown is now aligned to the MENU button rather than using the offset reserved for a language switcher.
+
+**Implementation:** Shared navigation script adds an accessible 5-link multilingual footer, hides superseded footer markup, inserts inline SVG icons alongside existing MENU anchors, adds a top divider to fullscreen home/product pages, and leaves existing header dropdown interactions intact. All generated elements use local source only. Floating TOOLS CTA stays above footer, never covers legal links.
+
+**Validation:** Node contract tests check icon mapping, footer paths, script presence and links. Chromium browser tests check footer/menu across representative locales and page types, including mobile. Results must be verified before merge; a passing automation suite is not a substitute for checking every live page.
+
+**Rollback:** Revert this merge commit or remove the final `KOLFAT unified navigation artwork and footer` initializer from `assets/nav-dropdown.js` and the `KOLFAT site-wide chrome` block from `assets/nav-dropdown.css`. Existing native footers then reappear. No content, backend, or user data changes.
+
 ## 2026-10-25 — Visible site-wide ☕ Support KOLFAT header shortcut
 
 **Reason:** The previously added Ko-fi link was hidden in the main TOOLS footer and therefore not visible to most visitors. The owner requested an attractive, unobtrusive header shortcut **on every website page** next to MENU/language controls; on GitHub, visible shortcuts **only** on the account's profile README and MEDIA_KOLFAT repository.
