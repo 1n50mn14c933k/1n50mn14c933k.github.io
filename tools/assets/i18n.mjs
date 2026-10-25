@@ -180,12 +180,12 @@ if(pack&&local){
   const x=card.querySelector(".kf-category-open");if(x)x.textContent=pack.labels.explore+" ↗";
  }
  const lead=document.querySelector("main .hero-tools p.lead");
- if(lead)lead.textContent=isDir?local.directory:isCat?local.catlead:local.lead;
+ if(lead && !(lang==="fa" && toolIndex!==undefined))lead.textContent=isDir?local.directory:isCat?local.catlead:local.lead;
  for(const card of document.querySelectorAll("a.tool-card p,a.kf-category-card .kf-category-description")){
    card.textContent=isDir||isCat?local.lead:local.catlead;
  }
  const disclaimer=document.querySelector(".workspace .caveat");
- if(disclaimer){const original=disclaimer.textContent;const details=document.createElement("details");details.className="kf-technical-details";const summary=document.createElement("summary");summary.textContent=ui["Show original technical details"]||"Show original technical details";details.append(summary);const p=document.createElement("p");p.textContent=original;details.append(p);disclaimer.textContent=local.warning+" ";disclaimer.append(details);}
+ if(disclaimer && lang==="fa" && toolIndex!==undefined){disclaimer.textContent=safetyPacks[toolIndex]||"";}else if(disclaimer){const original=disclaimer.textContent;const details=document.createElement("details");details.className="kf-technical-details";const summary=document.createElement("summary");summary.textContent=ui["Show original technical details"]||"Show original technical details";details.append(summary);const p=document.createElement("p");p.textContent=original;details.append(p);disclaimer.textContent=local.warning+" ";disclaimer.append(details);}
  // Update links only within the TOOLS directory; retain original engine assets.
  for(const a of document.querySelectorAll('a[href^="/tools/"]')){
   a.setAttribute("href","/"+lang+a.getAttribute("href"));
