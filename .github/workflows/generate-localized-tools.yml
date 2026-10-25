@@ -1,0 +1,54 @@
+name: Generate Localized Tools
+on:
+  push:
+    branches: [feature/tools-12-language-rollout-20261025]
+    paths:
+      - 'scripts/generate-localized-tools.mjs'
+      - 'tools/assets/i18n.mjs'
+      - 'tools/assets/i18n-data.mjs'
+      - '.github/workflows/generate-localized-tools.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/tools-12-language-rollout-20261025
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/generate-localized-tools.mjs
+      - name: Check 583 localized pages
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+          langs='de fr es pt it ru zh ja hi fa ar'.split()
+          pages=list(Path('tools').rglob('index.html'))
+          assert len(pages)==53,len(pages)
+          for lang in langs:
+            for path in pages:
+              p=Path(lang)/path
+              assert p.exists(),str(p)
+              html=p.read_text()
+              assert f'lang="{lang}"' in html
+              assert 'src="/tools/assets/i18n.mjs' in html
+          root=ET.parse('sitemap.xml').getroot()
+          urls=[x.text for x in root.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+          assert len(urls)==len(set(urls))
+          assert len(urls)==817,len(urls)
+          print('PASS',len(urls),'sitemap URLs')
+          PY
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add de/tools fr/tools es/tools pt/tools it/tools ru/tools zh/tools ja/tools hi/tools fa/tools ar/tools sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "build(i18n): generate 583 translated tool routes"
+            git push origin HEAD:feature/tools-12-language-rollout-20261025
+          fi
