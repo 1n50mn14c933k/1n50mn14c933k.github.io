@@ -45,7 +45,7 @@ const ui=textTranslations[lang]||{};
 const deExtra={
 "Length (12–128)":"Länge (12–128)","Character groups":"Zeichengruppen","Select one or more character types.":"Wählen Sie mindestens eine Zeichenart aus.",
 "Uppercase A–Z":"Großbuchstaben A–Z","Lowercase a–z":"Kleinbuchstaben a–z","Numbers 0–9":"Ziffern 0–9","Symbols":"Sonderzeichen","Avoid ambiguous characters":"Verwechselbare Zeichen vermeiden",
-"Ready.":"Bereit.","Results appear here.":"Ergebnisse erscheinen hier.","Important:":"Wichtig:","Input":"Eingabe","Output":"Ausgabe","Result":"Ergebnis",
+"Ready.":"Bereit.","Results appear here.":"Ergebnisse erscheinen hier.","More Security & Text Tools":"Weitere Sicherheits- und Textwerkzeuge","All 12 security and text analysis utilities.":"Alle zwölf Werkzeuge für Sicherheit und Textanalyse.","Back to Security & Text Analysis →":"Zurück zu Sicherheit und Textanalyse →","Character groups":"Zeichengruppen","Technical limitations":"Technische Einschränkungen","Show original technical details":"Technische Hinweise anzeigen","Choose your input to begin.":"Wählen Sie eine Eingabe, um zu beginnen.","Select files":"Dateien auswählen","Or drag and drop files here":"Oder Dateien hierher ziehen","Processing locally…":"Wird lokal verarbeitet…","Complete. Nothing was uploaded.":"Abgeschlossen. Es wurden keine Daten hochgeladen.","Important:":"Wichtig:","Input":"Eingabe","Output":"Ausgabe","Result":"Ergebnis",
 "Choose a file":"Datei auswählen","Choose file":"Datei auswählen","Select file":"Datei auswählen","Select files":"Dateien auswählen",
 "Copy":"Kopieren","Copied!":"Kopiert!","Clear":"Leeren","Reset":"Zurücksetzen","Download":"Herunterladen",
 "Download PNG":"PNG herunterladen","Download PDF":"PDF herunterladen","Download CSV":"CSV herunterladen",
