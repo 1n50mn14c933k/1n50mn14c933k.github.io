@@ -44,9 +44,9 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
    const lang=(document.documentElement.lang||"en").toLowerCase().split("-")[0];
    const label=labels[lang]||labels.en;
    const style=document.createElement("style");style.textContent=css;document.head.append(style);
-   const a=document.createElement("a");a.className="kolfat-tools-direct";a.href="/tools/";a.dir="auto";a.setAttribute("aria-label",label+(lang==="en"?"":" (English tools interface)"));
+   const a=document.createElement("a");a.className="kolfat-tools-direct";a.href=lang==="en"?"/tools/":"/"+lang+"/tools/";a.dir="auto";a.setAttribute("aria-label",label);
    const span=document.createElement("span");span.textContent=label;a.append(span);
-   if(lang!=="en"){const badge=document.createElement("small");badge.className="tools-lang";badge.textContent="EN";badge.title="Tools currently in English";a.append(badge);}
+
    const arrow=document.createElement("span");arrow.textContent="↗";arrow.setAttribute("aria-hidden","true");a.append(arrow);
    const hero=document.querySelector('html[data-kolfat-page="home"] .hero-copy');
    const start=hero?.querySelector('a.btn[href*="/Media_Kolfat/"]');
