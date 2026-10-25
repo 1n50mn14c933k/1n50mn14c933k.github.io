@@ -106,6 +106,42 @@ const faExtra={
 "Generated using Web Crypto and unbiased random selection. Keep passwords in a trusted manager. No result is auto-downloaded.":"گذرواژه‌ها با مولد تصادفی امن مرورگر ساخته می‌شوند. آن‌ها را در مدیر گذرواژه نگهداری کنید؛ هیچ فایل خودکار دانلود نمی‌شود."
 };
 if(lang==="fa")Object.assign(ui,faExtra);
+const frDescriptions=["Supprimer les métadonnées EXIF et GPS des photos","Compresser et redimensionner des images","Convertir des images entre plusieurs formats","Analyser les dates associées aux photos","Détecter des fichiers parfaitement identiques","Renommer des copies de fichiers par lots","Ajouter un filigrane à une image","Faire pivoter et recadrer une photo","Créer un PDF à partir d’images","Vérifier l’intégrité d’un fichier par SHA-256","Créer un code QR à partir d’un texte ou d’une URL","Extraire les couleurs principales d’une photo","Mettre en forme et vérifier du JSON","Convertir entre YAML et JSON","Convertir entre CSV et JSON","Mettre en forme et vérifier du XML","Encoder et décoder du Base64","Encoder et décoder un composant d’URL","Tester des expressions régulières","Générer des UUID de version 4","Convertir des entités HTML","Mettre en forme du SQL","Prévisualiser du Markdown","Vérifier un schéma JSON élémentaire","Calculer des sous-réseaux IPv4 et des CIDR","Calculer des préfixes IPv6","Planifier des sous-réseaux VLSM","Convertir des plages IP et des blocs CIDR","Préparer un plan VLAN et IP","Consulter une référence des ports réseau","Créer une expression cron","Créer un exemple de minuterie systemd","Convertir des horodatages Unix","Convertir des fuseaux horaires","Calculer des permissions Linux chmod","Effectuer un contrôle élémentaire de Docker Compose YAML","Générer des mots de passe aléatoires sécurisés","Générer des phrases secrètes","Évaluer la robustesse d’un mot de passe","Décoder et examiner un JWT sans vérifier sa signature","Calculer une empreinte de texte","Repérer des secrets potentiels dans du texte","Masquer les données sensibles dans du texte","Comparer du texte et du code ligne à ligne","Examiner des caractères Unicode similaires","Convertir des domaines IDN et Punycode","Examiner la structure d’une URL hors ligne","Examiner le texte, l’hexadécimal et l’UTF-8"];
+const frExtra={
+"Tools for every task.":"Des outils pour chaque tâche.",
+"TOOLS":"OUTILS","Explore all 12 photo & file tools":"Découvrir les 12 outils photo et fichiers",
+"Explore all 12 code & data tools":"Découvrir les 12 outils code et données",
+"Explore all 12 networking & automation tools":"Découvrir les 12 outils réseau et automatisation",
+"Explore all 12 security & text analysis tools":"Découvrir les 12 outils sécurité et texte",
+"Length (12–128)":"Longueur (12 à 128)","Character groups":"Groupes de caractères",
+"Select one or more character types.":"Sélectionnez un ou plusieurs types de caractères.",
+"Uppercase A–Z":"Majuscules A–Z","Lowercase a–z":"Minuscules a–z",
+"Numbers 0–9":"Chiffres 0 à 9","Symbols":"Symboles",
+"Avoid ambiguous characters":"Éviter les caractères ambigus",
+"Ready.":"Prêt.","Results appear here.":"Les résultats apparaissent ici.",
+"More Security & Text Tools":"Autres outils de sécurité et de texte",
+"All 12 security and text analysis utilities.":"Les 12 outils de sécurité et d’analyse de texte.",
+"Back to Security & Text Analysis →":"Retour aux outils de sécurité et de texte →",
+"Important:":"Important :","Choose file":"Choisir un fichier","Choose a file":"Choisir un fichier",
+"Select file":"Sélectionner un fichier","Select files":"Sélectionner des fichiers",
+"Copied!":"Copié !","Reset":"Réinitialiser","Download PNG":"Télécharger le PNG",
+"Download PDF":"Télécharger le PDF","Download CSV":"Télécharger le CSV",
+"Generate":"Générer","Analyze":"Analyser","Calculate":"Calculer",
+"Check":"Vérifier","Inspect":"Examiner","Run":"Exécuter",
+"Options":"Options","Settings":"Paramètres","Preview":"Aperçu",
+"Filename":"Nom du fichier","File name":"Nom du fichier","File size":"Taille du fichier",
+"Width":"Largeur","Height":"Hauteur","Quality":"Qualité","Size":"Taille",
+"Text to analyze":"Texte à analyser","Text to convert":"Texte à convertir",
+"Paste text here...":"Collez le texte ici…","Enter text here...":"Saisissez le texte ici…",
+"Select an option":"Sélectionnez une option","Choose an option":"Choisissez une option",
+"Supported formats":"Formats pris en charge","Enter a value":"Saisissez une valeur",
+"No results":"Aucun résultat","Processing...":"Traitement en cours…",
+"Show details":"Afficher les détails","Hide details":"Masquer les détails",
+"Browser-based processing":"Traitement dans le navigateur","Back to tools":"Retour aux outils",
+"Photo & File":"Photo et fichiers","Code & Data":"Code et données",
+"Networking":"Réseau","Security":"Sécurité","Password length":"Longueur du mot de passe"
+};
+if(lang==="fr")Object.assign(ui,frExtra);
 if(pack&&local){
  const route=location.pathname.replace(/^\/(?:de|fr|es|pt|it|ru|zh|ja|hi|fa|ar)(?=\/tools\/)/,"");
  const parts=route.split("/").filter(Boolean).slice(1);
@@ -180,12 +216,13 @@ if(pack&&local){
   const x=card.querySelector(".kf-category-open");if(x)x.textContent=pack.labels.explore+" ↗";
  }
  const lead=document.querySelector("main .hero-tools p.lead");
- if(lead && !(lang==="fa" && toolIndex!==undefined))lead.textContent=isDir?local.directory:isCat?local.catlead:local.lead;
+ if(lead && !((lang==="fa"||lang==="fr") && toolIndex!==undefined))lead.textContent=isDir?local.directory:isCat?local.catlead:local.lead;
+ if(lead&&lang==="fr"&&toolIndex!==undefined)lead.textContent=frDescriptions[toolIndex];
  for(const card of document.querySelectorAll("a.tool-card p,a.kf-category-card .kf-category-description")){
    card.textContent=isDir||isCat?local.lead:local.catlead;
  }
  const disclaimer=document.querySelector(".workspace .caveat");
- if(disclaimer && lang==="fa" && toolIndex!==undefined){disclaimer.textContent=safetyPacks[toolIndex]||"";}else if(disclaimer){const original=disclaimer.textContent;const details=document.createElement("details");details.className="kf-technical-details";const summary=document.createElement("summary");summary.textContent=ui["Show original technical details"]||"Show original technical details";details.append(summary);const p=document.createElement("p");p.textContent=original;details.append(p);disclaimer.textContent=local.warning+" ";disclaimer.append(details);}
+ if(disclaimer && (lang==="fa"||lang==="fr") && toolIndex!==undefined){disclaimer.textContent=safetyPacks[toolIndex]||"";}else if(disclaimer){const original=disclaimer.textContent;const details=document.createElement("details");details.className="kf-technical-details";const summary=document.createElement("summary");summary.textContent=ui["Show original technical details"]||"Show original technical details";details.append(summary);const p=document.createElement("p");p.textContent=original;details.append(p);disclaimer.textContent=local.warning+" ";disclaimer.append(details);}
  // Update links only within the TOOLS directory; retain original engine assets.
  for(const a of document.querySelectorAll('a[href^="/tools/"]')){
   a.setAttribute("href","/"+lang+a.getAttribute("href"));
@@ -224,7 +261,7 @@ if(pack&&local){
  const list=document.createElement("nav");
  list.className="lang-list";list.setAttribute("aria-label",local.lang+" / Language");
  const origin=route.replace(/^\/tools\//,"");
- for(const code of ["en","de","fa"]){
+ for(const code of ["en","de","fa","fr"]){
   const anchor=document.createElement("a");anchor.href=(code==="en"?"/tools/":"/"+code+"/tools/")+origin;
   anchor.textContent=(code===lang?"✓ ":"")+langNames[code];
   if(code===lang)anchor.setAttribute("aria-current","page");
@@ -279,7 +316,7 @@ if(pack&&local){
  }
 
  // Translate UI attributes in German only; never alter user input or machine-readable values.
- if(lang==="de"||lang==="fa")for(const el of document.querySelectorAll("main input[placeholder],main textarea[placeholder],main input[aria-label],main button[aria-label],main select[aria-label],main [title]")){
+ if(lang==="de"||lang==="fa"||lang==="fr")for(const el of document.querySelectorAll("main input[placeholder],main textarea[placeholder],main input[aria-label],main button[aria-label],main select[aria-label],main [title]")){
    for(const attr of ["placeholder","aria-label","title"]){
      const v=el.getAttribute(attr);if(!v)continue;
      const translation=translated(v);if(translation!==v)el.setAttribute(attr,translation);

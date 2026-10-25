@@ -1,0 +1,57 @@
+name: Generate French KOLFAT Tools
+on:
+  push:
+    branches: [feat/french-tools-20261025]
+    paths:
+      - 'scripts/generate-french-tools.mjs'
+      - '.github/workflows/generate-french-tools.yml'
+      - 'tools/assets/i18n-safety-fr.mjs'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/french-tools-20261025
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate French pages
+        run: node scripts/generate-french-tools.mjs
+      - name: Verify French pages, internal assets, privacy and sitemap
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+          original=list(Path('tools').rglob('index.html'))
+          assert len(original)==53,len(original)
+          for source in original:
+            page=Path('fr')/source
+            assert page.exists(),str(page)
+            html=page.read_text()
+            assert 'lang="fr"' in html and 'dir="ltr"' in html,str(page)
+            assert 'src="/tools/assets/i18n.mjs' in html,str(page)
+            assert 'href="/fr/tools/assets/' not in html,str(page)
+            assert 'src="/fr/tools/assets/' not in html,str(page)
+            assert '.kf-i18n-safety' not in html and 'class="kf-i18n-safety"' not in html,str(page)
+            assert 'href="/fr/tools/' in html or str(source)=='tools/index.html',str(page)
+          ns={'sm':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[loc.text for loc in ET.parse('sitemap.xml').getroot().findall('.//sm:loc',ns)]
+          fr=[url for url in urls if '/fr/tools/' in url]
+          assert len(fr)==53,(len(fr),fr)
+          assert len(urls)==len(set(urls))
+          print('PASS: 53 French LTR pages, shared assets and sitemap entries')
+          PY
+      - name: Commit localized pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fr/tools sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "build(fa): publish generated French 53-page tools collection"
+            git push origin HEAD:feat/french-tools-20261025
+          fi

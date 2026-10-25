@@ -10,7 +10,7 @@ test("German page renders: "+route,async({page})=>{
  await page.goto("http://127.0.0.1:8765/de"+route);
  await expect(page.locator("html")).toHaveAttribute("lang","de");
  await expect(page.locator("main h1")).toBeVisible();
- await expect(page.locator(".kf-tools-language .lang-list a")).toHaveCount(3);
+ await expect(page.locator(".kf-tools-language .lang-list a")).toHaveCount(4);
  await expect(page.locator("footer.kf-global-footer")).toHaveCount(1);
  if(!roots.includes(route))await expect(page.locator(".kf-i18n-safety")).toHaveCount(1);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(395);
