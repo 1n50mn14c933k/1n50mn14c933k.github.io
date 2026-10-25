@@ -31,6 +31,7 @@ const staticTranslate=(html,lang,pack)=>{
 let generated=0;
 for(const lang of langs){
  const pack=localePacks[lang];
+ const safety=(await import("../tools/assets/i18n-safety-"+lang+".mjs")).safetySummaries;
  if(pack.names.length!==48)throw Error("Missing localized names "+lang);
  for(const path of paths){
   const slug=path.split("/").at(-2),i=toolIds.indexOf(slug),ci=categoryIds.indexOf(slug==="photo-file"?"photo":slug);
@@ -53,6 +54,13 @@ for(const lang of langs){
   html=html.replace("</head>",'<link rel="stylesheet" href="/tools/assets/i18n.css?v=20261025-1">'+alternate+"</head>");
   html=html.replace("</body>",'<script type="module" src="/tools/assets/i18n.mjs?v=20261025-1"></script></body>');
   html=staticTranslate(html,lang,pack);
+  if(i>=0){
+   const notice='<aside class="kf-i18n-safety" role="note"><span class="kf-i18n-safety-icon" aria-hidden="true">ⓘ</span><p>'+esc(safety[i])+'</p></aside>';
+   const old=html;
+   html=html.replace(/(<section class="hero-tools[^"]*"[^>]*>[\s\S]*?<\/section>)/i,"$1"+notice);
+   if(html===old)throw Error("Missing tool hero for safety text: "+path);
+  }
+
   const dest=join(root,lang,path);mkdirSync(dirname(dest),{recursive:true});writeFileSync(dest,html);
   generated++;
  }
