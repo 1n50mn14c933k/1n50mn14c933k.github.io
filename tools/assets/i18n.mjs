@@ -116,14 +116,21 @@ if(pack&&local){
   const href=a.getAttribute("href");const part=href.split("/").filter(Boolean);
   if(a.getAttribute("href")==="/en/")a.href="/"+lang+"/";
   if(href==="/download/"||href==="/about/"||href==="/guides/"||href==="/support/")a.href="/"+lang+href;
-  if(href.startsWith("mailto:"))a.textContent=local.contact;
-  else if(href.includes("Media_Kolfat"))a.textContent="MEDIA KOLFAT";
-  else if(href.includes("/tools/"))a.textContent=local.tool;
-  else if(href.includes("/download/"))a.textContent=local.download;
-  else if(href.includes("/about/"))a.textContent=local.about;
-  else if(href.includes("/guides/"))a.textContent=local.guides;
-  else if(href.includes("/support/"))a.textContent=local.support;
-  else if(href==="/en/")a.textContent=local.home;
+  let translation=null;
+  if(href.startsWith("mailto:"))translation=local.contact;
+  else if(href.includes("Media_Kolfat"))translation="MEDIA KOLFAT";
+  else if(href.includes("/tools/"))translation=local.tool;
+  else if(href.includes("/download/"))translation=local.download;
+  else if(href.includes("/about/"))translation=local.about;
+  else if(href.includes("/guides/"))translation=local.guides;
+  else if(href.includes("/support/"))translation=local.support;
+  else if(href==="/en/")translation=local.home;
+  if(translation!==null){
+    // Keep the existing SVG icon and keyboard metadata instead of wiping child nodes.
+    let labelNode=Array.from(a.childNodes).find(n=>n.nodeType===Node.TEXT_NODE);
+    if(!labelNode){labelNode=document.createTextNode("");a.append(labelNode);}
+    labelNode.textContent=translation;
+  }
  }
  const breadcrumb=document.querySelector("main .breadcrumb");
  if(breadcrumb)for(const a of breadcrumb.querySelectorAll("a")){
