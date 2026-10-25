@@ -106,6 +106,7 @@ const faExtra={
 "Generated using Web Crypto and unbiased random selection. Keep passwords in a trusted manager. No result is auto-downloaded.":"گذرواژه‌ها با مولد تصادفی امن مرورگر ساخته می‌شوند. آن‌ها را در مدیر گذرواژه نگهداری کنید؛ هیچ فایل خودکار دانلود نمی‌شود."
 };
 if(lang==="fa")Object.assign(ui,faExtra);
+const frDescriptions=["Supprimer les métadonnées EXIF et GPS des photos","Compresser et redimensionner des images","Convertir des images entre plusieurs formats","Analyser les dates associées aux photos","Détecter des fichiers parfaitement identiques","Renommer des copies de fichiers par lots","Ajouter un filigrane à une image","Faire pivoter et recadrer une photo","Créer un PDF à partir d’images","Vérifier l’intégrité d’un fichier par SHA-256","Créer un code QR à partir d’un texte ou d’une URL","Extraire les couleurs principales d’une photo","Mettre en forme et vérifier du JSON","Convertir entre YAML et JSON","Convertir entre CSV et JSON","Mettre en forme et vérifier du XML","Encoder et décoder du Base64","Encoder et décoder un composant d’URL","Tester des expressions régulières","Générer des UUID de version 4","Convertir des entités HTML","Mettre en forme du SQL","Prévisualiser du Markdown","Vérifier un schéma JSON élémentaire","Calculer des sous-réseaux IPv4 et des CIDR","Calculer des préfixes IPv6","Planifier des sous-réseaux VLSM","Convertir des plages IP et des blocs CIDR","Préparer un plan VLAN et IP","Consulter une référence des ports réseau","Créer une expression cron","Créer un exemple de minuterie systemd","Convertir des horodatages Unix","Convertir des fuseaux horaires","Calculer des permissions Linux chmod","Effectuer un contrôle élémentaire de Docker Compose YAML","Générer des mots de passe aléatoires sécurisés","Générer des phrases secrètes","Évaluer la robustesse d’un mot de passe","Décoder et examiner un JWT sans vérifier sa signature","Calculer une empreinte de texte","Repérer des secrets potentiels dans du texte","Masquer les données sensibles dans du texte","Comparer du texte et du code ligne à ligne","Examiner des caractères Unicode similaires","Convertir des domaines IDN et Punycode","Examiner la structure d’une URL hors ligne","Examiner le texte, l’hexadécimal et l’UTF-8"];
 const frExtra={
 "Tools for every task.":"Des outils pour chaque tâche.",
 "TOOLS":"OUTILS","Explore all 12 photo & file tools":"Découvrir les 12 outils photo et fichiers",
@@ -216,6 +217,7 @@ if(pack&&local){
  }
  const lead=document.querySelector("main .hero-tools p.lead");
  if(lead && !((lang==="fa"||lang==="fr") && toolIndex!==undefined))lead.textContent=isDir?local.directory:isCat?local.catlead:local.lead;
+ if(lead&&lang==="fr"&&toolIndex!==undefined)lead.textContent=frDescriptions[toolIndex];
  for(const card of document.querySelectorAll("a.tool-card p,a.kf-category-card .kf-category-description")){
    card.textContent=isDir||isCat?local.lead:local.catlead;
  }
