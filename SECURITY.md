@@ -21,6 +21,19 @@ Do not commit:
 - MEDIA KOLFAT proprietary application source code
 - Temporary files containing raw or encoded confidential material
 
+## KOLFAT TOOLS — Browser-Side Security Boundaries
+
+The public website also contains 48 browser-based utilities under `/tools/`. The intended architecture processes uploaded files, text and generated values locally in the visitor's browser, without sending tool inputs to a KOLFAT processing API. This should be verified when adding dependencies or changing tool code, rather than assumed from the interface text alone.
+
+- Do not add external analytics, telemetry, CDN scripts or network requests that transmit text, files, access tokens or generated passwords.
+- Password and passphrase generation must continue to use cryptographically secure browser randomness. Do not store generated secrets or token contents in browser storage.
+- JWT decoding **does not** verify signatures; the offline URL inspector **does not** establish that a URL is safe; secret scanning and redaction are heuristic and may miss data.
+- Review all results copied to the clipboard, including generated passwords and redacted text. Clipboard content remains outside the site's control.
+- Run unit and Chromium checks in `.github/workflows/kolfat-tools-regression.yml`, and validate the visible inputs and output behavior before merging.
+- Review third-party library licenses under `tools/assets/vendor/` and avoid adding remote dependencies without a specific privacy/security review.
+
+For current tool routes and implementation limitations see [docs/TOOLS_PLATFORM.md](docs/TOOLS_PLATFORM.md).
+
 ## Reporting a Security Issue
 
 Do **not** publish exploitable security findings in a public issue.

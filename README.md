@@ -17,6 +17,7 @@ The repository publishes the public KOLFAT website, including:
 - Third-party licenses
 - Support information
 - Public website assets
+- **KOLFAT TOOLS:** 48 free browser-based utilities organized into four categories
 - Search-engine metadata such as `robots.txt` and `sitemap.xml`
 
 The site is hosted with **GitHub Pages** and uses the custom domain defined in `CNAME`.
@@ -37,6 +38,11 @@ The site is hosted with **GitHub Pages** and uses the custom domain defined in `
 ## Primary Pages
 
 - KOLFAT: https://kolfat.app/
+- **KOLFAT TOOLS:** https://kolfat.app/tools/
+- Photo & File Tools (12): https://kolfat.app/tools/photo-file/
+- Code & Data Utilities (12): https://kolfat.app/tools/code-data/
+- Networking & Automation (12): https://kolfat.app/tools/networking/
+- Security & Text Analysis (12): https://kolfat.app/tools/security/
 - MEDIA KOLFAT: https://kolfat.app/en/Media_Kolfat/
 - Download: https://kolfat.app/download/
 - About KOLFAT: https://kolfat.app/about/
@@ -48,9 +54,21 @@ The site is hosted with **GitHub Pages** and uses the custom domain defined in `
 - Disclaimer: https://kolfat.app/disclaimer/
 - Licenses: https://kolfat.app/licenses/
 
+## KOLFAT TOOLS — 48 utilities
+
+KOLFAT TOOLS has **four collections of twelve individual tools each**. The main `/tools/` page is a compact category dashboard; all tools have their own stable URLs. Each tool performs local browser-side processing and does not send input to a KOLFAT processing backend. The privacy notice is shown once on the main TOOLS dashboard; individual tools retain their own limitations and relevant safety warnings.
+
+**Language status:** the 48 tools and their four category pages remain **English-only** as of October 25, 2026. The general website already supports twelve languages, but a multilingual tools release **has not yet been implemented**.
+
+- [Tool inventory, source architecture, security boundaries and localization plan](docs/TOOLS_PLATFORM.md)
+- [October 25 UI audit and visual regression scope](docs/UI_DESIGN_AUDIT_2026-10-25.md)
+- [Website change history](docs/WEBSITE_UPDATES.md)
+
+For changes affecting tools, run `node --test tools/tests/*.test.mjs` and the **KOLFAT Tools Regression** GitHub Actions workflow, which also runs Chromium browser checks and sitemap assertions. Browser tests exercise representative pages and interactions; they do **not** constitute a manual visual review of every one of the 238 committed HTML pages.
+
 ## Website navigation (desktop and mobile)
 
-All supported website pages use the same **KOLFAT MENU** dropdown at the top right. The language switcher remains a separate control on localized pages, next to the MENU. The brand logo remains on the top left. There is no second link/button row in the homepage hero/footer and no floating CONTACT overlay.
+The site uses a common **KOLFAT MENU** dropdown at the top right. The language switcher is a separate control on multilingual marketing pages, next to MENU. The current English-only tools template has its own shared header without a localized tools language switcher. The brand logo remains on the top left. There is no second link/button row in the homepage hero/footer and no floating CONTACT overlay.
 
 MENU contains Home, MEDIA KOLFAT, Download, About, Guides, Support, Contact (mailto), X, YouTube, TikTok and GitHub. Localized navigation maintains the current language for Home, MEDIA KOLFAT and Support; About, Download, Guides, and the five article pages are localized into all twelve site languages.
 
@@ -64,7 +82,9 @@ The rollout keeps self-canonical URLs, reciprocal `hreflang` and `x-default`, st
 
 ## Shared Visual Design System
 
-All 181 sitemap-listed pages across twelve languages load `assets/site-refinements.css` after their existing CSS. This shared layer unifies typography, contrast, button states, spacing and subtle orange accents without replacing KOLFAT backgrounds, logos, artwork, or content. See [docs/NAVIGATION.md](docs/NAVIGATION.md) for mobile/RTL checks and maintenance.
+The site's sitemap currently lists **234 canonical URLs** (verified October 25, 2026), including the main TOOLS page, four category pages and 48 individual tools. The shared `assets/site-refinements.css` layer provides common layout/typography rules on existing website templates; TOOLS pages additionally use scoped styles in `tools/assets/`. The October 25 UI consistency pass adjusted header alignment, editorial page widths, accessible focus states, RTL spacing and tool card/form responsiveness without replacing the KOLFAT artwork or app functionality.
+
+See [docs/UI_DESIGN_AUDIT_2026-10-25.md](docs/UI_DESIGN_AUDIT_2026-10-25.md) for audit findings and automated browser-coverage limitations; see [docs/NAVIGATION.md](docs/NAVIGATION.md) for navigation/RTL checks and maintenance.
 
 ## Production Repository Rules
 
@@ -84,7 +104,7 @@ MEDIA KOLFAT proprietary application source code is maintained separately in a p
 
 ## Auditing and Updates
 
-The full [October 22, 2026 website audit and MEDIA KOLFAT 1.8.0 update record](docs/WEBSITE_UPDATES.md) documents localized content changes, commits, audit limitations, deployment verification, and maintenance guidance.
+The [website change history](docs/WEBSITE_UPDATES.md) now records the October 22 product-page update, the October 23–25 rollout of all 48 online tools, the UI/privacy/checkbox fixes, the Persian headline corrections, and the site-wide October 25 UI audit. The [UI audit report](docs/UI_DESIGN_AUDIT_2026-10-25.md) documents its scope and verification limits. These records describe website changes, not an application release.
 
 Run the read-only audit script with `python3 .github/scripts/site_content_audit.py`, or use the **KOLFAT Website Content Audit** GitHub Actions workflow. Review GitHub Pages deployment results after updating production pages.
 
