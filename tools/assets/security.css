@@ -1,16 +1,22 @@
-/* Accessible KOLFAT selection tiles. Native checkboxes remain keyboard- and screen-reader-accessible. */
-.security-choices{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;border:0;min-width:0;padding:0;margin:8px 0 12px}
-.security-choices legend{padding:0 0 13px;color:#f5f5f5;font-size:1rem;font-weight:750}
-.security-choice{position:relative;display:block!important;min-width:0;margin:0;cursor:pointer}
-.security-choice>input[type="checkbox"]{position:absolute!important;width:1px!important;height:1px!important;min-height:0!important;opacity:0;overflow:hidden;clip-path:inset(50%);padding:0!important;margin:0!important;border:0!important}
-.security-tile{display:flex;align-items:center;gap:13px;min-height:72px;padding:13px 16px;border:1px solid #48433f;border-radius:12px;background:#151515;color:#f7f7f5;transition:border-color .16s,background .16s,box-shadow .16s}
-.security-indicator{display:grid;place-items:center;flex:none;width:23px;height:23px;border:1.5px solid #8d8781;border-radius:7px;background:#090909}
-.security-text{font-weight:650;font-size:.95rem;line-height:1.35;overflow-wrap:anywhere}
-.security-choice:hover .security-tile{border-color:#ff9a52;background:#211a15}
-.security-choice>input:checked+.security-tile{border-color:#ff812e;background:linear-gradient(110deg,#302015,#1a1714);box-shadow:inset 0 0 0 1px rgba(255,129,46,.16)}
-.security-choice>input:checked+.security-tile .security-indicator{border-color:#ff812e;background:#ff812e}
-.security-choice>input:checked+.security-tile .security-indicator::after{content:"✓";font-size:14px;font-weight:900;color:#13100e}
-.security-choice>input:checked+.security-tile .security-text{color:#ffb07a}
-.security-choice>input:focus-visible+.security-tile{outline:3px solid #ffd1a9;outline-offset:3px}
-@media(max-width:620px){.security-choices{grid-template-columns:1fr;gap:9px}.security-tile{min-height:65px;padding:12px 14px}}
-@media(prefers-reduced-motion:reduce){.security-tile{transition:none}}
+/* KOLFAT Security: isolated accessible selection tiles.
+   Native checkboxes remain keyboard operable; tiles match Time Zone Converter. */
+body[data-security-tool="password"] .kf-controls,
+body[data-security-tool="redact"] .kf-controls {display:flex;flex-direction:column;align-items:stretch;gap:14px;width:100%;min-width:0}
+body[data-security-tool="password"] .kf-controls > label {display:block;max-width:410px}
+.security-choices {display:block;width:100%;min-width:0;max-width:100%;margin:6px 0 16px;padding:0;border:0}
+.security-choices legend {display:block;width:auto;margin:0;padding:0;font-size:1rem;line-height:1.4;font-weight:750;color:#f5f5f5}
+.security-hint {color:#bdbdb9;font-size:.87rem;line-height:1.4;margin:5px 0 16px}
+.security-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:100%;min-width:0}
+.security-grid .security-choice {display:block;position:relative;width:100%;min-width:0;max-width:100%;margin:0;padding:0;cursor:pointer;font-size:1rem;line-height:1.4;font-weight:400}
+.security-grid .security-choice > input[type="checkbox"] {position:absolute!important;display:block!important;width:1px!important;height:1px!important;min-width:0!important;min-height:0!important;max-width:1px!important;max-height:1px!important;padding:0!important;margin:0!important;border:0!important;opacity:0!important;overflow:hidden!important;clip-path:inset(50%);appearance:none!important}
+.security-grid .security-tile {display:flex;flex-direction:row;justify-content:flex-start;align-items:center;gap:13px;width:100%;min-width:0;max-width:100%;min-height:76px;margin:0;padding:14px 16px;box-sizing:border-box;border:1px solid #48433f;border-radius:12px;background:#151515;color:#f7f7f5;transition:background .15s,border-color .15s,box-shadow .15s}
+.security-grid .security-indicator {display:grid;place-items:center;flex:0 0 23px;width:23px;height:23px;min-width:23px;min-height:23px;border:1.5px solid #8d8781;border-radius:7px;background:#090909}
+.security-grid .security-text {display:block;flex:1 1 auto;min-width:0;max-width:100%;font-weight:650;font-size:.96rem;line-height:1.35;overflow-wrap:break-word;word-break:normal;color:#f7f7f5}
+.security-grid .security-choice:hover .security-tile {border-color:#ff9a52;background:#211a15}
+.security-grid .security-choice > input:checked + .security-tile {border-color:#ff812e;background:linear-gradient(110deg,#302015,#1a1714);box-shadow:inset 0 0 0 1px rgba(255,129,46,.16)}
+.security-grid .security-choice > input:checked + .security-tile .security-indicator {background:#ff812e;border-color:#ff812e}
+.security-grid .security-choice > input:checked + .security-tile .security-indicator::after {content:"✓";font-size:14px;line-height:1;font-weight:900;color:#13100e}
+.security-grid .security-choice > input:checked + .security-tile .security-text {color:#ffb07a}
+.security-grid .security-choice > input:focus-visible + .security-tile {outline:3px solid #ffd1a9;outline-offset:3px}
+@media(max-width:650px) {.security-grid {grid-template-columns:1fr;gap:10px}.security-grid .security-tile {min-height:68px;padding:12px 14px}}
+@media(prefers-reduced-motion:reduce) {.security-grid .security-tile {transition:none}}
