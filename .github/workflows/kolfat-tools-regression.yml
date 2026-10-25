@@ -49,7 +49,7 @@ jobs:
       - name: Run Security browser smoke tests
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/kolfat-http.log 2>&1 &
-          npx playwright test tools/tests/security-browser.spec.mjs tools/tests/security-layout.spec.mjs --workers=1 --reporter=line
+          npx playwright test tools/tests/security-browser.spec.mjs tools/tests/security-layout.spec.mjs tools/tests/fa-typography-browser.spec.mjs --workers=1 --reporter=line
       - name: Validate public tools in sitemap
         run: |
           python3 - <<'PY'
