@@ -16,12 +16,12 @@ const staticTranslate=(html,lang,pack)=>{
  for(let i=0;i<englishNames.length;i++)map.set(englishNames[i],pack.names[i]);
  for(let i=0;i<englishCategories.length;i++)map.set(englishCategories[i],pack.labels[categoryIds[i]]);
  // Translate individual text nodes only, never attributes, scripts, JS code or user data.
- return html.replace(/(<main\\b[^>]*>)([\\s\\S]*?)(<\\/main>)/i,(whole,open,main,close)=>{
+ return html.replace(/(<main\b[^>]*>)([\s\S]*?)(<\/main>)/i,(whole,open,main,close)=>{
   const translated=main.replace(/>([^<>]+)</g,(full,original)=>{
    const plain=decode(original.trim());
    const value=map.get(plain);
    if(!value)return full;
-   const lead=original.match(/^\\s*/)?.[0]||"",tail=original.match(/\\s*$/)?.[0]||"";
+   const lead=original.match(/^\s*/)?.[0]||"",tail=original.match(/\s*$/)?.[0]||"";
    return ">"+lead+esc(value)+tail+"<";
   });
   return open+translated+close;
