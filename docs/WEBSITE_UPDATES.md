@@ -6,6 +6,8 @@
 
 **Files:** `assets/nav-dropdown.js`, `assets/nav-dropdown.css`, `.github/workflows/kolfat-tools-regression.yml`, `tools/tests/site-chrome.test.mjs`, `tools/tests/site-chrome.spec.mjs`, `docs/WEBSITE_UPDATES.md`, `docs/NAVIGATION.md`, and `README.md`.
 
+**Additional layout correction:** The browser suite found that pages without a language switcher could push the MENU dropdown outside the viewport when opened. On these tool pages the dropdown is now aligned to the MENU button rather than using the offset reserved for a language switcher.
+
 **Implementation:** Shared navigation script adds an accessible 5-link multilingual footer, hides superseded footer markup, inserts inline SVG icons alongside existing MENU anchors, adds a top divider to fullscreen home/product pages, and leaves existing header dropdown interactions intact. All generated elements use local source only. Floating TOOLS CTA stays above footer, never covers legal links.
 
 **Validation:** Node contract tests check icon mapping, footer paths, script presence and links. Chromium browser tests check footer/menu across representative locales and page types, including mobile. Results must be verified before merge; a passing automation suite is not a substitute for checking every live page.
