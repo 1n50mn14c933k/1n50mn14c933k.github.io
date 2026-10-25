@@ -1,0 +1,20 @@
+/* Multilingual KOLFAT TOOLS: preserve black/orange UI, align RTL text but keep technical data LTR. */
+html[data-kolfat-page="tool"][dir="rtl"] .hero-tools,html[data-kolfat-page="tool"][dir="rtl"] .workspace,
+html[data-kolfat-page="tool"][dir="rtl"] .kf-categories,html[data-kolfat-page="tool"][dir="rtl"] .breadcrumb{text-align:start}
+html[data-kolfat-page="tool"][dir="rtl"] .kf-editor textarea,
+html[data-kolfat-page="tool"][dir="rtl"] .kf-editor input:not([type="checkbox"]):not([type="radio"]),
+html[data-kolfat-page="tool"][dir="rtl"] #output,html[data-kolfat-page="tool"][dir="rtl"] pre,
+html[data-kolfat-page="tool"][dir="rtl"] code{direction:ltr;text-align:left;unicode-bidi:plaintext}
+html[data-kolfat-page="tool"][dir="rtl"] .kf-category-card,
+html[data-kolfat-page="tool"][dir="rtl"] .tool-card,
+html[data-kolfat-page="tool"][dir="rtl"] .kf-footer-links{direction:rtl}
+html[data-kolfat-page="tool"][dir="rtl"] .kf-footer-links{justify-content:flex-start}
+html[data-kolfat-page="tool"] .top-nav .kf-tools-language{position:relative;flex:none;z-index:100001}
+html[data-kolfat-page="tool"] .top-nav .kf-tools-language>summary{cursor:pointer;min-width:62px;font-size:12px;padding:0 8px}
+html[data-kolfat-page="tool"] .top-nav .kf-tools-language .lang-list{right:0;left:auto;min-width:160px;max-height:min(70vh,520px);overflow:auto}
+html[data-kolfat-page="tool"][dir="rtl"] .top-nav .kf-tools-language .lang-list{left:0;right:auto}
+html[data-kolfat-page="tool"] .top-nav .kf-tools-language .lang-list a{font-size:13px;white-space:nowrap}
+@media(max-width:600px){
+ html[data-kolfat-page="tool"] .top-nav .kf-tools-language>summary{min-width:44px;font-size:11px;padding:0 5px}
+ html[data-kolfat-page="tool"] .top-nav .kf-tools-language .lang-list{max-width:min(80vw,240px)}
+}
