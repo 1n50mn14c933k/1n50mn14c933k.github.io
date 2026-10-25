@@ -1,5 +1,13 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-25 — Consolidated TOOLS privacy notice
+
+- Kept one clear privacy and local-processing notice on the main `/tools/` category directory, covering all 48 tools.
+- Removed repeated green privacy banners from the 48 individual tool pages and four category pages; page features and processing engines are unchanged.
+- Added a regression test requiring exactly one privacy banner across all 53 TOOLS HTML pages.
+- Tool-specific safety limitations and explanations remain where relevant.
+
+
 ## 2026-10-24 — Time Zone Converter selection UI refresh
 
 - Replaced eleven cramped checkboxes with keyboard-accessible, full-width clickable timezone tiles, grouped in a responsive two-column grid (single-column on small screens).

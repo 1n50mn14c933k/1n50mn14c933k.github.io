@@ -1,1 +1,16 @@
-.security-choices{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;border:1px solid #45403b;border-radius:12px;padding:15px}.security-choices legend{padding:0 7px;color:#eee;font-weight:700}.security-choice{display:flex!important;align-items:center;gap:10px;border:1px solid #48413b;border-radius:10px;padding:12px;background:#171412;min-height:48px;cursor:pointer}.security-choice:has(input:checked){border-color:#ff812e;background:#292019}.security-choice input{accent-color:#ff812e;width:18px;height:18px;min-height:18px;flex:none;margin:0}.security-choice:focus-within{outline:2px solid #ffb47c;outline-offset:2px}.security-choice span{font-weight:500}@media(max-width:560px){.security-choices{grid-template-columns:1fr}}
+/* Accessible KOLFAT selection tiles. Native checkboxes remain keyboard- and screen-reader-accessible. */
+.security-choices{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;border:0;min-width:0;padding:0;margin:8px 0 12px}
+.security-choices legend{padding:0 0 13px;color:#f5f5f5;font-size:1rem;font-weight:750}
+.security-choice{position:relative;display:block!important;min-width:0;margin:0;cursor:pointer}
+.security-choice>input[type="checkbox"]{position:absolute!important;width:1px!important;height:1px!important;min-height:0!important;opacity:0;overflow:hidden;clip-path:inset(50%);padding:0!important;margin:0!important;border:0!important}
+.security-tile{display:flex;align-items:center;gap:13px;min-height:72px;padding:13px 16px;border:1px solid #48433f;border-radius:12px;background:#151515;color:#f7f7f5;transition:border-color .16s,background .16s,box-shadow .16s}
+.security-indicator{display:grid;place-items:center;flex:none;width:23px;height:23px;border:1.5px solid #8d8781;border-radius:7px;background:#090909}
+.security-text{font-weight:650;font-size:.95rem;line-height:1.35;overflow-wrap:anywhere}
+.security-choice:hover .security-tile{border-color:#ff9a52;background:#211a15}
+.security-choice>input:checked+.security-tile{border-color:#ff812e;background:linear-gradient(110deg,#302015,#1a1714);box-shadow:inset 0 0 0 1px rgba(255,129,46,.16)}
+.security-choice>input:checked+.security-tile .security-indicator{border-color:#ff812e;background:#ff812e}
+.security-choice>input:checked+.security-tile .security-indicator::after{content:"✓";font-size:14px;font-weight:900;color:#13100e}
+.security-choice>input:checked+.security-tile .security-text{color:#ffb07a}
+.security-choice>input:focus-visible+.security-tile{outline:3px solid #ffd1a9;outline-offset:3px}
+@media(max-width:620px){.security-choices{grid-template-columns:1fr;gap:9px}.security-tile{min-height:65px;padding:12px 14px}}
+@media(prefers-reduced-motion:reduce){.security-tile{transition:none}}
