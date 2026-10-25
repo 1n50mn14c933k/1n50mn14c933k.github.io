@@ -1,0 +1,57 @@
+name: Generate Spanish KOLFAT Tools
+on:
+  push:
+    branches: [feat/spanish-tools-20261025]
+    paths:
+      - 'scripts/generate-spanish-tools.mjs'
+      - '.github/workflows/generate-spanish-tools.yml'
+      - 'tools/assets/i18n-safety-es.mjs'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/spanish-tools-20261025
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate Spanish pages
+        run: node scripts/generate-spanish-tools.mjs
+      - name: Verify Spanish pages, internal assets, privacy and sitemap
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+          original=list(Path('tools').rglob('index.html'))
+          assert len(original)==53,len(original)
+          for source in original:
+            page=Path('es')/source
+            assert page.exists(),str(page)
+            html=page.read_text()
+            assert 'lang="es"' in html and 'dir="ltr"' in html,str(page)
+            assert 'src="/tools/assets/i18n.mjs' in html,str(page)
+            assert 'href="/es/tools/assets/' not in html,str(page)
+            assert 'src="/es/tools/assets/' not in html,str(page)
+            assert '.kf-i18n-safety' not in html and 'class="kf-i18n-safety"' not in html,str(page)
+            assert 'href="/es/tools/' in html or str(source)=='tools/index.html',str(page)
+          ns={'sm':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls=[loc.text for loc in ET.parse('sitemap.xml').getroot().findall('.//sm:loc',ns)]
+          es=[url for url in urls if '/es/tools/' in url]
+          assert len(es)==53,(len(es),es)
+          assert len(urls)==len(set(urls))
+          print('PASS: 53 Spanish LTR pages, shared assets and sitemap entries')
+          PY
+      - name: Commit localized pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add es/tools sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "build(fa): publish generated Spanish 53-page tools collection"
+            git push origin HEAD:feat/spanish-tools-20261025
+          fi
