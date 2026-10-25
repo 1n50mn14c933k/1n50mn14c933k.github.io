@@ -170,7 +170,7 @@ if(pack&&local){
  const list=document.createElement("nav");
  list.className="lang-list";list.setAttribute("aria-label",local.lang+" / Language");
  const origin=route.replace(/^\/tools\//,"");
- for(const code of allToolLanguages){
+ for(const code of ["en","de"]){
   const anchor=document.createElement("a");anchor.href=(code==="en"?"/tools/":"/"+code+"/tools/")+origin;
   anchor.textContent=(code===lang?"✓ ":"")+langNames[code];
   if(code===lang)anchor.setAttribute("aria-current","page");

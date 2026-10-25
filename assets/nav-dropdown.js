@@ -205,3 +205,6 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
   if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",initUnifiedChrome,{once:true});
   else initUnifiedChrome();
 })();
+
+/* German-first tool localization: English tools link to German counterparts. */
+(()=>{const add=()=>{if(document.documentElement.lang!=="en"||!location.pathname.startsWith("/tools/"))return;const nav=document.querySelector(".top-nav");if(!nav||nav.querySelector(".kf-tools-language"))return;const d=document.createElement("details");d.className="lang-menu kf-tools-language";const summary=document.createElement("summary");summary.textContent="🌐 EN ▾";summary.setAttribute("aria-label","Tools language");const list=document.createElement("nav");list.className="lang-list";for(const [code,label] of [["en","✓ English"],["de","Deutsch"]]){const a=document.createElement("a");a.textContent=label;a.href=code==="en"?location.pathname:"/de"+location.pathname;list.append(a);}d.append(summary,list);nav.append(d);d.addEventListener("toggle",()=>{if(d.open)for(const other of nav.querySelectorAll("details"))if(other!==d)other.open=false;});};if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",add,{once:true});else add();})();

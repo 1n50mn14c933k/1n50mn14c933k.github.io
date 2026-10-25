@@ -1,5 +1,9 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-25 — German-first multilingual staging
+
+Created an isolated 53-page German tools branch with shared translation assets, English/German language selection, 53 sitemap URLs, and release-gate documentation. Do not merge until German workflow and wording tests pass. Rollback: revert the resulting merge; keep original English tools. See docs/TOOLS_GERMAN_ROLLOUT.md.
+
 ## 2026-10-25 — Consistent site-wide header/footer borders and menu icons
 
 **Purpose:** Eliminate inconsistent small/empty footer templates and styling across KOLFAT pages. Keep all five requested links visible (Privacy, Terms, Licenses, Support, Contact), without social links in the footer. Add SVG icons to every item in the dropdown MENU.
