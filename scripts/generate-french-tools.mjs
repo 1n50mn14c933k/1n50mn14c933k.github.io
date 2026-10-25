@@ -82,7 +82,7 @@ for(const lang of langs){
  }
 }
 const sitemap=join(root,"sitemap.xml");let xml=readFileSync(sitemap,"utf8");
-xml=xml.replace(/\s*<url><loc>https:\/\/kolfat\.app\/fa\/tools\/[^<]*<\/loc>(?:<lastmod>[^<]*<\/lastmod>)?<\/url>/g,"");
+xml=xml.replace(/\s*<url><loc>https:\/\/kolfat\.app\/fr\/tools\/[^<]*<\/loc>(?:<lastmod>[^<]*<\/lastmod>)?<\/url>/g,"");
 const entries=langs.flatMap(lang=>paths.map(path=>'  <url><loc>https://kolfat.app/'+lang+'/'+path.replace(/index.html$/,"")+'</loc><lastmod>2026-10-25</lastmod></url>'));
 xml=xml.replace("</urlset>",entries.join("\n")+"\n</urlset>");writeFileSync(sitemap,xml);
 if(generated!==53)throw Error("Generated "+generated+" not 53");
