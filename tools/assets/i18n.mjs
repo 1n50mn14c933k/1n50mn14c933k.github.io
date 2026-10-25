@@ -116,21 +116,10 @@ if(pack&&local){
   }
   for(const node of el.childNodes)if(node.nodeType===3){const v=node.textContent;if(v.trim()){const tr=translated(v);if(tr!==v)node.textContent=tr;}}
  }
- // Show a specific localized safety and limitation notice on every utility page.
- // Keep the original English technical details as a supplemental reference.
- if(toolIndex!==undefined){
-   const hero=document.querySelector("main .hero-tools,main .hero");
-   const warning=safetyPacks[toolIndex];
-   if(hero&&warning&&!document.querySelector(".kf-i18n-safety")){
-     const note=document.createElement("aside");
-     note.className="kf-i18n-safety";
-     note.setAttribute("role","note");
-     const icon=document.createElement("span");
-     icon.className="kf-i18n-safety-icon";icon.textContent="ⓘ";icon.setAttribute("aria-hidden","true");
-     const content=document.createElement("p");content.textContent=warning;
-     note.append(icon,content);
-     hero.insertAdjacentElement("afterend",note);
-   }
+ // The general privacy banner is only displayed on the TOOLS hub.
+ // Older German utility HTML may contain a generated banner: remove it.
+ if(!isDir){
+   for(const notice of document.querySelectorAll(".kf-i18n-safety,.kf-hub-privacy"))notice.remove();
  }
  // Tool and collection names are authoritative by route, regardless of English variant.
  if(toolIndex!==undefined){
