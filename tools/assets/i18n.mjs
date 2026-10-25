@@ -70,6 +70,42 @@ const deExtra={
 "Generated using Web Crypto and unbiased random selection. Keep passwords in a trusted manager. No result is auto-downloaded.":"Die Passwörter werden mit der Web-Crypto-Schnittstelle ohne verzerrte Zufallsauswahl erzeugt. Bewahren Sie sie in einem vertrauenswürdigen Passwortmanager auf. Ergebnisse werden nicht automatisch heruntergeladen."
 };
 if(lang==="de")Object.assign(ui,deExtra);
+const faExtra={
+"Tools for every task.":"ابزارهایی برای هر کار","TOOLS":"ابزارها",
+"Explore all 12 photo & file tools":"مشاهدهٔ هر ۱۲ ابزار عکس و فایل",
+"Explore all 12 code & data tools":"مشاهدهٔ هر ۱۲ ابزار کد و داده",
+"Explore all 12 networking & automation tools":"مشاهدهٔ هر ۱۲ ابزار شبکه و خودکارسازی",
+"Explore all 12 security & text analysis tools":"مشاهدهٔ هر ۱۲ ابزار امنیت و تحلیل متن",
+"Length (12–128)":"طول (۱۲ تا ۱۲۸)","Character groups":"گروه‌های نویسه",
+"Select one or more character types.":"یک یا چند گروه نویسه را انتخاب کنید.",
+"Uppercase A–Z":"حروف بزرگ A–Z","Lowercase a–z":"حروف کوچک a–z",
+"Numbers 0–9":"اعداد ۰ تا ۹","Symbols":"نمادها",
+"Avoid ambiguous characters":"از نویسه‌های مشابه و اشتباه‌پذیر استفاده نشود",
+"Ready.":"آماده.","Results appear here.":"نتیجه اینجا نمایش داده می‌شود.",
+"More Security & Text Tools":"ابزارهای بیشتر امنیت و متن",
+"All 12 security and text analysis utilities.":"هر ۱۲ ابزار امنیت و تحلیل متن",
+"Back to Security & Text Analysis →":"بازگشت به ابزارهای امنیت و متن →",
+"Important:":"مهم:","Choose file":"انتخاب فایل","Choose a file":"یک فایل انتخاب کنید",
+"Select file":"انتخاب فایل","Select files":"انتخاب فایل‌ها",
+"Copied!":"کپی شد!","Reset":"بازنشانی","Download PNG":"دریافت PNG",
+"Download PDF":"دریافت PDF","Download CSV":"دریافت CSV",
+"Generate":"ایجاد","Analyze":"تحلیل","Calculate":"محاسبه",
+"Check":"بررسی","Inspect":"بازرسی","Run":"اجرا",
+"Options":"گزینه‌ها","Settings":"تنظیمات","Preview":"پیش‌نمایش",
+"Filename":"نام فایل","File name":"نام فایل","File size":"اندازهٔ فایل",
+"Width":"عرض","Height":"ارتفاع","Quality":"کیفیت","Size":"اندازه",
+"Text to analyze":"متن برای تحلیل","Text to convert":"متن برای تبدیل",
+"Paste text here...":"متن را اینجا وارد کنید…","Enter text here...":"متن را اینجا وارد کنید…",
+"Select an option":"یک گزینه انتخاب کنید","Choose an option":"گزینه را انتخاب کنید",
+"Supported formats":"فرمت‌های پشتیبانی‌شده","Enter a value":"یک مقدار وارد کنید",
+"No results":"نتیجه‌ای وجود ندارد","Processing...":"در حال پردازش…",
+"Show details":"نمایش جزئیات","Hide details":"پنهان‌کردن جزئیات",
+"Browser-based processing":"پردازش در مرورگر","Back to tools":"بازگشت به ابزارها",
+"Photo & File":"عکس و فایل","Code & Data":"کد و داده",
+"Networking":"شبکه","Security":"امنیت","Password length":"طول گذرواژه",
+"Generated using Web Crypto and unbiased random selection. Keep passwords in a trusted manager. No result is auto-downloaded.":"گذرواژه‌ها با مولد تصادفی امن مرورگر ساخته می‌شوند. آن‌ها را در مدیر گذرواژه نگهداری کنید؛ هیچ فایل خودکار دانلود نمی‌شود."
+};
+if(lang==="fa")Object.assign(ui,faExtra);
 if(pack&&local){
  const route=location.pathname.replace(/^\/(?:de|fr|es|pt|it|ru|zh|ja|hi|fa|ar)(?=\/tools\/)/,"");
  const parts=route.split("/").filter(Boolean).slice(1);
@@ -144,12 +180,12 @@ if(pack&&local){
   const x=card.querySelector(".kf-category-open");if(x)x.textContent=pack.labels.explore+" ↗";
  }
  const lead=document.querySelector("main .hero-tools p.lead");
- if(lead)lead.textContent=isDir?local.directory:isCat?local.catlead:local.lead;
+ if(lead && !(lang==="fa" && toolIndex!==undefined))lead.textContent=isDir?local.directory:isCat?local.catlead:local.lead;
  for(const card of document.querySelectorAll("a.tool-card p,a.kf-category-card .kf-category-description")){
    card.textContent=isDir||isCat?local.lead:local.catlead;
  }
  const disclaimer=document.querySelector(".workspace .caveat");
- if(disclaimer){const original=disclaimer.textContent;const details=document.createElement("details");details.className="kf-technical-details";const summary=document.createElement("summary");summary.textContent=ui["Show original technical details"]||"Show original technical details";details.append(summary);const p=document.createElement("p");p.textContent=original;details.append(p);disclaimer.textContent=local.warning+" ";disclaimer.append(details);}
+ if(disclaimer && lang==="fa" && toolIndex!==undefined){disclaimer.textContent=safetyPacks[toolIndex]||"";}else if(disclaimer){const original=disclaimer.textContent;const details=document.createElement("details");details.className="kf-technical-details";const summary=document.createElement("summary");summary.textContent=ui["Show original technical details"]||"Show original technical details";details.append(summary);const p=document.createElement("p");p.textContent=original;details.append(p);disclaimer.textContent=local.warning+" ";disclaimer.append(details);}
  // Update links only within the TOOLS directory; retain original engine assets.
  for(const a of document.querySelectorAll('a[href^="/tools/"]')){
   a.setAttribute("href","/"+lang+a.getAttribute("href"));
@@ -188,7 +224,7 @@ if(pack&&local){
  const list=document.createElement("nav");
  list.className="lang-list";list.setAttribute("aria-label",local.lang+" / Language");
  const origin=route.replace(/^\/tools\//,"");
- for(const code of ["en","de"]){
+ for(const code of ["en","de","fa"]){
   const anchor=document.createElement("a");anchor.href=(code==="en"?"/tools/":"/"+code+"/tools/")+origin;
   anchor.textContent=(code===lang?"✓ ":"")+langNames[code];
   if(code===lang)anchor.setAttribute("aria-current","page");
@@ -243,7 +279,7 @@ if(pack&&local){
  }
 
  // Translate UI attributes in German only; never alter user input or machine-readable values.
- if(lang==="de")for(const el of document.querySelectorAll("main input[placeholder],main textarea[placeholder],main input[aria-label],main button[aria-label],main select[aria-label],main [title]")){
+ if(lang==="de"||lang==="fa")for(const el of document.querySelectorAll("main input[placeholder],main textarea[placeholder],main input[aria-label],main button[aria-label],main select[aria-label],main [title]")){
    for(const attr of ["placeholder","aria-label","title"]){
      const v=el.getAttribute(attr);if(!v)continue;
      const translation=translated(v);if(translation!==v)el.setAttribute(attr,translation);
