@@ -39,6 +39,7 @@ const other={
  ar:{status:"جارٍ المعالجة محلياً…",home:"الرئيسية",about:"حول",download:"تنزيل",guides:"الأدلة",support:"الدعم",contact:"الاتصال",tool:"الأدوات",privacy:"الخصوصية",terms:"الشروط",license:"التراخيص",more:"المزيد",warning:"ملاحظة: اقرأ القيود التقنية أدناه.",lead:"استخدم الأداة في متصفحك. لا تُرفع بياناتك إلى KOLFAT.",catlead:"اثنتا عشرة أداة في هذه الفئة دون رفع البيانات.",directory:"اكتشف ٤٨ أداة مجانية في أربع فئات.",lang:"اللغة"}
 };
 const local=other[lang];
+const safetyPacks=pack&&local?(await import("./i18n-safety-"+lang+".mjs")).safetySummaries:[];
 const ui=textTranslations[lang]||{};
 if(pack&&local){
  const route=location.pathname.replace(/^\/(?:de|fr|es|pt|it|ru|zh|ja|hi|fa|ar)(?=\/tools\/)/,"");
@@ -77,6 +78,22 @@ if(pack&&local){
    continue;
   }
   for(const node of el.childNodes)if(node.nodeType===3){const v=node.textContent;if(v.trim()){const tr=translated(v);if(tr!==v)node.textContent=tr;}}
+ }
+ // Show a specific localized safety and limitation notice on every utility page.
+ // Keep the original English technical details as a supplemental reference.
+ if(toolIndex!==undefined){
+   const hero=document.querySelector("main .hero-tools,main .hero");
+   const warning=safetyPacks[toolIndex];
+   if(hero&&warning&&!document.querySelector(".kf-i18n-safety")){
+     const note=document.createElement("aside");
+     note.className="kf-i18n-safety";
+     note.setAttribute("role","note");
+     const icon=document.createElement("span");
+     icon.className="kf-i18n-safety-icon";icon.textContent="ⓘ";icon.setAttribute("aria-hidden","true");
+     const content=document.createElement("p");content.textContent=warning;
+     note.append(icon,content);
+     hero.insertAdjacentElement("afterend",note);
+   }
  }
  // Tool and collection names are authoritative by route, regardless of English variant.
  if(toolIndex!==undefined){

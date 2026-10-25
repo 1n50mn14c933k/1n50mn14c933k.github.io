@@ -1,5 +1,13 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-25 — Multilingual technical notices and shared labels
+
+- 528 new tool-specific safety/limitation notices (48 tools × 11 non-English languages), under existing tool headings, preserving original English detailed caveats in accessible expandable sections.
+- 858 common interface translations (78 labels × 11 locales), including file selection, operation labels and messaging, with shared JavaScript engines unchanged.
+- Fixed Photo & File category translations, menu SVG retention and localized home-to-tools links.
+- Tests: Node and Chromium regression with translated controls, menu and safety assertions; results must be verified in GitHub Actions.
+- Rollback: revert the future multilingual PR; or remove the `i18n-safety-*.mjs` packs, their import and banner CSS, keeping English technical notes and all original tools.
+
 ## 2026-10-25 — Multilingual tools development, 12 languages
 
 **Status:** Work in progress in draft PR; not approved for production.

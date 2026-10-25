@@ -29,3 +29,9 @@ The shared `assets/nav-dropdown.js` now adds a 12-language selector to the origi
 ## October 25 interface expansion
 
 Added `tools/assets/i18n-text.mjs`: 78 shared interface labels/statuses translated into 11 languages (858 dictionary entries), including file-selection controls, results, common commands and process messages. The browser translator now also traverses safe plain text nodes, fixes the Photo & File category mapping and keeps original technical limitations in a clearly labeled expandable English section rather than silently dropping critical safety warnings. This does **not** constitute translation of all 48 tool-specific warnings, dynamic errors or generated result explanations. Release approval remains blocked until full locale review. Rollback: revert the feature PR or remove the additional text pack import and shared-text traversal; English originals are unchanged.
+
+## 2026-10-25: Tool-specific safety guidance in all languages
+
+Added 48 individually authored safety/limitation notices per language for all 11 non-English locales (**528 new notices**), stored in `tools/assets/i18n-safety-<locale>.mjs`. These notices cover file/metadata integrity, limits, cryptography, JWT verification, offline network planning and other per-tool hazards. The localized tool module loads only the active language's pack, then displays its tool-specific notice under the heading. Existing detailed English technical caveats remain available for exact reference, and the original computational engines are not modified.
+
+**QA requirements:** test presence, locale selection, and exact mapping for all 48 tools in each language. Native-language proofreading is still advisable before production. These summaries do not replace the original detailed technical restrictions or fully localize the generated machine-readable outputs. To rollback, revert PR #21 or remove the safety pack import, insertion and CSS block while retaining original English pages.
