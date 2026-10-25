@@ -2,6 +2,7 @@
  * Localized routes are generated statically; this module translates interface
  * labels and links, not technical data, example code, or user inputs. */
 import {toolIds,englishNames,categoryIds,englishCategories,localePacks,allToolLanguages} from "./i18n-data.mjs";
+import {textTranslations} from "./i18n-text.mjs";
 const lang=(document.documentElement.lang||"en").slice(0,2).toLowerCase();
 const pack=localePacks[lang];
 const baseName=new Map(englishNames.map((value,i)=>[value,i]));
@@ -38,6 +39,7 @@ const other={
  ar:{status:"جارٍ المعالجة محلياً…",home:"الرئيسية",about:"حول",download:"تنزيل",guides:"الأدلة",support:"الدعم",contact:"الاتصال",tool:"الأدوات",privacy:"الخصوصية",terms:"الشروط",license:"التراخيص",more:"المزيد",warning:"ملاحظة: اقرأ القيود التقنية أدناه.",lead:"استخدم الأداة في متصفحك. لا تُرفع بياناتك إلى KOLFAT.",catlead:"اثنتا عشرة أداة في هذه الفئة دون رفع البيانات.",directory:"اكتشف ٤٨ أداة مجانية في أربع فئات.",lang:"اللغة"}
 };
 const local=other[lang];
+const ui=textTranslations[lang]||{};
 if(pack&&local){
  const route=location.pathname.replace(/^\/(?:de|fr|es|pt|it|ru|zh|ja|hi|fa|ar)(?=\/tools\/)/,"");
  const parts=route.split("/").filter(Boolean).slice(1);
@@ -45,8 +47,8 @@ if(pack&&local){
  const slug=parts.length?parts[parts.length-1]:"";
  const toolIndex=slugIndex.get(slug);
  const isDir=!parts.length;
- const isCat=parts.length===1&&categoryIds.includes(slug);
- const categoryIndex=categoryIds.indexOf(categoryPath);
+ const isCat=parts.length===1&&(slug==="photo-file"||categoryIds.includes(slug));
+ const categoryIndex=categoryIds.indexOf(categoryPath==="photo-file"?"photo":categoryPath);
  const translateTitle=v=>{
    const normalized=v.trim().replace(/&amp;/g,"&");
    if(baseName.has(normalized))return pack.names[baseName.get(normalized)];
@@ -56,6 +58,7 @@ if(pack&&local){
  const translated=t=>{
   const compact=t.trim().replace(/\s+/g," ");
   if(!compact)return t;
+  if(ui[compact])return ui[compact];
   if(common[compact])return pack.labels[common[compact]];
   const renamed=translateTitle(compact);
   if(renamed!==compact)return renamed;
@@ -66,7 +69,7 @@ if(pack&&local){
   return t;
  };
  // Preserve code/technical inputs, textareas, accessible SVGs, and displayed results.
- const selectors="main h1,main h2,main h3,main strong,main legend,main label,main button,main option,main .eyebrow,main .card-label,main .card-arrow,main .kf-category-label,main .kf-category-count,main .kf-category-open,main .status,main .breadcrumb,main .download";
+ const selectors="main h1,main h2,main h3,main strong,main legend,main label,main button,main option,main .eyebrow,main .card-label,main .card-arrow,main .kf-category-label,main .kf-category-count,main .kf-category-open,main .status,main .breadcrumb,main .download,main .file-label,main .drop-zone,main .uploader,main .field-label,main .controls,main .section-tools";
  for(const el of document.querySelectorAll(selectors)){
   if(el.matches("textarea,input,pre,code")||el.closest("pre,code,textarea,.zone-text"))continue;
   if(el.tagName==="LABEL"&&el.querySelector("input,select,textarea")){
@@ -81,7 +84,7 @@ if(pack&&local){
   if(heading)heading.textContent=pack.names[toolIndex];
  }else if(isCat&&categoryIndex>=0){
   const heading=document.querySelector("main h1");
-  if(heading)heading.textContent=pack.labels[categoryPath];
+  if(heading)heading.textContent=pack.labels[categoryPath==="photo-file"?"photo":categoryPath];
  }else if(isDir){
   const heading=document.querySelector("main h1");if(heading)heading.textContent=pack.labels.all;
  }
@@ -103,7 +106,7 @@ if(pack&&local){
    card.textContent=isDir||isCat?local.lead:local.catlead;
  }
  const disclaimer=document.querySelector(".workspace .caveat");
- if(disclaimer){const original=disclaimer.textContent;disclaimer.textContent=local.warning+" "+original;}
+ if(disclaimer){const original=disclaimer.textContent;const details=document.createElement("details");details.className="kf-technical-details";const summary=document.createElement("summary");summary.textContent=ui["Show original technical details"]||"Show original technical details";details.append(summary);const p=document.createElement("p");p.textContent=original;details.append(p);disclaimer.textContent=local.warning+" ";disclaimer.append(details);}
  // Update links only within the TOOLS directory; retain original engine assets.
  for(const a of document.querySelectorAll('a[href^="/tools/"]')){
   a.setAttribute("href","/"+lang+a.getAttribute("href"));
@@ -147,6 +150,16 @@ if(pack&&local){
  picker.addEventListener("toggle",()=>{
   if(picker.open)for(const d of document.querySelectorAll(".top-nav details"))if(d!==picker)d.open=false;
  });
+ // Translate plain text nodes without modifying technical input values or output formats.
+ // Existing browser processing engines are never translated or replaced.
+ const walker=document.createTreeWalker(document.querySelector("main")||document.body,NodeFilter.SHOW_TEXT);
+ const replaceNodes=[];
+ while(walker.nextNode()){
+   const node=walker.currentNode,el=node.parentElement;
+   if(!el||el.closest("script,style,pre,code,textarea,svg,output,#output,#downloads,.kf-technical-details"))continue;
+   const old=node.textContent.trim();if(old&&ui[old])replaceNodes.push([node,old]);
+ }
+ for(const [node,old] of replaceNodes)node.textContent=node.textContent.replace(old,ui[old]);
  // Dynamic labels from all four unmodified calculation engines.
  const status=document.querySelector("#status");
  if(status){
