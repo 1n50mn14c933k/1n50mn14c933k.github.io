@@ -1,5 +1,62 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-25 — Site-wide UI consistency audit and improvements
+
+**Pull request:** [#16](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/16)  
+**Merge commit:** [`1e0e78f`](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/commit/1e0e78ffc0f3e926a3ff75f81e637e6618b726f8)
+
+- Updated shared `assets/site-refinements.css` for navigation alignment, wider editorial layouts, heading hierarchy, accessible focus indicators, and RTL/script-aware typography.
+- Updated `tools/assets/tools.css` to improve card consistency, text wrapping, form sizing, and mobile layout across the existing 48 utilities.
+- Added the dedicated [UI audit](UI_DESIGN_AUDIT_2026-10-25.md), source checks, and Chromium geometry tests across representative home/product/content/tool pages in twelve languages.
+- **Scope limit:** automated representative UI tests passed before merge; a manual visual inspection of every website page and verification of the live deployment were not completed as part of that audit.
+- Existing routes, translations, mascots, backgrounds and utility processing were not intentionally changed.
+
+## 2026-10-25 — Persian homepage typography corrections
+
+**Pull requests:** [#14](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/14), [#15](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/15)
+
+- Fixed overly tight Persian headline leading and awkward line breaks.
+- Follow-up corrected a smaller-than-English font-size regression: Persian now uses the English responsive headline-size formulas, with Persian-specific line spacing and no second-line shrink.
+- Added seven-viewport Chromium size, overflow and parity checks for the Persian hero.
+- Only the Persian homepage typography was modified by these two targeted fixes.
+
+## 2026-10-25 — Security checkbox styling and visual regression repair
+
+**Pull requests:** [#12](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/12), [#13](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/13)
+
+- Replaced oversized checkboxes with selectable KOLFAT-themed tiles in Password Generator and Sensitive Text Redactor, following the existing Time Zone Converter style.
+- Corrected the shared form CSS conflict that made native checkboxes behave like full-width text inputs; isolated security tile layout from generic two-column forms.
+- Added browser layout tests for tile size, alignment, labels, interaction and narrow/mobile widths and versioned the updated stylesheet.
+
+## 2026-10-25 — Security & Text Analysis collection (12 utilities)
+
+**Pull request:** [#11](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/11)
+
+- Added the fourth TOOLS category at `/tools/security/`, twelve individual tool URLs and sitemap entries, bringing the directory to 48 utilities and four categories.
+- Includes secure password/passphrase generation, heuristic strength/secret checks, JWT **decoding without signature verification**, hashing, redaction, text diff, Unicode/IDN inspection, offline URL structure checks and UTF-8 inspection.
+- Browser smoke tests exercised the new tool action buttons before merge; functionality limitations remain documented on individual pages.
+
+## 2026-10-24 — Networking & Automation collection (12 utilities)
+
+**Pull requests:** [#8](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/8), [#9](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/9)
+
+- Added `/tools/networking/` and twelve offline calculators, planners and automation helpers.
+- Fixed an initial release-breaking issue where twelve HTML pages omitted the `data-network-tool` identifier, preventing their common JavaScript dispatcher from selecting a utility. Added page/handler contract tests.
+- All networking operations are offline; the port reference is not a network scan and the Compose checker is not the official validator.
+
+## 2026-10-23 — Code & Data Utilities collection (12 utilities)
+
+**Pull request:** [#6](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/6)
+
+- Added `/tools/code-data/` and twelve tools for JSON, restricted YAML, CSV, XML, Base64, URL components, regular expressions, UUIDs, HTML entities, basic SQL formatting, Markdown preview and a documented JSON Schema subset.
+- Added tool-specific URLs, browser-local processors, SVG icons, sitemap entries and regression checks.
+- Regex evaluation runs in a terminating worker; advanced YAML and JSON Schema constructs remain explicitly unsupported.
+
+## 2026-10-23 — Photo & File collection expanded to 12 utilities
+
+- The original six photo/file browser utilities were expanded with image watermarking, photo rotation/cropping, image-to-PDF, SHA-256 verification, QR generation and photo color palette extraction.
+- The `/tools/photo-file/` category page created later retains those 12 utilities; existing individual tool URLs were preserved.
+
 ## 2026-10-25 — Consolidated TOOLS privacy notice
 
 - Kept one clear privacy and local-processing notice on the main `/tools/` category directory, covering all 48 tools.

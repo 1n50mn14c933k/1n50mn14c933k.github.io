@@ -6,7 +6,7 @@
 - **Localized pages:** language chooser is immediately to the right of MENU, not embedded in it. Keep all twelve languages and their existing URL destinations.
 - **No second toolbar:** remove the old footer/hero `primary-seo-links` and `seo-footer-links` button bars. The existing descriptive homepage footer tagline stays.
 - **Contact:** `mailto:contact@kolfat.app` is inside MENU, not a fixed overlapping box. Keep the Microsoft Store call-to-action within page content.
-- **Links in menu:** Home (current language), MEDIA KOLFAT (current language), Download, About, Guides, Support (current language), Contact, X, YouTube, TikTok, GitHub.
+- **Links in menu:** Home (current language where available), MEDIA KOLFAT, Download, About, Guides, Support, Contact, X, YouTube, TikTok, GitHub. The TOOLS templates additionally expose TOOLS; templates currently differ in their precise menu items, so do not assume all menus include the same link set.
 - **Language:** localize MENU and internal navigation labels; About, Download, the Guides hub, and all five guide articles now have genuine localized pages in every supported language. Each locale must link to its own translated route.
 - **Styling:** monochrome, matches existing KOLFAT appearance; no animations required to navigate.
 - **Mobile:** all controls share one header row, with no overlap with the logo; dropdown scrolls vertically when the device screen is short. Test 320, 360, 375, 390 and 430 CSS-pixel widths.
@@ -73,8 +73,17 @@ English content pages and localized content pages now use the same single-row he
 
 ## Shared visual refinement system (2026-10-19)
 
-The same `assets/site-refinements.css` is loaded last on **all 181 sitemap-indexed pages** (all 12 languages, including home, product, legal, About, Download, Guides and articles). This is a restrained improvement only: typography, body readability, heading sizing, link focus, spacing, and orange `#ff812e` accents. Original background photography, CRT/mascot imagery, KOLFAT logo, page layouts, URLs, visible content, Microsoft Store button, and navigation architecture are intentionally unchanged.
+At the time of the October 19 rollout, `assets/site-refinements.css` was applied across **181 sitemap-indexed pages** (all 12 languages, including home, product, legal, About, Download, Guides and articles). The sitemap has since grown to **234 canonical URLs** as of October 25, including 53 TOOLS URLs. This paragraph describes the historical October 19 rollout, not today's page count. This is a restrained improvement only: typography, body readability, heading sizing, link focus, spacing, and orange `#ff812e` accents. Original background photography, CRT/mascot imagery, KOLFAT logo, page layouts, URLs, visible content, Microsoft Store button, and navigation architecture are intentionally unchanged.
 
 Use a single presentation system across screen sizes; only responsive text scaling and layout fit differ. Keep native font fallback per script for Persian/Arabic (RTL), Hindi, Japanese, and Chinese without loading external fonts. Do not overwrite all writing systems with one Latin font.
 
 Maintenance: edit `assets/site-refinements.css` and increment its query-string version in the static pages. The deployment script `.github/scripts/apply_site_refinements.py` validates the current sitemap and preserves canonical, hreflang, and JSON-LD exactly. Always check closed/open menu states, 320–430px mobile, tablet, desktop, LTR and RTL, and record screenshots before asserting visual QA.
+
+## October 25, 2026 — UI consistency and TOOLS navigation
+
+- Site-wide UI updates are tracked in [UI_DESIGN_AUDIT_2026-10-25.md](UI_DESIGN_AUDIT_2026-10-25.md), with page geometry tests in `tools/tests/site-ui-audit.spec.mjs` and source checks in `tools/tests/site-ui-source.test.mjs`.
+- The main TOOLS dashboard is `/tools/`, with four collection routes: `/tools/photo-file/`, `/tools/code-data/`, `/tools/networking/`, and `/tools/security/`. Each collection contains twelve tools; see [TOOLS_PLATFORM.md](TOOLS_PLATFORM.md).
+- The general website supports twelve languages. All 48 tools remain English-only until their separate localization project is developed and verified; do not add a language chooser that points to untranslated pages.
+- Shared CSS `assets/site-refinements.css` controls common visual details. Tools use `tools/assets/tools.css` and category-specific CSS. Preserve the cinematic homepage design, content-page reading width, mobile header alignment and RTL text readability.
+- Keep native keyboard operation, `<details>` menu visibility, visible focus styling, responsive card grids, and verified navigation for English/Persian/Arabic and the other site languages.
+- The October 25 UI audit Chromium suite checked representative pages and two viewport widths, not every URL individually. Treat passed CI as a release gate, not a substitute for human visual review of every template.
