@@ -17,3 +17,12 @@ await expect(page.locator("#output")).not.toBeEmpty();
 expect((await page.locator("#output").inputValue()).length).toBe(20);
 });
 }
+test("localized controls, menu icons and safeguards",async({page})=>{
+  await page.goto("http://127.0.0.1:8765/de/tools/code-data/json-formatter/");
+  await expect(page.locator("button#copy")).toHaveText("Ergebnis kopieren");
+  await expect(page.locator("button#clear")).toHaveText("Leeren");
+  await expect(page.locator(".workspace .caveat .kf-technical-details")).toHaveCount(1);
+  await page.locator(".kolfat-menu > summary").click();
+  await expect(page.locator(".kolfat-menu-panel .kf-menu-icon").first()).toBeVisible();
+  await expect(page.locator(".kolfat-menu-panel a").filter({hasText:"Werkzeuge"})).toHaveCount(1);
+});
