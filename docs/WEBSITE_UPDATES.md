@@ -1,5 +1,25 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-25 — Multilingual technical notices and shared labels
+
+- 528 new tool-specific safety/limitation notices (48 tools × 11 non-English languages), under existing tool headings, preserving original English detailed caveats in accessible expandable sections.
+- 858 common interface translations (78 labels × 11 locales), including file selection, operation labels and messaging, with shared JavaScript engines unchanged.
+- Fixed Photo & File category translations, menu SVG retention and localized home-to-tools links.
+- Tests: Node and Chromium regression with translated controls, menu and safety assertions; results must be verified in GitHub Actions.
+- Rollback: revert the future multilingual PR; or remove the `i18n-safety-*.mjs` packs, their import and banner CSS, keeping English technical notes and all original tools.
+
+## 2026-10-25 — Multilingual tools development, 12 languages
+
+**Status:** Work in progress in draft PR; not approved for production.
+
+**Purpose:** Extend the existing 48 local-processing tools and their directory/category pages into the existing 11 non-English website languages without altering tool algorithms. Total: 583 additional locale pages.
+
+**Files:** tools/assets/i18n-data.mjs, tools/assets/i18n.mjs, tools/assets/i18n.css, scripts/generate-localized-tools.mjs, .github/workflows/generate-localized-tools.yml, localized language directories, sitemap.xml, docs/TOOLS_LOCALIZATION.md and this change log.
+
+**Tests:** Static generation and sitemap checks; browser functionality, translated warnings/help, and RTL review must pass before release. No production deployment claimed.
+
+**Rollback:** Feature branch can be abandoned with no change to production. After a future merge, revert its merge commit and remove generated locale routes, retaining English originals and engines. See docs/TOOLS_LOCALIZATION.md.
+
 ## 2026-10-25 — Consistent site-wide header/footer borders and menu icons
 
 **Purpose:** Eliminate inconsistent small/empty footer templates and styling across KOLFAT pages. Keep all five requested links visible (Privacy, Terms, Licenses, Support, Contact), without social links in the footer. Add SVG icons to every item in the dropdown MENU.

@@ -1,0 +1,3143 @@
+{
+  "created": "2026-10-25",
+  "canonicalPages": 53,
+  "uniqueStrings": 415,
+  "strings": [
+    {
+      "text": "/ Base64 Encoder & Decoder",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html"
+      ]
+    },
+    {
+      "text": "/ Batch File Renamer",
+      "pages": [
+        "tools/batch-file-renamer/index.html"
+      ]
+    },
+    {
+      "text": "/ CODE & DATA",
+      "pages": [
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "/ Cron Expression Builder",
+      "pages": [
+        "tools/networking/cron-expression-builder/index.html"
+      ]
+    },
+    {
+      "text": "/ CSV ↔ JSON Converter",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "/ Docker Compose YAML Checker",
+      "pages": [
+        "tools/networking/docker-compose-checker/index.html"
+      ]
+    },
+    {
+      "text": "/ Duplicate File Checker",
+      "pages": [
+        "tools/duplicate-checker/index.html"
+      ]
+    },
+    {
+      "text": "/ EXIF & GPS Privacy Cleaner",
+      "pages": [
+        "tools/exif-cleaner/index.html"
+      ]
+    },
+    {
+      "text": "/ HTML Entity Converter",
+      "pages": [
+        "tools/code-data/html-entity-converter/index.html"
+      ]
+    },
+    {
+      "text": "/ Image Compressor & Resizer",
+      "pages": [
+        "tools/image-compressor/index.html"
+      ]
+    },
+    {
+      "text": "/ Image Format Converter",
+      "pages": [
+        "tools/image-converter/index.html"
+      ]
+    },
+    {
+      "text": "/ Image to PDF",
+      "pages": [
+        "tools/image-to-pdf/index.html"
+      ]
+    },
+    {
+      "text": "/ Image Watermark Maker",
+      "pages": [
+        "tools/image-watermark/index.html"
+      ]
+    },
+    {
+      "text": "/ IP Range ↔ CIDR Converter",
+      "pages": [
+        "tools/networking/ip-range-cidr-converter/index.html"
+      ]
+    },
+    {
+      "text": "/ IPv4 Subnet / CIDR Calculator",
+      "pages": [
+        "tools/networking/ipv4-subnet-calculator/index.html"
+      ]
+    },
+    {
+      "text": "/ IPv6 Prefix Calculator",
+      "pages": [
+        "tools/networking/ipv6-prefix-calculator/index.html"
+      ]
+    },
+    {
+      "text": "/ JSON Formatter & Validator",
+      "pages": [
+        "tools/code-data/json-formatter/index.html"
+      ]
+    },
+    {
+      "text": "/ JSON Schema Validator",
+      "pages": [
+        "tools/code-data/json-schema-validator/index.html"
+      ]
+    },
+    {
+      "text": "/ JWT Decoder & Inspector",
+      "pages": [
+        "tools/security/jwt-inspector/index.html"
+      ]
+    },
+    {
+      "text": "/ Linux chmod Calculator",
+      "pages": [
+        "tools/networking/linux-chmod-calculator/index.html"
+      ]
+    },
+    {
+      "text": "/ Markdown Live Preview",
+      "pages": [
+        "tools/code-data/markdown-preview/index.html"
+      ]
+    },
+    {
+      "text": "/ Network Port Reference",
+      "pages": [
+        "tools/networking/network-port-reference/index.html"
+      ]
+    },
+    {
+      "text": "/ NETWORKING",
+      "pages": [
+        "tools/networking/index.html"
+      ]
+    },
+    {
+      "text": "/ Password Strength Estimator",
+      "pages": [
+        "tools/security/password-strength/index.html"
+      ]
+    },
+    {
+      "text": "/ PHOTO & FILE",
+      "pages": [
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "/ Photo Color Palette Extractor",
+      "pages": [
+        "tools/photo-color-palette/index.html"
+      ]
+    },
+    {
+      "text": "/ Photo Date Detective",
+      "pages": [
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "/ Photo Rotator & Cropper",
+      "pages": [
+        "tools/photo-rotator/index.html"
+      ]
+    },
+    {
+      "text": "/ Punycode / IDN Converter",
+      "pages": [
+        "tools/security/punycode-converter/index.html"
+      ]
+    },
+    {
+      "text": "/ QR Code Generator",
+      "pages": [
+        "tools/qr-code-generator/index.html"
+      ]
+    },
+    {
+      "text": "/ Regex Tester",
+      "pages": [
+        "tools/code-data/regex-tester/index.html"
+      ]
+    },
+    {
+      "text": "/ Secret Leak Scanner",
+      "pages": [
+        "tools/security/secret-leak-scanner/index.html"
+      ]
+    },
+    {
+      "text": "/ Secure Passphrase Generator",
+      "pages": [
+        "tools/security/passphrase-generator/index.html"
+      ]
+    },
+    {
+      "text": "/ Secure Password Generator",
+      "pages": [
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "/ SECURITY",
+      "pages": [
+        "tools/security/index.html"
+      ]
+    },
+    {
+      "text": "/ Sensitive Text Redactor",
+      "pages": [
+        "tools/security/sensitive-text-redactor/index.html"
+      ]
+    },
+    {
+      "text": "/ SHA-256 File Verifier",
+      "pages": [
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "/ SQL Formatter",
+      "pages": [
+        "tools/code-data/sql-formatter/index.html"
+      ]
+    },
+    {
+      "text": "/ Systemd Timer Builder",
+      "pages": [
+        "tools/networking/systemd-timer-builder/index.html"
+      ]
+    },
+    {
+      "text": "/ Text & Code Diff Checker",
+      "pages": [
+        "tools/security/text-code-diff/index.html"
+      ]
+    },
+    {
+      "text": "/ Text Hash Generator",
+      "pages": [
+        "tools/security/text-hash-generator/index.html"
+      ]
+    },
+    {
+      "text": "/ Text Hex & UTF-8 Inspector",
+      "pages": [
+        "tools/security/text-hex-utf8/index.html"
+      ]
+    },
+    {
+      "text": "/ Time Zone Converter",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "/ TOOLS",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "/ Unicode & Homoglyph Inspector",
+      "pages": [
+        "tools/security/unicode-inspector/index.html"
+      ]
+    },
+    {
+      "text": "/ Unix Timestamp Converter",
+      "pages": [
+        "tools/networking/unix-timestamp-converter/index.html"
+      ]
+    },
+    {
+      "text": "/ URL Encoder & Decoder",
+      "pages": [
+        "tools/code-data/url-encoder/index.html"
+      ]
+    },
+    {
+      "text": "/ URL Safety Inspector",
+      "pages": [
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "/ UUID Generator",
+      "pages": [
+        "tools/code-data/uuid-generator/index.html"
+      ]
+    },
+    {
+      "text": "/ VLAN & IP Address Planner",
+      "pages": [
+        "tools/networking/vlan-ip-planner/index.html"
+      ]
+    },
+    {
+      "text": "/ VLSM Subnet Planner",
+      "pages": [
+        "tools/networking/vlsm-subnet-planner/index.html"
+      ]
+    },
+    {
+      "text": "/ XML Formatter & Validator",
+      "pages": [
+        "tools/code-data/xml-formatter/index.html"
+      ]
+    },
+    {
+      "text": "/ YAML ↔ JSON Converter",
+      "pages": [
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "1 JPEG, PNG or WebP image. All results are new copies; originals remain untouched. Export may discard original image metadata.",
+      "pages": [
+        "tools/image-watermark/index.html",
+        "tools/photo-rotator/index.html"
+      ]
+    },
+    {
+      "text": "1 JPEG, PNG or WebP image. Colors are approximate and selected by frequency and contrast.. All results are new copies; originals remain untouched.",
+      "pages": [
+        "tools/photo-color-palette/index.html"
+      ]
+    },
+    {
+      "text": "1–15 JPEG, PNG or WebP images. Images are rescaled to fit a maximum 1500px edge. Pages preserve each image's shape.. All results are new copies; originals remain untouched. Export may discard original image metadata.",
+      "pages": [
+        "tools/image-to-pdf/index.html"
+      ]
+    },
+    {
+      "text": "10,Management,10.20.10.0/24 20,Servers,10.20.20.0/24",
+      "pages": [
+        "tools/networking/vlan-ip-planner/index.html"
+      ]
+    },
+    {
+      "text": "12 Code & Data Tools",
+      "pages": [
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "12 Networking & Automation Tools",
+      "pages": [
+        "tools/networking/index.html"
+      ]
+    },
+    {
+      "text": "12 Security & Text Analysis Tools",
+      "pages": [
+        "tools/security/index.html"
+      ]
+    },
+    {
+      "text": "12 simple tools for everyday photo and file jobs. No account, no uploads, no subscription.",
+      "pages": [
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "12 tools",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "2001:db8:1234::1/64",
+      "pages": [
+        "tools/networking/ipv6-prefix-calculator/index.html"
+      ]
+    },
+    {
+      "text": "2026-10-24T18:00:00Z",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "270° clockwise",
+      "pages": [
+        "tools/photo-rotator/index.html"
+      ]
+    },
+    {
+      "text": "48 online tools in 4 collections",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "90° clockwise",
+      "pages": [
+        "tools/photo-rotator/index.html"
+      ]
+    },
+    {
+      "text": "A cryptographic digest is not encryption, authentication, or password hashing. Maximum 1 MiB UTF-8 input.",
+      "pages": [
+        "tools/security/text-hash-generator/index.html"
+      ]
+    },
+    {
+      "text": "A heuristic only, not a breach check or password-cracking benchmark. Do not paste real account passwords unnecessarily.",
+      "pages": [
+        "tools/security/password-strength/index.html"
+      ]
+    },
+    {
+      "text": "Add text watermarks to photos privately.",
+      "pages": [
+        "tools/image-watermark/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Algorithm",
+      "pages": [
+        "tools/security/text-hash-generator/index.html"
+      ]
+    },
+    {
+      "text": "All 12 security and text analysis utilities.",
+      "pages": [
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "All 48 KOLFAT TOOLS run in your browser. Your files and input are not uploaded to KOLFAT. No account or subscription required.",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "All categories →",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/security/index.html"
+      ]
+    },
+    {
+      "text": "Allocate IPv4 subnets according to requested host counts.",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html"
+      ]
+    },
+    {
+      "text": "America/Los_Angeles",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "America/New_York",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Amsterdam",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Analyze locally",
+      "pages": [
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Asia/Dubai",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Asia/Kolkata",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Asia/Tehran",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Asia/Tokyo",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Australia/Sydney",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Avoid ambiguous characters",
+      "pages": [
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "Back to Code & Data →",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Back to Security & Text Analysis →",
+      "pages": [
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Base64 Encoder & Decoder",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "Batch File Renamer",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Before you begin:",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "Browse by category",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Browse other collections.",
+      "pages": [
+        "tools/networking/index.html"
+      ]
+    },
+    {
+      "text": "Browse Photo & File Tools →",
+      "pages": [
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "Browser support varies for input formats such as HEIC or AVIF. Animated images export their current or first frame only.",
+      "pages": [
+        "tools/image-converter/index.html"
+      ]
+    },
+    {
+      "text": "bücher.example",
+      "pages": [
+        "tools/security/punycode-converter/index.html"
+      ]
+    },
+    {
+      "text": "Calculate IPv4 networks, masks and usable ranges.",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html"
+      ]
+    },
+    {
+      "text": "Calculate IPv6 prefixes and address ranges.",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html"
+      ]
+    },
+    {
+      "text": "Calculate locally",
+      "pages": [
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html",
+        "tools/networking/linux-chmod-calculator/index.html",
+        "tools/networking/network-port-reference/index.html",
+        "tools/networking/systemd-timer-builder/index.html",
+        "tools/networking/time-zone-converter/index.html",
+        "tools/networking/unix-timestamp-converter/index.html",
+        "tools/networking/vlan-ip-planner/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html"
+      ]
+    },
+    {
+      "text": "Calculate SHA-256 or SHA-512 hashes of UTF-8 text in your browser.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/text-hash-generator/index.html"
+      ]
+    },
+    {
+      "text": "Calculate subnets, plan networks and create automation examples without uploading your data.",
+      "pages": [
+        "tools/networking/index.html"
+      ]
+    },
+    {
+      "text": "Character groups",
+      "pages": [
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "Check basic Compose structure locally without connecting to Docker.",
+      "pages": [
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/index.html"
+      ]
+    },
+    {
+      "text": "Check duplicates",
+      "pages": [
+        "tools/duplicate-checker/index.html"
+      ]
+    },
+    {
+      "text": "Check JSON data against supported schema rules.",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/json-schema-validator/index.html"
+      ]
+    },
+    {
+      "text": "Choose a category. Find the right tool. Keep your files and data on your device.",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Choose files (1 JPEG, PNG or WebP image. Colors are approximate and selected by frequency and contrast.)",
+      "pages": [
+        "tools/photo-color-palette/index.html"
+      ]
+    },
+    {
+      "text": "Choose files (1 JPEG, PNG or WebP image)",
+      "pages": [
+        "tools/image-watermark/index.html",
+        "tools/photo-rotator/index.html"
+      ]
+    },
+    {
+      "text": "Choose files (1–15 JPEG, PNG or WebP images. Images are rescaled to fit a maximum 1500px edge. Pages preserve each image's shape.)",
+      "pages": [
+        "tools/image-to-pdf/index.html"
+      ]
+    },
+    {
+      "text": "Choose files (One file up to 64 MiB. This verifies the provided hash, not the identity of its publisher.)",
+      "pages": [
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "Choose files to get started.",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "Choose images, select an output format and optional maximum dimensions. Download converted copies without uploading the originals.",
+      "pages": [
+        "tools/image-compressor/index.html"
+      ]
+    },
+    {
+      "text": "Choose multiple files. Files of equal size are hashed locally with the browser's Web Crypto API and grouped when their hashes match.",
+      "pages": [
+        "tools/duplicate-checker/index.html"
+      ]
+    },
+    {
+      "text": "Choose the cities you want to compare. You can select more than one.",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Choose your input to begin.",
+      "pages": [
+        "tools/image-to-pdf/index.html",
+        "tools/image-watermark/index.html",
+        "tools/photo-color-palette/index.html",
+        "tools/photo-rotator/index.html",
+        "tools/qr-code-generator/index.html",
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "CIDR to range",
+      "pages": [
+        "tools/networking/ip-range-cidr-converter/index.html"
+      ]
+    },
+    {
+      "text": "Clear",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html",
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html",
+        "tools/networking/linux-chmod-calculator/index.html",
+        "tools/networking/network-port-reference/index.html",
+        "tools/networking/systemd-timer-builder/index.html",
+        "tools/networking/time-zone-converter/index.html",
+        "tools/networking/unix-timestamp-converter/index.html",
+        "tools/networking/vlan-ip-planner/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html",
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "CODE & DATA",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Code & Data Utilities",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Combine up to fifteen photos into a downloadable PDF.",
+      "pages": [
+        "tools/image-to-pdf/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Comma",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Compare a local file with an expected SHA-256 checksum.",
+      "pages": [
+        "tools/photo-file/index.html",
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "Compare JPEG EXIF capture dates, dates in filenames and file-modified timestamps. Export an easy-to-read CSV report.",
+      "pages": [
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "Compare the same instant in world time zones.",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Compare two versions of text and show added and removed lines.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/text-code-diff/index.html"
+      ]
+    },
+    {
+      "text": "Compress and resize photos privately, right in your browser.",
+      "pages": [
+        "tools/image-compressor/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Compress images",
+      "pages": [
+        "tools/image-compressor/index.html"
+      ]
+    },
+    {
+      "text": "Contact hello@example.org at 192.0.2.1 or +1 202 555 0123.",
+      "pages": [
+        "tools/security/sensitive-text-redactor/index.html"
+      ]
+    },
+    {
+      "text": "Convert CSV tables to JSON objects and JSON objects to CSV.",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "Convert images",
+      "pages": [
+        "tools/image-converter/index.html"
+      ]
+    },
+    {
+      "text": "Convert internationalized domain names to ASCII or decode Punycode labels.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/punycode-converter/index.html"
+      ]
+    },
+    {
+      "text": "Convert IPv4 ranges and CIDR blocks.",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html"
+      ]
+    },
+    {
+      "text": "Convert JPEG, PNG and other browser-supported raster images into JPEG, PNG or WebP.",
+      "pages": [
+        "tools/image-converter/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Convert simple YAML maps and lists to JSON, or JSON to YAML.",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Convert standard octal and symbolic file permissions.",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/linux-chmod-calculator/index.html"
+      ]
+    },
+    {
+      "text": "Convert to",
+      "pages": [
+        "tools/image-converter/index.html"
+      ]
+    },
+    {
+      "text": "Convert Unix time in seconds or milliseconds and ISO timestamps.",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/unix-timestamp-converter/index.html"
+      ]
+    },
+    {
+      "text": "Coordinated Universal Time",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Copy result",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html",
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html",
+        "tools/networking/linux-chmod-calculator/index.html",
+        "tools/networking/network-port-reference/index.html",
+        "tools/networking/systemd-timer-builder/index.html",
+        "tools/networking/time-zone-converter/index.html",
+        "tools/networking/unix-timestamp-converter/index.html",
+        "tools/networking/vlan-ip-planner/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html",
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Count",
+      "pages": [
+        "tools/code-data/uuid-generator/index.html"
+      ]
+    },
+    {
+      "text": "Create basic .service and .timer examples.",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/systemd-timer-builder/index.html"
+      ]
+    },
+    {
+      "text": "Create clean copies",
+      "pages": [
+        "tools/exif-cleaner/index.html"
+      ]
+    },
+    {
+      "text": "Create clean image copies without exposing your photo files to a server.",
+      "pages": [
+        "tools/exif-cleaner/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Create cryptographically random passwords with optional character groups.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "Cron Expression Builder",
+      "pages": [
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/index.html"
+      ]
+    },
+    {
+      "text": "CSV ↔ JSON Converter",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "CSV first row is treated as headers. JSON must be an array of objects. CSV fields are exported with spreadsheet formula precautions. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "CSV to JSON",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "daily",
+      "pages": [
+        "tools/networking/systemd-timer-builder/index.html"
+      ]
+    },
+    {
+      "text": "Decode Base64",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html"
+      ]
+    },
+    {
+      "text": "Decode component",
+      "pages": [
+        "tools/code-data/url-encoder/index.html"
+      ]
+    },
+    {
+      "text": "Decode entities",
+      "pages": [
+        "tools/code-data/html-entity-converter/index.html"
+      ]
+    },
+    {
+      "text": "Decode JWT claims and timestamps locally. Never trust decoded claims as verified.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/jwt-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Decoding is text-only. Supplied markup is not run as scripts or inserted into your website. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/html-entity-converter/index.html"
+      ]
+    },
+    {
+      "text": "Delimiter",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Description",
+      "pages": [
+        "tools/networking/systemd-timer-builder/index.html"
+      ]
+    },
+    {
+      "text": "Detect common secret patterns in pasted text without uploading it.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/secret-leak-scanner/index.html"
+      ]
+    },
+    {
+      "text": "DEVELOPMENT • DATA",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Direction",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/yaml-json-converter/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/text-hex-utf8/index.html"
+      ]
+    },
+    {
+      "text": "Discover capture dates and spot conflicting photo timestamps.",
+      "pages": [
+        "tools/photo-date-detective/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Discover MEDIA KOLFAT →",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "Discover Photo & File, Code & Data, and Networking & Automation.",
+      "pages": [
+        "tools/security/index.html"
+      ]
+    },
+    {
+      "text": "Docker Compose YAML Checker",
+      "pages": [
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/index.html"
+      ]
+    },
+    {
+      "text": "Domain",
+      "pages": [
+        "tools/security/punycode-converter/index.html"
+      ]
+    },
+    {
+      "text": "Dubai",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Duplicate File Checker",
+      "pages": [
+        "tools/duplicate-checker/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Email addresses",
+      "pages": [
+        "tools/security/sensitive-text-redactor/index.html"
+      ]
+    },
+    {
+      "text": "Encode component",
+      "pages": [
+        "tools/code-data/url-encoder/index.html"
+      ]
+    },
+    {
+      "text": "Encode entities",
+      "pages": [
+        "tools/code-data/html-entity-converter/index.html"
+      ]
+    },
+    {
+      "text": "Encode special HTML characters or decode HTML entities.",
+      "pages": [
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "Encode text",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html"
+      ]
+    },
+    {
+      "text": "Encode Unicode text as Base64 or decode Base64 to UTF-8.",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "Encode URL components or decode percent-encoded text.",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/url-encoder/index.html"
+      ]
+    },
+    {
+      "text": "Encodes a URL component using encodeURIComponent, not a full URL with its slashes and separators. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/url-encoder/index.html"
+      ]
+    },
+    {
+      "text": "Enter your input to begin.",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Europe/Amsterdam",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Europe/London",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Europe/Vienna",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "EXIF & GPS Privacy Cleaner",
+      "pages": [
+        "tools/exif-cleaner/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "EXIF reading currently supports JPEG APP1 metadata only. Modified time is not proof of when a photo was taken. Your files are never renamed or changed.",
+      "pages": [
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "Expected SHA-256 (optional)",
+      "pages": [
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "Explore all 12 photo & file tools",
+      "pages": [
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Explore category",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Explore category ↗",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Explore KOLFAT TOOLS",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Explore MEDIA KOLFAT →",
+      "pages": [
+        "tools/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Explore more KOLFAT TOOLS",
+      "pages": [
+        "tools/security/index.html"
+      ]
+    },
+    {
+      "text": "Extract six representative colors from an image.",
+      "pages": [
+        "tools/photo-color-palette/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "eyJhbGciOiJub25lIn0.eyJzdWIiOiJkZW1vIiwiZXhwIjo0MTAyNDQ0ODAwfQ.c2ln",
+      "pages": [
+        "tools/security/jwt-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Filename prefix",
+      "pages": [
+        "tools/batch-file-renamer/index.html"
+      ]
+    },
+    {
+      "text": "Find byte-identical duplicate files using SHA-256, without deleting anything.",
+      "pages": [
+        "tools/duplicate-checker/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Flags",
+      "pages": [
+        "tools/code-data/regex-tester/index.html"
+      ]
+    },
+    {
+      "text": "For bigger photo and video collections, use our free desktop organizer with guided copy workflows.",
+      "pages": [
+        "tools/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Format (pretty JSON)",
+      "pages": [
+        "tools/code-data/json-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Format or minify JSON, with syntax errors reported locally. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/json-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Format, convert, validate and explore structured data with twelve focused utilities.",
+      "pages": [
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "Format, encode, convert and validate data locally.",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "FREE • LOCAL • PRIVATE",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html",
+        "tools/image-to-pdf/index.html",
+        "tools/image-watermark/index.html",
+        "tools/index.html",
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html",
+        "tools/networking/linux-chmod-calculator/index.html",
+        "tools/networking/network-port-reference/index.html",
+        "tools/networking/systemd-timer-builder/index.html",
+        "tools/networking/time-zone-converter/index.html",
+        "tools/networking/unix-timestamp-converter/index.html",
+        "tools/networking/vlan-ip-planner/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html",
+        "tools/photo-color-palette/index.html",
+        "tools/photo-file/index.html",
+        "tools/photo-rotator/index.html",
+        "tools/qr-code-generator/index.html",
+        "tools/security/index.html",
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html",
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "FREE • ON-DEVICE",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/networking/index.html",
+        "tools/photo-file/index.html",
+        "tools/security/index.html"
+      ]
+    },
+    {
+      "text": "Generate cryptographically random version 4 UUIDs locally.",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/uuid-generator/index.html"
+      ]
+    },
+    {
+      "text": "Generate passwords and inspect text, tokens, and URLs privately.",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Generate random multiword passphrases using an offline word-combination list.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/passphrase-generator/index.html"
+      ]
+    },
+    {
+      "text": "Generate result",
+      "pages": [
+        "tools/image-to-pdf/index.html",
+        "tools/image-watermark/index.html",
+        "tools/photo-color-palette/index.html",
+        "tools/photo-rotator/index.html",
+        "tools/qr-code-generator/index.html",
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "Generate safe sequential filenames, optionally adding detected dates. Original files on your device are never modified.",
+      "pages": [
+        "tools/batch-file-renamer/index.html"
+      ]
+    },
+    {
+      "text": "Generate secure passwords, inspect data, analyze text, and review suspicious patterns. Twelve focused utilities in one collection.",
+      "pages": [
+        "tools/security/index.html"
+      ]
+    },
+    {
+      "text": "Generate securely",
+      "pages": [
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "Generated using Web Crypto and unbiased random selection. Keep passwords in a trusted manager. No result is auto-downloaded.",
+      "pages": [
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "Have thousands of photos to organize?",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "hello KOLFAT",
+      "pages": [
+        "tools/security/text-code-diff/index.html"
+      ]
+    },
+    {
+      "text": "hello world",
+      "pages": [
+        "tools/security/text-code-diff/index.html"
+      ]
+    },
+    {
+      "text": "Heuristic pattern scanning. False positives and missed credentials are possible; matches are not displayed.",
+      "pages": [
+        "tools/security/secret-leak-scanner/index.html"
+      ]
+    },
+    {
+      "text": "hourly",
+      "pages": [
+        "tools/networking/systemd-timer-builder/index.html"
+      ]
+    },
+    {
+      "text": "HTML Entity Converter",
+      "pages": [
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "https://example.org/account",
+      "pages": [
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Hyphen",
+      "pages": [
+        "tools/security/passphrase-generator/index.html"
+      ]
+    },
+    {
+      "text": "Identifies a curated subset of confusing characters. Not full Unicode TR39 confusables coverage.",
+      "pages": [
+        "tools/security/unicode-inspector/index.html"
+      ]
+    },
+    {
+      "text": "IDN mapping is browser-dependent. A decoded name is not evidence that a domain is safe.",
+      "pages": [
+        "tools/security/punycode-converter/index.html"
+      ]
+    },
+    {
+      "text": "Image compression changes image pixels and may remove embedded metadata.",
+      "pages": [
+        "tools/image-compressor/index.html"
+      ]
+    },
+    {
+      "text": "Image Compressor & Resizer",
+      "pages": [
+        "tools/image-compressor/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Image Format Converter",
+      "pages": [
+        "tools/image-converter/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Image to PDF",
+      "pages": [
+        "tools/image-to-pdf/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Image Watermark Maker",
+      "pages": [
+        "tools/image-watermark/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Important:",
+      "pages": [
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Improve SQL statement readability with whitespace formatting.",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/sql-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Input",
+      "pages": [
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html",
+        "tools/networking/linux-chmod-calculator/index.html",
+        "tools/networking/time-zone-converter/index.html",
+        "tools/networking/unix-timestamp-converter/index.html",
+        "tools/networking/vlan-ip-planner/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html"
+      ]
+    },
+    {
+      "text": "Input text",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Inspect mixed scripts, invisible characters and selected lookalike Unicode symbols.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/unicode-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Inspect password length and obvious weak patterns without sending it away.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/password-strength/index.html"
+      ]
+    },
+    {
+      "text": "Inspect photo dates",
+      "pages": [
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "IP Range ↔ CIDR Converter",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html"
+      ]
+    },
+    {
+      "text": "IPv4 addresses",
+      "pages": [
+        "tools/security/sensitive-text-redactor/index.html"
+      ]
+    },
+    {
+      "text": "IPv4 Subnet / CIDR Calculator",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html"
+      ]
+    },
+    {
+      "text": "IPv6 Prefix Calculator",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html"
+      ]
+    },
+    {
+      "text": "JPEG",
+      "pages": [
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html"
+      ]
+    },
+    {
+      "text": "JPEG / WebP quality",
+      "pages": [
+        "tools/exif-cleaner/index.html"
+      ]
+    },
+    {
+      "text": "JSON Formatter & Validator",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/json-formatter/index.html"
+      ]
+    },
+    {
+      "text": "JSON Schema",
+      "pages": [
+        "tools/code-data/json-schema-validator/index.html"
+      ]
+    },
+    {
+      "text": "JSON Schema Validator",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/json-schema-validator/index.html"
+      ]
+    },
+    {
+      "text": "JSON to CSV",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "JSON to YAML",
+      "pages": [
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "JWT Decoder & Inspector",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/jwt-inspector/index.html"
+      ]
+    },
+    {
+      "text": "JWT token (demo only)",
+      "pages": [
+        "tools/security/jwt-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Keep center area (%)",
+      "pages": [
+        "tools/photo-rotator/index.html"
+      ]
+    },
+    {
+      "text": "KOLFAT",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/image-to-pdf/index.html",
+        "tools/image-watermark/index.html",
+        "tools/index.html",
+        "tools/photo-color-palette/index.html",
+        "tools/photo-date-detective/index.html",
+        "tools/photo-file/index.html",
+        "tools/photo-rotator/index.html",
+        "tools/qr-code-generator/index.html",
+        "tools/security/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "KOLFAT 🧡",
+      "pages": [
+        "tools/security/text-hex-utf8/index.html"
+      ]
+    },
+    {
+      "text": "Kolkata",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Length (12–128)",
+      "pages": [
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "Lexical formatter for common SQL. Does not execute, verify, or validate queries and may not cover every SQL dialect. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/sql-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Limits:",
+      "pages": [
+        "tools/image-to-pdf/index.html",
+        "tools/image-watermark/index.html",
+        "tools/photo-color-palette/index.html",
+        "tools/photo-rotator/index.html",
+        "tools/qr-code-generator/index.html",
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "Line-based diff for up to 180 lines per input. Green/red change markers are shown as text, not code execution.",
+      "pages": [
+        "tools/security/text-code-diff/index.html"
+      ]
+    },
+    {
+      "text": "Linux chmod Calculator",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/linux-chmod-calculator/index.html"
+      ]
+    },
+    {
+      "text": "Live Markdown preview",
+      "pages": [
+        "tools/code-data/markdown-preview/index.html"
+      ]
+    },
+    {
+      "text": "Load a local Compose YAML",
+      "pages": [
+        "tools/networking/docker-compose-checker/index.html"
+      ]
+    },
+    {
+      "text": "Load a text file (optional)",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "London",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Los Angeles",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Lowercase a–z",
+      "pages": [
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "Make a QR code locally with no tracking or account.",
+      "pages": [
+        "tools/photo-file/index.html",
+        "tools/qr-code-generator/index.html"
+      ]
+    },
+    {
+      "text": "Markdown Live Preview",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/markdown-preview/index.html"
+      ]
+    },
+    {
+      "text": "Maximum height (px, 0 = original)",
+      "pages": [
+        "tools/image-compressor/index.html"
+      ]
+    },
+    {
+      "text": "Maximum width (px, 0 = original)",
+      "pages": [
+        "tools/image-compressor/index.html"
+      ]
+    },
+    {
+      "text": "MEDIA KOLFAT helps arrange entire photo and video libraries safely on Windows.",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "Meet MEDIA KOLFAT for Windows",
+      "pages": [
+        "tools/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Minify JSON",
+      "pages": [
+        "tools/code-data/json-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Modified text",
+      "pages": [
+        "tools/security/text-code-diff/index.html"
+      ]
+    },
+    {
+      "text": "Module size (pixels)",
+      "pages": [
+        "tools/qr-code-generator/index.html"
+      ]
+    },
+    {
+      "text": "monthly",
+      "pages": [
+        "tools/networking/systemd-timer-builder/index.html"
+      ]
+    },
+    {
+      "text": "More free tools, including Photo & File Tools, are available in the directory.",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "More KOLFAT TOOLS",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/networking/index.html"
+      ]
+    },
+    {
+      "text": "More Security & Text Tools",
+      "pages": [
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Naming pattern",
+      "pages": [
+        "tools/batch-file-renamer/index.html"
+      ]
+    },
+    {
+      "text": "Network Port Reference",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/network-port-reference/index.html"
+      ]
+    },
+    {
+      "text": "NETWORKING",
+      "pages": [
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html",
+        "tools/networking/linux-chmod-calculator/index.html",
+        "tools/networking/network-port-reference/index.html",
+        "tools/networking/systemd-timer-builder/index.html",
+        "tools/networking/time-zone-converter/index.html",
+        "tools/networking/unix-timestamp-converter/index.html",
+        "tools/networking/vlan-ip-planner/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html"
+      ]
+    },
+    {
+      "text": "Networking & Automation",
+      "pages": [
+        "tools/index.html",
+        "tools/networking/index.html"
+      ]
+    },
+    {
+      "text": "NETWORKS • SYSTEMS",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "New York",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "No files selected",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "No rotation",
+      "pages": [
+        "tools/photo-rotator/index.html"
+      ]
+    },
+    {
+      "text": "No signature validation. Decoding does not prove the token is authentic. Do not submit real access tokens unless necessary.",
+      "pages": [
+        "tools/security/jwt-inspector/index.html"
+      ]
+    },
+    {
+      "text": "No website can silently rename arbitrary local files. This tool creates a ZIP of renamed copies, not changes to the originals. The ZIP is stored without extra compression.",
+      "pages": [
+        "tools/batch-file-renamer/index.html"
+      ]
+    },
+    {
+      "text": "Numbers 0–9",
+      "pages": [
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "Offline heuristics only. Cannot determine whether a URL contains malware or phishing, and makes no reputation requests.",
+      "pages": [
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Offline planning or pre-check only. Review results before using them on production systems.",
+      "pages": [
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html",
+        "tools/networking/linux-chmod-calculator/index.html",
+        "tools/networking/network-port-reference/index.html",
+        "tools/networking/systemd-timer-builder/index.html",
+        "tools/networking/time-zone-converter/index.html",
+        "tools/networking/unix-timestamp-converter/index.html",
+        "tools/networking/vlan-ip-planner/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html"
+      ]
+    },
+    {
+      "text": "One file up to 64 MiB. This verifies the provided hash, not the identity of its publisher.. All results are new copies; originals remain untouched.",
+      "pages": [
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "Opacity (%)",
+      "pages": [
+        "tools/image-watermark/index.html"
+      ]
+    },
+    {
+      "text": "Open tool →",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/networking/index.html",
+        "tools/photo-file/index.html",
+        "tools/security/index.html"
+      ]
+    },
+    {
+      "text": "Operates on text, not encrypted data. Invalid Base64 or non-UTF-8 bytes are rejected. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html"
+      ]
+    },
+    {
+      "text": "Operation",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/xml-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Or drag and drop files here",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "ORGANIZE THE ENTIRE LIBRARY",
+      "pages": [
+        "tools/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Output format",
+      "pages": [
+        "tools/image-compressor/index.html"
+      ]
+    },
+    {
+      "text": "Password sample",
+      "pages": [
+        "tools/security/password-strength/index.html"
+      ]
+    },
+    {
+      "text": "Password Strength Estimator",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/password-strength/index.html"
+      ]
+    },
+    {
+      "text": "password=demo_only_example_secret",
+      "pages": [
+        "tools/security/secret-leak-scanner/index.html"
+      ]
+    },
+    {
+      "text": "Pattern matching is never complete. Manually verify redacted output before sharing sensitive content.",
+      "pages": [
+        "tools/security/sensitive-text-redactor/index.html"
+      ]
+    },
+    {
+      "text": "Period",
+      "pages": [
+        "tools/security/passphrase-generator/index.html"
+      ]
+    },
+    {
+      "text": "Phone-like strings",
+      "pages": [
+        "tools/security/sensitive-text-redactor/index.html"
+      ]
+    },
+    {
+      "text": "Photo & File Tools",
+      "pages": [
+        "tools/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Photo Color Palette Extractor",
+      "pages": [
+        "tools/photo-color-palette/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Photo Date Detective",
+      "pages": [
+        "tools/photo-date-detective/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Photo Rotator & Cropper",
+      "pages": [
+        "tools/photo-file/index.html",
+        "tools/photo-rotator/index.html"
+      ]
+    },
+    {
+      "text": "PHOTOS • FILES",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Pipe",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Plan networks, convert time, and build automation examples.",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Plan VLAN IDs and identify overlapping networks.",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/vlan-ip-planner/index.html"
+      ]
+    },
+    {
+      "text": "PNG",
+      "pages": [
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html"
+      ]
+    },
+    {
+      "text": "Prefix + 0001",
+      "pages": [
+        "tools/batch-file-renamer/index.html"
+      ]
+    },
+    {
+      "text": "Prefix + date + 0001",
+      "pages": [
+        "tools/batch-file-renamer/index.html"
+      ]
+    },
+    {
+      "text": "Prepare renamed copies",
+      "pages": [
+        "tools/batch-file-renamer/index.html"
+      ]
+    },
+    {
+      "text": "Preview basic Markdown formatting safely in your browser.",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/markdown-preview/index.html"
+      ]
+    },
+    {
+      "text": "Preview new filenames and download renamed copies in a ZIP archive.",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/photo-file/index.html"
+      ]
+    },
+    {
+      "text": "Preview the next five occurrences of five-field cron schedules in UTC.",
+      "pages": [
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/index.html"
+      ]
+    },
+    {
+      "text": "PRIVATE BROWSER UTILITY",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "Process locally",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Punycode / IDN Converter",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/punycode-converter/index.html"
+      ]
+    },
+    {
+      "text": "Punycode → Unicode",
+      "pages": [
+        "tools/security/punycode-converter/index.html"
+      ]
+    },
+    {
+      "text": "pаypal",
+      "pages": [
+        "tools/security/unicode-inspector/index.html"
+      ]
+    },
+    {
+      "text": "QR Code Generator",
+      "pages": [
+        "tools/photo-file/index.html",
+        "tools/qr-code-generator/index.html"
+      ]
+    },
+    {
+      "text": "Quality (JPEG / WebP)",
+      "pages": [
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html"
+      ]
+    },
+    {
+      "text": "Range to CIDR",
+      "pages": [
+        "tools/networking/ip-range-cidr-converter/index.html"
+      ]
+    },
+    {
+      "text": "Re-encode selected images using the browser canvas and download new copies. JPEG EXIF is inspected for potential GPS metadata before processing.",
+      "pages": [
+        "tools/exif-cleaner/index.html"
+      ]
+    },
+    {
+      "text": "Re-encoding normally removes embedded EXIF and GPS metadata, but is not a forensic guarantee of removing every possible metadata field. Always verify sensitive exports before sharing.",
+      "pages": [
+        "tools/exif-cleaner/index.html"
+      ]
+    },
+    {
+      "text": "Ready to calculate.",
+      "pages": [
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html",
+        "tools/networking/linux-chmod-calculator/index.html",
+        "tools/networking/network-port-reference/index.html",
+        "tools/networking/systemd-timer-builder/index.html",
+        "tools/networking/time-zone-converter/index.html",
+        "tools/networking/unix-timestamp-converter/index.html",
+        "tools/networking/vlan-ip-planner/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html"
+      ]
+    },
+    {
+      "text": "Ready.",
+      "pages": [
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Redact these patterns",
+      "pages": [
+        "tools/security/sensitive-text-redactor/index.html"
+      ]
+    },
+    {
+      "text": "Regex Tester",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/regex-tester/index.html"
+      ]
+    },
+    {
+      "text": "Regular expression",
+      "pages": [
+        "tools/code-data/regex-tester/index.html"
+      ]
+    },
+    {
+      "text": "Rejects DTD and ENTITY declarations. Serialization may not indent mixed content; XML syntax verification is performed in your browser. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/xml-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Replace selected emails, IPv4 addresses and phone-like strings with placeholders.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/sensitive-text-redactor/index.html"
+      ]
+    },
+    {
+      "text": "Requirements (NAME,HOSTS per line)",
+      "pages": [
+        "tools/networking/vlsm-subnet-planner/index.html"
+      ]
+    },
+    {
+      "text": "Resize, convert, clean, organize and analyze your files.",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Result",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html",
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html",
+        "tools/networking/linux-chmod-calculator/index.html",
+        "tools/networking/network-port-reference/index.html",
+        "tools/networking/systemd-timer-builder/index.html",
+        "tools/networking/time-zone-converter/index.html",
+        "tools/networking/unix-timestamp-converter/index.html",
+        "tools/networking/vlan-ip-planner/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html",
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Review URL structure for warning signs without visiting the destination.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Rotate or center-crop photos in your browser.",
+      "pages": [
+        "tools/photo-file/index.html",
+        "tools/photo-rotator/index.html"
+      ]
+    },
+    {
+      "text": "Rotation",
+      "pages": [
+        "tools/photo-rotator/index.html"
+      ]
+    },
+    {
+      "text": "Runs in an isolated Web Worker and aborts regex evaluation after 400 ms. Displays up to 100 matches. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/regex-tester/index.html"
+      ]
+    },
+    {
+      "text": "Schedule",
+      "pages": [
+        "tools/networking/systemd-timer-builder/index.html"
+      ]
+    },
+    {
+      "text": "Search a curated offline list of TCP/UDP ports.",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/network-port-reference/index.html"
+      ]
+    },
+    {
+      "text": "Search port or service",
+      "pages": [
+        "tools/networking/network-port-reference/index.html"
+      ]
+    },
+    {
+      "text": "Secret Leak Scanner",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/secret-leak-scanner/index.html"
+      ]
+    },
+    {
+      "text": "Secure Passphrase Generator",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/passphrase-generator/index.html"
+      ]
+    },
+    {
+      "text": "Secure Password Generator",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "SECURITY",
+      "pages": [
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Security & Text Analysis",
+      "pages": [
+        "tools/index.html",
+        "tools/security/index.html"
+      ]
+    },
+    {
+      "text": "SECURITY • PRIVACY",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Select files",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/photo-date-detective/index.html"
+      ]
+    },
+    {
+      "text": "Select multiple pictures, choose the output format and download new files. Transparency becomes white when saved as JPEG.",
+      "pages": [
+        "tools/image-converter/index.html"
+      ]
+    },
+    {
+      "text": "Select one or more character types.",
+      "pages": [
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "Select time zones",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Select which types of information to replace.",
+      "pages": [
+        "tools/security/sensitive-text-redactor/index.html"
+      ]
+    },
+    {
+      "text": "Semicolon",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Sensitive Text Redactor",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/sensitive-text-redactor/index.html"
+      ]
+    },
+    {
+      "text": "Separator",
+      "pages": [
+        "tools/security/passphrase-generator/index.html"
+      ]
+    },
+    {
+      "text": "Serialize XML",
+      "pages": [
+        "tools/code-data/xml-formatter/index.html"
+      ]
+    },
+    {
+      "text": "services: web: image: nginx:stable",
+      "pages": [
+        "tools/networking/docker-compose-checker/index.html"
+      ]
+    },
+    {
+      "text": "SHA-256",
+      "pages": [
+        "tools/security/text-hash-generator/index.html"
+      ]
+    },
+    {
+      "text": "SHA-256 File Verifier",
+      "pages": [
+        "tools/photo-file/index.html",
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "SHA-512",
+      "pages": [
+        "tools/security/text-hash-generator/index.html"
+      ]
+    },
+    {
+      "text": "Short text or a URL (up to 500 characters). Verify your QR with a scanner before distributing.. All results are new copies; originals remain untouched.",
+      "pages": [
+        "tools/qr-code-generator/index.html"
+      ]
+    },
+    {
+      "text": "Space",
+      "pages": [
+        "tools/security/passphrase-generator/index.html"
+      ]
+    },
+    {
+      "text": "SQL Formatter",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/sql-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Strict UTF-8 decoding rejects invalid byte sequences. Maximum 12,000 characters.",
+      "pages": [
+        "tools/security/text-hex-utf8/index.html"
+      ]
+    },
+    {
+      "text": "Supports common nested maps, sequences and scalar values. YAML anchors, custom tags, merge keys, block scalars, and multiple documents are not supported. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Supports common type, properties, required, items, enum, const and numeric/string/array size rules. Not a full JSON Schema implementation; $ref and advanced keywords are rejected. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/json-schema-validator/index.html"
+      ]
+    },
+    {
+      "text": "Supports headings, paragraphs, lists, bold, italics, and HTTPS links. Raw HTML and scripts are not executed; advanced GitHub Markdown is not supported. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/markdown-preview/index.html"
+      ]
+    },
+    {
+      "text": "Sydney",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Symbols",
+      "pages": [
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "Systemd Timer Builder",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/systemd-timer-builder/index.html"
+      ]
+    },
+    {
+      "text": "Tab",
+      "pages": [
+        "tools/code-data/csv-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Tehran",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Text & Code Diff Checker",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/text-code-diff/index.html"
+      ]
+    },
+    {
+      "text": "Text → UTF-8 hex",
+      "pages": [
+        "tools/security/text-hex-utf8/index.html"
+      ]
+    },
+    {
+      "text": "Text Hash Generator",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/text-hash-generator/index.html"
+      ]
+    },
+    {
+      "text": "Text Hex & UTF-8 Inspector",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/text-hex-utf8/index.html"
+      ]
+    },
+    {
+      "text": "Text or URL",
+      "pages": [
+        "tools/qr-code-generator/index.html"
+      ]
+    },
+    {
+      "text": "Text size (% image width)",
+      "pages": [
+        "tools/image-watermark/index.html"
+      ]
+    },
+    {
+      "text": "Text to test",
+      "pages": [
+        "tools/code-data/regex-tester/index.html"
+      ]
+    },
+    {
+      "text": "This detects exact duplicate bytes, not visually similar photos. Files larger than 256 MiB are skipped for browser memory safety.",
+      "pages": [
+        "tools/duplicate-checker/index.html"
+      ]
+    },
+    {
+      "text": "Time Zone Converter",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "Tokyo",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "TOOLS",
+      "pages": [
+        "tools/batch-file-renamer/index.html",
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html",
+        "tools/duplicate-checker/index.html",
+        "tools/exif-cleaner/index.html",
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html",
+        "tools/image-to-pdf/index.html",
+        "tools/image-watermark/index.html",
+        "tools/networking/cron-expression-builder/index.html",
+        "tools/networking/docker-compose-checker/index.html",
+        "tools/networking/index.html",
+        "tools/networking/ip-range-cidr-converter/index.html",
+        "tools/networking/ipv4-subnet-calculator/index.html",
+        "tools/networking/ipv6-prefix-calculator/index.html",
+        "tools/networking/linux-chmod-calculator/index.html",
+        "tools/networking/network-port-reference/index.html",
+        "tools/networking/systemd-timer-builder/index.html",
+        "tools/networking/time-zone-converter/index.html",
+        "tools/networking/unix-timestamp-converter/index.html",
+        "tools/networking/vlan-ip-planner/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html",
+        "tools/photo-color-palette/index.html",
+        "tools/photo-date-detective/index.html",
+        "tools/photo-file/index.html",
+        "tools/photo-rotator/index.html",
+        "tools/qr-code-generator/index.html",
+        "tools/security/index.html",
+        "tools/security/jwt-inspector/index.html",
+        "tools/security/passphrase-generator/index.html",
+        "tools/security/password-generator/index.html",
+        "tools/security/password-strength/index.html",
+        "tools/security/punycode-converter/index.html",
+        "tools/security/secret-leak-scanner/index.html",
+        "tools/security/sensitive-text-redactor/index.html",
+        "tools/security/text-code-diff/index.html",
+        "tools/security/text-hash-generator/index.html",
+        "tools/security/text-hex-utf8/index.html",
+        "tools/security/unicode-inspector/index.html",
+        "tools/security/url-safety-inspector/index.html",
+        "tools/sha256-verifier/index.html"
+      ]
+    },
+    {
+      "text": "Tools for every task.",
+      "pages": [
+        "tools/index.html"
+      ]
+    },
+    {
+      "text": "Tr0ub4dor&3VeryLong",
+      "pages": [
+        "tools/security/password-strength/index.html"
+      ]
+    },
+    {
+      "text": "Try JavaScript regular expressions against test text.",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/regex-tester/index.html"
+      ]
+    },
+    {
+      "text": "Unicode & Homoglyph Inspector",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/unicode-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Unicode → ASCII (IDN)",
+      "pages": [
+        "tools/security/punycode-converter/index.html"
+      ]
+    },
+    {
+      "text": "Unix Timestamp Converter",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/unix-timestamp-converter/index.html"
+      ]
+    },
+    {
+      "text": "Uppercase A–Z",
+      "pages": [
+        "tools/security/password-generator/index.html"
+      ]
+    },
+    {
+      "text": "URL",
+      "pages": [
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "URL Encoder & Decoder",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/url-encoder/index.html"
+      ]
+    },
+    {
+      "text": "URL Safety Inspector",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/url-safety-inspector/index.html"
+      ]
+    },
+    {
+      "text": "Users,60 Servers,20",
+      "pages": [
+        "tools/networking/vlsm-subnet-planner/index.html"
+      ]
+    },
+    {
+      "text": "Uses secure browser randomness and a bundled combinatorial wordlist. Not a standard Diceware list. Do not reuse passphrases.",
+      "pages": [
+        "tools/security/passphrase-generator/index.html"
+      ]
+    },
+    {
+      "text": "Uses the browser's cryptographically secure random generator. HTTPS is required. Generate 1 to 100 at a time. Maximum text input: 500,000 characters. Processing is local and your original text is unchanged.",
+      "pages": [
+        "tools/code-data/uuid-generator/index.html"
+      ]
+    },
+    {
+      "text": "UTC",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "UTF-8 hex → text",
+      "pages": [
+        "tools/security/text-hex-utf8/index.html"
+      ]
+    },
+    {
+      "text": "UUID Generator",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/uuid-generator/index.html"
+      ]
+    },
+    {
+      "text": "Validate JSON",
+      "pages": [
+        "tools/code-data/json-schema-validator/index.html"
+      ]
+    },
+    {
+      "text": "Validate XML",
+      "pages": [
+        "tools/code-data/xml-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Validate XML and serialize it into a clean output.",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/xml-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Validate, prettify, or minify JSON directly in your browser.",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/json-formatter/index.html"
+      ]
+    },
+    {
+      "text": "Vienna",
+      "pages": [
+        "tools/networking/time-zone-converter/index.html"
+      ]
+    },
+    {
+      "text": "View UTF-8 bytes, hexadecimal values and Unicode code points.",
+      "pages": [
+        "tools/security/index.html",
+        "tools/security/text-hex-utf8/index.html"
+      ]
+    },
+    {
+      "text": "VLAN & IP Address Planner",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/vlan-ip-planner/index.html"
+      ]
+    },
+    {
+      "text": "VLSM Subnet Planner",
+      "pages": [
+        "tools/networking/index.html",
+        "tools/networking/vlsm-subnet-planner/index.html"
+      ]
+    },
+    {
+      "text": "Watermark text",
+      "pages": [
+        "tools/image-watermark/index.html"
+      ]
+    },
+    {
+      "text": "WebP",
+      "pages": [
+        "tools/image-compressor/index.html",
+        "tools/image-converter/index.html"
+      ]
+    },
+    {
+      "text": "weekly",
+      "pages": [
+        "tools/networking/systemd-timer-builder/index.html"
+      ]
+    },
+    {
+      "text": "What this tool supports:",
+      "pages": [
+        "tools/code-data/base64-encoder/index.html",
+        "tools/code-data/csv-json-converter/index.html",
+        "tools/code-data/html-entity-converter/index.html",
+        "tools/code-data/json-formatter/index.html",
+        "tools/code-data/json-schema-validator/index.html",
+        "tools/code-data/markdown-preview/index.html",
+        "tools/code-data/regex-tester/index.html",
+        "tools/code-data/sql-formatter/index.html",
+        "tools/code-data/url-encoder/index.html",
+        "tools/code-data/uuid-generator/index.html",
+        "tools/code-data/xml-formatter/index.html",
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "Words (5–10)",
+      "pages": [
+        "tools/security/passphrase-generator/index.html"
+      ]
+    },
+    {
+      "text": "Working with photos and files? Browse our original privacy-first utilities.",
+      "pages": [
+        "tools/code-data/index.html"
+      ]
+    },
+    {
+      "text": "XML Formatter & Validator",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/xml-formatter/index.html"
+      ]
+    },
+    {
+      "text": "YAML ↔ JSON Converter",
+      "pages": [
+        "tools/code-data/index.html",
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "YAML to JSON",
+      "pages": [
+        "tools/code-data/yaml-json-converter/index.html"
+      ]
+    },
+    {
+      "text": "yearly",
+      "pages": [
+        "tools/networking/systemd-timer-builder/index.html"
+      ]
+    },
+    {
+      "text": "Your privacy comes first.",
+      "pages": [
+        "tools/index.html"
+      ]
+    }
+  ]
+}

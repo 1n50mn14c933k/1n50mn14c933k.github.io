@@ -44,9 +44,9 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
    const lang=(document.documentElement.lang||"en").toLowerCase().split("-")[0];
    const label=labels[lang]||labels.en;
    const style=document.createElement("style");style.textContent=css;document.head.append(style);
-   const a=document.createElement("a");a.className="kolfat-tools-direct";a.href="/tools/";a.dir="auto";a.setAttribute("aria-label",label+(lang==="en"?"":" (English tools interface)"));
+   const a=document.createElement("a");a.className="kolfat-tools-direct";a.href=lang==="en"?"/tools/":"/"+lang+"/tools/";a.dir="auto";a.setAttribute("aria-label",label);
    const span=document.createElement("span");span.textContent=label;a.append(span);
-   if(lang!=="en"){const badge=document.createElement("small");badge.className="tools-lang";badge.textContent="EN";badge.title="Tools currently in English";a.append(badge);}
+
    const arrow=document.createElement("span");arrow.textContent="↗";arrow.setAttribute("aria-hidden","true");a.append(arrow);
    const hero=document.querySelector('html[data-kolfat-page="home"] .hero-copy');
    const start=hero?.querySelector('a.btn[href*="/Media_Kolfat/"]');
@@ -204,4 +204,28 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
   };
   if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",initUnifiedChrome,{once:true});
   else initUnifiedChrome();
+})();
+
+
+/* English KOLFAT TOOLS language picker. Localized pages use their own i18n selector.
+   Reuse language URLs and existing .lang-menu styles; no external requests. */
+(() => {
+ const addPicker=()=>{
+  if(document.documentElement.lang!=="en"||!location.pathname.startsWith("/tools/"))return;
+  const nav=document.querySelector(".top-nav");
+  if(!nav||nav.querySelector(".kf-tools-language"))return;
+  const locales={en:"English",de:"Deutsch",fr:"Français",es:"Español",pt:"Português",it:"Italiano",ru:"Русский",zh:"中文",ja:"日本語",hi:"हिन्दी",fa:"فارسی",ar:"العربية"};
+  const picker=document.createElement("details");picker.className="lang-menu kf-tools-language";
+  const label=document.createElement("summary");label.textContent="🌐 EN ▾";label.setAttribute("aria-label","Tools language");
+  const links=document.createElement("nav");links.className="lang-list";links.setAttribute("aria-label","Tools languages");
+  for(const [code,text]of Object.entries(locales)){
+   const a=document.createElement("a");a.href=code==="en"?location.pathname:"/"+code+location.pathname;
+   a.textContent=(code==="en"?"✓ ":"")+text;
+   if(code==="en")a.setAttribute("aria-current","page");
+   links.append(a);
+  }
+  picker.append(label,links);nav.append(picker);
+  picker.addEventListener("toggle",()=>{if(picker.open)for(const d of nav.querySelectorAll("details"))if(d!==picker)d.open=false;});
+ };
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",addPicker,{once:true});else addPicker();
 })();
