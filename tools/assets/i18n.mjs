@@ -142,6 +142,42 @@ const frExtra={
 "Networking":"Réseau","Security":"Sécurité","Password length":"Longueur du mot de passe"
 };
 if(lang==="fr")Object.assign(ui,frExtra);
+const esDescriptions=["Eliminar metadatos EXIF y GPS de imágenes","Comprimir y redimensionar imágenes","Convertir imágenes entre formatos","Investigar las fechas de fotografías","Detectar archivos exactamente iguales","Renombrar copias de archivos por lotes","Añadir marcas de agua a imágenes","Girar y recortar fotografías","Crear PDF a partir de imágenes","Verificar la integridad SHA-256 de archivos","Generar códigos QR a partir de texto o URL","Extraer los colores principales de fotografías","Formatear y validar JSON","Convertir entre YAML y JSON","Convertir entre CSV y JSON","Formatear y validar XML","Codificar y decodificar Base64","Codificar y decodificar componentes URL","Probar expresiones regulares","Generar UUID versión 4","Convertir entidades HTML","Formatear SQL para facilitar la lectura","Mostrar la vista previa de Markdown","Validar reglas básicas de JSON Schema","Calcular subredes IPv4 y CIDR","Calcular prefijos IPv6","Planificar subredes VLSM","Convertir rangos IP y bloques CIDR","Planificar direcciones VLAN e IP","Consultar puertos de red sin conexión","Crear expresiones cron","Crear ejemplos de temporizadores systemd","Convertir marcas de tiempo Unix","Convertir zonas horarias","Calcular permisos chmod de Linux","Comprobar YAML básico de Docker Compose","Crear contraseñas aleatorias seguras","Crear frases de contraseña","Estimar la seguridad de las contraseñas","Decodificar JWT sin verificar la firma","Calcular hashes de texto","Buscar posibles secretos en texto","Ocultar datos sensibles en texto","Comparar texto y código línea por línea","Detectar caracteres Unicode similares","Convertir dominios Punycode e IDN","Inspeccionar estructuras URL sin abrirlas","Inspeccionar texto, hexadecimal y UTF-8"];
+const esExtra={
+"Tools for every task.":"Herramientas para cada tarea.","TOOLS":"HERRAMIENTAS",
+"Explore all 12 photo & file tools":"Explorar las 12 herramientas de fotos y archivos",
+"Explore all 12 code & data tools":"Explorar las 12 herramientas de código y datos",
+"Explore all 12 networking & automation tools":"Explorar las 12 herramientas de redes y automatización",
+"Explore all 12 security & text analysis tools":"Explorar las 12 herramientas de seguridad y texto",
+"Length (12–128)":"Longitud (12–128)","Character groups":"Grupos de caracteres",
+"Select one or more character types.":"Selecciona uno o varios tipos de caracteres.",
+"Uppercase A–Z":"Mayúsculas A–Z","Lowercase a–z":"Minúsculas a–z",
+"Numbers 0–9":"Números 0–9","Symbols":"Símbolos",
+"Avoid ambiguous characters":"Evitar caracteres ambiguos",
+"Ready.":"Listo.","Results appear here.":"Los resultados aparecen aquí.",
+"More Security & Text Tools":"Más herramientas de seguridad y texto",
+"All 12 security and text analysis utilities.":"Las 12 herramientas de seguridad y análisis de texto.",
+"Back to Security & Text Analysis →":"Volver a seguridad y análisis de texto →",
+"Important:":"Importante:","Choose file":"Elegir archivo","Choose a file":"Elegir archivo",
+"Select file":"Seleccionar archivo","Select files":"Seleccionar archivos",
+"Copied!":"¡Copiado!","Reset":"Restablecer","Download PNG":"Descargar PNG",
+"Download PDF":"Descargar PDF","Download CSV":"Descargar CSV",
+"Generate":"Generar","Analyze":"Analizar","Calculate":"Calcular",
+"Check":"Comprobar","Inspect":"Inspeccionar","Run":"Ejecutar",
+"Options":"Opciones","Settings":"Configuración","Preview":"Vista previa",
+"Filename":"Nombre de archivo","File name":"Nombre de archivo","File size":"Tamaño del archivo",
+"Width":"Ancho","Height":"Alto","Quality":"Calidad","Size":"Tamaño",
+"Text to analyze":"Texto que analizar","Text to convert":"Texto que convertir",
+"Paste text here...":"Pega el texto aquí…","Enter text here...":"Escribe el texto aquí…",
+"Select an option":"Selecciona una opción","Choose an option":"Elige una opción",
+"Supported formats":"Formatos compatibles","Enter a value":"Introduce un valor",
+"No results":"No hay resultados","Processing...":"Procesando…",
+"Show details":"Mostrar detalles","Hide details":"Ocultar detalles",
+"Browser-based processing":"Procesamiento en el navegador","Back to tools":"Volver a herramientas",
+"Photo & File":"Fotos y archivos","Code & Data":"Código y datos",
+"Networking":"Redes","Security":"Seguridad","Password length":"Longitud de contraseña"
+};
+if(lang==="es")Object.assign(ui,esExtra);
 if(pack&&local){
  const route=location.pathname.replace(/^\/(?:de|fr|es|pt|it|ru|zh|ja|hi|fa|ar)(?=\/tools\/)/,"");
  const parts=route.split("/").filter(Boolean).slice(1);
@@ -216,13 +252,14 @@ if(pack&&local){
   const x=card.querySelector(".kf-category-open");if(x)x.textContent=pack.labels.explore+" ↗";
  }
  const lead=document.querySelector("main .hero-tools p.lead");
- if(lead && !((lang==="fa"||lang==="fr") && toolIndex!==undefined))lead.textContent=isDir?local.directory:isCat?local.catlead:local.lead;
+ if(lead && !((lang==="fa"||lang==="fr"||lang==="es") && toolIndex!==undefined))lead.textContent=isDir?local.directory:isCat?local.catlead:local.lead;
  if(lead&&lang==="fr"&&toolIndex!==undefined)lead.textContent=frDescriptions[toolIndex];
+ if(lead&&lang==="es"&&toolIndex!==undefined)lead.textContent=esDescriptions[toolIndex];
  for(const card of document.querySelectorAll("a.tool-card p,a.kf-category-card .kf-category-description")){
    card.textContent=isDir||isCat?local.lead:local.catlead;
  }
  const disclaimer=document.querySelector(".workspace .caveat");
- if(disclaimer && (lang==="fa"||lang==="fr") && toolIndex!==undefined){disclaimer.textContent=safetyPacks[toolIndex]||"";}else if(disclaimer){const original=disclaimer.textContent;const details=document.createElement("details");details.className="kf-technical-details";const summary=document.createElement("summary");summary.textContent=ui["Show original technical details"]||"Show original technical details";details.append(summary);const p=document.createElement("p");p.textContent=original;details.append(p);disclaimer.textContent=local.warning+" ";disclaimer.append(details);}
+ if(disclaimer && (lang==="fa"||lang==="fr"||lang==="es") && toolIndex!==undefined){disclaimer.textContent=safetyPacks[toolIndex]||"";}else if(disclaimer){const original=disclaimer.textContent;const details=document.createElement("details");details.className="kf-technical-details";const summary=document.createElement("summary");summary.textContent=ui["Show original technical details"]||"Show original technical details";details.append(summary);const p=document.createElement("p");p.textContent=original;details.append(p);disclaimer.textContent=local.warning+" ";disclaimer.append(details);}
  // Update links only within the TOOLS directory; retain original engine assets.
  for(const a of document.querySelectorAll('a[href^="/tools/"]')){
   a.setAttribute("href","/"+lang+a.getAttribute("href"));
@@ -261,7 +298,7 @@ if(pack&&local){
  const list=document.createElement("nav");
  list.className="lang-list";list.setAttribute("aria-label",local.lang+" / Language");
  const origin=route.replace(/^\/tools\//,"");
- for(const code of ["en","de","fa","fr"]){
+ for(const code of ["en","de","fa","fr","es"]){
   const anchor=document.createElement("a");anchor.href=(code==="en"?"/tools/":"/"+code+"/tools/")+origin;
   anchor.textContent=(code===lang?"✓ ":"")+langNames[code];
   if(code===lang)anchor.setAttribute("aria-current","page");
@@ -316,7 +353,7 @@ if(pack&&local){
  }
 
  // Translate UI attributes in German only; never alter user input or machine-readable values.
- if(lang==="de"||lang==="fa"||lang==="fr")for(const el of document.querySelectorAll("main input[placeholder],main textarea[placeholder],main input[aria-label],main button[aria-label],main select[aria-label],main [title]")){
+ if(lang==="de"||lang==="fa"||lang==="fr"||lang==="es")for(const el of document.querySelectorAll("main input[placeholder],main textarea[placeholder],main input[aria-label],main button[aria-label],main select[aria-label],main [title]")){
    for(const attr of ["placeholder","aria-label","title"]){
      const v=el.getAttribute(attr);if(!v)continue;
      const translation=translated(v);if(translation!==v)el.setAttribute(attr,translation);

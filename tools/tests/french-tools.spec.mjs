@@ -10,7 +10,7 @@ test("French page renders: "+route,async({page})=>{
  await page.goto("http://127.0.0.1:8765/fr"+route);
  await expect(page.locator("html")).toHaveAttribute("lang","fr");
  await expect(page.locator("main h1")).toBeVisible();
- await expect(page.locator(".kf-tools-language .lang-list a")).toHaveCount(4);
+ await expect(page.locator(".kf-tools-language .lang-list a")).toHaveCount(5);
  await expect(page.locator("html")).toHaveAttribute("dir","ltr");
  await expect(page.locator("footer.kf-global-footer")).toHaveCount(1);
  if(!roots.includes(route))await expect(page.locator(".kf-i18n-safety")).toHaveCount(0);
