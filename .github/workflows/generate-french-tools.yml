@@ -30,7 +30,7 @@ jobs:
           original=list(Path('tools').rglob('index.html'))
           assert len(original)==53,len(original)
           for source in original:
-            page=Path('fa')/source
+            page=Path('fr')/source
             assert page.exists(),str(page)
             html=page.read_text()
             assert 'lang="fr"' in html and 'dir="ltr"' in html,str(page)
@@ -41,8 +41,8 @@ jobs:
             assert 'href="/fr/tools/' in html or str(source)=='tools/index.html',str(page)
           ns={'sm':'http://www.sitemaps.org/schemas/sitemap/0.9'}
           urls=[loc.text for loc in ET.parse('sitemap.xml').getroot().findall('.//sm:loc',ns)]
-          fa=[url for url in urls if '/fr/tools/' in url]
-          assert len(fr)==53,(len(fr),fa)
+          fr=[url for url in urls if '/fr/tools/' in url]
+          assert len(fr)==53,(len(fr),fr)
           assert len(urls)==len(set(urls))
           print('PASS: 53 French LTR pages, shared assets and sitemap entries')
           PY
