@@ -1,12 +1,33 @@
 import {readFileSync,writeFileSync,mkdirSync} from "node:fs";
 import {join,dirname} from "node:path";
 import {fileURLToPath} from "node:url";
-import {toolIds,categoryIds,localePacks} from "../tools/assets/i18n-data.mjs";
+import {toolIds,categoryIds,englishNames,englishCategories,localePacks} from "../tools/assets/i18n-data.mjs";
+import {textTranslations} from "../tools/assets/i18n-text.mjs";
 const root=join(dirname(fileURLToPath(import.meta.url)),"..");
 const paths=["tools/index.html",...categoryIds.map(x=>"tools/"+(x==="photo"?"photo-file":x)+"/index.html"),...toolIds.map((slug,i)=>i<12?"tools/"+slug+"/index.html":"tools/"+categoryIds[Math.floor(i/12)]+"/"+slug+"/index.html")];
 if(paths.length!==53)throw Error("Expected 53 English pages");
 const esc=s=>String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll('"',"&quot;");
 const langs=Object.keys(localePacks);
+const decode=s=>s.replaceAll("&amp;","&").replaceAll("&lt;","<").replaceAll("&gt;",">").replaceAll("&quot;",'"').replaceAll("&#39;","'");
+const staticTranslate=(html,lang,pack)=>{
+ const map=new Map();
+ const common=textTranslations[lang]||{};
+ for(const [english,translation] of Object.entries(common))map.set(english,translation);
+ for(let i=0;i<englishNames.length;i++)map.set(englishNames[i],pack.names[i]);
+ for(let i=0;i<englishCategories.length;i++)map.set(englishCategories[i],pack.labels[categoryIds[i]]);
+ // Translate individual text nodes only, never attributes, scripts, JS code or user data.
+ return html.replace(/(<main\\b[^>]*>)([\\s\\S]*?)(<\\/main>)/i,(whole,open,main,close)=>{
+  const translated=main.replace(/>([^<>]+)</g,(full,original)=>{
+   const plain=decode(original.trim());
+   const value=map.get(plain);
+   if(!value)return full;
+   const lead=original.match(/^\\s*/)?.[0]||"",tail=original.match(/\\s*$/)?.[0]||"";
+   return ">"+lead+esc(value)+tail+"<";
+  });
+  return open+translated+close;
+ });
+};
+
 let generated=0;
 for(const lang of langs){
  const pack=localePacks[lang];
@@ -31,6 +52,7 @@ for(const lang of langs){
   alternate+='<link rel="alternate" hreflang="x-default" href="https://kolfat.app/'+path.replace(/index.html$/,"")+'">';
   html=html.replace("</head>",'<link rel="stylesheet" href="/tools/assets/i18n.css?v=20261025-1">'+alternate+"</head>");
   html=html.replace("</body>",'<script type="module" src="/tools/assets/i18n.mjs?v=20261025-1"></script></body>');
+  html=staticTranslate(html,lang,pack);
   const dest=join(root,lang,path);mkdirSync(dirname(dest),{recursive:true});writeFileSync(dest,html);
   generated++;
  }
