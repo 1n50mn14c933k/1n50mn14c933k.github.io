@@ -221,4 +221,17 @@
   <url><loc>https://kolfat.app/tools/networking/time-zone-converter/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://kolfat.app/tools/networking/linux-chmod-calculator/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://kolfat.app/tools/networking/docker-compose-checker/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/password-generator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/passphrase-generator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/password-strength/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/jwt-inspector/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/text-hash-generator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/secret-leak-scanner/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/sensitive-text-redactor/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/text-code-diff/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/unicode-inspector/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/punycode-converter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/url-safety-inspector/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/tools/security/text-hex-utf8/</loc><lastmod>2026-10-25</lastmod></url>
 </urlset>

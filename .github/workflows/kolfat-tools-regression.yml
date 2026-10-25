@@ -37,6 +37,9 @@ jobs:
           node --check tools/assets/networking-address.mjs
           node --check tools/assets/networking-automation.mjs
           node --check tools/assets/networking-app.mjs
+          node --check tools/assets/security-core.mjs
+          node --check tools/assets/security-text.mjs
+          node --check tools/assets/security-app.mjs
       - name: Run core utility tests
         run: node --test tools/tests/*.test.mjs
       - name: Validate public tools in sitemap
@@ -50,6 +53,7 @@ jobs:
           urls=[loc.text for loc in root.findall('s:url/s:loc',ns)]
           expected=['https://kolfat.app/tools/','https://kolfat.app/tools/photo-file/']+[f'https://kolfat.app/tools/{slug}/' for slug in ['image-compressor','image-converter','exif-cleaner','photo-date-detective','duplicate-checker','batch-file-renamer','image-watermark','photo-rotator','image-to-pdf','sha256-verifier','qr-code-generator','photo-color-palette']] + ['https://kolfat.app/tools/code-data/'] + [f'https://kolfat.app/tools/code-data/{slug}/' for slug in ['json-formatter','yaml-json-converter','csv-json-converter','xml-formatter','base64-encoder','url-encoder','regex-tester','uuid-generator','html-entity-converter','sql-formatter','markdown-preview','json-schema-validator']]
           expected += ['https://kolfat.app/tools/networking/']+[f'https://kolfat.app/tools/networking/{slug}/' for slug in ['ipv4-subnet-calculator','ipv6-prefix-calculator','vlsm-subnet-planner','ip-range-cidr-converter','vlan-ip-planner','network-port-reference','cron-expression-builder','systemd-timer-builder','unix-timestamp-converter','time-zone-converter','linux-chmod-calculator','docker-compose-checker']]
+          expected += ['https://kolfat.app/tools/security/']+[f'https://kolfat.app/tools/security/{slug}/' for slug in ["password-generator","passphrase-generator","password-strength","jwt-inspector","text-hash-generator","secret-leak-scanner","sensitive-text-redactor","text-code-diff","unicode-inspector","punycode-converter","url-safety-inspector","text-hex-utf8"]]
           assert len(urls)==len(set(urls)),'duplicate URLs'
           for url in expected:
             assert url in urls, url
