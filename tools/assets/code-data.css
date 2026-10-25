@@ -8,7 +8,7 @@
 .kf-field textarea{display:block;width:100%;margin-top:8px;min-height:150px;padding:15px;border:1px solid #525252;border-radius:11px;background:#080808;color:#fff;font:14px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;resize:vertical;overflow-wrap:anywhere}
 .kf-field textarea:focus-visible,.kf-controls input:focus-visible,.kf-controls select:focus-visible{outline:2px solid #ff9c58;outline-offset:2px}
 .kf-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.kf-controls label input,.kf-controls label select{display:block;width:100%;margin-top:7px;min-height:44px;border-radius:9px;border:1px solid #555;background:#080808;color:#fff;padding:9px 12px;font:inherit}
+.kf-controls label input:not([type="checkbox"]):not([type="radio"]),.kf-controls label select{display:block;width:100%;margin-top:7px;min-height:44px;border-radius:9px;border:1px solid #555;background:#080808;color:#fff;padding:9px 12px;font:inherit}
 .kf-loader{font-weight:400}.kf-loader input{display:block;margin-top:7px;max-width:100%}
 .kf-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:15px 0 25px}
 .kf-actions>button{cursor:pointer;min-height:44px;padding:8px 14px;border:1px solid #777;background:#171717;color:#fff;border-radius:9px;font-weight:650}
