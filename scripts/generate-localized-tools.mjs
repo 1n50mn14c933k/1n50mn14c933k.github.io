@@ -3,7 +3,7 @@ import {join,dirname} from "node:path";
 import {fileURLToPath} from "node:url";
 import {toolIds,categoryIds,localePacks} from "../tools/assets/i18n-data.mjs";
 const root=join(dirname(fileURLToPath(import.meta.url)),"..");
-const paths=["tools/index.html",...categoryIds.map(x=>"tools/"+x+"/index.html"),...toolIds.map((slug,i)=>i<12?"tools/"+slug+"/index.html":"tools/"+categoryIds[Math.floor(i/12)]+"/"+slug+"/index.html")];
+const paths=["tools/index.html",...categoryIds.map(x=>"tools/"+(x==="photo"?"photo-file":x)+"/index.html"),...toolIds.map((slug,i)=>i<12?"tools/"+slug+"/index.html":"tools/"+categoryIds[Math.floor(i/12)]+"/"+slug+"/index.html")];
 if(paths.length!==53)throw Error("Expected 53 English pages");
 const esc=s=>String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll('"',"&quot;");
 const langs=Object.keys(localePacks);
@@ -12,7 +12,7 @@ for(const lang of langs){
  const pack=localePacks[lang];
  if(pack.names.length!==48)throw Error("Missing localized names "+lang);
  for(const path of paths){
-  const slug=path.split("/").at(-2),i=toolIds.indexOf(slug),ci=categoryIds.indexOf(slug);
+  const slug=path.split("/").at(-2),i=toolIds.indexOf(slug),ci=categoryIds.indexOf(slug==="photo-file"?"photo":slug);
   const title=i>=0?pack.names[i]:ci>=0?pack.labels[categoryIds[ci]]:pack.labels.all;
   const url="/"+lang+"/"+path.replace(/index.html$/,"");
   let html=readFileSync(join(root,path),"utf8");
