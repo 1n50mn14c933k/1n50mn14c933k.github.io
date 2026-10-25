@@ -7,7 +7,7 @@ const photo = read("photo-file/index.html");
 const code = read("code-data/index.html");
 const count = (text,regex)=>(text.match(regex)||[]).length;
 test("TOOL homepage is a compact category overview, not a wall of individual cards",()=>{
- assert.equal(count(hub,/class="kf-category-card"/g),3);
+ assert.equal(count(hub,/class="kf-category-card"/g),4);
  assert.equal(count(hub,/class="tool-card"/g),0);
  assert.ok(hub.includes('href="/tools/photo-file/"'));
  assert.ok(hub.includes('href="/tools/code-data/"'));
