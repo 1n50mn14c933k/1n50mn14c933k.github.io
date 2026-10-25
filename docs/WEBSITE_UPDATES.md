@@ -1,5 +1,17 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-25 — Visible site-wide ☕ Support KOLFAT header shortcut
+
+**Reason:** The previously added Ko-fi link was hidden in the main TOOLS footer and therefore not visible to most visitors. The owner requested an attractive, unobtrusive header shortcut **on every website page** next to MENU/language controls; on GitHub, visible shortcuts **only** on the account's profile README and MEDIA_KOLFAT repository.
+
+**Changed files:** `assets/nav-dropdown.js`, `assets/nav-dropdown.css`, `tools/index.html`, `tools/tests/support-links.test.mjs`, `tools/tests/global-support.spec.mjs`, `.github/workflows/kolfat-tools-regression.yml`, `README.md`, `docs/SUPPORT_FUNDING.md`, `docs/NAVIGATION.md`, this history; remove the website repository's `.github/FUNDING.yml` to match GitHub scope. Separate documented PRs update profile and MEDIA_KOLFAT repositories.
+
+**Implementation:** Inject one external Ko-fi header anchor before MENU from the shared navigation script. Use a compact coffee icon on narrow phones, full label on desktop, visible orange outline, accessible keyboard focus, tooltip, no popup and no external payment scripts. Existing `/tools/` footer-only link removed.
+
+**Verification:** Node tests check shared script, CSS, documentation and page coverage. Chromium verifies header placement, clickability, mobile viewport containment and Ko-fi target on representative locales, content templates and utilities. Browser/live-deployment outcomes must be reported separately.
+
+**Rollback:** Revert the corresponding merge commit; or remove only `kolfat-support-link` code from `assets/nav-dropdown.js` and `assets/nav-dropdown.css`, then restore the prior documentation as necessary. No payments or personal data are processed on the site.
+
 ## 2026-10-25 — Optional Ko-fi support, repository sponsor link, and mandatory change documentation
 
 **Reason:** Give satisfied users an entirely voluntary method to support KOLFAT without subscriptions, paywalls or intrusive prompts. Enforce the project owner's requirement to document every GitHub change for troubleshooting and recovery.

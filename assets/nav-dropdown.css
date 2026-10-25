@@ -297,3 +297,67 @@ html[dir="rtl"] body .header .header-inner .top-nav .kolfat-menu-panel a[dir="au
   }
 }
 /* END KOLFAT MOBILE HEADER v2 */
+
+
+/* Global Ko-fi link. Visibly adjacent to MENU / language chooser, never floating.
+   On narrow screens the text is visually collapsed, while aria-label remains explicit. */
+html body .top-nav > a.kolfat-support-link {
+  box-sizing:border-box!important;
+  position:relative!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:7px!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:0!important;
+  min-height:44px!important;
+  margin:0!important;
+  padding:0 13px!important;
+  background:rgba(31,19,10,.94)!important;
+  color:#ffc79e!important;
+  border:1px solid #d87936!important;
+  border-radius:12px!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+  font:700 12px/1.2 Arial,Helvetica,sans-serif!important;
+  letter-spacing:.01em!important;
+  text-align:center!important;
+  cursor:pointer!important;
+  box-shadow:0 2px 12px rgba(0,0,0,.18)!important;
+  transition:background .15s,border-color .15s,transform .15s;
+}
+html body .top-nav > a.kolfat-support-link:hover {
+  background:#ff812e!important;
+  border-color:#ffad75!important;
+  color:#090909!important;
+}
+html body .top-nav > a.kolfat-support-link:focus-visible{
+  outline:3px solid #fff!important;
+  outline-offset:3px!important;
+}
+html body .top-nav > a.kolfat-support-link .kolfat-support-emoji{
+  display:inline!important;
+  font-size:17px!important;
+  line-height:1!important;
+}
+html body .top-nav > a.kolfat-support-link .kolfat-support-text{
+  display:inline!important;
+  white-space:nowrap!important;
+}
+@media(max-width:640px){
+  html body .top-nav > a.kolfat-support-link{
+    width:40px!important;
+    min-width:40px!important;
+    height:38px!important;
+    min-height:38px!important;
+    padding:0!important;
+    border-radius:10px!important;
+  }
+  html body .top-nav > a.kolfat-support-link .kolfat-support-text{
+    display:none!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  html body .top-nav > a.kolfat-support-link{transition:none!important}
+}

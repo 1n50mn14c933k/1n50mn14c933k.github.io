@@ -6,11 +6,10 @@
 
 ## Current setup
 
-1. **Ko-fi account:** Public name `KOLFAT` and account identifier `kolfat_app`, provided by the account owner. The user selected PayPal and Ko-fi Free mode with optional one-time tips.
-2. **Ko-fi page controls:** The owner's screenshot shows a default €2 tip and both *One time* and *Monthly* tabs. If the goal is strictly one-time support, the owner should open **Ko-fi → Memberships → Memberships Mode** and set it to **Off**. This is a Ko-fi account setting, not something GitHub Pages can control.
-3. **Funding file:** `.github/FUNDING.yml` uses `ko_fi: kolfat_app`. GitHub supports the Ko-fi account identifier, not the full URL, in the `ko_fi` key.
-4. **GitHub Sponsor button:** If the repository's Sponsor button is not visible, an administrator must check **Settings → General → Features → Sponsorships**. Presence of `FUNDING.yml` alone is not proof that the button is enabled in GitHub's interface.
-5. **Public website:** The only added Ko-fi link is in the **main** `/tools/` footer, marked "☕ Tip (optional)." We intentionally do not show fundraising popups or ask for donations in individual tool workflows.
+1. **Ko-fi:** https://ko-fi.com/kolfat_app, KOLFAT branding, PayPal, optional **one-time tips**. The owner confirmed monthly support was disabled on October 25, 2026.
+2. **Website:** Every rendered page with the shared KOLFAT header uses `assets/nav-dropdown.js` to insert one **☕ Support KOLFAT** link directly before MENU. `assets/nav-dropdown.css` styles it with restrained orange accents. Narrow mobile layouts display a compact coffee icon with the complete accessible label and tooltip.
+3. **GitHub:** The profile README in `1n50mn14c933k/1n50mn14c933k` and the public `MEDIA_KOLFAT` README display the Ko-fi shortcut. `MEDIA_KOLFAT/.github/FUNDING.yml` configures its GitHub Sponsor option. The website repository **does not** advertise a Sponsor button of its own.
+4. **Previous placement:** The old `/tools/` footer-only link was removed; no donation popups, tool interruptions, or embedded Ko-fi scripts are used.
 
 ## Boundaries
 
@@ -22,12 +21,12 @@
 
 ## Validation
 
-Run `node --test tools/tests/*.test.mjs` or verify the **KOLFAT Tools Regression** workflow. Open `/tools/`, verify there is exactly one external optional-tip footer link, confirm its address, and make sure all four category cards and existing tool links still work. In GitHub, inspect the repository's funding menu and confirm whether Sponsorships is enabled. Do not perform a test payment automatically.
+Run `node --test tools/tests/*.test.mjs` and the **KOLFAT Tools Regression** GitHub Actions workflow. The global-support tests inspect HTML source and exercise representative pages in Chromium at desktop, mobile and narrow-phone widths. Verify the link appears next to MENU, stays inside the viewport, opens the exact `https://ko-fi.com/kolfat_app` address in a new tab, remains readable on desktop and accessible on mobile. The site does not test a Ko-fi payment.
 
 ## Rollback and troubleshooting
 
-- To hide the tip from the website: remove the footer anchor containing `https://ko-fi.com/kolfat_app` from `tools/index.html`; redeploy GitHub Pages.
-- To remove the GitHub Sponsor link: remove or change `.github/FUNDING.yml`; Github will update the available funding links.
-- To revert the whole change, revert the support integration merge commit from GitHub history. Retain this record as the recovery reference.
-- If Ko-fi changes its username, update the destination and funding key **together** in the same commit, plus README and WEBSITE_UPDATES. Avoid broken or redirected donation links.
-- If recurring tips are still visible on Ko-fi, check **Memberships → Memberships Mode** directly in Ko-fi; it is not controlled by the GitHub repo.
+- **Website:** Revert the merge commit that introduces the global shortcut; alternatively remove the final support-link initializer from `assets/nav-dropdown.js` and the related `.kolfat-support-link` styles from `assets/nav-dropdown.css`. The rest of the MENU code must remain intact.
+- **Browser cache:** Old versioned asset URLs may remain cached briefly after deployment. Check the deployed JavaScript/CSS and retry after cache expiry before diagnosing a missing button.
+- **GitHub profile:** Remove the support badge from the profile repository README and record the rollback in its `docs/CHANGES.md`.
+- **MEDIA_KOLFAT:** Remove the support badge from its README and delete or adjust `.github/FUNDING.yml` to disable its GitHub Sponsor shortcut; record the rollback in its `docs/CHANGES.md`.
+- Do not put payment secrets in public files. If Ko-fi's account name changes, update all three locations and their change logs together.

@@ -87,3 +87,11 @@ Maintenance: edit `assets/site-refinements.css` and increment its query-string v
 - Shared CSS `assets/site-refinements.css` controls common visual details. Tools use `tools/assets/tools.css` and category-specific CSS. Preserve the cinematic homepage design, content-page reading width, mobile header alignment and RTL text readability.
 - Keep native keyboard operation, `<details>` menu visibility, visible focus styling, responsive card grids, and verified navigation for English/Persian/Arabic and the other site languages.
 - The October 25 UI audit Chromium suite checked representative pages and two viewport widths, not every URL individually. Treat passed CI as a release gate, not a substitute for human visual review of every template.
+
+## October 25, 2026 — Universal header support shortcut
+
+- **☕ Support KOLFAT** is placed immediately before MENU on all rendered pages, using the shared `assets/nav-dropdown.js` initializer and `assets/nav-dropdown.css` styling.
+- On narrow screens, the support button intentionally displays only the coffee icon to leave room for the brand, MENU and the language control; `aria-label` and the tooltip retain the full text.
+- The URL is `https://ko-fi.com/kolfat_app` with `target="_blank"` and `rel="noopener noreferrer"`. It never opens a popup, runs a third-party widget or blocks tool actions.
+- The shared navigation script must be loaded by every visible HTML page, including all 12 language variants and all 48 tools; redirect-only entry files are exempt. The Node contract tests and Chromium checks enforce presence and geometry.
+- For rollback, remove only the `kolfat-support-link` initializer and CSS rules, not the general navigation script.
