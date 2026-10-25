@@ -1,0 +1,31 @@
+name: Probe GitHub Models Localization
+on:
+  push:
+    branches: [feature/tools-12-language-rollout-20261025]
+    paths: ['.github/workflows/probe-localization-models.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  models: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify no-secret AI translation access
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error
+          req=urllib.request.Request(
+            "https://models.github.ai/inference/chat/completions",
+            data=json.dumps({"model":"openai/gpt-4o-mini","messages":[{"role":"system","content":"Translate English to German. Return JSON array only."},{"role":"user","content":'["Select files","Result copied."]'}],"temperature":0,"max_tokens":80}).encode(),
+            headers={"Authorization":"Bearer "+os.environ["GH_TOKEN"],"Content-Type":"application/json","Accept":"application/vnd.github+json"})
+          try:
+            with urllib.request.urlopen(req,timeout=40) as f:
+              result=json.load(f)
+              print("MODEL_OK",result["choices"][0]["message"]["content"])
+          except urllib.error.HTTPError as e:
+            print("MODEL_UNAVAILABLE_HTTP",e.code,e.read().decode()[:240])
+            raise
+          PY
