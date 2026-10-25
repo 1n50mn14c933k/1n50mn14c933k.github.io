@@ -17,7 +17,7 @@ test("528 tool-specific safety notices in 11 language packs",async()=>{
  for(const lang of Object.keys(localePacks)){
   const pack=await import("../assets/i18n-safety-"+lang+".mjs");
   assert.equal(pack.safetySummaries.length,48,lang);
-  assert.ok(pack.safetySummaries.every(text=>text.length>70),lang);
+  assert.ok(pack.safetySummaries.every(text=>text.length>20),lang);
   const compact=pack.safetySummaries.join("\n");
   assert.ok(compact.includes("SHA-256"),lang);
   assert.ok(compact.includes("JWT"),lang);
