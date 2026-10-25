@@ -1,0 +1,51 @@
+name: Generate German KOLFAT Tools
+on:
+  push:
+    branches: [feat/german-tools-first-20261025]
+    paths:
+      - 'scripts/generate-german-tools.mjs'
+      - '.github/workflows/generate-german-tools.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/german-tools-first-20261025
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate only German routes
+        run: node scripts/generate-german-tools.mjs
+      - name: Verify 53 routes and only EN/DE hreflang
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+          orig=list(Path('tools').rglob('index.html'))
+          assert len(orig)==53,len(orig)
+          for path in orig:
+            p=Path('de')/path
+            assert p.exists(),str(p)
+            t=p.read_text()
+            assert 'hreflang="en"' in t and 'hreflang="de"' in t
+            assert 'hreflang="fr"' not in t
+            assert 'src="/tools/assets/i18n.mjs' in t
+          allurls=[x.text for x in ET.parse('sitemap.xml').getroot().findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+          assert len(allurls)==len(set(allurls))
+          assert len(allurls)==287,len(allurls)
+          print('PASS German routes and SEO')
+          PY
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add de/tools sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "build(de): regenerate 53 pages with only released hreflang routes"
+            git push origin HEAD:feat/german-tools-first-20261025
+          fi

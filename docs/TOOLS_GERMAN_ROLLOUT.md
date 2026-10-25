@@ -13,3 +13,5 @@ Rollback: revert the German rollout merge, restoring the previous sitemap and sh
 ## Automated CI tests
 
 Added 53 route-level Chromium checks for German navigation, title, safety notices and mobile overflow, plus real JSON processing, secure password generation and English-to-German route switching. The result must be checked before release.
+
+German static SEO generator is scoped to de only. It strips hreflang for unreleased tool translations and enforces the 287-entry published-stage sitemap. This was corrected after the first 53-page Chromium suite passed.
