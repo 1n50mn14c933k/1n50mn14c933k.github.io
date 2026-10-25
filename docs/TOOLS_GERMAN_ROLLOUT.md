@@ -9,3 +9,7 @@ This focused branch contains 53 German HTML pages (48 utilities, 4 categories, 1
 Validation: check exact German page count; run Node syntax tests, the full English regression, German browser checks, and mobile/RTL absence checks. Confirm URL and legal footer correctness. Generator PR #21 remains separate and unmerged.
 
 Rollback: revert the German rollout merge, restoring the previous sitemap and shared navigation files. English tool engines remain unchanged. Future languages must each have an independent reviewed PR.
+
+## Automated CI tests
+
+Added 53 route-level Chromium checks for German navigation, title, safety notices and mobile overflow, plus real JSON processing, secure password generation and English-to-German route switching. The result must be checked before release.
