@@ -44,3 +44,6 @@ html[data-localized-tools="true"][dir="rtl"] body .kf-i18n-safety{
    margin:12px auto;font-size:12px
  }
 }
+
+/* Privacy notice appears only on the main TOOLS directory, never on utility pages. */
+html[data-localized-tools="true"] body .kf-i18n-safety{display:none!important}
