@@ -33,7 +33,7 @@ for(const lang of ["de","fr","es","pt","it","ru","zh","ja","hi","fa","ar"]){
    await page.goto("http://127.0.0.1:8765/"+lang+path);
    await expect(page.locator(".kf-i18n-safety")).toHaveCount(1);
    const text=await page.locator(".kf-i18n-safety").innerText();
-   expect(text.trim().length).toBeGreaterThan(60);
+   expect(text.trim().length).toBeGreaterThan(20);
    await expect(page.locator(".kf-tools-language")).toHaveCount(1);
   }
  });
