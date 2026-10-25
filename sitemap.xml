@@ -340,4 +340,57 @@
   <url><loc>https://kolfat.app/fa/tools/security/punycode-converter/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://kolfat.app/fa/tools/security/url-safety-inspector/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://kolfat.app/fa/tools/security/text-hex-utf8/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/photo-file/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/exif-cleaner/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/image-compressor/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/image-converter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/photo-date-detective/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/duplicate-checker/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/batch-file-renamer/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/image-watermark/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/photo-rotator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/image-to-pdf/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/sha256-verifier/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/qr-code-generator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/photo-color-palette/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/json-formatter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/yaml-json-converter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/csv-json-converter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/xml-formatter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/base64-encoder/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/url-encoder/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/regex-tester/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/uuid-generator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/html-entity-converter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/sql-formatter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/markdown-preview/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/code-data/json-schema-validator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/ipv4-subnet-calculator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/ipv6-prefix-calculator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/vlsm-subnet-planner/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/ip-range-cidr-converter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/vlan-ip-planner/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/network-port-reference/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/cron-expression-builder/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/systemd-timer-builder/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/unix-timestamp-converter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/time-zone-converter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/linux-chmod-calculator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/networking/docker-compose-checker/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/password-generator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/passphrase-generator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/password-strength/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/jwt-inspector/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/text-hash-generator/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/secret-leak-scanner/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/sensitive-text-redactor/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/text-code-diff/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/unicode-inspector/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/punycode-converter/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/url-safety-inspector/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kolfat.app/fr/tools/security/text-hex-utf8/</loc><lastmod>2026-10-25</lastmod></url>
 </urlset>
