@@ -41,6 +41,35 @@ const other={
 const local=other[lang];
 const safetyPacks=pack&&local?(await import("./i18n-safety-"+lang+".mjs")).safetySummaries:[];
 const ui=textTranslations[lang]||{};
+/* German-only coverage patch: no modifications to computational engines or output. */
+const deExtra={
+"Length (12–128)":"Länge (12–128)","Character groups":"Zeichengruppen","Select one or more character types.":"Wählen Sie mindestens eine Zeichenart aus.",
+"Uppercase A–Z":"Großbuchstaben A–Z","Lowercase a–z":"Kleinbuchstaben a–z","Numbers 0–9":"Ziffern 0–9","Symbols":"Sonderzeichen","Avoid ambiguous characters":"Verwechselbare Zeichen vermeiden",
+"Ready.":"Bereit.","Results appear here.":"Ergebnisse erscheinen hier.","Important:":"Wichtig:","Input":"Eingabe","Output":"Ausgabe","Result":"Ergebnis",
+"Choose a file":"Datei auswählen","Choose file":"Datei auswählen","Select file":"Datei auswählen","Select files":"Dateien auswählen",
+"Copy":"Kopieren","Copied!":"Kopiert!","Clear":"Leeren","Reset":"Zurücksetzen","Download":"Herunterladen",
+"Download PNG":"PNG herunterladen","Download PDF":"PDF herunterladen","Download CSV":"CSV herunterladen",
+"Generate":"Erzeugen","Generate password":"Passwort erzeugen","Generate passphrase":"Passphrase erzeugen",
+"Analyze":"Analysieren","Calculate":"Berechnen","Convert":"Konvertieren","Format":"Formatieren","Validate":"Prüfen",
+"Check":"Prüfen","Inspect":"Untersuchen","Run":"Ausführen","Process":"Verarbeiten",
+"Options":"Optionen","Settings":"Einstellungen","Preview":"Vorschau","Filename":"Dateiname","File name":"Dateiname",
+"File size":"Dateigröße","Width":"Breite","Height":"Höhe","Quality":"Qualität","Size":"Größe",
+"Input text":"Eingabetext","Text to analyze":"Zu analysierender Text","Text to convert":"Zu konvertierender Text",
+"Paste text here...":"Text hier einfügen…","Enter text here...":"Text hier eingeben…",
+"Select an option":"Option auswählen","Choose an option":"Option auswählen",
+"Supported formats":"Unterstützte Formate","No files selected":"Keine Dateien ausgewählt",
+"Enter a value":"Wert eingeben","No results":"Keine Ergebnisse","Processing...":"Verarbeitung läuft…",
+"Error":"Fehler","Invalid input.":"Ungültige Eingabe.","Result copied.":"Ergebnis kopiert.",
+"Show details":"Details anzeigen","Hide details":"Details ausblenden",
+"Browser-based processing":"Verarbeitung direkt im Browser","Privacy":"Datenschutz",
+"Back to all tools":"Zurück zu allen Werkzeugen","Back to tools":"Zurück zu den Werkzeugen",
+"Photo & File":"Foto & Datei","Code & Data":"Code & Daten","Networking":"Netzwerk","Security":"Sicherheit",
+"Generate securely":"Sicher erzeugen","Password length":"Passwortlänge",
+"Security & Text Analysis":"Sicherheit & Textanalyse",
+"Create cryptographically random passwords with optional character groups.":"Erzeugen Sie kryptografisch zufällige Passwörter mit frei wählbaren Zeichengruppen.",
+"Generated using Web Crypto and unbiased random selection. Keep passwords in a trusted manager. No result is auto-downloaded.":"Die Passwörter werden mit der Web-Crypto-Schnittstelle ohne verzerrte Zufallsauswahl erzeugt. Bewahren Sie sie in einem vertrauenswürdigen Passwortmanager auf. Ergebnisse werden nicht automatisch heruntergeladen."
+};
+if(lang==="de")Object.assign(ui,deExtra);
 if(pack&&local){
  const route=location.pathname.replace(/^\/(?:de|fr|es|pt|it|ru|zh|ja|hi|fa|ar)(?=\/tools\/)/,"");
  const parts=route.split("/").filter(Boolean).slice(1);
@@ -224,6 +253,13 @@ if(pack&&local){
    for(const p of promo.querySelectorAll("p"))p.textContent=local.directory;
  }
 
+ // Translate UI attributes in German only; never alter user input or machine-readable values.
+ if(lang==="de")for(const el of document.querySelectorAll("main input[placeholder],main textarea[placeholder],main input[aria-label],main button[aria-label],main select[aria-label],main [title]")){
+   for(const attr of ["placeholder","aria-label","title"]){
+     const v=el.getAttribute(attr);if(!v)continue;
+     const translation=translated(v);if(translation!==v)el.setAttribute(attr,translation);
+   }
+ }
  // Translate plain text nodes without modifying technical input values or output formats.
  // Existing browser processing engines are never translated or replaced.
  const walker=document.createTreeWalker(document.querySelector("main")||document.body,NodeFilter.SHOW_TEXT);
@@ -247,7 +283,7 @@ if(pack&&local){
    if(/^(Ready|Prêt|Listo)\b|^Ready\./i.test(v))next=pack.labels.ready;
    else if(/^(Processing|Calculating|Loading|Generating)/i.test(v))next=local.status;
    else if(/^(Complete|Done|Success)/i.test(v))next=pack.labels.complete;
-   else if(status.dataset.kind==="error"&&!v.startsWith(pack.labels.error))next=pack.labels.error+" "+v;
+   else if(status.dataset.kind==="error"&&!v.startsWith(pack.labels.error))next=lang==="de"?("Fehler: "+v):pack.labels.error+" "+v;
    if(next&&v!==next){translating=true;status.textContent=next;translating=false;}
   });
   observer.observe(status,{childList:true,characterData:true,subtree:true});
