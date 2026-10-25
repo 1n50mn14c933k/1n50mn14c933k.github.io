@@ -21,3 +21,7 @@ This is NOT yet fully translated: individual input labels, every description, he
 Run the generator; verify all 583 static pages, unique sitemap URLs and canonical/hreflang. Check that the English engines are unchanged, secrets remain local, and actions still work. Have fluent speakers verify each language, especially security disclaimers, before merging. Emergency rollback: revert the future PR merge commit and redeploy; English routes remain intact. Do not merge while translations or functional QA remain incomplete.
 
 **Project policy:** Every future edit requires same-commit change history, test evidence and recovery information.
+
+## English-language entry point
+
+The shared `assets/nav-dropdown.js` now adds a 12-language selector to the original English tool pages. Visitors can switch directly from an English utility to the corresponding localized URL and back. Both mobile navigation and preservation of active tool route need Chromium QA. This change is part of this draft PR only; no other marketing page receives the extra selector.
