@@ -1,5 +1,17 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-25 — Optional Ko-fi support, repository sponsor link, and mandatory change documentation
+
+**Reason:** Give satisfied users an entirely voluntary method to support KOLFAT without subscriptions, paywalls or intrusive prompts. Enforce the project owner's requirement to document every GitHub change for troubleshooting and recovery.
+
+**Changed files:** `.github/FUNDING.yml`, `.github/PULL_REQUEST_TEMPLATE.md`, `tools/index.html`, `tools/tests/support-links.test.mjs`, `README.md`, `docs/SUPPORT_FUNDING.md`, `docs/CHANGE_MANAGEMENT.md`, this change log.
+
+**Implementation:** `ko_fi: kolfat_app` points the GitHub repository Sponsor button to `https://ko-fi.com/kolfat_app`. A modest `☕ Tip (optional)` link appears only in the main TOOLS directory footer. It is an ordinary external link, not a payment script or embedded donation widget. GitHub sponsorship feature may require a repository administrator to enable it in Settings. Existing tools, prices, privacy processing and other pages are unchanged.
+
+**Verification:** Static funding, URL, markup, privacy and documentation checks in `tools/tests/support-links.test.mjs`; run with the repository's Node regression suite before merging. Confirm live GitHub button and Ko-fi payment mode independently.
+
+**Rollback:** Revert this change's merge commit, or remove `.github/FUNDING.yml` and the specific `☕ Tip (optional)` footer anchor from `tools/index.html`; restore prior README/change-policy text as needed. No payment data or secrets are stored in the repository. See [support recovery instructions](SUPPORT_FUNDING.md).
+
 ## 2026-10-25 — Site-wide UI consistency audit and improvements
 
 **Pull request:** [#16](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/16)  

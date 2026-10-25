@@ -123,6 +123,19 @@ Before changing production content:
 7. Verify both dropdowns, keyboard operation, and 320–430px mobile layout as well as desktop
 8. Check all 12 locales plus product, support, legal and guide pages using the navigation checklist
 
+## Voluntary Support ☕
+
+KOLFAT remains free to use. Visitors who appreciate the current free MEDIA KOLFAT application and the 48 KOLFAT TOOLS can leave an entirely **optional, one-time tip** at [Ko-fi — KOLFAT](https://ko-fi.com/kolfat_app). Contributions are never required to use, download or access any current free features.
+
+- GitHub repository funding: `.github/FUNDING.yml`, with `ko_fi: kolfat_app`. The GitHub **Sponsor** button also depends on the repository's **Settings → General → Features → Sponsorships** being enabled; this can require a repository administrator to enable it manually.
+- The `/tools/` directory links to Ko-fi once, discreetly, in its footer. There are no donation popups, payment forms, or donation buttons inside individual tools.
+- Payment and supporter details are handled by Ko-fi and the payment provider. The website does not process payments or accept payment card details.
+- Support-page details and rollback notes are documented in [docs/SUPPORT_FUNDING.md](docs/SUPPORT_FUNDING.md).
+
+## Required documentation for every GitHub change
+
+**Every repository change must update GitHub documentation in the same pull request or commit.** Record the purpose, changed files, verification, user-visible effect, known limits and rollback instructions in `docs/WEBSITE_UPDATES.md` and relevant topic-specific documentation. Update inventory, navigation, security or support docs whenever they become inaccurate. This requirement is also recorded in [docs/CHANGE_MANAGEMENT.md](docs/CHANGE_MANAGEMENT.md) and the [pull request template](.github/PULL_REQUEST_TEMPLATE.md).
+
 ## Security
 
 See [SECURITY.md](SECURITY.md) for security and responsible-disclosure guidance.
