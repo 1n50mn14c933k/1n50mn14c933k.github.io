@@ -195,3 +195,137 @@ html body details.kolfat-menu[open] > .kolfat-menu-panel { display: grid !import
     transition-duration: .01ms !important;
   }
 }
+
+
+/* KOLFAT UI CONSISTENCY AUDIT — 2026-10-25
+ * Shared layout fixes across existing locales and content templates.
+ * Do not change the image, navigation behavior, tool workflows or translations.
+ */
+:root{
+  --kf-reading-width:72ch;
+  --kf-content-width:1100px;
+  --kf-touch-target:44px;
+}
+/* The brand/header belongs at the same outer edge as the homepage logo.
+ * The content itself remains centered in a predictable reading grid. */
+html body .header .header-inner{
+  width:calc(100% - 48px)!important;
+  max-width:none!important;
+  min-height:72px!important;
+  gap:16px!important;
+}
+html body .header .header-inner > .brand img{
+  width:clamp(125px,12vw,154px)!important;
+  max-width:100%!important;
+}
+html body .header .header-inner > .top-nav{gap:10px!important}
+html body .header .header-inner > .top-nav summary{min-height:var(--kf-touch-target)!important}
+
+/* Unified article width, whitespace, headings, and readable paragraphs.
+ * Exclude the cinematic homepage, product landing and tool-specific layouts. */
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main{
+  width:min(var(--kf-content-width),calc(100% - 48px));
+  max-width:var(--kf-content-width);
+  margin-inline:auto;
+  padding-block:clamp(38px,5vw,70px) 88px;
+}
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main .hero h1{
+  font-size:clamp(2.75rem,5.2vw,5rem)!important;
+  line-height:1.12!important;
+  letter-spacing:-.035em!important;
+  max-width:22ch;
+  margin-block:12px 22px!important;
+  overflow-wrap:normal!important;
+  text-wrap:balance;
+}
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main .hero .lead{
+  max-width:var(--kf-reading-width);
+  font-size:clamp(1.03rem,1.4vw,1.17rem)!important;
+  line-height:1.68!important;
+}
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main .section{
+  margin-top:clamp(40px,5vw,60px);
+  padding-top:clamp(28px,3vw,42px);
+}
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main .section h2{
+  font-size:clamp(1.85rem,3.5vw,3rem)!important;
+  line-height:1.18!important;
+  text-wrap:pretty;
+}
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main .section p,
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main .section li{
+  font-size:clamp(.98rem,1.1vw,1.07rem);
+  line-height:1.76!important;
+}
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main .grid{
+  gap:12px!important;
+  background:transparent!important;
+}
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main .grid .card{
+  min-width:0;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:12px;
+  background:#101010;
+  padding:clamp(20px,2.5vw,30px);
+}
+html body .notice{border-radius:11px;line-height:1.7}
+html body a:focus-visible,html body button:focus-visible,html body summary:focus-visible{
+  outline:2px solid var(--kf-orange)!important;
+  outline-offset:3px!important;
+}
+
+/* More legible editorial headlines; retain original responsive sizing.
+ * Persian/Arabic use their own extra leading and RTL font definitions. */
+html[data-kolfat-page="home"] body .hero-copy h1{line-height:.98!important}
+@media(min-width:1250px){
+  html[dir="ltr"][data-kolfat-page="home"] body .hero-copy{
+    width:min(640px,47vw);
+  }
+}
+html[dir="rtl"] body main .hero h1,
+html[dir="rtl"] body main .section h2{
+  letter-spacing:normal!important;
+  line-height:1.34!important;
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+}
+html[dir="rtl"] body main .section p,
+html[dir="rtl"] body main .section li{
+  text-align:start;
+}
+html[lang="fa"] body main,html[lang="ar"] body main{font-family:Tahoma,"Segoe UI",Arial,sans-serif}
+html[lang="fa"] body main h1,html[lang="ar"] body main h1,
+html[lang="fa"] body main h2,html[lang="ar"] body main h2{
+  font-family:Tahoma,"Segoe UI",Arial,sans-serif!important;
+}
+
+/* Screen reader/keyboard-friendly dropdown surfaces above page content. */
+html body .header,html body .header .header-inner{overflow:visible!important}
+html body .top-nav details[open] > .kolfat-menu-panel,
+html body .top-nav details[open] > .lang-list{max-height:min(70vh,580px)!important}
+@media(max-width:720px){
+  html body .header .header-inner{
+    width:calc(100% - 24px)!important;
+    min-height:64px!important;
+    gap:8px!important;
+  }
+  html body .header .header-inner > .brand img{width:clamp(104px,27vw,136px)!important}
+  html body .header .header-inner > .top-nav{gap:5px!important}
+  html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main{
+    width:calc(100% - 32px);
+    padding-block:36px 64px;
+  }
+  html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main .hero h1{
+    font-size:clamp(2.25rem,9vw,3.75rem)!important;
+    line-height:1.17!important;
+    overflow-wrap:break-word!important;
+  }
+  html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body main .section h2{
+    font-size:clamp(1.7rem,6vw,2.4rem)!important;
+  }
+  html[data-kolfat-page="home"] body .hero-copy h1{line-height:1.08!important}
+  html[dir="rtl"] body main .hero h1{line-height:1.33!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html body .top-nav .menu-chevron{transition:none!important}
+}
