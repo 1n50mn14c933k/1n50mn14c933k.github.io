@@ -60,6 +60,14 @@ if(pack&&local){
   const compact=t.trim().replace(/\s+/g," ");
   if(!compact)return t;
   if(ui[compact])return ui[compact];
+  const divider=compact.match(/^(\/\s*)(.+)$/);
+  if(divider){const right=translated(divider[2]);if(right!==divider[2])return divider[1]+right;}
+  if(baseName.has(compact))return pack.names[baseName.get(compact)];
+  const cleaned=compact.toUpperCase().replace(/\s+/g," ");
+  const groupNames={"CODE & DATA":"code-data","NETWORKING":"networking","PHOTO & FILE":"photo","SECURITY":"security","PHOTOS • FILES":"photo","DEVELOPMENT • DATA":"code-data","NETWORKS • SYSTEMS":"networking","SECURITY • PRIVACY":"security"};
+  if(groupNames[cleaned])return pack.labels[groupNames[cleaned]];
+  const shortCategory={"Code & Data Utilities":"code-data","Photo & File Tools":"photo","Networking & Automation":"networking","Security & Text Analysis":"security"};
+  if(shortCategory[compact])return pack.labels[shortCategory[compact]];
   if(common[compact])return pack.labels[common[compact]];
   const renamed=translateTitle(compact);
   if(renamed!==compact)return renamed;
@@ -174,6 +182,48 @@ if(pack&&local){
  picker.addEventListener("toggle",()=>{
   if(picker.open)for(const d of document.querySelectorAll(".top-nav details"))if(d!==picker)d.open=false;
  });
+
+ // Normalize page-specific breadcrumbs, hero copy and old English promotional text.
+ // Preserve original technical explanations separately instead of throwing them away.
+ const heroText=document.querySelector("main .hero-tools,main .hero");
+ if(heroText){
+   for(const p of heroText.querySelectorAll("p")){
+     if(p.closest(".kf-i18n-safety")||p.querySelector("input,button,code,pre"))continue;
+     const line=p.textContent.trim();
+     if(line.length>65&&/^[A-Za-z]/.test(line)&&!p.classList.contains("eyebrow")){
+       const details=document.createElement("details");
+       details.className="kf-technical-details kf-description-reference";
+       const label=document.createElement("summary");
+       label.textContent=ui["Show original technical details"]||"Original English description";
+       const original=document.createElement("p");
+       original.textContent=line;
+       details.append(label,original);
+       p.textContent=local.lead;
+       p.insertAdjacentElement("afterend",details);
+     }
+   }
+ }
+ for(const promo of document.querySelectorAll("main .promotion")){
+   const title=promo.querySelector("h2");
+   if(title)title.textContent=local.more+" KOLFAT";
+   for(const p of promo.querySelectorAll("p"))p.textContent=local.directory;
+   for(const a of promo.querySelectorAll("a")){
+     const target=a.getAttribute("href")||"";
+     a.textContent=target.includes("Media_Kolfat")?local.more+" MEDIA KOLFAT →":pack.labels.more+" →";
+     if(target.includes("/tools/")&&!target.startsWith("/"+lang+"/"))a.href="/"+lang+target;
+   }
+ }
+ const privacy=document.querySelector("main .kf-hub-privacy");
+ if(privacy){
+   privacy.textContent="";
+   const strong=document.createElement("strong");strong.textContent=pack.labels.privacy+". ";
+   privacy.append(strong,document.createTextNode(local.directory+" "+local.lead));
+ }
+ for(const promo of document.querySelectorAll("main .kf-hub-promo")){
+   const title=promo.querySelector("h2");if(title)title.textContent=local.more+" MEDIA KOLFAT";
+   for(const p of promo.querySelectorAll("p"))p.textContent=local.directory;
+ }
+
  // Translate plain text nodes without modifying technical input values or output formats.
  // Existing browser processing engines are never translated or replaced.
  const walker=document.createTreeWalker(document.querySelector("main")||document.body,NodeFilter.SHOW_TEXT);
@@ -181,9 +231,11 @@ if(pack&&local){
  while(walker.nextNode()){
    const node=walker.currentNode,el=node.parentElement;
    if(!el||el.closest("script,style,pre,code,textarea,svg,output,#output,#downloads,.kf-technical-details"))continue;
-   const old=node.textContent.trim();if(old&&ui[old])replaceNodes.push([node,old]);
+   const old=node.textContent.trim();if(!old)continue;
+   const translation=translated(old);
+   if(translation!==old)replaceNodes.push([node,old,translation]);
  }
- for(const [node,old] of replaceNodes)node.textContent=node.textContent.replace(old,ui[old]);
+ for(const [node,old,translation] of replaceNodes)node.textContent=node.textContent.replace(old,translation);
  // Dynamic labels from all four unmodified calculation engines.
  const status=document.querySelector("#status");
  if(status){
