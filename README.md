@@ -127,8 +127,9 @@ Before changing production content:
 
 KOLFAT remains free to use. Visitors who appreciate the current free MEDIA KOLFAT application and the 48 KOLFAT TOOLS can leave an entirely **optional, one-time tip** at [Ko-fi — KOLFAT](https://ko-fi.com/kolfat_app). Contributions are never required to use, download or access any current free features.
 
-- GitHub repository funding: `.github/FUNDING.yml`, with `ko_fi: kolfat_app`. The GitHub **Sponsor** button also depends on the repository's **Settings → General → Features → Sponsorships** being enabled; this can require a repository administrator to enable it manually.
-- The `/tools/` directory links to Ko-fi once, discreetly, in its footer. There are no donation popups, payment forms, or donation buttons inside individual tools.
+- Website: the global header displays **☕ Support KOLFAT** beside MENU / the language switcher on every rendered page. On small screens the accessible button uses a compact coffee icon to avoid crowding the logo.
+- GitHub visibility is intentionally limited to the **profile README** at `1n50mn14c933k/1n50mn14c933k` and the **MEDIA_KOLFAT README** (plus that repository's Sponsor funding configuration), not the GitHub Pages repository.
+- The older Ko-fi link in the `/tools/` footer was removed to avoid duplicate donation prompts. There are no popups, third-party donation scripts or per-tool marketing banners.
 - Payment and supporter details are handled by Ko-fi and the payment provider. The website does not process payments or accept payment card details.
 - Support-page details and rollback notes are documented in [docs/SUPPORT_FUNDING.md](docs/SUPPORT_FUNDING.md).
 

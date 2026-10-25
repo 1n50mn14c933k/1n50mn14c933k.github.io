@@ -57,3 +57,24 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
  };
  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});else init();
 })();
+
+
+/* Voluntary Ko-fi support shortcut in the existing global header on every page.
+   No third-party script, tracking, popup, automatic payment, or tool interruption. */
+(() => {
+  const initSupportLink = () => {
+    const nav = document.querySelector(".top-nav");
+    if (!nav || nav.querySelector(".kolfat-support-link")) return;
+    const link = document.createElement("a");
+    link.className = "kolfat-support-link";
+    link.href = "https://ko-fi.com/kolfat_app";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.title = "☕ Support KOLFAT (optional one-time tip)";
+    link.setAttribute("aria-label", "☕ Support KOLFAT (optional one-time tip)");
+    link.innerHTML = '<span class="kolfat-support-emoji" aria-hidden="true">☕</span><span class="kolfat-support-text">Support KOLFAT</span>';
+    nav.insertBefore(link, nav.firstElementChild);
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initSupportLink, {once:true});
+  else initSupportLink();
+})();
