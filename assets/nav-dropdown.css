@@ -444,3 +444,9 @@ html body a.kolfat-tools-direct.kolfat-tools-direct--floating{
     bottom:122px!important;
   }
 }
+
+/* When TOOLS pages omit the language switcher, anchor MENU to itself.
+   The -68px offset above is only appropriate for MENU + language together. */
+html body .header .header-inner .top-nav:not(:has(.lang-menu)) .kolfat-menu-panel{
+  right:0!important;
+}
