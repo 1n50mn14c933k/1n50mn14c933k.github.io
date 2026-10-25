@@ -42,6 +42,14 @@ jobs:
           node --check tools/assets/security-app.mjs
       - name: Run core utility tests
         run: node --test tools/tests/*.test.mjs
+      - name: Install browser smoke-test dependencies
+        run: |
+          npm install --no-save @playwright/test@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Run Security browser smoke tests
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/kolfat-http.log 2>&1 &
+          npx playwright test tools/tests/security-browser.spec.mjs --workers=1 --reporter=line
       - name: Validate public tools in sitemap
         run: |
           python3 - <<'PY'
