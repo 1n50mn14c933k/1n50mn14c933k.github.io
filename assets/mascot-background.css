@@ -1,0 +1,98 @@
+/*
+ * MEDIA KOLFAT realistic mascot background, 2026-10-26.
+ * One centrally managed visual treatment for every locale and page.
+ * Header wordmarks, navigation, translations and interactive tools stay untouched.
+ */
+:root {
+  --kf-mascot-wide: url("/assets/kolfat-mascot-wide.webp");
+  --kf-mascot-portrait: url("/assets/kolfat-mascot-portrait.webp");
+}
+
+/* Homepages: the original unblurred mascot, with a left readability gradient. */
+html[data-kolfat-page="home"] .hero-bg {
+  background-image:
+    linear-gradient(90deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.72) 26%,rgba(0,0,0,.27) 48%,rgba(0,0,0,.05) 74%),
+    linear-gradient(180deg,rgba(0,0,0,.15),transparent 70%,rgba(0,0,0,.48)),
+    var(--kf-mascot-wide) !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Other pages: same image, intentionally soft and dark behind real content.
+   Blur is confined to this background layer, never text or controls. */
+html:not([data-kolfat-page="home"]) body {
+  isolation: isolate;
+}
+html:not([data-kolfat-page="home"]) body::before {
+  content: "" !important;
+  display: block !important;
+  position: fixed !important;
+  inset: -22px !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  background-image: var(--kf-mascot-wide) !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  filter: blur(14px) brightness(.65) !important;
+  opacity: .56 !important;
+}
+/* Avoid opaque page-width backgrounds obscuring the decorative layer. */
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]) body > main,
+html:not([data-kolfat-page="home"]) body .hero-tools,
+html:not([data-kolfat-page="home"]) body .section-tools {
+  background: transparent !important;
+}
+/* Product pages already have an independent hero background; replace the
+   older artwork there too, and keep it blurred. */
+html[data-kolfat-page="product"] .hero {
+  background-color: transparent !important;
+}
+html[data-kolfat-page="product"] .hero-bg {
+  background-image: var(--kf-mascot-wide) !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  filter: blur(14px) brightness(.56) !important;
+  transform: scale(1.06) !important;
+  opacity: .57 !important;
+}
+html[data-kolfat-page="product"] .hero-bg::before {
+  background: linear-gradient(90deg,rgba(5,5,5,.98),rgba(5,5,5,.62) 60%,transparent) !important;
+}
+/* Interactive tool panels must remain clearly separated from the backdrop. */
+html[data-kolfat-page="tool"] .workspace,
+html[data-kolfat-page="tool"] .tool-card,
+html[data-kolfat-page="tool"] .promotion {
+  background-color: rgba(15,15,15,.94) !important;
+}
+
+/* Mobile screens use the matching portrait artwork rather than a brutal crop. */
+@media (max-width: 760px) {
+  html[data-kolfat-page="home"] .hero-bg {
+    background-image:
+      linear-gradient(180deg,rgba(0,0,0,.80) 0%,rgba(0,0,0,.68) 32%,rgba(0,0,0,.15) 70%,rgba(0,0,0,.55) 100%),
+      var(--kf-mascot-portrait) !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+  html:not([data-kolfat-page="home"]) body::before {
+    background-image: var(--kf-mascot-portrait) !important;
+    background-position: center 38% !important;
+    filter: blur(15px) brightness(.62) !important;
+    opacity: .48 !important;
+  }
+  html[data-kolfat-page="product"] .hero-bg {
+    background-image: var(--kf-mascot-portrait) !important;
+    background-position: center 40% !important;
+    filter: blur(15px) brightness(.54) !important;
+  }
+  html[data-kolfat-page="tool"] .workspace,
+  html[data-kolfat-page="tool"] .tool-card,
+  html[data-kolfat-page="tool"] .promotion {
+    background-color: rgba(13,13,13,.96) !important;
+  }
+}
+/* No animation or heavy scroll-triggered effects. */
