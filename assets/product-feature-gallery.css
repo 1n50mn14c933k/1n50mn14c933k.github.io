@@ -1,0 +1,196 @@
+/* MEDIA KOLFAT Product gallery layout. FIX: PR48 added the HTML but not its CSS.
+ * Product pages ONLY. Do not alter Downloads, homepage, imagery or navigation. */
+html[data-kolfat-page="product"] body main > section.kf-product-all {
+  box-sizing: border-box !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  padding: clamp(56px, 7vw, 104px) 0 100px !important;
+  color: #f6f6f4 !important;
+  background: linear-gradient(180deg,rgba(5,5,5,.87),rgba(6,6,6,.93)) !important;
+  border-top: 1px solid rgba(255,255,255,.16) !important;
+}
+html[data-kolfat-page="product"] body .kf-product-all .kf-product-container {
+  box-sizing: border-box !important;
+  display: block !important;
+  position: relative !important;
+  width: min(1170px, calc(100% - 64px)) !important;
+  max-width: 1170px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: start !important;
+}
+html[data-kolfat-page="product"] body .kf-product-eyebrow {
+  display: inline-block !important;
+  margin: 0 0 16px !important;
+  color: #ff9c54 !important;
+  font: 750 12px/1.4 "Segoe UI", Tahoma, Arial, sans-serif !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+}
+html[data-kolfat-page="product"] body .kf-product-heading {
+  display: block !important;
+  color: #fff !important;
+  margin: 0 0 20px !important;
+  font: 400 clamp(36px, 4.2vw, 58px)/1.15 Georgia, "Times New Roman", serif !important;
+  letter-spacing: -.025em !important;
+  max-width: 920px !important;
+}
+html[data-kolfat-page="product"] body .kf-product-intro {
+  display: block !important;
+  max-width: 860px !important;
+  margin: 0 0 48px !important;
+  font: 400 17px/1.75 "Segoe UI", Tahoma, Arial, sans-serif !important;
+  color: #d0d0ca !important;
+}
+html[data-kolfat-page="product"] body .kf-product-group {
+  display: block !important;
+  position: relative !important;
+  margin: 0 0 64px !important;
+  padding: 0 !important;
+}
+html[data-kolfat-page="product"] body .kf-product-group-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 13px !important;
+  margin: 0 0 22px !important;
+  color: #fff !important;
+  font: 700 clamp(21px, 2.4vw, 28px)/1.35 "Segoe UI", Tahoma, Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+}
+html[data-kolfat-page="product"] body .kf-product-group-title::before {
+  content: "" !important;
+  display: block !important;
+  flex: 0 0 5px !important;
+  width: 5px !important;
+  height: 30px !important;
+  border-radius: 5px !important;
+  background: #ff812e !important;
+}
+html[data-kolfat-page="product"] body .kf-product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  gap: 18px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+html[data-kolfat-page="product"] body .kf-product-feature {
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  min-height: 207px !important;
+  margin: 0 !important;
+  padding: 27px 29px 29px !important;
+  border: 1px solid rgba(255,129,46,.37) !important;
+  border-radius: 15px !important;
+  background: linear-gradient(135deg,rgba(23,23,23,.96),rgba(12,12,12,.98)) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.3) !important;
+  color: #efefed !important;
+  overflow-wrap: break-word !important;
+  transition: border-color .18s ease, transform .18s ease !important;
+}
+html[data-kolfat-page="product"] body .kf-product-feature:hover {
+  border-color: #ff812e !important;
+  transform: translateY(-2px) !important;
+}
+html[data-kolfat-page="product"] body .kf-product-feature-head {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+}
+html[data-kolfat-page="product"] body .kf-product-feature-icon {
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 51px !important;
+  width: 51px !important;
+  height: 51px !important;
+  border: 1px solid rgba(255,129,46,.62) !important;
+  border-radius: 12px !important;
+  background: rgba(255,129,46,.13) !important;
+  color: #ff963c !important;
+}
+html[data-kolfat-page="product"] body .kf-product-feature-icon svg {
+  box-sizing: border-box !important;
+  display: block !important;
+  flex: 0 0 26px !important;
+  width: 26px !important;
+  height: 26px !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.8 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+html[data-kolfat-page="product"] body .kf-product-feature h3 {
+  margin: 0 !important;
+  color: #fff !important;
+  font: 750 19px/1.33 "Segoe UI", Tahoma, Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+  overflow-wrap: anywhere !important;
+}
+html[data-kolfat-page="product"] body .kf-product-feature > p {
+  display: block !important;
+  margin: 0 !important;
+  color: #d0d0cb !important;
+  font: 400 15px/1.8 "Segoe UI", Tahoma, Arial, sans-serif !important;
+  max-width: none !important;
+}
+html[dir="rtl"][data-kolfat-page="product"] body .kf-product-container {
+  direction: rtl !important;
+  text-align: right !important;
+}
+html[dir="rtl"][data-kolfat-page="product"] body .kf-product-feature-head {
+  flex-direction: row !important;
+}
+@media(max-width:860px){
+  html[data-kolfat-page="product"] body .kf-product-grid {
+    grid-template-columns: minmax(0,1fr) !important;
+  }
+  html[data-kolfat-page="product"] body .kf-product-feature {
+    min-height: 0 !important;
+  }
+}
+@media(max-width:640px){
+  html[data-kolfat-page="product"] body main > section.kf-product-all {
+    padding: 44px 0 64px !important;
+  }
+  html[data-kolfat-page="product"] body .kf-product-container {
+    width: calc(100% - 32px) !important;
+  }
+  html[data-kolfat-page="product"] body .kf-product-intro {
+    font-size: 15px !important;
+    margin-bottom: 34px !important;
+  }
+  html[data-kolfat-page="product"] body .kf-product-group { margin-bottom: 46px !important; }
+  html[data-kolfat-page="product"] body .kf-product-feature { padding: 21px 19px !important; }
+  html[data-kolfat-page="product"] body .kf-product-feature-head { gap: 12px !important; }
+  html[data-kolfat-page="product"] body .kf-product-feature-icon {
+    flex-basis: 43px !important;
+    width: 43px !important; height: 43px !important;
+  }
+  html[data-kolfat-page="product"] body .kf-product-feature h3 { font-size: 17px !important; }
+}
+@media(prefers-reduced-motion:reduce){
+  html[data-kolfat-page="product"] body .kf-product-feature {
+    transition: none !important;
+  }
+  html[data-kolfat-page="product"] body .kf-product-feature:hover {
+    transform: none !important;
+  }
+}
