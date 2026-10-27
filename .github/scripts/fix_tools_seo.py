@@ -109,7 +109,6 @@ def run():
                 for l in LANGS
             )
             links += '<link rel="alternate" hreflang="x-default" href="https://kolfat.app/' + pathurl + '">'
-            new = new.replace('</head>', links + '</head>', 1)
             if lang in ('fr', 'es'):
                 title_match = TITLE_RX.search(new)
                 assert title_match, ('No title', page)
@@ -121,6 +120,7 @@ def run():
                 new = DESC_RX.sub(lambda _: '<meta name="description" content="' + desc + '">', new, count=1)
                 new = set_meta(new, OG_DESC_RX, '<meta property="og:description" content="' + desc + '">')
                 new = set_meta(new, OG_TITLE_RX, '<meta property="og:title" content="' + og_title + '">')
+            new = new.replace('</head>', links + '</head>', 1)
             expected_langs = [*LANGS, 'x-default']
             actual_langs = re.findall(r'<link rel="alternate" hreflang="([^"]+)"', new)
             assert actual_langs == expected_langs, ('Incorrect reciprocal alternates', page, actual_langs)
