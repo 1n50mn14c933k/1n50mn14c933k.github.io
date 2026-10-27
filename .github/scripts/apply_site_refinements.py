@@ -3,7 +3,7 @@ import re
 
 # Apply the upgraded shared navigation to every published page, all locales
 # and all tools, without touching content, metadata or other styling.
-version = "20261027-full-site-map1"
+version = "20261027-menu-explore2"
 pages = sorted(Path(".").rglob("index.html"))
 seen = 0
 updated = 0

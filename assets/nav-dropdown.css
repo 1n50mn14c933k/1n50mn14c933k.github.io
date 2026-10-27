@@ -491,3 +491,114 @@ html body .top-nav .kolfat-menu-panel .kf-nav-subgroup-links a{
 html body .top-nav .kolfat-menu-panel .kf-site-map .menu-section-label{
   padding-top:12px!important;
 }
+
+
+/* Informative, searchable MENU: readable navigation without a wall of links. */
+html body .top-nav .kolfat-menu > .kolfat-menu-panel,
+html body .header .header-inner .top-nav .kolfat-menu > .kolfat-menu-panel{
+ width:min(402px,calc(100vw - 24px))!important;
+ max-height:calc(100dvh - 88px)!important;
+ padding:12px!important;
+ gap:5px!important;
+ grid-template-columns:minmax(0,1fr)!important;
+ overflow-x:hidden!important;overflow-y:auto!important;
+ scrollbar-width:thin!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-nav-finder{
+ display:grid!important;gap:9px!important;
+ margin:0 0 6px!important;padding:12px!important;
+ border:1px solid rgba(255,255,255,.20)!important;
+ border-radius:11px!important;background:#111!important;
+}
+html body .top-nav .kf-nav-intro{display:grid!important;gap:3px!important}
+html body .top-nav .kf-nav-intro strong{
+ color:#fff!important;font:750 13px/1.2 "Segoe UI",Tahoma,Arial,sans-serif!important;
+ letter-spacing:.10em!important;
+}
+html body .top-nav .kf-nav-intro small{
+ color:#bdbdbd!important;font:500 11px/1.4 "Segoe UI",Tahoma,Arial,sans-serif!important;
+}
+html body .top-nav .kf-nav-input{
+ width:100%!important;min-width:0!important;min-height:44px!important;
+ box-sizing:border-box!important;padding:10px 12px!important;
+ border:1px solid #757575!important;border-radius:9px!important;
+ background:#050505!important;color:#fff!important;appearance:auto!important;
+ outline:none!important;font:500 13px/1.4 "Segoe UI",Tahoma,Arial,sans-serif!important;
+ direction:auto!important;
+}
+html body .top-nav .kf-nav-input:focus{
+ outline:2px solid #ff9b53!important;outline-offset:1px!important;
+}
+html body .top-nav .kf-nav-input::placeholder{color:#aaa!important;opacity:1!important}
+html body .top-nav .kolfat-menu-panel>a.kf-nav-quicklink{
+ box-sizing:border-box!important;display:flex!important;gap:12px!important;
+ padding:11px 12px!important;min-height:58px!important;
+ border:1px solid rgba(255,255,255,.11)!important;
+ border-radius:9px!important;background:rgba(255,255,255,.04)!important;
+ text-transform:none!important;letter-spacing:normal!important;
+}
+html body .top-nav .kolfat-menu-panel>a.kf-nav-quicklink:hover,
+html body .top-nav .kolfat-menu-panel>a.kf-nav-quicklink[aria-current="page"]{
+ background:#f5f5f5!important;color:#050505!important;
+}
+html body .top-nav .kf-nav-card-copy,
+html body .top-nav .kf-nav-summary-copy{
+ display:flex!important;flex-direction:column!important;gap:3px!important;
+ flex:1 1 auto!important;min-width:0!important;text-align:start!important;
+}
+html body .top-nav .kf-nav-card-copy strong,
+html body .top-nav .kf-nav-summary-copy strong{
+ font:750 13px/1.3 "Segoe UI",Tahoma,Arial,sans-serif!important;
+ color:inherit!important;white-space:normal!important;
+}
+html body .top-nav .kf-nav-card-copy small,
+html body .top-nav .kf-nav-summary-copy small{
+ font:500 11px/1.4 "Segoe UI",Tahoma,Arial,sans-serif!important;
+ color:#bdbdbd!important;white-space:normal!important;overflow-wrap:anywhere!important;
+}
+html body .top-nav .kolfat-menu-panel>a.kf-nav-quicklink:hover small,
+html body .top-nav .kolfat-menu-panel>a.kf-nav-quicklink[aria-current="page"] small{
+ color:#454545!important;
+}
+html body .top-nav .kf-nav-subgroup>summary{
+ gap:10px!important;min-height:57px!important;padding:10px 12px!important;
+}
+html body .top-nav .kf-nav-group-count{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ flex:0 0 auto!important;min-width:25px!important;height:25px!important;
+ padding:0 5px!important;border-radius:7px!important;
+ background:#282828!important;border:1px solid #595959!important;
+ color:#ffb481!important;font:700 11px/1 "Segoe UI",Arial,sans-serif!important;
+}
+html body .top-nav .kf-nav-subgroup>summary::after{margin-left:0!important}
+html body .top-nav .kf-nav-subgroup[open]>summary .kf-nav-summary-copy small{
+ color:#eee!important;
+}
+html body .top-nav .kf-nav-subgroup-links a{font-size:12px!important;padding:8px 12px!important}
+html body .top-nav .kf-nav-results{display:none!important;min-width:0!important}
+html body .top-nav .kf-nav-searching > .kf-nav-results{display:grid!important;gap:6px!important}
+html body .top-nav .kf-nav-searching > :not(.kf-nav-finder):not(.kf-nav-results){display:none!important}
+html body .top-nav .kf-nav-result-links{display:grid!important;gap:4px!important}
+html body .top-nav .kf-nav-result-status{
+ margin:4px 0 8px!important;font:500 12px/1.5 "Segoe UI",Tahoma,Arial,sans-serif!important;
+ color:#bbb!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-nav-search-result{
+ padding:10px 12px!important;min-height:48px!important;
+ background:#101010!important;border:1px solid #303030!important;
+ border-radius:8px!important;text-decoration:none!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-nav-search-result:hover,
+html body .top-nav .kolfat-menu-panel .kf-nav-search-result:focus-visible{
+ background:#fff!important;color:#080808!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-nav-search-result:hover small{color:#444!important}
+@media(max-width:640px){
+ html body .top-nav .kolfat-menu>.kolfat-menu-panel,
+ html body .header .header-inner .top-nav .kolfat-menu>.kolfat-menu-panel{
+   width:min(360px,calc(100vw - 24px))!important;
+   max-height:calc(100dvh - 68px)!important;padding:9px!important;
+ }
+ html body .top-nav .kf-nav-input{font-size:16px!important}
+ html body .top-nav .kolfat-menu-panel>a.kf-nav-quicklink{min-height:52px!important}
+}
