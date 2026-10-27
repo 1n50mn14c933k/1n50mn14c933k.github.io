@@ -138,7 +138,9 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
       if(key===null)continue;
       const index=corePages.indexOf(key),destination=pagePath(key);
       el.href=destination;
-      el.textContent=labels.main[index]+(key==="tools"&&!supportedToolLanguages.has(lang)?" (EN)":"");
+      // Homepage navigation uses the owner's exact requested Persian/Arabic name.
+      const homepageMediaLabel = key==="media" && current==="/"+lang+"/" && (lang==="fa"||lang==="ar");
+      el.textContent=(homepageMediaLabel?"مدیا کلفت":labels.main[index])+(key==="tools"&&!supportedToolLanguages.has(lang)?" (EN)":"");
       el.dataset.kfTitle=el.textContent;
       el.dataset.kfDescription=words.sub[index];
       el.dataset.kfGroup=words.nav;
