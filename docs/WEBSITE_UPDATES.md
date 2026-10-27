@@ -8,6 +8,8 @@
 
 **Content:** Updated the MEDIA KOLFAT current-release panels on all twelve localized product pages, preserving their translated labels, layout, and RTL presentation. Added GitHub EXE download links on all twelve localized download pages alongside Microsoft Store; updated the website README.
 
+**SEO consistency:** Updated the 12 localized home-page metadata descriptions and 12 localized download-page metadata descriptions to reflect both official distribution channels.
+
 **Historical material:** The October 22 site refresh for version 1.8.0 remains below as a historical record. No application source or installers were committed to the GitHub Pages source tree.
 
 **Verification:** Check all twelve product pages for current 2.0.0 panels and both official download channels, and verify the GitHub Pages deployment for the final commit.
