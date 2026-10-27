@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 
 # Repoint every published content page to the latest shared stylesheet.
 # Preserve pages, translations, canonical/alternate tags and tool workflows.
-tag = '<link rel="stylesheet" href="/assets/site-refinements.css?v=20261026-mascot-desktop-mobile2">'
+tag = '<link rel="stylesheet" href="/assets/site-refinements.css?v=20261027-hq-originals1">'
 pages = sorted(Path(".").rglob("index.html"))
 seen = 0
 updated = 0
