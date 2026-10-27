@@ -200,3 +200,12 @@ Earlier navigation, localization, mobile header and styling changes are document
 - Added a narrow, idempotent generator for metadata and cross-language hreflang on the existing five Tools locales.
 - A dedicated GitHub Actions workflow validates the output on a review branch before any production merge. Documentation, file counts, coverage, limitations and rollback are recorded in the generated change commit.
 - The tool engines, UI, images, navigation and the seven other site languages are unchanged. This commit only stages the automation for review.
+
+### 2026-10-27 — Verified Tools SEO rollout
+- Updated and statically validated 265 existing Tools pages: 53 routes x en/de/fa/fr/es.
+- Canonicals remain self-referential; six reciprocal hreflang links (en, de, fa, fr, es, x-default) appear on each page.
+- Translated 53 French and 53 Spanish meta descriptions and aligned their Open Graph descriptions/titles with localized metadata.
+- Sitemap remains 446 unique existing routes. No design, scripts, tools, backgrounds or other languages changed.
+- Validation: full file and sitemap checks passed in the rollout script; the workflow runs its --check mode before committing.
+- Live Google recrawl, rankings and manual browser QA are not verified by static checks.
+- Rollback: revert the workflow bot commit that changed Tools HTML and this documentation.
