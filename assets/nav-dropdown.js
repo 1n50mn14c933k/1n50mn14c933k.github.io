@@ -90,111 +90,185 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
   const tools = {"photo-file":[["image-compressor","Image Compressor"],["image-converter","Image Converter"],["exif-cleaner","EXIF Cleaner"],["image-to-pdf","Image to PDF"],["image-watermark","Image Watermark"],["photo-rotator","Photo Rotator"],["photo-color-palette","Photo Color Palette"],["photo-date-detective","Photo Date Detective"],["batch-file-renamer","Batch File Renamer"],["duplicate-checker","Duplicate Checker"],["qr-code-generator","QR Code Generator"],["sha256-verifier","SHA-256 Verifier"]],"code-data":[["base64-encoder","Base64 Encoder / Decoder"],["csv-json-converter","CSV / JSON Converter"],["html-entity-converter","HTML Entity Converter"],["json-formatter","JSON Formatter"],["json-schema-validator","JSON Schema Validator"],["markdown-preview","Markdown Preview"],["regex-tester","Regex Tester"],["sql-formatter","SQL Formatter"],["url-encoder","URL Encoder"],["uuid-generator","UUID Generator"],["xml-formatter","XML Formatter"],["yaml-json-converter","YAML / JSON Converter"]],"networking":[["cron-expression-builder","Cron Expression Builder"],["docker-compose-checker","Docker Compose Checker"],["ip-range-cidr-converter","IP Range / CIDR Converter"],["ipv4-subnet-calculator","IPv4 Subnet Calculator"],["ipv6-prefix-calculator","IPv6 Prefix Calculator"],["linux-chmod-calculator","Linux chmod Calculator"],["network-port-reference","Network Port Reference"],["systemd-timer-builder","systemd Timer Builder"],["time-zone-converter","Time Zone Converter"],["unix-timestamp-converter","Unix Timestamp Converter"],["vlan-ip-planner","VLAN / IP Planner"],["vlsm-subnet-planner","VLSM Subnet Planner"]],"security":[["jwt-inspector","JWT Inspector"],["passphrase-generator","Passphrase Generator"],["password-generator","Password Generator"],["password-strength","Password Strength"],["punycode-converter","Punycode Converter"],["secret-leak-scanner","Secret Leak Scanner"],["sensitive-text-redactor","Sensitive Text Redactor"],["text-code-diff","Text / Code Diff"],["text-hash-generator","Text Hash Generator"],["text-hex-utf8","Text / Hex / UTF-8"],["unicode-inspector","Unicode Inspector"],["url-safety-inspector","URL Safety Inspector"]]};
   const categorySlugs = ["photo-file","code-data","networking","security"];
   const supportedToolLanguages = new Set(["en","de","fa","fr","es"]);
+  const descriptions = {"en":{"title":"EXPLORE KOLFAT","intro":"MEDIA KOLFAT • 48 online tools • 5 guides","search":"Search pages or tools…","noResults":"No matches. Try another keyword.","more":"Showing {shown} of {total} results. Refine your search.","nav":"START HERE","learn":"LEARN & EXPLORE","catalog":"48 ONLINE TOOLS","policies":"LEGAL & TRUST","social":"FOLLOW KOLFAT","browse":"Open category • 12 tools","guides":"5 practical guides for your photo library","legal":"Privacy, terms and software information","sub":["Your starting point","Organize photos and videos on Windows","Official installation options","What KOLFAT builds and why","Learn to organize and protect memories","Private tools that run in your browser","Answers and assistance"],"categories":["Images, conversion, cleaning and files","JSON, text, encoding and developer tools","IP networks, planning and automation","Passwords, URL checks and text analysis"]},"de":{"title":"KOLFAT ENTDECKEN","intro":"MEDIA KOLFAT • 48 Online-Tools • 5 Anleitungen","search":"Seiten oder Tools suchen…","noResults":"Keine Treffer. Anderen Suchbegriff versuchen.","more":"{shown} von {total} Treffern. Suche eingrenzen.","nav":"HIER STARTEN","learn":"LERNEN & ENTDECKEN","catalog":"48 ONLINE-TOOLS","policies":"RECHTLICHES & VERTRAUEN","social":"KOLFAT FOLGEN","browse":"Kategorie öffnen • 12 Tools","guides":"5 praktische Anleitungen für Fotos","legal":"Datenschutz, Bedingungen und Lizenzen","sub":["Startseite und Überblick","Fotos und Videos unter Windows organisieren","Offizielle Installationsmöglichkeiten","Über das KOLFAT-Projekt","Fotos sicher verwalten lernen","Private Tools direkt im Browser","Hilfe und Antworten"],"categories":["Bilder, Konvertierung und Dateien","JSON, Code und Entwicklerwerkzeuge","IP-Netzwerke und Automatisierung","Passwörter, URLs und Textprüfung"]},"fa":{"title":"کاوش در KOLFAT","intro":"MEDIA KOLFAT • ۴۸ ابزار آنلاین • ۵ راهنما","search":"جستجوی صفحه یا ابزار…","noResults":"نتیجه‌ای پیدا نشد. عبارت دیگری امتحان کنید.","more":"نمایش {shown} نتیجه از {total}. جستجو را دقیق‌تر کنید.","nav":"از اینجا شروع کنید","learn":"یادگیری و راهنماها","catalog":"۴۸ ابزار آنلاین","policies":"قوانین و حریم خصوصی","social":"دنبال کردن KOLFAT","browse":"مشاهده دسته • ۱۲ ابزار","guides":"۵ راهنمای کاربردی برای عکس‌ها","legal":"حریم خصوصی، شرایط و مجوزها","sub":["صفحه اصلی و معرفی","سامان‌دهی عکس و ویدیو در ویندوز","روش‌های رسمی نصب","درباره پروژه KOLFAT","راهنمای مدیریت امن عکس‌ها","ابزارهای خصوصی در مرورگر","راهنمایی و پشتیبانی"],"categories":["تصویر، تبدیل و فایل‌ها","JSON، کد و داده‌ها","شبکه و خودکارسازی","رمز عبور، نشانی وب و متن"]},"fr":{"title":"DÉCOUVRIR KOLFAT","intro":"MEDIA KOLFAT • 48 outils • 5 guides","search":"Rechercher une page ou un outil…","noResults":"Aucun résultat. Essayez un autre terme.","more":"{shown} résultats sur {total}. Précisez la recherche.","nav":"COMMENCER ICI","learn":"GUIDES & DÉCOUVERTE","catalog":"48 OUTILS EN LIGNE","policies":"MENTIONS LÉGALES","social":"SUIVRE KOLFAT","browse":"Ouvrir la catégorie • 12 outils","guides":"5 guides pratiques pour vos photos","legal":"Confidentialité, conditions et licences","sub":["Accueil et aperçu","Organiser photos et vidéos sur Windows","Options officielles d'installation","Notre projet et nos objectifs","Apprendre à protéger ses photos","Outils privés dans le navigateur","Aide et réponses"],"categories":["Images, conversions et fichiers","JSON, code et données","Réseaux et automatisation","Mots de passe, liens et textes"]},"es":{"title":"EXPLORAR KOLFAT","intro":"MEDIA KOLFAT • 48 herramientas • 5 guías","search":"Buscar páginas o herramientas…","noResults":"Sin resultados. Prueba otra palabra.","more":"{shown} de {total} resultados. Refina la búsqueda.","nav":"EMPIEZA AQUÍ","learn":"GUÍAS Y APRENDIZAJE","catalog":"48 HERRAMIENTAS","policies":"LEGAL Y PRIVACIDAD","social":"SIGUE A KOLFAT","browse":"Abrir categoría • 12 herramientas","guides":"5 guías prácticas para tus fotos","legal":"Privacidad, términos y licencias","sub":["Inicio y presentación","Organiza fotos y vídeos en Windows","Opciones oficiales de instalación","Conoce el proyecto KOLFAT","Aprende a proteger tus recuerdos","Herramientas privadas en tu navegador","Ayuda y respuestas"],"categories":["Imágenes, conversión y archivos","JSON, código y datos","Redes y automatización","Contraseñas, enlaces y textos"]},"pt":{"title":"EXPLORAR KOLFAT","intro":"MEDIA KOLFAT • 48 ferramentas • 5 guias","search":"Pesquisar páginas ou ferramentas…","noResults":"Sem resultados. Tente outra pesquisa.","more":"{shown} de {total} resultados. Refine a pesquisa.","nav":"COMECE AQUI","learn":"GUIAS E AJUDA","catalog":"48 FERRAMENTAS ONLINE","policies":"LEGAL E PRIVACIDADE","social":"SEGUIR KOLFAT","browse":"Abrir categoria • 12 ferramentas","guides":"5 guias práticos para fotografias","legal":"Privacidade, termos e licenças","sub":["Página inicial","Organize fotos e vídeos no Windows","Opções oficiais de instalação","Conheça o projeto KOLFAT","Aprenda a proteger as suas fotos","Ferramentas privadas no navegador","Ajuda e respostas"],"categories":["Imagens, conversão e ficheiros","JSON, código e dados","Redes e automação","Palavras-passe, URLs e texto"]},"it":{"title":"ESPLORA KOLFAT","intro":"MEDIA KOLFAT • 48 strumenti • 5 guide","search":"Cerca pagine o strumenti…","noResults":"Nessun risultato. Prova un'altra parola.","more":"{shown} di {total} risultati. Affina la ricerca.","nav":"INIZIA QUI","learn":"GUIDE E APPROFONDIMENTI","catalog":"48 STRUMENTI ONLINE","policies":"LEGALE E PRIVACY","social":"SEGUI KOLFAT","browse":"Apri categoria • 12 strumenti","guides":"5 guide pratiche per le foto","legal":"Privacy, termini e licenze","sub":["Pagina iniziale","Organizza foto e video su Windows","Opzioni ufficiali di installazione","Scopri il progetto KOLFAT","Impara a proteggere i ricordi","Strumenti privati nel browser","Assistenza e risposte"],"categories":["Immagini, conversione e file","JSON, codice e dati","Reti e automazione","Password, URL e analisi del testo"]},"ja":{"title":"KOLFAT を探す","intro":"MEDIA KOLFAT • 48 のツール • 5 つのガイド","search":"ページやツールを検索…","noResults":"見つかりませんでした。別の語句で検索してください。","more":"全 {total} 件中 {shown} 件を表示。検索を絞ってください。","nav":"まずはこちら","learn":"ガイド・学習","catalog":"48 のオンラインツール","policies":"法律・プライバシー","social":"KOLFAT をフォロー","browse":"カテゴリを開く • 12 ツール","guides":"写真整理の実用ガイド 5 本","legal":"プライバシー・規約・ライセンス","sub":["ホームと概要","Windows で写真と動画を整理","公式のインストール方法","KOLFAT の取り組み","写真を安全に管理する方法","ブラウザで使える非公開処理ツール","ヘルプとサポート"],"categories":["画像変換とファイル","JSON・コード・データ","ネットワークと自動化","パスワード・URL・文字列解析"]},"zh":{"title":"探索 KOLFAT","intro":"MEDIA KOLFAT • 48 个工具 • 5 篇指南","search":"搜索页面或工具…","noResults":"未找到结果，请尝试其他关键词。","more":"显示 {shown}/{total} 个结果，请缩小搜索范围。","nav":"从这里开始","learn":"指南与学习","catalog":"48 个在线工具","policies":"法律与隐私","social":"关注 KOLFAT","browse":"打开类别 • 12 个工具","guides":"5 篇实用照片整理指南","legal":"隐私、条款与许可证","sub":["首页与概览","在 Windows 中整理照片和视频","官方安装方式","了解 KOLFAT 项目","学习安全管理照片","在浏览器中本地运行工具","帮助与支持"],"categories":["图像转换与文件工具","JSON、代码与数据","网络与自动化","密码、网址与文本分析"]},"hi":{"title":"KOLFAT खोजें","intro":"MEDIA KOLFAT • 48 टूल • 5 गाइड","search":"पेज या टूल खोजें…","noResults":"कोई परिणाम नहीं। दूसरा शब्द आज़माएँ।","more":"{total} में से {shown} परिणाम। खोज को सीमित करें।","nav":"यहाँ से शुरू करें","learn":"सीखें और गाइड","catalog":"48 ऑनलाइन टूल","policies":"कानूनी और गोपनीयता","social":"KOLFAT को फ़ॉलो करें","browse":"श्रेणी खोलें • 12 टूल","guides":"फ़ोटो प्रबंधन के 5 गाइड","legal":"गोपनीयता, नियम और लाइसेंस","sub":["मुख्य पेज और परिचय","Windows पर फ़ोटो और वीडियो व्यवस्थित करें","आधिकारिक इंस्टॉल विकल्प","KOLFAT प्रोजेक्ट के बारे में","फ़ोटो सुरक्षित रखने के तरीके","ब्राउज़र में निजी टूल","मदद और उत्तर"],"categories":["इमेज, कन्वर्ज़न और फ़ाइलें","JSON, कोड और डेटा","नेटवर्क और ऑटोमेशन","पासवर्ड, URL और टेक्स्ट"]},"ru":{"title":"ЗНАКОМСТВО С KOLFAT","intro":"MEDIA KOLFAT • 48 инструментов • 5 руководств","search":"Найти страницу или инструмент…","noResults":"Ничего не найдено. Измените запрос.","more":"Показано {shown} из {total}. Уточните поиск.","nav":"НАЧНИТЕ ЗДЕСЬ","learn":"ОБУЧЕНИЕ И РУКОВОДСТВА","catalog":"48 ОНЛАЙН-ИНСТРУМЕНТОВ","policies":"ПРАВОВАЯ ИНФОРМАЦИЯ","social":"СЛЕДИТЬ ЗА KOLFAT","browse":"Открыть категорию • 12 инструментов","guides":"5 руководств по работе с фото","legal":"Конфиденциальность, условия, лицензии","sub":["Главная и обзор","Организация фото и видео в Windows","Официальные варианты установки","О проекте KOLFAT","Учитесь защищать свои фотографии","Локальные инструменты в браузере","Помощь и ответы"],"categories":["Изображения, конвертация и файлы","JSON, код и данные","Сети и автоматизация","Пароли, ссылки и анализ текста"]},"ar":{"title":"استكشف KOLFAT","intro":"MEDIA KOLFAT • ٤٨ أداة • ٥ أدلة","search":"ابحث عن صفحة أو أداة…","noResults":"لا توجد نتائج. جرّب كلمة أخرى.","more":"عرض {shown} من {total} نتائج. حدّد البحث.","nav":"ابدأ من هنا","learn":"أدلة وتعلّم","catalog":"٤٨ أداة عبر الإنترنت","policies":"الشروط والخصوصية","social":"تابع KOLFAT","browse":"افتح الفئة • ١٢ أداة","guides":"٥ أدلة عملية لتنظيم الصور","legal":"الخصوصية والشروط والتراخيص","sub":["الصفحة الرئيسية","تنظيم الصور والفيديو على Windows","خيارات التثبيت الرسمية","حول مشروع KOLFAT","تعلّم حماية صورك","أدوات خاصة داخل المتصفح","المساعدة والإجابات"],"categories":["الصور والتحويل والملفات","JSON والأكواد والبيانات","الشبكات والأتمتة","كلمات المرور والروابط والنصوص"]}};
   const corePages = ["home","media","download","about","guides","tools","support"];
   const pathname = () => {
-    const p=window.location.pathname;
-    return p.endsWith("/")?p:p+"/";
+    const path = window.location.pathname;
+    return path.endsWith("/") ? path : path+"/";
   };
   function enhanceMenu() {
     const nav = document.querySelector(".top-nav .kolfat-menu-panel");
-    if (!nav || nav.querySelector(".kf-site-map")) return;
-    const code = (document.documentElement.lang || "en").toLowerCase().split("-")[0];
-    const lang = Object.prototype.hasOwnProperty.call(localized,code) ? code : "en";
-    const labels = localized[lang];
+    if (!nav || nav.querySelector(".kf-nav-search")) return;
+    const locale = (document.documentElement.lang || "en").toLowerCase().split("-")[0];
+    const lang = Object.prototype.hasOwnProperty.call(localized,locale) ? locale : "en";
+    const labels = localized[lang], words = descriptions[lang];
     const current = pathname();
-    const pathFor = item => {
-      if (item === "home") return "/" + lang + "/";
-      if (item === "media") return "/" + lang + "/Media_Kolfat/";
-      if (item === "tools") return supportedToolLanguages.has(lang) && lang !== "en" ? "/" + lang + "/tools/" : "/tools/";
-      return (lang === "en" ? "/" : "/" + lang + "/") + item + "/";
+    const toolRoot = supportedToolLanguages.has(lang) && lang !== "en" ? "/"+lang+"/tools/" : "/tools/";
+    const pagePath = key => {
+      if(key==="home") return "/"+lang+"/";
+      if(key==="media") return "/"+lang+"/Media_Kolfat/";
+      if(key==="tools") return toolRoot;
+      return (lang==="en"?"/":"/"+lang+"/")+key+"/";
     };
-    const toolRoot = pathFor("tools");
-    const categoryUrl = slug => toolRoot + slug + "/";
-    const guideRoot = pathFor("guides");
-    const a = (href,label) => {
-      const el = document.createElement("a");
-      el.href = href; el.textContent = label; el.dir = "auto";
-      if (href === current) el.setAttribute("aria-current","page");
-      return el;
+    const categoryPath = slug => toolRoot+slug+"/";
+    const guideRoot = pagePath("guides");
+    const makeLink = (href,title,subtitle,group) => {
+      const link=document.createElement("a");
+      link.href=href;link.dir="auto";link.textContent=title;
+      link.dataset.kfTitle=title;
+      link.dataset.kfDescription=subtitle||"";
+      link.dataset.kfGroup=group||"";
+      if (href===current) link.setAttribute("aria-current","page");
+      return link;
     };
-    // Correct older TOOLS templates still pointing to English main-site routes.
-    const direct = Array.from(nav.children).filter(el => el.tagName === "A");
-    const knownLanguages = new Set(Object.keys(localized));
-    const found = new Set();
-    for (const el of direct) {
-      const original = el.getAttribute("href") || "";
-      if (!original.startsWith("/")) continue;
-      const segments = original.split("/").filter(Boolean);
-      const prefixed=segments.length===2 && knownLanguages.has(segments[0]);
-      const single=segments.length===1;
-      const suffix=segments[segments.length-1];
+    const direct=Array.from(nav.children).filter(el=>el.tagName==="A");
+    const knownLocales=new Set(Object.keys(localized));
+    const found=new Set();
+    for(const el of direct){
+      const old=el.getAttribute("href")||"";
+      if(!old.startsWith("/")) continue;
+      const parts=old.split("/").filter(Boolean);
+      const prefixed=parts.length===2&&knownLocales.has(parts[0]);
+      const single=parts.length===1;
+      const suffix=parts.at(-1);
       let key=null;
-      if (single && knownLanguages.has(suffix)) key="home";
-      else if ((single || prefixed) && suffix==="Media_Kolfat") key="media";
-      else if ((single || prefixed) && corePages.includes(suffix)) key=suffix;
-      if (key===null) continue;
-      const i=corePages.indexOf(key);
-      const target=pathFor(key);
-      el.href=target;
-      el.textContent=labels.main[i];
-      el.dir="auto";
+      if(single&&knownLocales.has(suffix))key="home";
+      else if((single||prefixed)&&suffix==="Media_Kolfat")key="media";
+      else if((single||prefixed)&&corePages.includes(suffix))key=suffix;
+      if(key===null)continue;
+      const index=corePages.indexOf(key),destination=pagePath(key);
+      el.href=destination;
+      el.textContent=labels.main[index]+(key==="tools"&&!supportedToolLanguages.has(lang)?" (EN)":"");
+      el.dataset.kfTitle=el.textContent;
+      el.dataset.kfDescription=words.sub[index];
+      el.dataset.kfGroup=words.nav;
       el.removeAttribute("aria-current");
-      if(target===current) el.setAttribute("aria-current","page");
+      if(destination===current)el.setAttribute("aria-current","page");
+      el.classList.add("kf-nav-quicklink");
+      const title=document.createElement("strong"),desc=document.createElement("small");
+      title.textContent=el.textContent;desc.textContent=words.sub[index];
+      const copy=document.createElement("span");copy.className="kf-nav-card-copy";
+      copy.append(title,desc);el.textContent="";el.append(copy);
       found.add(key);
     }
-    if (!found.has("tools")) {
-      const toolLink = a(toolRoot,labels.main[5] + (supportedToolLanguages.has(lang) ? "" : " (EN)"));
-      const guideLink = Array.from(nav.children).find(el => el.tagName === "A" && el.getAttribute("href") === pathFor("guides"));
-      const supportLink = Array.from(nav.children).find(el => el.tagName === "A" && el.getAttribute("href") === pathFor("support"));
-      if (guideLink) guideLink.after(toolLink);
-      else if (supportLink) nav.insertBefore(toolLink,supportLink);
-      else nav.append(toolLink);
+    if(!found.has("tools")){
+      const link=makeLink(toolRoot,labels.main[5]+(supportedToolLanguages.has(lang)?"":" (EN)"),words.sub[5],words.nav);
+      link.className="kf-nav-quicklink";
+      const title=document.createElement("strong"),desc=document.createElement("small"),copy=document.createElement("span");
+      title.textContent=link.textContent;desc.textContent=words.sub[5];copy.className="kf-nav-card-copy";copy.append(title,desc);
+      link.textContent="";link.append(copy);
+      const guides=direct.find(el=>el.getAttribute("href")===pagePath("guides"));
+      const support=direct.find(el=>el.getAttribute("href")===pagePath("support"));
+      if(guides)guides.after(link);
+      else if(support)nav.insertBefore(link,support);
+      else nav.append(link);
     }
-    const block = document.createElement("div");
-    block.className = "kf-site-map";
-    const section = label => {
-      const title = document.createElement("span");
-      title.className = "menu-section-label";
-      title.textContent = label;
-      block.append(title);
+    // Keep CONTACT present, but explain its purpose.
+    for(const el of direct){
+      if(!el.getAttribute("href")?.startsWith("mailto:"))continue;
+      el.classList.add("kf-nav-quicklink");
+      const original=el.textContent.trim();
+      el.dataset.kfTitle=original;
+      el.dataset.kfDescription=labels.main[7];
+      const copy=document.createElement("span"),title=document.createElement("strong"),hint=document.createElement("small");
+      copy.className="kf-nav-card-copy";title.textContent=original;hint.textContent="contact@kolfat.app";
+      copy.append(title,hint);el.replaceChildren(copy);
+    }
+    const firstSection=nav.querySelector(".menu-section-label");
+    if(firstSection)firstSection.textContent=words.nav;
+    const social=Array.from(nav.children).find(el=>el.classList?.contains("menu-section-label")&&el.nextElementSibling?.matches('a[href*="x.com/"]'));
+    if(social)social.textContent=words.social;
+
+    const section=document.createElement("div");section.className="kf-site-map";
+    const heading=title=>{
+      const h=document.createElement("span");h.className="menu-section-label";h.textContent=title;
+      section.append(h);
     };
-    const group = (title,items,expanded) => {
-      const details=document.createElement("details");
-      details.className="kf-nav-subgroup";
-      const summary=document.createElement("summary");
-      summary.dir="auto";
-      summary.textContent=title;
-      details.append(summary);
-      const links=document.createElement("div");
-      links.className="kf-nav-subgroup-links";
-      for(const [href,label] of items) links.append(a(href,label));
-      details.append(links);
-      if(expanded) details.open=true;
-      block.append(details);
+    const subgroup=(title,subtitle,links,expanded,count)=>{
+      const d=document.createElement("details");d.className="kf-nav-subgroup";if(expanded)d.open=true;
+      const s=document.createElement("summary");s.dir="auto";
+      const copy=document.createElement("span");copy.className="kf-nav-summary-copy";
+      const strong=document.createElement("strong"),small=document.createElement("small");
+      strong.textContent=title;small.textContent=subtitle;copy.append(strong,small);
+      const badge=document.createElement("span");badge.className="kf-nav-group-count";badge.textContent=String(count);
+      s.append(copy,badge);
+      const list=document.createElement("div");list.className="kf-nav-subgroup-links";
+      for(const [href,label,detail] of links)list.append(makeLink(href,label,detail||"",title));
+      d.append(s,list);section.append(d);
     };
-    section(labels.sections[0]);
-    const guideLinks=guideSlugs.map((slug,i)=>[guideRoot+slug+"/",labels.guideTitles[i]]);
-    guideLinks.push(["/support/getting-started/",labels.sections[5]]);
-    group(labels.sections[1],guideLinks,current.startsWith(guideRoot) && current!==guideRoot);
-    section(labels.sections[2] + (supportedToolLanguages.has(lang)?"":" (EN)"));
+    heading(words.learn);
+    const guideLinks=guideSlugs.map((slug,i)=>[guideRoot+slug+"/",labels.guideTitles[i],words.guides]);
+    guideLinks.push(["/support/getting-started/",labels.sections[5],words.sub[6]]);
+    subgroup(labels.sections[1],words.guides,guideLinks,current.startsWith(guideRoot)&&current!==guideRoot,5);
+    heading(words.catalog+(supportedToolLanguages.has(lang)?"":" • EN"));
     for(let i=0;i<categorySlugs.length;i++){
-      const slug=categorySlugs[i],hub=categoryUrl(slug);
-      const rows=[[hub,labels.sections[4]],...tools[slug].map(([id,name])=>[
-        slug==="photo-file" ? toolRoot+id+"/" : hub+id+"/",name
-      ])];
-      const inside=current===hub || rows.some(([href])=>href===current);
-      group(labels.category[i],rows,inside);
+      const slug=categorySlugs[i],hub=categoryPath(slug);
+      const links=[[hub,words.browse,words.categories[i]],
+        ...tools[slug].map(([id,name])=>[slug==="photo-file"?toolRoot+id+"/":hub+id+"/",name,words.categories[i]])];
+      const active=current===hub||links.some(([href])=>href===current);
+      subgroup(labels.category[i],words.categories[i],links,active,12);
     }
-    const legalRoutes=["privacy","terms","licenses","disclaimer"];
-    group(labels.sections[3],legalRoutes.map((p,i)=>[pathFor(p),labels.legal[i]]),
-      legalRoutes.some(p=>pathFor(p)===current));
-    const socialSection = Array.from(nav.children).find(el =>
-      el.classList && el.classList.contains("menu-section-label") &&
-      el.nextElementSibling && el.nextElementSibling.matches('a[href*="x.com/"]'));
-    nav.insertBefore(block,socialSection||null);
+    heading(words.policies);
+    const legalKeys=["privacy","terms","licenses","disclaimer"];
+    subgroup(labels.sections[3],words.legal,legalKeys.map((key,i)=>[pagePath(key),labels.legal[i],words.legal]),
+      legalKeys.some(key=>pagePath(key)===current),4);
+    nav.insertBefore(section,social||null);
+
+    // A small, built-in find-a-page search. Nothing is sent to a server.
+    const finder=document.createElement("div");finder.className="kf-nav-finder";
+    const intro=document.createElement("div");intro.className="kf-nav-intro";
+    const header=document.createElement("strong");header.textContent=words.title;
+    const subtitle=document.createElement("small");subtitle.textContent=words.intro;intro.append(header,subtitle);
+    const input=document.createElement("input");input.type="search";input.className="kf-nav-input";
+    input.setAttribute("aria-label",words.search);input.placeholder=words.search;
+    input.autocomplete="off";input.spellcheck=false;
+    finder.append(intro,input);
+    const results=document.createElement("div");results.className="kf-nav-results";
+    const status=document.createElement("p");status.className="kf-nav-result-status";status.setAttribute("role","status");status.setAttribute("aria-live","polite");
+    const list=document.createElement("div");list.className="kf-nav-result-links";results.append(status,list);
+    nav.prepend(results);nav.prepend(finder);
+    const all=Array.from(nav.querySelectorAll('a[href]')).filter(el=>{
+      const href=el.getAttribute("href")||"";
+      return href.startsWith("/")||href.startsWith("mailto:");
+    });
+    const seen=new Set();
+    const entries=all.map(el=>{
+      const href=el.getAttribute("href");
+      const title=el.dataset.kfTitle||el.textContent.trim();
+      const desc=el.dataset.kfDescription||"";
+      const group=el.dataset.kfGroup||el.closest(".kf-nav-subgroup")?.querySelector("summary strong")?.textContent||words.nav;
+      return {href,title,desc,group};
+    }).filter(x=>{
+      const key=x.href+"|"+x.title;if(seen.has(key))return false;seen.add(key);return true;
+    });
+    input.addEventListener("input",()=>{
+      const q=input.value.trim().toLocaleLowerCase(lang);
+      nav.classList.toggle("kf-nav-searching",Boolean(q));
+      list.replaceChildren();status.textContent="";
+      if(!q)return;
+      const matches=entries.filter(item=>
+        (item.title+" "+item.desc+" "+item.group+" "+item.href).toLocaleLowerCase(lang).includes(q));
+      if(!matches.length){status.textContent=words.noResults;return;}
+      const limit=18;
+      for(const item of matches.slice(0,limit)){
+        const link=makeLink(item.href,item.title,item.desc,item.group);
+        link.className="kf-nav-search-result";
+        const copy=document.createElement("span"),title=document.createElement("strong"),meta=document.createElement("small");
+        copy.className="kf-nav-card-copy";title.textContent=item.title;
+        meta.textContent=item.desc||item.group;copy.append(title,meta);
+        link.replaceChildren(copy);list.append(link);
+      }
+      if(matches.length>limit)status.textContent=words.more.replace("{shown}",String(limit)).replace("{total}",String(matches.length));
+    });
+    nav.addEventListener("keydown",event=>{
+      if(event.key==="Escape"&&document.activeElement===input&&input.value){
+        event.stopPropagation();input.value="";input.dispatchEvent(new Event("input"));input.focus();
+      }
+    },true);
   }
-  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",enhanceMenu,{once:true});
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",enhanceMenu,{once:true});
   else enhanceMenu();
+
 })();
 
 /* KOLFAT unified navigation artwork and footer, 2026-10-25.
@@ -260,6 +334,8 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
     const menu = document.querySelector(".top-nav .kolfat-menu-panel");
     if (menu) {
       for (const anchor of menu.querySelectorAll("a[href]")) {
+        // Child tool/guide lists read more clearly without 60 repeated icons.
+        if (anchor.closest(".kf-nav-subgroup-links")) continue;
         if (anchor.querySelector(".kf-menu-icon")) continue;
         const key = iconFor(anchor.getAttribute("href"));
         const svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
