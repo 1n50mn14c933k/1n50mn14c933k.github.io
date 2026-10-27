@@ -209,3 +209,9 @@ Earlier navigation, localization, mobile header and styling changes are document
 - Validation: full file and sitemap checks passed in the rollout script; the workflow runs its --check mode before committing.
 - Live Google recrawl, rankings and manual browser QA are not verified by static checks.
 - Rollback: revert the workflow bot commit that changed Tools HTML and this documentation.
+
+### 2026-10-27 — Tools regression runner compatibility
+- **Reason:** The post-merge SEO deployment succeeded, while Tools browser regression could not start because Playwright 1.56.1 rejected GitHub's Ubuntu 26.04 runner (`ERROR: Playwright does not support chromium on ubuntu26.04-x64`).
+- **Change:** Pin the Tools regression job to `ubuntu-24.04`, supported by the workflow's existing Playwright version. No website files, content, design, tools, or sitemap changed.
+- **Verification:** Previously observed JavaScript syntax and unit tests passed, Playwright dependency setup failed before browser tests. Re-run of the modified workflow is required for browser QA verification; do not treat the previous failed run as a website failure.
+- **Risk:** Runner image deprecation could require a later Playwright update. **Rollback:** Revert this workflow-and-documentation commit.
