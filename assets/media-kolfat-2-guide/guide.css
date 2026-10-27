@@ -1,0 +1,21 @@
+/* Guide-only document layout; existing KOLFAT chrome and brand assets remain shared. */
+.media-user-guide .hero h1{font-size:clamp(2.8rem,6vw,5.4rem);line-height:1.04;overflow-wrap:anywhere}
+.media-user-guide .guide-contents ol{columns:2;column-gap:36px;list-style:none;padding:0}
+.media-user-guide .guide-contents li{break-inside:avoid;margin-block:10px}
+.media-user-guide .guide-contents a{display:inline-block;text-underline-offset:4px}
+.media-user-guide .guide-chapter{scroll-margin-top:100px}
+.media-user-guide .guide-steps{list-style:none;padding:0!important;margin:28px 0}
+.media-user-guide .guide-steps>li{margin-block:40px;scroll-margin-top:100px}
+.media-user-guide .guide-steps>li>p{font-size:1.05rem;line-height:1.8;color:var(--text)}
+.media-user-guide figure{margin:20px 0 0}
+.media-user-guide .guide-image-link{display:block;border:1px solid var(--line);background:var(--panel)}
+.media-user-guide figure img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
+.media-user-guide figcaption{font-size:.86rem;line-height:1.7;margin-top:10px;color:var(--muted)}
+.media-user-guide figcaption a{display:inline-block;margin-inline-start:12px;text-underline-offset:4px}
+.media-user-guide .guide-notes{border-inline-start:2px solid var(--line);padding-inline-start:24px!important}
+.media-user-guide .guide-outcome{font-weight:700;color:var(--text)}
+.media-user-guide .guide-back{font-size:.86rem;text-underline-offset:4px}
+.media-user-guide bdi{unicode-bidi:isolate}
+.media-user-guide a:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+@media(max-width:720px){.media-user-guide .guide-contents ol{columns:1}.media-user-guide .guide-steps>li{margin-block:32px}.media-user-guide .guide-chapter{scroll-margin-top:85px}}
+@media print{.media-user-guide .header,.media-user-guide footer,.media-user-guide .guide-back{display:none}.media-user-guide main{width:100%;padding:0}.media-user-guide figure{break-inside:avoid}.media-user-guide .guide-steps>li{break-inside:auto}.media-user-guide a{overflow-wrap:anywhere}}

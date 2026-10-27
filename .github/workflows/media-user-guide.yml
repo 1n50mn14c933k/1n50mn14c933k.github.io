@@ -1,0 +1,43 @@
+name: MEDIA KOLFAT Guide Validation
+on:
+  pull_request:
+    paths: ['content/media-kolfat-2-guide/**', 'assets/media-kolfat-2-guide/**', '**/guides/**', 'tools/tests/media*', '.github/scripts/*media_user_guide.py', '.github/workflows/media-user-guide.yml', 'sitemap.xml']
+  push:
+    branches: [main]
+    paths: ['content/media-kolfat-2-guide/**', 'assets/media-kolfat-2-guide/**', '**/guides/**', 'tools/tests/media*', '.github/scripts/*media_user_guide.py', '.github/workflows/media-user-guide.yml', 'sitemap.xml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  guide:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check maintenance script syntax without rewriting approved guides
+        run: |
+          python3 - <<'PY'
+          import ast
+          from pathlib import Path
+          for name in ('build_media_user_guide.py', 'integrate_media_user_guide.py'):
+              ast.parse((Path('.github/scripts') / name).read_text())
+          PY
+      - name: Validate content and original image integrity
+        run: node --test tools/tests/media-user-guide.test.mjs
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Check responsive pages, RTL and navigation
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/media-guide-http.log 2>&1 &
+          node tools/tests/media-guide-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: media-guide-browser-results
+          path: test-results/media-guide/

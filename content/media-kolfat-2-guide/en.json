@@ -1,0 +1,714 @@
+{
+  "language": "en",
+  "title": "MEDIA KOLFAT 2.0 user guide",
+  "description": "An illustrated Windows guide to adding media, checking health, finding duplicates, organizing with COPY or Advanced MOVE, recovering interrupted work, and understanding reports.",
+  "lead": "Follow MEDIA KOLFAT from its first launch to a verified organized collection. The examples use generated demonstration images and video, with independent backups. Every application image is a genuine native PNG from the installed Windows application.",
+  "versionNote": "Verified with MEDIA KOLFAT 2.0.0, build 2.0.0.0. Screenshots show the English interface. Counts change when the larger demonstration dataset is introduced; use your own counts when following the steps.",
+  "safety": "Make an independent backup before organizing. COPY is the recommended starting point because it keeps source files. Advanced MOVE removes source files after destination verification and safety checks. Keep the backup until you have checked the destination and report.",
+  "contentsLabel": "Contents",
+  "stepLabel": "Step",
+  "imageLinkLabel": "Open original PNG",
+  "backLabel": "Back to contents",
+  "chapters": [
+    {
+      "id": "start",
+      "title": "1. Start and understand the guidance",
+      "intro": "Open the installed MEDIA KOLFAT application. The sidebar gives access to Performance Check, Add Photos & Videos, Photos Health Check, Duplicate Finder, Browse Library, Organize Photos & Videos, Activity, Settings and About. Guided and Advanced are the two experience choices.",
+      "steps": [
+        {
+          "id": "start-01",
+          "image": "01-01-first-launch-guided.png",
+          "text": "Start with Guided selected in the Experience area. Follow the highlighted recommended action. The step strip uses neutral gray for upcoming work, amber or yellow emphasis for the current step, and green checks for completed steps.",
+          "caption": "First launch in Guided Mode."
+        },
+        {
+          "id": "start-02",
+          "image": "01-02-performance-check-complete.png",
+          "text": "Run Quick Check on Performance Check and wait for completion. Read the resulting score before continuing; the demonstrated computer scored 98 percent, and another computer can produce a different result.",
+          "caption": "Quick Check completed with a 98 percent score."
+        },
+        {
+          "id": "start-03",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Open Add Photos & Videos. The welcome choices are Scan Computer Automatically and Choose Photos & Videos Manually. Use manual selection when you already know the folder containing the media you want to add.",
+          "caption": "The two real source-selection choices."
+        },
+        {
+          "id": "start-04",
+          "image": "01-04-about-version.png",
+          "text": "Open About to check the installed version. Expand Release Information if necessary and read both Version and Build. Return to the required workflow using the sidebar.",
+          "caption": "Version 2.0.0 and build 2.0.0.0."
+        },
+        {
+          "id": "start-05",
+          "image": "01-05-about-privacy.png",
+          "text": "Expand Privacy & Data Safety. Read the distinction between scanning, COPY and Advanced MOVE, and keep an independent backup of important media.",
+          "caption": "The application's own privacy and safety explanation."
+        }
+      ],
+      "tips": [
+        "The animated arrow and glow point toward the recommended next action. Reduced motion and other guidance preferences are available in Settings.",
+        "Guided Mode helps with the order of tasks. Advanced Mode gives a more direct workflow and exposes MOVE when an organization plan is ready.",
+        "About also provides Legal & Policies, Support, Technical Information, Open-Source & Third-Party Licenses and Product Information panels. Expand the relevant panel when you need that information."
+      ],
+      "outcome": "You can identify the installed release, navigate between pages, and recognize the current guided step."
+    },
+    {
+      "id": "sources",
+      "title": "2. Choose a source manually",
+      "intro": "A source is a folder registered in the local catalog. Adding or scanning a source indexes supported photos and videos. The worked example contains 14 generated JPEG files, two generated AVI files and one optional text file in nested folders.",
+      "steps": [
+        {
+          "id": "sources-01",
+          "image": "02-01-manual-source-picker.png",
+          "text": "Choose Choose Photos & Videos Manually. In the folder picker, review Current folder, Locations, Folders and Photos & Videos in this folder before selecting anything.",
+          "caption": "The real MEDIA KOLFAT folder picker."
+        },
+        {
+          "id": "sources-02",
+          "image": "02-02-enter-demo-source-path.png",
+          "text": "Enter the full path of the folder you want to catalog into Current folder. In this demonstration the selected folder is Media Samples inside the disposable demo directory.",
+          "caption": "A specific demonstration source path entered."
+        },
+        {
+          "id": "sources-03",
+          "image": "02-03-demo-nested-folders.png",
+          "text": "Choose Go. Check the displayed folder path and the nested folder names. A parent folder can show no media directly even though its subfolders contain supported files.",
+          "caption": "The demonstration folder has four nested folders."
+        },
+        {
+          "id": "sources-04",
+          "image": "02-04-preview-sample-photos.png",
+          "text": "Open a known subfolder to review its visible previews. This example opens 2024 Holiday and shows six generated JPEG images.",
+          "caption": "Six supported images visible in the selected subfolder."
+        },
+        {
+          "id": "sources-05",
+          "image": "02-05-return-to-demo-root.png",
+          "text": "Use Up one folder to return to the parent folder when you want to include the full nested collection. Verify Current folder again.",
+          "caption": "Return to the intended parent source."
+        },
+        {
+          "id": "sources-06",
+          "image": "02-06-ready-to-scan-source.png",
+          "text": "Choose Select This Folder. Read the proposed folder name and full path on Ready to add this folder. Do not continue if the displayed source is different from the folder you intended.",
+          "caption": "The selected source is ready to add."
+        },
+        {
+          "id": "sources-07",
+          "image": "02-07-source-advanced-options.png",
+          "text": "Expand Advanced options when you need to review Folder location, the optional display name or Folder type. Cloud folders must already be available on this computer; choose a readable local path.",
+          "caption": "Optional source name and automatically chosen folder type."
+        },
+        {
+          "id": "sources-08",
+          "image": "02-08-source-scan-complete.png",
+          "text": "Start the offered scan and wait for the source card to show Ready and a successful scan time. The first demonstrated source contains 16 supported media files; its text file is not indexed as media.",
+          "caption": "The demonstration scan completed with 16 photos and videos."
+        },
+        {
+          "id": "sources-09",
+          "image": "02-09-source-refresh-complete.png",
+          "text": "Use Refresh on that source card when you want to scan it again. Check the refreshed status and successful scan time. Refreshing a source does not itself select it for organization.",
+          "caption": "The source is ready after a refresh."
+        }
+      ],
+      "tips": [
+        "For an additional folder, Advanced Mode can add it first and show Start Scan on its source card. Adding the first folder starts its initial scan in the demonstrated Guided workflow.",
+        "Always read Selected Folder again on the organizer. The tested interface keeps the organizer selection independently of a source-card Refresh action."
+      ],
+      "outcome": "The intended folder is registered and its supported media appears in the catalog."
+    },
+    {
+      "id": "locations",
+      "title": "3. Automatic discovery and available locations",
+      "intro": "The source picker provides This PC, local folders and drives, Pictures, OneDrive and Network locations. Choose only locations you intend MEDIA KOLFAT to read. An external or USB drive must be connected and readable; a network location must already be accessible from Windows.",
+      "steps": [
+        {
+          "id": "locations-01",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Review Scan Computer Automatically before choosing it. It starts computer-wide discovery rather than offering a demonstration-folder limit. On a computer containing private media, use the manual choice when you need to restrict the scan to one known folder.",
+          "caption": "Automatic discovery and manual selection are separate choices."
+        },
+        {
+          "id": "locations-02",
+          "image": "02-01-manual-source-picker.png",
+          "text": "Use This PC for a readable drive or enter an exact local or network folder path in Current folder. The OneDrive shortcut refers to locally available files. If a provider or network connection is unavailable, make the files available through Windows before selecting the folder.",
+          "caption": "The actual location shortcuts and folder-path field."
+        }
+      ],
+      "tips": [
+        "Computer-wide automatic discovery was not executed during this demonstration because it would examine drives outside the disposable dataset. No automatic-discovery result is presented as tested.",
+        "No account sign-in or connected cloud state is implied by a location shortcut. The demonstration did not access personal Pictures, OneDrive, network shares or external media."
+      ],
+      "outcome": "You can choose a source method that matches the location and the scope you intend to scan."
+    },
+    {
+      "id": "health",
+      "title": "4. Check previews and media dates",
+      "intro": "Open Photos Health Check after a source scan. Thumbnail health, media-date health and original-file availability answer different questions. A missing preview does not by itself mean the source file is missing.",
+      "steps": [
+        {
+          "id": "health-01",
+          "image": "03-01-photos-health-check.png",
+          "text": "Review the health totals. The small demonstration has 16 media files: 14 valid previews and two video preview issues, with all 16 originals last seen as available.",
+          "caption": "The actual health summary for the small demonstration library."
+        },
+        {
+          "id": "health-02",
+          "image": "03-02-thumbnail-repair-complete.png",
+          "text": "Choose the explicit missing-thumbnail repair action and read its result. In this example two video items were checked, no previews were repaired, and both were reported as unsupported for preview generation.",
+          "caption": "Repair reported two unsupported preview cases."
+        },
+        {
+          "id": "health-03",
+          "image": "03-04-date-reanalysis-result.png",
+          "text": "Run the offered missing-date reanalysis and inspect the evidence summary. Here all 16 dates resolved using Filesystem last modified. That is fallback evidence and can reflect copying or editing rather than capture time.",
+          "caption": "The real date-reanalysis result and its evidence source."
+        },
+        {
+          "id": "health-04",
+          "image": "09-09-review-date-evidence.png",
+          "text": "Open Settings and expand Advanced date policy to understand enabled evidence. Embedded metadata, supported XMP, filenames, structured folders and filesystem last modified are listed. Windows CreationTime is not used as capture-date evidence.",
+          "caption": "Actual date-policy controls and the low-confidence warning."
+        }
+      ],
+      "tips": [
+        "The generated files have no camera capture metadata. Their 2024 or 2025-looking names did not determine the observed result; the demonstrated catalog used filesystem last-modified dates.",
+        "A preview repair can legitimately finish without repairing unsupported formats. Keep the originals and use a supported viewer when necessary."
+      ],
+      "outcome": "You understand which issues concern previews, dates or availability and can read the actual repair outcome."
+    },
+    {
+      "id": "duplicates",
+      "title": "5. Find and review exact duplicates",
+      "intro": "Duplicate Finder compares supported, available catalog items to find exact copies. A matching name alone does not establish an exact duplicate. The small dataset deliberately includes three groups of identical files.",
+      "steps": [
+        {
+          "id": "duplicates-01",
+          "image": "04-01-duplicate-finder-ready.png",
+          "text": "Open Duplicate Finder after scanning the source. Review how many photos and videos are ready to check, then choose Find Duplicates.",
+          "caption": "The initial 16-item duplicate scan is ready."
+        },
+        {
+          "id": "duplicates-02",
+          "image": "04-06-duplicate-scan-outcome.png",
+          "text": "Wait for Duplicate scan complete. Review the totals before making any decisions: the initial demonstration found three groups, six duplicate files and about 16.9 MB potentially reclaimable.",
+          "caption": "Three exact duplicate groups found in the original demonstration."
+        },
+        {
+          "id": "duplicates-03",
+          "image": "04-07-inspect-duplicate-results.png",
+          "text": "Scroll through Exact Duplicate Group entries. Compare the file names, locations and sizes. Open Folder can help locate a listed file; browsing a group does not remove it.",
+          "caption": "The actual duplicate entries can be inspected individually."
+        },
+        {
+          "id": "duplicates-04",
+          "image": "04-33-duplicate-scan-running.png",
+          "text": "For a larger collection, watch Finding exact duplicates and the number of candidate files checked. The larger generated test contains 544 catalog items. The tested build shows Stop Scan during this operation.",
+          "caption": "A genuine running duplicate scan with Stop Scan."
+        },
+        {
+          "id": "duplicates-05",
+          "image": "04-36-duplicate-scan-cancelled.png",
+          "text": "Choose Stop Scan to end a running duplicate search. The demonstrated operation returned to the ready-to-check screen. A stopped search is incomplete; it is not proof that no duplicates exist.",
+          "caption": "The real result after stopping the duplicate scan."
+        }
+      ],
+      "tips": [
+        "Pause and Resume were not exposed by Duplicate Finder in this installed build. COPY has separate Pause and Resume controls, demonstrated later.",
+        "Duplicate Finder does not expose a delete action in the tested interface. Potentially reclaimable space is an estimate, not space already freed. Keep at least one independently verified copy and its backup.",
+        "Running a new scan or changing sources can invalidate a previous duplicate result. Check whether the Library overview says Not checked before relying on duplicate statistics."
+      ],
+      "outcome": "You can run an exact-duplicate search, inspect its groups and stop it without deleting original files."
+    },
+    {
+      "id": "library",
+      "title": "6. Browse, search, select and rotate photos",
+      "intro": "Browse Library combines an overview with a searchable gallery. Read Photos & Videos, Health, Duplicates, Unknown Date and Organization before working with individual items. The following rotation example uses the small demonstration library and restores every changed orientation with Undo.",
+      "steps": [
+        {
+          "id": "library-01",
+          "image": "05-01-library-overview.png",
+          "text": "Open Browse Library. Review the overview and visible cards. The first example contains 14 photos and two videos; unavailable video previews appear as placeholders.",
+          "caption": "The small demonstration Library overview."
+        },
+        {
+          "id": "library-02",
+          "image": "05-02-search-garden.png",
+          "text": "Enter garden into Search media. The small dataset returns seven matching photo files. Use a recognizable filename fragment when searching your own collection.",
+          "caption": "The initial garden search returns seven photos."
+        },
+        {
+          "id": "library-03",
+          "image": "05-03-select-a-photo.png",
+          "text": "Select the checkbox on one photo card. Review the selection state before applying an action. Photo rotation controls are associated with the selected photograph.",
+          "caption": "A single generated photo is selected."
+        },
+        {
+          "id": "library-04",
+          "image": "05-04-rotate-photo-right.png",
+          "text": "Choose the selected photo's Rotate Right control. Check the preview orientation. The rotation is recorded for the catalog preview and for organized or exported copies; it does not rewrite the original source image.",
+          "caption": "The real photo preview after a right rotation."
+        },
+        {
+          "id": "library-05",
+          "image": "05-05-undo-photo-rotation.png",
+          "text": "Choose Undo for that photo to restore its earlier orientation. Confirm the preview before continuing.",
+          "caption": "Undo restored the individual preview."
+        },
+        {
+          "id": "library-06",
+          "image": "05-06-select-all-visible-photos.png",
+          "text": "Choose Select all visible photos to select the seven search results together. Check the toolbar's selected count; this action concerns the visible photo results.",
+          "caption": "Seven visible garden photos selected."
+        },
+        {
+          "id": "library-07",
+          "image": "05-07-batch-rotate-left.png",
+          "text": "Use the batch Rotate Left action. Review the selected previews and keep the selection while checking the result.",
+          "caption": "The selected group after a left rotation."
+        },
+        {
+          "id": "library-08",
+          "image": "05-08-undo-batch-left-rotation.png",
+          "text": "Use the batch Undo action to restore the previous orientations before trying another rotation.",
+          "caption": "The batch left rotation was undone."
+        },
+        {
+          "id": "library-09",
+          "image": "05-09-batch-rotate-180.png",
+          "text": "Choose Rotate 180 for the selected group. Check several previews rather than relying only on the toolbar.",
+          "caption": "The selected photos after a 180-degree rotation."
+        },
+        {
+          "id": "library-10",
+          "image": "05-10-undo-batch-180.png",
+          "text": "Use Undo again to restore the group. In the demonstration every rotation was undone before organization, and original-file hashes remained unchanged.",
+          "caption": "The original preview orientations are restored."
+        },
+        {
+          "id": "library-11",
+          "image": "05-11-clear-photo-selection.png",
+          "text": "Choose Clear Selection when you have finished the batch operation. Confirm the selected-count toolbar is cleared.",
+          "caption": "The photo selection is cleared."
+        },
+        {
+          "id": "library-12",
+          "image": "05-12-clear-library-search.png",
+          "text": "Clear Search media to return to the broader gallery. Existing filters can still restrict what is shown.",
+          "caption": "The initial search has been cleared."
+        },
+        {
+          "id": "library-13",
+          "image": "05-15-photos-filter-confirmed.png",
+          "text": "Choose Photos only from the media-type filter. In the later, expanded demonstration there are 28 photo records because a second disposable sample source was added.",
+          "caption": "The real photo-only filter result."
+        },
+        {
+          "id": "library-14",
+          "image": "05-17-filename-sort-confirmed.png",
+          "text": "Choose File name A–Z from the sorting list and close the list. Other observed choices include newest, oldest, reverse filename, largest, smallest, photos first and videos first.",
+          "caption": "The garden results ordered by filename."
+        }
+      ],
+      "tips": [
+        "The Library count describes catalog records and can include copies in separately registered sources. A larger count does not mean that a COPY destination was automatically registered.",
+        "Original and independent-backup hashes were checked after the rotation demonstrations. Orientation changes did not modify any of those files."
+      ],
+      "outcome": "You can find photos, control selections, sort results and adjust or undo preview orientations safely."
+    },
+    {
+      "id": "copy",
+      "title": "7. Complete a Guided COPY",
+      "intro": "Use COPY for a first organization pass. Keep a verified independent backup, choose a separate destination with enough free space, and check the source and destination before confirming. This completed example copies the original 16 supported demonstration media files.",
+      "steps": [
+        {
+          "id": "copy-01",
+          "image": "06-01-guided-organizer.png",
+          "text": "With Guided selected, open Organize Photos & Videos. Review the Choose File Types dialog and its scanned, selected and excluded counts.",
+          "caption": "The actual file-type dialog before organization."
+        },
+        {
+          "id": "copy-02",
+          "image": "06-02-no-file-types-selected.png",
+          "text": "Choose Deselect All if you want to rebuild the selection. With no type selected, Continue is unavailable. Select at least one supported type before proceeding.",
+          "caption": "Zero selected files safely disables Continue."
+        },
+        {
+          "id": "copy-03",
+          "image": "06-03-select-all-file-types.png",
+          "text": "Choose Select All to include all discovered types. This demonstration then selects 17 files, including its optional text file.",
+          "caption": "All discovered types selected, including the text file."
+        },
+        {
+          "id": "copy-04",
+          "image": "06-05-select-media-only.png",
+          "text": "Clear the .txt checkbox to exclude the optional text file. Verify 17 scanned, 16 selected and one excluded before continuing.",
+          "caption": "Only the 16 supported media files remain selected."
+        },
+        {
+          "id": "copy-05",
+          "image": "06-06-file-types-confirmed.png",
+          "text": "Choose Continue. Check Selected Folder and its complete path before configuring the organization pattern.",
+          "caption": "The selected media types are confirmed."
+        },
+        {
+          "id": "copy-06",
+          "image": "06-08-guided-native-organization-plan.png",
+          "text": "Choose Year / Month / Day in Pattern and close the list to confirm it. Review the organization plan and category counts before selecting a destination. This plan uses the untouched original 16-media source.",
+          "caption": "The actual Guided organization plan before destination confirmation."
+        },
+        {
+          "id": "copy-07",
+          "image": "06-09-destination-folder-picker.png",
+          "text": "Choose Change Location when you want a specific destination. The native Windows picker requires an existing folder; keep it separate from your source and backup.",
+          "caption": "The real native destination-folder picker."
+        },
+        {
+          "id": "copy-08",
+          "image": "06-10-enter-copy-destination.png",
+          "text": "Enter or navigate to your intended destination and choose Select Folder. The demonstration uses Copy Results. MEDIA KOLFAT adds its MEDIA KOLFAT Organized Media root inside the selected folder.",
+          "caption": "The disposable Copy Results destination entered."
+        },
+        {
+          "id": "copy-09",
+          "image": "06-11-selected-copy-destination.png",
+          "text": "Read Selected destination in the app, then review the plan's categories and available space. The original example places exact copies into the duplicated-photo and duplicated-video categories after the completed duplicate scan.",
+          "caption": "The verified destination and real organization plan."
+        },
+        {
+          "id": "copy-10",
+          "image": "06-12-confirm-copy.png",
+          "text": "Choose Copy Selected Files. Read Confirm copy: originals remain untouched and new copies are created. Choose Cancel if the source, selection or destination is wrong.",
+          "caption": "The real COPY confirmation."
+        },
+        {
+          "id": "copy-11",
+          "image": "06-14-copy-complete-report.png",
+          "text": "Confirm Copy Selected Files and wait for completion. The demonstrated result is 16 copied, zero identical skipped, zero renamed and zero failed. Read the report path and category counts.",
+          "caption": "A successful completed COPY with its report."
+        }
+      ],
+      "tips": [
+        "Folder-pattern choices include Year / Month / Day, YMD - Single Folder, Year / Month, camera-based variants, Year Only, Month Only, Day Only and Custom. Choose a structure you can recognize and keep its preview in view.",
+        "Open destination and category Open Folder buttons locate results. Save report saves a report copy. Add Destination to Folders is an explicit registration action; the destination is not added automatically.",
+        "All 16 destination hashes matched the expected source files in this example, and all 17 original files and their independent backups remained unchanged."
+      ],
+      "outcome": "A verified organized copy exists in the chosen destination, with a plain-text report and all originals retained."
+    },
+    {
+      "id": "progress",
+      "title": "8. Pause, resume, stop and recover COPY",
+      "intro": "Longer operations provide time to read the progress panel. The larger demonstration uses 512 generated video copies with a separate verified backup. These are disposable test files, not personal media.",
+      "steps": [
+        {
+          "id": "progress-01",
+          "image": "11-05-copy-timing-destination.png",
+          "text": "Choose a separate destination for the larger COPY example and verify its full path. The demonstration uses Copy Timing Results.",
+          "caption": "The larger example uses its own disposable destination."
+        },
+        {
+          "id": "progress-02",
+          "image": "11-07-copy-timing-confirmation.png",
+          "text": "Review and accept the real COPY confirmation after the source, selection, destination and free-space checks. A short preparation phase can precede copying.",
+          "caption": "COPY confirmation for the generated timing dataset."
+        },
+        {
+          "id": "progress-03",
+          "image": "11-10-copy-paused.png",
+          "text": "Choose Pause during copying and wait until Resume appears. The operation pauses safely; it may finish its current file before the paused state is displayed.",
+          "caption": "The actual Pause control has changed to Resume."
+        },
+        {
+          "id": "progress-04",
+          "image": "11-11-copy-resumed.png",
+          "text": "Choose Resume to continue the same active operation. Pause reappears while copying continues.",
+          "caption": "The real resumed COPY controls."
+        },
+        {
+          "id": "progress-05",
+          "image": "11-13-cancelled-copy-report.png",
+          "text": "Choose Stop when you need to end the operation. Read the cancelled summary and report. The first larger example retained 110 completed copies, with zero failures; cancellation did not remove those valid copies.",
+          "caption": "The real cancelled COPY summary: 110 completed copies retained."
+        },
+        {
+          "id": "progress-06",
+          "image": "11-14b-retry-copy-confirmation.png",
+          "text": "To finish after cancellation, start COPY again with the same source, pattern and destination. Review the new confirmation. This is a new operation; already completed identical files can be skipped.",
+          "caption": "The actual confirmation for a safe retry."
+        },
+        {
+          "id": "progress-07",
+          "image": "11-15-retry-copy-progress.png",
+          "text": "Read the current filename, file count and percentage in the progress panel. On retry, the count covers the files still needing copying rather than the previously completed identical files.",
+          "caption": "Genuine COPY progress after retrying."
+        },
+        {
+          "id": "progress-08",
+          "image": "11-16-retry-copy-paused-progress.png",
+          "text": "Pause again if necessary and wait for the Paused label. The displayed count and percentage describe the actual paused operation.",
+          "caption": "A genuine paused progress panel."
+        },
+        {
+          "id": "progress-09",
+          "image": "11-17-retry-copy-resumed-progress.png",
+          "text": "Choose Resume and allow the operation to finish. Keep the destination connected and do not change the source files while it runs.",
+          "caption": "The progress panel after Resume."
+        },
+        {
+          "id": "progress-10",
+          "image": "11-19-retry-completion-report.png",
+          "text": "Read the final summary. The retry copied 402 remaining files and skipped 110 identical files, with zero renamed and zero failed. All 512 destination media hashes were then verified.",
+          "caption": "Completed recovery: 402 copied and 110 identical skipped."
+        }
+      ],
+      "tips": [
+        "Stopping a duplicate scan and stopping a COPY are different operations. Use the controls on the page for the operation that is actually running.",
+        "The tested COPY page can retain earlier status wording above the active controls. Read the progress panel and final result for the current operation.",
+        "After a cancelled COPY, check the report and destination before retrying. Keep completed verified files; do not assume the entire destination must be deleted."
+      ],
+      "outcome": "You can pause an active COPY, resume it, stop safely, and retry without duplicating completed identical outputs."
+    },
+    {
+      "id": "move",
+      "title": "9. Use Advanced MOVE with a backup",
+      "intro": "MOVE changes the source location of files. Practice only with disposable copies and keep an independent verified backup. The worked example uses a separately backed-up Move Samples clone; the original demonstration source is never used for MOVE.",
+      "steps": [
+        {
+          "id": "move-01",
+          "image": "08-01-advanced-mode.png",
+          "text": "Select Advanced in the Experience area. The guided step strip is no longer the main navigation aid. Continue to the organizer only after selecting the intended demonstration source.",
+          "caption": "Advanced Mode selected in the real app."
+        },
+        {
+          "id": "move-02",
+          "image": "08-35-correct-source-confirmed.png",
+          "text": "Confirm the media types and inspect Selected Folder. The demonstrated operation explicitly shows Move Samples, its exact path, and 17 scanned with 16 selected and one excluded.",
+          "caption": "The correct backed-up disposable source is selected."
+        },
+        {
+          "id": "move-03",
+          "image": "08-36-verified-move-plan.png",
+          "text": "Confirm Year / Month in Pattern and review the resulting plan. This MOVE example did not reuse a completed duplicate classification, so its plan says Duplicates: Not checked.",
+          "caption": "The actual plan for the disposable MOVE clone."
+        },
+        {
+          "id": "move-04",
+          "image": "08-37-final-move-destination.png",
+          "text": "Choose Change Location and select the separate Move Results directory. Verify the path before accepting it.",
+          "caption": "The approved disposable MOVE destination in the native picker."
+        },
+        {
+          "id": "move-05",
+          "image": "08-39-final-move-warning.png",
+          "text": "Select Move under Transfer mode. Read the warning: destination files are verified before sources are removed, source folders are not deleted, and a detailed report is saved in the destination.",
+          "caption": "The actual Advanced MOVE warning and selected destination."
+        },
+        {
+          "id": "move-06",
+          "image": "08-40-final-move-confirmation.png",
+          "text": "Choose Move Selected Files and review Confirm move. It states that verified destination files will be kept and their exact source files removed. Cancel if anything is uncertain.",
+          "caption": "The final real MOVE confirmation."
+        },
+        {
+          "id": "move-07",
+          "image": "08-42-move-complete-report.png",
+          "text": "Confirm the move only after checking source, destination and backup. Wait for Move complete and inspect the counts. The demonstration completed with 16 moved, zero copied with source retained, and zero failed.",
+          "caption": "The actual successful 16-file MOVE and report path."
+        },
+        {
+          "id": "move-08",
+          "image": "07-03-verified-move-activity.png",
+          "text": "Open Activity and find the completed Move Photos & Videos entry. Review its counts and Open Move Report link. The independent backup must remain available after a successful MOVE.",
+          "caption": "The real completed MOVE entry in Activity."
+        }
+      ],
+      "tips": [
+        "All 16 moved destination hashes matched the original expected files. All 17 independent backup files remained unchanged. The excluded notes.txt and all four original source directories remained in the disposable source.",
+        "COPIED_SOURCE_RETAINED means a destination copy exists but the source was kept. Review that outcome in the report rather than treating it as a fully removed source.",
+        "Check Selected Folder before every operation. Refreshing another source card does not switch the organizer source in the tested interface. Catalog-only removal and re-adding a disposable source was used to change the source in this demonstration."
+      ],
+      "outcome": "The disposable MOVE is complete and verified, while the independent backup and original demonstration library remain intact."
+    },
+    {
+      "id": "reports",
+      "title": "10. Read Activity and plain-text reports",
+      "intro": "Activity records recent local operations. Read the status and counts together: Completed, Completed with warnings and Cancelled describe different outcomes. Automatic COPY and MOVE TXT reports are stored in the selected destination root.",
+      "steps": [
+        {
+          "id": "reports-01",
+          "image": "07-01-activity-after-copy.png",
+          "text": "Open Activity after an operation. Locate the Copy Photos & Videos entry and compare processed, copied, skipped and failed counts with the destination summary.",
+          "caption": "The initial completed 16-file COPY entry."
+        },
+        {
+          "id": "reports-02",
+          "image": "07-02-completed-and-cancelled-activity.png",
+          "text": "Compare a completed operation with a cancelled one. The demonstrated cancelled COPY processed 110 files; the later completed retry processed 512 with 110 skipped. A cancelled duplicate scan does not provide a complete duplicate result.",
+          "caption": "Real completed and cancelled history entries."
+        },
+        {
+          "id": "reports-03",
+          "image": "07-03-verified-move-activity.png",
+          "text": "Use Open Copy Report or Open Move Report on the relevant entry to locate its TXT report. Use Open Destination to review the output folder. Check the report mode, source and destination entries, status lines and final totals.",
+          "caption": "The completed MOVE, completed COPY and cancelled COPY entries together."
+        }
+      ],
+      "tips": [
+        "The verified MOVE report records Mode: MOVE, Total planned files: 16, Moved: 16, COPIED_SOURCE_RETAINED: 0, Skipped: 0 and Failed: 0.",
+        "The original COPY report records that original source files were retained. The cancelled report identifies the completed files that remain in the destination.",
+        "Clear Activity History is available on this page. It was not used during the demonstration, so the operation history remains available for review."
+      ],
+      "outcome": "You can connect an Activity entry with its output folder and report, and distinguish success from incomplete processing."
+    },
+    {
+      "id": "settings",
+      "title": "11. Adjust Settings and understand fresh start",
+      "intro": "Settings apply locally. Review Language, Experience, Safety, Privacy & Local Processing, Organizing, Library, Guidance & Accessibility, Maintenance and Media dates. Read the consequence of a maintenance action before confirming it.",
+      "steps": [
+        {
+          "id": "settings-01",
+          "image": "09-01-settings.png",
+          "text": "Open Settings. Choose a language available in the app, review Guided and Advanced, and read the Safety controls. Confirmation before organizing and the source-removal warning are enforced in the displayed interface.",
+          "caption": "The real Language, Experience and Safety settings."
+        },
+        {
+          "id": "settings-02",
+          "image": "09-03-organizing-library-settings.png",
+          "text": "Scroll to Organizing and review Default organize pattern and Destination behavior. The displayed behavior is Ask every time. Review the local-processing and report-storage information above it.",
+          "caption": "Organizer defaults and local privacy information."
+        },
+        {
+          "id": "settings-03",
+          "image": "09-04-accessibility-settings.png",
+          "text": "Review Library preferences for preview size, photo order, date and file-size labels, automatic Library opening after scan, and remembering the last Library view.",
+          "caption": "The real Library preference controls."
+        },
+        {
+          "id": "settings-04",
+          "image": "09-05-enable-larger-text.png",
+          "text": "Enable Larger text when you need easier reading. Check the changed text and navigation layout before proceeding.",
+          "caption": "Larger text applied in the disposable profile."
+        },
+        {
+          "id": "settings-05",
+          "image": "09-06-restore-standard-text.png",
+          "text": "Clear Larger text to restore standard text in this demonstration. Larger buttons, Reduced motion and guidance options can be chosen to suit the user.",
+          "caption": "Standard text restored."
+        },
+        {
+          "id": "settings-06",
+          "image": "09-07-maintenance-settings.png",
+          "text": "Scroll to Maintenance and review the storage totals. Only app-generated files are counted. Refresh Usage updates the totals; Clear Thumbnail Cache concerns generated previews and was not needed for this example.",
+          "caption": "Maintenance usage and available actions."
+        },
+        {
+          "id": "settings-07",
+          "image": "09-09-review-date-evidence.png",
+          "text": "Expand Advanced date policy. Read the explanation for each enabled evidence source and the low-confidence warning for filesystem last-modified dates. Changes apply to new scans, reanalysis and organizer previews.",
+          "caption": "The five actual date-evidence options."
+        },
+        {
+          "id": "settings-08",
+          "image": "09-10-reset-settings-confirmation.png",
+          "text": "Choose Reset Settings to Defaults only to review its confirmation. The warning says settings, sources, Library index, workflow progress and thumbnail cache will be cleared. Original media and organized copies will not be changed.",
+          "caption": "The actual fresh-start warning."
+        },
+        {
+          "id": "settings-09",
+          "image": "09-12-reset-cancelled.png",
+          "text": "Choose Cancel to preserve the existing demonstration catalog. No reset was performed on the real user profile or the isolated demonstration profile.",
+          "caption": "Fresh-start reset cancelled."
+        }
+      ],
+      "tips": [
+        "A fresh start is broader than changing a visual preference. Keep reports and any information you need before deciding to clear the local catalog.",
+        "Date evidence is not automatically rewritten for existing records merely by viewing Settings. Use the explicit analysis workflow when you intend to update catalog dates."
+      ],
+      "outcome": "You can adjust local preferences and understand maintenance and reset consequences without accidentally clearing your catalog."
+    },
+    {
+      "id": "troubleshooting",
+      "title": "12. Recover from common problems",
+      "intro": "Read the current page message before repeating an action. Verify the selected source, filters, pattern and destination. The following images show genuine safely reproduced conditions in the disposable environment.",
+      "steps": [
+        {
+          "id": "troubleshooting-01",
+          "image": "10-01-library-no-search-results.png",
+          "text": "If the Library says No photos match your choices, check Search media first. A filename fragment that matches no file can hide every result even when the catalog contains media.",
+          "caption": "A genuine zero-result search."
+        },
+        {
+          "id": "troubleshooting-02",
+          "image": "10-02-recover-search-results.png",
+          "text": "Replace the search with a known filename fragment, such as garden in this demonstration. Confirm the results return before changing unrelated settings.",
+          "caption": "The known garden results return."
+        },
+        {
+          "id": "troubleshooting-03",
+          "image": "10-04-review-unavailable-filter.png",
+          "text": "Check the availability filter. Unavailable only returns no results when the matching originals are available. A restrictive filter is not proof that the files are missing.",
+          "caption": "The real empty result caused by Unavailable only."
+        },
+        {
+          "id": "troubleshooting-04",
+          "image": "10-05-show-all-recovery.png",
+          "text": "Choose Show All Photos on the empty-result screen to recover the broader gallery. Review the resulting search and filter settings.",
+          "caption": "The app's recovery action restores Library results."
+        },
+        {
+          "id": "troubleshooting-05",
+          "image": "10-08-invalid-folder-error.png",
+          "text": "If the folder picker says Folder is unavailable or cannot be opened, check Current folder for a spelling error, a disconnected drive or an inaccessible location. The demonstration uses a nonexistent path and Select This Folder is disabled.",
+          "caption": "A genuine unavailable-folder validation error."
+        },
+        {
+          "id": "troubleshooting-06",
+          "image": "10-10-empty-folder.png",
+          "text": "Navigate to the correct existing folder and choose Go. An empty folder displays zero supported photos or videos. Choose a known media folder or cancel selection.",
+          "caption": "The real empty demonstration folder."
+        },
+        {
+          "id": "troubleshooting-07",
+          "image": "10-12-unsupported-only-preview.png",
+          "text": "A folder containing only unsupported files can also show zero media. The text-only demonstration is not treated as a photo or video collection. Optional Other Files are selected separately during organization.",
+          "caption": "The real unsupported-only folder preview."
+        },
+        {
+          "id": "troubleshooting-08",
+          "image": "10-14-invalid-custom-pattern.png",
+          "text": "For Custom patterns, use the listed tokens and relative folder segments. The demonstrated parent-traversal pattern is rejected with Folder patterns cannot contain empty or traversal segments; copying remains unavailable.",
+          "caption": "A genuine rejected custom pattern."
+        },
+        {
+          "id": "troubleshooting-09",
+          "image": "10-17-custom-plan-reconfirmed.png",
+          "text": "Correct the custom value to a valid token pattern, such as {YYYY}\\{YYYY-MM}. In the tested build, reopen and close the Pattern list to reconfirm it and restore the plan.",
+          "caption": "The corrected custom pattern produces a plan again."
+        },
+        {
+          "id": "troubleshooting-10",
+          "image": "10-19-catalog-only-removal-confirmation.png",
+          "text": "Read the Remove Folder confirmation before accepting. It removes the folder's records from MEDIA KOLFAT and makes them disappear from the Library; it does not delete original files or the source folder.",
+          "caption": "The explicit catalog-only source-removal warning."
+        },
+        {
+          "id": "troubleshooting-11",
+          "image": "10-20-disposable-source-removed-from-catalog.png",
+          "text": "For the disposable demonstration only, confirm Remove from MEDIA KOLFAT, then verify the original files remain. Re-adding the intended source through manual selection restores its registration; scan it again before organizing.",
+          "caption": "The real catalog-only removal completed with originals retained."
+        }
+      ],
+      "tips": [
+        "If no file type is selected, Continue stays unavailable. Return to Choose File Types and select the supported types you actually want.",
+        "After a folder-path error, the previous preview list can remain visible. Read the error and disabled Select This Folder control; do not treat those old previews as contents of the unavailable path.",
+        "For destination or free-space problems, review the exact selected path, keep the destination connected, choose another writable folder and leave the safety reserve shown by the plan. Do not repeatedly retry against an unexpected location.",
+        "If work is interrupted, review Activity, the TXT report and completed outputs before retrying. A report with warnings or cancellation requires attention even if some copies exist.",
+        "Source removal was demonstrated only in the isolated catalog. All 17 disposable source files were verified unchanged after the catalog-only removal and were then re-added for the MOVE example."
+      ],
+      "outcome": "You can distinguish empty results from missing originals, correct safe validation errors, and preserve evidence while recovering."
+    }
+  ],
+  "status": "Complete English master; native workflow and screenshot correspondence verified"
+}

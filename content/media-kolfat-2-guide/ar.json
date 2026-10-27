@@ -1,0 +1,714 @@
+{
+  "language": "ar",
+  "title": "دليل مستخدم MEDIA KOLFAT 2.0",
+  "description": "دليل مصور لإضافة الصور والفيديو وفحص التواريخ والمعاينات وكشف التكرار والتنظيم باستخدام COPY وMOVE واستعادة العمليات وقراءة التقارير.",
+  "lead": "اتبع التطبيق المثبت فعليًا على Windows من البداية إلى نتائج التنظيم المتحققة. استُخدمت صور وفيديوهات تجريبية مولدة ونسخ احتياطية مستقلة. جميع صور التطبيق لقطات PNG أصلية حقيقية.",
+  "versionNote": "تم التحقق باستخدام MEDIA KOLFAT 2.0.0، والبنية 2.0.0.0. تعرض اللقطات الواجهة الإنجليزية. تتغير الأعداد عند إضافة المجموعة الكبيرة؛ راجع أعدادك الفعلية.",
+  "safety": "أنشئ نسخة احتياطية مستقلة أولًا. ابدأ باستخدام COPY لأنه يحتفظ بالمصادر. يحذف Advanced MOVE ملفات المصدر بعد التحقق من الوجهة وفحوص السلامة. احتفظ بالنسخة الاحتياطية حتى مراجعة النتائج والتقرير.",
+  "contentsLabel": "المحتويات",
+  "stepLabel": "الخطوة",
+  "imageLinkLabel": "فتح ملف PNG الأصلي",
+  "backLabel": "العودة إلى المحتويات",
+  "chapters": [
+    {
+      "id": "start",
+      "title": "1. البدء وفهم الإرشاد",
+      "intro": "افتح التطبيق المثبت. يتضمن الشريط الجانبي Performance Check وAdd Photos & Videos وPhotos Health Check وDuplicate Finder وBrowse Library وOrganize Photos & Videos وActivity وSettings وAbout. يوفر Experience وضعي Guided وAdvanced.",
+      "steps": [
+        {
+          "id": "start-01",
+          "image": "01-01-first-launch-guided.png",
+          "text": "ابدأ باختيار Guided. الرمادي للخطوات التالية، والكهرماني للحالية، وعلامات الصح الخضراء للمكتملة.",
+          "caption": "بدء حقيقي في Guided."
+        },
+        {
+          "id": "start-02",
+          "image": "01-02-performance-check-complete.png",
+          "text": "شغّل Run Quick Check وانتظر. حصل الجهاز التجريبي على 98%؛ قد تختلف نتيجتك.",
+          "caption": "فحص مكتمل بنتيجة 98%."
+        },
+        {
+          "id": "start-03",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "افتح Add Photos & Videos. اختر Choose Photos & Videos Manually إن كنت تعرف المجلد المطلوب.",
+          "caption": "خيارا المصدر الحقيقيان."
+        },
+        {
+          "id": "start-04",
+          "image": "01-04-about-version.png",
+          "text": "في About افتح Release Information واقرأ Version وBuild، ثم عد عبر الشريط الجانبي.",
+          "caption": "الإصدار والبنية المتحقق منهما."
+        },
+        {
+          "id": "start-05",
+          "image": "01-05-about-privacy.png",
+          "text": "افتح Privacy & Data Safety واقرأ الفرق بين الفحص وCOPY وAdvanced MOVE. احتفظ بنسخة مستقلة.",
+          "caption": "شرح السلامة داخل التطبيق."
+        }
+      ],
+      "tips": [
+        "يشير السهم المتحرك والتوهج إلى الإجراء المقترح. تتوفر Reduced motion وتفضيلات الإرشاد في Settings.",
+        "يرتب Guided خطوات العمل. يتيح Advanced مسارًا مباشرًا ويظهر MOVE عند جاهزية الخطة.",
+        "يتضمن About أيضًا Legal & Policies وSupport وTechnical Information وOpen-Source & Third-Party Licenses وProduct Information."
+      ],
+      "outcome": "يمكنك تحديد الإصدار والتنقل ومعرفة الخطوة الإرشادية الحالية."
+    },
+    {
+      "id": "sources",
+      "title": "2. اختيار المصدر يدويًا",
+      "intro": "المصدر مجلد مسجل في الفهرس المحلي. يفهرس الفحص الصور والفيديو المدعومين. يتضمن المثال 14 ملف JPEG وملفي AVI وملف نص اختياري في مجلدات فرعية.",
+      "steps": [
+        {
+          "id": "sources-01",
+          "image": "02-01-manual-source-picker.png",
+          "text": "اختر Choose Photos & Videos Manually وراجع Current folder وLocations وFolders والمعاينات.",
+          "caption": "منتقي المصدر الحقيقي."
+        },
+        {
+          "id": "sources-02",
+          "image": "02-02-enter-demo-source-path.png",
+          "text": "أدخل المسار الكامل في Current folder؛ هنا Media Samples ضمن منطقة التجربة المعزولة.",
+          "caption": "إدخال المسار التجريبي."
+        },
+        {
+          "id": "sources-03",
+          "image": "02-03-demo-nested-folders.png",
+          "text": "اضغط Go وراجع المسار والمجلدات الفرعية. قد لا يحتوي المجلد الأب وسائط مباشرة.",
+          "caption": "أربعة مجلدات تجريبية فرعية."
+        },
+        {
+          "id": "sources-04",
+          "image": "02-04-preview-sample-photos.png",
+          "text": "افتح 2024 Holiday وراجع معاينات الصور الست المولدة بصيغة JPEG.",
+          "caption": "ست صور مدعومة."
+        },
+        {
+          "id": "sources-05",
+          "image": "02-05-return-to-demo-root.png",
+          "text": "استخدم Up one folder للعودة وإدراج المجموعة كاملة، ثم راجع Current folder.",
+          "caption": "العودة للمجلد الأب المطلوب."
+        },
+        {
+          "id": "sources-06",
+          "image": "02-06-ready-to-scan-source.png",
+          "text": "اضغط Select This Folder وراجع الاسم والمسار في Ready to add this folder قبل المتابعة.",
+          "caption": "مصدر جاهز للإضافة."
+        },
+        {
+          "id": "sources-07",
+          "image": "02-07-source-advanced-options.png",
+          "text": "افتح Advanced options لمراجعة المكان والاسم الاختياري والنوع. يجب أن تكون مجلدات السحابة قابلة للقراءة محليًا.",
+          "caption": "خيارات المصدر الفعلية."
+        },
+        {
+          "id": "sources-08",
+          "image": "02-08-source-scan-complete.png",
+          "text": "ابدأ الفحص المعروض وانتظر Ready ووقت النجاح. فُهرست 16 وسائط، ولم يُحسب النص كوسيط.",
+          "caption": "اكتمال فحص 16 ملف وسائط."
+        },
+        {
+          "id": "sources-09",
+          "image": "02-09-source-refresh-complete.png",
+          "text": "استخدم Refresh لإعادة الفحص وراجع الحالة والوقت. لا يحدد ذلك مصدر التنظيم.",
+          "caption": "تحديث المصدر مكتمل."
+        }
+      ],
+      "tips": [
+        "قد يظهر Start Scan على بطاقة المجلد الإضافي في Advanced. بدأ الفحص الأول عند الإضافة في مسار Guided المعروض.",
+        "تحقق دائمًا من Selected Folder في المنظم. لا يغير Refresh على بطاقة المصدر اختيار التنظيم."
+      ],
+      "outcome": "يصبح المجلد المطلوب مسجلًا وتظهر وسائطه المدعومة في الفهرس."
+    },
+    {
+      "id": "locations",
+      "title": "3. الاكتشاف التلقائي والمواقع",
+      "intro": "يعرض المنتقي This PC والمجلدات والأقراص المحلية وPictures وOneDrive وNetwork. اختر المواقع المقصودة فقط؛ يجب توصيل القرص الخارجي وإتاحة الشبكة عبر Windows.",
+      "steps": [
+        {
+          "id": "locations-01",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "يبدأ Scan Computer Automatically اكتشافًا شاملًا دون حد للمجلد التجريبي. اختر يدويًا عندما تريد تقييد النطاق.",
+          "caption": "خياران بنطاقين مختلفين."
+        },
+        {
+          "id": "locations-02",
+          "image": "02-01-manual-source-picker.png",
+          "text": "استخدم This PC أو مسارًا دقيقًا في Current folder. يشير OneDrive لملفات متاحة محليًا؛ أتحها في Windows أولًا.",
+          "caption": "المواقع وحقل المسار الحقيقيان."
+        }
+      ],
+      "tips": [
+        "لم يُشغّل الاكتشاف التلقائي الشامل لأنه سيفحص أقراصًا خارج البيانات التجريبية. لا تُعرض له نتيجة على أنها مختبرة.",
+        "الاختصار لا يثبت تسجيل الدخول. لم تُفتح Pictures أوOneDrive أوشبكات أووسائط شخصية."
+      ],
+      "outcome": "يمكنك اختيار الطريقة المناسبة للموقع ونطاق القراءة المطلوب."
+    },
+    {
+      "id": "health",
+      "title": "4. فحص المعاينات والتواريخ",
+      "intro": "افتح Photos Health Check بعد الفحص. صحة المصغرات والتواريخ وتوفر الأصل أمور منفصلة؛ غياب المعاينة لا يثبت فقدان الملف.",
+      "steps": [
+        {
+          "id": "health-01",
+          "image": "03-01-photos-health-check.png",
+          "text": "راجع الإجماليات: 16 وسائط، و14 معاينة سليمة، ومشكلتا فيديو؛ كانت الأصول الـ16 متاحة بآخر فحص.",
+          "caption": "ملخص الصحة الفعلي."
+        },
+        {
+          "id": "health-02",
+          "image": "03-02-thumbnail-repair-complete.png",
+          "text": "شغّل إصلاح المصغرات الصريح. فُحص فيديوان، ولم تُصلح معاينة؛ كلاهما غير مدعوم للمعاينة.",
+          "caption": "نتيجة الإصلاح الحقيقية."
+        },
+        {
+          "id": "health-03",
+          "image": "03-04-date-reanalysis-result.png",
+          "text": "أعد تحليل التواريخ المفقودة. حُددت الـ16 من Filesystem last modified، وهو دليل بديل قد يعكس النسخ أو التحرير.",
+          "caption": "نتيجة تحليل التواريخ ودليلها."
+        },
+        {
+          "id": "health-04",
+          "image": "09-09-review-date-evidence.png",
+          "text": "في Settings افتح Advanced date policy: بيانات مضمّنة وXMP وأسماء ومجلدات وآخر تعديل. لا يُستخدم Windows CreationTime كتاريخ التقاط.",
+          "caption": "سياسة التواريخ الفعلية."
+        }
+      ],
+      "tips": [
+        "لا تحتوي الملفات المولدة بيانات التقاط الكاميرا. لم تحدد أرقام 2024 أو2025 في الأسماء التواريخ؛ استُخدم آخر تعديل.",
+        "قد يبقى التنسيق غير المدعوم بلا معاينة بعد الإصلاح. احتفظ بالأصل واستخدم عارضًا مناسبًا."
+      ],
+      "outcome": "يمكنك تمييز مشكلات المعاينات والتواريخ والتوفر وقراءة نتيجة الإصلاح."
+    },
+    {
+      "id": "duplicates",
+      "title": "5. البحث عن النسخ المتطابقة",
+      "intro": "يقارن Duplicate Finder عناصر الفهرس المدعومة والمتاحة. تشابه الاسم وحده لا يكفي. تحتوي المجموعة الصغيرة عمدًا ثلاث مجموعات متطابقة.",
+      "steps": [
+        {
+          "id": "duplicates-01",
+          "image": "04-01-duplicate-finder-ready.png",
+          "text": "افتح Duplicate Finder وراجع المرشحين الـ16 ثم اضغط Find Duplicates.",
+          "caption": "البحث الأول جاهز."
+        },
+        {
+          "id": "duplicates-02",
+          "image": "04-06-duplicate-scan-outcome.png",
+          "text": "انتظر Duplicate scan complete: ثلاث مجموعات وستة ملفات ونحو 16.9 MB قابلة للاسترداد تقديريًا.",
+          "caption": "ثلاث مجموعات متطابقة حقيقية."
+        },
+        {
+          "id": "duplicates-03",
+          "image": "04-07-inspect-duplicate-results.png",
+          "text": "مرّر Exact Duplicate Group وقارن الأسماء والمسارات والأحجام. يفتح Open Folder الموقع دون إزالة الملفات.",
+          "caption": "تفاصيل التكرار الفعلية."
+        },
+        {
+          "id": "duplicates-04",
+          "image": "04-33-duplicate-scan-running.png",
+          "text": "راقب Finding exact duplicates والعدد في المجموعة ذات 544 عنصرًا. يظهر Stop Scan.",
+          "caption": "فحص تكرار جارٍ فعليًا."
+        },
+        {
+          "id": "duplicates-05",
+          "image": "04-36-duplicate-scan-cancelled.png",
+          "text": "اضغط Stop Scan للعودة للاستعداد. البحث الموقوف غير مكتمل ولا يثبت عدم وجود تكرار.",
+          "caption": "نتيجة إيقاف البحث."
+        }
+      ],
+      "tips": [
+        "لا يعرض Duplicate Finder في هذه البنية Pause أوResume. تتوفر هذه الأزرار في COPY كما يوضَّح لاحقًا.",
+        "لا توفر الواجهة المختبرة حذفًا. المساحة القابلة للاسترداد تقدير؛ احتفظ بنسخة متحققة ونسخة احتياطية مستقلة.",
+        "قد يبطل فحص جديد أو تغيير المصادر النتائج القديمة. راجع Not checked في ملخص Library."
+      ],
+      "outcome": "يمكنك البحث وفحص المجموعات وإيقاف البحث دون حذف الأصول."
+    },
+    {
+      "id": "library",
+      "title": "6. التصفح والبحث والتحديد والتدوير",
+      "intro": "يعرض Browse Library الفهرس والملخص. يحد البحث والترشيح والترتيب النتائج. يؤثر التدوير في المعاينات والنسخ المنظمة أو المصدّرة، دون إعادة كتابة الأصول.",
+      "steps": [
+        {
+          "id": "library-01",
+          "image": "05-01-library-overview.png",
+          "text": "افتح Browse Library واقرأ الأعداد والأنواع والتواريخ والتوفر والتكرار في الملخص.",
+          "caption": "ملخص المكتبة الحقيقي."
+        },
+        {
+          "id": "library-02",
+          "image": "05-02-search-garden.png",
+          "text": "أدخل garden في Search media لإظهار سبع نتائج.",
+          "caption": "نتائج garden السبع."
+        },
+        {
+          "id": "library-03",
+          "image": "05-03-select-a-photo.png",
+          "text": "حدد صورة واحدة وراجع التحديد قبل الإجراء.",
+          "caption": "صورة واحدة محددة."
+        },
+        {
+          "id": "library-04",
+          "image": "05-04-rotate-photo-right.png",
+          "text": "اضغط Rotate Right وراجع المعاينة؛ لا يُعاد كتابة الأصل.",
+          "caption": "تدوير فردي لليمين."
+        },
+        {
+          "id": "library-05",
+          "image": "05-05-undo-photo-rotation.png",
+          "text": "اضغط Undo وتحقق من عودة الاتجاه السابق.",
+          "caption": "التراجع عن التدوير الفردي."
+        },
+        {
+          "id": "library-06",
+          "image": "05-06-select-all-visible-photos.png",
+          "text": "اضغط Select all visible photos وتحقق من تحديد سبع صور.",
+          "caption": "سبع صور ظاهرة محددة."
+        },
+        {
+          "id": "library-07",
+          "image": "05-07-batch-rotate-left.png",
+          "text": "استخدم Rotate Left وافحص عدة معاينات مع الاحتفاظ بالتحديد.",
+          "caption": "تدوير المجموعة لليسار."
+        },
+        {
+          "id": "library-08",
+          "image": "05-08-undo-batch-left-rotation.png",
+          "text": "استخدم Undo قبل تجربة تدوير آخر.",
+          "caption": "التراجع عن تدوير المجموعة."
+        },
+        {
+          "id": "library-09",
+          "image": "05-09-batch-rotate-180.png",
+          "text": "اختر Rotate 180 وافحص عدة صور.",
+          "caption": "تدوير المجموعة 180 درجة."
+        },
+        {
+          "id": "library-10",
+          "image": "05-10-undo-batch-180.png",
+          "text": "استخدم Undo مجددًا. أُلغي كل تدوير تجريبي قبل التنظيم.",
+          "caption": "استعادة الاتجاهات الأصلية."
+        },
+        {
+          "id": "library-11",
+          "image": "05-11-clear-photo-selection.png",
+          "text": "اضغط Clear Selection وتأكد من إفراغ عدد التحديد.",
+          "caption": "مسح تحديد الصور."
+        },
+        {
+          "id": "library-12",
+          "image": "05-12-clear-library-search.png",
+          "text": "أفرغ Search media؛ قد تستمر مرشحات أخرى بتقييد النتائج.",
+          "caption": "مسح البحث."
+        },
+        {
+          "id": "library-13",
+          "image": "05-15-photos-filter-confirmed.png",
+          "text": "اختر Photos only. يظهر في المثال اللاحق 28 صورة بعد إضافة مصدر تجريبي آخر.",
+          "caption": "ترشيح الصور فقط."
+        },
+        {
+          "id": "library-14",
+          "image": "05-17-filename-sort-confirmed.png",
+          "text": "اختر File name A–Z وأغلق القائمة. تتوفر أيضًا أوامر حسب التاريخ والحجم والاسم العكسي والنوع.",
+          "caption": "ترتيب النتائج بالاسم."
+        }
+      ],
+      "tips": [
+        "يحدد Select all visible photos الصور الظاهرة، لا الفهرس كله؛ راجع العدد.",
+        "استخدم Undo قبل تجربة تدوير آخر. بقيت بصمات الأصول دون تغيير."
+      ],
+      "outcome": "يمكنك إيجاد الصور وتحديدها وتدوير صورة أو مجموعة والتراجع."
+    },
+    {
+      "id": "copy",
+      "title": "7. إكمال Guided COPY",
+      "intro": "ابدأ بـCOPY مع نسخة احتياطية مستقلة متحققة ووجهة منفصلة ذات مساحة كافية. تحقق من المسارين؛ ينسخ المثال 16 ملف وسائط من المصدر الأصلي التجريبي.",
+      "steps": [
+        {
+          "id": "copy-01",
+          "image": "06-01-guided-organizer.png",
+          "text": "في Guided افتح Organize Photos & Videos وراجع أعداد Choose File Types المفحوصة والمحددة والمستبعدة.",
+          "caption": "حوار أنواع الملفات الحقيقي."
+        },
+        {
+          "id": "copy-02",
+          "image": "06-02-no-file-types-selected.png",
+          "text": "يعطل Deselect All زر Continue. حدد نوعًا مدعومًا واحدًا على الأقل للمتابعة.",
+          "caption": "تعطيل المتابعة دون تحديد."
+        },
+        {
+          "id": "copy-03",
+          "image": "06-03-select-all-file-types.png",
+          "text": "يحدد Select All الملفات الـ17 بما فيها النص الاختياري.",
+          "caption": "تحديد جميع الأنواع."
+        },
+        {
+          "id": "copy-04",
+          "image": "06-05-select-media-only.png",
+          "text": "أزل .txt وتحقق: 17 مفحوصة و16 محددة وواحد مستبعد.",
+          "caption": "تحديد الوسائط فقط."
+        },
+        {
+          "id": "copy-05",
+          "image": "06-06-file-types-confirmed.png",
+          "text": "اضغط Continue وراجع Selected Folder والمسار الكامل.",
+          "caption": "تأكيد أنواع الملفات."
+        },
+        {
+          "id": "copy-06",
+          "image": "06-08-guided-native-organization-plan.png",
+          "text": "اختر Year / Month / Day في Pattern وأغلق القائمة. راجع خطة المصدر الأصلي ذي 16 وسائط وفئاته.",
+          "caption": "خطة Guided الحقيقية."
+        },
+        {
+          "id": "copy-07",
+          "image": "06-09-destination-folder-picker.png",
+          "text": "اضغط Change Location. يتطلب منتقي Windows مجلدًا موجودًا منفصلًا عن المصدر والنسخة الاحتياطية.",
+          "caption": "منتقي الوجهة الأصلي."
+        },
+        {
+          "id": "copy-08",
+          "image": "06-10-enter-copy-destination.png",
+          "text": "اختر Copy Results ثم Select Folder. يضيف التطبيق داخله جذر MEDIA KOLFAT Organized Media.",
+          "caption": "إدخال الوجهة التجريبية."
+        },
+        {
+          "id": "copy-09",
+          "image": "06-11-selected-copy-destination.png",
+          "text": "راجع Selected destination والفئات والمساحة. يميز فحص التكرار السابق الصور والفيديوهات المتطابقة في فئاتها.",
+          "caption": "الوجهة والخطة المتحققتان."
+        },
+        {
+          "id": "copy-10",
+          "image": "06-12-confirm-copy.png",
+          "text": "اضغط Copy Selected Files واقرأ Confirm copy: تبقى الأصول. ألغِ إن كان المصدر أو التحديد أو الوجهة غير صحيح.",
+          "caption": "تأكيد COPY الحقيقي."
+        },
+        {
+          "id": "copy-11",
+          "image": "06-14-copy-complete-report.png",
+          "text": "أكد وانتظر: 16 منسوخة وصفر متطابقة متخطاة وصفر معاد تسميتها وصفر فاشلة. اقرأ الفئات ومسار التقرير.",
+          "caption": "COPY مكتملة مع تقرير."
+        }
+      ],
+      "tips": [
+        "يشمل Pattern خيارات Year / Month / Day وYMD - Single Folder وYear / Month والكاميرا والسنة أو الشهر أو اليوم وCustom. راجع المعاينة.",
+        "يفتح Open destination وOpen Folder النتائج، ويحفظ Save report نسخة التقرير. تسجيل الوجهة عبر Add Destination to Folders إجراء صريح وليس تلقائيًا.",
+        "تطابقت بصمات الوجهة الـ16، وبقيت الأصول الـ17 ونسخها الاحتياطية دون تغيير."
+      ],
+      "outcome": "تتوفر نسخة منظمة متحققة وتقرير TXT مع بقاء جميع الأصول."
+    },
+    {
+      "id": "progress",
+      "title": "8. تعليق COPY واستئنافها وإيقافها واستعادتها",
+      "intro": "يستخدم المثال الكبير 512 فيديو مولدًا مع نسخة احتياطية مستقلة. ليست وسائط شخصية.",
+      "steps": [
+        {
+          "id": "progress-01",
+          "image": "11-05-copy-timing-destination.png",
+          "text": "اختر Copy Timing Results المنفصل وتحقق من مسار الوجهة الكامل.",
+          "caption": "وجهة المثال الكبير."
+        },
+        {
+          "id": "progress-02",
+          "image": "11-07-copy-timing-confirmation.png",
+          "text": "راجع المصدر والتحديد والوجهة والمساحة قبل تأكيد COPY. قد تسبق النسخ مرحلة تحضير.",
+          "caption": "تأكيد COPY للمجموعة الكبيرة."
+        },
+        {
+          "id": "progress-03",
+          "image": "11-10-copy-paused.png",
+          "text": "اضغط Pause وانتظر Resume. قد يكتمل الملف الحالي قبل التعليق.",
+          "caption": "COPY معلقة فعلًا."
+        },
+        {
+          "id": "progress-04",
+          "image": "11-11-copy-resumed.png",
+          "text": "اضغط Resume؛ تستمر العملية نفسها ويعود Pause.",
+          "caption": "استئناف COPY الحقيقي."
+        },
+        {
+          "id": "progress-05",
+          "image": "11-13-cancelled-copy-report.png",
+          "text": "اضغط Stop واقرأ الملخص والتقرير الملغيين. بقيت 110 نسخ كاملة دون إخفاقات.",
+          "caption": "إلغاء مع الاحتفاظ بـ110 نسخ."
+        },
+        {
+          "id": "progress-06",
+          "image": "11-14b-retry-copy-confirmation.png",
+          "text": "ابدأ COPY مجددًا بالمصدر والنمط والوجهة نفسها. راجع التأكيد الجديد؛ يمكن تخطي الملفات المتطابقة المكتملة.",
+          "caption": "تأكيد إعادة المحاولة الآمنة."
+        },
+        {
+          "id": "progress-07",
+          "image": "11-15-retry-copy-progress.png",
+          "text": "اقرأ الاسم والعدد والنسبة الحالية. يقيس تقدم المحاولة الملفات التي لا تزال تحتاج النسخ.",
+          "caption": "التقدم الفعلي لإعادة المحاولة."
+        },
+        {
+          "id": "progress-08",
+          "image": "11-16-retry-copy-paused-progress.png",
+          "text": "اضغط Pause عند الحاجة وانتظر Paused، ثم راجع العدد والنسبة الفعليين.",
+          "caption": "لوحة تقدم معلقة."
+        },
+        {
+          "id": "progress-09",
+          "image": "11-17-retry-copy-resumed-progress.png",
+          "text": "اضغط Resume وانتظر النهاية، مع إبقاء الوجهة متصلة والمصادر دون تغيير.",
+          "caption": "التقدم بعد Resume."
+        },
+        {
+          "id": "progress-10",
+          "image": "11-19-retry-completion-report.png",
+          "text": "نُسخ 402 وتُخطي 110 متطابقة، دون إعادة تسمية أو إخفاق. جرى التحقق من بصمات الوجهة الـ512 كلها.",
+          "caption": "استعادة مكتملة متحققة."
+        }
+      ],
+      "tips": [
+        "إيقاف فحص التكرار وCOPY عمليتان مختلفتان. استخدم أزرار العملية الجارية.",
+        "قد يبقى نص حالة قديم فوق الأزرار. اقرأ لوحة التقدم والنتيجة الحالية.",
+        "بعد الإلغاء راجع التقرير والوجهة واحتفظ بالنسخ المكتملة المتحققة. لا تفترض ضرورة حذف الوجهة كلها."
+      ],
+      "outcome": "يمكنك تعليق COPY واستئنافها وإيقافها وإعادة المحاولة دون تكرار النتائج المتطابقة المكتملة."
+    },
+    {
+      "id": "move",
+      "title": "9. استخدام Advanced MOVE مع نسخة احتياطية",
+      "intro": "يحذف MOVE ملفات المصدر بعد التحقق من الوجهة. تدرب على نسخ تجريبية فقط مع احتياط مستقل. استُخدم استنساخ Move Samples ولم تُنقل المكتبة التجريبية الأصلية.",
+      "steps": [
+        {
+          "id": "move-01",
+          "image": "08-01-advanced-mode.png",
+          "text": "اختر Advanced في Experience وحدد المصدر التجريبي المطلوب قبل فتح المنظم.",
+          "caption": "وضع Advanced الحقيقي."
+        },
+        {
+          "id": "move-02",
+          "image": "08-35-correct-source-confirmed.png",
+          "text": "راجع الأنواع وSelected Folder: Move Samples ومساره، 17 مفحوصة و16 محددة وواحد مستبعد.",
+          "caption": "المصدر الصحيح مع احتياطه."
+        },
+        {
+          "id": "move-03",
+          "image": "08-36-verified-move-plan.png",
+          "text": "أكد Year / Month وراجع الخطة. يظهر Duplicates: Not checked في هذا المثال.",
+          "caption": "خطة MOVE الفعلية."
+        },
+        {
+          "id": "move-04",
+          "image": "08-37-final-move-destination.png",
+          "text": "عبر Change Location اختر Move Results المنفصل وراجع مساره.",
+          "caption": "وجهة MOVE التجريبية المعتمدة."
+        },
+        {
+          "id": "move-05",
+          "image": "08-39-final-move-warning.png",
+          "text": "اختر Move في Transfer mode. اقرأ التحذير: التحقق قبل إزالة المصدر، وعدم حذف مجلداته، وحفظ تقرير مفصل.",
+          "caption": "تحذير MOVE الحقيقي."
+        },
+        {
+          "id": "move-06",
+          "image": "08-40-final-move-confirmation.png",
+          "text": "اضغط Move Selected Files واقرأ Confirm move. ستُزال ملفات المصدر المطابقة بعد التحقق؛ ألغِ عند الشك.",
+          "caption": "التأكيد النهائي الحقيقي."
+        },
+        {
+          "id": "move-07",
+          "image": "08-42-move-complete-report.png",
+          "text": "تحقق من المصدر والوجهة والاحتياط ثم أكد. Move complete: 16 منقولة، وصفر منسوخة مع مصدر باقٍ، وصفر فاشلة.",
+          "caption": "MOVE مكتملة لـ16 ملفًا."
+        },
+        {
+          "id": "move-08",
+          "image": "07-03-verified-move-activity.png",
+          "text": "افتح Activity وراجع Move Photos & Videos وOpen Move Report. احتفظ بالاحتياط المستقل.",
+          "caption": "سجل MOVE المكتملة الحقيقي."
+        }
+      ],
+      "tips": [
+        "تطابقت بصمات الوجهة الـ16 وبقيت ملفات الاحتياط الـ17 دون تغيير. بقي notes.txt والمجلدات الأربعة الأصلية.",
+        "يعني COPIED_SOURCE_RETAINED وجود نسخة بالوجهة مع بقاء المصدر؛ راجع التقرير ولا تعتبره نقلًا كاملًا.",
+        "راجع Selected Folder كل مرة. لا يغير Refresh الاختيار؛ أزيل تسجيل المصدر التجريبي من الفهرس فقط وأضيف مجددًا لتبديله."
+      ],
+      "outcome": "اكتمل MOVE التجريبي وتحقق، وبقيت النسخة الاحتياطية والمكتبة الأصلية سليمتين."
+    },
+    {
+      "id": "reports",
+      "title": "10. قراءة Activity وتقارير النص",
+      "intro": "يسجل Activity العمليات المحلية الحديثة. تختلف Completed وCompleted with warnings وCancelled. توجد تقارير TXT التلقائية في جذر الوجهة المختارة.",
+      "steps": [
+        {
+          "id": "reports-01",
+          "image": "07-01-activity-after-copy.png",
+          "text": "في Activity قارن أعداد المعالجة والنسخ والتخطي والفشل في Copy Photos & Videos بملخص الوجهة.",
+          "caption": "سجل COPY الأولى المكتملة."
+        },
+        {
+          "id": "reports-02",
+          "image": "07-02-completed-and-cancelled-activity.png",
+          "text": "قارن الحالات: عالجت COPY الملغاة 110، والمحاولة المكتملة 512 مع تخطي 110. فحص التكرار الملغى غير مكتمل.",
+          "caption": "سجل فعلي للنجاح والإلغاء."
+        },
+        {
+          "id": "reports-03",
+          "image": "07-03-verified-move-activity.png",
+          "text": "استخدم Open Copy Report أوOpen Move Report وOpen Destination. راجع النمط والمسارات والحالات والإجماليات في TXT.",
+          "caption": "سجلات COPY وMOVE الحقيقية."
+        }
+      ],
+      "tips": [
+        "التقرير المتحقق: Mode: MOVE وTotal planned files: 16 وMoved: 16 وCOPIED_SOURCE_RETAINED: 0 وSkipped: 0 وFailed: 0.",
+        "يؤكد تقرير COPY حفظ الأصول؛ ويحدد التقرير الملغى النسخ المكتملة الباقية في الوجهة.",
+        "لم يُستخدم Clear Activity History، فبقي السجل للمراجعة."
+      ],
+      "outcome": "يمكنك ربط السجل بالمجلد والتقرير وتمييز النجاح عن العمل غير المكتمل."
+    },
+    {
+      "id": "settings",
+      "title": "11. الإعدادات وفهم البداية الجديدة",
+      "intro": "يطبق Settings تفضيلات محلية: Language وExperience وSafety وPrivacy & Local Processing وOrganizing وLibrary وGuidance & Accessibility وMaintenance وMedia dates.",
+      "steps": [
+        {
+          "id": "settings-01",
+          "image": "09-01-settings.png",
+          "text": "راجع اللغة والتجربة والسلامة في Settings. تفرض الواجهة المعروضة تأكيد التنظيم وتحذير إزالة المصدر.",
+          "caption": "اللغة والتجربة والسلامة."
+        },
+        {
+          "id": "settings-02",
+          "image": "09-03-organizing-library-settings.png",
+          "text": "راجع Default organize pattern وDestination behavior الذي يعرض Ask every time. اقرأ معلومات المعالجة المحلية وتخزين التقارير.",
+          "caption": "التنظيم والخصوصية المحلية."
+        },
+        {
+          "id": "settings-03",
+          "image": "09-04-accessibility-settings.png",
+          "text": "راجع حجم المعاينة والترتيب وتسميات التاريخ والحجم وفتح Library بعد الفحص وتذكر العرض السابق.",
+          "caption": "تفضيلات المكتبة الحقيقية."
+        },
+        {
+          "id": "settings-04",
+          "image": "09-05-enable-larger-text.png",
+          "text": "فعّل Larger text وراجع النص وتخطيط التنقل.",
+          "caption": "تطبيق النص الكبير."
+        },
+        {
+          "id": "settings-05",
+          "image": "09-06-restore-standard-text.png",
+          "text": "ألغِ Larger text لاستعادة الحجم المعتاد. يمكن ضبط Larger buttons وReduced motion والإرشادات أيضًا.",
+          "caption": "استعادة النص المعتاد."
+        },
+        {
+          "id": "settings-06",
+          "image": "09-07-maintenance-settings.png",
+          "text": "في Maintenance راجع مساحة الملفات المولدة. يحدث Refresh Usage الأرقام؛ يخص Clear Thumbnail Cache المعاينات ولم يُستخدم هنا.",
+          "caption": "المساحة والصيانة."
+        },
+        {
+          "id": "settings-07",
+          "image": "09-09-review-date-evidence.png",
+          "text": "افتح Advanced date policy واقرأ الأدلة الخمسة وتحذير الثقة المنخفضة. تؤثر التغييرات في الفحوص الجديدة وإعادة التحليل والخطط.",
+          "caption": "أدلة التاريخ الخمسة الفعلية."
+        },
+        {
+          "id": "settings-08",
+          "image": "09-10-reset-settings-confirmation.png",
+          "text": "افتح تأكيد Reset Settings to Defaults: يمسح الإعدادات والمصادر والفهرس والتقدم والمصغرات، ولا يغير الأصول أو النسخ المنظمة.",
+          "caption": "تحذير إعادة الضبط الحقيقي."
+        },
+        {
+          "id": "settings-09",
+          "image": "09-12-reset-cancelled.png",
+          "text": "اختر Cancel. لم يُعد ضبط الملف الشخصي الحقيقي أو التجريبي.",
+          "caption": "إلغاء إعادة الضبط."
+        }
+      ],
+      "tips": [
+        "البداية الجديدة أوسع من تغيير المظهر. احتفظ بالتقارير والمعلومات اللازمة قبل تنظيف الفهرس.",
+        "عرض Settings لا يعيد كتابة التواريخ القديمة؛ استخدم التحليل الصريح لتحديثها."
+      ],
+      "outcome": "يمكنك تعديل التفضيلات وفهم الصيانة وإعادة الضبط دون مسح الفهرس بالخطأ."
+    },
+    {
+      "id": "troubleshooting",
+      "title": "12. التعافي من المشكلات الشائعة",
+      "intro": "اقرأ الرسالة وراجع المصدر والمرشحات والنمط والوجهة قبل التكرار. أُعيد إنتاج الحالات بأمان في البيئة التجريبية فقط.",
+      "steps": [
+        {
+          "id": "troubleshooting-01",
+          "image": "10-01-library-no-search-results.png",
+          "text": "عند No photos match your choices راجع Search media؛ جزء اسم غير مطابق قد يخفي النتائج كلها.",
+          "caption": "بحث حقيقي بلا نتائج."
+        },
+        {
+          "id": "troubleshooting-02",
+          "image": "10-02-recover-search-results.png",
+          "text": "اكتب جزءًا معروفًا مثل garden وتحقق من عودة النتائج قبل تعديل غيره.",
+          "caption": "استعادة نتائج البحث."
+        },
+        {
+          "id": "troubleshooting-03",
+          "image": "10-04-review-unavailable-filter.png",
+          "text": "راجع Unavailable only؛ يعرض صفرًا إن كانت الأصول متاحة، ولا يثبت فقدان ملفات.",
+          "caption": "مرشح توفر مقيّد فعليًا."
+        },
+        {
+          "id": "troubleshooting-04",
+          "image": "10-05-show-all-recovery.png",
+          "text": "اضغط Show All Photos وراجع البحث والمرشحات المستعادة.",
+          "caption": "استعادة المعرض."
+        },
+        {
+          "id": "troubleshooting-05",
+          "image": "10-08-invalid-folder-error.png",
+          "text": "عند Folder is unavailable or cannot be opened تحقق من المسار والوصول. يعطل المسار غير الموجود Select This Folder.",
+          "caption": "خطأ مجلد حقيقي."
+        },
+        {
+          "id": "troubleshooting-06",
+          "image": "10-10-empty-folder.png",
+          "text": "اختر مجلدًا موجودًا واضغط Go. يظهر المجلد الفارغ صفر وسائط؛ غيّر المجلد أو ألغِ.",
+          "caption": "مجلد تجريبي فارغ."
+        },
+        {
+          "id": "troubleshooting-07",
+          "image": "10-12-unsupported-only-preview.png",
+          "text": "المجلد النصي فقط يعرض صفر وسائط أيضًا. يُحدد Other Files منفصلًا أثناء التنظيم.",
+          "caption": "ملفات غير مدعومة فقط."
+        },
+        {
+          "id": "troubleshooting-08",
+          "image": "10-14-invalid-custom-pattern.png",
+          "text": "في Custom استخدم رموزًا ومقاطع نسبية صالحة. يُرفض نمط الانتقال للأب وتبقى COPY معطلة.",
+          "caption": "رفض نمط غير صالح فعليًا."
+        },
+        {
+          "id": "troubleshooting-09",
+          "image": "10-17-custom-plan-reconfirmed.png",
+          "text": "صحح إلى {YYYY}\\{YYYY-MM}. في هذه البنية أعد فتح Pattern وإغلاقه لتأكيد الخطة واستعادتها.",
+          "caption": "تأكيد الخطة المصححة."
+        },
+        {
+          "id": "troubleshooting-10",
+          "image": "10-19-catalog-only-removal-confirmation.png",
+          "text": "اقرأ Remove Folder: يزيل سجلات الفهرس وLibrary فقط، ويبقي الملفات والمجلد الأصليين.",
+          "caption": "تأكيد إزالة التسجيل فقط."
+        },
+        {
+          "id": "troubleshooting-11",
+          "image": "10-20-disposable-source-removed-from-catalog.png",
+          "text": "في التجربة وحدها أكد Remove from MEDIA KOLFAT وتحقق من الأصول، ثم أعد الإضافة يدويًا والفحص قبل التنظيم.",
+          "caption": "إزالة التسجيل مع حفظ الأصول."
+        }
+      ],
+      "tips": [
+        "يبقى Continue معطلًا دون أنواع محددة؛ عد إلى Choose File Types.",
+        "قد تبقى معاينات قديمة بعد خطأ المسار. اقرأ الخطأ وتعطيل Select This Folder؛ ليست تلك محتويات المسار غير المتاح.",
+        "لمشكلات الوجهة أو المساحة تحقق من المسار والاتصال والكتابة واحتياطي السلامة، واختر مجلدًا مناسبًا آخر.",
+        "بعد الانقطاع راجع Activity وTXT والنتائج المكتملة قبل المحاولة. تتطلب التحذيرات والإلغاء مراجعة حتى لو وُجدت نسخ.",
+        "أزيل التسجيل من الفهرس المعزول فقط. بقيت الأصول الـ17 دون تغيير وأعيد تسجيلها لمثال MOVE."
+      ],
+      "outcome": "يمكنك تمييز النتائج الفارغة عن الأصول المفقودة وتصحيح الأخطاء مع حفظ النتائج."
+    }
+  ],
+  "status": "Complete guide; source and screenshot parity verified; native-speaker editorial review not performed"
+}

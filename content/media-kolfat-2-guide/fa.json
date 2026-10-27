@@ -1,0 +1,714 @@
+{
+  "language": "fa",
+  "title": "راهنمای کاربری MEDIA KOLFAT 2.0",
+  "description": "راهنمای تصویری افزودن عکس و ویدیو، بررسی تاریخ و پیش‌نمایش، یافتن تکراری‌ها، سامان‌دهی با COPY و MOVE، بازیابی کار و خواندن گزارش‌ها.",
+  "lead": "برنامهٔ واقعی نصب‌شده در Windows را از نخستین اجرا تا نتیجهٔ بررسی‌شده دنبال کنید. نمونه‌ها تصویر و ویدیوی تولیدشده با پشتیبان مستقل هستند. همهٔ تصاویر برنامه، اسکرین‌شات واقعی PNG بومی‌اند.",
+  "versionNote": "با MEDIA KOLFAT 2.0.0 و ساخت 2.0.0.0 بررسی شده است. رابط تصاویر انگلیسی است. با افزودن مجموعهٔ بزرگ، شمارش‌ها تغییر می‌کنند؛ هنگام کار شمارش واقعی خود را بررسی کنید.",
+  "safety": "ابتدا پشتیبان مستقل بگیرید. با COPY شروع کنید که فایل‌های اصلی را نگه می‌دارد. Advanced MOVE پس از بررسی مقصد و ایمنی، فایل‌های مبدأ را حذف می‌کند. تا بررسی نتیجه و گزارش، پشتیبان را نگه دارید.",
+  "contentsLabel": "فهرست",
+  "stepLabel": "گام",
+  "imageLinkLabel": "باز کردن PNG اصلی",
+  "backLabel": "بازگشت به فهرست",
+  "chapters": [
+    {
+      "id": "start",
+      "title": "۱. شروع و شناخت راهنمایی‌ها",
+      "intro": "برنامهٔ نصب‌شده را باز کنید. نوار کناری شامل Performance Check، Add Photos & Videos، Photos Health Check، Duplicate Finder، Browse Library، Organize Photos & Videos، Activity، Settings و About است. در Experience دو گزینهٔ Guided و Advanced وجود دارد.",
+      "steps": [
+        {
+          "id": "start-01",
+          "image": "01-01-first-launch-guided.png",
+          "text": "با Guided شروع کنید. خاکستری گام‌های آینده، کهربایی گام فعلی و تیک سبز گام‌های کامل را نشان می‌دهد.",
+          "caption": "نخستین اجرای واقعی در Guided."
+        },
+        {
+          "id": "start-02",
+          "image": "01-02-performance-check-complete.png",
+          "text": "Run Quick Check را اجرا کنید و منتظر بمانید. رایانهٔ نمونه 98% گرفت؛ نتیجهٔ شما ممکن است فرق کند.",
+          "caption": "بررسی کامل با نتیجهٔ 98%."
+        },
+        {
+          "id": "start-03",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Add Photos & Videos را باز کنید. برای پوشهٔ شناخته‌شده، Choose Photos & Videos Manually را انتخاب کنید.",
+          "caption": "دو گزینهٔ واقعی انتخاب مبدأ."
+        },
+        {
+          "id": "start-04",
+          "image": "01-04-about-version.png",
+          "text": "در About بخش Release Information را باز و Version و Build را بررسی کنید. از نوار کناری برگردید.",
+          "caption": "نسخه و ساخت تأییدشده."
+        },
+        {
+          "id": "start-05",
+          "image": "01-05-about-privacy.png",
+          "text": "Privacy & Data Safety را باز کنید؛ تفاوت اسکن، COPY و Advanced MOVE را بخوانید و پشتیبان مستقل نگه دارید.",
+          "caption": "توضیح ایمنی خود برنامه."
+        }
+      ],
+      "tips": [
+        "پیکان متحرک و درخشش، کار بعدی پیشنهادی را نشان می‌دهند. Reduced motion و تنظیمات راهنمایی در Settings هستند.",
+        "Guided ترتیب کارها را پیشنهاد می‌کند. Advanced مسیر مستقیم‌تری دارد و پس از آماده شدن طرح، MOVE را نشان می‌دهد.",
+        "در About بخش‌های Legal & Policies، Support، Technical Information، Open-Source & Third-Party Licenses و Product Information نیز بازشدنی هستند."
+      ],
+      "outcome": "می‌توانید نسخه را شناسایی کنید، میان صفحه‌ها بروید و گام فعلی را بشناسید."
+    },
+    {
+      "id": "sources",
+      "title": "۲. انتخاب دستی مبدأ",
+      "intro": "مبدأ پوشه‌ای ثبت‌شده در فهرست محلی است. اسکن عکس و ویدیوی پشتیبانی‌شده را نمایه می‌کند. نمونه شامل 14 JPEG، دو AVI و یک متن اختیاری در زیرپوشه‌هاست.",
+      "steps": [
+        {
+          "id": "sources-01",
+          "image": "02-01-manual-source-picker.png",
+          "text": "Choose Photos & Videos Manually را بزنید و Current folder، Locations، Folders و پیش‌نمایش‌ها را ببینید.",
+          "caption": "انتخابگر واقعی مبدأ."
+        },
+        {
+          "id": "sources-02",
+          "image": "02-02-enter-demo-source-path.png",
+          "text": "مسیر کامل را در Current folder وارد کنید؛ اینجا Media Samples در بخش نمونهٔ دورریختنی است.",
+          "caption": "مسیر مشخص نمونه وارد شده است."
+        },
+        {
+          "id": "sources-03",
+          "image": "02-03-demo-nested-folders.png",
+          "text": "Go را بزنید و مسیر و زیرپوشه‌ها را بررسی کنید. پوشهٔ والد ممکن است مستقیماً رسانه نداشته باشد.",
+          "caption": "چهار زیرپوشهٔ واقعی نمونه."
+        },
+        {
+          "id": "sources-04",
+          "image": "02-04-preview-sample-photos.png",
+          "text": "2024 Holiday را باز کنید و شش پیش‌نمایش JPEG تولیدشده را ببینید.",
+          "caption": "شش تصویر پشتیبانی‌شده."
+        },
+        {
+          "id": "sources-05",
+          "image": "02-05-return-to-demo-root.png",
+          "text": "با Up one folder به والد برگردید تا کل مجموعه وارد شود؛ Current folder را دوباره بررسی کنید.",
+          "caption": "بازگشت به پوشهٔ والد درست."
+        },
+        {
+          "id": "sources-06",
+          "image": "02-06-ready-to-scan-source.png",
+          "text": "Select This Folder را بزنید و در Ready to add this folder نام و مسیر کامل را پیش از ادامه بررسی کنید.",
+          "caption": "مبدأ آمادهٔ افزودن."
+        },
+        {
+          "id": "sources-07",
+          "image": "02-07-source-advanced-options.png",
+          "text": "Advanced options را برای مکان، نام اختیاری و نوع باز کنید. پوشهٔ ابری باید از قبل محلی و خواندنی باشد.",
+          "caption": "گزینه‌های واقعی مبدأ."
+        },
+        {
+          "id": "sources-08",
+          "image": "02-08-source-scan-complete.png",
+          "text": "اسکن پیشنهادی را شروع کنید و منتظر Ready و زمان موفقیت بمانید. 16 رسانه نمایه شدند؛ متن رسانه محسوب نشد.",
+          "caption": "اسکن کامل 16 رسانه."
+        },
+        {
+          "id": "sources-09",
+          "image": "02-09-source-refresh-complete.png",
+          "text": "با Refresh دوباره اسکن و وضعیت و زمان را بررسی کنید. این کار مبدأ سامان‌دهی را انتخاب نمی‌کند.",
+          "caption": "تازه‌سازی کامل مبدأ."
+        }
+      ],
+      "tips": [
+        "در Advanced ممکن است کارت پوشهٔ اضافی، Start Scan داشته باشد. در مسیر نخست Guided، اسکن هنگام افزودن شروع شد.",
+        "Selected Folder را در سامان‌دهنده همیشه بررسی کنید. Refresh کارت مبدأ، انتخاب سامان‌دهی را عوض نمی‌کند."
+      ],
+      "outcome": "پوشهٔ دلخواه ثبت شده و رسانه‌های پشتیبانی‌شده در فهرست دیده می‌شوند."
+    },
+    {
+      "id": "locations",
+      "title": "۳. کشف خودکار و مکان‌ها",
+      "intro": "انتخابگر This PC، پوشه‌ها و دیسک‌های محلی، Pictures، OneDrive و Network دارد. فقط مکان‌های موردنظر را انتخاب کنید. دیسک خارجی باید متصل و شبکه از Windows دسترس‌پذیر باشد.",
+      "steps": [
+        {
+          "id": "locations-01",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Scan Computer Automatically جست‌وجوی کل رایانه را بدون محدودیت پوشهٔ نمونه آغاز می‌کند. برای دامنهٔ محدود از انتخاب دستی استفاده کنید.",
+          "caption": "دو گزینه با دامنهٔ متفاوت."
+        },
+        {
+          "id": "locations-02",
+          "image": "02-01-manual-source-picker.png",
+          "text": "از This PC یا مسیر دقیق در Current folder استفاده کنید. OneDrive به فایل‌های موجود محلی اشاره دارد؛ ابتدا آن‌ها را در Windows در دسترس کنید.",
+          "caption": "میانبرها و کادر مسیر واقعی."
+        }
+      ],
+      "tips": [
+        "کشف خودکار کل رایانه اجرا نشد، زیرا دیسک‌های بیرون از نمونه را بررسی می‌کرد. هیچ نتیجهٔ آن به‌عنوان آزموده‌شده ارائه نشده است.",
+        "میانبر نشانهٔ ورود به حساب نیست. Pictures، OneDrive، شبکه یا رسانهٔ شخصی باز نشد."
+      ],
+      "outcome": "می‌توانید روش مناسب را با توجه به مکان و دامنهٔ خواندن انتخاب کنید."
+    },
+    {
+      "id": "health",
+      "title": "۴. بررسی پیش‌نمایش و تاریخ",
+      "intro": "پس از اسکن Photos Health Check را باز کنید. سلامت بندانگشتی، تاریخ و دسترسی اصل موضوعات جدا هستند؛ نبود پیش‌نمایش اثبات گم‌شدن فایل نیست.",
+      "steps": [
+        {
+          "id": "health-01",
+          "image": "03-01-photos-health-check.png",
+          "text": "جمع‌بندی را ببینید: 16 رسانه، 14 پیش‌نمایش سالم، دو مشکل ویدیو و دسترسی به همهٔ 16 اصل در آخرین بررسی.",
+          "caption": "خلاصهٔ واقعی سلامت."
+        },
+        {
+          "id": "health-02",
+          "image": "03-02-thumbnail-repair-complete.png",
+          "text": "ترمیم صریح بندانگشتی را اجرا کنید. دو ویدیو بررسی شد، هیچ‌کدام ترمیم نشد و هر دو برای پیش‌نمایش پشتیبانی نمی‌شدند.",
+          "caption": "نتیجهٔ واقعی ترمیم."
+        },
+        {
+          "id": "health-03",
+          "image": "03-04-date-reanalysis-result.png",
+          "text": "تاریخ‌های نامشخص را دوباره تحلیل کنید. هر 16 تاریخ از Filesystem last modified آمد؛ این شاهد جایگزین ممکن است زمان کپی یا ویرایش باشد.",
+          "caption": "تحلیل واقعی و منشأ تاریخ‌ها."
+        },
+        {
+          "id": "health-04",
+          "image": "09-09-review-date-evidence.png",
+          "text": "در Settings بخش Advanced date policy را باز کنید: فراداده، XMP، نام، پوشه و آخرین تغییر. Windows CreationTime شاهد تاریخ ثبت عکس نیست.",
+          "caption": "سیاست واقعی تاریخ."
+        }
+      ],
+      "tips": [
+        "فایل‌های تولیدشده فرادادهٔ دوربین ندارند. اعداد 2024 یا 2025 در نام، تاریخ مشاهده‌شده را تعیین نکردند؛ آخرین تغییر استفاده شد.",
+        "قالب پشتیبانی‌نشده ممکن است پس از ترمیم هم پیش‌نمایش نداشته باشد. اصل را نگه دارید و نمایشگر مناسب به کار ببرید."
+      ],
+      "outcome": "می‌توانید مشکل پیش‌نمایش، تاریخ و دسترسی را جدا کنید و نتیجهٔ واقعی ترمیم را بخوانید."
+    },
+    {
+      "id": "duplicates",
+      "title": "۵. یافتن تکراری‌های دقیق",
+      "intro": "Duplicate Finder موارد موجود و پشتیبانی‌شدهٔ فهرست را مقایسه می‌کند. نام یکسان کافی نیست. نمونهٔ کوچک عمداً سه گروه فایل یکسان دارد.",
+      "steps": [
+        {
+          "id": "duplicates-01",
+          "image": "04-01-duplicate-finder-ready.png",
+          "text": "Duplicate Finder را باز کنید، 16 نامزد را ببینید و Find Duplicates را بزنید.",
+          "caption": "جست‌وجوی نخست آماده است."
+        },
+        {
+          "id": "duplicates-02",
+          "image": "04-06-duplicate-scan-outcome.png",
+          "text": "منتظر Duplicate scan complete بمانید: سه گروه، شش فایل و حدود 16.9 MB فضای تخمینی.",
+          "caption": "سه گروه واقعی یکسان."
+        },
+        {
+          "id": "duplicates-03",
+          "image": "04-07-inspect-duplicate-results.png",
+          "text": "در Exact Duplicate Group نام، مسیر و اندازه را مقایسه کنید. Open Folder مکان را باز می‌کند، فایل را حذف نمی‌کند.",
+          "caption": "جزئیات واقعی تکراری‌ها."
+        },
+        {
+          "id": "duplicates-04",
+          "image": "04-33-duplicate-scan-running.png",
+          "text": "در نمونهٔ 544 موردی، Finding exact duplicates و شمارش را ببینید. Stop Scan نمایش داده می‌شود.",
+          "caption": "اسکن واقعی در حال اجرا."
+        },
+        {
+          "id": "duplicates-05",
+          "image": "04-36-duplicate-scan-cancelled.png",
+          "text": "Stop Scan را بزنید تا به آمادگی برگردید. جست‌وجوی متوقف‌شده ناقص است و نبود تکرار را ثابت نمی‌کند.",
+          "caption": "نتیجهٔ توقف جست‌وجو."
+        }
+      ],
+      "tips": [
+        "Duplicate Finder این ساخت، Pause و Resume نشان نمی‌دهد. COPY این کنترل‌ها را دارد که جلوتر آمده‌اند.",
+        "رابط آزموده‌شده حذف ندارد. فضای بازیافتنی تخمین است؛ نسخهٔ بررسی‌شده و پشتیبان مستقل نگه دارید.",
+        "اسکن جدید یا تغییر مبدأ می‌تواند نتیجهٔ قبلی را نامعتبر کند. Not checked در خلاصهٔ Library را بررسی کنید."
+      ],
+      "outcome": "می‌توانید جست‌وجو، بررسی گروه و توقف را بدون حذف اصل انجام دهید."
+    },
+    {
+      "id": "library",
+      "title": "۶. مرور، جست‌وجو، انتخاب و چرخش",
+      "intro": "Browse Library فهرست و نمای کلی را نشان می‌دهد. جست‌وجو، فیلتر و ترتیب، نتایج را محدود می‌کنند. چرخش روی پیش‌نمایش و نسخه‌های سامان‌یافته یا خروجی اعمال می‌شود و اصل را بازنویسی نمی‌کند.",
+      "steps": [
+        {
+          "id": "library-01",
+          "image": "05-01-library-overview.png",
+          "text": "در Browse Library تعداد، نوع، تاریخ، دسترسی و تکرار را در نمای کلی بخوانید.",
+          "caption": "نمای کلی واقعی کتابخانه."
+        },
+        {
+          "id": "library-02",
+          "image": "05-02-search-garden.png",
+          "text": "در Search media عبارت garden را بنویسید تا هفت نتیجه ببینید.",
+          "caption": "هفت نتیجهٔ garden."
+        },
+        {
+          "id": "library-03",
+          "image": "05-03-select-a-photo.png",
+          "text": "فقط یک عکس انتخاب کنید و پیش از اقدام انتخاب را بررسی کنید.",
+          "caption": "یک عکس انتخاب شده است."
+        },
+        {
+          "id": "library-04",
+          "image": "05-04-rotate-photo-right.png",
+          "text": "Rotate Right را بزنید و پیش‌نمایش را ببینید؛ اصل بازنویسی نمی‌شود.",
+          "caption": "چرخش تکی به راست."
+        },
+        {
+          "id": "library-05",
+          "image": "05-05-undo-photo-rotation.png",
+          "text": "Undo را بزنید و بازگشت جهت را بررسی کنید.",
+          "caption": "برگشت چرخش تکی."
+        },
+        {
+          "id": "library-06",
+          "image": "05-06-select-all-visible-photos.png",
+          "text": "Select all visible photos را بزنید و انتخاب هفت عکس را تأیید کنید.",
+          "caption": "هفت عکس نمایان انتخاب شده‌اند."
+        },
+        {
+          "id": "library-07",
+          "image": "05-07-batch-rotate-left.png",
+          "text": "Rotate Left را اعمال و چند پیش‌نمایش را با حفظ انتخاب بررسی کنید.",
+          "caption": "چرخش گروه به چپ."
+        },
+        {
+          "id": "library-08",
+          "image": "05-08-undo-batch-left-rotation.png",
+          "text": "پیش از چرخش دیگر، Undo کنید.",
+          "caption": "برگشت چرخش گروه."
+        },
+        {
+          "id": "library-09",
+          "image": "05-09-batch-rotate-180.png",
+          "text": "Rotate 180 را بزنید و چند تصویر را ببینید.",
+          "caption": "چرخش 180 درجهٔ گروه."
+        },
+        {
+          "id": "library-10",
+          "image": "05-10-undo-batch-180.png",
+          "text": "دوباره Undo کنید. همهٔ چرخش‌های نمونه پیش از سامان‌دهی برگشتند.",
+          "caption": "جهت‌های اولیه بازگشته‌اند."
+        },
+        {
+          "id": "library-11",
+          "image": "05-11-clear-photo-selection.png",
+          "text": "Clear Selection را بزنید و خالی‌شدن شمارش انتخاب را ببینید.",
+          "caption": "پاک‌شدن انتخاب عکس‌ها."
+        },
+        {
+          "id": "library-12",
+          "image": "05-12-clear-library-search.png",
+          "text": "Search media را خالی کنید؛ فیلترهای دیگر ممکن است هنوز نتیجه را محدود کنند.",
+          "caption": "جست‌وجو پاک شده است."
+        },
+        {
+          "id": "library-13",
+          "image": "05-15-photos-filter-confirmed.png",
+          "text": "Photos only را انتخاب کنید. در نمونهٔ بعدی پس از افزودن مبدأ دیگر، 28 عکس وجود دارد.",
+          "caption": "فیلتر واقعی فقط عکس."
+        },
+        {
+          "id": "library-14",
+          "image": "05-17-filename-sort-confirmed.png",
+          "text": "File name A–Z را بزنید و فهرست را ببندید. ترتیب تاریخ، اندازه، نام معکوس و نوع نیز وجود دارد.",
+          "caption": "مرتب‌سازی بر اساس نام."
+        }
+      ],
+      "tips": [
+        "Select all visible photos فقط عکس‌های نمایان را انتخاب می‌کند، نه کل فهرست؛ شمارش را ببینید.",
+        "پیش از چرخش دیگر Undo کنید. هش اصل‌ها در نمونه تغییر نکرد."
+      ],
+      "outcome": "می‌توانید عکس بیابید، تکی یا گروهی انتخاب کنید و چرخش را برگردانید."
+    },
+    {
+      "id": "copy",
+      "title": "۷. تکمیل Guided COPY",
+      "intro": "با COPY، پشتیبان مستقل بررسی‌شده و مقصد جدا با فضای کافی شروع کنید. هر دو مسیر را بررسی کنید؛ این مثال 16 رسانهٔ اصلی نمونه را کپی می‌کند.",
+      "steps": [
+        {
+          "id": "copy-01",
+          "image": "06-01-guided-organizer.png",
+          "text": "در Guided، Organize Photos & Videos را باز کنید و شمارش‌های Choose File Types را ببینید.",
+          "caption": "گفت‌وگوی واقعی نوع فایل."
+        },
+        {
+          "id": "copy-02",
+          "image": "06-02-no-file-types-selected.png",
+          "text": "Deselect All باعث غیرفعال‌شدن Continue می‌شود. برای ادامه حداقل یک نوع پشتیبانی‌شده انتخاب کنید.",
+          "caption": "ادامه بدون انتخاب غیرفعال است."
+        },
+        {
+          "id": "copy-03",
+          "image": "06-03-select-all-file-types.png",
+          "text": "Select All همهٔ 17 فایل، شامل متن اختیاری را انتخاب می‌کند.",
+          "caption": "همهٔ نوع‌ها انتخاب شده‌اند."
+        },
+        {
+          "id": "copy-04",
+          "image": "06-05-select-media-only.png",
+          "text": ".txt را بردارید: 17 اسکن، 16 انتخاب و یک مورد حذف از انتخاب.",
+          "caption": "فقط 16 رسانه انتخاب شده‌اند."
+        },
+        {
+          "id": "copy-05",
+          "image": "06-06-file-types-confirmed.png",
+          "text": "Continue را بزنید و Selected Folder و مسیر کامل را ببینید.",
+          "caption": "نوع‌ها تأیید شده‌اند."
+        },
+        {
+          "id": "copy-06",
+          "image": "06-08-guided-native-organization-plan.png",
+          "text": "در Pattern گزینهٔ Year / Month / Day را انتخاب و فهرست را ببندید. طرح و دسته‌های مبدأ اصلی 16 موردی را بررسی کنید.",
+          "caption": "طرح واقعی Guided."
+        },
+        {
+          "id": "copy-07",
+          "image": "06-09-destination-folder-picker.png",
+          "text": "Change Location را بزنید. انتخابگر Windows پوشهٔ موجود جدا از مبدأ و پشتیبان می‌خواهد.",
+          "caption": "انتخابگر بومی مقصد."
+        },
+        {
+          "id": "copy-08",
+          "image": "06-10-enter-copy-destination.png",
+          "text": "Copy Results و Select Folder را انتخاب کنید. برنامه داخل آن ریشهٔ MEDIA KOLFAT Organized Media می‌افزاید.",
+          "caption": "مقصد نمونه وارد شده است."
+        },
+        {
+          "id": "copy-09",
+          "image": "06-11-selected-copy-destination.png",
+          "text": "Selected destination، دسته‌ها و فضای آزاد را ببینید. اسکن تکرار قبلی، عکس‌ها و ویدیوهای یکسان را دسته‌بندی می‌کند.",
+          "caption": "مقصد و طرح بررسی‌شده."
+        },
+        {
+          "id": "copy-10",
+          "image": "06-12-confirm-copy.png",
+          "text": "Copy Selected Files را بزنید و Confirm copy را بخوانید: اصل‌ها می‌مانند. اگر مبدأ، انتخاب یا مقصد غلط است لغو کنید.",
+          "caption": "تأیید واقعی COPY."
+        },
+        {
+          "id": "copy-11",
+          "image": "06-14-copy-complete-report.png",
+          "text": "تأیید و صبر کنید: 16 کپی، صفر یکسان ردشده، صفر تغییرنام و صفر شکست. دسته‌ها و مسیر گزارش را بخوانید.",
+          "caption": "COPY کامل با گزارش."
+        }
+      ],
+      "tips": [
+        "Pattern شامل Year / Month / Day، YMD - Single Folder، Year / Month، دوربین، فقط سال یا ماه یا روز و Custom است. پیش‌نمایش را ببینید.",
+        "Open destination و Open Folder نتیجه را باز می‌کنند؛ Save report گزارش را ذخیره می‌کند. Add Destination to Folders ثبت صریح است و خودکار انجام نمی‌شود.",
+        "هر 16 هش مقصد تطبیق داشت؛ همهٔ 17 اصل و پشتیبان‌های مستقل بی‌تغییر ماندند."
+      ],
+      "outcome": "نسخهٔ سامان‌یافتهٔ بررسی‌شده و گزارش TXT آماده‌اند و همهٔ اصل‌ها حفظ شده‌اند."
+    },
+    {
+      "id": "progress",
+      "title": "۸. مکث، ادامه، توقف و بازیابی COPY",
+      "intro": "نمونهٔ بزرگ 512 ویدیوی تولیدشده و پشتیبان مستقل دارد. هیچ رسانهٔ شخصی در آن نیست.",
+      "steps": [
+        {
+          "id": "progress-01",
+          "image": "11-05-copy-timing-destination.png",
+          "text": "Copy Timing Results جدا را انتخاب و مسیر کامل مقصد را بررسی کنید.",
+          "caption": "مقصد مستقل نمونهٔ بزرگ."
+        },
+        {
+          "id": "progress-02",
+          "image": "11-07-copy-timing-confirmation.png",
+          "text": "مبدأ، انتخاب، مقصد و فضا را پیش از تأیید COPY ببینید. ممکن است مرحلهٔ آماده‌سازی وجود داشته باشد.",
+          "caption": "تأیید مجموعهٔ بزرگ."
+        },
+        {
+          "id": "progress-03",
+          "image": "11-10-copy-paused.png",
+          "text": "Pause را بزنید و منتظر Resume بمانید. فایل فعلی ممکن است نخست تمام شود.",
+          "caption": "مکث واقعی COPY."
+        },
+        {
+          "id": "progress-04",
+          "image": "11-11-copy-resumed.png",
+          "text": "Resume را بزنید؛ همان کار ادامه یافته و Pause برمی‌گردد.",
+          "caption": "ادامهٔ واقعی COPY."
+        },
+        {
+          "id": "progress-05",
+          "image": "11-13-cancelled-copy-report.png",
+          "text": "Stop را بزنید و خلاصه و گزارش لغوشده را بخوانید. 110 کپی کامل ماند و شکست صفر بود.",
+          "caption": "لغو با حفظ 110 کپی."
+        },
+        {
+          "id": "progress-06",
+          "image": "11-14b-retry-copy-confirmation.png",
+          "text": "COPY را با همان مبدأ، الگو و مقصد دوباره شروع کنید. تأیید جدید را بخوانید؛ فایل‌های یکسان کامل قابل ردشدن هستند.",
+          "caption": "تأیید تلاش دوبارهٔ ایمن."
+        },
+        {
+          "id": "progress-07",
+          "image": "11-15-retry-copy-progress.png",
+          "text": "نام، شمارش و درصد جاری را بخوانید. پیشرفت تلاش مجدد مربوط به فایل‌های هنوز نیازمند کپی است.",
+          "caption": "پیشرفت واقعی تلاش دوباره."
+        },
+        {
+          "id": "progress-08",
+          "image": "11-16-retry-copy-paused-progress.png",
+          "text": "در صورت نیاز Pause را بزنید، منتظر Paused بمانید و شمارش و درصد واقعی را ببینید.",
+          "caption": "پنل پیشرفت در مکث."
+        },
+        {
+          "id": "progress-09",
+          "image": "11-17-retry-copy-resumed-progress.png",
+          "text": "Resume را بزنید و با مقصد متصل و مبدأ بی‌تغییر منتظر پایان بمانید.",
+          "caption": "پیشرفت پس از Resume."
+        },
+        {
+          "id": "progress-10",
+          "image": "11-19-retry-completion-report.png",
+          "text": "402 کپی و 110 یکسان رد شد؛ تغییرنام و شکست صفر بود. هش هر 512 مقصد تأیید شد.",
+          "caption": "بازیابی کامل و بررسی‌شده."
+        }
+      ],
+      "tips": [
+        "توقف جست‌وجوی تکراری و توقف COPY متفاوت‌اند. کنترل‌های کار جاری را استفاده کنید.",
+        "ممکن است متن وضعیت قبلی بالای کنترل‌ها بماند. پیشرفت و نتیجهٔ فعلی را بخوانید.",
+        "پس از لغو، گزارش و مقصد را بررسی و کپی‌های کامل تأییدشده را حفظ کنید. پاک‌کردن کل مقصد را لازم ندانید."
+      ],
+      "outcome": "می‌توانید COPY را مکث، ادامه و متوقف کنید و بدون تکثیر فایل‌های یکسان کامل دوباره اجرا کنید."
+    },
+    {
+      "id": "move",
+      "title": "۹. استفاده از Advanced MOVE با پشتیبان",
+      "intro": "MOVE پس از بررسی مقصد، فایل‌های مبدأ را حذف می‌کند. فقط با کپی‌های نمونه و پشتیبان مستقل تمرین کنید. کلون Move Samples استفاده شد، نه کتابخانهٔ اولیهٔ نمونه.",
+      "steps": [
+        {
+          "id": "move-01",
+          "image": "08-01-advanced-mode.png",
+          "text": "در Experience، Advanced را انتخاب کنید و پیش از سامان‌دهنده، مبدأ نمونهٔ درست را برگزینید.",
+          "caption": "حالت واقعی Advanced."
+        },
+        {
+          "id": "move-02",
+          "image": "08-35-correct-source-confirmed.png",
+          "text": "نوع‌ها و Selected Folder را ببینید: Move Samples، مسیر دقیق، 17 اسکن، 16 انتخاب و یک مورد کنارگذاشته.",
+          "caption": "مبدأ درست دارای پشتیبان."
+        },
+        {
+          "id": "move-03",
+          "image": "08-36-verified-move-plan.png",
+          "text": "Year / Month و طرح را تأیید کنید. اینجا Duplicates مقدار Not checked دارد.",
+          "caption": "طرح واقعی MOVE."
+        },
+        {
+          "id": "move-04",
+          "image": "08-37-final-move-destination.png",
+          "text": "از Change Location، Move Results جدا را انتخاب و مسیر را بررسی کنید.",
+          "caption": "مقصد نمونهٔ مجاز MOVE."
+        },
+        {
+          "id": "move-05",
+          "image": "08-39-final-move-warning.png",
+          "text": "در Transfer mode گزینهٔ Move را بزنید. هشدار را بخوانید: بررسی مقصد پیش از حذف مبدأ، حفظ پوشه‌ها و ذخیرهٔ گزارش.",
+          "caption": "هشدار واقعی MOVE."
+        },
+        {
+          "id": "move-06",
+          "image": "08-40-final-move-confirmation.png",
+          "text": "Move Selected Files را بزنید و Confirm move را بخوانید. فایل‌های دقیق مبدأ پس از بررسی حذف می‌شوند؛ در تردید لغو کنید.",
+          "caption": "تأیید نهایی واقعی MOVE."
+        },
+        {
+          "id": "move-07",
+          "image": "08-42-move-complete-report.png",
+          "text": "مبدأ، مقصد و پشتیبان را بررسی و تأیید کنید. Move complete: 16 انتقال، صفر کپی با مبدأ باقی و صفر شکست.",
+          "caption": "MOVE کامل 16 فایل."
+        },
+        {
+          "id": "move-08",
+          "image": "07-03-verified-move-activity.png",
+          "text": "در Activity، Move Photos & Videos و Open Move Report را ببینید. پشتیبان مستقل را نگه دارید.",
+          "caption": "ثبت واقعی MOVE کامل."
+        }
+      ],
+      "tips": [
+        "16 هش مقصد تطبیق داشت و 17 فایل پشتیبان تغییر نکرد. notes.txt و چهار پوشهٔ مبدأ باقی ماندند.",
+        "COPIED_SOURCE_RETAINED یعنی کپی مقصد وجود دارد اما مبدأ باقی مانده است. گزارش را بخوانید و آن را انتقال کامل ندانید.",
+        "Selected Folder را هر بار بررسی کنید. Refresh مبدأ را عوض نمی‌کند؛ اینجا فقط ثبت نمونه از فهرست برداشته و دوباره اضافه شد."
+      ],
+      "outcome": "MOVE نمونه کامل و بررسی شده و پشتیبان مستقل و کتابخانهٔ اصلی سالم‌اند."
+    },
+    {
+      "id": "reports",
+      "title": "۱۰. خواندن Activity و گزارش‌های متنی",
+      "intro": "Activity کارهای محلی اخیر را ثبت می‌کند. Completed، Completed with warnings و Cancelled متفاوت‌اند. گزارش خودکار TXT در ریشهٔ مقصد انتخابی است.",
+      "steps": [
+        {
+          "id": "reports-01",
+          "image": "07-01-activity-after-copy.png",
+          "text": "در Activity شمارش پردازش، کپی، ردشده و شکست Copy Photos & Videos را با خلاصهٔ مقصد تطبیق دهید.",
+          "caption": "ثبت نخستین COPY کامل."
+        },
+        {
+          "id": "reports-02",
+          "image": "07-02-completed-and-cancelled-activity.png",
+          "text": "وضعیت‌ها را مقایسه کنید: COPY لغو 110 پردازش؛ تلاش کامل 512 پردازش با 110 ردشده. اسکن تکراری لغوشده ناقص است.",
+          "caption": "تاریخچهٔ واقعی تکمیل و لغو."
+        },
+        {
+          "id": "reports-03",
+          "image": "07-03-verified-move-activity.png",
+          "text": "Open Copy Report یا Open Move Report و Open Destination را بزنید. حالت، مسیر، وضعیت و جمع TXT را بخوانید.",
+          "caption": "ثبت‌های واقعی COPY و MOVE."
+        }
+      ],
+      "tips": [
+        "گزارش تأییدشده: Mode: MOVE، Total planned files: 16، Moved: 16، COPIED_SOURCE_RETAINED: 0، Skipped: 0 و Failed: 0.",
+        "گزارش COPY حفظ اصل‌ها را می‌گوید؛ گزارش لغو، کپی‌های کامل باقی‌مانده در مقصد را مشخص می‌کند.",
+        "Clear Activity History استفاده نشد تا تاریخچه برای بررسی بماند."
+      ],
+      "outcome": "می‌توانید ثبت فعالیت را به پوشه و گزارش وصل و موفقیت را از پردازش ناقص جدا کنید."
+    },
+    {
+      "id": "settings",
+      "title": "۱۱. تنظیمات و شروع دوباره",
+      "intro": "Settings ترجیحات محلی دارد: Language، Experience، Safety، Privacy & Local Processing، Organizing، Library، Guidance & Accessibility، Maintenance و Media dates.",
+      "steps": [
+        {
+          "id": "settings-01",
+          "image": "09-01-settings.png",
+          "text": "زبان، تجربه و ایمنی را در Settings بررسی کنید. رابط نشان‌داده‌شده تأیید سامان‌دهی و هشدار حذف مبدأ را اجباری می‌کند.",
+          "caption": "زبان، تجربه و ایمنی."
+        },
+        {
+          "id": "settings-02",
+          "image": "09-03-organizing-library-settings.png",
+          "text": "Default organize pattern و Destination behavior را ببینید؛ دومی Ask every time است. توضیح پردازش محلی و گزارش را هم بخوانید.",
+          "caption": "سامان‌دهی و حریم خصوصی محلی."
+        },
+        {
+          "id": "settings-03",
+          "image": "09-04-accessibility-settings.png",
+          "text": "اندازهٔ پیش‌نمایش، ترتیب، برچسب تاریخ و اندازه، بازشدن Library پس از اسکن و حفظ نمای قبلی را ببینید.",
+          "caption": "ترجیحات واقعی کتابخانه."
+        },
+        {
+          "id": "settings-04",
+          "image": "09-05-enable-larger-text.png",
+          "text": "Larger text را روشن و متن و چینش ناوبری را بررسی کنید.",
+          "caption": "متن بزرگ اعمال شده است."
+        },
+        {
+          "id": "settings-05",
+          "image": "09-06-restore-standard-text.png",
+          "text": "Larger text را خاموش کنید تا اندازهٔ عادی برگردد. Larger buttons، Reduced motion و راهنمایی‌ها نیز قابل تنظیم‌اند.",
+          "caption": "متن عادی بازگشته است."
+        },
+        {
+          "id": "settings-06",
+          "image": "09-07-maintenance-settings.png",
+          "text": "در Maintenance فضای فایل‌های تولیدشده را ببینید. Refresh Usage آمار را تازه می‌کند؛ Clear Thumbnail Cache مربوط به پیش‌نمایش است و اینجا اجرا نشد.",
+          "caption": "فضا و نگهداری."
+        },
+        {
+          "id": "settings-07",
+          "image": "09-09-review-date-evidence.png",
+          "text": "Advanced date policy را باز و پنج شاهد و هشدار اطمینان پایین را بخوانید. تغییرات در اسکن جدید، تحلیل مجدد و طرح اثر دارند.",
+          "caption": "پنج شاهد واقعی تاریخ."
+        },
+        {
+          "id": "settings-08",
+          "image": "09-10-reset-settings-confirmation.png",
+          "text": "تأیید Reset Settings to Defaults را بخوانید: تنظیمات، مبدأ، نمایه، پیشرفت و حافظهٔ بندانگشتی پاک می‌شوند، اما اصل و کپی سامان‌یافته تغییر نمی‌کنند.",
+          "caption": "هشدار واقعی بازنشانی."
+        },
+        {
+          "id": "settings-09",
+          "image": "09-12-reset-cancelled.png",
+          "text": "Cancel را انتخاب کنید. نه نمایهٔ واقعی و نه نمونه بازنشانی نشد.",
+          "caption": "بازنشانی لغو شده است."
+        }
+      ],
+      "tips": [
+        "شروع دوباره گسترده‌تر از تغییر ظاهر است. پیش از پاک‌کردن فهرست، گزارش و اطلاعات لازم را نگه دارید.",
+        "دیدن Settings تاریخ‌های قبلی را بازنویسی نمی‌کند؛ برای تغییر از تحلیل صریح استفاده کنید."
+      ],
+      "outcome": "می‌توانید تنظیمات، نگهداری و بازنشانی را بدون پاک‌کردن تصادفی فهرست درک کنید."
+    },
+    {
+      "id": "troubleshooting",
+      "title": "۱۲. رفع مشکلات رایج",
+      "intro": "پیش از تکرار، پیام را بخوانید و مبدأ، فیلتر، الگو و مقصد را بررسی کنید. وضعیت‌ها فقط در محیط نمونه به‌طور ایمن بازتولید شده‌اند.",
+      "steps": [
+        {
+          "id": "troubleshooting-01",
+          "image": "10-01-library-no-search-results.png",
+          "text": "اگر No photos match your choices دیدید Search media را بررسی کنید؛ نام نامنطبق همهٔ نتایج را پنهان می‌کند.",
+          "caption": "جست‌وجوی واقعی بی‌نتیجه."
+        },
+        {
+          "id": "troubleshooting-02",
+          "image": "10-02-recover-search-results.png",
+          "text": "بخش شناخته‌شده‌ای مثل garden بنویسید و پیش از تغییر دیگر، بازگشت نتیجه را ببینید.",
+          "caption": "نتایج جست‌وجو برگشته‌اند."
+        },
+        {
+          "id": "troubleshooting-03",
+          "image": "10-04-review-unavailable-filter.png",
+          "text": "Unavailable only را بررسی کنید؛ اگر اصل‌ها موجود باشند صفر نشان می‌دهد، نه اثبات گم‌شدن فایل.",
+          "caption": "فیلتر محدودکنندهٔ واقعی."
+        },
+        {
+          "id": "troubleshooting-04",
+          "image": "10-05-show-all-recovery.png",
+          "text": "Show All Photos را بزنید و جست‌وجو و فیلتر بازیابی‌شده را ببینید.",
+          "caption": "بازگشت گالری."
+        },
+        {
+          "id": "troubleshooting-05",
+          "image": "10-08-invalid-folder-error.png",
+          "text": "در Folder is unavailable or cannot be opened مسیر و دسترسی را ببینید. مسیر ناموجود Select This Folder را غیرفعال می‌کند.",
+          "caption": "خطای واقعی پوشه."
+        },
+        {
+          "id": "troubleshooting-06",
+          "image": "10-10-empty-folder.png",
+          "text": "پوشهٔ موجود را با Go باز کنید. پوشهٔ خالی صفر رسانه دارد؛ پوشه را عوض یا لغو کنید.",
+          "caption": "پوشهٔ واقعی خالی."
+        },
+        {
+          "id": "troubleshooting-07",
+          "image": "10-12-unsupported-only-preview.png",
+          "text": "پوشهٔ فقط متنی هم صفر رسانه نشان می‌دهد. Other Files هنگام سامان‌دهی جدا انتخاب می‌شود.",
+          "caption": "فقط فایل‌های پشتیبانی‌نشده."
+        },
+        {
+          "id": "troubleshooting-08",
+          "image": "10-14-invalid-custom-pattern.png",
+          "text": "در Custom از توکن و بخش نسبی معتبر استفاده کنید. الگوی رفتن به والد رد می‌شود و COPY غیرفعال می‌ماند.",
+          "caption": "رد واقعی الگوی نامعتبر."
+        },
+        {
+          "id": "troubleshooting-09",
+          "image": "10-17-custom-plan-reconfirmed.png",
+          "text": "به {YYYY}\\{YYYY-MM} اصلاح کنید. در این ساخت Pattern را دوباره باز و بسته کنید تا طرح تأیید و بازگردد.",
+          "caption": "تأیید طرح اصلاح‌شده."
+        },
+        {
+          "id": "troubleshooting-10",
+          "image": "10-19-catalog-only-removal-confirmation.png",
+          "text": "Remove Folder را بخوانید: فقط ثبت فهرست و Library حذف می‌شود، نه فایل یا پوشهٔ اصلی.",
+          "caption": "تأیید حذف فقط از فهرست."
+        },
+        {
+          "id": "troubleshooting-11",
+          "image": "10-20-disposable-source-removed-from-catalog.png",
+          "text": "فقط در نمونه Remove from MEDIA KOLFAT را تأیید، اصل‌ها را بررسی و دوباره دستی اضافه و اسکن کنید؛ سپس سامان دهید.",
+          "caption": "ثبت برداشته شده، اصل‌ها محفوظ‌اند."
+        }
+      ],
+      "tips": [
+        "بدون نوع انتخاب‌شده Continue غیرفعال است؛ به Choose File Types برگردید.",
+        "پس از خطای مسیر ممکن است پیش‌نمایش قدیمی بماند. خطا و Select This Folder غیرفعال را بخوانید؛ آن‌ها محتوای مسیر ناموجود نیستند.",
+        "برای مشکل مقصد یا فضا، مسیر، اتصال، دسترسی نوشتن و ذخیرهٔ ایمنی را بررسی و در صورت نیاز پوشهٔ مناسب دیگری انتخاب کنید.",
+        "پس از وقفه، Activity، گزارش TXT و خروجی کامل را پیش از تلاش دوباره ببینید. هشدار و لغو حتی با وجود کپی نیازمند بررسی‌اند.",
+        "برداشتن ثبت فقط در فهرست ایزوله بود. هر 17 اصل بی‌تغییر ماند و برای مثال MOVE دوباره ثبت شد."
+      ],
+      "outcome": "می‌توانید نتیجهٔ خالی را از اصل گمشده جدا، خطا را اصلاح و شواهد را حفظ کنید."
+    }
+  ],
+  "status": "Complete guide; source and screenshot parity verified; native-speaker editorial review not performed"
+}

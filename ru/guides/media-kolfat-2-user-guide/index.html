@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Руководство пользователя MEDIA KOLFAT 2.0 | KOLFAT</title>
+<meta name="description" content="Иллюстрированное руководство по добавлению медиа, проверке дат и превью, поиску дубликатов, COPY, MOVE, восстановлению операций и чтению отчётов.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#050505">
+<link rel="canonical" href="https://kolfat.app/ru/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="en" href="https://kolfat.app/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="fa" href="https://kolfat.app/fa/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="de" href="https://kolfat.app/de/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="fr" href="https://kolfat.app/fr/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="es" href="https://kolfat.app/es/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="pt" href="https://kolfat.app/pt/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="it" href="https://kolfat.app/it/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="ja" href="https://kolfat.app/ja/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="zh-CN" href="https://kolfat.app/zh/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="hi" href="https://kolfat.app/hi/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="ru" href="https://kolfat.app/ru/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="ar" href="https://kolfat.app/ar/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="x-default" href="https://kolfat.app/guides/media-kolfat-2-user-guide/">
+<link rel="icon" href="/favicon.png" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KOLFAT">
+<meta property="og:title" content="Руководство пользователя MEDIA KOLFAT 2.0">
+<meta property="og:description" content="Иллюстрированное руководство по добавлению медиа, проверке дат и превью, поиску дубликатов, COPY, MOVE, восстановлению операций и чтению отчётов.">
+<meta property="og:url" content="https://kolfat.app/ru/guides/media-kolfat-2-user-guide/">
+<meta property="og:image" content="https://kolfat.app/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Руководство пользователя MEDIA KOLFAT 2.0">
+<meta name="twitter:description" content="Иллюстрированное руководство по добавлению медиа, проверке дат и превью, поиску дубликатов, COPY, MOVE, восстановлению операций и чтению отчётов.">
+<meta name="twitter:image" content="https://kolfat.app/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://kolfat.app/ru/guides/media-kolfat-2-user-guide/#article", "headline": "Руководство пользователя MEDIA KOLFAT 2.0", "description": "Иллюстрированное руководство по добавлению медиа, проверке дат и превью, поиску дубликатов, COPY, MOVE, восстановлению операций и чтению отчётов.", "inLanguage": "ru", "datePublished": "2026-10-27", "dateModified": "2026-10-27", "mainEntityOfPage": "https://kolfat.app/ru/guides/media-kolfat-2-user-guide/", "image": "https://kolfat.app/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png", "publisher": {"@type": "Brand", "name": "KOLFAT", "url": "https://kolfat.app/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KOLFAT", "item": "https://kolfat.app/ru/"}, {"@type": "ListItem", "position": 2, "name": "Содержание", "item": "https://kolfat.app/ru/guides/"}, {"@type": "ListItem", "position": 3, "name": "Руководство пользователя MEDIA KOLFAT 2.0", "item": "https://kolfat.app/ru/guides/media-kolfat-2-user-guide/"}]}]}</script>
+<link rel="stylesheet" href="/assets/seo-content.css?v=20261018-seo1">
+<link rel="stylesheet" href="/assets/nav-dropdown.css?v=20261027-menu-explore2">
+<link rel="stylesheet" href="/assets/localized-content.css?v=20261018-1">
+<link rel="stylesheet" href="/assets/site-refinements.css?v=20261027-matched-v2">
+<link rel="stylesheet" href="/assets/media-kolfat-2-guide/guide.css?v=20261027-1">
+</head>
+<body class="media-user-guide">
+<header class="header"><div class="header-inner"><a class="brand" href="/ru/" aria-label="KOLFAT home"><img src="/assets/kolfat-logo.webp?v=d2c25ec0" alt="KOLFAT"></a><div class="top-nav"><details class="kolfat-menu"><summary aria-label="МЕНЮ"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>МЕНЮ</span><span class="menu-chevron" aria-hidden="true">⌄</span></summary><nav class="kolfat-menu-panel" aria-label="KOLFAT navigation"><span class="menu-section-label">KOLFAT</span><a href="/ru/" dir="auto">ГЛАВНАЯ</a><a href="/ru/Media_Kolfat/" dir="auto">MEDIA KOLFAT</a><a href="/ru/download/" dir="auto">СКАЧАТЬ</a><a href="/ru/about/" dir="auto">О KOLFAT</a><a href="/ru/guides/" dir="auto">РУКОВОДСТВА</a><a href="/ru/support/" dir="auto">ПОДДЕРЖКА</a><a href="mailto:contact@kolfat.app" dir="auto">КОНТАКТ</a><span class="menu-section-label">FOLLOW KOLFAT</span><a href="https://x.com/KOLFAT_APP" target="_blank" rel="noopener noreferrer" dir="auto">X</a><a href="https://www.youtube.com/@KOLFAT_APP" target="_blank" rel="noopener noreferrer" dir="auto">YOUTUBE</a><a href="https://www.tiktok.com/@kolfat.app" target="_blank" rel="noopener noreferrer" dir="auto">TIKTOK</a><a href="https://github.com/1n50mn14c933k/Media_Kolfat" target="_blank" rel="noopener noreferrer" dir="auto">GITHUB</a></nav></details><details class="lang-menu"><summary aria-label="Change language" title="Change language">🇷🇺</summary><div class="lang-list"><a href="/guides/media-kolfat-2-user-guide/">🇬🇧 English</a><a href="/fa/guides/media-kolfat-2-user-guide/">🇮🇷 فارسی</a><a href="/de/guides/media-kolfat-2-user-guide/">🇩🇪 Deutsch</a><a href="/fr/guides/media-kolfat-2-user-guide/">🇫🇷 Français</a><a href="/es/guides/media-kolfat-2-user-guide/">🇪🇸 Español</a><a href="/pt/guides/media-kolfat-2-user-guide/">🇵🇹 Português</a><a href="/it/guides/media-kolfat-2-user-guide/">🇮🇹 Italiano</a><a href="/ja/guides/media-kolfat-2-user-guide/">🇯🇵 日本語</a><a href="/zh/guides/media-kolfat-2-user-guide/">🇨🇳 中文</a><a href="/hi/guides/media-kolfat-2-user-guide/">🇮🇳 हिन्दी</a><a href="/ru/guides/media-kolfat-2-user-guide/" aria-current="page">🇷🇺 Русский</a><a href="/ar/guides/media-kolfat-2-user-guide/">🇸🇦 العربية</a></div></details></div></div></header>
+<main id="main-content">
+<div class="breadcrumb"><a href="/ru/">KOLFAT</a> / Руководство пользователя MEDIA KOLFAT 2.0</div>
+<article class="hero">
+<p class="eyebrow">MEDIA KOLFAT 2.0</p>
+<h1>Руководство пользователя MEDIA KOLFAT 2.0</h1>
+<p class="lead">Пройдите весь путь в установленном приложении Windows — от запуска до проверенного результата. Использованы созданные демонстрационные изображения и видео с независимыми резервными копиями. Все снимки приложения — подлинные нативные PNG.</p>
+<p>Проверено в MEDIA KOLFAT 2.0.0, сборка 2.0.0.0. На снимках английский интерфейс. После добавления большого набора числа меняются; сверяйте собственные счётчики.</p>
+<aside class="notice">Сначала создайте независимую резервную копию. Начинайте с COPY: исходники сохраняются. Advanced MOVE удаляет исходные файлы после проверки назначения и безопасности. Храните резервную копию до проверки результатов и отчёта.</aside>
+</article>
+<nav id="contents" class="guide-contents section" aria-label="Содержание">
+<h2>Содержание</h2>
+<ol>
+<li><a href="#start">1. Запуск и подсказки</a></li>
+<li><a href="#sources">2. Ручной выбор источника</a></li>
+<li><a href="#locations">3. Автопоиск и расположения</a></li>
+<li><a href="#health">4. Проверка превью и дат</a></li>
+<li><a href="#duplicates">5. Поиск точных дубликатов</a></li>
+<li><a href="#library">6. Просмотр, поиск, выбор и поворот</a></li>
+<li><a href="#copy">7. Завершение Guided COPY</a></li>
+<li><a href="#progress">8. Пауза, продолжение и восстановление COPY</a></li>
+<li><a href="#move">9. Advanced MOVE с резервной копией</a></li>
+<li><a href="#reports">10. Activity и текстовые отчёты</a></li>
+<li><a href="#settings">11. Настройки и новый старт</a></li>
+<li><a href="#troubleshooting">12. Восстановление после типичных проблем</a></li>
+</ol></nav>
+<section id="start" class="section guide-chapter">
+<h2>1. Запуск и подсказки</h2>
+<p>Откройте установленное приложение. Боковая панель содержит Performance Check, Add Photos &amp; Videos, Photos Health Check, Duplicate Finder, Browse Library, Organize Photos &amp; Videos, Activity, Settings и About. Experience предлагает Guided и Advanced.</p>
+<ol class="guide-steps">
+<li id="start-01"><p><strong>Шаг 1.</strong> Выберите Guided. Серый обозначает будущие шаги, янтарный — текущий, зелёные галочки — завершённые.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Первый запуск Guided.">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png" width="1920" height="1080" alt="Первый запуск Guided." loading="lazy" decoding="async">
+</a>
+<figcaption>Первый запуск Guided. <a href="/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="start-02"><p><strong>Шаг 2.</strong> Запустите Run Quick Check и дождитесь результата. Этот компьютер получил 98%; у вас результат может отличаться.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-02-performance-check-complete.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Проверка завершена: 98%.">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-02-performance-check-complete.png" width="1920" height="1080" alt="Проверка завершена: 98%." loading="lazy" decoding="async">
+</a>
+<figcaption>Проверка завершена: 98%. <a href="/assets/media-kolfat-2-guide/screenshots/01-02-performance-check-complete.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="start-03"><p><strong>Шаг 3.</strong> Откройте Add Photos &amp; Videos. Для известной папки выберите Choose Photos &amp; Videos Manually.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальные варианты выбора источника.">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" width="1920" height="1080" alt="Реальные варианты выбора источника." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальные варианты выбора источника. <a href="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="start-04"><p><strong>Шаг 4.</strong> В About раскройте Release Information и прочитайте Version и Build. Вернитесь через боковую панель.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-04-about-version.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Подтверждённая версия и сборка.">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-04-about-version.png" width="1934" height="1087" alt="Подтверждённая версия и сборка." loading="lazy" decoding="async">
+</a>
+<figcaption>Подтверждённая версия и сборка. <a href="/assets/media-kolfat-2-guide/screenshots/01-04-about-version.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="start-05"><p><strong>Шаг 5.</strong> Раскройте Privacy &amp; Data Safety, изучите различия сканирования, COPY и Advanced MOVE. Сохраняйте независимый бэкап.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-05-about-privacy.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Объяснение безопасности в приложении.">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-05-about-privacy.png" width="1934" height="1087" alt="Объяснение безопасности в приложении." loading="lazy" decoding="async">
+</a>
+<figcaption>Объяснение безопасности в приложении. <a href="/assets/media-kolfat-2-guide/screenshots/01-05-about-privacy.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Стрелка и свечение указывают рекомендуемое действие. В Settings доступны Reduced motion и настройки подсказок.</li>
+<li>Guided задаёт последовательность. Advanced предоставляет прямой доступ и MOVE после подготовки плана.</li>
+<li>В About также доступны Legal &amp; Policies, Support, Technical Information, Open-Source &amp; Third-Party Licenses и Product Information.</li>
+</ul>
+<p class="guide-outcome">Вы умеете проверять версию, переходить между страницами и определять текущий шаг.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="sources" class="section guide-chapter">
+<h2>2. Ручной выбор источника</h2>
+<p>Источник — папка, зарегистрированная в локальном каталоге. Сканирование индексирует поддерживаемые фото и видео. Пример содержит 14 JPEG, два AVI и необязательный текст во вложенных папках.</p>
+<ol class="guide-steps">
+<li id="sources-01"><p><strong>Шаг 1.</strong> Выберите Choose Photos &amp; Videos Manually и проверьте Current folder, Locations, Folders и превью.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящий выбор папки.">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" width="1934" height="1087" alt="Настоящий выбор папки." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящий выбор папки. <a href="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="sources-02"><p><strong>Шаг 2.</strong> Введите полный путь в Current folder; здесь это Media Samples в одноразовой демонстрационной области.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-02-enter-demo-source-path.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Введён демонстрационный путь.">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-02-enter-demo-source-path.png" width="1934" height="1087" alt="Введён демонстрационный путь." loading="lazy" decoding="async">
+</a>
+<figcaption>Введён демонстрационный путь. <a href="/assets/media-kolfat-2-guide/screenshots/02-02-enter-demo-source-path.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="sources-03"><p><strong>Шаг 3.</strong> Нажмите Go и проверьте путь и подпапки. В родительской папке может не быть медиа непосредственно.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-03-demo-nested-folders.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Четыре демонстрационные подпапки.">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-03-demo-nested-folders.png" width="1934" height="1087" alt="Четыре демонстрационные подпапки." loading="lazy" decoding="async">
+</a>
+<figcaption>Четыре демонстрационные подпапки. <a href="/assets/media-kolfat-2-guide/screenshots/02-03-demo-nested-folders.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="sources-04"><p><strong>Шаг 4.</strong> Откройте 2024 Holiday и проверьте шесть созданных JPEG.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-04-preview-sample-photos.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Шесть поддерживаемых изображений.">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-04-preview-sample-photos.png" width="1934" height="1087" alt="Шесть поддерживаемых изображений." loading="lazy" decoding="async">
+</a>
+<figcaption>Шесть поддерживаемых изображений. <a href="/assets/media-kolfat-2-guide/screenshots/02-04-preview-sample-photos.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="sources-05"><p><strong>Шаг 5.</strong> Через Up one folder вернитесь к родителю для всей коллекции и проверьте Current folder.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-05-return-to-demo-root.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Возврат к нужной папке.">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-05-return-to-demo-root.png" width="1934" height="1087" alt="Возврат к нужной папке." loading="lazy" decoding="async">
+</a>
+<figcaption>Возврат к нужной папке. <a href="/assets/media-kolfat-2-guide/screenshots/02-05-return-to-demo-root.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="sources-06"><p><strong>Шаг 6.</strong> Нажмите Select This Folder и проверьте имя и полный путь в Ready to add this folder.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-06-ready-to-scan-source.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Источник готов к добавлению.">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-06-ready-to-scan-source.png" width="1934" height="1087" alt="Источник готов к добавлению." loading="lazy" decoding="async">
+</a>
+<figcaption>Источник готов к добавлению. <a href="/assets/media-kolfat-2-guide/screenshots/02-06-ready-to-scan-source.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="sources-07"><p><strong>Шаг 7.</strong> В Advanced options проверьте путь, необязательное имя и тип. Облачные папки должны читаться локально.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-07-source-advanced-options.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальные дополнительные параметры.">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-07-source-advanced-options.png" width="1934" height="1087" alt="Реальные дополнительные параметры." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальные дополнительные параметры. <a href="/assets/media-kolfat-2-guide/screenshots/02-07-source-advanced-options.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="sources-08"><p><strong>Шаг 8.</strong> Запустите предложенное сканирование, дождитесь Ready и времени успеха. Найдено 16 медиа; текст не индексируется как медиа.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-08-source-scan-complete.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Сканирование 16 файлов завершено.">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-08-source-scan-complete.png" width="1934" height="1087" alt="Сканирование 16 файлов завершено." loading="lazy" decoding="async">
+</a>
+<figcaption>Сканирование 16 файлов завершено. <a href="/assets/media-kolfat-2-guide/screenshots/02-08-source-scan-complete.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="sources-09"><p><strong>Шаг 9.</strong> Refresh повторяет сканирование: проверьте статус и время. Источник организации при этом не меняется.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-09-source-refresh-complete.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Обновление источника завершено.">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-09-source-refresh-complete.png" width="1934" height="1087" alt="Обновление источника завершено." loading="lazy" decoding="async">
+</a>
+<figcaption>Обновление источника завершено. <a href="/assets/media-kolfat-2-guide/screenshots/02-09-source-refresh-complete.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>В Advanced у дополнительного источника может появиться Start Scan. В первом Guided сканирование начинается после добавления.</li>
+<li>Всегда проверяйте Selected Folder организатора. Refresh карточки не переключает источник организации.</li>
+</ul>
+<p class="guide-outcome">Нужная папка зарегистрирована, поддерживаемые медиа доступны в каталоге.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="locations" class="section guide-chapter">
+<h2>3. Автопоиск и расположения</h2>
+<p>Доступны This PC, локальные папки и диски, Pictures, OneDrive и Network. Выбирайте только нужные места; внешний диск должен быть подключён, сеть доступна из Windows.</p>
+<ol class="guide-steps">
+<li id="locations-01"><p><strong>Шаг 1.</strong> Scan Computer Automatically запускает поиск всего компьютера без ограничения демонстрационной папкой. Для узкого охвата используйте ручной выбор.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Два варианта с разным охватом.">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" width="1920" height="1080" alt="Два варианта с разным охватом." loading="lazy" decoding="async">
+</a>
+<figcaption>Два варианта с разным охватом. <a href="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="locations-02"><p><strong>Шаг 2.</strong> Используйте This PC либо точный путь в Current folder. OneDrive означает локально доступные файлы: сначала обеспечьте доступ через Windows.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальные ярлыки и поле пути.">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" width="1934" height="1087" alt="Реальные ярлыки и поле пути." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальные ярлыки и поле пути. <a href="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Автопоиск всего компьютера не запускался: он проверил бы диски вне демонстрации. Проверенный результат автопоиска не заявлен.</li>
+<li>Ярлык не подтверждает вход в аккаунт. Личные Pictures, OneDrive, сетевые и внешние носители не открывались.</li>
+</ul>
+<p class="guide-outcome">Вы можете выбрать расположение и нужный охват чтения.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="health" class="section guide-chapter">
+<h2>4. Проверка превью и дат</h2>
+<p>После сканирования откройте Photos Health Check. Миниатюры, даты и доступность оригиналов — разные проверки. Отсутствие превью не доказывает потерю исходника.</p>
+<ol class="guide-steps">
+<li id="health-01"><p><strong>Шаг 1.</strong> Проверьте итоги: 16 медиа, 14 исправных превью, две проблемы видео; все 16 оригиналов были доступны при последней проверке.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/03-01-photos-health-check.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальная сводка состояния.">
+<img src="/assets/media-kolfat-2-guide/screenshots/03-01-photos-health-check.png" width="1934" height="1087" alt="Реальная сводка состояния." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальная сводка состояния. <a href="/assets/media-kolfat-2-guide/screenshots/03-01-photos-health-check.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="health-02"><p><strong>Шаг 2.</strong> Запустите явное восстановление миниатюр. Проверены два видео, восстановлено ноль: оба формата не поддерживают превью.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/03-02-thumbnail-repair-complete.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящий результат восстановления.">
+<img src="/assets/media-kolfat-2-guide/screenshots/03-02-thumbnail-repair-complete.png" width="1934" height="1087" alt="Настоящий результат восстановления." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящий результат восстановления. <a href="/assets/media-kolfat-2-guide/screenshots/03-02-thumbnail-repair-complete.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="health-03"><p><strong>Шаг 3.</strong> Повторно проанализируйте отсутствующие даты. Все 16 определены по Filesystem last modified — резервному признаку, способному отражать копирование или правку.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/03-04-date-reanalysis-result.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Результат анализа и источник дат.">
+<img src="/assets/media-kolfat-2-guide/screenshots/03-04-date-reanalysis-result.png" width="1934" height="1087" alt="Результат анализа и источник дат." loading="lazy" decoding="async">
+</a>
+<figcaption>Результат анализа и источник дат. <a href="/assets/media-kolfat-2-guide/screenshots/03-04-date-reanalysis-result.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="health-04"><p><strong>Шаг 4.</strong> В Settings раскройте Advanced date policy: метаданные, XMP, имена, папки, последняя модификация. Windows CreationTime не используется как дата съёмки.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальные настройки дат.">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" width="1934" height="1087" alt="Реальные настройки дат." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальные настройки дат. <a href="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Созданные файлы не имеют метаданных камеры. Числа 2024 и 2025 в именах не определили наблюдаемые даты: использована последняя модификация.</li>
+<li>Неподдерживаемый формат может остаться без превью после ремонта. Сохраните исходник и используйте подходящий просмотрщик.</li>
+</ul>
+<p class="guide-outcome">Вы различаете проблемы превью, дат и доступности и читаете результат восстановления.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="duplicates" class="section guide-chapter">
+<h2>5. Поиск точных дубликатов</h2>
+<p>Duplicate Finder сравнивает доступные поддерживаемые элементы каталога. Совпадения имени недостаточно. Малый пример содержит три намеренные группы одинаковых файлов.</p>
+<ol class="guide-steps">
+<li id="duplicates-01"><p><strong>Шаг 1.</strong> Откройте Duplicate Finder, проверьте 16 кандидатов и нажмите Find Duplicates.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/04-01-duplicate-finder-ready.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Начальный поиск готов.">
+<img src="/assets/media-kolfat-2-guide/screenshots/04-01-duplicate-finder-ready.png" width="1934" height="1087" alt="Начальный поиск готов." loading="lazy" decoding="async">
+</a>
+<figcaption>Начальный поиск готов. <a href="/assets/media-kolfat-2-guide/screenshots/04-01-duplicate-finder-ready.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="duplicates-02"><p><strong>Шаг 2.</strong> Дождитесь Duplicate scan complete: три группы, шесть файлов, около 16,9 MB потенциально освобождаемого места.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/04-06-duplicate-scan-outcome.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Три группы точных копий.">
+<img src="/assets/media-kolfat-2-guide/screenshots/04-06-duplicate-scan-outcome.png" width="1934" height="1087" alt="Три группы точных копий." loading="lazy" decoding="async">
+</a>
+<figcaption>Три группы точных копий. <a href="/assets/media-kolfat-2-guide/screenshots/04-06-duplicate-scan-outcome.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="duplicates-03"><p><strong>Шаг 3.</strong> Прокрутите Exact Duplicate Group, сравните имена, пути и размеры. Open Folder открывает расположение без удаления.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/04-07-inspect-duplicate-results.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Просмотр настоящих дубликатов.">
+<img src="/assets/media-kolfat-2-guide/screenshots/04-07-inspect-duplicate-results.png" width="1934" height="1087" alt="Просмотр настоящих дубликатов." loading="lazy" decoding="async">
+</a>
+<figcaption>Просмотр настоящих дубликатов. <a href="/assets/media-kolfat-2-guide/screenshots/04-07-inspect-duplicate-results.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="duplicates-04"><p><strong>Шаг 4.</strong> В большом наборе из 544 элементов следите за Finding exact duplicates и счётчиком. Доступна Stop Scan.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/04-33-duplicate-scan-running.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реально выполняющийся поиск.">
+<img src="/assets/media-kolfat-2-guide/screenshots/04-33-duplicate-scan-running.png" width="1934" height="1087" alt="Реально выполняющийся поиск." loading="lazy" decoding="async">
+</a>
+<figcaption>Реально выполняющийся поиск. <a href="/assets/media-kolfat-2-guide/screenshots/04-33-duplicate-scan-running.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="duplicates-05"><p><strong>Шаг 5.</strong> Нажмите Stop Scan. Возврат к готовности означает незавершённый поиск, а не отсутствие дубликатов.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/04-36-duplicate-scan-cancelled.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Поиск остановлен.">
+<img src="/assets/media-kolfat-2-guide/screenshots/04-36-duplicate-scan-cancelled.png" width="1934" height="1087" alt="Поиск остановлен." loading="lazy" decoding="async">
+</a>
+<figcaption>Поиск остановлен. <a href="/assets/media-kolfat-2-guide/screenshots/04-36-duplicate-scan-cancelled.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>В установленной сборке Duplicate Finder не показывает Pause и Resume. Эти кнопки есть у COPY, далее они продемонстрированы.</li>
+<li>Проверенный интерфейс не предлагает удаление. Освобождаемое место — оценка. Храните проверенную копию и независимый бэкап.</li>
+<li>Новый скан или изменение источников могут отменить старый результат. Проверяйте Not checked в сводке Library.</li>
+</ul>
+<p class="guide-outcome">Вы можете найти и изучить группы, остановить поиск, не удаляя оригиналы.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="library" class="section guide-chapter">
+<h2>6. Просмотр, поиск, выбор и поворот</h2>
+<p>Browse Library показывает каталог и обзор. Поиск, фильтры и сортировка меняют выдачу. Поворот применяется к превью и организованным или экспортированным копиям, не переписывая исходники.</p>
+<ol class="guide-steps">
+<li id="library-01"><p><strong>Шаг 1.</strong> В Browse Library прочитайте обзор: количества, типы, даты, доступность и дубликаты.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-01-library-overview.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящий обзор библиотеки.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-01-library-overview.png" width="1934" height="1087" alt="Настоящий обзор библиотеки." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящий обзор библиотеки. <a href="/assets/media-kolfat-2-guide/screenshots/05-01-library-overview.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-02"><p><strong>Шаг 2.</strong> Введите garden в Search media: появятся семь совпадений.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-02-search-garden.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Семь результатов garden.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-02-search-garden.png" width="1934" height="1087" alt="Семь результатов garden." loading="lazy" decoding="async">
+</a>
+<figcaption>Семь результатов garden. <a href="/assets/media-kolfat-2-guide/screenshots/05-02-search-garden.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-03"><p><strong>Шаг 3.</strong> Выберите только одно фото и проверьте выбор перед действием.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-03-select-a-photo.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Выбрана одна фотография.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-03-select-a-photo.png" width="1934" height="1087" alt="Выбрана одна фотография." loading="lazy" decoding="async">
+</a>
+<figcaption>Выбрана одна фотография. <a href="/assets/media-kolfat-2-guide/screenshots/05-03-select-a-photo.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-04"><p><strong>Шаг 4.</strong> Нажмите Rotate Right и проверьте превью; исходник не переписывается.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-04-rotate-photo-right.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Индивидуальный поворот вправо.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-04-rotate-photo-right.png" width="1934" height="1087" alt="Индивидуальный поворот вправо." loading="lazy" decoding="async">
+</a>
+<figcaption>Индивидуальный поворот вправо. <a href="/assets/media-kolfat-2-guide/screenshots/05-04-rotate-photo-right.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-05"><p><strong>Шаг 5.</strong> Нажмите Undo, убедитесь в восстановлении прежнего положения.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-05-undo-photo-rotation.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Индивидуальный поворот отменён.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-05-undo-photo-rotation.png" width="1934" height="1087" alt="Индивидуальный поворот отменён." loading="lazy" decoding="async">
+</a>
+<figcaption>Индивидуальный поворот отменён. <a href="/assets/media-kolfat-2-guide/screenshots/05-05-undo-photo-rotation.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-06"><p><strong>Шаг 6.</strong> Нажмите Select all visible photos и проверьте семь выбранных фото.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-06-select-all-visible-photos.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Выбраны семь видимых фото.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-06-select-all-visible-photos.png" width="1934" height="1087" alt="Выбраны семь видимых фото." loading="lazy" decoding="async">
+</a>
+<figcaption>Выбраны семь видимых фото. <a href="/assets/media-kolfat-2-guide/screenshots/05-06-select-all-visible-photos.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-07"><p><strong>Шаг 7.</strong> Используйте Rotate Left и проверьте несколько превью, сохраняя выбор.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-07-batch-rotate-left.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Групповой поворот влево.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-07-batch-rotate-left.png" width="1934" height="1087" alt="Групповой поворот влево." loading="lazy" decoding="async">
+</a>
+<figcaption>Групповой поворот влево. <a href="/assets/media-kolfat-2-guide/screenshots/05-07-batch-rotate-left.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-08"><p><strong>Шаг 8.</strong> Отмените групповой поворот через Undo перед следующей пробой.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-08-undo-batch-left-rotation.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Групповой поворот отменён.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-08-undo-batch-left-rotation.png" width="1934" height="1087" alt="Групповой поворот отменён." loading="lazy" decoding="async">
+</a>
+<figcaption>Групповой поворот отменён. <a href="/assets/media-kolfat-2-guide/screenshots/05-08-undo-batch-left-rotation.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-09"><p><strong>Шаг 9.</strong> Выберите Rotate 180 и проверьте несколько изображений.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-09-batch-rotate-180.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Группа повёрнута на 180 градусов.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-09-batch-rotate-180.png" width="1934" height="1087" alt="Группа повёрнута на 180 градусов." loading="lazy" decoding="async">
+</a>
+<figcaption>Группа повёрнута на 180 градусов. <a href="/assets/media-kolfat-2-guide/screenshots/05-09-batch-rotate-180.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-10"><p><strong>Шаг 10.</strong> Снова Undo. Все демонстрационные повороты отменены до организации.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-10-undo-batch-180.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Исходные ориентации восстановлены.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-10-undo-batch-180.png" width="1934" height="1087" alt="Исходные ориентации восстановлены." loading="lazy" decoding="async">
+</a>
+<figcaption>Исходные ориентации восстановлены. <a href="/assets/media-kolfat-2-guide/screenshots/05-10-undo-batch-180.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-11"><p><strong>Шаг 11.</strong> Нажмите Clear Selection и проверьте очистку счётчика выбора.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-11-clear-photo-selection.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Выбор очищен.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-11-clear-photo-selection.png" width="1934" height="1087" alt="Выбор очищен." loading="lazy" decoding="async">
+</a>
+<figcaption>Выбор очищен. <a href="/assets/media-kolfat-2-guide/screenshots/05-11-clear-photo-selection.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-12"><p><strong>Шаг 12.</strong> Очистите Search media; другие фильтры могут продолжить ограничивать выдачу.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-12-clear-library-search.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Поиск очищен.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-12-clear-library-search.png" width="1934" height="1087" alt="Поиск очищен." loading="lazy" decoding="async">
+</a>
+<figcaption>Поиск очищен. <a href="/assets/media-kolfat-2-guide/screenshots/05-12-clear-library-search.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-13"><p><strong>Шаг 13.</strong> Выберите Photos only. После добавления ещё одного одноразового источника в примере уже 28 фото.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-15-photos-filter-confirmed.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Фильтр только фотографий.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-15-photos-filter-confirmed.png" width="1934" height="1087" alt="Фильтр только фотографий." loading="lazy" decoding="async">
+</a>
+<figcaption>Фильтр только фотографий. <a href="/assets/media-kolfat-2-guide/screenshots/05-15-photos-filter-confirmed.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="library-14"><p><strong>Шаг 14.</strong> Выберите File name A–Z и закройте список. Есть также сортировки по дате, размеру, обратному имени и типу.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-17-filename-sort-confirmed.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Сортировка по имени.">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-17-filename-sort-confirmed.png" width="1934" height="1087" alt="Сортировка по имени." loading="lazy" decoding="async">
+</a>
+<figcaption>Сортировка по имени. <a href="/assets/media-kolfat-2-guide/screenshots/05-17-filename-sort-confirmed.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Select all visible photos выбирает видимые фото, не весь каталог. Проверяйте количество.</li>
+<li>Перед другой пробой используйте Undo. Хэши исходников в демонстрации не изменились.</li>
+</ul>
+<p class="guide-outcome">Вы можете находить фото, выбирать одно или несколько и отменять повороты.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="copy" class="section guide-chapter">
+<h2>7. Завершение Guided COPY</h2>
+<p>Начните с COPY, проверенного независимого бэкапа и отдельной папки с достаточным местом. Сверьте пути. Пример копирует 16 исходных демонстрационных медиа.</p>
+<ol class="guide-steps">
+<li id="copy-01"><p><strong>Шаг 1.</strong> В Guided откройте Organize Photos &amp; Videos и проверьте счётчики Choose File Types.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-01-guided-organizer.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальный диалог типов.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-01-guided-organizer.png" width="1934" height="1087" alt="Реальный диалог типов." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальный диалог типов. <a href="/assets/media-kolfat-2-guide/screenshots/06-01-guided-organizer.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="copy-02"><p><strong>Шаг 2.</strong> Deselect All отключает Continue. Для продолжения выберите поддерживаемый тип.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-02-no-file-types-selected.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Продолжение отключено без выбора.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-02-no-file-types-selected.png" width="1934" height="1087" alt="Продолжение отключено без выбора." loading="lazy" decoding="async">
+</a>
+<figcaption>Продолжение отключено без выбора. <a href="/assets/media-kolfat-2-guide/screenshots/06-02-no-file-types-selected.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="copy-03"><p><strong>Шаг 3.</strong> Select All включает 17 файлов, в том числе необязательный текст.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-03-select-all-file-types.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Выбраны все типы.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-03-select-all-file-types.png" width="1934" height="1087" alt="Выбраны все типы." loading="lazy" decoding="async">
+</a>
+<figcaption>Выбраны все типы. <a href="/assets/media-kolfat-2-guide/screenshots/06-03-select-all-file-types.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="copy-04"><p><strong>Шаг 4.</strong> Снимите .txt: 17 просканировано, 16 выбрано, один исключён.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-05-select-media-only.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Выбраны только 16 медиа.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-05-select-media-only.png" width="1934" height="1087" alt="Выбраны только 16 медиа." loading="lazy" decoding="async">
+</a>
+<figcaption>Выбраны только 16 медиа. <a href="/assets/media-kolfat-2-guide/screenshots/06-05-select-media-only.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="copy-05"><p><strong>Шаг 5.</strong> Нажмите Continue и проверьте Selected Folder и полный путь.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-06-file-types-confirmed.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Типы подтверждены.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-06-file-types-confirmed.png" width="1934" height="1087" alt="Типы подтверждены." loading="lazy" decoding="async">
+</a>
+<figcaption>Типы подтверждены. <a href="/assets/media-kolfat-2-guide/screenshots/06-06-file-types-confirmed.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="copy-06"><p><strong>Шаг 6.</strong> Выберите Year / Month / Day в Pattern и закройте список. Изучите план и категории исходного набора из 16 медиа.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-08-guided-native-organization-plan.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящий план Guided.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-08-guided-native-organization-plan.png" width="1934" height="1087" alt="Настоящий план Guided." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящий план Guided. <a href="/assets/media-kolfat-2-guide/screenshots/06-08-guided-native-organization-plan.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="copy-07"><p><strong>Шаг 7.</strong> Нажмите Change Location. Windows требует существующую папку отдельно от источника и бэкапа.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-09-destination-folder-picker.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Нативный выбор назначения.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-09-destination-folder-picker.png" width="1934" height="1087" alt="Нативный выбор назначения." loading="lazy" decoding="async">
+</a>
+<figcaption>Нативный выбор назначения. <a href="/assets/media-kolfat-2-guide/screenshots/06-09-destination-folder-picker.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="copy-08"><p><strong>Шаг 8.</strong> Выберите Copy Results и Select Folder. Внутри появится корень MEDIA KOLFAT Organized Media.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-10-enter-copy-destination.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Указано одноразовое назначение.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-10-enter-copy-destination.png" width="1934" height="1087" alt="Указано одноразовое назначение." loading="lazy" decoding="async">
+</a>
+<figcaption>Указано одноразовое назначение. <a href="/assets/media-kolfat-2-guide/screenshots/06-10-enter-copy-destination.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="copy-09"><p><strong>Шаг 9.</strong> Проверьте Selected destination, категории и свободное место. Предыдущий поиск выделяет дублированные фото и видео.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-11-selected-copy-destination.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Проверенные назначение и план.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-11-selected-copy-destination.png" width="1934" height="1087" alt="Проверенные назначение и план." loading="lazy" decoding="async">
+</a>
+<figcaption>Проверенные назначение и план. <a href="/assets/media-kolfat-2-guide/screenshots/06-11-selected-copy-destination.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="copy-10"><p><strong>Шаг 10.</strong> Нажмите Copy Selected Files и прочитайте Confirm copy: оригиналы сохранятся. Отмените при неверных путях или выборе.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-12-confirm-copy.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящее подтверждение COPY.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-12-confirm-copy.png" width="1934" height="1087" alt="Настоящее подтверждение COPY." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящее подтверждение COPY. <a href="/assets/media-kolfat-2-guide/screenshots/06-12-confirm-copy.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="copy-11"><p><strong>Шаг 11.</strong> Подтвердите и дождитесь: 16 скопировано, ноль одинаковых пропущено, ноль переименовано, ноль ошибок. Прочитайте категории и путь отчёта.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-14-copy-complete-report.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: COPY завершена с отчётом.">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-14-copy-complete-report.png" width="1934" height="1087" alt="COPY завершена с отчётом." loading="lazy" decoding="async">
+</a>
+<figcaption>COPY завершена с отчётом. <a href="/assets/media-kolfat-2-guide/screenshots/06-14-copy-complete-report.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Pattern включает Year / Month / Day, YMD - Single Folder, Year / Month, варианты по камере, только год/месяц/день и Custom. Проверяйте предварительный план.</li>
+<li>Open destination и Open Folder открывают результаты, Save report сохраняет отчёт. Add Destination to Folders явно регистрирует папку; автоматически она не добавляется.</li>
+<li>Все 16 хэшей назначения совпали. Все 17 оригиналов и независимые резервные копии остались неизменны.</li>
+</ul>
+<p class="guide-outcome">Получена проверенная организованная копия с TXT-отчётом; оригиналы сохранены.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="progress" class="section guide-chapter">
+<h2>8. Пауза, продолжение и восстановление COPY</h2>
+<p>Большая демонстрация использует 512 созданных видео с независимым бэкапом. Это одноразовые файлы без личных медиа.</p>
+<ol class="guide-steps">
+<li id="progress-01"><p><strong>Шаг 1.</strong> Выберите отдельную Copy Timing Results и проверьте полный путь назначения.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-05-copy-timing-destination.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Назначение большого примера.">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-05-copy-timing-destination.png" width="1934" height="1087" alt="Назначение большого примера." loading="lazy" decoding="async">
+</a>
+<figcaption>Назначение большого примера. <a href="/assets/media-kolfat-2-guide/screenshots/11-05-copy-timing-destination.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="progress-02"><p><strong>Шаг 2.</strong> Проверьте источник, выбор, назначение и место перед подтверждением COPY. Возможна подготовительная фаза.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-07-copy-timing-confirmation.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Подтверждение большого COPY.">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-07-copy-timing-confirmation.png" width="1934" height="1087" alt="Подтверждение большого COPY." loading="lazy" decoding="async">
+</a>
+<figcaption>Подтверждение большого COPY. <a href="/assets/media-kolfat-2-guide/screenshots/11-07-copy-timing-confirmation.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="progress-03"><p><strong>Шаг 3.</strong> Нажмите Pause и дождитесь Resume. Текущий файл может закончиться до паузы.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-10-copy-paused.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальная пауза COPY.">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-10-copy-paused.png" width="1934" height="1087" alt="Реальная пауза COPY." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальная пауза COPY. <a href="/assets/media-kolfat-2-guide/screenshots/11-10-copy-paused.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="progress-04"><p><strong>Шаг 4.</strong> Нажмите Resume: операция продолжается, вновь появляется Pause.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-11-copy-resumed.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: COPY продолжена.">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-11-copy-resumed.png" width="1934" height="1087" alt="COPY продолжена." loading="lazy" decoding="async">
+</a>
+<figcaption>COPY продолжена. <a href="/assets/media-kolfat-2-guide/screenshots/11-11-copy-resumed.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="progress-05"><p><strong>Шаг 5.</strong> Нажмите Stop и прочитайте итог и отчёт: 110 полных копий сохранены, ошибок ноль.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-13-cancelled-copy-report.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Отмена с сохранением 110 копий.">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-13-cancelled-copy-report.png" width="1934" height="1087" alt="Отмена с сохранением 110 копий." loading="lazy" decoding="async">
+</a>
+<figcaption>Отмена с сохранением 110 копий. <a href="/assets/media-kolfat-2-guide/screenshots/11-13-cancelled-copy-report.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="progress-06"><p><strong>Шаг 6.</strong> Запустите COPY заново с теми же источником, шаблоном и назначением. Проверьте новое подтверждение; идентичные готовые файлы могут пропускаться.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-14b-retry-copy-confirmation.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Подтверждение повторной попытки.">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-14b-retry-copy-confirmation.png" width="1934" height="1087" alt="Подтверждение повторной попытки." loading="lazy" decoding="async">
+</a>
+<figcaption>Подтверждение повторной попытки. <a href="/assets/media-kolfat-2-guide/screenshots/11-14b-retry-copy-confirmation.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="progress-07"><p><strong>Шаг 7.</strong> Читайте имя, счётчик и процент: при повторе прогресс относится к оставшимся для копирования файлам.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-15-retry-copy-progress.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальный прогресс повтора.">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-15-retry-copy-progress.png" width="1934" height="1087" alt="Реальный прогресс повтора." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальный прогресс повтора. <a href="/assets/media-kolfat-2-guide/screenshots/11-15-retry-copy-progress.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="progress-08"><p><strong>Шаг 8.</strong> При необходимости Pause и дождитесь Paused. Числа отражают текущую остановленную операцию.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-16-retry-copy-paused-progress.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Панель приостановленного прогресса.">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-16-retry-copy-paused-progress.png" width="1934" height="1087" alt="Панель приостановленного прогресса." loading="lazy" decoding="async">
+</a>
+<figcaption>Панель приостановленного прогресса. <a href="/assets/media-kolfat-2-guide/screenshots/11-16-retry-copy-paused-progress.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="progress-09"><p><strong>Шаг 9.</strong> Нажмите Resume и дождитесь конца, не отключая назначение и не меняя исходники.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-17-retry-copy-resumed-progress.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Прогресс после продолжения.">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-17-retry-copy-resumed-progress.png" width="1934" height="1087" alt="Прогресс после продолжения." loading="lazy" decoding="async">
+</a>
+<figcaption>Прогресс после продолжения. <a href="/assets/media-kolfat-2-guide/screenshots/11-17-retry-copy-resumed-progress.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="progress-10"><p><strong>Шаг 10.</strong> Итог: 402 скопировано, 110 одинаковых пропущено, переименований и ошибок ноль. Проверены все 512 хэшей.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-19-retry-completion-report.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Восстановление завершено и проверено.">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-19-retry-completion-report.png" width="1934" height="1087" alt="Восстановление завершено и проверено." loading="lazy" decoding="async">
+</a>
+<figcaption>Восстановление завершено и проверено. <a href="/assets/media-kolfat-2-guide/screenshots/11-19-retry-completion-report.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Остановка поиска дубликатов и COPY — разные действия. Используйте кнопки текущей операции.</li>
+<li>Над кнопками иногда остаётся прежний статус. Читайте текущую панель прогресса и итог.</li>
+<li>После отмены проверьте отчёт и папку, сохранив завершённые проверенные копии.</li>
+</ul>
+<p class="guide-outcome">Вы можете остановить и повторить COPY без дублирования завершённых идентичных результатов.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="move" class="section guide-chapter">
+<h2>9. Advanced MOVE с резервной копией</h2>
+<p>MOVE удаляет исходные файлы после проверки назначения. Тренируйтесь лишь на одноразовых копиях с независимым бэкапом. Использован клон Move Samples, не исходная демонстрационная библиотека.</p>
+<ol class="guide-steps">
+<li id="move-01"><p><strong>Шаг 1.</strong> Выберите Advanced в Experience и нужный источник перед переходом к организации.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-01-advanced-mode.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящий Advanced.">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-01-advanced-mode.png" width="1934" height="1087" alt="Настоящий Advanced." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящий Advanced. <a href="/assets/media-kolfat-2-guide/screenshots/08-01-advanced-mode.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="move-02"><p><strong>Шаг 2.</strong> Проверьте типы и Selected Folder: Move Samples, точный путь, 17 проверено, 16 выбрано, один исключён.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-35-correct-source-confirmed.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Правильный источник с бэкапом.">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-35-correct-source-confirmed.png" width="1934" height="1087" alt="Правильный источник с бэкапом." loading="lazy" decoding="async">
+</a>
+<figcaption>Правильный источник с бэкапом. <a href="/assets/media-kolfat-2-guide/screenshots/08-35-correct-source-confirmed.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="move-03"><p><strong>Шаг 3.</strong> Подтвердите Year / Month и план. Здесь Duplicates показывает Not checked.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-36-verified-move-plan.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящий план MOVE.">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-36-verified-move-plan.png" width="1934" height="1087" alt="Настоящий план MOVE." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящий план MOVE. <a href="/assets/media-kolfat-2-guide/screenshots/08-36-verified-move-plan.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="move-04"><p><strong>Шаг 4.</strong> Через Change Location выберите отдельную Move Results и проверьте путь.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-37-final-move-destination.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Одобренное одноразовое назначение.">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-37-final-move-destination.png" width="1934" height="1087" alt="Одобренное одноразовое назначение." loading="lazy" decoding="async">
+</a>
+<figcaption>Одобренное одноразовое назначение. <a href="/assets/media-kolfat-2-guide/screenshots/08-37-final-move-destination.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="move-05"><p><strong>Шаг 5.</strong> Выберите Move в Transfer mode. Прочитайте: сначала проверяется назначение, затем удаляются исходники; папки остаются, отчёт сохраняется.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-39-final-move-warning.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящее предупреждение MOVE.">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-39-final-move-warning.png" width="1934" height="1087" alt="Настоящее предупреждение MOVE." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящее предупреждение MOVE. <a href="/assets/media-kolfat-2-guide/screenshots/08-39-final-move-warning.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="move-06"><p><strong>Шаг 6.</strong> Нажмите Move Selected Files и прочитайте Confirm move. Точные исходные файлы будут удалены после проверки; сомневаетесь — отмените.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-40-final-move-confirmation.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Финальное подтверждение MOVE.">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-40-final-move-confirmation.png" width="1934" height="1087" alt="Финальное подтверждение MOVE." loading="lazy" decoding="async">
+</a>
+<figcaption>Финальное подтверждение MOVE. <a href="/assets/media-kolfat-2-guide/screenshots/08-40-final-move-confirmation.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="move-07"><p><strong>Шаг 7.</strong> Сверьте источник, назначение, бэкап и подтвердите. Move complete: 16 перемещено, ноль копий с сохранённым источником, ноль ошибок.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-42-move-complete-report.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: MOVE 16 файлов завершён.">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-42-move-complete-report.png" width="1934" height="1087" alt="MOVE 16 файлов завершён." loading="lazy" decoding="async">
+</a>
+<figcaption>MOVE 16 файлов завершён. <a href="/assets/media-kolfat-2-guide/screenshots/08-42-move-complete-report.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="move-08"><p><strong>Шаг 8.</strong> В Activity проверьте Move Photos &amp; Videos и Open Move Report. Независимый бэкап оставьте доступным.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящая запись завершённого MOVE.">
+<img src="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" width="1934" height="1087" alt="Настоящая запись завершённого MOVE." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящая запись завершённого MOVE. <a href="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Все 16 хэшей назначения совпали, 17 файлов бэкапа неизменны. notes.txt и четыре папки источника сохранены.</li>
+<li>COPIED_SOURCE_RETAINED означает наличие копии при сохранении исходника. Это не полное перемещение: изучите отчёт.</li>
+<li>Проверяйте Selected Folder каждый раз. Refresh не переключает источник; здесь одноразовую регистрацию убрали только из каталога и добавили заново.</li>
+</ul>
+<p class="guide-outcome">Одноразовый MOVE завершён и проверен; бэкап и первоначальная библиотека целы.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="reports" class="section guide-chapter">
+<h2>10. Activity и текстовые отчёты</h2>
+<p>Activity хранит недавние локальные операции. Различайте Completed, Completed with warnings и Cancelled. Автоматические TXT лежат в корне назначения.</p>
+<ol class="guide-steps">
+<li id="reports-01"><p><strong>Шаг 1.</strong> В Activity сравните обработанные, скопированные, пропущенные и ошибки Copy Photos &amp; Videos с итогом назначения.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/07-01-activity-after-copy.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Первый завершённый COPY.">
+<img src="/assets/media-kolfat-2-guide/screenshots/07-01-activity-after-copy.png" width="1934" height="1087" alt="Первый завершённый COPY." loading="lazy" decoding="async">
+</a>
+<figcaption>Первый завершённый COPY. <a href="/assets/media-kolfat-2-guide/screenshots/07-01-activity-after-copy.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="reports-02"><p><strong>Шаг 2.</strong> Сравните статусы: отменённый COPY обработал 110, повтор — 512 с пропуском 110. Отменённый поиск дубликатов неполон.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/07-02-completed-and-cancelled-activity.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящая история разных исходов.">
+<img src="/assets/media-kolfat-2-guide/screenshots/07-02-completed-and-cancelled-activity.png" width="1934" height="1087" alt="Настоящая история разных исходов." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящая история разных исходов. <a href="/assets/media-kolfat-2-guide/screenshots/07-02-completed-and-cancelled-activity.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="reports-03"><p><strong>Шаг 3.</strong> Используйте Open Copy Report или Open Move Report и Open Destination. В TXT проверьте режим, пути, статусы и итоги.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальные записи COPY и MOVE.">
+<img src="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" width="1934" height="1087" alt="Реальные записи COPY и MOVE." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальные записи COPY и MOVE. <a href="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Проверенный отчёт: Mode: MOVE, Total planned files: 16, Moved: 16, COPIED_SOURCE_RETAINED: 0, Skipped: 0, Failed: 0.</li>
+<li>Отчёт COPY подтверждает сохранность исходников, отменённый отчёт перечисляет завершённые копии в назначении.</li>
+<li>Clear Activity History не использовалась: история сохранена.</li>
+</ul>
+<p class="guide-outcome">Вы можете сопоставить запись, папку и отчёт и отличить успех от незавершённой обработки.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="settings" class="section guide-chapter">
+<h2>11. Настройки и новый старт</h2>
+<p>Settings применяет локальные параметры: Language, Experience, Safety, Privacy &amp; Local Processing, Organizing, Library, Guidance &amp; Accessibility, Maintenance, Media dates.</p>
+<ol class="guide-steps">
+<li id="settings-01"><p><strong>Шаг 1.</strong> В Settings проверьте язык, режим и безопасность. Показанный интерфейс требует подтверждения организации и предупреждения об удалении источников.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-01-settings.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Язык, режим и безопасность.">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-01-settings.png" width="1934" height="1087" alt="Язык, режим и безопасность." loading="lazy" decoding="async">
+</a>
+<figcaption>Язык, режим и безопасность. <a href="/assets/media-kolfat-2-guide/screenshots/09-01-settings.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="settings-02"><p><strong>Шаг 2.</strong> Прочитайте Default organize pattern и Destination behavior: Ask every time. Изучите локальную обработку и хранение отчётов.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-03-organizing-library-settings.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Организация и локальная приватность.">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-03-organizing-library-settings.png" width="1934" height="1087" alt="Организация и локальная приватность." loading="lazy" decoding="async">
+</a>
+<figcaption>Организация и локальная приватность. <a href="/assets/media-kolfat-2-guide/screenshots/09-03-organizing-library-settings.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="settings-03"><p><strong>Шаг 3.</strong> Проверьте размер превью, порядок, подписи дат и размера, открытие Library после скана и запоминание вида.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-04-accessibility-settings.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настройки библиотеки.">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-04-accessibility-settings.png" width="1934" height="1087" alt="Настройки библиотеки." loading="lazy" decoding="async">
+</a>
+<figcaption>Настройки библиотеки. <a href="/assets/media-kolfat-2-guide/screenshots/09-04-accessibility-settings.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="settings-04"><p><strong>Шаг 4.</strong> Включите Larger text и проверьте текст и навигацию.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-05-enable-larger-text.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Увеличенный текст применён.">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-05-enable-larger-text.png" width="1934" height="1087" alt="Увеличенный текст применён." loading="lazy" decoding="async">
+</a>
+<figcaption>Увеличенный текст применён. <a href="/assets/media-kolfat-2-guide/screenshots/09-05-enable-larger-text.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="settings-05"><p><strong>Шаг 5.</strong> Отключите Larger text для возврата. Доступны Larger buttons, Reduced motion и настройки подсказок.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-06-restore-standard-text.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Обычный текст восстановлен.">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-06-restore-standard-text.png" width="1934" height="1087" alt="Обычный текст восстановлен." loading="lazy" decoding="async">
+</a>
+<figcaption>Обычный текст восстановлен. <a href="/assets/media-kolfat-2-guide/screenshots/09-06-restore-standard-text.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="settings-06"><p><strong>Шаг 6.</strong> В Maintenance проверьте объём созданных приложением файлов. Refresh Usage обновляет числа; Clear Thumbnail Cache касается превью и здесь не применялась.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-07-maintenance-settings.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Объём и обслуживание.">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-07-maintenance-settings.png" width="1934" height="1087" alt="Объём и обслуживание." loading="lazy" decoding="async">
+</a>
+<figcaption>Объём и обслуживание. <a href="/assets/media-kolfat-2-guide/screenshots/09-07-maintenance-settings.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="settings-07"><p><strong>Шаг 7.</strong> Раскройте Advanced date policy: пять признаков и предупреждение о низкой уверенности. Изменения действуют для новых сканов, анализа и планов.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальные признаки даты.">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" width="1934" height="1087" alt="Реальные признаки даты." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальные признаки даты. <a href="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="settings-08"><p><strong>Шаг 8.</strong> Откройте подтверждение Reset Settings to Defaults: очищаются настройки, источники, индекс, прогресс и кэш; оригиналы и организованные копии не меняются.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-10-reset-settings-confirmation.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящее предупреждение сброса.">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-10-reset-settings-confirmation.png" width="1934" height="1087" alt="Настоящее предупреждение сброса." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящее предупреждение сброса. <a href="/assets/media-kolfat-2-guide/screenshots/09-10-reset-settings-confirmation.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="settings-09"><p><strong>Шаг 9.</strong> Нажмите Cancel. Ни личный, ни демонстрационный профиль не сбрасывался.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-12-reset-cancelled.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Сброс отменён.">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-12-reset-cancelled.png" width="1934" height="1087" alt="Сброс отменён." loading="lazy" decoding="async">
+</a>
+<figcaption>Сброс отменён. <a href="/assets/media-kolfat-2-guide/screenshots/09-12-reset-cancelled.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Новый старт шире изменения внешнего вида. Сохраните нужные сведения и отчёты до очистки каталога.</li>
+<li>Просмотр Settings не переписывает старые даты. Для изменения используйте явный повторный анализ.</li>
+</ul>
+<p class="guide-outcome">Вы понимаете настройки, обслуживание и сброс без случайной очистки каталога.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+<section id="troubleshooting" class="section guide-chapter">
+<h2>12. Восстановление после типичных проблем</h2>
+<p>Перед повтором читайте сообщение и проверяйте источник, фильтры, шаблон и назначение. Все примеры безопасно воспроизведены на одноразовых данных.</p>
+<ol class="guide-steps">
+<li id="troubleshooting-01"><p><strong>Шаг 1.</strong> При No photos match your choices проверьте Search media: неподходящий фрагмент скрывает все результаты.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-01-library-no-search-results.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящий пустой поиск.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-01-library-no-search-results.png" width="1934" height="1087" alt="Настоящий пустой поиск." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящий пустой поиск. <a href="/assets/media-kolfat-2-guide/screenshots/10-01-library-no-search-results.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="troubleshooting-02"><p><strong>Шаг 2.</strong> Введите известный фрагмент, например garden, и проверьте возврат результатов до других изменений.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-02-recover-search-results.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Результаты восстановлены.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-02-recover-search-results.png" width="1934" height="1087" alt="Результаты восстановлены." loading="lazy" decoding="async">
+</a>
+<figcaption>Результаты восстановлены. <a href="/assets/media-kolfat-2-guide/screenshots/10-02-recover-search-results.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="troubleshooting-03"><p><strong>Шаг 3.</strong> Проверьте Unavailable only: если оригиналы доступны, выдача пуста; это не признак потери файлов.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-04-review-unavailable-filter.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Реальный ограничивающий фильтр.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-04-review-unavailable-filter.png" width="1934" height="1087" alt="Реальный ограничивающий фильтр." loading="lazy" decoding="async">
+</a>
+<figcaption>Реальный ограничивающий фильтр. <a href="/assets/media-kolfat-2-guide/screenshots/10-04-review-unavailable-filter.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="troubleshooting-04"><p><strong>Шаг 4.</strong> Нажмите Show All Photos и проверьте восстановленные поиск и фильтры.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-05-show-all-recovery.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Галерея восстановлена.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-05-show-all-recovery.png" width="1934" height="1087" alt="Галерея восстановлена." loading="lazy" decoding="async">
+</a>
+<figcaption>Галерея восстановлена. <a href="/assets/media-kolfat-2-guide/screenshots/10-05-show-all-recovery.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="troubleshooting-05"><p><strong>Шаг 5.</strong> При Folder is unavailable or cannot be opened проверьте путь и доступ. Несуществующий путь отключает Select This Folder.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-08-invalid-folder-error.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящая ошибка недоступной папки.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-08-invalid-folder-error.png" width="1934" height="1087" alt="Настоящая ошибка недоступной папки." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящая ошибка недоступной папки. <a href="/assets/media-kolfat-2-guide/screenshots/10-08-invalid-folder-error.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="troubleshooting-06"><p><strong>Шаг 6.</strong> Выберите существующую папку и Go. Пустая содержит ноль поддерживаемых медиа; смените папку либо отмените.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-10-empty-folder.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Настоящая пустая папка.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-10-empty-folder.png" width="1934" height="1087" alt="Настоящая пустая папка." loading="lazy" decoding="async">
+</a>
+<figcaption>Настоящая пустая папка. <a href="/assets/media-kolfat-2-guide/screenshots/10-10-empty-folder.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="troubleshooting-07"><p><strong>Шаг 7.</strong> Папка только с текстом также показывает ноль медиа. Other Files выбираются отдельно при организации.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-12-unsupported-only-preview.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Только неподдерживаемые файлы.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-12-unsupported-only-preview.png" width="1934" height="1087" alt="Только неподдерживаемые файлы." loading="lazy" decoding="async">
+</a>
+<figcaption>Только неподдерживаемые файлы. <a href="/assets/media-kolfat-2-guide/screenshots/10-12-unsupported-only-preview.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="troubleshooting-08"><p><strong>Шаг 8.</strong> В Custom используйте допустимые токены и относительные сегменты. Переход к родителю отклоняется, COPY недоступна.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-14-invalid-custom-pattern.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Неверный шаблон отклонён.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-14-invalid-custom-pattern.png" width="1934" height="1087" alt="Неверный шаблон отклонён." loading="lazy" decoding="async">
+</a>
+<figcaption>Неверный шаблон отклонён. <a href="/assets/media-kolfat-2-guide/screenshots/10-14-invalid-custom-pattern.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="troubleshooting-09"><p><strong>Шаг 9.</strong> Исправьте на {YYYY}\{YYYY-MM}. В этой сборке снова откройте и закройте Pattern для подтверждения и восстановления плана.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-17-custom-plan-reconfirmed.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Исправленный план подтверждён.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-17-custom-plan-reconfirmed.png" width="1934" height="1087" alt="Исправленный план подтверждён." loading="lazy" decoding="async">
+</a>
+<figcaption>Исправленный план подтверждён. <a href="/assets/media-kolfat-2-guide/screenshots/10-17-custom-plan-reconfirmed.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="troubleshooting-10"><p><strong>Шаг 10.</strong> Прочитайте Remove Folder: удаляются записи каталога и Library, но не оригинальные файлы и папки.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-19-catalog-only-removal-confirmation.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Подтверждение удаления только из каталога.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-19-catalog-only-removal-confirmation.png" width="1934" height="1087" alt="Подтверждение удаления только из каталога." loading="lazy" decoding="async">
+</a>
+<figcaption>Подтверждение удаления только из каталога. <a href="/assets/media-kolfat-2-guide/screenshots/10-19-catalog-only-removal-confirmation.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+<li id="troubleshooting-11"><p><strong>Шаг 11.</strong> Только в демонстрации подтвердите Remove from MEDIA KOLFAT, проверьте оригиналы, затем добавьте вручную и просканируйте заново перед организацией.</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-20-disposable-source-removed-from-catalog.png" target="_blank" rel="noopener" aria-label="Открыть исходный PNG: Регистрация удалена, оригиналы сохранены.">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-20-disposable-source-removed-from-catalog.png" width="1934" height="1087" alt="Регистрация удалена, оригиналы сохранены." loading="lazy" decoding="async">
+</a>
+<figcaption>Регистрация удалена, оригиналы сохранены. <a href="/assets/media-kolfat-2-guide/screenshots/10-20-disposable-source-removed-from-catalog.png" target="_blank" rel="noopener">Открыть исходный PNG</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Без типов Continue отключена: вернитесь в Choose File Types.</li>
+<li>После ошибки пути могут остаться старые превью. Читайте ошибку и отключённую Select This Folder; не считайте их содержимым недоступного пути.</li>
+<li>При проблемах назначения или места проверьте путь, подключение, запись и резерв безопасности; выберите другую подходящую папку.</li>
+<li>После прерывания проверьте Activity, TXT и полные результаты перед повтором. Отмена и предупреждения требуют внимания.</li>
+<li>Удаление регистрации было только в изолированном каталоге. Все 17 оригиналов остались неизменны и были добавлены обратно для MOVE.</li>
+</ul>
+<p class="guide-outcome">Вы отличаете пустую выдачу от потери оригиналов и исправляете ошибки с сохранением результатов.</p>
+<a class="guide-back" href="#contents">К содержанию</a>
+</section>
+</main>
+<footer><div class="foot"><span>© 2026 KOLFAT</span><nav><a href="/ru/">ГЛАВНАЯ</a><a href="/ru/privacy/">Конфиденциальность</a><a href="/ru/terms/">Условия</a><a href="/ru/licenses/">Лицензии</a></nav></div></footer>
+<script defer src="/assets/nav-dropdown.js?v=20261027-menu-explore2"></script>
+</body></html>

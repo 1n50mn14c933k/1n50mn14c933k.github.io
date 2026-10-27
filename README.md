@@ -36,6 +36,10 @@ The site is hosted with **GitHub Pages** and uses the custom domain defined in `
 - Community Discussions: https://github.com/1n50mn14c933k/MEDIA_KOLFAT/discussions
 - Website update history: [docs/WEBSITE_UPDATES.md](docs/WEBSITE_UPDATES.md)
 
+## Illustrated MEDIA KOLFAT 2.0 guide
+
+The [complete illustrated user guide](https://kolfat.app/guides/media-kolfat-2-user-guide/) contains 91 steps in all twelve website languages, with 87 genuine native application PNGs. See [provenance, verification, maintenance and rollback](docs/MEDIA_KOLFAT_2_USER_GUIDE.md).
+
 ## Primary Pages
 
 - KOLFAT: https://kolfat.app/

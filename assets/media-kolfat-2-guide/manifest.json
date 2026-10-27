@@ -1,0 +1,1870 @@
+{
+  "schemaVersion": 2,
+  "application": "MEDIA KOLFAT",
+  "applicationVersion": "2.0.0.0",
+  "captureDate": "2026-10-27",
+  "sourceMedia": "Generated demonstration images and valid MJPEG AVI; no personal media",
+  "nativeCaptureReliability": "PASS for main app and owned folder dialogs",
+  "controlMethod": "Separate direct Windows UI Automation execution; Computer Use session ended beforehand",
+  "display": "3440x1440, app DPI 96",
+  "imageCount": 87,
+  "illustratedSteps": 91,
+  "coverageLimits": [
+    "Computer-wide automatic discovery was not executed outside disposable scope",
+    "Parent-window capture omits separate native popup menus; no omitted-menu image is published as a menu screenshot",
+    "Fresh-start warning was cancelled; no user profile was reset"
+  ],
+  "screenshots": [
+    {
+      "file": "01-01-first-launch-guided.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 146476,
+      "sha256": "0797932344A7485C17767277739444B3A604BE7729F394C64DB538840D7A2ABD",
+      "captureMethod": "Native GDI CopyFromScreen / SourceCopy to PNG; real foreground application bounds, including genuine owned dialogs",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "start-01",
+          "action": "Start with Guided selected in the Experience area. Follow the highlighted recommended action. The step strip uses neutral gray for upcoming work, amber or yellow emphasis for the current step, and green checks for completed steps.",
+          "caption": "First launch in Guided Mode.",
+          "chapter": "start"
+        }
+      ]
+    },
+    {
+      "file": "01-02-performance-check-complete.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 186781,
+      "sha256": "B503D2BAADE04AD9F34DD397331D19F85C4458FF7A579AEAC64F7441E851189B",
+      "captureMethod": "Native GDI CopyFromScreen / SourceCopy to PNG; real foreground application bounds, including genuine owned dialogs",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "start-02",
+          "action": "Run Quick Check on Performance Check and wait for completion. Read the resulting score before continuing; the demonstrated computer scored 98 percent, and another computer can produce a different result.",
+          "caption": "Quick Check completed with a 98 percent score.",
+          "chapter": "start"
+        }
+      ]
+    },
+    {
+      "file": "01-03-welcome-source-choices.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 165856,
+      "sha256": "1E6B140B6880B340FA3DF99D07A32CAAE26ABB863A2259824809378C889481FD",
+      "captureMethod": "Native GDI CopyFromScreen / SourceCopy to PNG; real foreground application bounds, including genuine owned dialogs",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "start-03",
+          "action": "Open Add Photos & Videos. The welcome choices are Scan Computer Automatically and Choose Photos & Videos Manually. Use manual selection when you already know the folder containing the media you want to add.",
+          "caption": "The two real source-selection choices.",
+          "chapter": "start"
+        },
+        {
+          "step": "locations-01",
+          "action": "Review Scan Computer Automatically before choosing it. It starts computer-wide discovery rather than offering a demonstration-folder limit. On a computer containing private media, use the manual choice when you need to restrict the scan to one known folder.",
+          "caption": "Automatic discovery and manual selection are separate choices.",
+          "chapter": "locations"
+        }
+      ]
+    },
+    {
+      "file": "01-04-about-version.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 257882,
+      "sha256": "92408EE1F8FCF2BC9B6133046EC0CC197DED93197E284F2A239E3DA467E53EE9",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "start-04",
+          "action": "Open About to check the installed version. Expand Release Information if necessary and read both Version and Build. Return to the required workflow using the sidebar.",
+          "caption": "Version 2.0.0 and build 2.0.0.0.",
+          "chapter": "start"
+        }
+      ]
+    },
+    {
+      "file": "01-05-about-privacy.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 270067,
+      "sha256": "2D9456C3001E7CDCA75D6C2D4E9E266A3C9B9662099C640A5CBA2DF02EC949D2",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "start-05",
+          "action": "Expand Privacy & Data Safety. Read the distinction between scanning, COPY and Advanced MOVE, and keep an independent backup of important media.",
+          "caption": "The application's own privacy and safety explanation.",
+          "chapter": "start"
+        }
+      ]
+    },
+    {
+      "file": "02-01-manual-source-picker.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 46507,
+      "sha256": "2BF521AD830A4609FB5C11468722EF9C27B7089E51F580CD6B8A602294A9A9AE",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "sources-01",
+          "action": "Choose Choose Photos & Videos Manually. In the folder picker, review Current folder, Locations, Folders and Photos & Videos in this folder before selecting anything.",
+          "caption": "The real MEDIA KOLFAT folder picker.",
+          "chapter": "sources"
+        },
+        {
+          "step": "locations-02",
+          "action": "Use This PC for a readable drive or enter an exact local or network folder path in Current folder. The OneDrive shortcut refers to locally available files. If a provider or network connection is unavailable, make the files available through Windows before selecting the folder.",
+          "caption": "The actual location shortcuts and folder-path field.",
+          "chapter": "locations"
+        }
+      ]
+    },
+    {
+      "file": "02-02-enter-demo-source-path.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 51782,
+      "sha256": "A9B029A4BB1FE309B9FB3BCBE43347FF20FE1FB84B495042B725924D481A6DC0",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "sources-02",
+          "action": "Enter the full path of the folder you want to catalog into Current folder. In this demonstration the selected folder is Media Samples inside the disposable demo directory.",
+          "caption": "A specific demonstration source path entered.",
+          "chapter": "sources"
+        }
+      ]
+    },
+    {
+      "file": "02-03-demo-nested-folders.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 72382,
+      "sha256": "09A1315278771A27FBCE7B4DFDC7B9688B9124B692924F2E1E4C1E875BB380F0",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "sources-03",
+          "action": "Choose Go. Check the displayed folder path and the nested folder names. A parent folder can show no media directly even though its subfolders contain supported files.",
+          "caption": "The demonstration folder has four nested folders.",
+          "chapter": "sources"
+        }
+      ]
+    },
+    {
+      "file": "02-04-preview-sample-photos.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 124081,
+      "sha256": "E07CC9DE9136748B4E804C387B7B582786BFB1C0D049D6CBA69E5B39995C2568",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "sources-04",
+          "action": "Open a known subfolder to review its visible previews. This example opens 2024 Holiday and shows six generated JPEG images.",
+          "caption": "Six supported images visible in the selected subfolder.",
+          "chapter": "sources"
+        }
+      ]
+    },
+    {
+      "file": "02-05-return-to-demo-root.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 72217,
+      "sha256": "C71FCB0691D68AC5699711067D5F6C9A06FE14B9856A36EDC3279BDDEB3906A6",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "sources-05",
+          "action": "Use Up one folder to return to the parent folder when you want to include the full nested collection. Verify Current folder again.",
+          "caption": "Return to the intended parent source.",
+          "chapter": "sources"
+        }
+      ]
+    },
+    {
+      "file": "02-06-ready-to-scan-source.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 117497,
+      "sha256": "8423E7579312AC4C5A8F5C74C7FBEA06B0B1F1425B83C6F24D24DA3EFDE40972",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "sources-06",
+          "action": "Choose Select This Folder. Read the proposed folder name and full path on Ready to add this folder. Do not continue if the displayed source is different from the folder you intended.",
+          "caption": "The selected source is ready to add.",
+          "chapter": "sources"
+        }
+      ]
+    },
+    {
+      "file": "02-07-source-advanced-options.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 144277,
+      "sha256": "9EB89DDE3E5E6EA502B0372E984D52DEAA0E7F798B0885FCD81768D3FED12832",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "sources-07",
+          "action": "Expand Advanced options when you need to review Folder location, the optional display name or Folder type. Cloud folders must already be available on this computer; choose a readable local path.",
+          "caption": "Optional source name and automatically chosen folder type.",
+          "chapter": "sources"
+        }
+      ]
+    },
+    {
+      "file": "02-08-source-scan-complete.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 145532,
+      "sha256": "7D2BF0C2546B43E4C9C0870A21383D9D453B472AFEE8651EBA9A88EDE473B16C",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "sources-08",
+          "action": "Start the offered scan and wait for the source card to show Ready and a successful scan time. The first demonstrated source contains 16 supported media files; its text file is not indexed as media.",
+          "caption": "The demonstration scan completed with 16 photos and videos.",
+          "chapter": "sources"
+        }
+      ]
+    },
+    {
+      "file": "02-09-source-refresh-complete.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 145464,
+      "sha256": "D27A023065DB797415E0C483C7A0B0FF77EFAC81A771EBB1EBEB3490B037A8C3",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "sources-09",
+          "action": "Use Refresh on that source card when you want to scan it again. Check the refreshed status and successful scan time. Refreshing a source does not itself select it for organization.",
+          "caption": "The source is ready after a refresh.",
+          "chapter": "sources"
+        }
+      ]
+    },
+    {
+      "file": "03-01-photos-health-check.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 184765,
+      "sha256": "32AE376AC20FF4BC10D895F32AB0202942C034A156F26C73BF668CE96BC0069E",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "health-01",
+          "action": "Review the health totals. The small demonstration has 16 media files: 14 valid previews and two video preview issues, with all 16 originals last seen as available.",
+          "caption": "The actual health summary for the small demonstration library.",
+          "chapter": "health"
+        }
+      ]
+    },
+    {
+      "file": "03-02-thumbnail-repair-complete.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 187428,
+      "sha256": "D94FAEC9FAD96233865C369B6450B1E536E1E6D74CA207D4F349CDC7B1977B04",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "health-02",
+          "action": "Choose the explicit missing-thumbnail repair action and read its result. In this example two video items were checked, no previews were repaired, and both were reported as unsupported for preview generation.",
+          "caption": "Repair reported two unsupported preview cases.",
+          "chapter": "health"
+        }
+      ]
+    },
+    {
+      "file": "03-04-date-reanalysis-result.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 187805,
+      "sha256": "7755505A2C9E649A3A1D7FDDA7ED940467EA78482A8C0BE01DA173B501CD2C7D",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "health-03",
+          "action": "Run the offered missing-date reanalysis and inspect the evidence summary. Here all 16 dates resolved using Filesystem last modified. That is fallback evidence and can reflect copying or editing rather than capture time.",
+          "caption": "The real date-reanalysis result and its evidence source.",
+          "chapter": "health"
+        }
+      ]
+    },
+    {
+      "file": "04-01-duplicate-finder-ready.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 112893,
+      "sha256": "537A649C314F90D2AF14BDE513E2679599F2BE188DBA05C145B27503821F4C90",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "duplicates-01",
+          "action": "Open Duplicate Finder after scanning the source. Review how many photos and videos are ready to check, then choose Find Duplicates.",
+          "caption": "The initial 16-item duplicate scan is ready.",
+          "chapter": "duplicates"
+        }
+      ]
+    },
+    {
+      "file": "04-06-duplicate-scan-outcome.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 166556,
+      "sha256": "82FF3FE4BF582AEF2AC68FE025AB59B392D6F46E2E2AC733D6D5787CF0B2994D",
+      "captureMethod": "Native PrintWindow direct PNG; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "duplicates-02",
+          "action": "Wait for Duplicate scan complete. Review the totals before making any decisions: the initial demonstration found three groups, six duplicate files and about 16.9 MB potentially reclaimable.",
+          "caption": "Three exact duplicate groups found in the original demonstration.",
+          "chapter": "duplicates"
+        }
+      ]
+    },
+    {
+      "file": "04-07-inspect-duplicate-results.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 238678,
+      "sha256": "832CCCA94288BAED447587CC8CAE1C105CA5DA4ABD8DC4693DFA8E1BB1F1DF28",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "duplicates-03",
+          "action": "Scroll through Exact Duplicate Group entries. Compare the file names, locations and sizes. Open Folder can help locate a listed file; browsing a group does not remove it.",
+          "caption": "The actual duplicate entries can be inspected individually.",
+          "chapter": "duplicates"
+        }
+      ]
+    },
+    {
+      "file": "04-33-duplicate-scan-running.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 116028,
+      "sha256": "B3A774D831F8ED458D75A8EF67F94E2E058172F85F3EECE7F237BC5556820017",
+      "captureMethod": "Native PrintWindow direct PNG; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "duplicates-04",
+          "action": "For a larger collection, watch Finding exact duplicates and the number of candidate files checked. The larger generated test contains 544 catalog items. The tested build shows Stop Scan during this operation.",
+          "caption": "A genuine running duplicate scan with Stop Scan.",
+          "chapter": "duplicates"
+        }
+      ]
+    },
+    {
+      "file": "04-36-duplicate-scan-cancelled.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 98906,
+      "sha256": "8E8532826A8DCB42B85875C5A12F38F3B1D2D4CC85E020170E61E1EF0EE787D4",
+      "captureMethod": "Native PrintWindow direct PNG; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "duplicates-05",
+          "action": "Choose Stop Scan to end a running duplicate search. The demonstrated operation returned to the ready-to-check screen. A stopped search is incomplete; it is not proof that no duplicates exist.",
+          "caption": "The real result after stopping the duplicate scan.",
+          "chapter": "duplicates"
+        }
+      ]
+    },
+    {
+      "file": "05-01-library-overview.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 554266,
+      "sha256": "34EB0B533D2D6CE25B06E4C16E18B0F764E0C3626976E760BCF25E3B873E70A9",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-01",
+          "action": "Open Browse Library. Review the overview and visible cards. The first example contains 14 photos and two videos; unavailable video previews appear as placeholders.",
+          "caption": "The small demonstration Library overview.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-02-search-garden.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 342213,
+      "sha256": "683F05AE13F70B6F96F71DB5D2E9486B53B9BCBD122B69A645FDD49E625C231E",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-02",
+          "action": "Enter garden into Search media. The small dataset returns seven matching photo files. Use a recognizable filename fragment when searching your own collection.",
+          "caption": "The initial garden search returns seven photos.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-03-select-a-photo.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 369367,
+      "sha256": "9FB58C15F282DADEBE5CEE5EAEDF27ED0DFB44B08236F851A0D86154627113C0",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-03",
+          "action": "Select the checkbox on one photo card. Review the selection state before applying an action. Photo rotation controls are associated with the selected photograph.",
+          "caption": "A single generated photo is selected.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-04-rotate-photo-right.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 370484,
+      "sha256": "A17D3EDDCE47FCB1BC19E75F263C2C2AABABA60D5519D9CF7620725E0D951B7A",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-04",
+          "action": "Choose the selected photo's Rotate Right control. Check the preview orientation. The rotation is recorded for the catalog preview and for organized or exported copies; it does not rewrite the original source image.",
+          "caption": "The real photo preview after a right rotation.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-05-undo-photo-rotation.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 368023,
+      "sha256": "9D68767BC8B4F4F6EB6380AC62ED65708D2E54E8B142FD947326D5D409C48BFE",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-05",
+          "action": "Choose Undo for that photo to restore its earlier orientation. Confirm the preview before continuing.",
+          "caption": "Undo restored the individual preview.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-06-select-all-visible-photos.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 345780,
+      "sha256": "E34FC9796580BDDE37C3710AC4E613FBF5047FE0B6082573C430E351F58A924B",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-06",
+          "action": "Choose Select all visible photos to select the seven search results together. Check the toolbar's selected count; this action concerns the visible photo results.",
+          "caption": "Seven visible garden photos selected.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-07-batch-rotate-left.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 375271,
+      "sha256": "4CB283C9856CA3C9BCBDBA5A50AB854D1F94D0ADBDA9F26102907B4761A6D004",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-07",
+          "action": "Use the batch Rotate Left action. Review the selected previews and keep the selection while checking the result.",
+          "caption": "The selected group after a left rotation.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-08-undo-batch-left-rotation.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 344790,
+      "sha256": "DDC96BE97B0AB02DF3684283B2DCF064BB6F0F2ADAA2C4519EF2B949194F690F",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-08",
+          "action": "Use the batch Undo action to restore the previous orientations before trying another rotation.",
+          "caption": "The batch left rotation was undone.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-09-batch-rotate-180.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 374781,
+      "sha256": "4C04542D0DADFC5DE99A5642D78B0CDD369E358C03FEFCE19A60C1C21489BECC",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-09",
+          "action": "Choose Rotate 180 for the selected group. Check several previews rather than relying only on the toolbar.",
+          "caption": "The selected photos after a 180-degree rotation.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-10-undo-batch-180.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 344790,
+      "sha256": "DDC96BE97B0AB02DF3684283B2DCF064BB6F0F2ADAA2C4519EF2B949194F690F",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-10",
+          "action": "Use Undo again to restore the group. In the demonstration every rotation was undone before organization, and original-file hashes remained unchanged.",
+          "caption": "The original preview orientations are restored.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-11-clear-photo-selection.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 341985,
+      "sha256": "D01B84B83BD4936D4691A8CCF20D7A43BDDCE7F6D43E5AB8791B0C910052BD43",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-11",
+          "action": "Choose Clear Selection when you have finished the batch operation. Confirm the selected-count toolbar is cleared.",
+          "caption": "The photo selection is cleared.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-12-clear-library-search.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 553086,
+      "sha256": "EBD010F63613D3784E671CD03C80D1990039BFC8EB9758C77EC1F50889A273B2",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-12",
+          "action": "Clear Search media to return to the broader gallery. Existing filters can still restrict what is shown.",
+          "caption": "The initial search has been cleared.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-15-photos-filter-confirmed.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 521765,
+      "sha256": "C5A100533CBF7791C1346C613E8D3FCA2B1287FB0307F6357B898DDE288E85AA",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-13",
+          "action": "Choose Photos only from the media-type filter. In the later, expanded demonstration there are 28 photo records because a second disposable sample source was added.",
+          "caption": "The real photo-only filter result.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "05-17-filename-sort-confirmed.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 361248,
+      "sha256": "3BA7EF9D62C312BEAC46C6FDF1AC988D727E5C1D89D9ED4E9274DC2B1743AAB4",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "library-14",
+          "action": "Choose File name A–Z from the sorting list and close the list. Other observed choices include newest, oldest, reverse filename, largest, smallest, photos first and videos first.",
+          "caption": "The garden results ordered by filename.",
+          "chapter": "library"
+        }
+      ]
+    },
+    {
+      "file": "06-01-guided-organizer.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 169879,
+      "sha256": "A3336BF2FA776A37B38776CB87FBC8EAA61D835678062F75EE0E85E400FBA2D8",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-01",
+          "action": "With Guided selected, open Organize Photos & Videos. Review the Choose File Types dialog and its scanned, selected and excluded counts.",
+          "caption": "The actual file-type dialog before organization.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "06-02-no-file-types-selected.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 168353,
+      "sha256": "526A93FCCAC0D87B0D01B6CD75A1D8825CF8FA7C6895B7913E6793D79093CCBC",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-02",
+          "action": "Choose Deselect All if you want to rebuild the selection. With no type selected, Continue is unavailable. Select at least one supported type before proceeding.",
+          "caption": "Zero selected files safely disables Continue.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "06-03-select-all-file-types.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 170063,
+      "sha256": "B19120718BE6895420F32C5E57C7CF03B8A39DF9D509D74905D15C6C78314625",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-03",
+          "action": "Choose Select All to include all discovered types. This demonstration then selects 17 files, including its optional text file.",
+          "caption": "All discovered types selected, including the text file.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "06-05-select-media-only.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 169188,
+      "sha256": "8B26F5F8E83860B19D714D822C4CA8A5959B1D352B1D3E67DDCBC81B6D05D354",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-04",
+          "action": "Clear the .txt checkbox to exclude the optional text file. Verify 17 scanned, 16 selected and one excluded before continuing.",
+          "caption": "Only the 16 supported media files remain selected.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "06-06-file-types-confirmed.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 152459,
+      "sha256": "8923E6981CAA713CE38C569027225DD9A0A3BEE7B35FDF32450E05CAE96B84F5",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-05",
+          "action": "Choose Continue. Check Selected Folder and its complete path before configuring the organization pattern.",
+          "caption": "The selected media types are confirmed.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "06-08-guided-native-organization-plan.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 187178,
+      "sha256": "3E6B112FF28E9FB6FDB4735A453A61099C8C3C6CAF2D642AAA74861E72C981D5",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-06",
+          "action": "Choose Year / Month / Day in Pattern and close the list to confirm it. Review the organization plan and category counts before selecting a destination. This plan uses the untouched original 16-media source.",
+          "caption": "The actual Guided organization plan before destination confirmation.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "06-09-destination-folder-picker.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 30655,
+      "sha256": "0420818A2890BC1DFDF3D5AA112FCF52FCA18613923B62F1972B19E1EEB6F914",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-07",
+          "action": "Choose Change Location when you want a specific destination. The native Windows picker requires an existing folder; keep it separate from your source and backup.",
+          "caption": "The real native destination-folder picker.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "06-10-enter-copy-destination.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 32386,
+      "sha256": "6B819DC99E604A1280B465FE59977635F76E43A44D6DE16A023201D6716DEEF2",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-08",
+          "action": "Enter or navigate to your intended destination and choose Select Folder. The demonstration uses Copy Results. MEDIA KOLFAT adds its MEDIA KOLFAT Organized Media root inside the selected folder.",
+          "caption": "The disposable Copy Results destination entered.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "06-11-selected-copy-destination.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 189744,
+      "sha256": "56878507D94C4CE23CBD99D6FBF5BEE35CFEC5F001F0B31842D1956EA99B57BF",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-09",
+          "action": "Read Selected destination in the app, then review the plan's categories and available space. The original example places exact copies into the duplicated-photo and duplicated-video categories after the completed duplicate scan.",
+          "caption": "The verified destination and real organization plan.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "06-12-confirm-copy.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 178853,
+      "sha256": "2E0A702CE5D8847012371492A6830D390C7C7F84454CC1E435C88BC3782ED423",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-10",
+          "action": "Choose Copy Selected Files. Read Confirm copy: originals remain untouched and new copies are created. Choose Cancel if the source, selection or destination is wrong.",
+          "caption": "The real COPY confirmation.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "06-14-copy-complete-report.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 181829,
+      "sha256": "A806F8D04A6A72643B1A633EFE797B823A86D32EADE71CEC14E6CA08D2406757",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "copy-11",
+          "action": "Confirm Copy Selected Files and wait for completion. The demonstrated result is 16 copied, zero identical skipped, zero renamed and zero failed. Read the report path and category counts.",
+          "caption": "A successful completed COPY with its report.",
+          "chapter": "copy"
+        }
+      ]
+    },
+    {
+      "file": "07-01-activity-after-copy.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 149250,
+      "sha256": "1C92D07D8AE749CA04D0D3A3AC6214007842B93C9FB92B038011B62EB95359D1",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "reports-01",
+          "action": "Open Activity after an operation. Locate the Copy Photos & Videos entry and compare processed, copied, skipped and failed counts with the destination summary.",
+          "caption": "The initial completed 16-file COPY entry.",
+          "chapter": "reports"
+        }
+      ]
+    },
+    {
+      "file": "07-02-completed-and-cancelled-activity.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 183826,
+      "sha256": "9FB7B77DCCEB80D4B7657B053D09A381C01195C6DDC18A5CBA771713210CDCA4",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "reports-02",
+          "action": "Compare a completed operation with a cancelled one. The demonstrated cancelled COPY processed 110 files; the later completed retry processed 512 with 110 skipped. A cancelled duplicate scan does not provide a complete duplicate result.",
+          "caption": "Real completed and cancelled history entries.",
+          "chapter": "reports"
+        }
+      ]
+    },
+    {
+      "file": "07-03-verified-move-activity.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 195240,
+      "sha256": "5DAD8F95FDE0ECDACA9592362248FEE54447E3260A1009622086B145D82F017D",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "move-08",
+          "action": "Open Activity and find the completed Move Photos & Videos entry. Review its counts and Open Move Report link. The independent backup must remain available after a successful MOVE.",
+          "caption": "The real completed MOVE entry in Activity.",
+          "chapter": "move"
+        },
+        {
+          "step": "reports-03",
+          "action": "Use Open Copy Report or Open Move Report on the relevant entry to locate its TXT report. Use Open Destination to review the output folder. Check the report mode, source and destination entries, status lines and final totals.",
+          "caption": "The completed MOVE, completed COPY and cancelled COPY entries together.",
+          "chapter": "reports"
+        }
+      ]
+    },
+    {
+      "file": "08-01-advanced-mode.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 149314,
+      "sha256": "AA3E9898D3FAB436AA1DB0B1CA3B44F6A57EF7160C88BAE47B1BB5F3D3994C36",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "move-01",
+          "action": "Select Advanced in the Experience area. The guided step strip is no longer the main navigation aid. Continue to the organizer only after selecting the intended demonstration source.",
+          "caption": "Advanced Mode selected in the real app.",
+          "chapter": "move"
+        }
+      ]
+    },
+    {
+      "file": "08-35-correct-source-confirmed.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 137168,
+      "sha256": "E0ED50815ACEE78B38093A272B01A10037A9DEC9D3F41EEB94EF557169500014",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "move-02",
+          "action": "Confirm the media types and inspect Selected Folder. The demonstrated operation explicitly shows Move Samples, its exact path, and 17 scanned with 16 selected and one excluded.",
+          "caption": "The correct backed-up disposable source is selected.",
+          "chapter": "move"
+        }
+      ]
+    },
+    {
+      "file": "08-36-verified-move-plan.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 182446,
+      "sha256": "499860A1AA05354ACB930D1075AFE09E5A6CE7EA2F5DCBD0CB48C4A3AE805741",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "move-03",
+          "action": "Confirm Year / Month in Pattern and review the resulting plan. This MOVE example did not reuse a completed duplicate classification, so its plan says Duplicates: Not checked.",
+          "caption": "The actual plan for the disposable MOVE clone.",
+          "chapter": "move"
+        }
+      ]
+    },
+    {
+      "file": "08-37-final-move-destination.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 30275,
+      "sha256": "DD89BD1085CD9023A20F8FF95313316950F8656A6C45E3F7EE6737091C86466F",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "move-04",
+          "action": "Choose Change Location and select the separate Move Results directory. Verify the path before accepting it.",
+          "caption": "The approved disposable MOVE destination in the native picker.",
+          "chapter": "move"
+        }
+      ]
+    },
+    {
+      "file": "08-39-final-move-warning.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 197398,
+      "sha256": "1AB5A2782ECDA84C75CD049CACED8A31BE11858EBDBB88A0EB2CDBFBB08A084A",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "move-05",
+          "action": "Select Move under Transfer mode. Read the warning: destination files are verified before sources are removed, source folders are not deleted, and a detailed report is saved in the destination.",
+          "caption": "The actual Advanced MOVE warning and selected destination.",
+          "chapter": "move"
+        }
+      ]
+    },
+    {
+      "file": "08-40-final-move-confirmation.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 187634,
+      "sha256": "7F4DAF266101B906DCD2FD491F0C698B7E19E4C1673E0BB498CFE8B593FD2EA0",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "move-06",
+          "action": "Choose Move Selected Files and review Confirm move. It states that verified destination files will be kept and their exact source files removed. Cancel if anything is uncertain.",
+          "caption": "The final real MOVE confirmation.",
+          "chapter": "move"
+        }
+      ]
+    },
+    {
+      "file": "08-42-move-complete-report.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 184208,
+      "sha256": "869914341C4CEFD6773B38205FFB6F662BC058525FCF6F403B2EE028F29B4337",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "move-07",
+          "action": "Confirm the move only after checking source, destination and backup. Wait for Move complete and inspect the counts. The demonstration completed with 16 moved, zero copied with source retained, and zero failed.",
+          "caption": "The actual successful 16-file MOVE and report path.",
+          "chapter": "move"
+        }
+      ]
+    },
+    {
+      "file": "09-01-settings.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 167188,
+      "sha256": "E229FA043BE79EEEE66965E3F6B4FB2F9296FCB665E0159F3C7B67A40E6D2B61",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "settings-01",
+          "action": "Open Settings. Choose a language available in the app, review Guided and Advanced, and read the Safety controls. Confirmation before organizing and the source-removal warning are enforced in the displayed interface.",
+          "caption": "The real Language, Experience and Safety settings.",
+          "chapter": "settings"
+        }
+      ]
+    },
+    {
+      "file": "09-03-organizing-library-settings.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 174162,
+      "sha256": "A7FF43F98DCEF8E1209ED43545C7EEFB7D5061197FA369BABBF349EEF80643BA",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "settings-02",
+          "action": "Scroll to Organizing and review Default organize pattern and Destination behavior. The displayed behavior is Ask every time. Review the local-processing and report-storage information above it.",
+          "caption": "Organizer defaults and local privacy information.",
+          "chapter": "settings"
+        }
+      ]
+    },
+    {
+      "file": "09-04-accessibility-settings.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 168078,
+      "sha256": "DA6A79F777B617E4FC3A5AB4AEB8C3196312C33E49179A081AD00E70F102599F",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "settings-03",
+          "action": "Review Library preferences for preview size, photo order, date and file-size labels, automatic Library opening after scan, and remembering the last Library view.",
+          "caption": "The real Library preference controls.",
+          "chapter": "settings"
+        }
+      ]
+    },
+    {
+      "file": "09-05-enable-larger-text.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 181210,
+      "sha256": "41AD3316F96C311EB3CB42FF2D80416E7612B8FF9B395CE224071C2FDAA7A14A",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "settings-04",
+          "action": "Enable Larger text when you need easier reading. Check the changed text and navigation layout before proceeding.",
+          "caption": "Larger text applied in the disposable profile.",
+          "chapter": "settings"
+        }
+      ]
+    },
+    {
+      "file": "09-06-restore-standard-text.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 168078,
+      "sha256": "DA6A79F777B617E4FC3A5AB4AEB8C3196312C33E49179A081AD00E70F102599F",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "settings-05",
+          "action": "Clear Larger text to restore standard text in this demonstration. Larger buttons, Reduced motion and guidance options can be chosen to suit the user.",
+          "caption": "Standard text restored.",
+          "chapter": "settings"
+        }
+      ]
+    },
+    {
+      "file": "09-07-maintenance-settings.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 170679,
+      "sha256": "012F582B1550C2FC1D4DD803A1480228A2E5778FDE6BB03717C5F7D7A5376DB8",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "settings-06",
+          "action": "Scroll to Maintenance and review the storage totals. Only app-generated files are counted. Refresh Usage updates the totals; Clear Thumbnail Cache concerns generated previews and was not needed for this example.",
+          "caption": "Maintenance usage and available actions.",
+          "chapter": "settings"
+        }
+      ]
+    },
+    {
+      "file": "09-09-review-date-evidence.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 178317,
+      "sha256": "6920AD3B5EBD8EDD8D21263F5B3EAE8EDF1D04F275F4AEA13805976D10A7C485",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "health-04",
+          "action": "Open Settings and expand Advanced date policy to understand enabled evidence. Embedded metadata, supported XMP, filenames, structured folders and filesystem last modified are listed. Windows CreationTime is not used as capture-date evidence.",
+          "caption": "Actual date-policy controls and the low-confidence warning.",
+          "chapter": "health"
+        },
+        {
+          "step": "settings-07",
+          "action": "Expand Advanced date policy. Read the explanation for each enabled evidence source and the low-confidence warning for filesystem last-modified dates. Changes apply to new scans, reanalysis and organizer previews.",
+          "caption": "The five actual date-evidence options.",
+          "chapter": "settings"
+        }
+      ]
+    },
+    {
+      "file": "09-10-reset-settings-confirmation.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 175481,
+      "sha256": "CD6AA48B62018ED6BFC471AC9003892B326921C006DB56EEA0F2A2CF4902494E",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "settings-08",
+          "action": "Choose Reset Settings to Defaults only to review its confirmation. The warning says settings, sources, Library index, workflow progress and thumbnail cache will be cleared. Original media and organized copies will not be changed.",
+          "caption": "The actual fresh-start warning.",
+          "chapter": "settings"
+        }
+      ]
+    },
+    {
+      "file": "09-12-reset-cancelled.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 171183,
+      "sha256": "C1F2D36C6482EC6C9052E36923FF238B1F2B5DBB03A839B8710B910A1C6D0FA6",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "settings-09",
+          "action": "Choose Cancel to preserve the existing demonstration catalog. No reset was performed on the real user profile or the isolated demonstration profile.",
+          "caption": "Fresh-start reset cancelled.",
+          "chapter": "settings"
+        }
+      ]
+    },
+    {
+      "file": "10-01-library-no-search-results.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 122501,
+      "sha256": "AA311D8AC9742F09F96AE7CEF606E9976B064284077B1915D9AFADD69AA7CDEA",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-01",
+          "action": "If the Library says No photos match your choices, check Search media first. A filename fragment that matches no file can hide every result even when the catalog contains media.",
+          "caption": "A genuine zero-result search.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "10-02-recover-search-results.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 391497,
+      "sha256": "DC6A12998FB5B22B614B7E6B35BFD2A2E30307C636486F6387EF2CE18FA3B416",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-02",
+          "action": "Replace the search with a known filename fragment, such as garden in this demonstration. Confirm the results return before changing unrelated settings.",
+          "caption": "The known garden results return.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "10-04-review-unavailable-filter.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 120437,
+      "sha256": "D927D4C1F92132EC68DABCDA67F5728A59A84DD06578C0F9649FBBDAA508884F",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-03",
+          "action": "Check the availability filter. Unavailable only returns no results when the matching originals are available. A restrictive filter is not proof that the files are missing.",
+          "caption": "The real empty result caused by Unavailable only.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "10-05-show-all-recovery.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 433806,
+      "sha256": "72D9090988E8ADA95B700EB9A24D5C9C455BC67212AAA83E931A56E38FBDBE18",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-04",
+          "action": "Choose Show All Photos on the empty-result screen to recover the broader gallery. Review the resulting search and filter settings.",
+          "caption": "The app's recovery action restores Library results.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "10-08-invalid-folder-error.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 95088,
+      "sha256": "F6B0BBF27DE93573F69E6CC86F9ABEDC72E224588FABF1CFC62F356A29D81F16",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-05",
+          "action": "If the folder picker says Folder is unavailable or cannot be opened, check Current folder for a spelling error, a disconnected drive or an inaccessible location. The demonstration uses a nonexistent path and Select This Folder is disabled.",
+          "caption": "A genuine unavailable-folder validation error.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "10-10-empty-folder.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 64760,
+      "sha256": "747510AF771F9FE5715F71830D1E632BA56546FF08DB5760601FBFDFFC145197",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-06",
+          "action": "Navigate to the correct existing folder and choose Go. An empty folder displays zero supported photos or videos. Choose a known media folder or cancel selection.",
+          "caption": "The real empty demonstration folder.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "10-12-unsupported-only-preview.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 65095,
+      "sha256": "9FCDA0EA1288D89DAB0D1B9DFAC3643329AD381BF1809E2BE425ACDF2BBD3D08",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-07",
+          "action": "A folder containing only unsupported files can also show zero media. The text-only demonstration is not treated as a photo or video collection. Optional Other Files are selected separately during organization.",
+          "caption": "The real unsupported-only folder preview.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "10-14-invalid-custom-pattern.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 148548,
+      "sha256": "7F63F6D70DE48733502111418BB2FD7755EBDEA8CE88A8E94E6CCC45C7F9A5DD",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-08",
+          "action": "For Custom patterns, use the listed tokens and relative folder segments. The demonstrated parent-traversal pattern is rejected with Folder patterns cannot contain empty or traversal segments; copying remains unavailable.",
+          "caption": "A genuine rejected custom pattern.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "10-17-custom-plan-reconfirmed.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 183792,
+      "sha256": "0F99A72EAA30E80775DCC58D26814F2490E1392C5D42BFFA31591267005852F1",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-09",
+          "action": "Correct the custom value to a valid token pattern, such as {YYYY}\\{YYYY-MM}. In the tested build, reopen and close the Pattern list to reconfirm it and restore the plan.",
+          "caption": "The corrected custom pattern produces a plan again.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "10-19-catalog-only-removal-confirmation.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 165225,
+      "sha256": "A80BA6BA5483B67BEFD9D324DA19E033F7DCEC0CD6BD2EF328DF2D0B8608347C",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-10",
+          "action": "Read the Remove Folder confirmation before accepting. It removes the folder's records from MEDIA KOLFAT and makes them disappear from the Library; it does not delete original files or the source folder.",
+          "caption": "The explicit catalog-only source-removal warning.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "10-20-disposable-source-removed-from-catalog.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 142199,
+      "sha256": "B4A4BA78ECC669612AD0542595543CDDCF52DE98CC9ECCB2137E615ABA8FD54C",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "troubleshooting-11",
+          "action": "For the disposable demonstration only, confirm Remove from MEDIA KOLFAT, then verify the original files remain. Re-adding the intended source through manual selection restores its registration; scan it again before organizing.",
+          "caption": "The real catalog-only removal completed with originals retained.",
+          "chapter": "troubleshooting"
+        }
+      ]
+    },
+    {
+      "file": "11-05-copy-timing-destination.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 30459,
+      "sha256": "0772E8F29B8EB7E4E3A6A534C8F5C8BAC34103A01AA0A163C7D41201A333C390",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "progress-01",
+          "action": "Choose a separate destination for the larger COPY example and verify its full path. The demonstration uses Copy Timing Results.",
+          "caption": "The larger example uses its own disposable destination.",
+          "chapter": "progress"
+        }
+      ]
+    },
+    {
+      "file": "11-07-copy-timing-confirmation.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 186281,
+      "sha256": "F4A127540B6DAC0EF657FFEA60137EACB48A72743F09DCE3DD52437F628EAE3A",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "progress-02",
+          "action": "Review and accept the real COPY confirmation after the source, selection, destination and free-space checks. A short preparation phase can precede copying.",
+          "caption": "COPY confirmation for the generated timing dataset.",
+          "chapter": "progress"
+        }
+      ]
+    },
+    {
+      "file": "11-10-copy-paused.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 195972,
+      "sha256": "2B6BB32A36D7F4F9B95E4775D127B489F37CE6774D028D19BDE16168A8661220",
+      "captureMethod": "Native PrintWindow direct PNG; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "progress-03",
+          "action": "Choose Pause during copying and wait until Resume appears. The operation pauses safely; it may finish its current file before the paused state is displayed.",
+          "caption": "The actual Pause control has changed to Resume.",
+          "chapter": "progress"
+        }
+      ]
+    },
+    {
+      "file": "11-11-copy-resumed.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 209670,
+      "sha256": "749FC02A79E1DC02D830DE04FFEF73CF53FDB6E59400F89574DB39735DE0F447",
+      "captureMethod": "Native PrintWindow direct PNG; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "progress-04",
+          "action": "Choose Resume to continue the same active operation. Pause reappears while copying continues.",
+          "caption": "The real resumed COPY controls.",
+          "chapter": "progress"
+        }
+      ]
+    },
+    {
+      "file": "11-13-cancelled-copy-report.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 196221,
+      "sha256": "9BAA8BB5612999DD313D7723E30A49C4F3A85189116E4B6D4777843D28927A3D",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "progress-05",
+          "action": "Choose Stop when you need to end the operation. Read the cancelled summary and report. The first larger example retained 110 completed copies, with zero failures; cancellation did not remove those valid copies.",
+          "caption": "The real cancelled COPY summary: 110 completed copies retained.",
+          "chapter": "progress"
+        }
+      ]
+    },
+    {
+      "file": "11-14b-retry-copy-confirmation.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 186281,
+      "sha256": "F4A127540B6DAC0EF657FFEA60137EACB48A72743F09DCE3DD52437F628EAE3A",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "progress-06",
+          "action": "To finish after cancellation, start COPY again with the same source, pattern and destination. Review the new confirmation. This is a new operation; already completed identical files can be skipped.",
+          "caption": "The actual confirmation for a safe retry.",
+          "chapter": "progress"
+        }
+      ]
+    },
+    {
+      "file": "11-15-retry-copy-progress.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 197856,
+      "sha256": "5B68C211D382CED2A80F3D46E420A275E0366F546D39EB53A784968575A2E047",
+      "captureMethod": "Native PrintWindow direct PNG; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "progress-07",
+          "action": "Read the current filename, file count and percentage in the progress panel. On retry, the count covers the files still needing copying rather than the previously completed identical files.",
+          "caption": "Genuine COPY progress after retrying.",
+          "chapter": "progress"
+        }
+      ]
+    },
+    {
+      "file": "11-16-retry-copy-paused-progress.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 180700,
+      "sha256": "92FD53ED8298690CF0CD9534A6FA0D04A79416C06750332543C1844B5A6005F4",
+      "captureMethod": "Native PrintWindow direct PNG; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "progress-08",
+          "action": "Pause again if necessary and wait for the Paused label. The displayed count and percentage describe the actual paused operation.",
+          "caption": "A genuine paused progress panel.",
+          "chapter": "progress"
+        }
+      ]
+    },
+    {
+      "file": "11-17-retry-copy-resumed-progress.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 196602,
+      "sha256": "5BEB1840158AB5C39CA1E5C75364ECDFC7689092D1F82877A21F2EFA1CC0D4DE",
+      "captureMethod": "Native PrintWindow direct PNG; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "progress-09",
+          "action": "Choose Resume and allow the operation to finish. Keep the destination connected and do not change the source files while it runs.",
+          "caption": "The progress panel after Resume.",
+          "chapter": "progress"
+        }
+      ]
+    },
+    {
+      "file": "11-19-retry-completion-report.png",
+      "width": 1934,
+      "height": 1087,
+      "bytes": 189082,
+      "sha256": "6668CF8F0910A56DA25693E0AB6C892FD6E36B0CD60AA4B5A67512418F7D529C",
+      "captureMethod": "Native user32 PrintWindow PW_RENDERFULLCONTENT (2), direct PNG encoder, one genuine application window; no compositing",
+      "originalPng": true,
+      "jpegDerived": false,
+      "upscaled": false,
+      "binaryVerification": "PASS",
+      "visualVerification": "PASS",
+      "uses": [
+        {
+          "step": "progress-10",
+          "action": "Read the final summary. The retry copied 402 remaining files and skipped 110 identical files, with zero renamed and zero failed. All 512 destination media hashes were then verified.",
+          "caption": "Completed recovery: 402 copied and 110 identical skipped.",
+          "chapter": "progress"
+        }
+      ]
+    }
+  ]
+}

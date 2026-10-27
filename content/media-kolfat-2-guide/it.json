@@ -1,0 +1,714 @@
+{
+  "language": "it",
+  "title": "Guida utente di MEDIA KOLFAT 2.0",
+  "description": "Guida illustrata per aggiungere foto e video, verificarne lo stato, trovare duplicati, organizzare con COPY o MOVE, recuperare operazioni e leggere i rapporti.",
+  "lead": "Segui l'applicazione Windows installata dal primo avvio ai risultati verificati. Gli esempi usano immagini e video generati con backup indipendenti. Tutte le schermate sono autentici PNG nativi.",
+  "versionNote": "Verificato con MEDIA KOLFAT 2.0.0, build 2.0.0.0. Le schermate mostrano l'interfaccia inglese. I conteggi cambiano con il dataset più grande: controlla sempre quelli della tua raccolta.",
+  "safety": "Crea un backup indipendente. Inizia con COPY, che conserva gli originali. Advanced MOVE rimuove i file di origine dopo la verifica della destinazione e i controlli di sicurezza. Conserva il backup fino alla verifica dei risultati e del rapporto.",
+  "contentsLabel": "Indice",
+  "stepLabel": "Passaggio",
+  "imageLinkLabel": "Apri il PNG originale",
+  "backLabel": "Torna all'indice",
+  "chapters": [
+    {
+      "id": "start",
+      "title": "1. Avvio e percorso guidato",
+      "intro": "Apri MEDIA KOLFAT installato. La barra laterale comprende Performance Check, Add Photos & Videos, Photos Health Check, Duplicate Finder, Browse Library, Organize Photos & Videos, Activity, Settings e About. Experience offre Guided e Advanced.",
+      "steps": [
+        {
+          "id": "start-01",
+          "image": "01-01-first-launch-guided.png",
+          "text": "Inizia con Guided e segui l'azione evidenziata. Grigio indica i passaggi futuri, ambra quello attuale e spunte verdi quelli completati.",
+          "caption": "Primo avvio in Guided."
+        },
+        {
+          "id": "start-02",
+          "image": "01-02-performance-check-complete.png",
+          "text": "Esegui Run Quick Check e attendi. Il computer dimostrativo ha ottenuto 98%; il tuo risultato può differire.",
+          "caption": "Controllo completato al 98%."
+        },
+        {
+          "id": "start-03",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Apri Add Photos & Videos. Choose Photos & Videos Manually limita la scelta a una cartella nota.",
+          "caption": "Scelte automatica e manuale reali."
+        },
+        {
+          "id": "start-04",
+          "image": "01-04-about-version.png",
+          "text": "Apri About e Release Information per leggere Version e Build. Usa la barra laterale per tornare al lavoro.",
+          "caption": "Versione e build verificate."
+        },
+        {
+          "id": "start-05",
+          "image": "01-05-about-privacy.png",
+          "text": "Espandi Privacy & Data Safety e leggi le differenze tra scansione, COPY e Advanced MOVE. Mantieni un backup indipendente.",
+          "caption": "Spiegazione della sicurezza nell'app."
+        }
+      ],
+      "tips": [
+        "Freccia animata e bagliore indicano l'azione consigliata. Settings include Reduced motion e preferenze di guida.",
+        "Guided suggerisce l'ordine delle attività; Advanced offre un percorso diretto e MOVE quando il piano è pronto.",
+        "About contiene anche Legal & Policies, Support, Technical Information, Open-Source & Third-Party Licenses e Product Information."
+      ],
+      "outcome": "Sai riconoscere versione, pagine e passaggio guidato corrente."
+    },
+    {
+      "id": "sources",
+      "title": "2. Selezione manuale dell'origine",
+      "intro": "Un'origine è una cartella registrata nel catalogo locale. La scansione indicizza foto e video supportati. L'esempio comprende 14 JPEG, due AVI e un testo facoltativo in sottocartelle.",
+      "steps": [
+        {
+          "id": "sources-01",
+          "image": "02-01-manual-source-picker.png",
+          "text": "Scegli Choose Photos & Videos Manually e controlla Current folder, Locations, Folders e anteprime.",
+          "caption": "Selettore reale dell'origine."
+        },
+        {
+          "id": "sources-02",
+          "image": "02-02-enter-demo-source-path.png",
+          "text": "Inserisci il percorso completo in Current folder; qui si usa Media Samples nell'area dimostrativa.",
+          "caption": "Percorso dimostrativo inserito."
+        },
+        {
+          "id": "sources-03",
+          "image": "02-03-demo-nested-folders.png",
+          "text": "Premi Go e verifica percorso e sottocartelle. La cartella superiore può non contenere direttamente file multimediali.",
+          "caption": "Quattro sottocartelle reali."
+        },
+        {
+          "id": "sources-04",
+          "image": "02-04-preview-sample-photos.png",
+          "text": "Apri 2024 Holiday per vedere sei anteprime JPEG generate.",
+          "caption": "Sei immagini supportate."
+        },
+        {
+          "id": "sources-05",
+          "image": "02-05-return-to-demo-root.png",
+          "text": "Usa Up one folder per selezionare l'intera raccolta e ricontrolla Current folder.",
+          "caption": "Ritorno alla cartella superiore."
+        },
+        {
+          "id": "sources-06",
+          "image": "02-06-ready-to-scan-source.png",
+          "text": "Premi Select This Folder e leggi nome e percorso in Ready to add this folder prima di procedere.",
+          "caption": "Origine pronta da aggiungere."
+        },
+        {
+          "id": "sources-07",
+          "image": "02-07-source-advanced-options.png",
+          "text": "Espandi Advanced options per posizione, nome facoltativo e tipo. Le cartelle cloud devono già essere leggibili localmente.",
+          "caption": "Opzioni reali dell'origine."
+        },
+        {
+          "id": "sources-08",
+          "image": "02-08-source-scan-complete.png",
+          "text": "Avvia la scansione proposta e attendi Ready e l'ora di esito positivo. Sono indicizzati 16 file multimediali, non il testo.",
+          "caption": "Scansione completata con 16 file."
+        },
+        {
+          "id": "sources-09",
+          "image": "02-09-source-refresh-complete.png",
+          "text": "Usa Refresh per ripetere la scansione e verifica stato e orario. Non cambia l'origine dell'organizzatore.",
+          "caption": "Aggiornamento completato."
+        }
+      ],
+      "tips": [
+        "In Advanced una cartella aggiuntiva può mostrare Start Scan sulla scheda; nel primo percorso Guided la scansione parte aggiungendo l'origine.",
+        "Controlla Selected Folder nell'organizzatore: Refresh su una scheda non cambia questa selezione."
+      ],
+      "outcome": "La cartella desiderata è registrata e i contenuti supportati sono nel catalogo."
+    },
+    {
+      "id": "locations",
+      "title": "3. Ricerca automatica e posizioni",
+      "intro": "Il selettore offre This PC, cartelle e unità locali, Pictures, OneDrive e Network. Scegli solo posizioni autorizzate; dischi esterni e reti devono essere connessi e leggibili.",
+      "steps": [
+        {
+          "id": "locations-01",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Valuta Scan Computer Automatically: avvia una ricerca estesa senza limite alla cartella dimostrativa. Usa la scelta manuale per restringere la scansione.",
+          "caption": "Due opzioni con ambiti diversi."
+        },
+        {
+          "id": "locations-02",
+          "image": "02-01-manual-source-picker.png",
+          "text": "Usa This PC o un percorso preciso in Current folder. OneDrive indica file locali; rendi prima disponibile la cartella tramite Windows.",
+          "caption": "Collegamenti e campo del percorso."
+        }
+      ],
+      "tips": [
+        "La ricerca automatica dell'intero computer non è stata eseguita: leggerebbe unità esterne ai dati dimostrativi. Nessun risultato automatico è dichiarato testato.",
+        "Un collegamento non dimostra l'accesso a un account. Non sono stati consultati Pictures, OneDrive, reti o supporti personali."
+      ],
+      "outcome": "Sai scegliere metodo, posizione e ambito appropriati."
+    },
+    {
+      "id": "health",
+      "title": "4. Controllo delle anteprime e delle date",
+      "intro": "Apri Photos Health Check dopo la scansione. Stato delle miniature, date e disponibilità sono distinti: un'anteprima mancante non prova che l'originale sia perso.",
+      "steps": [
+        {
+          "id": "health-01",
+          "image": "03-01-photos-health-check.png",
+          "text": "Leggi i totali: 16 file, 14 anteprime valide, due problemi video e 16 originali disponibili all'ultima osservazione.",
+          "caption": "Riepilogo reale dello stato."
+        },
+        {
+          "id": "health-02",
+          "image": "03-02-thumbnail-repair-complete.png",
+          "text": "Esegui la riparazione esplicita delle miniature: due video controllati, zero riparati, entrambi non supportati.",
+          "caption": "Esito reale della riparazione."
+        },
+        {
+          "id": "health-03",
+          "image": "03-04-date-reanalysis-result.png",
+          "text": "Rianalizza le date mancanti. Tutte le 16 derivano da Filesystem last modified, ripiego che può riflettere copie o modifiche.",
+          "caption": "Rianalisi e origine delle date."
+        },
+        {
+          "id": "health-04",
+          "image": "09-09-review-date-evidence.png",
+          "text": "In Settings espandi Advanced date policy: metadati, XMP, nomi, cartelle e ultima modifica. Windows CreationTime non è prova della data di scatto.",
+          "caption": "Controlli reali delle date."
+        }
+      ],
+      "tips": [
+        "I file generati non hanno metadati di scatto. I nomi con 2024 o 2025 non hanno determinato le date osservate: è stata usata l'ultima modifica.",
+        "Formati non supportati possono restare senza anteprima dopo la riparazione. Conserva gli originali e usa un visualizzatore adatto."
+      ],
+      "outcome": "Sai distinguere i problemi e interpretare riparazione e prove delle date."
+    },
+    {
+      "id": "duplicates",
+      "title": "5. Ricerca dei duplicati esatti",
+      "intro": "Duplicate Finder confronta contenuti supportati e disponibili del catalogo. Il solo nome uguale non basta. Il dataset piccolo contiene tre gruppi identici intenzionali.",
+      "steps": [
+        {
+          "id": "duplicates-01",
+          "image": "04-01-duplicate-finder-ready.png",
+          "text": "Apri Duplicate Finder, verifica i 16 candidati e premi Find Duplicates.",
+          "caption": "Ricerca iniziale pronta."
+        },
+        {
+          "id": "duplicates-02",
+          "image": "04-06-duplicate-scan-outcome.png",
+          "text": "Attendi Duplicate scan complete: tre gruppi, sei file e circa 16,9 MB potenzialmente recuperabili.",
+          "caption": "Tre gruppi esatti trovati."
+        },
+        {
+          "id": "duplicates-03",
+          "image": "04-07-inspect-duplicate-results.png",
+          "text": "Scorri Exact Duplicate Group e confronta nomi, posizioni e dimensioni. Open Folder localizza i file senza eliminarli.",
+          "caption": "Dettagli reali dei duplicati."
+        },
+        {
+          "id": "duplicates-04",
+          "image": "04-33-duplicate-scan-running.png",
+          "text": "Nel dataset da 544 elementi segui Finding exact duplicates e il conteggio; compare Stop Scan.",
+          "caption": "Ricerca reale in corso."
+        },
+        {
+          "id": "duplicates-05",
+          "image": "04-36-duplicate-scan-cancelled.png",
+          "text": "Premi Stop Scan per tornare alla schermata iniziale. La ricerca interrotta è incompleta e non prova assenza di duplicati.",
+          "caption": "Ricerca interrotta."
+        }
+      ],
+      "tips": [
+        "La build installata non mostra Pause o Resume nel Duplicate Finder. COPY ha questi controlli, illustrati più avanti.",
+        "L'interfaccia testata non offre eliminazione. Lo spazio recuperabile è una stima: conserva copie verificate e backup.",
+        "Nuove scansioni o modifiche alle origini possono invalidare risultati precedenti. Controlla Not checked nella panoramica Library."
+      ],
+      "outcome": "Sai cercare duplicati, controllare i gruppi e fermarti senza eliminare originali."
+    },
+    {
+      "id": "library",
+      "title": "6. Esplorare, cercare, selezionare e ruotare",
+      "intro": "Browse Library mostra catalogo e panoramica. Filtri e ricerca limitano i risultati. La rotazione riguarda anteprime e copie organizzate o esportate, preservando gli originali.",
+      "steps": [
+        {
+          "id": "library-01",
+          "image": "05-01-library-overview.png",
+          "text": "Apri Browse Library e leggi totali, tipi, date, disponibilità e duplicati nella panoramica.",
+          "caption": "Panoramica reale della biblioteca."
+        },
+        {
+          "id": "library-02",
+          "image": "05-02-search-garden.png",
+          "text": "Cerca garden in Search media per ottenere sette risultati.",
+          "caption": "Sette corrispondenze garden."
+        },
+        {
+          "id": "library-03",
+          "image": "05-03-select-a-photo.png",
+          "text": "Seleziona una sola foto e verifica la selezione prima di agire.",
+          "caption": "Una foto selezionata."
+        },
+        {
+          "id": "library-04",
+          "image": "05-04-rotate-photo-right.png",
+          "text": "Premi Rotate Right e controlla l'anteprima: l'originale non viene riscritto.",
+          "caption": "Rotazione individuale a destra."
+        },
+        {
+          "id": "library-05",
+          "image": "05-05-undo-photo-rotation.png",
+          "text": "Premi Undo per ripristinare l'orientamento precedente.",
+          "caption": "Rotazione individuale annullata."
+        },
+        {
+          "id": "library-06",
+          "image": "05-06-select-all-visible-photos.png",
+          "text": "Premi Select all visible photos e verifica le sette selezioni.",
+          "caption": "Sette foto selezionate."
+        },
+        {
+          "id": "library-07",
+          "image": "05-07-batch-rotate-left.png",
+          "text": "Usa Rotate Left e controlla più anteprime mantenendo la selezione.",
+          "caption": "Rotazione del gruppo a sinistra."
+        },
+        {
+          "id": "library-08",
+          "image": "05-08-undo-batch-left-rotation.png",
+          "text": "Usa Undo prima di provare un'altra rotazione.",
+          "caption": "Rotazione del gruppo annullata."
+        },
+        {
+          "id": "library-09",
+          "image": "05-09-batch-rotate-180.png",
+          "text": "Usa Rotate 180 e controlla diverse anteprime.",
+          "caption": "Gruppo ruotato di 180 gradi."
+        },
+        {
+          "id": "library-10",
+          "image": "05-10-undo-batch-180.png",
+          "text": "Usa ancora Undo. Tutte le rotazioni dimostrative sono state annullate prima dell'organizzazione.",
+          "caption": "Orientamenti iniziali ripristinati."
+        },
+        {
+          "id": "library-11",
+          "image": "05-11-clear-photo-selection.png",
+          "text": "Premi Clear Selection e verifica che la selezione sia vuota.",
+          "caption": "Selezione cancellata."
+        },
+        {
+          "id": "library-12",
+          "image": "05-12-clear-library-search.png",
+          "text": "Svuota Search media; gli altri filtri possono ancora limitare la galleria.",
+          "caption": "Ricerca svuotata."
+        },
+        {
+          "id": "library-13",
+          "image": "05-15-photos-filter-confirmed.png",
+          "text": "Scegli Photos only. Il dataset successivo contiene 28 foto dopo l'aggiunta di un'altra origine dimostrativa.",
+          "caption": "Filtro delle sole foto."
+        },
+        {
+          "id": "library-14",
+          "image": "05-17-filename-sort-confirmed.png",
+          "text": "Scegli File name A–Z e chiudi la lista. Sono disponibili anche ordini per data, dimensione, nome inverso e tipo.",
+          "caption": "Ordinamento per nome."
+        }
+      ],
+      "tips": [
+        "Select all visible photos seleziona le foto visibili, non tutto il catalogo. Leggi il contatore.",
+        "Usa Undo prima di un'altra prova. Gli hash originali sono rimasti invariati."
+      ],
+      "outcome": "Sai trovare foto, selezionarle e annullare rotazioni individuali o di gruppo."
+    },
+    {
+      "id": "copy",
+      "title": "7. Completare una COPY guidata",
+      "intro": "Inizia con COPY, backup verificato e destinazione separata con spazio sufficiente. Controlla i percorsi; l'esempio copia 16 file multimediali originali.",
+      "steps": [
+        {
+          "id": "copy-01",
+          "image": "06-01-guided-organizer.png",
+          "text": "In Guided apri Organize Photos & Videos e controlla i totali di Choose File Types.",
+          "caption": "Selezione reale dei tipi."
+        },
+        {
+          "id": "copy-02",
+          "image": "06-02-no-file-types-selected.png",
+          "text": "Deselect All disabilita Continue. Seleziona almeno un tipo supportato per procedere.",
+          "caption": "Continue disabilitato senza selezione."
+        },
+        {
+          "id": "copy-03",
+          "image": "06-03-select-all-file-types.png",
+          "text": "Select All include 17 file, compreso il testo facoltativo.",
+          "caption": "Tutti i tipi selezionati."
+        },
+        {
+          "id": "copy-04",
+          "image": "06-05-select-media-only.png",
+          "text": "Deseleziona .txt: 17 esaminati, 16 selezionati, uno escluso.",
+          "caption": "Solo contenuti multimediali."
+        },
+        {
+          "id": "copy-05",
+          "image": "06-06-file-types-confirmed.png",
+          "text": "Premi Continue e controlla Selected Folder e il percorso completo.",
+          "caption": "Tipi confermati."
+        },
+        {
+          "id": "copy-06",
+          "image": "06-08-guided-native-organization-plan.png",
+          "text": "Scegli Year / Month / Day in Pattern e chiudi la lista. Rivedi piano e categorie dell'origine originale da 16 file.",
+          "caption": "Piano Guided reale."
+        },
+        {
+          "id": "copy-07",
+          "image": "06-09-destination-folder-picker.png",
+          "text": "Premi Change Location. Il selettore Windows richiede una cartella esistente, distinta da origine e backup.",
+          "caption": "Selettore nativo della destinazione."
+        },
+        {
+          "id": "copy-08",
+          "image": "06-10-enter-copy-destination.png",
+          "text": "Scegli Copy Results e Select Folder. L'app aggiunge la radice MEDIA KOLFAT Organized Media.",
+          "caption": "Destinazione di copia inserita."
+        },
+        {
+          "id": "copy-09",
+          "image": "06-11-selected-copy-destination.png",
+          "text": "Controlla Selected destination, categorie e spazio. La ricerca precedente distingue foto e video duplicati.",
+          "caption": "Destinazione e piano verificati."
+        },
+        {
+          "id": "copy-10",
+          "image": "06-12-confirm-copy.png",
+          "text": "Premi Copy Selected Files e leggi Confirm copy: gli originali restano. Annulla se origine, selezione o destinazione sono errate.",
+          "caption": "Conferma reale di COPY."
+        },
+        {
+          "id": "copy-11",
+          "image": "06-14-copy-complete-report.png",
+          "text": "Conferma e attendi: 16 copiati, zero identici saltati, zero rinominati e zero errori. Leggi categorie e percorso del rapporto.",
+          "caption": "COPY completata con rapporto."
+        }
+      ],
+      "tips": [
+        "Pattern include Year / Month / Day, YMD - Single Folder, Year / Month, varianti per fotocamera, anno, mese, giorno e Custom. Controlla l'anteprima.",
+        "Open destination e Open Folder aprono i risultati; Save report salva il rapporto. Add Destination to Folders registra esplicitamente il percorso: non è automatico.",
+        "I 16 hash di destinazione coincidono; tutti i 17 originali e i backup sono rimasti invariati."
+      ],
+      "outcome": "Hai una copia organizzata verificata, un rapporto TXT e tutti gli originali conservati."
+    },
+    {
+      "id": "progress",
+      "title": "8. Mettere in pausa, riprendere e recuperare COPY",
+      "intro": "Il dataset grande usa 512 video generati e un backup indipendente. Non contiene media personali.",
+      "steps": [
+        {
+          "id": "progress-01",
+          "image": "11-05-copy-timing-destination.png",
+          "text": "Scegli Copy Timing Results come destinazione separata e verifica il percorso.",
+          "caption": "Destinazione del dataset grande."
+        },
+        {
+          "id": "progress-02",
+          "image": "11-07-copy-timing-confirmation.png",
+          "text": "Controlla origine, selezione, destinazione e spazio, poi conferma COPY. Può seguire una preparazione.",
+          "caption": "Conferma della copia grande."
+        },
+        {
+          "id": "progress-03",
+          "image": "11-10-copy-paused.png",
+          "text": "Premi Pause e attendi Resume: il file corrente può terminare prima della pausa.",
+          "caption": "COPY realmente in pausa."
+        },
+        {
+          "id": "progress-04",
+          "image": "11-11-copy-resumed.png",
+          "text": "Premi Resume; ricompare Pause e continua la stessa operazione.",
+          "caption": "COPY ripresa."
+        },
+        {
+          "id": "progress-05",
+          "image": "11-13-cancelled-copy-report.png",
+          "text": "Premi Stop e leggi riepilogo e rapporto: 110 copie complete conservate, zero errori.",
+          "caption": "Annullamento con 110 copie conservate."
+        },
+        {
+          "id": "progress-06",
+          "image": "11-14b-retry-copy-confirmation.png",
+          "text": "Riavvia COPY con stessa origine, modello e destinazione. Controlla la nuova conferma; gli identici completati possono essere saltati.",
+          "caption": "Conferma del nuovo tentativo."
+        },
+        {
+          "id": "progress-07",
+          "image": "11-15-retry-copy-progress.png",
+          "text": "Leggi nome, conteggio e percentuale; nel nuovo tentativo riguardano i file ancora da copiare.",
+          "caption": "Progresso reale del tentativo."
+        },
+        {
+          "id": "progress-08",
+          "image": "11-16-retry-copy-paused-progress.png",
+          "text": "Premi Pause se necessario e attendi Paused. Leggi conteggio e percentuale effettivi.",
+          "caption": "Pannello in pausa."
+        },
+        {
+          "id": "progress-09",
+          "image": "11-17-retry-copy-resumed-progress.png",
+          "text": "Premi Resume e attendi il termine, mantenendo la destinazione connessa e l'origine invariata.",
+          "caption": "Progresso dopo Resume."
+        },
+        {
+          "id": "progress-10",
+          "image": "11-19-retry-completion-report.png",
+          "text": "Risultato: 402 copiati, 110 identici saltati, zero rinominati e zero errori. Verificati tutti i 512 hash.",
+          "caption": "Recupero completato e verificato."
+        }
+      ],
+      "tips": [
+        "Fermare una ricerca di duplicati e fermare COPY sono operazioni diverse. Usa i controlli dell'attività corrente.",
+        "Sopra i controlli può rimanere un messaggio precedente: leggi progresso e risultato attuali.",
+        "Dopo l'annullamento controlla rapporto e destinazione, conservando le copie complete verificate."
+      ],
+      "outcome": "Sai interrompere e ripetere COPY senza duplicare file identici già completati."
+    },
+    {
+      "id": "move",
+      "title": "9. Usare Advanced MOVE con backup",
+      "intro": "MOVE rimuove i file di origine dopo aver verificato quelli di destinazione. Esercitati solo con copie eliminabili e backup indipendente. È stato usato Move Samples, mai la biblioteca originale.",
+      "steps": [
+        {
+          "id": "move-01",
+          "image": "08-01-advanced-mode.png",
+          "text": "Seleziona Advanced in Experience e scegli l'origine desiderata prima dell'organizzatore.",
+          "caption": "Modalità Advanced reale."
+        },
+        {
+          "id": "move-02",
+          "image": "08-35-correct-source-confirmed.png",
+          "text": "Controlla tipi e Selected Folder: Move Samples, percorso esatto, 17 esaminati, 16 selezionati, uno escluso.",
+          "caption": "Origine corretta con backup."
+        },
+        {
+          "id": "move-03",
+          "image": "08-36-verified-move-plan.png",
+          "text": "Conferma Year / Month e il piano. Qui Duplicates indica Not checked.",
+          "caption": "Piano MOVE reale."
+        },
+        {
+          "id": "move-04",
+          "image": "08-37-final-move-destination.png",
+          "text": "In Change Location scegli Move Results e verifica il percorso separato.",
+          "caption": "Destinazione MOVE approvata."
+        },
+        {
+          "id": "move-05",
+          "image": "08-39-final-move-warning.png",
+          "text": "Seleziona Move in Transfer mode. Leggi l'avviso: verifica la destinazione prima della rimozione, conserva cartelle e salva il rapporto.",
+          "caption": "Avviso reale di MOVE."
+        },
+        {
+          "id": "move-06",
+          "image": "08-40-final-move-confirmation.png",
+          "text": "Premi Move Selected Files e leggi Confirm move. I file esatti di origine saranno rimossi dopo verifica: annulla in caso di dubbio.",
+          "caption": "Conferma finale reale."
+        },
+        {
+          "id": "move-07",
+          "image": "08-42-move-complete-report.png",
+          "text": "Verifica percorsi e backup, quindi conferma. Move complete: 16 spostati, zero copie con origine conservata e zero errori.",
+          "caption": "MOVE di 16 file completato."
+        },
+        {
+          "id": "move-08",
+          "image": "07-03-verified-move-activity.png",
+          "text": "In Activity controlla Move Photos & Videos e Open Move Report. Conserva il backup indipendente.",
+          "caption": "Voce MOVE completata."
+        }
+      ],
+      "tips": [
+        "I 16 hash coincidono. Restano invariati i 17 file di backup, notes.txt e le quattro cartelle di origine.",
+        "COPIED_SOURCE_RETAINED indica una copia di destinazione con origine conservata: controlla il rapporto.",
+        "Controlla sempre Selected Folder. Refresh non cambia l'origine; qui il solo registro dimostrativo è stato rimosso dal catalogo e aggiunto nuovamente."
+      ],
+      "outcome": "MOVE è completato e verificato; backup e biblioteca originale restano intatti."
+    },
+    {
+      "id": "reports",
+      "title": "10. Leggere Activity e i rapporti TXT",
+      "intro": "Activity registra operazioni locali recenti. Distingui Completed, Completed with warnings e Cancelled. I rapporti automatici sono nella radice della destinazione.",
+      "steps": [
+        {
+          "id": "reports-01",
+          "image": "07-01-activity-after-copy.png",
+          "text": "In Activity confronta elaborati, copiati, saltati ed errori di Copy Photos & Videos con il riepilogo di destinazione.",
+          "caption": "COPY iniziale completata."
+        },
+        {
+          "id": "reports-02",
+          "image": "07-02-completed-and-cancelled-activity.png",
+          "text": "Confronta gli stati: COPY annullata con 110 elaborati; nuovo tentativo con 512 elaborati e 110 saltati. Una ricerca duplicati annullata è incompleta.",
+          "caption": "Cronologia reale dei due stati."
+        },
+        {
+          "id": "reports-03",
+          "image": "07-03-verified-move-activity.png",
+          "text": "Usa Open Copy Report o Open Move Report e Open Destination. Leggi modalità, percorsi, stati e totali nel TXT.",
+          "caption": "Voci reali COPY e MOVE."
+        }
+      ],
+      "tips": [
+        "Il rapporto verificato riporta Mode: MOVE, Total planned files: 16, Moved: 16, COPIED_SOURCE_RETAINED: 0, Skipped: 0, Failed: 0.",
+        "Il rapporto COPY conferma gli originali conservati; quello annullato identifica copie complete rimaste a destinazione.",
+        "Clear Activity History non è stato usato: la cronologia resta disponibile."
+      ],
+      "outcome": "Sai collegare attività, cartella e rapporto e riconoscere elaborazioni incomplete."
+    },
+    {
+      "id": "settings",
+      "title": "11. Impostazioni e nuovo inizio",
+      "intro": "Settings modifica preferenze locali: Language, Experience, Safety, Privacy & Local Processing, Organizing, Library, Guidance & Accessibility, Maintenance e Media dates.",
+      "steps": [
+        {
+          "id": "settings-01",
+          "image": "09-01-settings.png",
+          "text": "Apri Settings e controlla lingua, esperienza e sicurezza. Conferma e avviso di rimozione sono imposti nell'interfaccia mostrata.",
+          "caption": "Lingua, esperienza e sicurezza."
+        },
+        {
+          "id": "settings-02",
+          "image": "09-03-organizing-library-settings.png",
+          "text": "Controlla Default organize pattern e Destination behavior, che mostra Ask every time. Leggi anche privacy e archiviazione dei rapporti.",
+          "caption": "Organizzazione ed elaborazione locale."
+        },
+        {
+          "id": "settings-03",
+          "image": "09-04-accessibility-settings.png",
+          "text": "Rivedi dimensioni anteprime, ordine, etichette, apertura dopo scansione e memoria della vista Library.",
+          "caption": "Preferenze della biblioteca."
+        },
+        {
+          "id": "settings-04",
+          "image": "09-05-enable-larger-text.png",
+          "text": "Attiva Larger text e controlla leggibilità e navigazione.",
+          "caption": "Testo ingrandito applicato."
+        },
+        {
+          "id": "settings-05",
+          "image": "09-06-restore-standard-text.png",
+          "text": "Disattiva Larger text per ripristinare. Regola Larger buttons, Reduced motion e guida secondo necessità.",
+          "caption": "Testo normale ripristinato."
+        },
+        {
+          "id": "settings-06",
+          "image": "09-07-maintenance-settings.png",
+          "text": "In Maintenance leggi lo spazio dei file generati. Refresh Usage aggiorna i totali; Clear Thumbnail Cache riguarda le anteprime e non è stato necessario.",
+          "caption": "Manutenzione e spazio."
+        },
+        {
+          "id": "settings-07",
+          "image": "09-09-review-date-evidence.png",
+          "text": "Espandi Advanced date policy e leggi le cinque prove e l'avviso di bassa affidabilità. Le modifiche valgono per nuove scansioni, rianalisi e piani.",
+          "caption": "Politica reale delle date."
+        },
+        {
+          "id": "settings-08",
+          "image": "09-10-reset-settings-confirmation.png",
+          "text": "Apri Reset Settings to Defaults per leggere la conferma: cancella impostazioni, origini, indice, progresso e cache, preservando originali e copie organizzate.",
+          "caption": "Avviso reale di ripristino."
+        },
+        {
+          "id": "settings-09",
+          "image": "09-12-reset-cancelled.png",
+          "text": "Premi Cancel. Non è stato ripristinato né il profilo reale né quello dimostrativo.",
+          "caption": "Ripristino annullato."
+        }
+      ],
+      "tips": [
+        "Un nuovo inizio è più ampio di un cambiamento visivo. Conserva rapporti e informazioni prima di svuotare il catalogo.",
+        "Visualizzare Settings non riscrive date esistenti: usa la rianalisi esplicita per aggiornarle."
+      ],
+      "outcome": "Sai modificare preferenze e comprendere manutenzione e ripristino senza cancellazioni accidentali."
+    },
+    {
+      "id": "troubleshooting",
+      "title": "12. Risolvere problemi comuni",
+      "intro": "Leggi il messaggio e verifica origine, filtri, modello e destinazione prima di riprovare. Tutti gli esempi sono stati riprodotti con dati eliminabili.",
+      "steps": [
+        {
+          "id": "troubleshooting-01",
+          "image": "10-01-library-no-search-results.png",
+          "text": "Se compare No photos match your choices, verifica Search media: una ricerca senza corrispondenze può nascondere tutto.",
+          "caption": "Ricerca reale senza risultati."
+        },
+        {
+          "id": "troubleshooting-02",
+          "image": "10-02-recover-search-results.png",
+          "text": "Cerca un frammento noto come garden e verifica il ritorno dei risultati prima di cambiare altro.",
+          "caption": "Risultati recuperati."
+        },
+        {
+          "id": "troubleshooting-03",
+          "image": "10-04-review-unavailable-filter.png",
+          "text": "Controlla Unavailable only: restituisce zero se gli originali sono disponibili, senza provare alcuna perdita.",
+          "caption": "Filtro restrittivo reale."
+        },
+        {
+          "id": "troubleshooting-04",
+          "image": "10-05-show-all-recovery.png",
+          "text": "Premi Show All Photos e controlla ricerca e filtri ripristinati.",
+          "caption": "Galleria recuperata."
+        },
+        {
+          "id": "troubleshooting-05",
+          "image": "10-08-invalid-folder-error.png",
+          "text": "Con Folder is unavailable or cannot be opened verifica percorso e connessione. Il percorso inesistente disabilita Select This Folder.",
+          "caption": "Errore reale di cartella non disponibile."
+        },
+        {
+          "id": "troubleshooting-06",
+          "image": "10-10-empty-folder.png",
+          "text": "Scegli una cartella esistente e Go. Una cartella vuota mostra zero file supportati: cambia cartella o annulla.",
+          "caption": "Cartella vuota reale."
+        },
+        {
+          "id": "troubleshooting-07",
+          "image": "10-12-unsupported-only-preview.png",
+          "text": "Anche una cartella solo testo mostra zero media. Other Files si seleziona separatamente nell'organizzazione.",
+          "caption": "Cartella con soli file non supportati."
+        },
+        {
+          "id": "troubleshooting-08",
+          "image": "10-14-invalid-custom-pattern.png",
+          "text": "In Custom usa token e segmenti relativi validi. L'attraversamento alla cartella superiore viene rifiutato e COPY resta disabilitata.",
+          "caption": "Modello non valido rifiutato."
+        },
+        {
+          "id": "troubleshooting-09",
+          "image": "10-17-custom-plan-reconfirmed.png",
+          "text": "Correggi con {YYYY}\\{YYYY-MM}; in questa build riapri e chiudi Pattern per riconfermare e ripristinare il piano.",
+          "caption": "Modello corretto confermato."
+        },
+        {
+          "id": "troubleshooting-10",
+          "image": "10-19-catalog-only-removal-confirmation.png",
+          "text": "Leggi Remove Folder: rimuove record dal catalogo e Library, conservando file e cartelle originali.",
+          "caption": "Conferma di rimozione dal solo catalogo."
+        },
+        {
+          "id": "troubleshooting-11",
+          "image": "10-20-disposable-source-removed-from-catalog.png",
+          "text": "Solo nella dimostrazione conferma Remove from MEDIA KOLFAT e verifica gli originali. Aggiungi manualmente e analizza di nuovo prima di organizzare.",
+          "caption": "Registro rimosso, originali conservati."
+        }
+      ],
+      "tips": [
+        "Senza tipi selezionati Continue è disabilitato: torna a Choose File Types.",
+        "Dopo un errore di percorso possono restare anteprime precedenti. Leggi l'errore e Select This Folder disabilitato; non attribuirle al percorso non disponibile.",
+        "Per errori di destinazione o spazio verifica percorso, connessione, scrittura e riserva di sicurezza; scegli un'altra cartella adatta.",
+        "Dopo un'interruzione controlla Activity, TXT e risultati completi prima di riprovare. Avvisi e annullamenti richiedono attenzione.",
+        "La rimozione è stata solo dal catalogo isolato: i 17 originali sono rimasti invariati e sono stati registrati di nuovo per MOVE."
+      ],
+      "outcome": "Sai distinguere risultati vuoti da originali mancanti e recuperare preservando le prove."
+    }
+  ],
+  "status": "Complete guide; source and screenshot parity verified; native-speaker editorial review not performed"
+}
