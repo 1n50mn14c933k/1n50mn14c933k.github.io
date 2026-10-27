@@ -15,11 +15,11 @@ for page in pages:
         continue  # Redirect-only pages have no site navigation.
     seen += 1
     after, css_count = re.subn(
-        r"/assets/nav-dropdown\\.css(?:\\?[^\\\"]*)?",
+        r'/assets/nav-dropdown[.]css(?:[?][^"]*)?',
         f"/assets/nav-dropdown.css?v={version}", before,
     )
     after, js_count = re.subn(
-        r"/assets/nav-dropdown\\.js(?:\\?[^\\\"]*)?",
+        r'/assets/nav-dropdown[.]js(?:[?][^"]*)?',
         f"/assets/nav-dropdown.js?v={version}", after,
     )
     if css_count != 1 or js_count != 1:

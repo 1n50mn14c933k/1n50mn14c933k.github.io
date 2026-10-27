@@ -91,7 +91,10 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
   const categorySlugs = ["photo-file","code-data","networking","security"];
   const supportedToolLanguages = new Set(["en","de","fa","fr","es"]);
   const corePages = ["home","media","download","about","guides","tools","support"];
-  const pathname = () => window.location.pathname.replace(/\\/{2,}/g,"/").replace(/\\/?$/,"/");
+  const pathname = () => {
+    const p=window.location.pathname;
+    return p.endsWith("/")?p:p+"/";
+  };
   function enhanceMenu() {
     const nav = document.querySelector(".top-nav .kolfat-menu-panel");
     if (!nav || nav.querySelector(".kf-site-map")) return;
@@ -116,30 +119,28 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
     };
     // Correct older TOOLS templates still pointing to English main-site routes.
     const direct = Array.from(nav.children).filter(el => el.tagName === "A");
-    const primaryPaths = {
-      home:/^\\/(?:en|de|fa|fr|es|pt|it|ja|zh|hi|ru|ar)\\/$/,
-      media:/^\\/(?:en|de|fa|fr|es|pt|it|ja|zh|hi|ru|ar)\\/Media_Kolfat\\/$/,
-      download:/^\\/(?:en|de|fa|fr|es|pt|it|ja|zh|hi|ru|ar)\\/download\\/$|^\\/download\\/$/,
-      about:/^\\/(?:en|de|fa|fr|es|pt|it|ja|zh|hi|ru|ar)\\/about\\/$|^\\/about\\/$/,
-      guides:/^\\/(?:en|de|fa|fr|es|pt|it|ja|zh|hi|ru|ar)\\/guides\\/$|^\\/guides\\/$/,
-      tools:/^\\/(?:de|fa|fr|es)\\/tools\\/$|^\\/tools\\/$/,
-      support:/^\\/(?:en|de|fa|fr|es|pt|it|ja|zh|hi|ru|ar)\\/support\\/$|^\\/support\\/$/
-    };
+    const knownLanguages = new Set(Object.keys(localized));
     const found = new Set();
     for (const el of direct) {
       const original = el.getAttribute("href") || "";
-      for (let i=0;i<corePages.length;i++) {
-        const key = corePages[i];
-        if (!primaryPaths[key].test(original)) continue;
-        const target = pathFor(key);
-        el.href = target;
-        el.textContent = labels.main[i];
-        el.dir = "auto";
-        el.removeAttribute("aria-current");
-        if (target === current) el.setAttribute("aria-current","page");
-        found.add(key);
-        break;
-      }
+      if (!original.startsWith("/")) continue;
+      const segments = original.split("/").filter(Boolean);
+      const prefixed=segments.length===2 && knownLanguages.has(segments[0]);
+      const single=segments.length===1;
+      const suffix=segments[segments.length-1];
+      let key=null;
+      if (single && knownLanguages.has(suffix)) key="home";
+      else if ((single || prefixed) && suffix==="Media_Kolfat") key="media";
+      else if ((single || prefixed) && corePages.includes(suffix)) key=suffix;
+      if (key===null) continue;
+      const i=corePages.indexOf(key);
+      const target=pathFor(key);
+      el.href=target;
+      el.textContent=labels.main[i];
+      el.dir="auto";
+      el.removeAttribute("aria-current");
+      if(target===current) el.setAttribute("aria-current","page");
+      found.add(key);
     }
     if (!found.has("tools")) {
       const toolLink = a(toolRoot,labels.main[5] + (supportedToolLanguages.has(lang) ? "" : " (EN)"));
@@ -184,7 +185,6 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
       const inside=current===hub || rows.some(([href])=>href===current);
       group(labels.category[i],rows,inside);
     }
-    section(labels.sections[3]);
     const legalRoutes=["privacy","terms","licenses","disclaimer"];
     group(labels.sections[3],legalRoutes.map((p,i)=>[pathFor(p),labels.legal[i]]),
       legalRoutes.some(p=>pathFor(p)===current));
