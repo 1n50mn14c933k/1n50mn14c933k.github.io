@@ -248,3 +248,11 @@ Earlier navigation, localization, mobile header and styling changes are document
 - **Risk:** Runner image deprecation could require a later Playwright update. **Rollback:** Revert this workflow-and-documentation commit.
 
 Final pre-upload validation (2026-10-27): current main 2478925 incorporated; final scope is twelve existing Guides hubs, twelve new guides and their dedicated assets/content/tests/docs/sitemap entries. No product pages, existing tool functionality or shared visual assets are changed. All 87 unchanged PNGs passed final offline OCR/privacy and PNG metadata checks; no private-data findings. Approved translations, guide steps and screenshot bytes match the previously approved commit. All 50 source tests passed. GitHub CI/deployment remain pending until confirmed in delivery metadata.
+
+## Verified PR validation record
+
+[PR #50](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/50): [Guide Validation](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/actions/runs/40594100116) passed all 13 content/image/SEO tests, 108 responsive language/viewport cases and 60 deeper-step image checks after the lazy-image test synchronization fix. Repository Hygiene passed; the core source suite passed all 50 tests.
+
+The [broader Tools run](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/actions/runs/40594100213) reported 267 browser passes and 56 failures. Its complete failure set exactly matches the [pre-existing main-branch run](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/actions/runs/40527784035): 48 German safety-banner expectations and eight shared-menu icon-count expectations. The affected existing tests, German tool pages and shared navigation files are unchanged. These are recorded as baseline failures, not passing tests, and have not been suppressed or altered in this guide change. The unrelated add-social-buttons workflow also fails on main and remains unchanged.
+
+All 446 prior sitemap URLs are retained; twelve guide URLs bring the total to 458. The original content of all twelve Guides hubs is preserved around the first-position complete-manual entry. Product pages and existing Tools functionality are unchanged. The release decision, merge commit and independently observed Pages/live verification are recorded in PR #50 delivery metadata.
