@@ -450,3 +450,44 @@ html body a.kolfat-tools-direct.kolfat-tools-direct--floating{
 html body .header .header-inner .top-nav:not(:has(.lang-menu)) .kolfat-menu-panel{
   right:0!important;
 }
+
+
+/* Accessible, scrollable complete site map inside the existing dropdown. */
+html body .top-nav .kolfat-menu-panel .kf-site-map{
+  display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+  gap:3px!important;min-width:0!important;width:100%!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-nav-subgroup{
+  min-width:0!important;max-width:100%!important;
+  overflow:visible!important;border:1px solid rgba(255,255,255,.15)!important;
+  border-radius:8px!important;background:rgba(255,255,255,.035)!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-nav-subgroup>summary{
+  box-sizing:border-box!important;display:flex!important;align-items:center!important;
+  justify-content:space-between!important;gap:8px!important;
+  width:100%!important;min-height:39px!important;padding:8px 11px!important;
+  color:#fff!important;cursor:pointer!important;list-style:none!important;
+  font:700 12px/1.45 "Segoe UI",Tahoma,Arial,sans-serif!important;
+  letter-spacing:normal!important;background:transparent!important;
+  white-space:normal!important;overflow-wrap:break-word!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-nav-subgroup>summary::-webkit-details-marker{display:none!important}
+html body .top-nav .kolfat-menu-panel .kf-nav-subgroup>summary::after{
+  content:"⌄";display:block;flex:0 0 auto;transform:rotate(0);color:#ff9b53!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-nav-subgroup[open]>summary::after{transform:rotate(180deg)}
+html body .top-nav .kolfat-menu-panel .kf-nav-subgroup>summary:hover,
+html body .top-nav .kolfat-menu-panel .kf-nav-subgroup>summary:focus-visible{
+  background:rgba(255,255,255,.10)!important;outline:2px solid #ff9b53!important;outline-offset:1px!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-nav-subgroup-links{
+  padding:2px 3px 5px!important;display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-nav-subgroup-links a{
+  min-height:34px!important;padding:7px 8px!important;
+  font:600 11px/1.45 "Segoe UI",Tahoma,Arial,sans-serif!important;
+  letter-spacing:0!important;overflow-wrap:break-word!important;
+}
+html body .top-nav .kolfat-menu-panel .kf-site-map .menu-section-label{
+  padding-top:12px!important;
+}
