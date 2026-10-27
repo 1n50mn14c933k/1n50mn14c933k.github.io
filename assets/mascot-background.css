@@ -9,7 +9,7 @@ html[data-kolfat-page="home"] .hero-bg {
   background-color: #050505 !important;
   background-image:
     linear-gradient(90deg,rgba(0,0,0,.90) 0%,rgba(0,0,0,.68) 23%,rgba(0,0,0,.12) 43%,rgba(0,0,0,0) 70%),
-    url('/assets/kolfat-mascot-wide.png') !important;
+    url('/assets/kolfat-mascot-desktop-3840x2160.webp') !important;
   background-size: 100% 100%, contain !important;
   background-position: center center, center center !important;
   background-repeat: no-repeat, no-repeat !important;
@@ -74,5 +74,43 @@ html[data-kolfat-page="tool"] .promotion {
       url('/assets/kolfat-mascot-portrait-soft.png') !important;
     background-size: 100% 100%, contain !important;
     background-position: center center, center center !important;
+  }
+}
+
+/* KOLFAT 4K UHD desktop + visible portrait mobile hotfix (2026-10-27).
+ * Do not replace the portrait asset with the widescreen one on small screens.
+ * Override the legacy mobile blackout overlay that obscured the subject.
+ */
+@media (max-width: 760px) {
+  html[data-kolfat-page="home"] .hero-bg {
+    display: block !important;
+    visibility: visible !important;
+    background-image:
+      linear-gradient(180deg,
+        rgba(0,0,0,.74) 0%,
+        rgba(0,0,0,.48) 34%,
+        rgba(0,0,0,.12) 70%,
+        rgba(0,0,0,.32) 100%),
+      url('/assets/kolfat-mascot-portrait.png') !important;
+    background-size: 100% 100%, cover !important;
+    background-position: center center, center 46% !important;
+    background-repeat: no-repeat !important;
+    opacity: 1 !important;
+  }
+  html[data-kolfat-page="home"] .hero-bg::before {
+    display: none !important;
+    content: none !important;
+  }
+  html:not([data-kolfat-page="home"]) body {
+    background-size: 100% 100%, cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+  }
+  html[data-kolfat-page="product"] .hero-bg {
+    background-size: 100% 100%, cover !important;
+    background-position: center center !important;
+  }
+  html[data-kolfat-page="product"] .hero-bg::before {
+    opacity: .3 !important;
   }
 }
