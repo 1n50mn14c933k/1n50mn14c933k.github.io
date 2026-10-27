@@ -88,3 +88,17 @@ html[data-kolfat-page="download"] body .kf-home-downloads{margin-bottom:32px!imp
   width:min(350px,100%)!important;max-width:350px!important
  }
 }
+
+/* Stronger than legacy language-specific product offsets. */
+html[lang="fa"][data-kolfat-page="product"] body .hero-copy,
+html[lang="ar"][data-kolfat-page="product"] body .hero-copy{
+ width:min(760px,calc(100% - 48px))!important;max-width:760px!important;
+ margin-left:auto!important;margin-right:auto!important;
+ text-align:right!important;direction:rtl!important;
+}
+@media(max-width:640px){
+ html[lang="fa"][data-kolfat-page="product"] body .hero-copy,
+ html[lang="ar"][data-kolfat-page="product"] body .hero-copy{
+  width:100%!important;max-width:100%!important;margin:0 auto!important;
+ }
+}
