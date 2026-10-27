@@ -1,16 +1,16 @@
 /* MEDIA KOLFAT: matching download buttons with original platform labels.
    Show only GET MEDIA KOLFAT FROM + Microsoft Store/GitHub.
    No taglines or captions underneath. */
-html[data-kolfat-page="home"] body .store-section.kf-home-downloads{
+html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .store-section.kf-home-downloads{
   display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
   align-items:stretch!important;gap:12px!important;
   width:min(540px,100%)!important;max-width:540px!important;
   margin-top:18px!important;padding-top:18px!important;
   border-top:1px solid rgba(255,255,255,.34)!important;
 }
-html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-button,
-html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-button:link,
-html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-button:visited{
+html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-button,
+html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-button:link,
+html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-button:visited{
   box-sizing:border-box!important;display:flex!important;align-items:center!important;
   justify-content:flex-start!important;gap:12px!important;
   width:100%!important;min-width:0!important;min-height:68px!important;
@@ -22,49 +22,83 @@ html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-button:visite
   transition:transform .18s ease,background-color .18s ease,box-shadow .18s ease!important;
   direction:ltr!important;overflow:hidden!important;
 }
-html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-button:hover{
+html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-button:hover{
   background:#f0f0f0!important;transform:translateY(-2px)!important;
   box-shadow:0 14px 34px rgba(0,0,0,.48)!important;
 }
-html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-button:focus-visible{
+html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-button:focus-visible{
   outline:3px solid #ff812e!important;outline-offset:3px!important;
 }
-html[data-kolfat-page="home"] body .kf-home-downloads .kf-button-icon{
+html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-button-icon{
   display:block!important;width:40px!important;height:40px!important;
   flex:0 0 40px!important;color:#050505!important;fill:currentColor;
 }
-html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-copy{
+html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-copy{
   display:flex!important;flex:1 1 auto!important;min-width:0!important;
   flex-direction:column!important;justify-content:center!important;
   gap:4px!important;direction:ltr!important;text-align:left!important;
   line-height:1.13!important;color:#050505!important;
 }
-html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-copy small{
+html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-copy small{
   display:block!important;color:#333!important;font:700 .52rem/1.2 Arial,Helvetica,sans-serif!important;
   letter-spacing:.065em!important;text-transform:uppercase!important;
   white-space:normal!important;overflow-wrap:normal!important;
 }
-html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-copy strong{
+html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-copy strong{
   display:block!important;color:#050505!important;
   font:700 clamp(.88rem,1.1vw,1.05rem)/1.15 Arial,Helvetica,sans-serif!important;
   white-space:normal!important;overflow-wrap:normal!important;
 }
 @media(max-width:640px){
- html[data-kolfat-page="home"] body .store-section.kf-home-downloads{
+ html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .store-section.kf-home-downloads{
    width:min(350px,100%)!important;max-width:350px!important;
    grid-template-columns:minmax(0,1fr)!important;gap:8px!important;
    margin-top:12px!important;padding-top:12px!important;
  }
- html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-button{
+ html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-button{
    min-height:58px!important;padding:8px 14px!important;gap:12px!important;
  }
- html[data-kolfat-page="home"] body .kf-home-downloads .kf-button-icon{
+ html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-button-icon{
    width:36px!important;height:36px!important;flex-basis:36px!important;
  }
- html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-copy strong{
+ html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-copy strong{
    font-size:1rem!important;
  }
 }
 @media(prefers-reduced-motion:reduce){
- html[data-kolfat-page="home"] body .kf-home-downloads .kf-download-button{transition:none!important}
+ html:is([data-kolfat-page="home"],[data-kolfat-page="product"],[data-kolfat-page="download"]) body .kf-home-downloads .kf-download-button{transition:none!important}
+}
+
+/* Product page centered content, responsive and independent from the backdrop. */
+html[data-kolfat-page="product"] body .hero-inner{width:100%!important;display:block!important}
+html[data-kolfat-page="product"] body .hero-copy{
+ position:relative!important;top:auto!important;left:auto!important;right:auto!important;
+ width:min(760px,calc(100% - 48px))!important;max-width:760px!important;
+ margin:0 auto!important;padding:0!important;
+}
+html[data-kolfat-page="product"] body .hero-inner{padding:clamp(120px,14vh,170px) 24px 90px!important}
+html[data-kolfat-page="product"] body .hero-copy .kf-home-downloads{margin-left:0!important;margin-right:0!important}
+html[data-kolfat-page="download"] body .kf-home-downloads{margin-bottom:32px!important}
+@media(max-width:640px){
+ html[data-kolfat-page="product"] body .hero-inner{padding:104px 16px 70px!important}
+ html[data-kolfat-page="product"] body .hero-copy{
+  width:100%!important;max-width:100%!important;margin:0 auto!important;
+ }
+ html[data-kolfat-page="product"] body .hero-copy .kf-home-downloads{
+  width:min(350px,100%)!important;max-width:350px!important
+ }
+}
+
+/* Stronger than legacy language-specific product offsets. */
+html[lang="fa"][data-kolfat-page="product"] body .hero-copy,
+html[lang="ar"][data-kolfat-page="product"] body .hero-copy{
+ width:min(760px,calc(100% - 48px))!important;max-width:760px!important;
+ margin-left:auto!important;margin-right:auto!important;
+ text-align:right!important;direction:rtl!important;
+}
+@media(max-width:640px){
+ html[lang="fa"][data-kolfat-page="product"] body .hero-copy,
+ html[lang="ar"][data-kolfat-page="product"] body .hero-copy{
+  width:100%!important;max-width:100%!important;margin:0 auto!important;
+ }
 }
