@@ -1,0 +1,35 @@
+name: Apply and validate KOLFAT Tools SEO
+on:
+  push:
+    branches: [fix/seo-tools-hreflang-20261027]
+    paths:
+      - '.github/scripts/fix_tools_seo.py'
+      - '.github/workflows/apply-tools-seo.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rollout:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout SEO branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/seo-tools-hreflang-20261027
+          persist-credentials: true
+      - name: Validate script syntax
+        run: python3 -m py_compile .github/scripts/fix_tools_seo.py
+      - name: Apply targeted SEO changes
+        run: python3 .github/scripts/fix_tools_seo.py
+      - name: Verify complete rollout
+        run: python3 .github/scripts/fix_tools_seo.py --check
+      - name: Commit tested changes to review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools de/tools fa/tools fr/tools es/tools docs/WEBSITE_UPDATES.md
+          if ! git diff --cached --quiet; then
+            git commit -m "fix(seo): normalize hreflang across 265 Tools pages"
+            git push origin HEAD:fix/seo-tools-hreflang-20261027
+          fi
