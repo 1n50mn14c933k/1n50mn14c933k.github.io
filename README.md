@@ -24,10 +24,11 @@ The site is hosted with **GitHub Pages** and uses the custom domain defined in `
 
 ## MEDIA KOLFAT
 
-**MEDIA KOLFAT is now available on the Microsoft Store.** 🎉
+**MEDIA KOLFAT 2.0.0 is now available through Microsoft Store and official GitHub Windows EXE downloads.** 🎉
 
-**Current release:** **1.8.0** (Windows Microsoft Store package **1.8.0.0**, published October 19, 2026). The website's 12 localized product pages were refreshed on October 22, 2026. Read the [website update and audit log](docs/WEBSITE_UPDATES.md).
+**Current release:** **2.0.0** (Windows Microsoft Store package **2.0.0.0**, published October 27, 2026). The website's 12 localized product pages were refreshed on October 22, 2026. Read the [website update and audit log](docs/WEBSITE_UPDATES.md).
 
+- Windows EXE on GitHub: https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases/tag/v2.0.0
 - Microsoft Store: https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare
 - Product page: https://kolfat.app/en/Media_Kolfat/
 

@@ -1,5 +1,20 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-27 — MEDIA KOLFAT 2.0.0 website release and distribution update
+
+**Release:** MEDIA KOLFAT 2.0.0 (Microsoft Store package 2.0.0.0), published October 27, 2026.
+
+**Official distribution:** Microsoft Store and Windows x64 EXE via [GitHub Releases](https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases/tag/v2.0.0). A SHA-256 checksum accompanies the GitHub installer. The standalone installer does not receive Microsoft Store updates.
+
+**Content:** Updated the MEDIA KOLFAT current-release panels on all twelve localized product pages, preserving their translated labels, layout, and RTL presentation. Added GitHub EXE download links on all twelve localized download pages alongside Microsoft Store; updated the website README.
+
+**Historical material:** The October 22 site refresh for version 1.8.0 remains below as a historical record. No application source or installers were committed to the GitHub Pages source tree.
+
+**Verification:** Check all twelve product pages for current 2.0.0 panels and both official download channels, and verify the GitHub Pages deployment for the final commit.
+
+---
+
+
 ## 2026-10-25 — German-first multilingual staging
 
 Created an isolated 53-page German tools branch with shared translation assets, English/German language selection, 53 sitemap URLs, and release-gate documentation. Do not merge until German workflow and wording tests pass. Rollback: revert the resulting merge; keep original English tools. See docs/TOOLS_GERMAN_ROLLOUT.md.
