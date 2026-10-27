@@ -1,5 +1,19 @@
 # KOLFAT Website — Change History and Audit Record
 
+## 2026-10-27 — Complete illustrated MEDIA KOLFAT 2.0 user guide
+
+**PR and CI follow-up:** [PR #50](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/50) uploads all 87 approved PNGs with a matching remote/local Git tree. GitHub passed 13 content/image/SEO checks and repository hygiene. The first browser run hit a lazy-image decode race; the guide-only test harness now explicitly waits for image load/error before decoding, with all guide content and pixels unchanged. Final CI/deployment results remain pending until verified. The pre-existing add-social-buttons workflow fails on main as well and is unchanged by this PR.
+
+**Purpose/scope:** Add a complete 12-chapter, 91-step native-application guide in all twelve website languages. Publish 87 original reviewed Full HD PNGs with a SHA-256 manifest, localized text/captions/SEO, reciprocal language links, 12 sitemap entries and localized Guides-hub links. Add reproducible rendering, content-integrity tests and a dedicated browser workflow. Existing site chrome and branding remain shared.
+
+**Verification observed:** 50 local source tests passed, including guide parity, links, schema and native PNG hashes/dimensions. Initial isolated Edge browser checks passed 108 language/viewport cases and 60 deeper-step image checks. Localhost HTTP was blocked, so local browser checks used exact-file fulfillment; they are not live deployment checks. A visually observed RTL custom-pattern issue was corrected. After rebasing onto main 832a1a5, all 50 source tests and all 108 browser cases plus 60 deeper-step checks passed again. RTL custom-pattern text was explicitly checked. A comparison confirmed original content/chrome preservation on all twelve modified Guides hubs. CI/deployment remain pending.
+
+**Limitations/privacy:** No personal media or application source changes. Computer-wide discovery was not executed outside disposable scope; no reset occurred. Separate native popup-menu capture is unsupported and excluded. Translations have structural checks; native-speaker editorial review has not been performed. See [workflow evidence, limits and maintenance](MEDIA_KOLFAT_2_USER_GUIDE.md).
+
+**Rollback:** Revert the guide PR merge commit, removing its dedicated routes/assets/content and added links. Branch: codex/media-kolfat-2-user-guide; PR and final commit are recorded in delivery metadata. Other repository policies are unchanged; security, funding and tools-platform documentation do not require functional changes.
+
+
+
 ## 2026-10-27 — MEDIA KOLFAT 2.0.0 website release and distribution update
 
 **Release:** MEDIA KOLFAT 2.0.0 (Microsoft Store package 2.0.0.0), published October 27, 2026.
@@ -154,7 +168,7 @@ This file documents updates to the **public KOLFAT website** at https://kolfat.a
 - Updated **all 12 localized MEDIA KOLFAT product pages**: English (`en`), German (`de`), Persian (`fa`), Arabic (`ar`), Spanish (`es`), French (`fr`), Hindi (`hi`), Italian (`it`), Japanese (`ja`), Portuguese (`pt`), Russian (`ru`), and Chinese (`zh`).
 - Added a clearly visible **current-release information panel** to the product pages stating **MEDIA KOLFAT 1.8.0**, its original **October 19, 2026** publication date, Windows platform, and Microsoft Store package version **`1.8.0.0`**.
 - Summarized the relevant 1.8.0 improvements: safer COPY/MOVE workflows, Pause/Resume/Cancel, more detailed progress information, and improved file visibility.
-- Added **GitHub release notes**, **user Wiki**, and **community Discussions** links to all 12 product pages.
+- Added **GitHub release notes**, **user Wiki**, and **community Discussions** links to all 12 Guides hubs.
 - Corrected outdated **“still being built”** language in English, German, and Persian product pages; the product is already available through the Microsoft Store.
 - Preserved existing product-page layout, language navigation, Microsoft Store links, and other site content. No new installer or application source code was published.
 
@@ -232,3 +246,13 @@ Earlier navigation, localization, mobile header and styling changes are document
 - **Change:** Pin the Tools regression job to `ubuntu-24.04`, supported by the workflow's existing Playwright version. No website files, content, design, tools, or sitemap changed.
 - **Verification:** Previously observed JavaScript syntax and unit tests passed, Playwright dependency setup failed before browser tests. Re-run of the modified workflow is required for browser QA verification; do not treat the previous failed run as a website failure.
 - **Risk:** Runner image deprecation could require a later Playwright update. **Rollback:** Revert this workflow-and-documentation commit.
+
+Final pre-upload validation (2026-10-27): current main 2478925 incorporated; final scope is twelve existing Guides hubs, twelve new guides and their dedicated assets/content/tests/docs/sitemap entries. No product pages, existing tool functionality or shared visual assets are changed. All 87 unchanged PNGs passed final offline OCR/privacy and PNG metadata checks; no private-data findings. Approved translations, guide steps and screenshot bytes match the previously approved commit. All 50 source tests passed. GitHub CI/deployment remain pending until confirmed in delivery metadata.
+
+## Verified PR validation record
+
+[PR #50](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/50): [Guide Validation](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/actions/runs/40594100116) passed all 13 content/image/SEO tests, 108 responsive language/viewport cases and 60 deeper-step image checks after the lazy-image test synchronization fix. Repository Hygiene passed; the core source suite passed all 50 tests.
+
+The [broader Tools run](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/actions/runs/40594100213) reported 267 browser passes and 56 failures. Its complete failure set exactly matches the [pre-existing main-branch run](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/actions/runs/40527784035): 48 German safety-banner expectations and eight shared-menu icon-count expectations. The affected existing tests, German tool pages and shared navigation files are unchanged. These are recorded as baseline failures, not passing tests, and have not been suppressed or altered in this guide change. The unrelated add-social-buttons workflow also fails on main and remains unchanged.
+
+All 446 prior sitemap URLs are retained; twelve guide URLs bring the total to 458. The original content of all twelve Guides hubs is preserved around the first-position complete-manual entry. Product pages and existing Tools functionality are unchanged. The release decision, merge commit and independently observed Pages/live verification are recorded in PR #50 delivery metadata.

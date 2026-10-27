@@ -1,0 +1,714 @@
+{
+  "language": "hi",
+  "title": "MEDIA KOLFAT 2.0 उपयोगकर्ता मार्गदर्शिका",
+  "description": "मीडिया जोड़ने, तारीख और पूर्वावलोकन जाँचने, डुप्लिकेट खोजने, COPY या MOVE से व्यवस्थित करने, बाधित काम पुनः शुरू करने और रिपोर्ट पढ़ने की सचित्र मार्गदर्शिका।",
+  "lead": "स्थापित Windows ऐप में पहले आरंभ से सत्यापित परिणाम तक चलें। उदाहरणों में बनाए गए चित्र और वीडियो तथा स्वतंत्र बैकअप हैं। ऐप के सभी चित्र वास्तविक नेटिव PNG स्क्रीनशॉट हैं।",
+  "versionNote": "MEDIA KOLFAT 2.0.0, बिल्ड 2.0.0.0 पर सत्यापित। स्क्रीनशॉट का इंटरफ़ेस अंग्रेज़ी में है। बड़ा नमूना जोड़ने पर संख्याएँ बदलती हैं; अपने काम में वास्तविक गिनती जाँचें।",
+  "safety": "पहले स्वतंत्र बैकअप बनाएँ। शुरुआत COPY से करें, जो मूल फ़ाइलें रखता है। Advanced MOVE लक्ष्य का सत्यापन और सुरक्षा जाँच करने के बाद स्रोत फ़ाइलें हटाता है। परिणाम और रिपोर्ट जाँचने तक बैकअप रखें।",
+  "contentsLabel": "विषय सूची",
+  "stepLabel": "चरण",
+  "imageLinkLabel": "मूल PNG खोलें",
+  "backLabel": "विषय सूची पर लौटें",
+  "chapters": [
+    {
+      "id": "start",
+      "title": "1. आरंभ और निर्देश समझें",
+      "intro": "स्थापित ऐप खोलें। साइडबार में Performance Check, Add Photos & Videos, Photos Health Check, Duplicate Finder, Browse Library, Organize Photos & Videos, Activity, Settings और About हैं। Experience में Guided और Advanced मिलते हैं।",
+      "steps": [
+        {
+          "id": "start-01",
+          "image": "01-01-first-launch-guided.png",
+          "text": "Guided चुनकर उभरे निर्देश का पालन करें। धूसर आगे के चरण, अंबर वर्तमान चरण और हरे चिह्न पूर्ण चरण दिखाते हैं।",
+          "caption": "Guided में पहला आरंभ।"
+        },
+        {
+          "id": "start-02",
+          "image": "01-02-performance-check-complete.png",
+          "text": "Run Quick Check चलाकर पूरा होने दें। उदाहरण के कंप्यूटर को 98% मिले; आपका परिणाम अलग हो सकता है।",
+          "caption": "वास्तविक 98% जाँच परिणाम।"
+        },
+        {
+          "id": "start-03",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Add Photos & Videos खोलें। ज्ञात फ़ोल्डर के लिए Choose Photos & Videos Manually चुनें।",
+          "caption": "वास्तविक स्वचालित और मैनुअल विकल्प।"
+        },
+        {
+          "id": "start-04",
+          "image": "01-04-about-version.png",
+          "text": "About में Release Information खोलकर Version और Build पढ़ें। साइडबार से काम पर लौटें।",
+          "caption": "सत्यापित संस्करण और बिल्ड।"
+        },
+        {
+          "id": "start-05",
+          "image": "01-05-about-privacy.png",
+          "text": "Privacy & Data Safety खोलें। स्कैन, COPY और Advanced MOVE का अंतर पढ़ें और स्वतंत्र बैकअप रखें।",
+          "caption": "ऐप का सुरक्षा विवरण।"
+        }
+      ],
+      "tips": [
+        "चलता तीर और चमक अगला सुझाया काम दिखाते हैं। Settings में Reduced motion और मार्गदर्शन विकल्प हैं।",
+        "Guided काम का क्रम सुझाता है। Advanced सीधे संचालन देता है और योजना तैयार होने पर MOVE दिखाता है।",
+        "About में Legal & Policies, Support, Technical Information, Open-Source & Third-Party Licenses और Product Information भी खोल सकते हैं।"
+      ],
+      "outcome": "आप संस्करण पहचान सकते हैं, पृष्ठ बदल सकते हैं और वर्तमान निर्देशित चरण समझ सकते हैं।"
+    },
+    {
+      "id": "sources",
+      "title": "2. स्रोत मैनुअल रूप से चुनें",
+      "intro": "स्रोत स्थानीय कैटलॉग में पंजीकृत फ़ोल्डर है। स्कैन समर्थित फ़ोटो और वीडियो सूचीबद्ध करता है। उदाहरण में उपफ़ोल्डरों में 14 JPEG, दो AVI और एक वैकल्पिक टेक्स्ट फ़ाइल है।",
+      "steps": [
+        {
+          "id": "sources-01",
+          "image": "02-01-manual-source-picker.png",
+          "text": "Choose Photos & Videos Manually चुनकर Current folder, Locations, Folders और पूर्वावलोकन देखें।",
+          "caption": "वास्तविक स्रोत चयनकर्ता।"
+        },
+        {
+          "id": "sources-02",
+          "image": "02-02-enter-demo-source-path.png",
+          "text": "Current folder में पूरा पथ लिखें; यहाँ अलग नमूना क्षेत्र का Media Samples है।",
+          "caption": "डाला गया नमूना पथ।"
+        },
+        {
+          "id": "sources-03",
+          "image": "02-03-demo-nested-folders.png",
+          "text": "Go दबाकर पथ और उपफ़ोल्डर जाँचें। मूल फ़ोल्डर में सीधे मीडिया न हो, फिर भी उपफ़ोल्डरों में हो सकता है।",
+          "caption": "चार वास्तविक नमूना उपफ़ोल्डर।"
+        },
+        {
+          "id": "sources-04",
+          "image": "02-04-preview-sample-photos.png",
+          "text": "2024 Holiday खोलकर छह बनाए गए JPEG पूर्वावलोकन देखें।",
+          "caption": "छह समर्थित चित्र।"
+        },
+        {
+          "id": "sources-05",
+          "image": "02-05-return-to-demo-root.png",
+          "text": "पूरा संग्रह शामिल करने के लिए Up one folder से लौटें और Current folder जाँचें।",
+          "caption": "सही मूल फ़ोल्डर पर वापसी।"
+        },
+        {
+          "id": "sources-06",
+          "image": "02-06-ready-to-scan-source.png",
+          "text": "Select This Folder दबाएँ। Ready to add this folder में नाम और पूरा पथ सही होने पर ही आगे बढ़ें।",
+          "caption": "जोड़ने को तैयार स्रोत।"
+        },
+        {
+          "id": "sources-07",
+          "image": "02-07-source-advanced-options.png",
+          "text": "Advanced options में स्थान, वैकल्पिक नाम और प्रकार देखें। क्लाउड फ़ोल्डर पहले इस कंप्यूटर पर पढ़ने योग्य होना चाहिए।",
+          "caption": "स्रोत के वास्तविक उन्नत विकल्प।"
+        },
+        {
+          "id": "sources-08",
+          "image": "02-08-source-scan-complete.png",
+          "text": "दिया गया स्कैन शुरू करें और Ready तथा सफलता का समय देखें। 16 मीडिया मिले; टेक्स्ट मीडिया में नहीं गिना गया।",
+          "caption": "16 मीडिया का स्कैन पूर्ण।"
+        },
+        {
+          "id": "sources-09",
+          "image": "02-09-source-refresh-complete.png",
+          "text": "Refresh से दोबारा स्कैन करें और स्थिति तथा समय जाँचें। इससे आयोजक का स्रोत नहीं बदलता।",
+          "caption": "स्रोत रीफ़्रेश पूरा।"
+        }
+      ],
+      "tips": [
+        "Advanced में अतिरिक्त फ़ोल्डर के कार्ड पर Start Scan मिल सकता है। पहले Guided प्रवाह में जोड़ने से शुरुआती स्कैन शुरू हुआ।",
+        "आयोजक में Selected Folder हमेशा जाँचें। स्रोत कार्ड का Refresh आयोजन का स्रोत नहीं बदलता।"
+      ],
+      "outcome": "चाहा गया फ़ोल्डर पंजीकृत है और समर्थित मीडिया कैटलॉग में दिखता है।"
+    },
+    {
+      "id": "locations",
+      "title": "3. स्वचालित खोज और स्थान",
+      "intro": "चयनकर्ता में This PC, स्थानीय ड्राइव और फ़ोल्डर, Pictures, OneDrive तथा Network हैं। केवल इच्छित स्थान चुनें। बाहरी ड्राइव जुड़ी हो और नेटवर्क Windows से सुलभ हो।",
+      "steps": [
+        {
+          "id": "locations-01",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Scan Computer Automatically पूरे कंप्यूटर की खोज करता है, नमूना फ़ोल्डर की सीमा नहीं देता। सीमित स्कैन के लिए मैनुअल विकल्प लें।",
+          "caption": "अलग सीमा वाले दो विकल्प।"
+        },
+        {
+          "id": "locations-02",
+          "image": "02-01-manual-source-picker.png",
+          "text": "This PC या Current folder में सही स्थानीय/नेटवर्क पथ दें। OneDrive स्थानीय उपलब्ध फ़ाइलें है; पहले Windows में उपलब्ध कराएँ।",
+          "caption": "वास्तविक स्थान और पथ बॉक्स।"
+        }
+      ],
+      "tips": [
+        "पूरे कंप्यूटर की स्वचालित खोज नहीं चलाई गई: वह नमूने के बाहर की ड्राइव पढ़ती। उसका कोई परिणाम परीक्षित नहीं बताया गया है।",
+        "शॉर्टकट से खाते में प्रवेश सिद्ध नहीं होता। निजी Pictures, OneDrive, नेटवर्क या बाहरी मीडिया नहीं खोले गए।"
+      ],
+      "outcome": "आप स्थान और पढ़ने की सीमा के अनुसार सही तरीका चुन सकते हैं।"
+    },
+    {
+      "id": "health",
+      "title": "4. पूर्वावलोकन और तारीख जाँचें",
+      "intro": "स्कैन के बाद Photos Health Check खोलें। थंबनेल, तारीख और मूल फ़ाइल की उपलब्धता अलग जाँच हैं। पूर्वावलोकन न होना फ़ाइल गायब होने का प्रमाण नहीं है।",
+      "steps": [
+        {
+          "id": "health-01",
+          "image": "03-01-photos-health-check.png",
+          "text": "सारांश देखें: 16 मीडिया, 14 सही पूर्वावलोकन, दो वीडियो समस्याएँ और अंतिम जाँच में सभी 16 मूल उपलब्ध।",
+          "caption": "वास्तविक स्वास्थ्य सारांश।"
+        },
+        {
+          "id": "health-02",
+          "image": "03-02-thumbnail-repair-complete.png",
+          "text": "स्पष्ट थंबनेल सुधार चलाएँ। दो वीडियो जाँचे, शून्य सुधरे; दोनों के पूर्वावलोकन असमर्थित थे।",
+          "caption": "वास्तविक सुधार परिणाम।"
+        },
+        {
+          "id": "health-03",
+          "image": "03-04-date-reanalysis-result.png",
+          "text": "गायब तारीखों का पुनर्विश्लेषण चलाएँ। सभी 16 Filesystem last modified से तय हुईं; यह वैकल्पिक साक्ष्य कॉपी या संपादन समय हो सकता है।",
+          "caption": "तारीख विश्लेषण और साक्ष्य।"
+        },
+        {
+          "id": "health-04",
+          "image": "09-09-review-date-evidence.png",
+          "text": "Settings में Advanced date policy खोलें: मेटाडेटा, XMP, नाम, फ़ोल्डर और अंतिम संशोधन। Windows CreationTime को चित्र लेने की तारीख नहीं माना जाता।",
+          "caption": "वास्तविक तारीख नीति।"
+        }
+      ],
+      "tips": [
+        "बनाई गई फ़ाइलों में कैमरा तारीख नहीं है। नाम के 2024 या 2025 ने देखी गई तारीख तय नहीं की; अंतिम संशोधन इस्तेमाल हुआ।",
+        "असमर्थित प्रारूप सुधार के बाद भी पूर्वावलोकनहीन रह सकता है। मूल रखें और उचित दर्शक इस्तेमाल करें।"
+      ],
+      "outcome": "आप पूर्वावलोकन, तारीख और उपलब्धता के मुद्दे तथा सुधार का वास्तविक परिणाम समझते हैं।"
+    },
+    {
+      "id": "duplicates",
+      "title": "5. हूबहू डुप्लिकेट खोजें",
+      "intro": "Duplicate Finder उपलब्ध समर्थित कैटलॉग फ़ाइलों की तुलना करता है। केवल समान नाम पर्याप्त नहीं। छोटे नमूने में जानबूझकर तीन समान समूह हैं।",
+      "steps": [
+        {
+          "id": "duplicates-01",
+          "image": "04-01-duplicate-finder-ready.png",
+          "text": "Duplicate Finder खोलकर 16 उम्मीदवार जाँचें और Find Duplicates चुनें।",
+          "caption": "प्रारंभिक खोज तैयार।"
+        },
+        {
+          "id": "duplicates-02",
+          "image": "04-06-duplicate-scan-outcome.png",
+          "text": "Duplicate scan complete की प्रतीक्षा करें: तीन समूह, छह फ़ाइलें, लगभग 16.9 MB संभावित स्थान।",
+          "caption": "तीन वास्तविक समान समूह।"
+        },
+        {
+          "id": "duplicates-03",
+          "image": "04-07-inspect-duplicate-results.png",
+          "text": "Exact Duplicate Group में नाम, स्थान और आकार तुलना करें। Open Folder स्थान खोलता है, फ़ाइल नहीं हटाता।",
+          "caption": "वास्तविक डुप्लिकेट विवरण।"
+        },
+        {
+          "id": "duplicates-04",
+          "image": "04-33-duplicate-scan-running.png",
+          "text": "544 आइटम वाले नमूने में Finding exact duplicates और गिनती देखें। Stop Scan दिखता है।",
+          "caption": "वास्तव में चलती खोज।"
+        },
+        {
+          "id": "duplicates-05",
+          "image": "04-36-duplicate-scan-cancelled.png",
+          "text": "Stop Scan से तैयार स्क्रीन पर लौटें। रोकी खोज अधूरी है, डुप्लिकेट न होने का प्रमाण नहीं।",
+          "caption": "रोकी गई वास्तविक खोज।"
+        }
+      ],
+      "tips": [
+        "स्थापित बिल्ड के Duplicate Finder में Pause या Resume नहीं हैं। COPY में ये हैं, आगे दिखाए गए हैं।",
+        "परीक्षित इंटरफ़ेस में हटाने का विकल्प नहीं है। खाली हो सकने वाला स्थान अनुमान है; सत्यापित प्रति और स्वतंत्र बैकअप रखें।",
+        "नया स्कैन या स्रोत बदलाव पुराने परिणाम अमान्य कर सकता है। Library सारांश का Not checked देखें।"
+      ],
+      "outcome": "आप मूल हटाए बिना खोज, समूह समीक्षा और खोज रोक सकते हैं।"
+    },
+    {
+      "id": "library",
+      "title": "6. ब्राउज़, खोज, चयन और घुमाव",
+      "intro": "Browse Library कैटलॉग और अवलोकन दिखाता है। खोज, फ़िल्टर और क्रम परिणाम सीमित करते हैं। घुमाव पूर्वावलोकन तथा व्यवस्थित या निर्यात प्रतियों पर लागू होता है, मूल नहीं बदलता।",
+      "steps": [
+        {
+          "id": "library-01",
+          "image": "05-01-library-overview.png",
+          "text": "Browse Library में कुल संख्या, प्रकार, तारीख, उपलब्धता और डुप्लिकेट का अवलोकन पढ़ें।",
+          "caption": "वास्तविक लाइब्रेरी अवलोकन।"
+        },
+        {
+          "id": "library-02",
+          "image": "05-02-search-garden.png",
+          "text": "Search media में garden लिखकर सात परिणाम पाएँ।",
+          "caption": "garden के सात परिणाम।"
+        },
+        {
+          "id": "library-03",
+          "image": "05-03-select-a-photo.png",
+          "text": "एक ही फ़ोटो चुनें और कार्रवाई से पहले चयन जाँचें।",
+          "caption": "एक फ़ोटो चुनी गई।"
+        },
+        {
+          "id": "library-04",
+          "image": "05-04-rotate-photo-right.png",
+          "text": "Rotate Right दबाकर पूर्वावलोकन देखें; मूल चित्र दोबारा नहीं लिखा जाता।",
+          "caption": "एकल दायाँ घुमाव।"
+        },
+        {
+          "id": "library-05",
+          "image": "05-05-undo-photo-rotation.png",
+          "text": "Undo से पुरानी दिशा लौटने की जाँच करें।",
+          "caption": "एकल घुमाव वापस।"
+        },
+        {
+          "id": "library-06",
+          "image": "05-06-select-all-visible-photos.png",
+          "text": "Select all visible photos दबाकर सात चयन जाँचें।",
+          "caption": "सात दृश्य फ़ोटो चयनित।"
+        },
+        {
+          "id": "library-07",
+          "image": "05-07-batch-rotate-left.png",
+          "text": "Rotate Left लगाकर कई पूर्वावलोकन देखें; चयन बनाए रखें।",
+          "caption": "समूह बायाँ घुमाव।"
+        },
+        {
+          "id": "library-08",
+          "image": "05-08-undo-batch-left-rotation.png",
+          "text": "अगला घुमाव करने से पहले Undo करें।",
+          "caption": "समूह घुमाव वापस।"
+        },
+        {
+          "id": "library-09",
+          "image": "05-09-batch-rotate-180.png",
+          "text": "Rotate 180 लगाएँ और कई फ़ोटो देखें।",
+          "caption": "समूह 180 डिग्री घूमा।"
+        },
+        {
+          "id": "library-10",
+          "image": "05-10-undo-batch-180.png",
+          "text": "फिर Undo करें। नमूने में संगठन से पहले सभी घुमाव वापस हुए।",
+          "caption": "आरंभिक दिशाएँ बहाल।"
+        },
+        {
+          "id": "library-11",
+          "image": "05-11-clear-photo-selection.png",
+          "text": "Clear Selection चुनकर चयन गिनती साफ़ होने दें।",
+          "caption": "फ़ोटो चयन साफ़।"
+        },
+        {
+          "id": "library-12",
+          "image": "05-12-clear-library-search.png",
+          "text": "Search media खाली करें; दूसरे फ़िल्टर अभी भी परिणाम सीमित कर सकते हैं।",
+          "caption": "खोज साफ़ की गई।"
+        },
+        {
+          "id": "library-13",
+          "image": "05-15-photos-filter-confirmed.png",
+          "text": "Photos only चुनें। बाद में अलग नमूना स्रोत जोड़ने पर 28 फ़ोटो हैं।",
+          "caption": "केवल फ़ोटो का वास्तविक परिणाम।"
+        },
+        {
+          "id": "library-14",
+          "image": "05-17-filename-sort-confirmed.png",
+          "text": "File name A–Z चुनकर सूची बंद करें। तारीख, आकार, उल्टा नाम और प्रकार के क्रम भी हैं।",
+          "caption": "नाम के अनुसार क्रम।"
+        }
+      ],
+      "tips": [
+        "Select all visible photos केवल दिखाई देती फ़ोटो चुनता है, पूरा कैटलॉग नहीं। गिनती जाँचें।",
+        "दूसरा घुमाव आज़माने से पहले Undo करें। नमूने के मूल हैश नहीं बदले।"
+      ],
+      "outcome": "आप फ़ोटो ढूँढकर एकल या समूह घुमाव कर और वापस कर सकते हैं।"
+    },
+    {
+      "id": "copy",
+      "title": "7. Guided COPY पूरा करें",
+      "intro": "पहले COPY करें। सत्यापित स्वतंत्र बैकअप और पर्याप्त खाली स्थान वाला अलग लक्ष्य रखें। दोनों पथ जाँचें; यह उदाहरण मूल नमूने के 16 मीडिया कॉपी करता है।",
+      "steps": [
+        {
+          "id": "copy-01",
+          "image": "06-01-guided-organizer.png",
+          "text": "Guided में Organize Photos & Videos खोलकर Choose File Types की स्कैन, चयन और बहिष्कृत गिनती देखें।",
+          "caption": "वास्तविक फ़ाइल प्रकार संवाद।"
+        },
+        {
+          "id": "copy-02",
+          "image": "06-02-no-file-types-selected.png",
+          "text": "Deselect All से Continue निष्क्रिय होता है। आगे बढ़ने के लिए समर्थित प्रकार चुनें।",
+          "caption": "शून्य चयन पर जारी रखना बंद।"
+        },
+        {
+          "id": "copy-03",
+          "image": "06-03-select-all-file-types.png",
+          "text": "Select All में वैकल्पिक टेक्स्ट सहित 17 फ़ाइलें चुनी जाती हैं।",
+          "caption": "सभी प्रकार चयनित।"
+        },
+        {
+          "id": "copy-04",
+          "image": "06-05-select-media-only.png",
+          "text": ".txt हटाएँ: 17 स्कैन, 16 चयनित, एक बाहर।",
+          "caption": "केवल 16 मीडिया चुने गए।"
+        },
+        {
+          "id": "copy-05",
+          "image": "06-06-file-types-confirmed.png",
+          "text": "Continue दबाकर Selected Folder और पूरा पथ जाँचें।",
+          "caption": "प्रकार की पुष्टि।"
+        },
+        {
+          "id": "copy-06",
+          "image": "06-08-guided-native-organization-plan.png",
+          "text": "Pattern में Year / Month / Day चुनकर सूची बंद करें। मूल 16 मीडिया की योजना और श्रेणियाँ देखें।",
+          "caption": "वास्तविक Guided योजना।"
+        },
+        {
+          "id": "copy-07",
+          "image": "06-09-destination-folder-picker.png",
+          "text": "Change Location चुनें। Windows चयनकर्ता में मौजूद फ़ोल्डर चाहिए, स्रोत और बैकअप से अलग।",
+          "caption": "नेटिव लक्ष्य चयनकर्ता।"
+        },
+        {
+          "id": "copy-08",
+          "image": "06-10-enter-copy-destination.png",
+          "text": "Copy Results और Select Folder चुनें। ऐप अंदर MEDIA KOLFAT Organized Media मूल फ़ोल्डर जोड़ता है।",
+          "caption": "अलग नमूना लक्ष्य दर्ज।"
+        },
+        {
+          "id": "copy-09",
+          "image": "06-11-selected-copy-destination.png",
+          "text": "Selected destination, श्रेणियाँ और खाली स्थान देखें। पिछली डुप्लिकेट जाँच समान फ़ोटो और वीडियो अलग वर्ग में रखती है।",
+          "caption": "जाँची गई योजना और लक्ष्य।"
+        },
+        {
+          "id": "copy-10",
+          "image": "06-12-confirm-copy.png",
+          "text": "Copy Selected Files दबाकर Confirm copy पढ़ें: मूल रहते हैं। गलत स्रोत, चयन या लक्ष्य होने पर रद्द करें।",
+          "caption": "वास्तविक COPY पुष्टि।"
+        },
+        {
+          "id": "copy-11",
+          "image": "06-14-copy-complete-report.png",
+          "text": "पुष्टि करके प्रतीक्षा करें: 16 कॉपी, शून्य समान छोड़े, शून्य नाम बदले, शून्य विफल। रिपोर्ट पथ और श्रेणियाँ पढ़ें।",
+          "caption": "रिपोर्ट सहित COPY पूर्ण।"
+        }
+      ],
+      "tips": [
+        "Pattern में Year / Month / Day, YMD - Single Folder, Year / Month, कैमरा विकल्प, केवल वर्ष/माह/दिन और Custom हैं। योजना का पूर्वावलोकन देखें।",
+        "Open destination तथा Open Folder परिणाम खोलते हैं; Save report प्रति सहेजता है। Add Destination to Folders स्पष्ट पंजीकरण है, स्वतः नहीं होता।",
+        "सभी 16 लक्ष्य हैश मिले; 17 मूल फ़ाइलें और स्वतंत्र बैकअप अपरिवर्तित रहे।"
+      ],
+      "outcome": "सत्यापित व्यवस्थित प्रति और TXT रिपोर्ट तैयार हैं; सभी मूल सुरक्षित हैं।"
+    },
+    {
+      "id": "progress",
+      "title": "8. COPY रोकें, चलाएँ और पुनः प्रयास करें",
+      "intro": "बड़े उदाहरण में 512 बनाए गए वीडियो और स्वतंत्र बैकअप हैं। इनमें निजी मीडिया नहीं है।",
+      "steps": [
+        {
+          "id": "progress-01",
+          "image": "11-05-copy-timing-destination.png",
+          "text": "अलग Copy Timing Results चुनकर पूरा लक्ष्य पथ जाँचें।",
+          "caption": "बड़े नमूने का अलग लक्ष्य।"
+        },
+        {
+          "id": "progress-02",
+          "image": "11-07-copy-timing-confirmation.png",
+          "text": "स्रोत, चयन, लक्ष्य और स्थान जाँचकर COPY स्वीकारें। पहले तैयारी का चरण हो सकता है।",
+          "caption": "बड़े COPY की पुष्टि।"
+        },
+        {
+          "id": "progress-03",
+          "image": "11-10-copy-paused.png",
+          "text": "Pause दबाकर Resume आने दें। वर्तमान फ़ाइल पहले पूरी हो सकती है।",
+          "caption": "वास्तविक COPY विराम।"
+        },
+        {
+          "id": "progress-04",
+          "image": "11-11-copy-resumed.png",
+          "text": "Resume से वही काम जारी होता है; Pause वापस आता है।",
+          "caption": "COPY फिर चालू।"
+        },
+        {
+          "id": "progress-05",
+          "image": "11-13-cancelled-copy-report.png",
+          "text": "Stop दबाकर रद्द सारांश और रिपोर्ट पढ़ें। 110 पूर्ण प्रतियाँ रहीं; विफलता शून्य।",
+          "caption": "110 प्रतियों सहित रद्द परिणाम।"
+        },
+        {
+          "id": "progress-06",
+          "image": "11-14b-retry-copy-confirmation.png",
+          "text": "वही स्रोत, पैटर्न और लक्ष्य लेकर COPY फिर चलाएँ। नई पुष्टि पढ़ें; समान पूर्ण फ़ाइलें छोड़ी जा सकती हैं।",
+          "caption": "सुरक्षित पुनः प्रयास की पुष्टि।"
+        },
+        {
+          "id": "progress-07",
+          "image": "11-15-retry-copy-progress.png",
+          "text": "वर्तमान नाम, गिनती और प्रतिशत पढ़ें। पुनः प्रयास में केवल बाकी कॉपी फ़ाइलों की प्रगति है।",
+          "caption": "वास्तविक पुनः प्रयास प्रगति।"
+        },
+        {
+          "id": "progress-08",
+          "image": "11-16-retry-copy-paused-progress.png",
+          "text": "ज़रूरत पर Pause दबाकर Paused देखें। गिनती और प्रतिशत इसी रुके काम के हैं।",
+          "caption": "विराम वाला प्रगति पैनल।"
+        },
+        {
+          "id": "progress-09",
+          "image": "11-17-retry-copy-resumed-progress.png",
+          "text": "Resume दबाकर पूरा होने दें। लक्ष्य जुड़ा रखें और स्रोत न बदलें।",
+          "caption": "Resume के बाद प्रगति।"
+        },
+        {
+          "id": "progress-10",
+          "image": "11-19-retry-completion-report.png",
+          "text": "402 कॉपी और 110 समान छोड़े गए; नाम बदलाव और विफलता शून्य। सभी 512 लक्ष्य हैश सत्यापित हुए।",
+          "caption": "सत्यापित पुनर्प्राप्ति पूर्ण।"
+        }
+      ],
+      "tips": [
+        "डुप्लिकेट स्कैन रोकना और COPY रोकना अलग काम हैं। वर्तमान काम के नियंत्रण इस्तेमाल करें।",
+        "नियंत्रणों के ऊपर पिछला स्थिति पाठ रह सकता है। वर्तमान प्रगति पैनल और अंतिम परिणाम पढ़ें।",
+        "रद्द करने के बाद रिपोर्ट और लक्ष्य जाँचें; पूर्ण सत्यापित प्रतियाँ रखें। पूरा लक्ष्य हटाना आवश्यक न मानें।"
+      ],
+      "outcome": "आप COPY को विराम, पुनः चालू और बंद कर सकते हैं तथा पूर्ण समान प्रतियाँ दोहराए बिना पुनः प्रयास कर सकते हैं।"
+    },
+    {
+      "id": "move",
+      "title": "9. बैकअप के साथ Advanced MOVE",
+      "intro": "MOVE लक्ष्य सत्यापित करके स्रोत फ़ाइलें हटाता है। केवल अलग नमूना प्रतियों पर स्वतंत्र बैकअप के साथ अभ्यास करें। Move Samples क्लोन इस्तेमाल हुआ; मूल नमूना लाइब्रेरी नहीं हटाई गई।",
+      "steps": [
+        {
+          "id": "move-01",
+          "image": "08-01-advanced-mode.png",
+          "text": "Experience में Advanced चुनें और आयोजक से पहले सही नमूना स्रोत चुनें।",
+          "caption": "वास्तविक Advanced मोड।"
+        },
+        {
+          "id": "move-02",
+          "image": "08-35-correct-source-confirmed.png",
+          "text": "प्रकार और Selected Folder जाँचें: Move Samples, सही पथ, 17 स्कैन, 16 चयन, एक बाहर।",
+          "caption": "सही बैकअप वाला स्रोत।"
+        },
+        {
+          "id": "move-03",
+          "image": "08-36-verified-move-plan.png",
+          "text": "Year / Month और योजना की पुष्टि करें। इस उदाहरण में Duplicates का Not checked है।",
+          "caption": "वास्तविक MOVE योजना।"
+        },
+        {
+          "id": "move-04",
+          "image": "08-37-final-move-destination.png",
+          "text": "Change Location में अलग Move Results चुनें और पथ जाँचें।",
+          "caption": "स्वीकृत नमूना MOVE लक्ष्य।"
+        },
+        {
+          "id": "move-05",
+          "image": "08-39-final-move-warning.png",
+          "text": "Transfer mode में Move लें। चेतावनी पढ़ें: पहले लक्ष्य सत्यापन, फिर स्रोत हटाना; फ़ोल्डर रहते हैं और रिपोर्ट सहेजी जाती है।",
+          "caption": "वास्तविक MOVE चेतावनी।"
+        },
+        {
+          "id": "move-06",
+          "image": "08-40-final-move-confirmation.png",
+          "text": "Move Selected Files दबाकर Confirm move पढ़ें। जाँचे हुए लक्ष्य के सटीक स्रोत हटेंगे। संदेह हो तो रद्द करें।",
+          "caption": "अंतिम वास्तविक MOVE पुष्टि।"
+        },
+        {
+          "id": "move-07",
+          "image": "08-42-move-complete-report.png",
+          "text": "स्रोत, लक्ष्य और बैकअप जाँचकर पुष्टि करें। Move complete: 16 स्थानांतरित, शून्य स्रोत-रखी प्रतियाँ, शून्य विफल।",
+          "caption": "16 फ़ाइलों का MOVE पूर्ण।"
+        },
+        {
+          "id": "move-08",
+          "image": "07-03-verified-move-activity.png",
+          "text": "Activity में Move Photos & Videos और Open Move Report देखें। स्वतंत्र बैकअप बनाए रखें।",
+          "caption": "वास्तविक पूर्ण MOVE रिकॉर्ड।"
+        }
+      ],
+      "tips": [
+        "16 लक्ष्य हैश मिले और 17 बैकअप फ़ाइलें नहीं बदलीं। notes.txt तथा चार स्रोत फ़ोल्डर रहे।",
+        "COPIED_SOURCE_RETAINED का अर्थ लक्ष्य प्रति बनी, लेकिन स्रोत रहा। रिपोर्ट देखें; इसे पूर्ण स्थानांतरण न मानें।",
+        "हर बार Selected Folder देखें। Refresh स्रोत नहीं बदलता; यहाँ केवल नमूना पंजीकरण कैटलॉग से हटाकर फिर जोड़ा गया।"
+      ],
+      "outcome": "नमूना MOVE पूर्ण और सत्यापित है; स्वतंत्र बैकअप तथा मूल लाइब्रेरी सुरक्षित हैं।"
+    },
+    {
+      "id": "reports",
+      "title": "10. Activity और टेक्स्ट रिपोर्ट पढ़ें",
+      "intro": "Activity हाल के स्थानीय काम रखता है। Completed, Completed with warnings और Cancelled अलग परिणाम हैं। स्वतः TXT रिपोर्ट चुने लक्ष्य के मूल में रहती हैं।",
+      "steps": [
+        {
+          "id": "reports-01",
+          "image": "07-01-activity-after-copy.png",
+          "text": "Activity में Copy Photos & Videos के संसाधित, कॉपी, छोड़े और विफल आँकड़े लक्ष्य सारांश से मिलाएँ।",
+          "caption": "पहला पूर्ण COPY रिकॉर्ड।"
+        },
+        {
+          "id": "reports-02",
+          "image": "07-02-completed-and-cancelled-activity.png",
+          "text": "रद्द COPY में 110 संसाधित; पूर्ण पुनः प्रयास में 512 और 110 छोड़े गए। रद्द डुप्लिकेट स्कैन अधूरा है।",
+          "caption": "वास्तविक अलग परिणामों का इतिहास।"
+        },
+        {
+          "id": "reports-03",
+          "image": "07-03-verified-move-activity.png",
+          "text": "Open Copy Report या Open Move Report तथा Open Destination चुनें। TXT में मोड, पथ, स्थिति और कुल पढ़ें।",
+          "caption": "वास्तविक COPY और MOVE प्रविष्टियाँ।"
+        }
+      ],
+      "tips": [
+        "सत्यापित रिपोर्ट में Mode: MOVE, Total planned files: 16, Moved: 16, COPIED_SOURCE_RETAINED: 0, Skipped: 0, Failed: 0 हैं।",
+        "COPY रिपोर्ट मूल सुरक्षित होने की पुष्टि करती है। रद्द रिपोर्ट लक्ष्य में बची पूरी प्रतियाँ बताती है।",
+        "Clear Activity History इस्तेमाल नहीं किया गया, ताकि इतिहास समीक्षा के लिए बना रहे।"
+      ],
+      "outcome": "आप रिकॉर्ड, फ़ोल्डर और रिपोर्ट जोड़कर सफलता तथा अधूरी प्रक्रिया पहचान सकते हैं।"
+    },
+    {
+      "id": "settings",
+      "title": "11. सेटिंग और नया आरंभ समझें",
+      "intro": "Settings स्थानीय प्राथमिकताएँ बदलता है: Language, Experience, Safety, Privacy & Local Processing, Organizing, Library, Guidance & Accessibility, Maintenance और Media dates।",
+      "steps": [
+        {
+          "id": "settings-01",
+          "image": "09-01-settings.png",
+          "text": "Settings में भाषा, अनुभव और सुरक्षा देखें। दिखे इंटरफ़ेस में आयोजन पुष्टि और स्रोत हटाने की चेतावनी अनिवार्य हैं।",
+          "caption": "भाषा, अनुभव और सुरक्षा।"
+        },
+        {
+          "id": "settings-02",
+          "image": "09-03-organizing-library-settings.png",
+          "text": "Default organize pattern और Destination behavior देखें; बाद वाला Ask every time है। स्थानीय प्रक्रिया और रिपोर्ट भंडारण भी पढ़ें।",
+          "caption": "आयोजन और स्थानीय गोपनीयता।"
+        },
+        {
+          "id": "settings-03",
+          "image": "09-04-accessibility-settings.png",
+          "text": "पूर्वावलोकन आकार, क्रम, तारीख/आकार लेबल, स्कैन बाद Library खुलना और पिछला दृश्य याद रखना देखें।",
+          "caption": "वास्तविक Library प्राथमिकताएँ।"
+        },
+        {
+          "id": "settings-04",
+          "image": "09-05-enable-larger-text.png",
+          "text": "Larger text लगाएँ और पाठ तथा नेविगेशन जाँचें।",
+          "caption": "बड़ा पाठ लागू।"
+        },
+        {
+          "id": "settings-05",
+          "image": "09-06-restore-standard-text.png",
+          "text": "Larger text हटाकर मानक आकार लौटाएँ। Larger buttons, Reduced motion और मार्गदर्शन भी बदल सकते हैं।",
+          "caption": "मानक पाठ बहाल।"
+        },
+        {
+          "id": "settings-06",
+          "image": "09-07-maintenance-settings.png",
+          "text": "Maintenance में ऐप-निर्मित फ़ाइलों का स्थान देखें। Refresh Usage आँकड़े बदलता है; Clear Thumbnail Cache पूर्वावलोकन का है और यहाँ नहीं चलाया गया।",
+          "caption": "रखरखाव और उपयोग।"
+        },
+        {
+          "id": "settings-07",
+          "image": "09-09-review-date-evidence.png",
+          "text": "Advanced date policy में पाँच साक्ष्य और कम विश्वास चेतावनी पढ़ें। बदलाव नए स्कैन, पुनर्विश्लेषण और योजना पर लागू होते हैं।",
+          "caption": "पाँच वास्तविक तारीख साक्ष्य।"
+        },
+        {
+          "id": "settings-08",
+          "image": "09-10-reset-settings-confirmation.png",
+          "text": "Reset Settings to Defaults की पुष्टि पढ़ें: सेटिंग, स्रोत, इंडेक्स, प्रगति और कैश साफ़ होंगे; मूल मीडिया और व्यवस्थित प्रतियाँ नहीं बदलेंगी।",
+          "caption": "वास्तविक रीसेट चेतावनी।"
+        },
+        {
+          "id": "settings-09",
+          "image": "09-12-reset-cancelled.png",
+          "text": "Cancel चुनें। न निजी प्रोफ़ाइल, न नमूना प्रोफ़ाइल रीसेट हुआ।",
+          "caption": "रीसेट रद्द।"
+        }
+      ],
+      "tips": [
+        "नया आरंभ केवल दृश्य प्राथमिकता से बड़ा बदलाव है। कैटलॉग साफ़ करने से पहले जरूरी रिपोर्ट और जानकारी रखें।",
+        "Settings देखने से पुरानी तारीखें नहीं बदलतीं। बदलने के लिए स्पष्ट पुनर्विश्लेषण करें।"
+      ],
+      "outcome": "आप कैटलॉग गलती से साफ़ किए बिना प्राथमिकताएँ, रखरखाव और रीसेट समझते हैं।"
+    },
+    {
+      "id": "troubleshooting",
+      "title": "12. सामान्य समस्याओं से उबरें",
+      "intro": "दोहराने से पहले संदेश पढ़ें और स्रोत, फ़िल्टर, पैटर्न तथा लक्ष्य जाँचें। ये वास्तविक स्थितियाँ सुरक्षित नमूना डेटा पर बनाई गई हैं।",
+      "steps": [
+        {
+          "id": "troubleshooting-01",
+          "image": "10-01-library-no-search-results.png",
+          "text": "No photos match your choices हो तो Search media देखें। गलत नाम अंश सारे परिणाम छिपा सकता है।",
+          "caption": "वास्तविक खाली खोज।"
+        },
+        {
+          "id": "troubleshooting-02",
+          "image": "10-02-recover-search-results.png",
+          "text": "garden जैसा ज्ञात अंश दें और अन्य बदलाव से पहले परिणाम लौटना जाँचें।",
+          "caption": "परिणाम वापस आए।"
+        },
+        {
+          "id": "troubleshooting-03",
+          "image": "10-04-review-unavailable-filter.png",
+          "text": "Unavailable only देखें। सभी मूल उपलब्ध हों तो शून्य आता है; इससे फ़ाइलें गायब साबित नहीं होतीं।",
+          "caption": "सीमित उपलब्धता फ़िल्टर।"
+        },
+        {
+          "id": "troubleshooting-04",
+          "image": "10-05-show-all-recovery.png",
+          "text": "Show All Photos दबाएँ और लौटे खोज तथा फ़िल्टर जाँचें।",
+          "caption": "गैलरी बहाल।"
+        },
+        {
+          "id": "troubleshooting-05",
+          "image": "10-08-invalid-folder-error.png",
+          "text": "Folder is unavailable or cannot be opened पर पथ और उपलब्धता जाँचें। अस्तित्वहीन नमूना पथ Select This Folder बंद करता है।",
+          "caption": "वास्तविक फ़ोल्डर त्रुटि।"
+        },
+        {
+          "id": "troubleshooting-06",
+          "image": "10-10-empty-folder.png",
+          "text": "मौजूद फ़ोल्डर पर Go करें। खाली फ़ोल्डर शून्य मीडिया दिखाता है; दूसरा चुनें या रद्द करें।",
+          "caption": "वास्तविक खाली फ़ोल्डर।"
+        },
+        {
+          "id": "troubleshooting-07",
+          "image": "10-12-unsupported-only-preview.png",
+          "text": "केवल टेक्स्ट फ़ोल्डर भी शून्य मीडिया दिखाता है। आयोजन में Other Files अलग चुने जाते हैं।",
+          "caption": "केवल असमर्थित फ़ाइलें।"
+        },
+        {
+          "id": "troubleshooting-08",
+          "image": "10-14-invalid-custom-pattern.png",
+          "text": "Custom में मान्य टोकन और सापेक्ष खंड दें। ऊपर जाने वाला पैटर्न अस्वीकृत है और COPY बंद रहती है।",
+          "caption": "वास्तविक अमान्य पैटर्न।"
+        },
+        {
+          "id": "troubleshooting-09",
+          "image": "10-17-custom-plan-reconfirmed.png",
+          "text": "{YYYY}\\{YYYY-MM} दें। इस बिल्ड में Pattern फिर खोलकर बंद करें, ताकि योजना दोबारा पुष्ट हो।",
+          "caption": "सुधरी योजना की पुष्टि।"
+        },
+        {
+          "id": "troubleshooting-10",
+          "image": "10-19-catalog-only-removal-confirmation.png",
+          "text": "Remove Folder पढ़ें: केवल कैटलॉग और Library रिकॉर्ड हटते हैं, मूल फ़ाइल और फ़ोल्डर नहीं।",
+          "caption": "केवल कैटलॉग से हटाने की पुष्टि।"
+        },
+        {
+          "id": "troubleshooting-11",
+          "image": "10-20-disposable-source-removed-from-catalog.png",
+          "text": "सिर्फ नमूने में Remove from MEDIA KOLFAT स्वीकारें, मूल जाँचें, फिर मैनुअल जोड़कर स्कैन के बाद व्यवस्थित करें।",
+          "caption": "पंजीकरण हटा, मूल सुरक्षित।"
+        }
+      ],
+      "tips": [
+        "बिना प्रकार चयन Continue बंद है। Choose File Types पर लौटें।",
+        "पथ त्रुटि के बाद पुराने पूर्वावलोकन रह सकते हैं। त्रुटि और निष्क्रिय Select This Folder देखें; उन्हें अनुपलब्ध पथ की सामग्री न मानें।",
+        "लक्ष्य या जगह समस्या में पथ, कनेक्शन, लेखन और सुरक्षा आरक्षित स्थान जाँचें; उचित दूसरा फ़ोल्डर चुनें।",
+        "बाधा के बाद दोहराने से पहले Activity, TXT और पूर्ण प्रतियाँ देखें। चेतावनी या रद्द स्थिति की समीक्षा आवश्यक है।",
+        "पंजीकरण केवल अलग कैटलॉग से हटाया गया। सभी 17 मूल अपरिवर्तित रहे और MOVE के लिए दोबारा जोड़े गए।"
+      ],
+      "outcome": "आप खाली परिणाम और गायब मूल में अंतर कर सकते हैं, त्रुटि सुधारकर प्रमाण सुरक्षित रख सकते हैं।"
+    }
+  ],
+  "status": "Complete guide; source and screenshot parity verified; native-speaker editorial review not performed"
+}

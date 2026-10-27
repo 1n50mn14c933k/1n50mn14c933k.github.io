@@ -1,0 +1,714 @@
+{
+  "language": "es",
+  "title": "Guía de usuario de MEDIA KOLFAT 2.0",
+  "description": "Guía ilustrada para Windows: añadir medios, comprobar su estado, encontrar duplicados, organizar con COPY o Advanced MOVE, recuperar operaciones y entender los informes.",
+  "lead": "Siga MEDIA KOLFAT desde el primer inicio hasta una colección organizada y verificada. Los ejemplos utilizan imágenes y vídeo generados, con copias de seguridad independientes. Todas las capturas son PNG nativos auténticos de la aplicación Windows instalada.",
+  "versionNote": "Verificado con MEDIA KOLFAT 2.0.0, compilación 2.0.0.0. Las capturas muestran la interfaz inglesa. Las cantidades cambian al incorporar el conjunto de demostración grande; siga las cifras de su propia colección.",
+  "safety": "Cree una copia de seguridad independiente antes de organizar. Se recomienda COPY porque conserva los archivos de origen. Advanced MOVE elimina los originales de origen después de verificar el destino y las condiciones de seguridad. Conserve la copia de seguridad hasta comprobar los resultados y el informe.",
+  "contentsLabel": "Contenido",
+  "stepLabel": "Paso",
+  "imageLinkLabel": "Abrir PNG original",
+  "backLabel": "Volver al contenido",
+  "chapters": [
+    {
+      "id": "start",
+      "title": "1. Iniciar y entender las indicaciones",
+      "intro": "Abra la aplicación instalada. La barra lateral incluye Performance Check, Add Photos & Videos, Photos Health Check, Duplicate Finder, Browse Library, Organize Photos & Videos, Activity, Settings y About. Guided y Advanced son los dos modos disponibles.",
+      "steps": [
+        {
+          "id": "start-01",
+          "image": "01-01-first-launch-guided.png",
+          "text": "Comience con Guided seleccionado en Experience. Siga la acción resaltada. Los pasos futuros son grises, el actual se destaca en amarillo o ámbar y los completados llevan marcas verdes.",
+          "caption": "Primer inicio en el modo guiado."
+        },
+        {
+          "id": "start-02",
+          "image": "01-02-performance-check-complete.png",
+          "text": "Ejecute Quick Check en Performance Check y espere. Lea el resultado: el equipo de demostración obtuvo un 98 %, pero otro equipo puede dar una puntuación distinta.",
+          "caption": "Quick Check completado con un 98 %."
+        },
+        {
+          "id": "start-03",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Abra Add Photos & Videos. Elija entre Scan Computer Automatically y Choose Photos & Videos Manually. Use la selección manual si conoce la carpeta que desea añadir.",
+          "caption": "Las dos opciones reales de selección de origen."
+        },
+        {
+          "id": "start-04",
+          "image": "01-04-about-version.png",
+          "text": "Abra About. Despliegue Release Information si hace falta y lea Version y Build. Regrese al flujo deseado mediante la barra lateral.",
+          "caption": "Versión 2.0.0 y compilación 2.0.0.0."
+        },
+        {
+          "id": "start-05",
+          "image": "01-05-about-privacy.png",
+          "text": "Despliegue Privacy & Data Safety. Lea la diferencia entre escanear, COPY y Advanced MOVE. Mantenga una copia de seguridad independiente de los medios importantes.",
+          "caption": "Información de privacidad y seguridad de la aplicación."
+        }
+      ],
+      "tips": [
+        "La flecha animada y el resplandor señalan la acción recomendada. Reduced motion y otras preferencias de guía están en Settings.",
+        "Guided ayuda a seguir el orden de las tareas. Advanced ofrece acceso más directo y muestra MOVE cuando el plan de organización está preparado.",
+        "About también contiene Legal & Policies, Support, Technical Information, Open-Source & Third-Party Licenses y Product Information. Despliegue el panel que necesite."
+      ],
+      "outcome": "Puede identificar la versión instalada, cambiar de página y reconocer el paso guiado actual."
+    },
+    {
+      "id": "sources",
+      "title": "2. Seleccionar un origen manualmente",
+      "intro": "Un origen es una carpeta registrada en el catálogo local. Añadirla y escanearla indexa fotos y vídeos compatibles. El ejemplo contiene 14 JPEG generados, dos AVI generados y un texto opcional en subcarpetas.",
+      "steps": [
+        {
+          "id": "sources-01",
+          "image": "02-01-manual-source-picker.png",
+          "text": "Elija Choose Photos & Videos Manually. Revise Current folder, Locations, Folders y Photos & Videos in this folder antes de seleccionar una carpeta.",
+          "caption": "El selector de carpetas real de MEDIA KOLFAT."
+        },
+        {
+          "id": "sources-02",
+          "image": "02-02-enter-demo-source-path.png",
+          "text": "Escriba la ruta completa de la carpeta en Current folder. La demostración usa Media Samples dentro del directorio de datos desechables.",
+          "caption": "La ruta concreta del origen de demostración."
+        },
+        {
+          "id": "sources-03",
+          "image": "02-03-demo-nested-folders.png",
+          "text": "Elija Go. Compruebe la ruta y los nombres de las subcarpetas. La carpeta principal puede mostrar cero medios directos aunque sus subcarpetas sí los contengan.",
+          "caption": "Cuatro subcarpetas en el origen de demostración."
+        },
+        {
+          "id": "sources-04",
+          "image": "02-04-preview-sample-photos.png",
+          "text": "Abra una subcarpeta conocida y examine las vistas previas. Aquí, 2024 Holiday muestra seis JPEG generados.",
+          "caption": "Seis imágenes compatibles dentro de la subcarpeta."
+        },
+        {
+          "id": "sources-05",
+          "image": "02-05-return-to-demo-root.png",
+          "text": "Use Up one folder para volver a la carpeta principal e incluir la colección anidada completa. Compruebe Current folder otra vez.",
+          "caption": "Regreso al origen principal previsto."
+        },
+        {
+          "id": "sources-06",
+          "image": "02-06-ready-to-scan-source.png",
+          "text": "Elija Select This Folder. En Ready to add this folder, lea nombre y ruta completa. No continúe si el origen mostrado es distinto del previsto.",
+          "caption": "El origen seleccionado está listo para añadirse."
+        },
+        {
+          "id": "sources-07",
+          "image": "02-07-source-advanced-options.png",
+          "text": "Despliegue Advanced options cuando necesite revisar Folder location, el nombre opcional o Folder type. Las carpetas de nube deben estar disponibles en este equipo; seleccione una ruta local legible.",
+          "caption": "Nombre opcional y tipo de carpeta elegido automáticamente."
+        },
+        {
+          "id": "sources-08",
+          "image": "02-08-source-scan-complete.png",
+          "text": "Inicie el escaneo ofrecido y espere Ready y una hora de escaneo correcto. El primer origen tiene 16 medios compatibles; su archivo de texto no se indexa como medio.",
+          "caption": "Escaneo completado con 16 fotos y vídeos."
+        },
+        {
+          "id": "sources-09",
+          "image": "02-09-source-refresh-complete.png",
+          "text": "Use Refresh en esa tarjeta para volver a escanear. Compruebe estado y hora del último éxito. Refresh no selecciona automáticamente el origen para organizar.",
+          "caption": "Origen preparado después de actualizar."
+        }
+      ],
+      "tips": [
+        "En Advanced puede añadir primero una carpeta adicional y después usar Start Scan en su tarjeta. El primer origen se escanea inicialmente en el flujo guiado mostrado.",
+        "Revise siempre Selected Folder en el organizador. En la interfaz probada, Refresh de una tarjeta no cambia el origen seleccionado para organizar."
+      ],
+      "outcome": "La carpeta correcta queda registrada y sus medios compatibles aparecen en el catálogo."
+    },
+    {
+      "id": "locations",
+      "title": "3. Búsqueda automática y ubicaciones",
+      "intro": "El selector ofrece This PC, carpetas y unidades locales, Pictures, OneDrive y Network. Seleccione solo ubicaciones que quiera leer. Una unidad externa o USB debe estar conectada y ser legible; la ubicación de red debe ser accesible desde Windows.",
+      "steps": [
+        {
+          "id": "locations-01",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Revise Scan Computer Automatically antes de elegirlo. Inicia la búsqueda en todo el equipo, sin límite a la carpeta de demostración. Use la opción manual si quiere leer solo una carpeta conocida.",
+          "caption": "Opciones separadas para búsqueda automática y manual."
+        },
+        {
+          "id": "locations-02",
+          "image": "02-01-manual-source-picker.png",
+          "text": "Use This PC para una unidad legible o escriba una ruta local o de red exacta en Current folder. OneDrive se refiere a archivos disponibles localmente. Habilite su disponibilidad en Windows antes de seleccionarlos.",
+          "caption": "Los accesos de ubicación y el campo de ruta reales."
+        }
+      ],
+      "tips": [
+        "No se ejecutó la búsqueda de todo el equipo porque examinaría unidades fuera de los datos desechables. No se presenta ningún resultado automático como probado.",
+        "Un acceso directo no confirma una sesión de cuenta ni una conexión a la nube. No se abrieron medios personales de Pictures, OneDrive, redes ni unidades externas."
+      ],
+      "outcome": "Puede elegir una selección adecuada a la ubicación y al alcance que desea escanear."
+    },
+    {
+      "id": "health",
+      "title": "4. Comprobar vistas previas y fechas",
+      "intro": "Abra Photos Health Check después del escaneo. El estado de las miniaturas, las fechas y la disponibilidad de originales son aspectos diferentes. Una vista previa ausente no demuestra que falte el archivo de origen.",
+      "steps": [
+        {
+          "id": "health-01",
+          "image": "03-01-photos-health-check.png",
+          "text": "Revise las cifras. El ejemplo pequeño tiene 16 medios: 14 vistas previas válidas y dos problemas de vídeo; los 16 originales fueron vistos por última vez como disponibles.",
+          "caption": "El estado real de la colección pequeña."
+        },
+        {
+          "id": "health-02",
+          "image": "03-02-thumbnail-repair-complete.png",
+          "text": "Ejecute la reparación explícita de miniaturas ausentes y lea el resultado. Se comprobaron dos vídeos, no se repararon vistas previas y ambos formatos se señalaron como incompatibles para la vista previa.",
+          "caption": "Dos casos de vista previa no compatible."
+        },
+        {
+          "id": "health-03",
+          "image": "03-04-date-reanalysis-result.png",
+          "text": "Ejecute el nuevo análisis de fechas ausentes y revise su procedencia. Aquí se resolvieron las 16 con Filesystem last modified, una alternativa que puede reflejar copia o edición en vez de captura.",
+          "caption": "El análisis real y la procedencia de las fechas."
+        },
+        {
+          "id": "health-04",
+          "image": "09-09-review-date-evidence.png",
+          "text": "Abra Settings y Advanced date policy. Revise metadatos integrados, XMP compatible, nombres, carpetas estructuradas y última modificación. Windows CreationTime no se usa como prueba de fecha de captura.",
+          "caption": "Las reglas reales y el aviso de baja confianza."
+        }
+      ],
+      "tips": [
+        "Los archivos generados no contienen metadatos de captura de cámara. Sus nombres con 2024 o 2025 no determinaron el resultado observado; el catálogo usó la última modificación del sistema de archivos.",
+        "La reparación puede terminar sin crear una vista previa para un formato no compatible. Conserve los originales y use un visor adecuado cuando sea necesario."
+      ],
+      "outcome": "Puede distinguir problemas de vista previa, fecha y disponibilidad e interpretar el resultado real de reparación."
+    },
+    {
+      "id": "duplicates",
+      "title": "5. Encontrar y revisar duplicados exactos",
+      "intro": "Duplicate Finder compara medios compatibles y disponibles del catálogo para encontrar copias exactas. Un nombre igual no basta. El conjunto pequeño contiene intencionadamente tres grupos de archivos idénticos.",
+      "steps": [
+        {
+          "id": "duplicates-01",
+          "image": "04-01-duplicate-finder-ready.png",
+          "text": "Abra Duplicate Finder tras escanear el origen. Revise cuántas fotos y vídeos están preparados y elija Find Duplicates.",
+          "caption": "Búsqueda inicial preparada para 16 medios."
+        },
+        {
+          "id": "duplicates-02",
+          "image": "04-06-duplicate-scan-outcome.png",
+          "text": "Espere Duplicate scan complete. El ejemplo inicial encuentra tres grupos, seis archivos duplicados y unos 16,9 MB potencialmente recuperables.",
+          "caption": "Tres grupos exactos encontrados inicialmente."
+        },
+        {
+          "id": "duplicates-03",
+          "image": "04-07-inspect-duplicate-results.png",
+          "text": "Recorra Exact Duplicate Group. Compare nombres, ubicaciones y tamaños. Open Folder ayuda a localizar un archivo; examinar un grupo no lo elimina.",
+          "caption": "Revisión individual de los duplicados reales."
+        },
+        {
+          "id": "duplicates-04",
+          "image": "04-33-duplicate-scan-running.png",
+          "text": "Para una colección mayor, observe Finding exact duplicates y el número de candidatos revisados. El conjunto ampliado tiene 544 registros; durante la búsqueda aparece Stop Scan.",
+          "caption": "Una búsqueda real en curso con Stop Scan."
+        },
+        {
+          "id": "duplicates-05",
+          "image": "04-36-duplicate-scan-cancelled.png",
+          "text": "Elija Stop Scan para terminar la búsqueda activa. En la demostración vuelve la pantalla preparada para escanear. Una búsqueda detenida está incompleta y no demuestra ausencia de duplicados.",
+          "caption": "El estado real después de detener la búsqueda."
+        }
+      ],
+      "tips": [
+        "Esta compilación instalada no mostró Pause ni Resume en Duplicate Finder. COPY dispone de controles independientes de pausa y reanudación, explicados más adelante.",
+        "La interfaz de duplicados probada no ofrece una acción de borrado. El espacio potencialmente recuperable es una estimación, no espacio ya liberado. Mantenga al menos una copia verificada y su copia de seguridad.",
+        "Un escaneo nuevo o un cambio de orígenes puede invalidar el resultado anterior. Compruebe Not checked en la biblioteca antes de confiar en las cifras."
+      ],
+      "outcome": "Puede buscar copias exactas, examinar grupos y detener la búsqueda sin borrar originales."
+    },
+    {
+      "id": "library",
+      "title": "6. Explorar, buscar, seleccionar y girar fotos",
+      "intro": "Browse Library combina un resumen con una galería buscable. Revise Photos & Videos, Health, Duplicates, Unknown Date y Organization. Los ejemplos de giro usan la colección pequeña y deshacen cada cambio con Undo.",
+      "steps": [
+        {
+          "id": "library-01",
+          "image": "05-01-library-overview.png",
+          "text": "Abra Browse Library. Examine resumen y tarjetas. El primer ejemplo contiene 14 fotos y dos vídeos; las vistas previas de vídeo no disponibles aparecen como marcadores.",
+          "caption": "La biblioteca pequeña de demostración."
+        },
+        {
+          "id": "library-02",
+          "image": "05-02-search-garden.png",
+          "text": "Escriba garden en Search media. En el conjunto pequeño aparecen siete fotos. Para su colección use una parte reconocible del nombre.",
+          "caption": "La búsqueda garden inicial devuelve siete fotos."
+        },
+        {
+          "id": "library-03",
+          "image": "05-03-select-a-photo.png",
+          "text": "Marque una sola tarjeta de foto. Revise la selección antes de actuar. Sus controles de giro corresponden a esa fotografía seleccionada.",
+          "caption": "Una foto generada está seleccionada."
+        },
+        {
+          "id": "library-04",
+          "image": "05-04-rotate-photo-right.png",
+          "text": "Elija Rotate Right y compruebe la orientación. El giro se registra para la vista previa y las copias organizadas o exportadas; no reescribe la imagen de origen.",
+          "caption": "Vista previa real tras girar a la derecha."
+        },
+        {
+          "id": "library-05",
+          "image": "05-05-undo-photo-rotation.png",
+          "text": "Elija Undo para esa foto y verifique que recupera la orientación anterior.",
+          "caption": "Undo restaura la vista previa individual."
+        },
+        {
+          "id": "library-06",
+          "image": "05-06-select-all-visible-photos.png",
+          "text": "Elija Select all visible photos. Compruebe el contador: aquí se seleccionan los siete resultados fotográficos visibles.",
+          "caption": "Siete fotos garden visibles seleccionadas."
+        },
+        {
+          "id": "library-07",
+          "image": "05-07-batch-rotate-left.png",
+          "text": "Use Rotate Left para el grupo. Examine las vistas previas manteniendo la selección.",
+          "caption": "El grupo seleccionado tras girar a la izquierda."
+        },
+        {
+          "id": "library-08",
+          "image": "05-08-undo-batch-left-rotation.png",
+          "text": "Use Undo del grupo antes de probar otro giro. Se restauran las orientaciones previas.",
+          "caption": "Giro grupal a la izquierda deshecho."
+        },
+        {
+          "id": "library-09",
+          "image": "05-09-batch-rotate-180.png",
+          "text": "Elija Rotate 180 para el grupo. Compruebe varias vistas previas, no solo la barra de herramientas.",
+          "caption": "Las fotos seleccionadas tras un giro de 180 grados."
+        },
+        {
+          "id": "library-10",
+          "image": "05-10-undo-batch-180.png",
+          "text": "Use Undo otra vez. En la demostración se deshicieron todos los giros antes de organizar y los hashes originales siguieron iguales.",
+          "caption": "Las orientaciones iniciales están restauradas."
+        },
+        {
+          "id": "library-11",
+          "image": "05-11-clear-photo-selection.png",
+          "text": "Elija Clear Selection al finalizar la acción de grupo. Compruebe que se limpia la barra con el contador.",
+          "caption": "Selección de fotos eliminada."
+        },
+        {
+          "id": "library-12",
+          "image": "05-12-clear-library-search.png",
+          "text": "Vacíe Search media para volver a la galería general. Los filtros existentes aún pueden limitar los resultados.",
+          "caption": "La búsqueda inicial se ha vaciado."
+        },
+        {
+          "id": "library-13",
+          "image": "05-15-photos-filter-confirmed.png",
+          "text": "Elija Photos only en el filtro de tipo. El ejemplo posterior contiene 28 fotos porque se añadió otro origen desechable.",
+          "caption": "Resultado real del filtro de fotos."
+        },
+        {
+          "id": "library-14",
+          "image": "05-17-filename-sort-confirmed.png",
+          "text": "Elija File name A–Z y cierre la lista. También se observaron órdenes por más reciente, más antiguo, nombre inverso, mayor, menor, fotos primero y vídeos primero.",
+          "caption": "Resultados garden ordenados por nombre."
+        }
+      ],
+      "tips": [
+        "La cantidad corresponde a registros del catálogo y puede incluir copias de otros orígenes registrados. Un número mayor no implica registro automático del destino COPY.",
+        "Después de los giros se verificaron los hashes de originales y copias de seguridad. Los cambios de orientación no modificaron ninguno de esos archivos."
+      ],
+      "outcome": "Puede encontrar fotos, controlar selecciones, ordenar resultados y cambiar o deshacer orientaciones sin modificar originales."
+    },
+    {
+      "id": "copy",
+      "title": "7. Completar una COPY guiada",
+      "intro": "Empiece con COPY y conserve una copia de seguridad independiente verificada. Elija un destino separado con espacio suficiente y compruebe ambos caminos. El ejemplo copia los 16 archivos multimedia originales de demostración.",
+      "steps": [
+        {
+          "id": "copy-01",
+          "image": "06-01-guided-organizer.png",
+          "text": "En Guided, abra Organize Photos & Videos. Revise Choose File Types y los recuentos examinados, seleccionados y excluidos.",
+          "caption": "Selección de tipos real."
+        },
+        {
+          "id": "copy-02",
+          "image": "06-02-no-file-types-selected.png",
+          "text": "Deselect All vacía la selección y desactiva Continue. Seleccione al menos un tipo compatible para continuar.",
+          "caption": "Continue desactivado sin selección."
+        },
+        {
+          "id": "copy-03",
+          "image": "06-03-select-all-file-types.png",
+          "text": "Pulse Select All: aquí incluye 17 archivos y el texto opcional.",
+          "caption": "Todos los tipos seleccionados."
+        },
+        {
+          "id": "copy-04",
+          "image": "06-05-select-media-only.png",
+          "text": "Desmarque .txt. Compruebe 17 examinados, 16 seleccionados y uno excluido.",
+          "caption": "Solo los archivos multimedia."
+        },
+        {
+          "id": "copy-05",
+          "image": "06-06-file-types-confirmed.png",
+          "text": "Pulse Continue y compruebe Selected Folder y su ruta completa.",
+          "caption": "Tipos confirmados."
+        },
+        {
+          "id": "copy-06",
+          "image": "06-08-guided-native-organization-plan.png",
+          "text": "Elija Year / Month / Day en Pattern y cierre la lista. Revise el plan y las categorías del origen original intacto de 16 archivos.",
+          "caption": "Plan guiado real."
+        },
+        {
+          "id": "copy-07",
+          "image": "06-09-destination-folder-picker.png",
+          "text": "Pulse Change Location. El selector nativo exige una carpeta existente, distinta del origen y de la copia de seguridad.",
+          "caption": "Selector de destino de Windows."
+        },
+        {
+          "id": "copy-08",
+          "image": "06-10-enter-copy-destination.png",
+          "text": "Seleccione Copy Results y pulse Select Folder. La aplicación crea dentro la raíz MEDIA KOLFAT Organized Media.",
+          "caption": "Destino desechable introducido."
+        },
+        {
+          "id": "copy-09",
+          "image": "06-11-selected-copy-destination.png",
+          "text": "Compruebe Selected destination, categorías y espacio. El análisis de duplicados previo separa las fotos y vídeos duplicados.",
+          "caption": "Destino y plan comprobados."
+        },
+        {
+          "id": "copy-10",
+          "image": "06-12-confirm-copy.png",
+          "text": "Pulse Copy Selected Files y lea Confirm copy: se crean copias y se conservan los originales. Cancele si algún dato es incorrecto.",
+          "caption": "Confirmación real de COPY."
+        },
+        {
+          "id": "copy-11",
+          "image": "06-14-copy-complete-report.png",
+          "text": "Confirme y espere. El resultado fue 16 copiados, cero idénticos omitidos, cero renombrados y cero fallidos. Revise categorías y ruta del informe.",
+          "caption": "COPY completada con informe."
+        }
+      ],
+      "tips": [
+        "Pattern ofrece Year / Month / Day, YMD - Single Folder, Year / Month, variantes por cámara, año, mes, día y Custom. Revise siempre la vista previa.",
+        "Open destination y Open Folder abren los resultados; Save report guarda una copia del informe. Add Destination to Folders registra el destino solo por acción explícita.",
+        "Los 16 hashes de destino coincidieron; los 17 archivos originales y sus copias de seguridad permanecieron intactos."
+      ],
+      "outcome": "Dispone de una copia organizada verificada y un informe TXT; los originales se conservan."
+    },
+    {
+      "id": "progress",
+      "title": "8. Pausar, reanudar, detener y recuperar COPY",
+      "intro": "El ejemplo largo usa 512 vídeos generados con una copia de seguridad independiente. Son archivos desechables, sin datos personales.",
+      "steps": [
+        {
+          "id": "progress-01",
+          "image": "11-05-copy-timing-destination.png",
+          "text": "Elija Copy Timing Results como destino independiente y compruebe la ruta completa.",
+          "caption": "Destino del ejemplo largo."
+        },
+        {
+          "id": "progress-02",
+          "image": "11-07-copy-timing-confirmation.png",
+          "text": "Revise origen, selección, destino y espacio antes de aceptar COPY. Puede haber una fase de preparación.",
+          "caption": "Confirmación del conjunto grande."
+        },
+        {
+          "id": "progress-03",
+          "image": "11-10-copy-paused.png",
+          "text": "Pulse Pause y espere a que aparezca Resume. El archivo actual puede terminar antes de la pausa.",
+          "caption": "COPY realmente pausada."
+        },
+        {
+          "id": "progress-04",
+          "image": "11-11-copy-resumed.png",
+          "text": "Pulse Resume para continuar la misma operación; vuelve a aparecer Pause.",
+          "caption": "COPY reanudada."
+        },
+        {
+          "id": "progress-05",
+          "image": "11-13-cancelled-copy-report.png",
+          "text": "Pulse Stop y lea el resumen y el informe cancelados. Se conservaron 110 copias completas con cero fallos.",
+          "caption": "Cancelación con 110 copias conservadas."
+        },
+        {
+          "id": "progress-06",
+          "image": "11-14b-retry-copy-confirmation.png",
+          "text": "Inicie COPY de nuevo con el mismo origen, patrón y destino. Revise la nueva confirmación; los archivos idénticos completos pueden omitirse.",
+          "caption": "Confirmación del reintento."
+        },
+        {
+          "id": "progress-07",
+          "image": "11-15-retry-copy-progress.png",
+          "text": "Lea archivo actual, recuento y porcentaje. En el reintento el progreso cuenta los archivos pendientes de copia.",
+          "caption": "Progreso real del reintento."
+        },
+        {
+          "id": "progress-08",
+          "image": "11-16-retry-copy-paused-progress.png",
+          "text": "Pulse Pause si lo necesita y espere a Paused. El recuento y porcentaje corresponden a esa operación pausada.",
+          "caption": "Panel de progreso pausado."
+        },
+        {
+          "id": "progress-09",
+          "image": "11-17-retry-copy-resumed-progress.png",
+          "text": "Pulse Resume y espere al final. Mantenga el destino conectado y los archivos de origen sin cambios.",
+          "caption": "Progreso después de Resume."
+        },
+        {
+          "id": "progress-10",
+          "image": "11-19-retry-completion-report.png",
+          "text": "El reintento copió 402 y omitió 110 idénticos, sin renombrados ni fallos. Se verificaron los hashes de los 512 resultados.",
+          "caption": "Recuperación completa verificada."
+        }
+      ],
+      "tips": [
+        "Detener la búsqueda de duplicados y detener COPY son operaciones distintas. Use los controles de la tarea activa.",
+        "La página puede conservar texto de estado anterior encima de los controles. Consulte el panel de progreso y el resultado actual.",
+        "Tras cancelar, revise el informe y el destino. Conserve las copias completas verificadas antes de reintentar."
+      ],
+      "outcome": "Puede pausar, reanudar y detener COPY, y volver a intentarlo sin duplicar resultados idénticos ya completos."
+    },
+    {
+      "id": "move",
+      "title": "9. Usar Advanced MOVE con copia de seguridad",
+      "intro": "MOVE elimina archivos del origen tras verificarlos en destino. Practique solo con copias desechables y una copia de seguridad independiente. Se usó el clon Move Samples; el origen original no se movió.",
+      "steps": [
+        {
+          "id": "move-01",
+          "image": "08-01-advanced-mode.png",
+          "text": "Seleccione Advanced en Experience y pase al organizador solo tras elegir el origen de demostración correcto.",
+          "caption": "Modo Advanced real."
+        },
+        {
+          "id": "move-02",
+          "image": "08-35-correct-source-confirmed.png",
+          "text": "Confirme los tipos y Selected Folder: Move Samples, su ruta, 17 examinados, 16 seleccionados y uno excluido.",
+          "caption": "Origen desechable respaldado correcto."
+        },
+        {
+          "id": "move-03",
+          "image": "08-36-verified-move-plan.png",
+          "text": "Confirme Year / Month en Pattern y revise el plan. Aquí Duplicates indica Not checked.",
+          "caption": "Plan MOVE real."
+        },
+        {
+          "id": "move-04",
+          "image": "08-37-final-move-destination.png",
+          "text": "Pulse Change Location y seleccione la carpeta independiente Move Results. Verifique su ruta.",
+          "caption": "Destino MOVE aprobado."
+        },
+        {
+          "id": "move-05",
+          "image": "08-39-final-move-warning.png",
+          "text": "Seleccione Move en Transfer mode. Lea la advertencia: se verifica el destino antes de retirar archivos del origen, se conservan las carpetas y se guarda un informe.",
+          "caption": "Advertencia real de MOVE."
+        },
+        {
+          "id": "move-06",
+          "image": "08-40-final-move-confirmation.png",
+          "text": "Pulse Move Selected Files y lea Confirm move. Los archivos exactos del origen se eliminarán tras verificar el destino. Cancele ante cualquier duda.",
+          "caption": "Confirmación final de MOVE."
+        },
+        {
+          "id": "move-07",
+          "image": "08-42-move-complete-report.png",
+          "text": "Tras comprobar origen, destino y copia de seguridad, confirme. Espere Move complete: 16 movidos, cero copiados con origen conservado y cero fallidos.",
+          "caption": "MOVE completado de 16 archivos."
+        },
+        {
+          "id": "move-08",
+          "image": "07-03-verified-move-activity.png",
+          "text": "Abra Activity y revise Move Photos & Videos y Open Move Report. Conserve la copia de seguridad independiente.",
+          "caption": "Entrada MOVE completada."
+        }
+      ],
+      "tips": [
+        "Coincidieron los 16 hashes de destino y permanecieron intactos los 17 archivos de seguridad. notes.txt y las cuatro carpetas de origen se conservaron.",
+        "COPIED_SOURCE_RETAINED indica que existe una copia en destino pero se conservó el origen. Revise ese estado en el informe.",
+        "Compruebe Selected Folder cada vez. Refresh no cambia el origen del organizador; en la demostración se eliminó solo del catálogo y se añadió de nuevo el origen desechable."
+      ],
+      "outcome": "MOVE quedó completado y verificado; la copia de seguridad y la biblioteca original permanecen intactas."
+    },
+    {
+      "id": "reports",
+      "title": "10. Leer Activity y los informes de texto",
+      "intro": "Activity conserva operaciones locales recientes. Completed, Completed with warnings y Cancelled tienen consecuencias distintas. Los informes TXT automáticos quedan en la raíz del destino.",
+      "steps": [
+        {
+          "id": "reports-01",
+          "image": "07-01-activity-after-copy.png",
+          "text": "Abra Activity y compare procesados, copiados, omitidos y fallidos de Copy Photos & Videos con el resumen de destino.",
+          "caption": "COPY inicial completada."
+        },
+        {
+          "id": "reports-02",
+          "image": "07-02-completed-and-cancelled-activity.png",
+          "text": "Compare las tareas completadas y canceladas. La COPY cancelada procesó 110; el reintento procesó 512 y omitió 110. Una búsqueda de duplicados cancelada está incompleta.",
+          "caption": "Historial real de ambos estados."
+        },
+        {
+          "id": "reports-03",
+          "image": "07-03-verified-move-activity.png",
+          "text": "Use Open Copy Report u Open Move Report y Open Destination. Revise modo, origen, destino, líneas de estado y totales del TXT.",
+          "caption": "Entradas MOVE y COPY reales."
+        }
+      ],
+      "tips": [
+        "El informe MOVE verificado muestra Mode: MOVE, Total planned files: 16, Moved: 16, COPIED_SOURCE_RETAINED: 0, Skipped: 0 y Failed: 0.",
+        "El informe COPY confirma que se conservaron los originales; el informe cancelado identifica las copias completas que quedan en destino.",
+        "Clear Activity History está disponible, pero no se utilizó: el historial de demostración se conserva."
+      ],
+      "outcome": "Puede relacionar cada entrada con su carpeta e informe y distinguir éxito de procesamiento incompleto."
+    },
+    {
+      "id": "settings",
+      "title": "11. Ajustar Settings y comprender el reinicio",
+      "intro": "Los ajustes son locales. Revise Language, Experience, Safety, Privacy & Local Processing, Organizing, Library, Guidance & Accessibility, Maintenance y Media dates antes de confirmar cambios.",
+      "steps": [
+        {
+          "id": "settings-01",
+          "image": "09-01-settings.png",
+          "text": "Abra Settings y revise idioma, experiencia y seguridad. La confirmación al organizar y la advertencia de retirada del origen son obligatorias en esta interfaz.",
+          "caption": "Idioma, experiencia y seguridad."
+        },
+        {
+          "id": "settings-02",
+          "image": "09-03-organizing-library-settings.png",
+          "text": "Revise Default organize pattern y Destination behavior: muestra Ask every time. Lea también la información de privacidad y almacenamiento de informes.",
+          "caption": "Organización y procesamiento local."
+        },
+        {
+          "id": "settings-03",
+          "image": "09-04-accessibility-settings.png",
+          "text": "Revise tamaño de vista previa, orden, etiquetas de fecha y tamaño, apertura de Library tras analizar y recuerdo de la última vista.",
+          "caption": "Preferencias reales de Library."
+        },
+        {
+          "id": "settings-04",
+          "image": "09-05-enable-larger-text.png",
+          "text": "Active Larger text y compruebe la legibilidad y distribución de navegación.",
+          "caption": "Texto ampliado aplicado."
+        },
+        {
+          "id": "settings-05",
+          "image": "09-06-restore-standard-text.png",
+          "text": "Desactive Larger text para restaurar el tamaño. Ajuste Larger buttons, Reduced motion y las ayudas según sus necesidades.",
+          "caption": "Texto estándar restaurado."
+        },
+        {
+          "id": "settings-06",
+          "image": "09-07-maintenance-settings.png",
+          "text": "En Maintenance, revise el uso: cuenta archivos generados por la aplicación. Refresh Usage actualiza totales; Clear Thumbnail Cache afecta a las vistas previas y no se usó aquí.",
+          "caption": "Uso y mantenimiento."
+        },
+        {
+          "id": "settings-07",
+          "image": "09-09-review-date-evidence.png",
+          "text": "Expanda Advanced date policy y lea las cinco evidencias y la advertencia de baja confianza. Los cambios afectan a nuevos análisis, reanálisis y planes.",
+          "caption": "Política real de fechas."
+        },
+        {
+          "id": "settings-08",
+          "image": "09-10-reset-settings-confirmation.png",
+          "text": "Abra Reset Settings to Defaults para leer la confirmación: vacía ajustes, orígenes, índice, progreso y caché; conserva originales y copias organizadas.",
+          "caption": "Advertencia real de reinicio."
+        },
+        {
+          "id": "settings-09",
+          "image": "09-12-reset-cancelled.png",
+          "text": "Pulse Cancel. No se reinició ni el perfil real ni el perfil aislado de demostración.",
+          "caption": "Reinicio cancelado."
+        }
+      ],
+      "tips": [
+        "Un reinicio afecta más que una preferencia visual. Conserve informes e información necesaria antes de vaciar el catálogo local.",
+        "Ver Settings no reescribe las fechas existentes. Use el análisis explícito cuando quiera actualizar las fechas del catálogo."
+      ],
+      "outcome": "Puede ajustar preferencias y comprender el mantenimiento sin borrar el catálogo accidentalmente."
+    },
+    {
+      "id": "troubleshooting",
+      "title": "12. Recuperarse de problemas habituales",
+      "intro": "Lea el mensaje actual y compruebe origen, filtros, patrón y destino antes de repetir acciones. Los ejemplos son condiciones reales reproducidas con datos desechables.",
+      "steps": [
+        {
+          "id": "troubleshooting-01",
+          "image": "10-01-library-no-search-results.png",
+          "text": "Si aparece No photos match your choices, compruebe Search media: una búsqueda sin coincidencias puede ocultar toda la biblioteca.",
+          "caption": "Búsqueda real sin resultados."
+        },
+        {
+          "id": "troubleshooting-02",
+          "image": "10-02-recover-search-results.png",
+          "text": "Introduzca un fragmento conocido, como garden. Compruebe que regresan resultados antes de cambiar otros ajustes.",
+          "caption": "Resultados garden recuperados."
+        },
+        {
+          "id": "troubleshooting-03",
+          "image": "10-04-review-unavailable-filter.png",
+          "text": "Revise Unavailable only. No muestra resultados si todos los originales coincidentes están disponibles; esto no significa que falten archivos.",
+          "caption": "Filtro de disponibilidad sin resultados."
+        },
+        {
+          "id": "troubleshooting-04",
+          "image": "10-05-show-all-recovery.png",
+          "text": "Pulse Show All Photos en la pantalla vacía y revise la búsqueda y filtros restaurados.",
+          "caption": "Galería recuperada."
+        },
+        {
+          "id": "troubleshooting-05",
+          "image": "10-08-invalid-folder-error.png",
+          "text": "Si aparece Folder is unavailable or cannot be opened, compruebe la ruta y conexión. El ejemplo inexistente desactiva Select This Folder.",
+          "caption": "Error real de carpeta no disponible."
+        },
+        {
+          "id": "troubleshooting-06",
+          "image": "10-10-empty-folder.png",
+          "text": "Abra una carpeta existente y pulse Go. Una carpeta vacía muestra cero archivos compatibles; elija otra o cancele.",
+          "caption": "Carpeta vacía real."
+        },
+        {
+          "id": "troubleshooting-07",
+          "image": "10-12-unsupported-only-preview.png",
+          "text": "Una carpeta con solo texto también muestra cero archivos multimedia. Other Files se selecciona aparte al organizar.",
+          "caption": "Carpeta solo con archivos no compatibles."
+        },
+        {
+          "id": "troubleshooting-08",
+          "image": "10-14-invalid-custom-pattern.png",
+          "text": "En Custom, utilice tokens y segmentos relativos válidos. El ejemplo con recorrido al padre se rechaza y COPY queda desactivada.",
+          "caption": "Patrón no válido rechazado."
+        },
+        {
+          "id": "troubleshooting-09",
+          "image": "10-17-custom-plan-reconfirmed.png",
+          "text": "Corrija el patrón a {YYYY}\\{YYYY-MM}. En esta versión, reabra y cierre Pattern para reconfirmarlo y recuperar el plan.",
+          "caption": "Patrón válido confirmado."
+        },
+        {
+          "id": "troubleshooting-10",
+          "image": "10-19-catalog-only-removal-confirmation.png",
+          "text": "Lea Remove Folder: elimina registros del catálogo y Library, pero conserva archivos y carpetas originales.",
+          "caption": "Confirmación de retirada solo del catálogo."
+        },
+        {
+          "id": "troubleshooting-11",
+          "image": "10-20-disposable-source-removed-from-catalog.png",
+          "text": "Solo para el ejemplo desechable, confirme Remove from MEDIA KOLFAT y verifique los originales. Vuelva a añadir manualmente el origen y analícelo antes de organizar.",
+          "caption": "Origen retirado del catálogo, originales conservados."
+        }
+      ],
+      "tips": [
+        "Sin tipos de archivo seleccionados, Continue permanece desactivado. Vuelva a Choose File Types.",
+        "Tras un error de ruta pueden quedar vistas previas anteriores. Lea el error y Select This Folder desactivado; no atribuya esas vistas a la ruta no disponible.",
+        "Ante problemas de destino o espacio, compruebe la ruta, conexión, permisos y reserva de seguridad. Elija otra carpeta escribible si hace falta.",
+        "Tras una interrupción, revise Activity, informe TXT y resultados completos antes de reintentar. Cancelaciones y advertencias requieren revisión.",
+        "La retirada de un origen se probó solo en el catálogo aislado. Los 17 archivos permanecieron intactos y se registraron de nuevo para MOVE."
+      ],
+      "outcome": "Puede distinguir filtros vacíos de archivos ausentes, corregir validaciones y conservar los resultados al recuperarse."
+    }
+  ],
+  "status": "Complete guide; source and screenshot parity verified; native-speaker editorial review not performed"
+}

@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MEDIA KOLFAT 2.0 ユーザーガイド | KOLFAT</title>
+<meta name="description" content="写真と動画の追加、日付とプレビューの確認、重複検索、COPY と MOVE による整理、中断からの復旧、レポートの読み方を画像付きで説明します。">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#050505">
+<link rel="canonical" href="https://kolfat.app/ja/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="en" href="https://kolfat.app/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="fa" href="https://kolfat.app/fa/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="de" href="https://kolfat.app/de/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="fr" href="https://kolfat.app/fr/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="es" href="https://kolfat.app/es/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="pt" href="https://kolfat.app/pt/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="it" href="https://kolfat.app/it/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="ja" href="https://kolfat.app/ja/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="zh-CN" href="https://kolfat.app/zh/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="hi" href="https://kolfat.app/hi/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="ru" href="https://kolfat.app/ru/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="ar" href="https://kolfat.app/ar/guides/media-kolfat-2-user-guide/">
+<link rel="alternate" hreflang="x-default" href="https://kolfat.app/guides/media-kolfat-2-user-guide/">
+<link rel="icon" href="/favicon.png" type="image/png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KOLFAT">
+<meta property="og:title" content="MEDIA KOLFAT 2.0 ユーザーガイド">
+<meta property="og:description" content="写真と動画の追加、日付とプレビューの確認、重複検索、COPY と MOVE による整理、中断からの復旧、レポートの読み方を画像付きで説明します。">
+<meta property="og:url" content="https://kolfat.app/ja/guides/media-kolfat-2-user-guide/">
+<meta property="og:image" content="https://kolfat.app/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MEDIA KOLFAT 2.0 ユーザーガイド">
+<meta name="twitter:description" content="写真と動画の追加、日付とプレビューの確認、重複検索、COPY と MOVE による整理、中断からの復旧、レポートの読み方を画像付きで説明します。">
+<meta name="twitter:image" content="https://kolfat.app/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://kolfat.app/ja/guides/media-kolfat-2-user-guide/#article", "headline": "MEDIA KOLFAT 2.0 ユーザーガイド", "description": "写真と動画の追加、日付とプレビューの確認、重複検索、COPY と MOVE による整理、中断からの復旧、レポートの読み方を画像付きで説明します。", "inLanguage": "ja", "datePublished": "2026-10-27", "dateModified": "2026-10-27", "mainEntityOfPage": "https://kolfat.app/ja/guides/media-kolfat-2-user-guide/", "image": "https://kolfat.app/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png", "publisher": {"@type": "Brand", "name": "KOLFAT", "url": "https://kolfat.app/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KOLFAT", "item": "https://kolfat.app/ja/"}, {"@type": "ListItem", "position": 2, "name": "目次", "item": "https://kolfat.app/ja/guides/"}, {"@type": "ListItem", "position": 3, "name": "MEDIA KOLFAT 2.0 ユーザーガイド", "item": "https://kolfat.app/ja/guides/media-kolfat-2-user-guide/"}]}]}</script>
+<link rel="stylesheet" href="/assets/seo-content.css?v=20261018-seo1">
+<link rel="stylesheet" href="/assets/nav-dropdown.css?v=20261027-menu-explore2">
+<link rel="stylesheet" href="/assets/localized-content.css?v=20261018-1">
+<link rel="stylesheet" href="/assets/site-refinements.css?v=20261027-matched-v2">
+<link rel="stylesheet" href="/assets/media-kolfat-2-guide/guide.css?v=20261027-1">
+</head>
+<body class="media-user-guide">
+<header class="header"><div class="header-inner"><a class="brand" href="/ja/" aria-label="KOLFAT home"><img src="/assets/kolfat-logo.webp?v=d2c25ec0" alt="KOLFAT"></a><div class="top-nav"><details class="kolfat-menu"><summary aria-label="メニュー"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>メニュー</span><span class="menu-chevron" aria-hidden="true">⌄</span></summary><nav class="kolfat-menu-panel" aria-label="KOLFAT navigation"><span class="menu-section-label">KOLFAT</span><a href="/ja/" dir="auto">ホーム</a><a href="/ja/Media_Kolfat/" dir="auto">MEDIA KOLFAT</a><a href="/ja/download/" dir="auto">ダウンロード</a><a href="/ja/about/" dir="auto">KOLFATについて</a><a href="/ja/guides/" dir="auto">ガイド</a><a href="/ja/support/" dir="auto">サポート</a><a href="mailto:contact@kolfat.app" dir="auto">お問い合わせ</a><span class="menu-section-label">FOLLOW KOLFAT</span><a href="https://x.com/KOLFAT_APP" target="_blank" rel="noopener noreferrer" dir="auto">X</a><a href="https://www.youtube.com/@KOLFAT_APP" target="_blank" rel="noopener noreferrer" dir="auto">YOUTUBE</a><a href="https://www.tiktok.com/@kolfat.app" target="_blank" rel="noopener noreferrer" dir="auto">TIKTOK</a><a href="https://github.com/1n50mn14c933k/Media_Kolfat" target="_blank" rel="noopener noreferrer" dir="auto">GITHUB</a></nav></details><details class="lang-menu"><summary aria-label="Change language" title="Change language">🇯🇵</summary><div class="lang-list"><a href="/guides/media-kolfat-2-user-guide/">🇬🇧 English</a><a href="/fa/guides/media-kolfat-2-user-guide/">🇮🇷 فارسی</a><a href="/de/guides/media-kolfat-2-user-guide/">🇩🇪 Deutsch</a><a href="/fr/guides/media-kolfat-2-user-guide/">🇫🇷 Français</a><a href="/es/guides/media-kolfat-2-user-guide/">🇪🇸 Español</a><a href="/pt/guides/media-kolfat-2-user-guide/">🇵🇹 Português</a><a href="/it/guides/media-kolfat-2-user-guide/">🇮🇹 Italiano</a><a href="/ja/guides/media-kolfat-2-user-guide/" aria-current="page">🇯🇵 日本語</a><a href="/zh/guides/media-kolfat-2-user-guide/">🇨🇳 中文</a><a href="/hi/guides/media-kolfat-2-user-guide/">🇮🇳 हिन्दी</a><a href="/ru/guides/media-kolfat-2-user-guide/">🇷🇺 Русский</a><a href="/ar/guides/media-kolfat-2-user-guide/">🇸🇦 العربية</a></div></details></div></div></header>
+<main id="main-content">
+<div class="breadcrumb"><a href="/ja/">KOLFAT</a> / MEDIA KOLFAT 2.0 ユーザーガイド</div>
+<article class="hero">
+<p class="eyebrow">MEDIA KOLFAT 2.0</p>
+<h1>MEDIA KOLFAT 2.0 ユーザーガイド</h1>
+<p class="lead">Windows にインストールされた実際のアプリを、初回起動から整理結果の検証まで操作します。作成したデモ画像と動画、独立したバックアップを使用しました。アプリの画像はすべて実際に取得したネイティブ PNG です。</p>
+<p>MEDIA KOLFAT 2.0.0、ビルド 2.0.0.0 で検証しました。画像は英語 UI です。大きなデモデータを追加すると件数が変わります。操作時は自分の件数を確認してください。</p>
+<aside class="notice">整理前に独立したバックアップを作成してください。最初は元ファイルを残す COPY を推奨します。Advanced MOVE はコピー先の検証と安全確認後に元ファイルを削除します。結果とレポートを確認するまでバックアップを保管してください。</aside>
+</article>
+<nav id="contents" class="guide-contents section" aria-label="目次">
+<h2>目次</h2>
+<ol>
+<li><a href="#start">1. 起動してガイドを理解する</a></li>
+<li><a href="#sources">2. 元フォルダーを手動で選ぶ</a></li>
+<li><a href="#locations">3. 自動検出と利用可能な場所</a></li>
+<li><a href="#health">4. プレビューと日付を確認する</a></li>
+<li><a href="#duplicates">5. 完全な重複を検索する</a></li>
+<li><a href="#library">6. 閲覧、検索、選択、回転</a></li>
+<li><a href="#copy">7. Guided COPY を完了する</a></li>
+<li><a href="#progress">8. COPY の一時停止、再開、中止、復旧</a></li>
+<li><a href="#move">9. バックアップを用意して Advanced MOVE を使う</a></li>
+<li><a href="#reports">10. Activity とテキストレポートを読む</a></li>
+<li><a href="#settings">11. 設定と初期化を理解する</a></li>
+<li><a href="#troubleshooting">12. よくある問題から復旧する</a></li>
+</ol></nav>
+<section id="start" class="section guide-chapter">
+<h2>1. 起動してガイドを理解する</h2>
+<p>インストール済みのアプリを開きます。サイドバーには Performance Check、Add Photos &amp; Videos、Photos Health Check、Duplicate Finder、Browse Library、Organize Photos &amp; Videos、Activity、Settings、About があります。Experience で Guided と Advanced を選べます。</p>
+<ol class="guide-steps">
+<li id="start-01"><p><strong>手順 1.</strong> Guided から開始し、強調された操作に従います。灰色は今後の手順、琥珀色は現在、緑のチェックは完了を示します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: Guided での初回起動。">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png" width="1920" height="1080" alt="Guided での初回起動。" loading="lazy" decoding="async">
+</a>
+<figcaption>Guided での初回起動。 <a href="/assets/media-kolfat-2-guide/screenshots/01-01-first-launch-guided.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="start-02"><p><strong>手順 2.</strong> Run Quick Check を実行して完了を待ちます。この PC は 98% でした。他の PC では結果が異なります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-02-performance-check-complete.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の 98% の検査結果。">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-02-performance-check-complete.png" width="1920" height="1080" alt="実際の 98% の検査結果。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の 98% の検査結果。 <a href="/assets/media-kolfat-2-guide/screenshots/01-02-performance-check-complete.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="start-03"><p><strong>手順 3.</strong> Add Photos &amp; Videos を開きます。フォルダーが分かっている場合は Choose Photos &amp; Videos Manually を選びます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 自動と手動の実際の選択肢。">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" width="1920" height="1080" alt="自動と手動の実際の選択肢。" loading="lazy" decoding="async">
+</a>
+<figcaption>自動と手動の実際の選択肢。 <a href="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="start-04"><p><strong>手順 4.</strong> About の Release Information を開き、Version と Build を確認します。サイドバーで作業に戻ります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-04-about-version.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 確認したバージョンとビルド。">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-04-about-version.png" width="1934" height="1087" alt="確認したバージョンとビルド。" loading="lazy" decoding="async">
+</a>
+<figcaption>確認したバージョンとビルド。 <a href="/assets/media-kolfat-2-guide/screenshots/01-04-about-version.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="start-05"><p><strong>手順 5.</strong> Privacy &amp; Data Safety を開き、スキャン、COPY、Advanced MOVE の違いを読みます。独立したバックアップを残します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-05-about-privacy.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: アプリ内の安全とプライバシー説明。">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-05-about-privacy.png" width="1934" height="1087" alt="アプリ内の安全とプライバシー説明。" loading="lazy" decoding="async">
+</a>
+<figcaption>アプリ内の安全とプライバシー説明。 <a href="/assets/media-kolfat-2-guide/screenshots/01-05-about-privacy.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>動く矢印と強調表示は推奨操作を示します。Settings で Reduced motion やガイドの設定を変更できます。</li>
+<li>Guided は作業順序を案内します。Advanced は直接的な操作を提供し、計画の準備後に MOVE を表示します。</li>
+<li>About には Legal &amp; Policies、Support、Technical Information、Open-Source &amp; Third-Party Licenses、Product Information もあります。</li>
+</ul>
+<p class="guide-outcome">インストール済みのバージョン、画面の移動方法、現在のガイド手順が分かります。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="sources" class="section guide-chapter">
+<h2>2. 元フォルダーを手動で選ぶ</h2>
+<p>ソースとはローカルカタログに登録したフォルダーです。スキャンは対応する写真と動画を索引化します。例ではサブフォルダーに JPEG 14 個、AVI 2 個、任意のテキスト 1 個を用意しました。</p>
+<ol class="guide-steps">
+<li id="sources-01"><p><strong>手順 1.</strong> Choose Photos &amp; Videos Manually を選び、Current folder、Locations、Folders、プレビューを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際のソース選択画面。">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" width="1934" height="1087" alt="実際のソース選択画面。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際のソース選択画面。 <a href="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="sources-02"><p><strong>手順 2.</strong> Current folder に完全なパスを入力します。例は使い捨てデモ領域の Media Samples です。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-02-enter-demo-source-path.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 入力したデモ用パス。">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-02-enter-demo-source-path.png" width="1934" height="1087" alt="入力したデモ用パス。" loading="lazy" decoding="async">
+</a>
+<figcaption>入力したデモ用パス。 <a href="/assets/media-kolfat-2-guide/screenshots/02-02-enter-demo-source-path.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="sources-03"><p><strong>手順 3.</strong> Go を選び、パスとサブフォルダーを確認します。親フォルダー自体にはメディアがない場合もあります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-03-demo-nested-folders.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: デモの四つのサブフォルダー。">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-03-demo-nested-folders.png" width="1934" height="1087" alt="デモの四つのサブフォルダー。" loading="lazy" decoding="async">
+</a>
+<figcaption>デモの四つのサブフォルダー。 <a href="/assets/media-kolfat-2-guide/screenshots/02-03-demo-nested-folders.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="sources-04"><p><strong>手順 4.</strong> 2024 Holiday を開き、生成した JPEG 6 枚のプレビューを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-04-preview-sample-photos.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 対応画像 6 枚のプレビュー。">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-04-preview-sample-photos.png" width="1934" height="1087" alt="対応画像 6 枚のプレビュー。" loading="lazy" decoding="async">
+</a>
+<figcaption>対応画像 6 枚のプレビュー。 <a href="/assets/media-kolfat-2-guide/screenshots/02-04-preview-sample-photos.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="sources-05"><p><strong>手順 5.</strong> 全体を含めるには Up one folder で親へ戻り、Current folder を再確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-05-return-to-demo-root.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 目的の親フォルダーへ戻る。">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-05-return-to-demo-root.png" width="1934" height="1087" alt="目的の親フォルダーへ戻る。" loading="lazy" decoding="async">
+</a>
+<figcaption>目的の親フォルダーへ戻る。 <a href="/assets/media-kolfat-2-guide/screenshots/02-05-return-to-demo-root.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="sources-06"><p><strong>手順 6.</strong> Select This Folder を選び、Ready to add this folder の名前と完全なパスを確認します。違う場合は進みません。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-06-ready-to-scan-source.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 追加準備ができたソース。">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-06-ready-to-scan-source.png" width="1934" height="1087" alt="追加準備ができたソース。" loading="lazy" decoding="async">
+</a>
+<figcaption>追加準備ができたソース。 <a href="/assets/media-kolfat-2-guide/screenshots/02-06-ready-to-scan-source.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="sources-07"><p><strong>手順 7.</strong> Advanced options で場所、任意の表示名、種類を確認します。クラウドのフォルダーは PC 上で読める必要があります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-07-source-advanced-options.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の詳細オプション。">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-07-source-advanced-options.png" width="1934" height="1087" alt="実際の詳細オプション。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の詳細オプション。 <a href="/assets/media-kolfat-2-guide/screenshots/02-07-source-advanced-options.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="sources-08"><p><strong>手順 8.</strong> 表示されたスキャンを開始し、Ready と成功時刻を確認します。16 個のメディアが登録され、テキストは対象外でした。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-08-source-scan-complete.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 16 個のメディアのスキャン完了。">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-08-source-scan-complete.png" width="1934" height="1087" alt="16 個のメディアのスキャン完了。" loading="lazy" decoding="async">
+</a>
+<figcaption>16 個のメディアのスキャン完了。 <a href="/assets/media-kolfat-2-guide/screenshots/02-08-source-scan-complete.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="sources-09"><p><strong>手順 9.</strong> Refresh で再スキャンし、状態と時刻を確認します。これだけでは整理対象のソースは切り替わりません。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-09-source-refresh-complete.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 更新完了後のソース。">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-09-source-refresh-complete.png" width="1934" height="1087" alt="更新完了後のソース。" loading="lazy" decoding="async">
+</a>
+<figcaption>更新完了後のソース。 <a href="/assets/media-kolfat-2-guide/screenshots/02-09-source-refresh-complete.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Advanced で別のフォルダーを追加すると、カードに Start Scan が表示される場合があります。初回の Guided では追加時にスキャンが始まりました。</li>
+<li>整理画面の Selected Folder を毎回確認します。ソースカードの Refresh は整理対象を変更しません。</li>
+</ul>
+<p class="guide-outcome">目的のフォルダーが登録され、対応メディアがカタログに表示されます。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="locations" class="section guide-chapter">
+<h2>3. 自動検出と利用可能な場所</h2>
+<p>選択画面には This PC、ローカルのドライブとフォルダー、Pictures、OneDrive、Network があります。読み取りを意図した場所だけを選びます。外付けドライブやネットワークは Windows からアクセス可能にしてください。</p>
+<ol class="guide-steps">
+<li id="locations-01"><p><strong>手順 1.</strong> Scan Computer Automatically は全 PC の検出を始め、デモフォルダーへの制限を提供しません。範囲を限定する場合は手動を選びます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 異なる範囲の二つの選択肢。">
+<img src="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" width="1920" height="1080" alt="異なる範囲の二つの選択肢。" loading="lazy" decoding="async">
+</a>
+<figcaption>異なる範囲の二つの選択肢。 <a href="/assets/media-kolfat-2-guide/screenshots/01-03-welcome-source-choices.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="locations-02"><p><strong>手順 2.</strong> This PC または Current folder の正確なパスを使います。OneDrive はローカルで利用できるファイルです。先に Windows で利用可能にします。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の場所とパス入力欄。">
+<img src="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" width="1934" height="1087" alt="実際の場所とパス入力欄。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の場所とパス入力欄。 <a href="/assets/media-kolfat-2-guide/screenshots/02-01-manual-source-picker.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>全 PC の自動検出はデモ領域外を調べるため実行していません。自動検出結果を検証済みとして掲載していません。</li>
+<li>ショートカットはアカウント接続の証明ではありません。個人の Pictures、OneDrive、ネットワーク、外部メディアにはアクセスしていません。</li>
+</ul>
+<p class="guide-outcome">場所と読み取り範囲に合わせて選択方法を決められます。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="health" class="section guide-chapter">
+<h2>4. プレビューと日付を確認する</h2>
+<p>スキャン後に Photos Health Check を開きます。サムネイル、日付、元ファイルの利用可能性は別の問題です。プレビューがなくても元ファイルの消失を意味しません。</p>
+<ol class="guide-steps">
+<li id="health-01"><p><strong>手順 1.</strong> 集計を確認します。16 個中 14 個のプレビューが正常、動画 2 個に問題があり、元ファイル 16 個は最後の確認時に利用可能でした。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/03-01-photos-health-check.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 小さなデモライブラリの実際の集計。">
+<img src="/assets/media-kolfat-2-guide/screenshots/03-01-photos-health-check.png" width="1934" height="1087" alt="小さなデモライブラリの実際の集計。" loading="lazy" decoding="async">
+</a>
+<figcaption>小さなデモライブラリの実際の集計。 <a href="/assets/media-kolfat-2-guide/screenshots/03-01-photos-health-check.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="health-02"><p><strong>手順 2.</strong> 明示的なサムネイル修復を実行します。動画 2 個を確認、修復 0 個、両方ともプレビュー非対応でした。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/03-02-thumbnail-repair-complete.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の修復結果。">
+<img src="/assets/media-kolfat-2-guide/screenshots/03-02-thumbnail-repair-complete.png" width="1934" height="1087" alt="実際の修復結果。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の修復結果。 <a href="/assets/media-kolfat-2-guide/screenshots/03-02-thumbnail-repair-complete.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="health-03"><p><strong>手順 3.</strong> 日付の再分析を実行します。16 個すべてが Filesystem last modified で解決されました。コピーや編集の日時を示す場合がある補助的根拠です。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/03-04-date-reanalysis-result.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の日付再分析と根拠。">
+<img src="/assets/media-kolfat-2-guide/screenshots/03-04-date-reanalysis-result.png" width="1934" height="1087" alt="実際の日付再分析と根拠。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の日付再分析と根拠。 <a href="/assets/media-kolfat-2-guide/screenshots/03-04-date-reanalysis-result.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="health-04"><p><strong>手順 4.</strong> Settings の Advanced date policy でメタデータ、XMP、名前、フォルダー、最終更新を確認します。Windows CreationTime は撮影根拠に使いません。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の日付ポリシー。">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" width="1934" height="1087" alt="実際の日付ポリシー。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の日付ポリシー。 <a href="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>生成ファイルには撮影メタデータがありません。名前の 2024 や 2025 は今回の日付の根拠ではなく、最終更新日時が使われました。</li>
+<li>非対応形式は修復後もプレビューがない場合があります。元ファイルを保管し、対応ビューアーを使ってください。</li>
+</ul>
+<p class="guide-outcome">プレビュー、日付、利用可能性を区別し、修復の実際の結果を読めます。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="duplicates" class="section guide-chapter">
+<h2>5. 完全な重複を検索する</h2>
+<p>Duplicate Finder は利用可能で対応するカタログ項目を比較します。同じ名前だけでは完全な重複とは限りません。小さな例には意図的に三つの同一グループがあります。</p>
+<ol class="guide-steps">
+<li id="duplicates-01"><p><strong>手順 1.</strong> Duplicate Finder を開き、16 個の候補を確認して Find Duplicates を選びます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/04-01-duplicate-finder-ready.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 初回の重複検索準備。">
+<img src="/assets/media-kolfat-2-guide/screenshots/04-01-duplicate-finder-ready.png" width="1934" height="1087" alt="初回の重複検索準備。" loading="lazy" decoding="async">
+</a>
+<figcaption>初回の重複検索準備。 <a href="/assets/media-kolfat-2-guide/screenshots/04-01-duplicate-finder-ready.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="duplicates-02"><p><strong>手順 2.</strong> Duplicate scan complete を待ちます。三つのグループ、6 ファイル、約 16.9 MB の推定値でした。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/04-06-duplicate-scan-outcome.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 見つかった三つの完全重複グループ。">
+<img src="/assets/media-kolfat-2-guide/screenshots/04-06-duplicate-scan-outcome.png" width="1934" height="1087" alt="見つかった三つの完全重複グループ。" loading="lazy" decoding="async">
+</a>
+<figcaption>見つかった三つの完全重複グループ。 <a href="/assets/media-kolfat-2-guide/screenshots/04-06-duplicate-scan-outcome.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="duplicates-03"><p><strong>手順 3.</strong> Exact Duplicate Group をスクロールし、名前、場所、サイズを比較します。Open Folder は場所を開き、削除はしません。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/04-07-inspect-duplicate-results.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の重複項目の確認。">
+<img src="/assets/media-kolfat-2-guide/screenshots/04-07-inspect-duplicate-results.png" width="1934" height="1087" alt="実際の重複項目の確認。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の重複項目の確認。 <a href="/assets/media-kolfat-2-guide/screenshots/04-07-inspect-duplicate-results.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="duplicates-04"><p><strong>手順 4.</strong> 大きな 544 項目の例で Finding exact duplicates と確認数を読みます。Stop Scan が表示されます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/04-33-duplicate-scan-running.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際に実行中の重複検索。">
+<img src="/assets/media-kolfat-2-guide/screenshots/04-33-duplicate-scan-running.png" width="1934" height="1087" alt="実際に実行中の重複検索。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際に実行中の重複検索。 <a href="/assets/media-kolfat-2-guide/screenshots/04-33-duplicate-scan-running.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="duplicates-05"><p><strong>手順 5.</strong> Stop Scan を選ぶと準備画面へ戻ります。中止した検索は不完全で、重複がない証拠にはなりません。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/04-36-duplicate-scan-cancelled.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 重複検索を停止した結果。">
+<img src="/assets/media-kolfat-2-guide/screenshots/04-36-duplicate-scan-cancelled.png" width="1934" height="1087" alt="重複検索を停止した結果。" loading="lazy" decoding="async">
+</a>
+<figcaption>重複検索を停止した結果。 <a href="/assets/media-kolfat-2-guide/screenshots/04-36-duplicate-scan-cancelled.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>このインストール済みビルドの Duplicate Finder に Pause と Resume はありません。後で示す COPY にはあります。</li>
+<li>検証した UI に削除操作はありません。回収可能容量は推定です。検証したコピーと独立バックアップを保管します。</li>
+<li>新しいスキャンやソース変更で古い結果が無効になることがあります。Library の Not checked を確認してください。</li>
+</ul>
+<p class="guide-outcome">元ファイルを削除せずに重複の検索、確認、中止ができます。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="library" class="section guide-chapter">
+<h2>6. 閲覧、検索、選択、回転</h2>
+<p>Browse Library でカタログと概要を見られます。検索、フィルター、並べ替えは表示結果に影響します。回転はプレビューと整理・書き出しコピーに適用され、元ファイルは書き換えません。</p>
+<ol class="guide-steps">
+<li id="library-01"><p><strong>手順 1.</strong> Browse Library を開き、総数、種類、日付、利用可能性、重複の概要を読みます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-01-library-overview.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際のライブラリ概要。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-01-library-overview.png" width="1934" height="1087" alt="実際のライブラリ概要。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際のライブラリ概要。 <a href="/assets/media-kolfat-2-guide/screenshots/05-01-library-overview.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-02"><p><strong>手順 2.</strong> Search media に garden を入力して 7 件を表示します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-02-search-garden.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: garden の検索結果。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-02-search-garden.png" width="1934" height="1087" alt="garden の検索結果。" loading="lazy" decoding="async">
+</a>
+<figcaption>garden の検索結果。 <a href="/assets/media-kolfat-2-guide/screenshots/05-02-search-garden.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-03"><p><strong>手順 3.</strong> 写真を 1 枚だけ選び、操作前に選択を確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-03-select-a-photo.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 生成写真を 1 枚選択。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-03-select-a-photo.png" width="1934" height="1087" alt="生成写真を 1 枚選択。" loading="lazy" decoding="async">
+</a>
+<figcaption>生成写真を 1 枚選択。 <a href="/assets/media-kolfat-2-guide/screenshots/05-03-select-a-photo.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-04"><p><strong>手順 4.</strong> Rotate Right を選んでプレビューを確認します。元画像は書き換えません。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-04-rotate-photo-right.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 個別の右回転。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-04-rotate-photo-right.png" width="1934" height="1087" alt="個別の右回転。" loading="lazy" decoding="async">
+</a>
+<figcaption>個別の右回転。 <a href="/assets/media-kolfat-2-guide/screenshots/05-04-rotate-photo-right.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-05"><p><strong>手順 5.</strong> Undo で以前の向きに戻ったことを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-05-undo-photo-rotation.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 個別回転の取り消し。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-05-undo-photo-rotation.png" width="1934" height="1087" alt="個別回転の取り消し。" loading="lazy" decoding="async">
+</a>
+<figcaption>個別回転の取り消し。 <a href="/assets/media-kolfat-2-guide/screenshots/05-05-undo-photo-rotation.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-06"><p><strong>手順 6.</strong> Select all visible photos を選び、7 枚の選択件数を確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-06-select-all-visible-photos.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 表示中の 7 枚を選択。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-06-select-all-visible-photos.png" width="1934" height="1087" alt="表示中の 7 枚を選択。" loading="lazy" decoding="async">
+</a>
+<figcaption>表示中の 7 枚を選択。 <a href="/assets/media-kolfat-2-guide/screenshots/05-06-select-all-visible-photos.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-07"><p><strong>手順 7.</strong> Rotate Left を使い、選択を保ったまま複数のプレビューを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-07-batch-rotate-left.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: グループの左回転。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-07-batch-rotate-left.png" width="1934" height="1087" alt="グループの左回転。" loading="lazy" decoding="async">
+</a>
+<figcaption>グループの左回転。 <a href="/assets/media-kolfat-2-guide/screenshots/05-07-batch-rotate-left.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-08"><p><strong>手順 8.</strong> 次の回転前に Undo で向きを戻します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-08-undo-batch-left-rotation.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: グループの左回転を取り消す。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-08-undo-batch-left-rotation.png" width="1934" height="1087" alt="グループの左回転を取り消す。" loading="lazy" decoding="async">
+</a>
+<figcaption>グループの左回転を取り消す。 <a href="/assets/media-kolfat-2-guide/screenshots/05-08-undo-batch-left-rotation.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-09"><p><strong>手順 9.</strong> Rotate 180 を選び、複数のプレビューを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-09-batch-rotate-180.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: グループの 180 度回転。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-09-batch-rotate-180.png" width="1934" height="1087" alt="グループの 180 度回転。" loading="lazy" decoding="async">
+</a>
+<figcaption>グループの 180 度回転。 <a href="/assets/media-kolfat-2-guide/screenshots/05-09-batch-rotate-180.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-10"><p><strong>手順 10.</strong> 再び Undo を使います。デモでは整理前にすべての回転を取り消しました。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-10-undo-batch-180.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 元の表示方向を復元。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-10-undo-batch-180.png" width="1934" height="1087" alt="元の表示方向を復元。" loading="lazy" decoding="async">
+</a>
+<figcaption>元の表示方向を復元。 <a href="/assets/media-kolfat-2-guide/screenshots/05-10-undo-batch-180.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-11"><p><strong>手順 11.</strong> Clear Selection を選び、選択件数が消えることを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-11-clear-photo-selection.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 写真の選択を解除。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-11-clear-photo-selection.png" width="1934" height="1087" alt="写真の選択を解除。" loading="lazy" decoding="async">
+</a>
+<figcaption>写真の選択を解除。 <a href="/assets/media-kolfat-2-guide/screenshots/05-11-clear-photo-selection.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-12"><p><strong>手順 12.</strong> Search media を空にしてギャラリーへ戻します。他のフィルターは残る場合があります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-12-clear-library-search.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 検索条件を解除。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-12-clear-library-search.png" width="1934" height="1087" alt="検索条件を解除。" loading="lazy" decoding="async">
+</a>
+<figcaption>検索条件を解除。 <a href="/assets/media-kolfat-2-guide/screenshots/05-12-clear-library-search.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-13"><p><strong>手順 13.</strong> Photos only を選びます。後で別のデモソースを追加した例では写真が 28 枚あります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-15-photos-filter-confirmed.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 写真のみの実際の結果。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-15-photos-filter-confirmed.png" width="1934" height="1087" alt="写真のみの実際の結果。" loading="lazy" decoding="async">
+</a>
+<figcaption>写真のみの実際の結果。 <a href="/assets/media-kolfat-2-guide/screenshots/05-15-photos-filter-confirmed.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="library-14"><p><strong>手順 14.</strong> File name A–Z を選んでリストを閉じます。日付、サイズ、逆順の名前、種類による並べ替えもあります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/05-17-filename-sort-confirmed.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 名前順の結果。">
+<img src="/assets/media-kolfat-2-guide/screenshots/05-17-filename-sort-confirmed.png" width="1934" height="1087" alt="名前順の結果。" loading="lazy" decoding="async">
+</a>
+<figcaption>名前順の結果。 <a href="/assets/media-kolfat-2-guide/screenshots/05-17-filename-sort-confirmed.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Select all visible photos は表示中の写真が対象です。カタログ全体ではないため件数を確認します。</li>
+<li>別の回転を試す前に Undo を使います。元ファイルのハッシュは変わりませんでした。</li>
+</ul>
+<p class="guide-outcome">写真を探し、個別または複数選択で回転と取り消しができます。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="copy" class="section guide-chapter">
+<h2>7. Guided COPY を完了する</h2>
+<p>最初は COPY を使います。独立バックアップを確認し、空き容量のある別のコピー先を選び、両方のパスを確認します。例では元のデモメディア 16 個をコピーします。</p>
+<ol class="guide-steps">
+<li id="copy-01"><p><strong>手順 1.</strong> Guided で Organize Photos &amp; Videos を開き、Choose File Types のスキャン、選択、除外数を確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-01-guided-organizer.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際のファイル種類選択。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-01-guided-organizer.png" width="1934" height="1087" alt="実際のファイル種類選択。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際のファイル種類選択。 <a href="/assets/media-kolfat-2-guide/screenshots/06-01-guided-organizer.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="copy-02"><p><strong>手順 2.</strong> Deselect All で Continue が無効になります。進むには対応する種類を一つ以上選びます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-02-no-file-types-selected.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 選択ゼロで続行を無効化。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-02-no-file-types-selected.png" width="1934" height="1087" alt="選択ゼロで続行を無効化。" loading="lazy" decoding="async">
+</a>
+<figcaption>選択ゼロで続行を無効化。 <a href="/assets/media-kolfat-2-guide/screenshots/06-02-no-file-types-selected.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="copy-03"><p><strong>手順 3.</strong> Select All で任意のテキストを含む 17 ファイルが選ばれます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-03-select-all-file-types.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: すべての種類を選択。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-03-select-all-file-types.png" width="1934" height="1087" alt="すべての種類を選択。" loading="lazy" decoding="async">
+</a>
+<figcaption>すべての種類を選択。 <a href="/assets/media-kolfat-2-guide/screenshots/06-03-select-all-file-types.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="copy-04"><p><strong>手順 4.</strong> .txt を外し、17 個スキャン、16 個選択、1 個除外を確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-05-select-media-only.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: メディア 16 個だけを選択。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-05-select-media-only.png" width="1934" height="1087" alt="メディア 16 個だけを選択。" loading="lazy" decoding="async">
+</a>
+<figcaption>メディア 16 個だけを選択。 <a href="/assets/media-kolfat-2-guide/screenshots/06-05-select-media-only.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="copy-05"><p><strong>手順 5.</strong> Continue を選び、Selected Folder と完全なパスを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-06-file-types-confirmed.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 種類の選択を確定。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-06-file-types-confirmed.png" width="1934" height="1087" alt="種類の選択を確定。" loading="lazy" decoding="async">
+</a>
+<figcaption>種類の選択を確定。 <a href="/assets/media-kolfat-2-guide/screenshots/06-06-file-types-confirmed.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="copy-06"><p><strong>手順 6.</strong> Pattern で Year / Month / Day を選んで閉じます。元の 16 個のソースについて計画と分類を確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-08-guided-native-organization-plan.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の Guided 整理計画。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-08-guided-native-organization-plan.png" width="1934" height="1087" alt="実際の Guided 整理計画。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の Guided 整理計画。 <a href="/assets/media-kolfat-2-guide/screenshots/06-08-guided-native-organization-plan.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="copy-07"><p><strong>手順 7.</strong> Change Location を選びます。Windows の選択画面には、ソースやバックアップとは別の既存フォルダーが必要です。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-09-destination-folder-picker.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: ネイティブのコピー先選択。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-09-destination-folder-picker.png" width="1934" height="1087" alt="ネイティブのコピー先選択。" loading="lazy" decoding="async">
+</a>
+<figcaption>ネイティブのコピー先選択。 <a href="/assets/media-kolfat-2-guide/screenshots/06-09-destination-folder-picker.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="copy-08"><p><strong>手順 8.</strong> Copy Results を選んで Select Folder を押します。その中に MEDIA KOLFAT Organized Media が追加されます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-10-enter-copy-destination.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 使い捨てコピー先の入力。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-10-enter-copy-destination.png" width="1934" height="1087" alt="使い捨てコピー先の入力。" loading="lazy" decoding="async">
+</a>
+<figcaption>使い捨てコピー先の入力。 <a href="/assets/media-kolfat-2-guide/screenshots/06-10-enter-copy-destination.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="copy-09"><p><strong>手順 9.</strong> Selected destination、分類、空き容量を確認します。先の重複検索に基づき重複写真と動画が分類されます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-11-selected-copy-destination.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 確認したコピー先と計画。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-11-selected-copy-destination.png" width="1934" height="1087" alt="確認したコピー先と計画。" loading="lazy" decoding="async">
+</a>
+<figcaption>確認したコピー先と計画。 <a href="/assets/media-kolfat-2-guide/screenshots/06-11-selected-copy-destination.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="copy-10"><p><strong>手順 10.</strong> Copy Selected Files を選んで Confirm copy を読みます。元ファイルは残ります。対象やパスが違えばキャンセルします。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-12-confirm-copy.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の COPY 確認。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-12-confirm-copy.png" width="1934" height="1087" alt="実際の COPY 確認。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の COPY 確認。 <a href="/assets/media-kolfat-2-guide/screenshots/06-12-confirm-copy.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="copy-11"><p><strong>手順 11.</strong> 確認して完了を待ちます。16 個コピー、同一スキップ 0、名前変更 0、失敗 0 でした。分類とレポートのパスを読みます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/06-14-copy-complete-report.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 正常完了した COPY とレポート。">
+<img src="/assets/media-kolfat-2-guide/screenshots/06-14-copy-complete-report.png" width="1934" height="1087" alt="正常完了した COPY とレポート。" loading="lazy" decoding="async">
+</a>
+<figcaption>正常完了した COPY とレポート。 <a href="/assets/media-kolfat-2-guide/screenshots/06-14-copy-complete-report.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>Pattern には Year / Month / Day、YMD - Single Folder、Year / Month、カメラ別、年・月・日のみ、Custom があります。プレビューを確認します。</li>
+<li>Open destination と Open Folder は結果を開き、Save report はレポートを保存します。Add Destination to Folders は明示的な登録で、自動追加ではありません。</li>
+<li>コピー先 16 個のハッシュが一致し、元の 17 ファイルと独立バックアップは変わりませんでした。</li>
+</ul>
+<p class="guide-outcome">検証済みの整理コピーと TXT レポートが作成され、元ファイルはすべて残ります。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="progress" class="section guide-chapter">
+<h2>8. COPY の一時停止、再開、中止、復旧</h2>
+<p>大きな例では生成動画 512 個と独立バックアップを使います。個人メディアではなく、使い捨ての検証ファイルです。</p>
+<ol class="guide-steps">
+<li id="progress-01"><p><strong>手順 1.</strong> 別の Copy Timing Results を選び、完全なコピー先パスを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-05-copy-timing-destination.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 大きな例専用のコピー先。">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-05-copy-timing-destination.png" width="1934" height="1087" alt="大きな例専用のコピー先。" loading="lazy" decoding="async">
+</a>
+<figcaption>大きな例専用のコピー先。 <a href="/assets/media-kolfat-2-guide/screenshots/11-05-copy-timing-destination.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="progress-02"><p><strong>手順 2.</strong> ソース、選択、コピー先、容量を確認して COPY を承認します。準備段階が入る場合があります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-07-copy-timing-confirmation.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 大きなデータの確認画面。">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-07-copy-timing-confirmation.png" width="1934" height="1087" alt="大きなデータの確認画面。" loading="lazy" decoding="async">
+</a>
+<figcaption>大きなデータの確認画面。 <a href="/assets/media-kolfat-2-guide/screenshots/11-07-copy-timing-confirmation.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="progress-03"><p><strong>手順 3.</strong> Pause を選び、Resume の表示を待ちます。現在のファイルが先に完了する場合があります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-10-copy-paused.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の一時停止状態。">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-10-copy-paused.png" width="1934" height="1087" alt="実際の一時停止状態。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の一時停止状態。 <a href="/assets/media-kolfat-2-guide/screenshots/11-10-copy-paused.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="progress-04"><p><strong>手順 4.</strong> Resume で同じ操作を続けます。実行中は Pause に戻ります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-11-copy-resumed.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 再開した COPY。">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-11-copy-resumed.png" width="1934" height="1087" alt="再開した COPY。" loading="lazy" decoding="async">
+</a>
+<figcaption>再開した COPY。 <a href="/assets/media-kolfat-2-guide/screenshots/11-11-copy-resumed.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="progress-05"><p><strong>手順 5.</strong> Stop を選んで中止の集計とレポートを読みます。110 個の完成コピーが残り、失敗は 0 でした。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-13-cancelled-copy-report.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 110 個を保管した中止結果。">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-13-cancelled-copy-report.png" width="1934" height="1087" alt="110 個を保管した中止結果。" loading="lazy" decoding="async">
+</a>
+<figcaption>110 個を保管した中止結果。 <a href="/assets/media-kolfat-2-guide/screenshots/11-13-cancelled-copy-report.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="progress-06"><p><strong>手順 6.</strong> 同じソース、パターン、コピー先で COPY を再実行し、新しい確認を読みます。同一の完成ファイルはスキップできます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-14b-retry-copy-confirmation.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 安全な再試行の確認。">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-14b-retry-copy-confirmation.png" width="1934" height="1087" alt="安全な再試行の確認。" loading="lazy" decoding="async">
+</a>
+<figcaption>安全な再試行の確認。 <a href="/assets/media-kolfat-2-guide/screenshots/11-14b-retry-copy-confirmation.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="progress-07"><p><strong>手順 7.</strong> 現在の名前、件数、割合を読みます。再試行の進捗はまだコピーが必要なファイルを対象にします。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-15-retry-copy-progress.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の再試行進捗。">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-15-retry-copy-progress.png" width="1934" height="1087" alt="実際の再試行進捗。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の再試行進捗。 <a href="/assets/media-kolfat-2-guide/screenshots/11-15-retry-copy-progress.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="progress-08"><p><strong>手順 8.</strong> 必要なら再度 Pause を押し、Paused を待って実際の件数と割合を確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-16-retry-copy-paused-progress.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 一時停止中の進捗パネル。">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-16-retry-copy-paused-progress.png" width="1934" height="1087" alt="一時停止中の進捗パネル。" loading="lazy" decoding="async">
+</a>
+<figcaption>一時停止中の進捗パネル。 <a href="/assets/media-kolfat-2-guide/screenshots/11-16-retry-copy-paused-progress.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="progress-09"><p><strong>手順 9.</strong> Resume を選び、コピー先を接続したまま完了を待ちます。実行中にソースを変更しません。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-17-retry-copy-resumed-progress.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: Resume 後の進捗。">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-17-retry-copy-resumed-progress.png" width="1934" height="1087" alt="Resume 後の進捗。" loading="lazy" decoding="async">
+</a>
+<figcaption>Resume 後の進捗。 <a href="/assets/media-kolfat-2-guide/screenshots/11-17-retry-copy-resumed-progress.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="progress-10"><p><strong>手順 10.</strong> 402 個コピー、110 個同一スキップ、名前変更と失敗は 0 でした。コピー先 512 個すべてのハッシュを検証しました。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/11-19-retry-completion-report.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 検証済みの復旧完了。">
+<img src="/assets/media-kolfat-2-guide/screenshots/11-19-retry-completion-report.png" width="1934" height="1087" alt="検証済みの復旧完了。" loading="lazy" decoding="async">
+</a>
+<figcaption>検証済みの復旧完了。 <a href="/assets/media-kolfat-2-guide/screenshots/11-19-retry-completion-report.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>重複検索の停止と COPY の停止は別です。実際に実行中の操作の控えを使用します。</li>
+<li>操作部の上に以前の状態文が残る場合があります。現在の進捗パネルと最終結果を読みます。</li>
+<li>中止後はレポートとコピー先を確認し、完了して検証済みのファイルを保管します。全削除は不要です。</li>
+</ul>
+<p class="guide-outcome">COPY を一時停止、再開、中止し、完了済みの同一ファイルを重複させず再試行できます。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="move" class="section guide-chapter">
+<h2>9. バックアップを用意して Advanced MOVE を使う</h2>
+<p>MOVE はコピー先検証後に元ファイルを削除して場所を変更します。使い捨てコピーと独立バックアップだけで練習します。例は Move Samples の複製で、元のデモライブラリは移動していません。</p>
+<ol class="guide-steps">
+<li id="move-01"><p><strong>手順 1.</strong> Experience で Advanced を選び、目的のデモソースを選んでから整理画面へ進みます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-01-advanced-mode.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の Advanced モード。">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-01-advanced-mode.png" width="1934" height="1087" alt="実際の Advanced モード。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の Advanced モード。 <a href="/assets/media-kolfat-2-guide/screenshots/08-01-advanced-mode.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="move-02"><p><strong>手順 2.</strong> 種類と Selected Folder を確認します。Move Samples の正確なパス、17 個スキャン、16 個選択、1 個除外です。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-35-correct-source-confirmed.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 正しいバックアップ済みソース。">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-35-correct-source-confirmed.png" width="1934" height="1087" alt="正しいバックアップ済みソース。" loading="lazy" decoding="async">
+</a>
+<figcaption>正しいバックアップ済みソース。 <a href="/assets/media-kolfat-2-guide/screenshots/08-35-correct-source-confirmed.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="move-03"><p><strong>手順 3.</strong> Year / Month と計画を確認します。今回は Duplicates が Not checked です。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-36-verified-move-plan.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の MOVE 計画。">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-36-verified-move-plan.png" width="1934" height="1087" alt="実際の MOVE 計画。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の MOVE 計画。 <a href="/assets/media-kolfat-2-guide/screenshots/08-36-verified-move-plan.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="move-04"><p><strong>手順 4.</strong> Change Location から別の Move Results を選び、パスを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-37-final-move-destination.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 承認された使い捨て移動先。">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-37-final-move-destination.png" width="1934" height="1087" alt="承認された使い捨て移動先。" loading="lazy" decoding="async">
+</a>
+<figcaption>承認された使い捨て移動先。 <a href="/assets/media-kolfat-2-guide/screenshots/08-37-final-move-destination.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="move-05"><p><strong>手順 5.</strong> Transfer mode で Move を選びます。コピー先検証後に元を削除し、元フォルダーは残し、レポートを保存する警告を読みます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-39-final-move-warning.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の MOVE 警告。">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-39-final-move-warning.png" width="1934" height="1087" alt="実際の MOVE 警告。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の MOVE 警告。 <a href="/assets/media-kolfat-2-guide/screenshots/08-39-final-move-warning.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="move-06"><p><strong>手順 6.</strong> Move Selected Files を押し、Confirm move を読みます。対応する元ファイルが削除されます。不明点があればキャンセルします。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-40-final-move-confirmation.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の最終 MOVE 確認。">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-40-final-move-confirmation.png" width="1934" height="1087" alt="実際の最終 MOVE 確認。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の最終 MOVE 確認。 <a href="/assets/media-kolfat-2-guide/screenshots/08-40-final-move-confirmation.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="move-07"><p><strong>手順 7.</strong> ソース、移動先、バックアップを確認して実行します。Move complete は 16 個移動、元保持のコピー 0、失敗 0 でした。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/08-42-move-complete-report.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 16 ファイルの MOVE 完了。">
+<img src="/assets/media-kolfat-2-guide/screenshots/08-42-move-complete-report.png" width="1934" height="1087" alt="16 ファイルの MOVE 完了。" loading="lazy" decoding="async">
+</a>
+<figcaption>16 ファイルの MOVE 完了。 <a href="/assets/media-kolfat-2-guide/screenshots/08-42-move-complete-report.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="move-08"><p><strong>手順 8.</strong> Activity の Move Photos &amp; Videos と Open Move Report を確認します。独立バックアップを保管し続けます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 完了した MOVE の実際の記録。">
+<img src="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" width="1934" height="1087" alt="完了した MOVE の実際の記録。" loading="lazy" decoding="async">
+</a>
+<figcaption>完了した MOVE の実際の記録。 <a href="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>移動先 16 個のハッシュが一致し、バックアップ 17 個は不変でした。notes.txt と四つの元フォルダーも残りました。</li>
+<li>COPIED_SOURCE_RETAINED はコピー先を作成したが元を保管した状態です。完全な移動と見なさずレポートを確認します。</li>
+<li>毎回 Selected Folder を確認します。Refresh は切替操作ではありません。デモでは使い捨てソースの登録だけを解除し、再追加して切り替えました。</li>
+</ul>
+<p class="guide-outcome">使い捨て MOVE は完了・検証済みで、バックアップと元のデモライブラリは無傷です。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="reports" class="section guide-chapter">
+<h2>10. Activity とテキストレポートを読む</h2>
+<p>Activity は最近のローカル操作を記録します。Completed、Completed with warnings、Cancelled は異なる状態です。自動 TXT レポートはコピー先のルートに保存されます。</p>
+<ol class="guide-steps">
+<li id="reports-01"><p><strong>手順 1.</strong> Activity で Copy Photos &amp; Videos を探し、処理、コピー、スキップ、失敗数をコピー先の集計と比較します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/07-01-activity-after-copy.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 最初の 16 個の COPY 完了記録。">
+<img src="/assets/media-kolfat-2-guide/screenshots/07-01-activity-after-copy.png" width="1934" height="1087" alt="最初の 16 個の COPY 完了記録。" loading="lazy" decoding="async">
+</a>
+<figcaption>最初の 16 個の COPY 完了記録。 <a href="/assets/media-kolfat-2-guide/screenshots/07-01-activity-after-copy.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="reports-02"><p><strong>手順 2.</strong> 中止と完了を比較します。中止 COPY は 110 個処理、再試行は 512 個処理し 110 個スキップしました。中止した重複検索は不完全です。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/07-02-completed-and-cancelled-activity.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の完了と中止の履歴。">
+<img src="/assets/media-kolfat-2-guide/screenshots/07-02-completed-and-cancelled-activity.png" width="1934" height="1087" alt="実際の完了と中止の履歴。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の完了と中止の履歴。 <a href="/assets/media-kolfat-2-guide/screenshots/07-02-completed-and-cancelled-activity.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="reports-03"><p><strong>手順 3.</strong> Open Copy Report または Open Move Report と Open Destination を使い、TXT のモード、パス、状態、合計を確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: COPY と MOVE の実際の履歴。">
+<img src="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" width="1934" height="1087" alt="COPY と MOVE の実際の履歴。" loading="lazy" decoding="async">
+</a>
+<figcaption>COPY と MOVE の実際の履歴。 <a href="/assets/media-kolfat-2-guide/screenshots/07-03-verified-move-activity.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>検証したレポートは Mode: MOVE、Total planned files: 16、Moved: 16、COPIED_SOURCE_RETAINED: 0、Skipped: 0、Failed: 0 でした。</li>
+<li>COPY レポートは元ファイルの保持を明記し、中止レポートはコピー先に残った完成ファイルを示します。</li>
+<li>Clear Activity History は使っていません。デモ履歴を確認用に残しています。</li>
+</ul>
+<p class="guide-outcome">履歴をコピー先とレポートに対応させ、成功と未完了を区別できます。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="settings" class="section guide-chapter">
+<h2>11. 設定と初期化を理解する</h2>
+<p>Settings はローカル設定です。Language、Experience、Safety、Privacy &amp; Local Processing、Organizing、Library、Guidance &amp; Accessibility、Maintenance、Media dates を確認します。</p>
+<ol class="guide-steps">
+<li id="settings-01"><p><strong>手順 1.</strong> Settings で言語、体験、安全項目を確認します。表示された UI では整理確認とソース削除警告が必須です。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-01-settings.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の言語・体験・安全設定。">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-01-settings.png" width="1934" height="1087" alt="実際の言語・体験・安全設定。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の言語・体験・安全設定。 <a href="/assets/media-kolfat-2-guide/screenshots/09-01-settings.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="settings-02"><p><strong>手順 2.</strong> Default organize pattern と Destination behavior を確認します。後者は Ask every time です。ローカル処理とレポートの説明も読みます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-03-organizing-library-settings.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 整理の既定値とプライバシー。">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-03-organizing-library-settings.png" width="1934" height="1087" alt="整理の既定値とプライバシー。" loading="lazy" decoding="async">
+</a>
+<figcaption>整理の既定値とプライバシー。 <a href="/assets/media-kolfat-2-guide/screenshots/09-03-organizing-library-settings.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="settings-03"><p><strong>手順 3.</strong> プレビューサイズ、並び順、日付とサイズの表示、スキャン後の Library 表示、前回ビューの記憶を確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-04-accessibility-settings.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の Library 設定。">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-04-accessibility-settings.png" width="1934" height="1087" alt="実際の Library 設定。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の Library 設定。 <a href="/assets/media-kolfat-2-guide/screenshots/09-04-accessibility-settings.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="settings-04"><p><strong>手順 4.</strong> Larger text を有効にし、文字とナビゲーションを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-05-enable-larger-text.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 大きい文字を適用。">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-05-enable-larger-text.png" width="1934" height="1087" alt="大きい文字を適用。" loading="lazy" decoding="async">
+</a>
+<figcaption>大きい文字を適用。 <a href="/assets/media-kolfat-2-guide/screenshots/09-05-enable-larger-text.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="settings-05"><p><strong>手順 5.</strong> Larger text を解除して標準に戻します。Larger buttons、Reduced motion、ガイドも調整できます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-06-restore-standard-text.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 標準文字を復元。">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-06-restore-standard-text.png" width="1934" height="1087" alt="標準文字を復元。" loading="lazy" decoding="async">
+</a>
+<figcaption>標準文字を復元。 <a href="/assets/media-kolfat-2-guide/screenshots/09-06-restore-standard-text.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="settings-06"><p><strong>手順 6.</strong> Maintenance でアプリ生成ファイルの容量を確認します。Refresh Usage は更新、Clear Thumbnail Cache はプレビューが対象で、今回は未実行です。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-07-maintenance-settings.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: メンテナンス容量と操作。">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-07-maintenance-settings.png" width="1934" height="1087" alt="メンテナンス容量と操作。" loading="lazy" decoding="async">
+</a>
+<figcaption>メンテナンス容量と操作。 <a href="/assets/media-kolfat-2-guide/screenshots/09-07-maintenance-settings.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="settings-07"><p><strong>手順 7.</strong> Advanced date policy で五つの根拠と低信頼度の警告を読みます。変更は新規スキャン、再分析、整理プレビューに適用されます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の五つの日付根拠。">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" width="1934" height="1087" alt="実際の五つの日付根拠。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の五つの日付根拠。 <a href="/assets/media-kolfat-2-guide/screenshots/09-09-review-date-evidence.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="settings-08"><p><strong>手順 8.</strong> Reset Settings to Defaults の確認を読みます。設定、ソース、索引、進捗、キャッシュを消去しますが、元メディアと整理コピーは変更しません。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-10-reset-settings-confirmation.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の初期化警告。">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-10-reset-settings-confirmation.png" width="1934" height="1087" alt="実際の初期化警告。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の初期化警告。 <a href="/assets/media-kolfat-2-guide/screenshots/09-10-reset-settings-confirmation.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="settings-09"><p><strong>手順 9.</strong> Cancel を選びます。本来のプロファイルもデモのプロファイルも初期化していません。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/09-12-reset-cancelled.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 初期化をキャンセル。">
+<img src="/assets/media-kolfat-2-guide/screenshots/09-12-reset-cancelled.png" width="1934" height="1087" alt="初期化をキャンセル。" loading="lazy" decoding="async">
+</a>
+<figcaption>初期化をキャンセル。 <a href="/assets/media-kolfat-2-guide/screenshots/09-12-reset-cancelled.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>初期化は表示設定変更より広い操作です。カタログを消去する前に必要なレポートや情報を保管します。</li>
+<li>設定を見るだけでは既存の日付は書き換わりません。変更したい場合は明示的な再分析を使います。</li>
+</ul>
+<p class="guide-outcome">カタログを誤って消去せずに、設定やメンテナンスと初期化の影響を理解できます。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+<section id="troubleshooting" class="section guide-chapter">
+<h2>12. よくある問題から復旧する</h2>
+<p>繰り返す前に現在のメッセージを読み、ソース、フィルター、パターン、コピー先を確認します。以下は使い捨て環境で安全に再現した実際の状態です。</p>
+<ol class="guide-steps">
+<li id="troubleshooting-01"><p><strong>手順 1.</strong> No photos match your choices なら Search media を確認します。一致しない文字列が全結果を隠すことがあります。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-01-library-no-search-results.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の検索結果ゼロ。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-01-library-no-search-results.png" width="1934" height="1087" alt="実際の検索結果ゼロ。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の検索結果ゼロ。 <a href="/assets/media-kolfat-2-guide/screenshots/10-01-library-no-search-results.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="troubleshooting-02"><p><strong>手順 2.</strong> garden のような既知の文字列に変え、結果が戻ることを確認してから他を変更します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-02-recover-search-results.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 検索結果が復帰。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-02-recover-search-results.png" width="1934" height="1087" alt="検索結果が復帰。" loading="lazy" decoding="async">
+</a>
+<figcaption>検索結果が復帰。 <a href="/assets/media-kolfat-2-guide/screenshots/10-02-recover-search-results.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="troubleshooting-03"><p><strong>手順 3.</strong> Unavailable only を確認します。元が利用可能ならゼロになり、ファイル消失の証拠ではありません。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-04-review-unavailable-filter.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 利用可能性フィルターの空結果。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-04-review-unavailable-filter.png" width="1934" height="1087" alt="利用可能性フィルターの空結果。" loading="lazy" decoding="async">
+</a>
+<figcaption>利用可能性フィルターの空結果。 <a href="/assets/media-kolfat-2-guide/screenshots/10-04-review-unavailable-filter.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="troubleshooting-04"><p><strong>手順 4.</strong> 空の画面で Show All Photos を選び、検索とフィルターを確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-05-show-all-recovery.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: ギャラリーの復旧。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-05-show-all-recovery.png" width="1934" height="1087" alt="ギャラリーの復旧。" loading="lazy" decoding="async">
+</a>
+<figcaption>ギャラリーの復旧。 <a href="/assets/media-kolfat-2-guide/screenshots/10-05-show-all-recovery.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="troubleshooting-05"><p><strong>手順 5.</strong> Folder is unavailable or cannot be opened ならパス、接続、アクセスを確認します。存在しないデモパスでは Select This Folder が無効でした。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-08-invalid-folder-error.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の利用不可フォルダーエラー。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-08-invalid-folder-error.png" width="1934" height="1087" alt="実際の利用不可フォルダーエラー。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の利用不可フォルダーエラー。 <a href="/assets/media-kolfat-2-guide/screenshots/10-08-invalid-folder-error.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="troubleshooting-06"><p><strong>手順 6.</strong> 存在するフォルダーで Go を選びます。空なら対応メディアはゼロです。別を選ぶかキャンセルします。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-10-empty-folder.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際の空フォルダー。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-10-empty-folder.png" width="1934" height="1087" alt="実際の空フォルダー。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際の空フォルダー。 <a href="/assets/media-kolfat-2-guide/screenshots/10-10-empty-folder.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="troubleshooting-07"><p><strong>手順 7.</strong> テキストだけのフォルダーもメディアはゼロです。Other Files は整理時に別に選びます。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-12-unsupported-only-preview.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 非対応ファイルだけのプレビュー。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-12-unsupported-only-preview.png" width="1934" height="1087" alt="非対応ファイルだけのプレビュー。" loading="lazy" decoding="async">
+</a>
+<figcaption>非対応ファイルだけのプレビュー。 <a href="/assets/media-kolfat-2-guide/screenshots/10-12-unsupported-only-preview.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="troubleshooting-08"><p><strong>手順 8.</strong> Custom では有効なトークンと相対セグメントを使います。親へ移動するパターンは拒否され、COPY は無効のままです。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-14-invalid-custom-pattern.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 実際に拒否されたパターン。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-14-invalid-custom-pattern.png" width="1934" height="1087" alt="実際に拒否されたパターン。" loading="lazy" decoding="async">
+</a>
+<figcaption>実際に拒否されたパターン。 <a href="/assets/media-kolfat-2-guide/screenshots/10-14-invalid-custom-pattern.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="troubleshooting-09"><p><strong>手順 9.</strong> {YYYY}\{YYYY-MM} に修正します。このビルドでは Pattern を開き直して閉じ、再確認して計画を復元します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-17-custom-plan-reconfirmed.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 修正して再確認した計画。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-17-custom-plan-reconfirmed.png" width="1934" height="1087" alt="修正して再確認した計画。" loading="lazy" decoding="async">
+</a>
+<figcaption>修正して再確認した計画。 <a href="/assets/media-kolfat-2-guide/screenshots/10-17-custom-plan-reconfirmed.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="troubleshooting-10"><p><strong>手順 10.</strong> Remove Folder はカタログと Library の記録だけを削除し、元ファイルとフォルダーは残すと確認します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-19-catalog-only-removal-confirmation.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: カタログのみ削除の確認。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-19-catalog-only-removal-confirmation.png" width="1934" height="1087" alt="カタログのみ削除の確認。" loading="lazy" decoding="async">
+</a>
+<figcaption>カタログのみ削除の確認。 <a href="/assets/media-kolfat-2-guide/screenshots/10-19-catalog-only-removal-confirmation.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+<li id="troubleshooting-11"><p><strong>手順 11.</strong> デモのみで Remove from MEDIA KOLFAT を確認し、元が残ることを検証します。手動で再追加してスキャン後に整理します。</p>
+<figure>
+<a class="guide-image-link" href="/assets/media-kolfat-2-guide/screenshots/10-20-disposable-source-removed-from-catalog.png" target="_blank" rel="noopener" aria-label="元の PNG を開く: 登録解除後も元ファイルを保持。">
+<img src="/assets/media-kolfat-2-guide/screenshots/10-20-disposable-source-removed-from-catalog.png" width="1934" height="1087" alt="登録解除後も元ファイルを保持。" loading="lazy" decoding="async">
+</a>
+<figcaption>登録解除後も元ファイルを保持。 <a href="/assets/media-kolfat-2-guide/screenshots/10-20-disposable-source-removed-from-catalog.png" target="_blank" rel="noopener">元の PNG を開く</a></figcaption>
+</figure></li>
+</ol>
+<ul class="guide-notes">
+<li>種類が未選択なら Continue は無効です。Choose File Types で必要な種類を選びます。</li>
+<li>パスエラー後に古いプレビューが残る場合があります。エラーと無効な Select This Folder を確認し、古い画像を無効パスの内容と見なしません。</li>
+<li>コピー先や容量の問題ではパス、接続、書き込み権限、安全余裕を確認し、必要なら別の書き込み可能フォルダーを選びます。</li>
+<li>中断後は再試行前に Activity、TXT、完成ファイルを確認します。一部のコピーがあっても警告や中止は要確認です。</li>
+<li>登録解除は隔離カタログだけで実施しました。元の 17 ファイルが不変と確認してから再追加し、MOVE に使いました。</li>
+</ul>
+<p class="guide-outcome">絞り込みによる空結果と元ファイルの欠落を区別し、検証結果を保ちながら復旧できます。</p>
+<a class="guide-back" href="#contents">目次に戻る</a>
+</section>
+</main>
+<footer><div class="foot"><span>© 2026 KOLFAT</span><nav><a href="/ja/">ホーム</a><a href="/ja/privacy/">プライバシー</a><a href="/ja/terms/">利用規約</a><a href="/ja/licenses/">ライセンス</a></nav></div></footer>
+<script defer src="/assets/nav-dropdown.js?v=20261027-menu-explore2"></script>
+</body></html>

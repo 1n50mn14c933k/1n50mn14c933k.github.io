@@ -1,0 +1,714 @@
+{
+  "language": "de",
+  "title": "Benutzerhandbuch für MEDIA KOLFAT 2.0",
+  "description": "Bebilderte Windows-Anleitung zum Hinzufügen von Medien, zur Zustandsprüfung, Duplikatsuche, Organisation mit COPY oder Advanced MOVE, Wiederherstellung und Auswertung von Berichten.",
+  "lead": "Diese Anleitung führt vom ersten Start bis zu einer überprüften, geordneten Sammlung. Die Beispiele verwenden erzeugte Bilder und Videos mit unabhängigen Sicherungen. Alle Anwendungsbilder sind echte, nativ aufgenommene PNG-Dateien der installierten Windows-Anwendung.",
+  "versionNote": "Geprüft mit MEDIA KOLFAT 2.0.0, Build 2.0.0.0. Die Bildschirmbilder zeigen die englische Oberfläche. Beim größeren Beispieldatensatz ändern sich die Zahlen; beachten Sie beim Nachvollziehen Ihre eigenen Werte.",
+  "safety": "Erstellen Sie vor der Organisation eine unabhängige Sicherung. COPY wird empfohlen, weil die Quelldateien erhalten bleiben. Advanced MOVE entfernt Quelldateien nach Prüfung des Ziels und weiteren Sicherheitsprüfungen. Bewahren Sie die Sicherung auf, bis Ziel und Bericht überprüft sind.",
+  "contentsLabel": "Inhalt",
+  "stepLabel": "Schritt",
+  "imageLinkLabel": "Original-PNG öffnen",
+  "backLabel": "Zurück zum Inhalt",
+  "chapters": [
+    {
+      "id": "start",
+      "title": "1. Starten und die Benutzerführung verstehen",
+      "intro": "Starten Sie die installierte Anwendung. Die Seitenleiste enthält Performance Check, Add Photos & Videos, Photos Health Check, Duplicate Finder, Browse Library, Organize Photos & Videos, Activity, Settings und About. Unter Experience wählen Sie Guided oder Advanced.",
+      "steps": [
+        {
+          "id": "start-01",
+          "image": "01-01-first-launch-guided.png",
+          "text": "Wählen Sie zunächst Guided unter Experience. Folgen Sie der hervorgehobenen Empfehlung. Kommende Schritte sind neutral grau, der aktuelle Schritt ist gelb beziehungsweise bernsteinfarben betont, abgeschlossene Schritte erhalten grüne Häkchen.",
+          "caption": "Erster Start im geführten Modus."
+        },
+        {
+          "id": "start-02",
+          "image": "01-02-performance-check-complete.png",
+          "text": "Starten Sie Quick Check auf Performance Check und warten Sie auf das Ende. Lesen Sie das Ergebnis: Der Beispielcomputer erreichte 98 Prozent; auf anderen Computern kann der Wert abweichen.",
+          "caption": "Quick Check mit 98 Prozent abgeschlossen."
+        },
+        {
+          "id": "start-03",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Öffnen Sie Add Photos & Videos. Zur Auswahl stehen Scan Computer Automatically und Choose Photos & Videos Manually. Wählen Sie die manuelle Auswahl, wenn Ihnen der gewünschte Medienordner bekannt ist.",
+          "caption": "Die beiden tatsächlichen Möglichkeiten zur Quellauswahl."
+        },
+        {
+          "id": "start-04",
+          "image": "01-04-about-version.png",
+          "text": "Öffnen Sie About. Klappen Sie gegebenenfalls Release Information auf und lesen Sie Version und Build. Über die Seitenleiste kehren Sie zum gewünschten Ablauf zurück.",
+          "caption": "Version 2.0.0 und Build 2.0.0.0."
+        },
+        {
+          "id": "start-05",
+          "image": "01-05-about-privacy.png",
+          "text": "Öffnen Sie Privacy & Data Safety. Lesen Sie die Unterschiede zwischen Scannen, COPY und Advanced MOVE. Bewahren Sie eine unabhängige Sicherung wichtiger Medien auf.",
+          "caption": "Datenschutz- und Sicherheitshinweise der Anwendung."
+        }
+      ],
+      "tips": [
+        "Der animierte Pfeil und das Leuchten kennzeichnen die empfohlene nächste Aktion. In Settings stehen Reduced motion und weitere Führungseinstellungen bereit.",
+        "Guided hilft bei der Reihenfolge der Aufgaben. Advanced bietet einen direkteren Ablauf und zeigt MOVE, sobald ein Organisationsplan bereitsteht.",
+        "About enthält außerdem Legal & Policies, Support, Technical Information, Open-Source & Third-Party Licenses und Product Information. Öffnen Sie bei Bedarf den passenden Bereich."
+      ],
+      "outcome": "Sie können die installierte Version feststellen, zwischen Seiten wechseln und den aktuellen geführten Schritt erkennen."
+    },
+    {
+      "id": "sources",
+      "title": "2. Eine Quelle manuell auswählen",
+      "intro": "Eine Quelle ist ein im lokalen Katalog registrierter Ordner. Hinzufügen und Scannen erfassen unterstützte Fotos und Videos. Das Beispiel enthält in Unterordnern 14 erzeugte JPEG-Dateien, zwei erzeugte AVI-Dateien und eine optionale Textdatei.",
+      "steps": [
+        {
+          "id": "sources-01",
+          "image": "02-01-manual-source-picker.png",
+          "text": "Wählen Sie Choose Photos & Videos Manually. Prüfen Sie im Ordnerdialog Current folder, Locations, Folders und Photos & Videos in this folder, bevor Sie etwas auswählen.",
+          "caption": "Der echte Ordnerdialog von MEDIA KOLFAT."
+        },
+        {
+          "id": "sources-02",
+          "image": "02-02-enter-demo-source-path.png",
+          "text": "Tragen Sie den vollständigen Pfad des gewünschten Katalogordners in Current folder ein. Im Beispiel ist dies Media Samples im ausschließlich für Vorführungen verwendeten Verzeichnis.",
+          "caption": "Ein konkreter Beispielquellpfad ist eingetragen."
+        },
+        {
+          "id": "sources-03",
+          "image": "02-03-demo-nested-folders.png",
+          "text": "Wählen Sie Go. Prüfen Sie Pfad und Unterordnernamen. Im übergeordneten Ordner können direkt keine Medien liegen, obwohl seine Unterordner unterstützte Dateien enthalten.",
+          "caption": "Vier Unterordner im Beispielverzeichnis."
+        },
+        {
+          "id": "sources-04",
+          "image": "02-04-preview-sample-photos.png",
+          "text": "Öffnen Sie einen bekannten Unterordner und prüfen Sie die Vorschauen. Im Beispiel zeigt 2024 Holiday sechs erzeugte JPEG-Bilder.",
+          "caption": "Sechs unterstützte Bilder im Unterordner."
+        },
+        {
+          "id": "sources-05",
+          "image": "02-05-return-to-demo-root.png",
+          "text": "Wählen Sie Up one folder, um die gesamte verschachtelte Sammlung einzubeziehen. Prüfen Sie Current folder erneut.",
+          "caption": "Zurück im vorgesehenen übergeordneten Quellordner."
+        },
+        {
+          "id": "sources-06",
+          "image": "02-06-ready-to-scan-source.png",
+          "text": "Wählen Sie Select This Folder. Prüfen Sie unter Ready to add this folder den Namen und vollständigen Pfad. Fahren Sie bei einer unerwarteten Quelle nicht fort.",
+          "caption": "Die ausgewählte Quelle kann hinzugefügt werden."
+        },
+        {
+          "id": "sources-07",
+          "image": "02-07-source-advanced-options.png",
+          "text": "Öffnen Sie bei Bedarf Advanced options. Prüfen Sie Folder location, den optionalen Anzeigenamen und Folder type. Cloudordner müssen bereits auf diesem Computer verfügbar sein; wählen Sie einen lesbaren lokalen Pfad.",
+          "caption": "Optionale Quellenangaben und automatisch bestimmter Ordnertyp."
+        },
+        {
+          "id": "sources-08",
+          "image": "02-08-source-scan-complete.png",
+          "text": "Starten Sie den angebotenen Scan und warten Sie auf Ready sowie einen erfolgreichen Scanzeitpunkt. Die erste Beispielquelle enthält 16 unterstützte Medien; ihre Textdatei wird nicht als Medium katalogisiert.",
+          "caption": "Scan mit 16 Fotos und Videos abgeschlossen."
+        },
+        {
+          "id": "sources-09",
+          "image": "02-09-source-refresh-complete.png",
+          "text": "Verwenden Sie Refresh auf dieser Quellenkarte für einen erneuten Scan. Prüfen Sie Status und Zeitpunkt. Refresh wählt die Quelle nicht automatisch für die Organisation aus.",
+          "caption": "Quelle nach erneutem Scan bereit."
+        }
+      ],
+      "tips": [
+        "Ein weiterer Ordner kann in Advanced zunächst hinzugefügt werden. Auf seiner Karte erscheint Start Scan. Im gezeigten geführten Ablauf wird der erste Ordner anfangs automatisch gescannt.",
+        "Prüfen Sie im Organizer immer erneut Selected Folder. In der geprüften Oberfläche ändert Refresh auf einer Quellenkarte die ausgewählte Organisationsquelle nicht."
+      ],
+      "outcome": "Der richtige Ordner ist registriert; seine unterstützten Medien stehen im Katalog bereit."
+    },
+    {
+      "id": "locations",
+      "title": "3. Automatische Suche und Speicherorte",
+      "intro": "Der Quelldialog bietet This PC, lokale Ordner und Laufwerke, Pictures, OneDrive und Network. Wählen Sie nur gewünschte Leseorte. Externe oder USB-Laufwerke müssen angeschlossen und lesbar sein, Netzwerkorte bereits über Windows erreichbar.",
+      "steps": [
+        {
+          "id": "locations-01",
+          "image": "01-03-welcome-source-choices.png",
+          "text": "Prüfen Sie Scan Computer Automatically vor der Auswahl. Die Funktion startet eine computerweite Suche und bietet keine Begrenzung auf den Beispielordner. Verwenden Sie die manuelle Auswahl, wenn Sie nur einen bekannten Ordner einlesen möchten.",
+          "caption": "Getrennte Auswahl für automatische und manuelle Suche."
+        },
+        {
+          "id": "locations-02",
+          "image": "02-01-manual-source-picker.png",
+          "text": "Verwenden Sie This PC für ein lesbares Laufwerk oder geben Sie einen genauen lokalen beziehungsweise Netzwerkpfad unter Current folder ein. OneDrive bezieht sich auf lokal verfügbare Dateien. Stellen Sie nicht verfügbare Inhalte zuerst über Windows bereit.",
+          "caption": "Die tatsächlichen Ortsverknüpfungen und das Pfadfeld."
+        }
+      ],
+      "tips": [
+        "Die computerweite automatische Suche wurde hier nicht ausgeführt, da sie Laufwerke außerhalb der Beispieldaten prüfen würde. Es wird kein automatisches Suchergebnis als getestet dargestellt.",
+        "Eine Ortsverknüpfung bedeutet keine Anmeldung oder bestätigte Cloudverbindung. Persönliche Pictures-, OneDrive-, Netzwerk- und externe Medienbestände wurden nicht geöffnet."
+      ],
+      "outcome": "Sie können eine Auswahlmethode wählen, die zum Speicherort und zum beabsichtigten Scanumfang passt."
+    },
+    {
+      "id": "health",
+      "title": "4. Vorschauen und Mediendaten prüfen",
+      "intro": "Öffnen Sie Photos Health Check nach einem Quellscan. Vorschauzustand, Datumsinformationen und Verfügbarkeit der Originale sind unterschiedliche Prüfungen. Eine fehlende Vorschau bedeutet nicht automatisch eine fehlende Quelldatei.",
+      "steps": [
+        {
+          "id": "health-01",
+          "image": "03-01-photos-health-check.png",
+          "text": "Prüfen Sie die Summen. Im kleinen Beispiel gibt es 16 Medien: 14 gültige Vorschauen und zwei Videovorschauprobleme. Alle 16 Originale wurden zuletzt als verfügbar erkannt.",
+          "caption": "Der tatsächliche Zustand der kleinen Beispielsammlung."
+        },
+        {
+          "id": "health-02",
+          "image": "03-02-thumbnail-repair-complete.png",
+          "text": "Starten Sie die ausdrücklich angebotene Reparatur fehlender Vorschaubilder. Hier wurden zwei Videos geprüft, keine Vorschau repariert und beide Formate für die Vorschauerzeugung als nicht unterstützt gemeldet.",
+          "caption": "Zwei nicht unterstützte Vorschaufälle nach Reparaturversuch."
+        },
+        {
+          "id": "health-03",
+          "image": "03-04-date-reanalysis-result.png",
+          "text": "Starten Sie die angebotene erneute Analyse fehlender Datumsangaben. Prüfen Sie die Herkunft: Hier wurden alle 16 Daten mit Filesystem last modified bestimmt. Das kann Kopieren oder Bearbeiten statt der Aufnahme widerspiegeln.",
+          "caption": "Echte Datumsanalyse mit Herkunft der Datumswerte."
+        },
+        {
+          "id": "health-04",
+          "image": "09-09-review-date-evidence.png",
+          "text": "Öffnen Sie Settings und Advanced date policy. Lesen Sie die aktivierten Quellen: eingebettete Metadaten, unterstützte XMP-Dateien, Dateinamen, strukturierte Ordner und letztes Änderungsdatum. Windows CreationTime gilt nicht als Aufnahmedatum.",
+          "caption": "Datumsregeln und Warnung vor geringer Verlässlichkeit."
+        }
+      ],
+      "tips": [
+        "Die erzeugten Dateien enthalten keine Kamera-Aufnahmemetadaten. Ihre Namen mit 2024 oder 2025 bestimmten das beobachtete Ergebnis nicht; verwendet wurde das letzte Änderungsdatum des Dateisystems.",
+        "Bei einem nicht unterstützten Vorschauformat kann eine Reparatur ohne verbesserte Vorschau enden. Bewahren Sie die Originale auf und verwenden Sie bei Bedarf einen geeigneten Betrachter."
+      ],
+      "outcome": "Sie können Vorschau-, Datums- und Verfügbarkeitsprobleme unterscheiden und das tatsächliche Reparaturergebnis lesen."
+    },
+    {
+      "id": "duplicates",
+      "title": "5. Exakte Duplikate finden und prüfen",
+      "intro": "Duplicate Finder vergleicht unterstützte, verfügbare Katalogmedien auf exakte Kopien. Gleiche Namen allein beweisen kein Duplikat. Der kleine Beispieldatensatz enthält absichtlich drei Gruppen identischer Dateien.",
+      "steps": [
+        {
+          "id": "duplicates-01",
+          "image": "04-01-duplicate-finder-ready.png",
+          "text": "Öffnen Sie Duplicate Finder nach dem Quellscan. Prüfen Sie die Anzahl der bereitstehenden Medien und wählen Sie Find Duplicates.",
+          "caption": "Die ursprüngliche Duplikatsuche mit 16 Medien ist bereit."
+        },
+        {
+          "id": "duplicates-02",
+          "image": "04-06-duplicate-scan-outcome.png",
+          "text": "Warten Sie auf Duplicate scan complete. Im ursprünglichen Beispiel wurden drei Gruppen, sechs Duplikatdateien und etwa 16,9 MB potenziell freigebbarer Speicher gefunden.",
+          "caption": "Drei exakte Duplikatgruppen im ursprünglichen Beispiel."
+        },
+        {
+          "id": "duplicates-03",
+          "image": "04-07-inspect-duplicate-results.png",
+          "text": "Scrollen Sie durch Exact Duplicate Group. Vergleichen Sie Namen, Orte und Größen. Open Folder hilft beim Auffinden einer Datei; das Prüfen einer Gruppe entfernt nichts.",
+          "caption": "Tatsächliche Duplikate einzeln prüfen."
+        },
+        {
+          "id": "duplicates-04",
+          "image": "04-33-duplicate-scan-running.png",
+          "text": "Beobachten Sie bei größeren Sammlungen Finding exact duplicates und die geprüften Kandidaten. Der größere Test enthält 544 Katalogmedien. Währenddessen zeigt der geprüfte Build Stop Scan.",
+          "caption": "Echte laufende Suche mit Stop Scan."
+        },
+        {
+          "id": "duplicates-05",
+          "image": "04-36-duplicate-scan-cancelled.png",
+          "text": "Wählen Sie Stop Scan, um eine laufende Suche zu beenden. Im Beispiel erschien wieder die Startbereitschaft. Eine abgebrochene Suche ist unvollständig und beweist nicht, dass keine Duplikate vorhanden sind.",
+          "caption": "Tatsächliches Ergebnis nach Stoppen der Suche."
+        }
+      ],
+      "tips": [
+        "Duplicate Finder zeigte in diesem installierten Build keine Schaltflächen Pause oder Resume. COPY besitzt eigene, später gezeigte Pause- und Resume-Steuerungen.",
+        "Die geprüfte Duplikatoberfläche bietet keine Löschaktion. Potenziell freigebbarer Platz ist eine Schätzung, kein bereits freigegebener Speicher. Behalten Sie mindestens eine unabhängig geprüfte Kopie und ihre Sicherung.",
+        "Eine neue Suche oder Quellenänderung kann ein vorheriges Ergebnis ungültig machen. Achten Sie in der Übersicht auf Not checked, bevor Sie Duplikatzahlen verwenden."
+      ],
+      "outcome": "Sie können exakte Duplikate suchen, Gruppen prüfen und die Suche beenden, ohne Originaldateien zu löschen."
+    },
+    {
+      "id": "library",
+      "title": "6. Medien durchsuchen, auswählen und drehen",
+      "intro": "Browse Library verbindet eine Übersicht mit einer durchsuchbaren Galerie. Prüfen Sie Photos & Videos, Health, Duplicates, Unknown Date und Organization. Die folgenden Drehbeispiele verwenden die kleine Sammlung; jede Änderung wird mit Undo zurückgenommen.",
+      "steps": [
+        {
+          "id": "library-01",
+          "image": "05-01-library-overview.png",
+          "text": "Öffnen Sie Browse Library. Prüfen Sie Übersicht und Karten. Das erste Beispiel enthält 14 Fotos und zwei Videos; für nicht verfügbare Videovorschauen erscheinen Platzhalter.",
+          "caption": "Übersicht der kleinen Beispielbibliothek."
+        },
+        {
+          "id": "library-02",
+          "image": "05-02-search-garden.png",
+          "text": "Geben Sie garden in Search media ein. Im kleinen Datensatz erscheinen sieben passende Fotodateien. Verwenden Sie für eigene Suchen einen bekannten Teil des Dateinamens.",
+          "caption": "Sieben Fotos bei der ersten garden-Suche."
+        },
+        {
+          "id": "library-03",
+          "image": "05-03-select-a-photo.png",
+          "text": "Markieren Sie das Kontrollkästchen einer Fotokarte. Prüfen Sie die Auswahl vor einer Aktion. Die Drehsteuerung gehört zum ausgewählten Foto.",
+          "caption": "Ein erzeugtes Foto ist ausgewählt."
+        },
+        {
+          "id": "library-04",
+          "image": "05-04-rotate-photo-right.png",
+          "text": "Wählen Sie Rotate Right für das Foto und prüfen Sie seine Vorschau. Die Drehung wird für Katalogvorschau und organisierte beziehungsweise exportierte Kopien gespeichert; das Quellbild bleibt unverändert.",
+          "caption": "Echte Fotovorschau nach einer Rechtsdrehung."
+        },
+        {
+          "id": "library-05",
+          "image": "05-05-undo-photo-rotation.png",
+          "text": "Wählen Sie Undo für dieses Foto. Prüfen Sie, ob die frühere Ausrichtung wiederhergestellt ist.",
+          "caption": "Undo stellt die einzelne Vorschau wieder her."
+        },
+        {
+          "id": "library-06",
+          "image": "05-06-select-all-visible-photos.png",
+          "text": "Wählen Sie Select all visible photos. Prüfen Sie die Auswahlzahl in der Werkzeugleiste: Hier sind es die sieben sichtbaren Fotoergebnisse.",
+          "caption": "Sieben sichtbare garden-Fotos ausgewählt."
+        },
+        {
+          "id": "library-07",
+          "image": "05-07-batch-rotate-left.png",
+          "text": "Wählen Sie Rotate Left für die Gruppe. Prüfen Sie die ausgewählten Vorschauen, während die Auswahl bestehen bleibt.",
+          "caption": "Die ausgewählte Gruppe nach einer Linksdrehung."
+        },
+        {
+          "id": "library-08",
+          "image": "05-08-undo-batch-left-rotation.png",
+          "text": "Wählen Sie das gemeinsame Undo, bevor Sie eine weitere Drehung ausprobieren. Die vorherigen Ausrichtungen werden wiederhergestellt.",
+          "caption": "Linksdrehung der Gruppe zurückgenommen."
+        },
+        {
+          "id": "library-09",
+          "image": "05-09-batch-rotate-180.png",
+          "text": "Wählen Sie Rotate 180 für die Gruppe. Prüfen Sie mehrere Vorschauen und nicht nur die Werkzeugleiste.",
+          "caption": "Ausgewählte Fotos nach einer 180-Grad-Drehung."
+        },
+        {
+          "id": "library-10",
+          "image": "05-10-undo-batch-180.png",
+          "text": "Wählen Sie erneut Undo. Im Beispiel wurden alle Drehungen vor der Organisation zurückgenommen; die Hashwerte der Originale blieben unverändert.",
+          "caption": "Ursprüngliche Vorschauausrichtungen wiederhergestellt."
+        },
+        {
+          "id": "library-11",
+          "image": "05-11-clear-photo-selection.png",
+          "text": "Wählen Sie Clear Selection nach der Gruppenaktion. Prüfen Sie, ob die Auswahlleiste zurückgesetzt ist.",
+          "caption": "Fotoauswahl aufgehoben."
+        },
+        {
+          "id": "library-12",
+          "image": "05-12-clear-library-search.png",
+          "text": "Leeren Sie Search media, um zur größeren Galerie zurückzukehren. Gesetzte Filter können die Anzeige weiterhin einschränken.",
+          "caption": "Das ursprüngliche Suchfeld wurde geleert."
+        },
+        {
+          "id": "library-13",
+          "image": "05-15-photos-filter-confirmed.png",
+          "text": "Wählen Sie Photos only im Medientypfilter. Das spätere Beispiel zeigt 28 Fotoeinträge, weil eine zweite ausschließlich für Tests verwendete Quelle hinzugefügt wurde.",
+          "caption": "Tatsächliches Ergebnis des Fotofilters."
+        },
+        {
+          "id": "library-14",
+          "image": "05-17-filename-sort-confirmed.png",
+          "text": "Wählen Sie File name A–Z und schließen Sie die Sortierliste. Weitere gezeigte Möglichkeiten sind neueste, älteste, umgekehrte Dateinamen, größte, kleinste, Fotos zuerst und Videos zuerst.",
+          "caption": "Die garden-Ergebnisse nach Dateinamen sortiert."
+        }
+      ],
+      "tips": [
+        "Die Bibliotheksanzahl beschreibt Katalogeinträge und kann Kopien aus separat registrierten Quellen einschließen. Ein höherer Wert bedeutet nicht, dass ein COPY-Ziel automatisch registriert wurde.",
+        "Nach den Drehbeispielen wurden Originale und unabhängige Sicherungen per Hash geprüft. Keine dieser Dateien wurde durch die Ausrichtungsänderungen bearbeitet."
+      ],
+      "outcome": "Sie können Fotos finden, Auswahlen steuern, Ergebnisse sortieren und Vorschauausrichtungen sicher ändern oder zurücknehmen."
+    },
+    {
+      "id": "copy",
+      "title": "7. Eine geführte COPY-Organisation abschließen",
+      "intro": "Verwenden Sie COPY für den ersten Organisationsdurchlauf. Halten Sie eine geprüfte unabhängige Sicherung bereit und wählen Sie ein separates Ziel mit ausreichend Platz. Das abgeschlossene Beispiel kopiert die ursprünglichen 16 unterstützten Medien.",
+      "steps": [
+        {
+          "id": "copy-01",
+          "image": "06-01-guided-organizer.png",
+          "text": "Öffnen Sie mit ausgewähltem Guided die Seite Organize Photos & Videos. Prüfen Sie im Dialog Choose File Types die gescannten, ausgewählten und ausgeschlossenen Mengen.",
+          "caption": "Der tatsächliche Dateitypdialog vor der Organisation."
+        },
+        {
+          "id": "copy-02",
+          "image": "06-02-no-file-types-selected.png",
+          "text": "Wählen Sie Deselect All, um die Auswahl neu aufzubauen. Ohne ausgewählten Typ ist Continue nicht verfügbar. Wählen Sie mindestens einen unterstützten Typ.",
+          "caption": "Keine Auswahl deaktiviert Continue sicher."
+        },
+        {
+          "id": "copy-03",
+          "image": "06-03-select-all-file-types.png",
+          "text": "Wählen Sie Select All. Im Beispiel werden dadurch 17 Dateien einschließlich der optionalen Textdatei ausgewählt.",
+          "caption": "Alle gefundenen Typen einschließlich Text ausgewählt."
+        },
+        {
+          "id": "copy-04",
+          "image": "06-05-select-media-only.png",
+          "text": "Deaktivieren Sie .txt. Prüfen Sie vor dem Fortfahren: 17 gescannt, 16 ausgewählt, eine ausgeschlossen.",
+          "caption": "Nur die 16 unterstützten Medien bleiben ausgewählt."
+        },
+        {
+          "id": "copy-05",
+          "image": "06-06-file-types-confirmed.png",
+          "text": "Wählen Sie Continue. Prüfen Sie Selected Folder und den vollständigen Pfad, bevor Sie das Organisationsmuster einstellen.",
+          "caption": "Die Medientypauswahl ist bestätigt."
+        },
+        {
+          "id": "copy-06",
+          "image": "06-08-guided-native-organization-plan.png",
+          "text": "Wählen Sie Year / Month / Day in Pattern und schließen Sie die Liste. Prüfen Sie Plan und Kategorien vor der Zielauswahl. Dieser Plan verwendet die unveränderte ursprüngliche Quelle mit 16 Medien.",
+          "caption": "Echter geführter Plan vor der Zielbestätigung."
+        },
+        {
+          "id": "copy-07",
+          "image": "06-09-destination-folder-picker.png",
+          "text": "Wählen Sie Change Location für ein bestimmtes Ziel. Der native Windows-Dialog benötigt einen vorhandenen Ordner, getrennt von Quelle und Sicherung.",
+          "caption": "Der echte native Zielordnerdialog."
+        },
+        {
+          "id": "copy-08",
+          "image": "06-10-enter-copy-destination.png",
+          "text": "Geben Sie das gewünschte Ziel ein oder navigieren Sie dorthin und wählen Sie Select Folder. Im Beispiel ist dies Copy Results. MEDIA KOLFAT legt darunter MEDIA KOLFAT Organized Media an.",
+          "caption": "Das separate Beispielziel Copy Results ist eingetragen."
+        },
+        {
+          "id": "copy-09",
+          "image": "06-11-selected-copy-destination.png",
+          "text": "Lesen Sie Selected destination und prüfen Sie Kategorien sowie freien Platz. Nach der abgeschlossenen Duplikatsuche ordnet dieses Beispiel exakte Kopien den Kategorien für doppelte Fotos und Videos zu.",
+          "caption": "Geprüftes Ziel und tatsächlicher Organisationsplan."
+        },
+        {
+          "id": "copy-10",
+          "image": "06-12-confirm-copy.png",
+          "text": "Wählen Sie Copy Selected Files. Lesen Sie Confirm copy: Originale bleiben unberührt, es entstehen nur neue Kopien. Wählen Sie Cancel bei falscher Quelle, Auswahl oder Zielangabe.",
+          "caption": "Die echte COPY-Bestätigung."
+        },
+        {
+          "id": "copy-11",
+          "image": "06-14-copy-complete-report.png",
+          "text": "Bestätigen Sie Copy Selected Files und warten Sie. Das Beispiel endet mit 16 kopiert, null identischen übersprungen, null umbenannt und null fehlgeschlagen. Prüfen Sie Berichtspfad und Kategorien.",
+          "caption": "Abgeschlossene COPY-Organisation mit Bericht."
+        }
+      ],
+      "tips": [
+        "Zu den Mustern gehören Year / Month / Day, YMD - Single Folder, Year / Month, Kameravarianten, Year Only, Month Only, Day Only und Custom. Wählen Sie eine verständliche Struktur und prüfen Sie deren Vorschau.",
+        "Open destination und Open Folder öffnen Ergebnisordner. Save report speichert eine Berichtskopie. Add Destination to Folders registriert das Ziel ausdrücklich; dies geschieht nicht automatisch.",
+        "Alle 16 Zielhashwerte entsprachen den erwarteten Quelldateien. Alle 17 ursprünglichen Dateien und ihre unabhängigen Sicherungen blieben unverändert."
+      ],
+      "outcome": "Im gewählten Ziel liegt eine geprüfte geordnete Kopie mit Textbericht vor; sämtliche Originale bleiben erhalten."
+    },
+    {
+      "id": "progress",
+      "title": "8. COPY pausieren, fortsetzen, stoppen und wiederholen",
+      "intro": "Bei längeren Vorgängen können Sie den Fortschritt lesen. Das größere Beispiel verwendet 512 erzeugte Videokopien mit einer unabhängigen geprüften Sicherung. Es handelt sich ausschließlich um entbehrliche Testdateien.",
+      "steps": [
+        {
+          "id": "progress-01",
+          "image": "11-05-copy-timing-destination.png",
+          "text": "Wählen Sie für das größere Beispiel ein separates Ziel und prüfen Sie dessen vollständigen Pfad. Hier wird Copy Timing Results verwendet.",
+          "caption": "Eigenes Ziel für das größere COPY-Beispiel."
+        },
+        {
+          "id": "progress-02",
+          "image": "11-07-copy-timing-confirmation.png",
+          "text": "Prüfen und bestätigen Sie COPY nach Kontrolle von Quelle, Auswahl, Ziel und freiem Platz. Vor dem Kopieren kann eine kurze Vorbereitung erscheinen.",
+          "caption": "COPY-Bestätigung für die erzeugten Testvideos."
+        },
+        {
+          "id": "progress-03",
+          "image": "11-10-copy-paused.png",
+          "text": "Wählen Sie Pause und warten Sie auf Resume. Der Vorgang pausiert sicher; möglicherweise wird zunächst die aktuelle Datei fertiggestellt.",
+          "caption": "Die echte Pause-Steuerung zeigt jetzt Resume."
+        },
+        {
+          "id": "progress-04",
+          "image": "11-11-copy-resumed.png",
+          "text": "Wählen Sie Resume für dieselbe aktive Operation. Während der weiteren Verarbeitung erscheint Pause wieder.",
+          "caption": "Steuerung des tatsächlich fortgesetzten COPY-Vorgangs."
+        },
+        {
+          "id": "progress-05",
+          "image": "11-13-cancelled-copy-report.png",
+          "text": "Wählen Sie Stop und lesen Sie Abbruchübersicht und Bericht. Beim ersten größeren Versuch blieben 110 fertige Kopien bei null Fehlern erhalten. Der Abbruch entfernte diese gültigen Kopien nicht.",
+          "caption": "Echter Abbruchbericht mit 110 erhaltenen Kopien."
+        },
+        {
+          "id": "progress-06",
+          "image": "11-14b-retry-copy-confirmation.png",
+          "text": "Starten Sie COPY erneut mit identischer Quelle, identischem Muster und Ziel. Prüfen Sie die neue Bestätigung. Bereits abgeschlossene identische Dateien können bei dieser neuen Operation übersprungen werden.",
+          "caption": "Die tatsächliche Bestätigung des sicheren erneuten Versuchs."
+        },
+        {
+          "id": "progress-07",
+          "image": "11-15-retry-copy-progress.png",
+          "text": "Lesen Sie Dateinamen, Dateizahl und Prozentsatz im Fortschrittsbereich. Beim erneuten Versuch bezieht sich die Zahl auf noch zu kopierende Dateien statt auf schon abgeschlossene identische Dateien.",
+          "caption": "Echter Fortschritt nach erneutem Start."
+        },
+        {
+          "id": "progress-08",
+          "image": "11-16-retry-copy-paused-progress.png",
+          "text": "Pausieren Sie bei Bedarf erneut und warten Sie auf Paused. Zahl und Prozentsatz beschreiben die tatsächlich pausierte Operation.",
+          "caption": "Eine echte pausierte Fortschrittsanzeige."
+        },
+        {
+          "id": "progress-09",
+          "image": "11-17-retry-copy-resumed-progress.png",
+          "text": "Wählen Sie Resume und lassen Sie die Operation enden. Halten Sie das Ziel verbunden und verändern Sie die Quellen währenddessen nicht.",
+          "caption": "Die Fortschrittsanzeige nach Resume."
+        },
+        {
+          "id": "progress-10",
+          "image": "11-19-retry-completion-report.png",
+          "text": "Prüfen Sie die Endübersicht: 402 verbleibende Dateien kopiert, 110 identische übersprungen, null umbenannt, null fehlgeschlagen. Anschließend wurden alle 512 Zielmedien per Hash überprüft.",
+          "caption": "Erfolgreiche Wiederholung mit 402 Kopien und 110 übersprungenen Dateien."
+        }
+      ],
+      "tips": [
+        "Das Stoppen einer Duplikatsuche ist ein anderer Vorgang als das Stoppen von COPY. Verwenden Sie die Steuerung der tatsächlich laufenden Operation.",
+        "Die geprüfte COPY-Seite kann oberhalb der aktiven Steuerung früheren Statustext beibehalten. Für den aktuellen Vorgang sind Fortschrittsanzeige und Endergebnis maßgeblich.",
+        "Prüfen Sie nach einem Abbruch Bericht und Ziel. Bewahren Sie abgeschlossene geprüfte Dateien auf; das gesamte Ziel muss nicht pauschal gelöscht werden."
+      ],
+      "outcome": "Sie können COPY pausieren, fortsetzen, sicher stoppen und erneut starten, ohne bereits abgeschlossene identische Dateien zu verdoppeln."
+    },
+    {
+      "id": "move",
+      "title": "9. Advanced MOVE mit Sicherung verwenden",
+      "intro": "MOVE ändert den Speicherort der Quelldateien. Üben Sie nur mit entbehrlichen Kopien und behalten Sie eine unabhängig geprüfte Sicherung. Das Beispiel verwendet den separat gesicherten Klon Move Samples; die ursprüngliche Beispielquelle wird nie für MOVE benutzt.",
+      "steps": [
+        {
+          "id": "move-01",
+          "image": "08-01-advanced-mode.png",
+          "text": "Wählen Sie Advanced unter Experience. Der geführte Fortschrittsstreifen ist dann nicht die zentrale Navigation. Wählen Sie vor der Organisation die richtige Testquelle.",
+          "caption": "Advanced ist in der echten Anwendung ausgewählt."
+        },
+        {
+          "id": "move-02",
+          "image": "08-35-correct-source-confirmed.png",
+          "text": "Bestätigen Sie die Dateitypen und prüfen Sie Selected Folder. Das Beispiel zeigt ausdrücklich Move Samples mit genauem Pfad sowie 17 gescannt, 16 ausgewählt und eine ausgeschlossen.",
+          "caption": "Die richtige gesicherte Testquelle ist ausgewählt."
+        },
+        {
+          "id": "move-03",
+          "image": "08-36-verified-move-plan.png",
+          "text": "Bestätigen Sie Year / Month und prüfen Sie den Plan. Dieser MOVE verwendete keine abgeschlossene Duplikatklassifizierung; der Plan zeigt Duplicates: Not checked.",
+          "caption": "Der echte Plan für den entbehrlichen MOVE-Klon."
+        },
+        {
+          "id": "move-04",
+          "image": "08-37-final-move-destination.png",
+          "text": "Wählen Sie Change Location und den separaten Ordner Move Results. Prüfen Sie den Pfad vor der Bestätigung.",
+          "caption": "Das geprüfte separate MOVE-Ziel im nativen Dialog."
+        },
+        {
+          "id": "move-05",
+          "image": "08-39-final-move-warning.png",
+          "text": "Wählen Sie Move unter Transfer mode. Lesen Sie: Zieldateien werden vor Quellentfernung geprüft, Quellordner bleiben erhalten und ein detaillierter Bericht wird im Ziel gespeichert.",
+          "caption": "Tatsächliche MOVE-Warnung mit ausgewähltem Ziel."
+        },
+        {
+          "id": "move-06",
+          "image": "08-40-final-move-confirmation.png",
+          "text": "Wählen Sie Move Selected Files und lesen Sie Confirm move. Geprüfte Zieldateien bleiben erhalten, ihre genauen Quelldateien werden entfernt. Brechen Sie bei Unsicherheit mit Cancel ab.",
+          "caption": "Die abschließende echte MOVE-Bestätigung."
+        },
+        {
+          "id": "move-07",
+          "image": "08-42-move-complete-report.png",
+          "text": "Bestätigen Sie erst nach Prüfung von Quelle, Ziel und Sicherung. Warten Sie auf Move complete und lesen Sie die Zahlen: 16 verschoben, null kopiert mit Quelle erhalten, null fehlgeschlagen.",
+          "caption": "Echter erfolgreicher MOVE von 16 Dateien mit Bericht."
+        },
+        {
+          "id": "move-08",
+          "image": "07-03-verified-move-activity.png",
+          "text": "Öffnen Sie Activity und suchen Sie Move Photos & Videos mit Completed. Prüfen Sie Zahlen und Open Move Report. Die unabhängige Sicherung muss weiterhin verfügbar bleiben.",
+          "caption": "Der tatsächlich abgeschlossene MOVE in Activity."
+        }
+      ],
+      "tips": [
+        "Die 16 Zielhashwerte stimmten mit den erwarteten Dateien überein. Alle 17 unabhängigen Sicherungsdateien blieben unverändert. Die ausgeschlossene notes.txt und alle vier Quellunterordner blieben erhalten.",
+        "COPIED_SOURCE_RETAINED bedeutet: Die Zielkopie existiert, aber die Quelle wurde behalten. Prüfen Sie diesen Berichtseintrag, statt von einer vollständig entfernten Quelle auszugehen.",
+        "Prüfen Sie Selected Folder vor jeder Operation. Refresh auf einer anderen Quellenkarte ändert die Organisationsquelle nicht. Hier wurde eine Testquelle ausschließlich aus dem Katalog entfernt und erneut hinzugefügt, um sie auszuwählen."
+      ],
+      "outcome": "Der ausschließlich für Tests verwendete MOVE ist überprüft abgeschlossen; unabhängige Sicherung und ursprüngliche Sammlung sind unversehrt."
+    },
+    {
+      "id": "reports",
+      "title": "10. Activity und Textberichte lesen",
+      "intro": "Activity protokolliert lokale Vorgänge. Lesen Sie Status und Mengen gemeinsam: Completed, Completed with warnings und Cancelled bedeuten unterschiedliche Ergebnisse. Automatische COPY- und MOVE-TXT-Berichte liegen im gewählten Zielstammordner.",
+      "steps": [
+        {
+          "id": "reports-01",
+          "image": "07-01-activity-after-copy.png",
+          "text": "Öffnen Sie Activity nach einem Vorgang. Suchen Sie Copy Photos & Videos und vergleichen Sie verarbeitet, kopiert, übersprungen und fehlgeschlagen mit der Zielübersicht.",
+          "caption": "Der erste abgeschlossene COPY-Eintrag mit 16 Dateien."
+        },
+        {
+          "id": "reports-02",
+          "image": "07-02-completed-and-cancelled-activity.png",
+          "text": "Vergleichen Sie abgeschlossene und abgebrochene Vorgänge. Der abgebrochene COPY verarbeitete 110 Dateien; die spätere Wiederholung 512 mit 110 übersprungenen. Eine abgebrochene Duplikatsuche liefert kein vollständiges Ergebnis.",
+          "caption": "Echte abgeschlossene und abgebrochene Verlaufseinträge."
+        },
+        {
+          "id": "reports-03",
+          "image": "07-03-verified-move-activity.png",
+          "text": "Verwenden Sie Open Copy Report beziehungsweise Open Move Report beim richtigen Eintrag. Open Destination führt zum Ergebnisordner. Prüfen Sie Modus, Quell- und Zielangaben, Statuszeilen und Endsummen im TXT-Bericht.",
+          "caption": "MOVE, abgeschlossener COPY und abgebrochener COPY zusammen."
+        }
+      ],
+      "tips": [
+        "Der geprüfte MOVE-Bericht enthält Mode: MOVE, Total planned files: 16, Moved: 16, COPIED_SOURCE_RETAINED: 0, Skipped: 0 und Failed: 0.",
+        "Der ursprüngliche COPY-Bericht bestätigt den Erhalt der Quelldateien. Der Abbruchbericht nennt die abgeschlossenen Dateien, die im Ziel verblieben sind.",
+        "Clear Activity History ist vorhanden, wurde aber nicht verwendet. Der Verlauf bleibt für die Nachprüfung erhalten."
+      ],
+      "outcome": "Sie können Aktivität, Zielordner und Bericht zuordnen und Erfolg von unvollständiger Verarbeitung unterscheiden."
+    },
+    {
+      "id": "settings",
+      "title": "11. Einstellungen und Neustart des Katalogs verstehen",
+      "intro": "Settings gelten lokal. Prüfen Sie Language, Experience, Safety, Privacy & Local Processing, Organizing, Library, Guidance & Accessibility, Maintenance und Media dates. Lesen Sie vor einer Wartungsbestätigung deren Folgen.",
+      "steps": [
+        {
+          "id": "settings-01",
+          "image": "09-01-settings.png",
+          "text": "Öffnen Sie Settings. Wählen Sie eine angebotene Sprache, prüfen Sie Guided und Advanced sowie Safety. Organisationsbestätigung und Warnung vor Quellenentfernung sind in der gezeigten Oberfläche verpflichtend.",
+          "caption": "Tatsächliche Sprach-, Modus- und Sicherheitseinstellungen."
+        },
+        {
+          "id": "settings-02",
+          "image": "09-03-organizing-library-settings.png",
+          "text": "Scrollen Sie zu Organizing. Prüfen Sie Default organize pattern und Destination behavior; angezeigt wird Ask every time. Lesen Sie darüber die Hinweise zu lokaler Verarbeitung und Berichten.",
+          "caption": "Organisationsvorgaben und lokale Datenschutzinformationen."
+        },
+        {
+          "id": "settings-03",
+          "image": "09-04-accessibility-settings.png",
+          "text": "Prüfen Sie Vorschaugröße, Sortierung, Datums- und Größenanzeigen, automatisches Öffnen der Library nach Scans und das Merken der letzten Bibliotheksansicht.",
+          "caption": "Die tatsächlichen Bibliothekseinstellungen."
+        },
+        {
+          "id": "settings-04",
+          "image": "09-05-enable-larger-text.png",
+          "text": "Aktivieren Sie Larger text für bessere Lesbarkeit. Prüfen Sie geänderte Schrift und Navigation, bevor Sie fortfahren.",
+          "caption": "Größere Schrift im Testprofil angewendet."
+        },
+        {
+          "id": "settings-05",
+          "image": "09-06-restore-standard-text.png",
+          "text": "Deaktivieren Sie Larger text, um hier zur Standardschrift zurückzukehren. Larger buttons, Reduced motion und weitere Führungseinstellungen können dem Benutzer angepasst werden.",
+          "caption": "Standardschrift wiederhergestellt."
+        },
+        {
+          "id": "settings-06",
+          "image": "09-07-maintenance-settings.png",
+          "text": "Scrollen Sie zu Maintenance. Die Speicherwerte betreffen nur erzeugte Anwendungsdateien. Refresh Usage aktualisiert sie; Clear Thumbnail Cache betrifft Vorschauen und war hier nicht erforderlich.",
+          "caption": "Speicherübersicht und Wartungsaktionen."
+        },
+        {
+          "id": "settings-07",
+          "image": "09-09-review-date-evidence.png",
+          "text": "Öffnen Sie Advanced date policy. Lesen Sie jede aktivierte Datumsquelle und die Warnung für Filesystem last modified. Änderungen gelten für neue Scans, erneute Analysen und Organisationsvorschauen.",
+          "caption": "Die fünf tatsächlichen Datumsquellen."
+        },
+        {
+          "id": "settings-08",
+          "image": "09-10-reset-settings-confirmation.png",
+          "text": "Wählen Sie Reset Settings to Defaults zunächst nur zur Prüfung der Bestätigung. Gelöscht würden Einstellungen, Quellen, Bibliotheksindex, Fortschritt und Vorschaubildcache. Originale und organisierte Kopien bleiben unverändert.",
+          "caption": "Die tatsächliche Warnung vor einem frischen Start."
+        },
+        {
+          "id": "settings-09",
+          "image": "09-12-reset-cancelled.png",
+          "text": "Wählen Sie Cancel, um den Testkatalog zu erhalten. Weder das reale Benutzerprofil noch das isolierte Testprofil wurde zurückgesetzt.",
+          "caption": "Rücksetzen abgebrochen."
+        }
+      ],
+      "tips": [
+        "Ein Neustart löscht mehr als eine Darstellungseinstellung. Bewahren Sie benötigte Berichte und Informationen auf, bevor Sie den lokalen Katalog zurücksetzen.",
+        "Das bloße Öffnen von Settings schreibt vorhandene Datumswerte nicht neu. Verwenden Sie die ausdrückliche Analyse, wenn Katalogdaten geändert werden sollen."
+      ],
+      "outcome": "Sie können lokale Einstellungen ändern und Wartungs- sowie Rücksetzfolgen verstehen, ohne versehentlich den Katalog zu leeren."
+    },
+    {
+      "id": "troubleshooting",
+      "title": "12. Häufige Probleme beheben",
+      "intro": "Lesen Sie vor einer Wiederholung die aktuelle Meldung. Prüfen Sie Quelle, Filter, Muster und Ziel. Die folgenden Bilder zeigen echte, gefahrlos nachgestellte Zustände mit ausschließlich entbehrlichen Beispieldaten.",
+      "steps": [
+        {
+          "id": "troubleshooting-01",
+          "image": "10-01-library-no-search-results.png",
+          "text": "Prüfen Sie bei No photos match your choices zuerst Search media. Ein nicht passender Dateinamenteil kann alle Ergebnisse ausblenden, obwohl Medien im Katalog stehen.",
+          "caption": "Eine echte Suche ohne Ergebnisse."
+        },
+        {
+          "id": "troubleshooting-02",
+          "image": "10-02-recover-search-results.png",
+          "text": "Ersetzen Sie die Eingabe durch einen bekannten Dateinamenteil, hier garden. Prüfen Sie zurückgekehrte Ergebnisse, bevor Sie andere Einstellungen ändern.",
+          "caption": "Die bekannten garden-Ergebnisse erscheinen wieder."
+        },
+        {
+          "id": "troubleshooting-03",
+          "image": "10-04-review-unavailable-filter.png",
+          "text": "Prüfen Sie den Verfügbarkeitsfilter. Unavailable only liefert keine passenden verfügbaren Originale. Ein einschränkender Filter beweist keinen Dateiverlust.",
+          "caption": "Echte leere Anzeige durch Unavailable only."
+        },
+        {
+          "id": "troubleshooting-04",
+          "image": "10-05-show-all-recovery.png",
+          "text": "Wählen Sie Show All Photos auf der Leerseite. Prüfen Sie anschließend Suchfeld und Filter.",
+          "caption": "Die Wiederherstellungsaktion stellt Galerieergebnisse wieder her."
+        },
+        {
+          "id": "troubleshooting-05",
+          "image": "10-08-invalid-folder-error.png",
+          "text": "Prüfen Sie bei Folder is unavailable or cannot be opened unter Current folder Schreibweise, Verbindung und Zugriff. Das Beispiel nutzt einen nicht existierenden Pfad; Select This Folder ist gesperrt.",
+          "caption": "Echter Validierungsfehler für einen unerreichbaren Ordner."
+        },
+        {
+          "id": "troubleshooting-06",
+          "image": "10-10-empty-folder.png",
+          "text": "Geben Sie einen vorhandenen richtigen Ordner ein und wählen Sie Go. Ein leerer Ordner zeigt null unterstützte Medien. Wählen Sie einen Medienordner oder brechen Sie ab.",
+          "caption": "Der echte leere Beispielordner."
+        },
+        {
+          "id": "troubleshooting-07",
+          "image": "10-12-unsupported-only-preview.png",
+          "text": "Auch ein Ordner mit ausschließlich nicht unterstützten Dateien kann null Medien zeigen. Der Textordner gilt nicht als Foto- oder Videosammlung. Other Files werden beim Organisieren separat ausgewählt.",
+          "caption": "Echte Vorschau des nicht unterstützten Textordners."
+        },
+        {
+          "id": "troubleshooting-08",
+          "image": "10-14-invalid-custom-pattern.png",
+          "text": "Verwenden Sie für Custom die angezeigten Token und relative Segmente. Das Beispiel mit einem übergeordneten Pfad wird als leeres oder durchlaufendes Segment abgelehnt; COPY bleibt gesperrt.",
+          "caption": "Ein tatsächlich zurückgewiesenes benutzerdefiniertes Muster."
+        },
+        {
+          "id": "troubleshooting-09",
+          "image": "10-17-custom-plan-reconfirmed.png",
+          "text": "Korrigieren Sie das Muster, etwa zu {YYYY}\\{YYYY-MM}. Öffnen und schließen Sie im geprüften Build die Pattern-Liste erneut, um den gültigen Plan zu bestätigen.",
+          "caption": "Das korrigierte Muster liefert wieder einen Plan."
+        },
+        {
+          "id": "troubleshooting-10",
+          "image": "10-19-catalog-only-removal-confirmation.png",
+          "text": "Lesen Sie vor Remove Folder die Bestätigung. Sie entfernt Katalogeinträge und damit die Anzeige in der Library; Originaldateien und Quellordner werden nicht gelöscht.",
+          "caption": "Ausdrückliche Warnung zur reinen Katalogentfernung."
+        },
+        {
+          "id": "troubleshooting-11",
+          "image": "10-20-disposable-source-removed-from-catalog.png",
+          "text": "Bestätigen Sie Remove from MEDIA KOLFAT nur für die Testquelle und prüfen Sie die erhaltenen Originale. Fügen Sie den Ordner manuell erneut hinzu und scannen Sie ihn vor einer Organisation.",
+          "caption": "Echte Katalogentfernung mit erhaltenen Originalen."
+        }
+      ],
+      "tips": [
+        "Ohne ausgewählten Dateityp bleibt Continue gesperrt. Öffnen Sie Choose File Types und wählen Sie die tatsächlich gewünschten unterstützten Typen.",
+        "Nach einem Pfadfehler kann die bisherige Vorschau stehen bleiben. Beachten Sie Fehlermeldung und deaktiviertes Select This Folder; die alten Vorschauen gehören nicht zum unerreichbaren Pfad.",
+        "Prüfen Sie bei Ziel- oder Platzproblemen den genauen Pfad, halten Sie das Ziel verbunden, wählen Sie gegebenenfalls einen anderen beschreibbaren Ordner und lassen Sie die angezeigte Reserve frei. Wiederholen Sie nichts gegen ein unerwartetes Ziel.",
+        "Prüfen Sie nach einer Unterbrechung Activity, TXT-Bericht und fertige Dateien vor dem erneuten Start. Warnungen oder ein Abbruch benötigen Aufmerksamkeit, auch wenn Kopien vorhanden sind.",
+        "Quellenentfernung wurde nur im isolierten Katalog gezeigt. Danach wurden alle 17 Quelldateien unverändert verifiziert und für das MOVE-Beispiel erneut registriert."
+      ],
+      "outcome": "Sie können leere Ergebnisse von fehlenden Originalen unterscheiden, sichere Eingabefehler korrigieren und bei der Wiederherstellung Belege erhalten."
+    }
+  ],
+  "status": "Complete guide; source and screenshot parity verified; native-speaker editorial review not performed"
+}

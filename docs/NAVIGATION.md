@@ -103,3 +103,7 @@ All rendered KOLFAT pages share a top separator and a consistent bottom separato
 The MENU dropdown retains its original localized labels and hrefs, but now includes one small orange-accent inline SVG icon per link (home, app, download, about, guides, tools, help, contact, social networks, and fallback). Social networks stay inside MENU and are intentionally absent from the footer. The existing Support KOLFAT button stays in the header. On narrow screens legal links wrap without overflowing.
 
 Rollback: remove the site-chrome initializer and matching CSS block or revert the associated commit. Do not remove the base navigation and Ko-fi handlers.
+
+## MEDIA KOLFAT 2.0 illustrated guide (2026-10-27)
+
+A sixth guide topic is available in all twelve languages: /guides/media-kolfat-2-user-guide/ and /<lang>/guides/media-kolfat-2-user-guide/. Localized guide hubs link to it. The language chooser preserves the article, with reciprocal hreflang and self-canonicals. Existing shared chrome is retained. See [guide documentation](MEDIA_KOLFAT_2_USER_GUIDE.md) for image provenance, browser checks and rollback.
