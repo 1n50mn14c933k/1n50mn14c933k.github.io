@@ -1,5 +1,7 @@
 # MEDIA KOLFAT 2.0 illustrated guide
 
+Publication PR: [#50](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/50). All 87 original PNGs are present in the remote commit, whose tree was independently compared with the approved local tree. Initial GitHub guide validation passed all 13 content/image/SEO checks; its browser check encountered a lazy-image decode race. The harness now waits for the image load/error event before decoding. This changes only test synchronization, preserving the guide content and image bytes. Repository hygiene passed. Final CI and Pages verification are recorded in PR delivery metadata when observed.
+
 ## Scope and provenance
 
 The guide documents the installed Windows application, version 2.0.0 / build 2.0.0.0. It contains twelve chapters and 91 illustrated steps in English, German, Persian, French, Spanish, Portuguese, Italian, Japanese, Simplified Chinese, Hindi, Russian and Arabic. Translated instructions, captions, notes, summaries and SEO metadata retain the actual English UI labels shown in the screenshots. Native-speaker editorial review has not been performed.

@@ -54,7 +54,14 @@ try{
   for(const id of ['copy-06','progress-10','move-07','settings-08','troubleshooting-09']){
    await page.locator('#'+id).scrollIntoViewIfNeeded();
    const box=await page.locator('#'+id).boundingBox();assert.ok(box&&box.x>=-2&&box.x+box.width<=392,`${lang}/${id}: overflow`);
-   await page.locator('#'+id+' img').evaluate(img=>img.decode());
+   await page.locator('#'+id+' img').evaluate(async img=>{
+    img.loading='eager';
+    if(!img.complete)await new Promise((resolve,reject)=>{
+     img.addEventListener('load',resolve,{once:true});
+     img.addEventListener('error',()=>reject(new Error('Guide image failed to load: '+img.src)),{once:true});
+    });
+    await img.decode();
+   });
    assert.ok(await page.locator('#'+id+' img').evaluate(img=>img.naturalWidth>=1920&&img.naturalHeight>=1080));
   }
   if(['fa','ar'].includes(lang)){

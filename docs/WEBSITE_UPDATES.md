@@ -2,6 +2,8 @@
 
 ## 2026-10-27 — Complete illustrated MEDIA KOLFAT 2.0 user guide
 
+**PR and CI follow-up:** [PR #50](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/pull/50) uploads all 87 approved PNGs with a matching remote/local Git tree. GitHub passed 13 content/image/SEO checks and repository hygiene. The first browser run hit a lazy-image decode race; the guide-only test harness now explicitly waits for image load/error before decoding, with all guide content and pixels unchanged. Final CI/deployment results remain pending until verified. The pre-existing add-social-buttons workflow fails on main as well and is unchanged by this PR.
+
 **Purpose/scope:** Add a complete 12-chapter, 91-step native-application guide in all twelve website languages. Publish 87 original reviewed Full HD PNGs with a SHA-256 manifest, localized text/captions/SEO, reciprocal language links, 12 sitemap entries and localized Guides-hub links. Add reproducible rendering, content-integrity tests and a dedicated browser workflow. Existing site chrome and branding remain shared.
 
 **Verification observed:** 50 local source tests passed, including guide parity, links, schema and native PNG hashes/dimensions. Initial isolated Edge browser checks passed 108 language/viewport cases and 60 deeper-step image checks. Localhost HTTP was blocked, so local browser checks used exact-file fulfillment; they are not live deployment checks. A visually observed RTL custom-pattern issue was corrected. After rebasing onto main 832a1a5, all 50 source tests and all 108 browser cases plus 60 deeper-step checks passed again. RTL custom-pattern text was explicitly checked. A comparison confirmed original content/chrome preservation on all twelve modified Guides hubs. CI/deployment remain pending.
