@@ -106,3 +106,7 @@ Recommended implementation: translate each category description, tool title, but
 5. Verify new URLs have matching HTML files, canonical tags and sitemap entries; don't break existing URLs.
 6. Audit English/RTL rendering and mobile screenshots; review a live deployed page before claiming visual sign-off.
 7. Document the GitHub PR, commit and limitations in [WEBSITE_UPDATES.md](WEBSITE_UPDATES.md).
+
+
+### Tools international SEO (2026-10-27)
+The 48 tools and five hub/category pages have English originals at `/tools/` and translated equivalents at `/de/tools/`, `/fa/tools/`, `/fr/tools/`, and `/es/tools/`. The SEO generator `.github/scripts/fix_tools_seo.py` creates self-canonical links and fully reciprocal `hreflang` tags (`en`, `de`, `fa`, `fr`, `es`, `x-default`) across the 265 existing pages. It also localizes French and Spanish search/social descriptions. The code and workflow are tested on a review branch; no new languages or functional changes are introduced. See `docs/WEBSITE_UPDATES.md` for validation and rollback.

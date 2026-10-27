@@ -195,3 +195,8 @@ The script is read-only and reports possible issues; it does not change producti
 ## Earlier website maintenance
 
 Earlier navigation, localization, mobile header and styling changes are documented in [NAVIGATION.md](NAVIGATION.md), including the October 18–19, 2026 localization and UI refinements. Git history remains the authoritative record of individual file changes.
+
+### 2026-10-27 — SEO Tools rollout implementation
+- Added a narrow, idempotent generator for metadata and cross-language hreflang on the existing five Tools locales.
+- A dedicated GitHub Actions workflow validates the output on a review branch before any production merge. Documentation, file counts, coverage, limitations and rollback are recorded in the generated change commit.
+- The tool engines, UI, images, navigation and the seven other site languages are unchanged. This commit only stages the automation for review.
