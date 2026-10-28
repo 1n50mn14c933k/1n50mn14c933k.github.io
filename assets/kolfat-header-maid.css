@@ -1,0 +1,31 @@
+/* Only the extra original mascot image is styled. Never replace or resize the KOLFAT wordmark. */
+html body .site-logo,
+html body .header .header-inner > .brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+html body .site-logo > img.kf-header-maid,
+html body .header .header-inner > .brand > img.kf-header-maid {
+  display: block !important;
+  width: 41px !important;
+  height: 48px !important;
+  min-width: 41px !important;
+  max-width: 41px !important;
+  max-height: 48px !important;
+  object-fit: contain !important;
+  flex: 0 0 41px !important;
+}
+@media (max-width: 640px) {
+  html body .site-logo,
+  html body .header .header-inner > .brand { gap: 5px !important; }
+  html body .site-logo > img.kf-header-maid,
+  html body .header .header-inner > .brand > img.kf-header-maid {
+    width: 30px !important;
+    height: 36px !important;
+    min-width: 30px !important;
+    max-width: 30px !important;
+    max-height: 36px !important;
+    flex-basis: 30px !important;
+  }
+}
