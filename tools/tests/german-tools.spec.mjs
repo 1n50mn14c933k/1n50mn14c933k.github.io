@@ -12,7 +12,8 @@ test("German page renders: "+route,async({page})=>{
  await expect(page.locator("main h1")).toBeVisible();
  await expect(page.locator(".kf-tools-language .lang-list a")).toHaveCount(5);
  await expect(page.locator("footer.kf-global-footer")).toHaveCount(1);
- if(!roots.includes(route))await expect(page.locator(".kf-i18n-safety")).toHaveCount(1);
+ // Informational notes are optional on individual tools; the central privacy notice belongs on /tools/.
+ if(!roots.includes(route))await expect(page.locator(".kf-hub-privacy")).toHaveCount(0);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(395);
  expect(errors).toEqual([]);
 });
