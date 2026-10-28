@@ -1,31 +1,25 @@
-/* Only the extra original mascot image is styled. Never replace or resize the KOLFAT wordmark. */
-html body .site-logo,
-html body .header .header-inner > .brand {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
+/* Uniform branded header across all page types; original wordmark artwork unchanged. */
+html body .site-logo,html body .header .header-inner > .brand{
+--kf-wordmark:154px;--kf-maid:41px;--kf-maid-height:48px;
+display:inline-flex!important;align-items:center!important;gap:8px!important;
+}
+html body .site-logo > img[src*="/assets/kolfat-logo.webp"],
+html body .header .header-inner > .brand > img[src*="/assets/kolfat-logo.webp"]{
+display:block!important;width:var(--kf-wordmark)!important;min-width:var(--kf-wordmark)!important;
+max-width:var(--kf-wordmark)!important;height:auto!important;max-height:42px!important;
+object-fit:contain!important;flex:0 0 var(--kf-wordmark)!important;
 }
 html body .site-logo > img.kf-header-maid,
-html body .header .header-inner > .brand > img.kf-header-maid {
-  display: block !important;
-  width: 41px !important;
-  height: 48px !important;
-  min-width: 41px !important;
-  max-width: 41px !important;
-  max-height: 48px !important;
-  object-fit: contain !important;
-  flex: 0 0 41px !important;
+html body .header .header-inner > .brand > img.kf-header-maid{
+display:block!important;width:var(--kf-maid)!important;min-width:var(--kf-maid)!important;
+max-width:var(--kf-maid)!important;height:var(--kf-maid-height)!important;
+max-height:var(--kf-maid-height)!important;object-fit:contain!important;flex:0 0 var(--kf-maid)!important;
 }
-@media (max-width: 640px) {
-  html body .site-logo,
-  html body .header .header-inner > .brand { gap: 5px !important; }
-  html body .site-logo > img.kf-header-maid,
-  html body .header .header-inner > .brand > img.kf-header-maid {
-    width: 30px !important;
-    height: 36px !important;
-    min-width: 30px !important;
-    max-width: 30px !important;
-    max-height: 36px !important;
-    flex-basis: 30px !important;
-  }
-}
+@media(max-width:640px){
+html body .site-logo,html body .header .header-inner > .brand{
+--kf-wordmark:120px;--kf-maid:30px;--kf-maid-height:36px;gap:5px!important;
+}}
+@media(max-width:360px){
+html body .site-logo,html body .header .header-inner > .brand{
+--kf-wordmark:100px;--kf-maid:27px;--kf-maid-height:32px;gap:5px!important;
+}}
