@@ -132,11 +132,11 @@ Before changing production content:
 7. Verify both dropdowns, keyboard operation, and 320–430px mobile layout as well as desktop
 8. Check all 12 locales plus product, support, legal and guide pages using the navigation checklist
 
-## Voluntary Support ☕
+## Voluntary Support 🧹🪣❤️
 
-KOLFAT remains free to use. Visitors who appreciate the current free MEDIA KOLFAT application and the 48 KOLFAT TOOLS can leave an entirely **optional, one-time tip** at [Ko-fi — KOLFAT](https://ko-fi.com/kolfat_app). Contributions are never required to use, download or access any current free features.
+KOLFAT remains free to use. Visitors who appreciate the current free MEDIA KOLFAT application and the 48 KOLFAT TOOLS can leave an entirely **optional, one-time tip** at [**🧹🪣❤️ Keep Our Maid Alive, Strong & Cleaning!**](https://ko-fi.com/kolfat_app). Contributions are never required to use, download or access any current free features.
 
-- Website: the global header displays **☕ Support KOLFAT** beside MENU / the language switcher on every rendered page. On small screens the accessible button uses a compact coffee icon to avoid crowding the logo.
+- Website: the global header displays **🧹🪣❤️ Keep Our Maid Alive, Strong & Cleaning!** before MENU on desktop; mobile shows 🧹🪣❤️ and reveals the full translated message and Ko-fi link when tapped. Online Tools is the final top-bar control after the language selector.
 - GitHub visibility is intentionally limited to the **profile README** at `1n50mn14c933k/1n50mn14c933k` and the **MEDIA_KOLFAT README** (plus that repository's Sponsor funding configuration), not the GitHub Pages repository.
 - The older Ko-fi link in the `/tools/` footer was removed to avoid duplicate donation prompts. There are no popups, third-party donation scripts or per-tool marketing banners.
 - Payment and supporter details are handled by Ko-fi and the payment provider. The website does not process payments or accept payment card details.

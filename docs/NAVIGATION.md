@@ -90,8 +90,8 @@ Maintenance: edit `assets/site-refinements.css` and increment its query-string v
 
 ## October 25, 2026 — Universal header support shortcut
 
-- **☕ Support KOLFAT** is placed immediately before MENU on all rendered pages, using the shared `assets/nav-dropdown.js` initializer and `assets/nav-dropdown.css` styling.
-- On narrow screens, the support button intentionally displays only the coffee icon to leave room for the brand, MENU and the language control; `aria-label` and the tooltip retain the full text.
+- **🧹🪣❤️ Keep Our Maid Alive, Strong & Cleaning!** appears before MENU on desktop and is implemented with shared navigation assets.
+- On mobile, 🧹🪣❤️ reveals the full localized Ko-fi message and donation link when tapped. Online Tools is last after the language selector.
 - The URL is `https://ko-fi.com/kolfat_app` with `target="_blank"` and `rel="noopener noreferrer"`. It never opens a popup, runs a third-party widget or blocks tool actions.
 - The shared navigation script must be loaded by every visible HTML page, including all 12 language variants and all 48 tools; redirect-only entry files are exempt. The Node contract tests and Chromium checks enforce presence and geometry.
 - For rollback, remove only the `kolfat-support-link` initializer and CSS rules, not the general navigation script.

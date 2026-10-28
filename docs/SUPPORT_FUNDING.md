@@ -7,7 +7,7 @@
 ## Current setup
 
 1. **Ko-fi:** https://ko-fi.com/kolfat_app, KOLFAT branding, PayPal, optional **one-time tips**. The owner confirmed monthly support was disabled on October 25, 2026.
-2. **Website:** Every rendered page with the shared KOLFAT header uses `assets/nav-dropdown.js` to insert one **☕ Support KOLFAT** link directly before MENU. `assets/nav-dropdown.css` styles it with restrained orange accents. Narrow mobile layouts display a compact coffee icon with the complete accessible label and tooltip.
+2. **Website:** Every KOLFAT page displays **🧹🪣❤️ Keep Our Maid Alive, Strong & Cleaning!** in the shared header before MENU. On mobile, 🧹🪣❤️ opens a panel with the full localized message and Ko-fi link. Online Tools follows the language selector as the last top-bar control.
 3. **GitHub:** The profile README in `1n50mn14c933k/1n50mn14c933k` and the public `MEDIA_KOLFAT` README display the Ko-fi shortcut. `MEDIA_KOLFAT/.github/FUNDING.yml` configures its GitHub Sponsor option. The website repository **does not** advertise a Sponsor button of its own.
 4. **Previous placement:** The old `/tools/` footer-only link was removed; no donation popups, tool interruptions, or embedded Ko-fi scripts are used.
 
@@ -21,7 +21,7 @@
 
 ## Validation
 
-Run `node --test tools/tests/*.test.mjs` and the **KOLFAT Tools Regression** GitHub Actions workflow. The global-support tests inspect HTML source and exercise representative pages in Chromium at desktop, mobile and narrow-phone widths. Verify the link appears next to MENU, stays inside the viewport, opens the exact `https://ko-fi.com/kolfat_app` address in a new tab, remains readable on desktop and accessible on mobile. The site does not test a Ko-fi payment.
+Run `node --test tools/tests/*.test.mjs` and the **KOLFAT Tools Regression** GitHub Actions workflow. The global-support tests inspect HTML source and exercise representative pages in Chromium at desktop, mobile and narrow-phone widths. Verify the desktop support link before MENU and mobile tap-to-reveal panel, stays inside the viewport, opens the exact `https://ko-fi.com/kolfat_app` address in a new tab, remains readable on desktop and accessible on mobile. The site does not test a Ko-fi payment.
 
 ## Rollback and troubleshooting
 
