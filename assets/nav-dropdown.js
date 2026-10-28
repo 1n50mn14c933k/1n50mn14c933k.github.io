@@ -59,24 +59,122 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
 })();
 
 
-/* Voluntary Ko-fi support shortcut in the existing global header on every page.
-   No third-party script, tracking, popup, automatic payment, or tool interruption. */
+/* Voluntary Ko-fi support link, translated across KOLFAT's 12 languages.
+   Desktop: full-text link. Narrow screens: three-emoji button reveals a
+   full-text Ko-fi link only after the user's tap. No third-party scripts. */
 (() => {
-  const initSupportLink = () => {
+  "use strict";
+  const translations = {
+    en: "Keep Our Maid Alive, Strong & Cleaning!",
+    fa: "کمک کنید خدمتکارمان زنده و قوی بماند و به تمیزکاری ادامه دهد!",
+    de: "Haltet unsere Maid am Leben, stark und fleißig am Putzen!",
+    fr: "Gardez notre femme de ménage en vie, forte et toujours au nettoyage !",
+    es: "¡Mantén a nuestra maid viva, fuerte y siempre limpiando!",
+    pt: "Mantenha a nossa maid viva, forte e sempre a limpar!",
+    it: "Tieni la nostra maid viva, forte e sempre a pulire!",
+    ja: "メイドさんが元気に、強く、お掃除を続けられるよう応援してね！",
+    zh: "让我们的女仆保持活力、强大，继续清扫！",
+    hi: "हमारी मेड को ज़िंदा, मज़बूत और सफ़ाई में जुटाए रखें!",
+    ru: "Помогите нашей горничной оставаться живой, сильной и продолжать уборку!",
+    ar: "أبقوا عاملتنا حيّة وقوية لتواصل التنظيف!"
+  };
+  const hints = {
+    en: "Open Ko-fi to support KOLFAT",
+    fa: "بازکردن Ko-fi برای حمایت از KOLFAT",
+    de: "Ko-fi öffnen und KOLFAT unterstützen",
+    fr: "Ouvrir Ko-fi pour soutenir KOLFAT",
+    es: "Abrir Ko-fi para apoyar a KOLFAT",
+    pt: "Abrir o Ko-fi para apoiar KOLFAT",
+    it: "Apri Ko-fi per sostenere KOLFAT",
+    ja: "Ko-fi で KOLFAT を応援",
+    zh: "打开 Ko-fi 支持 KOLFAT",
+    hi: "KOLFAT को सहयोग देने के लिए Ko-fi खोलें",
+    ru: "Открыть Ko-fi и поддержать KOLFAT",
+    ar: "افتح Ko-fi لدعم KOLFAT"
+  };
+  const init = () => {
     const nav = document.querySelector(".top-nav");
     if (!nav || nav.querySelector(".kolfat-support-link")) return;
-    const link = document.createElement("a");
-    link.className = "kolfat-support-link";
-    link.href = "https://ko-fi.com/kolfat_app";
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.title = "☕ Support KOLFAT (optional one-time tip)";
-    link.setAttribute("aria-label", "☕ Support KOLFAT (optional one-time tip)");
-    link.innerHTML = '<span class="kolfat-support-emoji" aria-hidden="true">☕</span><span class="kolfat-support-text">Support KOLFAT</span>';
-    nav.insertBefore(link, nav.firstElementChild);
+    const lang = (document.documentElement.lang || "en").toLowerCase().split("-")[0];
+    const phrase = "🧹🪣❤️ " + (translations[lang] || translations.en);
+    const hint = hints[lang] || hints.en;
+    const url = "https://ko-fi.com/kolfat_app";
+
+    const desktop = document.createElement("a");
+    desktop.className = "kolfat-support-link";
+    desktop.href = url;
+    desktop.target = "_blank";
+    desktop.rel = "noopener noreferrer";
+    desktop.title = phrase;
+    desktop.setAttribute("aria-label", phrase);
+    const desktopEmoji = document.createElement("span");
+    desktopEmoji.className = "kolfat-support-emoji";
+    desktopEmoji.setAttribute("aria-hidden", "true");
+    desktopEmoji.textContent = "🧹🪣❤️";
+    const desktopText = document.createElement("span");
+    desktopText.className = "kolfat-support-text";
+    desktopText.textContent = translations[lang] || translations.en;
+    desktop.append(desktopEmoji, desktopText);
+
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "kolfat-support-mobile-toggle";
+    toggle.textContent = "🧹🪣❤️";
+    toggle.title = phrase;
+    toggle.setAttribute("aria-label", phrase);
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", "kolfat-support-mobile-panel");
+    toggle.setAttribute("aria-haspopup", "true");
+
+    const panel = document.createElement("div");
+    panel.className = "kolfat-support-mobile-panel";
+    panel.id = "kolfat-support-mobile-panel";
+    panel.hidden = true;
+    const donate = document.createElement("a");
+    donate.href = url;
+    donate.target = "_blank";
+    donate.rel = "noopener noreferrer";
+    donate.className = "kolfat-support-mobile-donate";
+    donate.textContent = phrase;
+    const explanation = document.createElement("span");
+    explanation.className = "kolfat-support-mobile-hint";
+    explanation.textContent = hint;
+    panel.append(donate, explanation);
+
+    const close = (restoreFocus = false) => {
+      if (panel.hidden) return;
+      panel.hidden = true;
+      toggle.setAttribute("aria-expanded", "false");
+      if (restoreFocus) toggle.focus();
+    };
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const opening = panel.hidden;
+      panel.hidden = !opening;
+      toggle.setAttribute("aria-expanded", String(opening));
+      if (opening) {
+        nav.querySelectorAll("details[open]").forEach((details) => { details.open = false; });
+      }
+    });
+    document.addEventListener("click", (event) => {
+      if (!toggle.contains(event.target) && !panel.contains(event.target)) close();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !panel.hidden) close(true);
+    });
+    nav.querySelectorAll("details").forEach((details) => {
+      details.addEventListener("toggle", () => { if (details.open) close(); });
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 900) close();
+    }, { passive: true });
+    nav.insertBefore(desktop, nav.firstElementChild);
+    nav.insertBefore(toggle, desktop.nextSibling);
+    nav.appendChild(panel);
   };
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initSupportLink, {once:true});
-  else initSupportLink();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init, { once: true });
+  } else init();
 })();
 
 
