@@ -25,7 +25,7 @@ test("all 458 published HTML pages retain original KOLFAT branding contract", ()
       continue;
     }
     checked++;
-    const logo = html.match(/<a\b[^>]*class="(?:site-logo|brand)"[^>]*>[\s\S]*?<\/a>/i);
+    const logo = html.match(/<a\b[^>]*class="(?:site-logo|brand|guide-site-logo)"[^>]*>[\s\S]*?<\/a>/i);
     if (!logo || !logo[0].includes('/assets/kolfat-logo.webp?v=d2c25ec0')) failures.push(route + ": original wordmark markup missing");
     if (!/\/assets\/nav-dropdown\.js\?v=20261028-brand-(?:uniform1|all-pages2)/.test(html)) failures.push(route + ": shared script reference missing");
     if (!/\/assets\/nav-dropdown\.css\?v=20261028-brand-(?:uniform1|all-pages2)/.test(html)) failures.push(route + ": shared stylesheet reference missing");
@@ -55,7 +55,7 @@ for (const lang of languages) {
       for (const section of ["home","product","download","support","guides"]) {
         const route = routeFor(lang,section);
         await page.goto("http://127.0.0.1:8765"+route, { waitUntil: "load" });
-        const brand = page.locator(".site-logo, .header .header-inner > .brand").first();
+        const brand = page.locator(".site-logo, .header .header-inner > .brand, .guide-site-logo").first();
         const word = brand.locator('img[src="/assets/kolfat-logo.webp?v=d2c25ec0"]');
         const maid = brand.locator("img.kf-header-maid");
         await expect(word).toBeVisible();
@@ -80,7 +80,7 @@ test("translated Tools and article templates match header branding", async ({pag
     await page.setViewportSize({width,height:900});
     for (const route of ["/tools/","/tools/code-data/","/tools/networking/","/tools/security/","/de/tools/","/fa/tools/","/fr/tools/","/es/tools/","/guides/organize-photos-by-date/","/fa/guides/organize-photos-by-date/","/de/guides/organize-photos-by-date/","/ar/guides/organize-photos-by-date/","/support/getting-started/"]) {
       await page.goto("http://127.0.0.1:8765"+route,{waitUntil:"load"});
-      const brand = page.locator(".site-logo, .header .header-inner > .brand").first();
+      const brand = page.locator(".site-logo, .header .header-inner > .brand, .guide-site-logo").first();
       const word = brand.locator('img[src="/assets/kolfat-logo.webp?v=d2c25ec0"]');
       const maid = brand.locator("img.kf-header-maid");
       await expect(word).toBeVisible();

@@ -556,7 +556,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 /* Add the original crossed-arms mascot beside, not instead of, the existing KOLFAT wordmark. */
 (() => {
   const addMaid = () => {
-    const logo = document.querySelector(".site-logo, .header .header-inner > .brand");
+    const logo = document.querySelector(".site-logo, .header .header-inner > .brand, .guide-site-logo");
     if (!logo || logo.querySelector(".kf-header-maid")) return;
     const wordmark = logo.querySelector('img[src*="kolfat-logo.webp"]');
     if (!wordmark) return;
