@@ -989,7 +989,7 @@ html body .top-nav > a.kolfat-support-link{
  html body .header .header-inner{width:calc(100% - 14px)!important}
  html body .header .header-inner > .top-nav{gap:2px!important}
 }
-@media(max-width:360px){
+@media(max-width:340px){
  html body .site-logo,html body .guide-site-logo{
    --kf-wordmark:80px!important;
    --kf-maid:20px!important;
