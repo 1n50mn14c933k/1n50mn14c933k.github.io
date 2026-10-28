@@ -552,3 +552,28 @@ function create(){
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",create,{once:true});else create();
 })();
+
+/* Add the original crossed-arms mascot beside, not instead of, the existing KOLFAT wordmark. */
+(() => {
+  const addMaid = () => {
+    const logo = document.querySelector(".site-logo, .header .header-inner > .brand");
+    if (!logo || logo.querySelector(".kf-header-maid")) return;
+    const wordmark = logo.querySelector('img[src*="kolfat-logo.webp"]');
+    if (!wordmark) return;
+    const style = document.createElement("link");
+    style.rel = "stylesheet";
+    style.href = "/assets/kolfat-header-maid.css?v=20261028-1";
+    document.head.append(style);
+    const mascot = document.createElement("img");
+    mascot.className = "kf-header-maid";
+    mascot.src = "/assets/kolfat-maid-header.webp?v=20261028-1";
+    mascot.alt = "";
+    mascot.setAttribute("aria-hidden", "true");
+    mascot.width = 41;
+    mascot.height = 48;
+    mascot.decoding = "async";
+    wordmark.before(mascot);
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addMaid, {once:true});
+  else addMaid();
+})();
