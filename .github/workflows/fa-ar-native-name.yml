@@ -1,0 +1,23 @@
+name: Correct Persian and Arabic product name sitewide
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  localize:
+    if: ${{ github.actor != 'github-actions[bot]' && contains(github.event.head_commit.message, 'Run native-name localization rollout') }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Replace inconsistent labels in Persian and Arabic HTML
+        run: python3 .github/scripts/update_fa_ar_name.py
+      - name: Commit to protected staging branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fa ar
+          git commit -m "Localization: restore native product name on fa and ar website pages"
+          git push origin HEAD:refs/heads/automation/fa-ar-native-name-20261028
