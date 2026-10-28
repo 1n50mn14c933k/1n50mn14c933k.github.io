@@ -79,7 +79,7 @@ def head(l,p,title,desc,typ="WebPage",h1=None):
         f'<meta name="twitter:description" content="{attrs(desc[:175])}">'
         '<script type="application/ld+json">'+json.dumps({"@context":"https://schema.org","@graph":graph},ensure_ascii=False,separators=(",",":"))+'</script>'
         '<link rel="stylesheet" href="/assets/seo-content.css?v=20261018-seo1">'
-        '<link rel="stylesheet" href="/assets/nav-dropdown.css?v=20261018-3">'
+        '<link rel="stylesheet" href="/assets/nav-dropdown.css?v=20261028-header-maid2">'
         '<link rel="stylesheet" href="/assets/localized-content.css?v=20261018-1">')
 
 def breadcrumb(l,p,d,title):
@@ -100,7 +100,7 @@ def shell(l,p,d,title,description,body,typ="WebPage"):
         f'<a href="/{l}/privacy/">{e(d["labels"]["privacy"])}</a>'
         f'<a href="/{l}/terms/">{e(d["labels"]["terms"])}</a>'
         f'<a href="/{l}/licenses/">{e(d["labels"]["licenses"])}</a>'
-        '</nav></div></footer><script defer src="/assets/nav-dropdown.js?v=20261018-2"></script></body></html>')
+        '</nav></div></footer><script defer src="/assets/nav-dropdown.js?v=20261028-header-maid2"></script></body></html>')
 
 def content(l,d,p):
     a=d["labels"]
