@@ -833,3 +833,207 @@ html[dir="rtl"] body a.kolfat-tools-direct.kolfat-tools-direct--floating{
     font-size:10px!important;padding:6px 8px!important;
   }
 }
+
+
+
+/* KOLFAT Online Tools is the final shared top-bar button, never floating. */
+html body .top-nav > a.kolfat-tools-direct{
+  box-sizing:border-box!important;
+  position:relative!important;
+  display:inline-flex!important;
+  flex:0 0 auto!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px!important;
+  width:auto!important;
+  max-width:205px!important;
+  height:44px!important;
+  min-height:44px!important;
+  padding:0 11px!important;
+  margin:0!important;
+  border:1px solid #ffa763!important;
+  border-radius:12px!important;
+  background:#ff812e!important;
+  color:#080808!important;
+  text-decoration:none!important;
+  font:750 11px/1.15 "Segoe UI",Tahoma,Arial,sans-serif!important;
+  white-space:nowrap!important;
+  text-align:center!important;
+  z-index:100050!important;
+  box-shadow:none!important;
+  cursor:pointer!important;
+  direction:ltr!important;
+}
+html body .top-nav > a.kolfat-tools-direct:hover{
+  background:#ffb073!important;
+  color:#080808!important;
+}
+html body .top-nav > a.kolfat-tools-direct:focus-visible{
+  outline:3px solid white!important;
+  outline-offset:3px!important;
+}
+html body .top-nav > a.kolfat-tools-direct .tools-icon{
+  display:inline-block!important;
+  flex:0 0 auto!important;
+  font-size:16px!important;
+  line-height:1!important;
+}
+html body .top-nav > a.kolfat-tools-direct .tools-label{
+  min-width:0!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+html body .top-nav > a.kolfat-tools-direct .tools-short{
+  display:none!important;
+  min-width:0!important;
+  white-space:nowrap!important;
+}
+html body .top-nav > a.kolfat-support-link{
+  max-width:min(340px,32vw)!important;
+}
+@media(max-width:1150px){
+  html body .top-nav > a.kolfat-tools-direct{
+    max-width:148px!important;
+    padding:0 9px!important;
+  }
+  html body .top-nav > a.kolfat-tools-direct .tools-label{display:none!important}
+  html body .top-nav > a.kolfat-tools-direct .tools-short{
+    display:inline-block!important;
+    max-width:100px!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+  }
+  html body .top-nav > a.kolfat-support-link{max-width:255px!important}
+}
+@media(max-width:640px){
+  html body .top-nav > a.kolfat-tools-direct{
+    flex:0 0 40px!important;
+    width:40px!important;min-width:40px!important;max-width:40px!important;
+    height:38px!important;min-height:38px!important;
+    padding:0!important;
+    border-radius:10px!important;
+  }
+  html body .top-nav > a.kolfat-tools-direct .tools-label,
+  html body .top-nav > a.kolfat-tools-direct .tools-short{display:none!important}
+  html body .top-nav > a.kolfat-tools-direct .tools-icon{font-size:17px!important}
+}
+@media(max-width:440px){
+  html body .top-nav,html body .header .header-inner > .top-nav{
+    gap:3px!important;
+  }
+  html body .top-nav > a.kolfat-tools-direct{
+    flex-basis:34px!important;width:34px!important;
+    min-width:34px!important;max-width:34px!important;
+  }
+  html body .top-nav > button.kolfat-support-mobile-toggle{
+    width:44px!important;min-width:44px!important;
+    font-size:12px!important;
+  }
+  html body .top-nav .kolfat-menu>summary,
+  html body .header .header-inner .top-nav .kolfat-menu>summary{
+    min-width:70px!important;
+    padding:0 4px!important;
+    gap:4px!important;
+  }
+  html body .top-nav .lang-menu>summary,
+  html body .header .header-inner .top-nav .lang-menu>summary{
+    min-width:38px!important;
+    padding:0 3px!important;
+  }
+}
+@media(max-width:360px){
+  html body .top-nav,html body .header .header-inner > .top-nav{gap:2px!important}
+  html body .top-nav > a.kolfat-tools-direct{
+    flex-basis:30px!important;width:30px!important;
+    min-width:30px!important;max-width:30px!important;
+  }
+  html body .top-nav > button.kolfat-support-mobile-toggle{
+    width:40px!important;min-width:40px!important;font-size:11px!important;
+  }
+  html body .top-nav .kolfat-menu>summary,
+  html body .header .header-inner .top-nav .kolfat-menu>summary{
+    min-width:55px!important;padding:0 3px!important;gap:3px!important;
+  }
+  html body .top-nav .lang-menu>summary,
+  html body .header .header-inner .top-nav .lang-menu>summary{
+    min-width:30px!important;padding:0 2px!important;
+  }
+}
+@media(max-width:340px){
+  html body .site-logo,
+  html body .header .header-inner > .brand,
+  html body .guide-site-logo{
+    --kf-wordmark:94px!important;
+    --kf-maid:24px!important;
+    --kf-maid-height:30px!important;
+    gap:3px!important;
+  }
+  html body .header .header-inner > .brand img[src*="kolfat-logo.webp"],
+  html body .site-logo > img[src*="kolfat-logo.webp"],
+  html body .guide-site-logo > img[src*="kolfat-logo.webp"]{
+    width:94px!important;
+    min-width:94px!important;
+    max-width:94px!important;
+  }
+}
+
+
+/* On narrow phones, preserve usable tap targets by separating the logo
+   footprint from the four right-side controls. */
+@media(max-width:440px){
+ html body .site-logo, html body .guide-site-logo{
+   left:7px!important;
+   max-width:128px!important;
+ }
+ html body .top-nav{right:7px!important}
+ html body .header .header-inner{width:calc(100% - 14px)!important}
+ html body .header .header-inner > .top-nav{gap:2px!important}
+}
+@media(max-width:340px){
+ html body .site-logo,html body .guide-site-logo{
+   --kf-wordmark:80px!important;
+   --kf-maid:20px!important;
+   --kf-maid-height:28px!important;
+   gap:2px!important;
+   max-width:105px!important;
+ }
+ html body .site-logo > img[src*="kolfat-logo.webp"],
+ html body .guide-site-logo > img[src*="kolfat-logo.webp"],
+ html body .header .header-inner > .brand > img[src*="kolfat-logo.webp"]{
+   width:80px!important;
+   min-width:80px!important;
+   max-width:80px!important;
+ }
+ html body .header .header-inner > .brand{
+   --kf-wordmark:80px!important;
+   --kf-maid:20px!important;
+   --kf-maid-height:28px!important;
+   gap:2px!important;
+ }
+ html body .top-nav > button.kolfat-support-mobile-toggle{
+   width:37px!important;min-width:37px!important;font-size:10px!important;
+ }
+ html body .top-nav > a.kolfat-tools-direct{
+   width:28px!important;min-width:28px!important;max-width:28px!important;
+   flex-basis:28px!important;
+ }
+ html body .top-nav .kolfat-menu>summary,
+ html body .header .header-inner .top-nav .kolfat-menu>summary{
+   min-width:48px!important;
+   width:48px!important;
+   padding:0 2px!important;
+   gap:1px!important;
+   font-size:8px!important;
+   letter-spacing:0!important;
+ }
+ html body .top-nav .lang-menu>summary,
+ html body .header .header-inner .top-nav .lang-menu>summary{
+   min-width:28px!important;
+   width:28px!important;
+   padding:0 1px!important;
+ }
+ html body .top-nav .kolfat-menu>summary svg{width:12px!important;flex:0 0 12px!important}
+ html body .top-nav .kolfat-menu .menu-chevron{display:none!important}
+ html body .top-nav{right:6px!important;gap:2px!important}
+ html body .header .header-inner > .top-nav{gap:2px!important}
+}

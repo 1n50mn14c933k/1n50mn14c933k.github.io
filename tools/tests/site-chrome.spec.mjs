@@ -39,3 +39,34 @@ test("KOLFAT header stays uniform across pages",async({page})=>{
   expect(sizes[0][0]).toBe(width>640?154:width>360?120:100);
  }
 });
+
+
+
+/* Regression: the Online Tools button stays last, after the language selector,
+   including translated pages, optional tools-language control and narrow phones. */
+for (const route of ["/en/","/fa/","/de/","/ar/","/en/Media_Kolfat/","/download/","/support/","/guides/","/tools/","/tools/security/password-generator/"]) {
+  test("Online Tools is the final top-bar button "+route,async({page})=>{
+    test.setTimeout(60000);
+    for (const width of [1440,1024,640,390,320]) {
+      await page.setViewportSize({width,height:850});
+      await page.goto("http://127.0.0.1:8765"+route,{waitUntil:"load"});
+      const tools=page.locator(".top-nav > a.kolfat-tools-direct");
+      await expect(tools).toHaveCount(1);
+      await expect(tools).toBeVisible();
+      await expect(tools).toHaveAttribute("href",route.startsWith("/fa/")?"/fa/tools/":route.startsWith("/de/")?"/de/tools/":"/tools/");
+      await expect(tools).toHaveAttribute("aria-label",/Tools|ابزار|أدوات|Online/i);
+      expect(await page.locator(".kolfat-tools-direct--floating").count()).toBe(0);
+      const dims=await tools.evaluate(el=>{
+        const nav=el.parentElement;
+        const controls=[...nav.children].filter(x=>x.matches("a,button,details")&&getComputedStyle(x).display!=="none");
+        const menu=nav.querySelector(".lang-menu:last-of-type");
+        const a=el.getBoundingClientRect(),b=menu?.getBoundingClientRect();
+        return {last:controls.at(-1)===el,left:a.left,right:a.right,afterLanguage:!b||a.left>=b.right-3};
+      });
+      expect(dims.last,route+" at "+width).toBe(true);
+      expect(dims.left,route+" left "+width).toBeGreaterThanOrEqual(-2);
+      expect(dims.right,route+" right "+width).toBeLessThanOrEqual(width+2);
+      expect(dims.afterLanguage,route+" language order "+width).toBe(true);
+    }
+  });
+}
