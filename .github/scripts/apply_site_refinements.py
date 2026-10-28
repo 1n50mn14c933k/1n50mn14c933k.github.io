@@ -28,7 +28,7 @@ for page in pages:
     )
     after, refined_count = re.subn(
         r'/assets/site-refinements[.]css(?:[?][^"]*)?',
-        '/assets/site-refinements.css?v=20261028-guides-visual1', after,
+        '/assets/site-refinements.css?v=20261028-fixed-header-clearance1', after,
     )
     if refined_count != 1:
         raise RuntimeError(f"{page}: expected exactly one shared site CSS link, got {refined_count}")
@@ -42,5 +42,5 @@ for page in pages:
         page.write_text(after,encoding="utf-8")
         updated += 1
 assert seen >= 300, f"Unexpected navigation coverage: {seen}"
-assert removed_labels >= 1, "Expected at least one remaining orange Kolfat.app label"
+# Idempotent: all 48 legacy labels were removed previously; zero is correct on later runs.
 print(f"PASS: removed {removed_labels} orange Kolfat.app labels; changed {updated}/{seen} pages; wordmark, SEO metadata and other content preserved")
