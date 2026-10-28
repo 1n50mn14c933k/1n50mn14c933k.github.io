@@ -976,3 +976,64 @@ html body .top-nav > a.kolfat-support-link{
     max-width:94px!important;
   }
 }
+
+
+/* On narrow phones, preserve usable tap targets by separating the logo
+   footprint from the four right-side controls. */
+@media(max-width:440px){
+ html body .site-logo, html body .guide-site-logo{
+   left:7px!important;
+   max-width:128px!important;
+ }
+ html body .top-nav{right:7px!important}
+ html body .header .header-inner{width:calc(100% - 14px)!important}
+ html body .header .header-inner > .top-nav{gap:2px!important}
+}
+@media(max-width:360px){
+ html body .site-logo,html body .guide-site-logo{
+   --kf-wordmark:80px!important;
+   --kf-maid:20px!important;
+   --kf-maid-height:28px!important;
+   gap:2px!important;
+   max-width:105px!important;
+ }
+ html body .site-logo > img[src*="kolfat-logo.webp"],
+ html body .guide-site-logo > img[src*="kolfat-logo.webp"],
+ html body .header .header-inner > .brand > img[src*="kolfat-logo.webp"]{
+   width:80px!important;
+   min-width:80px!important;
+   max-width:80px!important;
+ }
+ html body .header .header-inner > .brand{
+   --kf-wordmark:80px!important;
+   --kf-maid:20px!important;
+   --kf-maid-height:28px!important;
+   gap:2px!important;
+ }
+ html body .top-nav > button.kolfat-support-mobile-toggle{
+   width:37px!important;min-width:37px!important;font-size:10px!important;
+ }
+ html body .top-nav > a.kolfat-tools-direct{
+   width:28px!important;min-width:28px!important;max-width:28px!important;
+   flex-basis:28px!important;
+ }
+ html body .top-nav .kolfat-menu>summary,
+ html body .header .header-inner .top-nav .kolfat-menu>summary{
+   min-width:48px!important;
+   width:48px!important;
+   padding:0 2px!important;
+   gap:1px!important;
+   font-size:8px!important;
+   letter-spacing:0!important;
+ }
+ html body .top-nav .lang-menu>summary,
+ html body .header .header-inner .top-nav .lang-menu>summary{
+   min-width:28px!important;
+   width:28px!important;
+   padding:0 1px!important;
+ }
+ html body .top-nav .kolfat-menu>summary svg{width:12px!important;flex:0 0 12px!important}
+ html body .top-nav .kolfat-menu .menu-chevron{display:none!important}
+ html body .top-nav{right:6px!important;gap:2px!important}
+ html body .header .header-inner > .top-nav{gap:2px!important}
+}
