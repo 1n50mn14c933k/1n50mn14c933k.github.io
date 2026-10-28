@@ -1,0 +1,46 @@
+
+/* Unified KOLFAT legal pages, October 2026. Uses the same header/footer as Guides and Download. */
+html[data-kolfat-page="legal"]{scroll-behavior:smooth;scroll-padding-top:95px}
+html[data-kolfat-page="legal"] body{background:#050505!important;color:#f5f5f3!important}
+html[data-kolfat-page="legal"] main.kf-legal-main{width:min(calc(100% - 42px),1190px)!important;max-width:1190px!important;margin:0 auto!important;padding:58px 0 94px!important}
+.kf-legal-hero{padding:0 0 12px!important}
+.kf-legal-eyebrow{color:#ff812e!important;font:750 11px/1.5 "Segoe UI",Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;margin:0 0 20px}
+.kf-legal-eyebrow::before{content:"";display:inline-block;width:28px;height:2px;background:#ff812e;vertical-align:middle;margin-inline-end:12px}
+.kf-legal-title{margin:0 0 22px!important;max-width:1000px;font:400 clamp(47px,7vw,83px)/1.04 Georgia,"Times New Roman",serif!important;letter-spacing:-.035em!important;color:#fff!important;overflow-wrap:anywhere}
+.kf-legal-title .soft{color:#a7a7a7}
+.kf-legal-lead{margin:0 0 18px!important;color:#c9c9c5;font:400 clamp(15px,1.7vw,18px)/1.7 "Segoe UI",Tahoma,Arial,sans-serif;max-width:790px}
+.kf-legal-date{font:550 12px/1.5 "Segoe UI",Tahoma,Arial,sans-serif;color:#9d9d98;letter-spacing:.02em;margin:0!important}
+.kf-legal-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:38px 0 58px}
+.kf-legal-tab{display:flex;flex-direction:column;justify-content:center;min-height:120px;padding:19px 20px;border:1px solid rgba(255,255,255,.19);border-radius:12px;background:#0b0b0b;color:#f5f5f3!important;text-decoration:none!important;transition:border-color .2s,background .2s}
+.kf-legal-tab:hover,.kf-legal-tab:focus-visible{border-color:#ff812e!important;background:#12100e}
+.kf-legal-tab[aria-current="page"]{border-color:#ff812e;background:#17100c}
+.kf-legal-tab small{color:#ff9b51;font:750 10px/1.4 "Segoe UI",Tahoma,Arial,sans-serif;letter-spacing:.13em;margin-bottom:17px}
+.kf-legal-tab strong{font:700 17px/1.28 "Segoe UI",Tahoma,Arial,sans-serif;color:#f5f5f3}
+.kf-legal-tab span{color:#a5a5a1;font:400 12px/1.55 "Segoe UI",Tahoma,Arial,sans-serif;margin-top:6px}
+.kf-legal-body{display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px;align-items:start}
+.kf-legal-aside{position:sticky;top:94px;max-height:calc(100dvh - 104px);overflow:auto;scrollbar-width:thin}
+.kf-legal-aside-title{display:block;margin:0 0 14px;color:#9c9c99;font:750 10px/1.5 "Segoe UI",Tahoma,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.kf-legal-toc{border-inline-start:1px solid #343434;display:grid}
+.kf-legal-toc a{border-inline-start:2px solid transparent;margin-inline-start:-1px;padding:12px;color:#b9b9b7;font:500 12px/1.45 "Segoe UI",Tahoma,Arial,sans-serif;text-decoration:none!important}
+.kf-legal-toc a:hover,.kf-legal-toc a:focus-visible{color:#fff;border-inline-start-color:#ff812e;background:#141414}
+.kf-legal-content{min-width:0}
+.kf-legal-subtitle{margin:0 0 20px!important;padding-bottom:19px;border-bottom:1px solid #333;color:#fff;font:400 clamp(24px,3vw,35px)/1.2 Georgia,"Times New Roman",serif!important}
+.kf-legal-card{position:relative;scroll-margin-top:95px;margin:0 0 13px!important;padding:28px 30px 26px!important;border:1px solid rgba(255,255,255,.20);border-top:2px solid rgba(255,129,46,.73);border-radius:13px;background:#0b0b0b}
+.kf-legal-card-head{display:flex;gap:15px;align-items:center;margin:0 0 12px}
+.kf-legal-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex:0 0 44px;border:1px solid rgba(255,129,46,.62);border-radius:10px;background:rgba(255,129,46,.1);color:#ff942f}
+.kf-legal-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.kf-legal-card h2{margin:0!important;color:#f5f5f5!important;font:700 clamp(16px,1.65vw,19px)/1.35 "Segoe UI",Tahoma,Arial,sans-serif!important;letter-spacing:0!important}
+.kf-legal-copy{padding-inline-start:59px;color:#c3c3bf;font:400 14px/1.85 "Segoe UI",Tahoma,Arial,sans-serif}
+.kf-legal-copy p{margin:0 0 12px!important;color:#c3c3bf!important;line-height:1.85!important}
+.kf-legal-copy p:last-child{margin-bottom:0!important}
+.kf-legal-copy ul,.kf-legal-copy ol{margin:10px 0 0;padding-inline-start:20px}
+.kf-legal-copy a,.kf-legal-note a{color:#f1f1eb;text-underline-offset:4px}
+.kf-legal-copy a:hover,.kf-legal-note a:hover{color:#ffad6f}
+.kf-legal-note{border:1px solid rgba(255,255,255,.22);border-inline-start:3px solid #ff812e;background:#111;color:#c6c6c1;margin-top:28px;padding:18px 23px;border-radius:9px;font:400 13px/1.75 "Segoe UI",Tahoma,Arial,sans-serif}
+.kf-legal-note strong{color:#f5f5f3}
+html[dir="rtl"] .kf-legal-main{text-align:right}
+html[dir="rtl"] .kf-legal-title{font-family:Tahoma,"Segoe UI",Arial,sans-serif!important;font-weight:650!important;letter-spacing:0!important}
+html:lang(ja) .kf-legal-title,html:lang(zh) .kf-legal-title,html:lang(hi) .kf-legal-title{font-family:inherit!important;font-weight:600!important;letter-spacing:0!important}
+@media(max-width:980px){.kf-legal-body{grid-template-columns:190px minmax(0,1fr);gap:22px}.kf-legal-tabs{gap:9px}.kf-legal-tab{padding:15px 13px}.kf-legal-tab strong{font-size:15px}}
+@media(max-width:760px){html[data-kolfat-page="legal"] main.kf-legal-main{width:calc(100% - 30px)!important;padding:42px 0 66px!important}.kf-legal-title{font-size:clamp(39px,11vw,60px)!important}.kf-legal-tabs{grid-template-columns:repeat(2,minmax(0,1fr));margin:27px 0 36px}.kf-legal-tab{min-height:107px}.kf-legal-body{display:block}.kf-legal-aside{position:static;max-height:none;margin:0 0 30px}.kf-legal-toc{grid-template-columns:repeat(2,minmax(0,1fr))}.kf-legal-card{padding:22px 18px!important}.kf-legal-copy{padding-inline-start:0}.kf-legal-subtitle{margin-bottom:18px!important}}
+@media(max-width:440px){.kf-legal-tabs{gap:8px}.kf-legal-tab{min-height:103px;padding:13px}.kf-legal-tab strong{font-size:14px}.kf-legal-tab span{font-size:11px}.kf-legal-toc{grid-template-columns:minmax(0,1fr)}.kf-legal-card-head{gap:10px}.kf-legal-icon{width:37px;height:37px;flex-basis:37px}.kf-legal-card h2{font-size:16px!important}}
