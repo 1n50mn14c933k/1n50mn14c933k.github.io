@@ -18,3 +18,24 @@ for (const route of ["/en/","/fa/","/de/Media_Kolfat/","/tools/","/guides/"]) {
     expect(await wordmark.getAttribute("src")).toContain("/assets/kolfat-logo.webp?v=d2c25ec0");
   });
 }
+
+/* Regression: consistent brand dimensions without changing artwork or support headings. */
+test("KOLFAT header stays uniform across pages",async({page})=>{
+ for(const width of [1440,390,350]){
+  await page.setViewportSize({width,height:900});
+  const sizes=[];
+  for(const route of ["/en/","/download/","/support/","/de/support/","/tools/"]){
+   await page.goto("http://127.0.0.1:8765"+route);
+   const brand=page.locator(".site-logo,.header .header-inner > .brand").first();
+   const word=brand.locator('img[src*="kolfat-logo.webp"]');
+   const maid=brand.locator("img.kf-header-maid");
+   await expect(word).toBeVisible();await expect(maid).toBeVisible();
+   const a=await word.boundingBox(),b=await maid.boundingBox();
+   expect(a).not.toBeNull();expect(b).not.toBeNull();
+   sizes.push([Math.round(a.width),Math.round(b.width),Math.round(b.height)]);
+   if(route.includes("/support/"))await expect(page.locator("main .eyebrow")).toHaveCount(0);
+  }
+  expect(new Set(sizes.map(x=>x.join(","))).size).toBe(1);
+  expect(sizes[0][0]).toBe(width>640?154:width>360?120:100);
+ }
+});
