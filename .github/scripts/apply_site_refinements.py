@@ -1,12 +1,16 @@
 from pathlib import Path
 import re
 
-# Apply the upgraded shared navigation to every published page, all locales
-# and all tools, without touching content, metadata or other styling.
+# Maintain shared navigation and remove only the unwanted orange Kolfat.app
+# eyebrow from published page content in every language and page family.
 version = "20261028-brand-all-pages2"
 pages = sorted(Path(".").rglob("index.html"))
 seen = 0
 updated = 0
+removed_labels = 0
+# Exact standalone visual label only. Keep URLs, SEO metadata, emails, and
+# other page-specific eyebrow/kicker text unchanged.
+brand_eyebrow = re.compile(r'<p\s+class=[\'\"]eyebrow[\'\"]\s*>\s*Kolfat\.app\s*</p>\s*', re.I)
 for page in pages:
     if ".git" in page.parts:
         continue
@@ -30,9 +34,13 @@ for page in pages:
         raise RuntimeError(f"{page}: expected exactly one shared site CSS link, got {refined_count}")
     if css_count != 1 or js_count != 1:
         raise RuntimeError(f"{page}: expected exactly one shared CSS and JS nav reference; got {css_count}, {js_count}")
+    after, labels = brand_eyebrow.subn("", after)
+    removed_labels += labels
+    if brand_eyebrow.search(after):
+        raise RuntimeError(f"{page}: stray orange Kolfat.app eyebrow")
     if after != before:
         page.write_text(after,encoding="utf-8")
         updated += 1
 assert seen >= 300, f"Unexpected navigation coverage: {seen}"
-assert updated >= 300, f"Expected cache rollover across localized pages and tools: {updated}"
-print(f"Repointed shared menu assets on {updated}/{seen} pages; page content, SEO and releases preserved")
+assert removed_labels >= 1, "Expected at least one remaining orange Kolfat.app label"
+print(f"PASS: removed {removed_labels} orange Kolfat.app labels; changed {updated}/{seen} pages; wordmark, SEO metadata and other content preserved")
