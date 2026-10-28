@@ -1037,3 +1037,80 @@ html body .top-nav > a.kolfat-support-link{
  html body .top-nav{right:6px!important;gap:2px!important}
  html body .header .header-inner > .top-nav{gap:2px!important}
 }
+
+
+/* Mobile homepage scrolling fix (all 12 locales).
+   Older full-screen hero styles lock html/body and absolutely position the
+   hero's content. Return the mobile hero to document flow so users can swipe
+   through the features and reach both download actions on real phones.
+   Desktop's full-screen hero presentation is intentionally unchanged. */
+@media(max-width:980px) {
+  html[data-kolfat-page="home"] {
+    height:auto!important;
+    min-height:100%!important;
+    overflow-x:hidden!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch;
+  }
+  html[data-kolfat-page="home"] body {
+    height:auto!important;
+    min-height:100svh!important;
+    overflow-x:hidden!important;
+    overflow-y:visible!important;
+    -webkit-overflow-scrolling:touch;
+  }
+  html[data-kolfat-page="home"] body main {
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:0 0 calc(var(--kf-footer-height,96px) + 24px)!important;
+    overflow:visible!important;
+  }
+  html[data-kolfat-page="home"] body .hero {
+    position:relative!important;
+    height:auto!important;
+    min-height:100svh!important;
+    overflow:hidden!important;
+  }
+  html[data-kolfat-page="home"] body .hero-bg {
+    position:absolute!important;
+    inset:0!important;
+    pointer-events:none!important;
+  }
+  html[data-kolfat-page="home"] body .hero-inner {
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    min-height:0!important;
+    padding:clamp(118px,15svh,152px) 16px 16px!important;
+  }
+  html[data-kolfat-page="home"] body .hero-copy {
+    position:relative!important;
+    top:auto!important;
+    right:auto!important;
+    left:auto!important;
+    bottom:auto!important;
+    width:min(100%,620px)!important;
+    max-width:620px!important;
+    margin:0 auto!important;
+    padding:0!important;
+    transform:none!important;
+    pointer-events:auto!important;
+  }
+  html[data-kolfat-page="home"] body .hero-foot {
+    position:relative!important;
+    top:auto!important;
+    bottom:auto!important;
+    left:auto!important;
+    right:auto!important;
+    width:auto!important;
+    margin:10px 16px 0!important;
+    padding:12px 0 22px!important;
+    min-height:0!important;
+    pointer-events:none!important;
+  }
+  html[data-kolfat-page="home"] body .hero-copy .kf-home-downloads {
+    max-width:100%!important;
+    margin-bottom:12px!important;
+  }
+}
