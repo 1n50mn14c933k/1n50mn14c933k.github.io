@@ -166,7 +166,11 @@ for lang,d in data.items():
     for p in PAGES:
         target=Path(lang)/p/"index.html"
         target.parent.mkdir(parents=True,exist_ok=True)
-        target.write_text(content(lang,d,p),encoding="utf-8")
+        rendered = content(lang,d,p)
+        if lang in ("fa", "ar"):
+            rendered = rendered.replace("GET MEDIA KOLFAT FROM", "دریافت مدیا کلفت از" if lang == "fa" else "احصل على مدیا کلفت من")
+            rendered = rendered.replace("MEDIA KOLFAT", "مدیا کلفت").replace("Media Kolfat", "مدیا کلفت")
+        target.write_text(rendered,encoding="utf-8")
 
 # Upgrade navigation menus of all original home, product, legal and English content pages.
 # Page body, translated legal text, and SEO tags remain untouched.
