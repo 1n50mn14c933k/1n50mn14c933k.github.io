@@ -125,7 +125,7 @@
     settings.id = "kf-ga-settings";
     settings.type = "button";
     settings.addEventListener("click", () => showPanel(settings));
-    document.body.appendChild(settings);
+    (document.querySelector(".kf-footer-privacy-slot") || document.body).appendChild(settings);
     const choice = readChoice();
     if (choice === "accepted") activate();
     else {

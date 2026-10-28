@@ -475,6 +475,8 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
     footer.dir=document.documentElement.dir||"ltr";
     const inner=document.createElement("div");
     inner.className="kf-global-footer-inner";
+    const privacySlot=document.createElement("div");
+    privacySlot.className="kf-footer-privacy-slot";
     const copy=document.createElement("span");
     copy.className="kf-footer-copyright";
     copy.textContent="© 2026 KOLFAT";
@@ -487,13 +489,26 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
       a.textContent=label;
       nav.append(a);
     }
-    inner.append(copy,nav);
+    inner.append(privacySlot,copy,nav);
     footer.append(inner);
     for(const old of document.querySelectorAll("footer:not(.kf-global-footer)")){
       old.hidden=true;
       old.setAttribute("aria-hidden","true");
     }
     document.body.append(footer);
+    // Privacy settings may load before or after the shared navigation script.
+    const existingPrivacy=document.getElementById("kf-ga-settings");
+    if(existingPrivacy) privacySlot.append(existingPrivacy);
+    const alignFooter=() => {
+      document.documentElement.style.setProperty(
+        "--kf-footer-height", Math.ceil(footer.getBoundingClientRect().height)+"px"
+      );
+    };
+    alignFooter();
+    if(typeof ResizeObserver!=="undefined"){
+      const observer=new ResizeObserver(alignFooter);
+      observer.observe(footer);
+    } else window.addEventListener("resize",alignFooter,{passive:true});
   };
   if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",initUnifiedChrome,{once:true});
   else initUnifiedChrome();
