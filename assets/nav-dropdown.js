@@ -562,7 +562,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
     if (!wordmark) return;
     const style = document.createElement("link");
     style.rel = "stylesheet";
-    style.href = "/assets/kolfat-header-maid.css?v=20261028-brand-uniform1";
+    style.href = "/assets/kolfat-header-maid.css?v=20261028-brand-all-pages2";
     document.head.append(style);
     const mascot = document.createElement("img");
     mascot.className = "kf-header-maid";

@@ -21,5 +21,5 @@ jobs:
           git add -A
           if ! git diff --cached --quiet; then
             git commit -m "Branding: refresh header mascot shared assets on published pages"
-            git push origin HEAD:refs/heads/automation/header-uniform-20261028
+            git push origin HEAD:refs/heads/automation/header-all-pages-rtl-20261028
           fi

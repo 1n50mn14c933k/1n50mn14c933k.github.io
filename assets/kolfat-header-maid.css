@@ -2,6 +2,8 @@
 html body .site-logo,html body .header .header-inner > .brand{
 --kf-wordmark:154px;--kf-maid:41px;--kf-maid-height:48px;
 display:inline-flex!important;align-items:center!important;gap:8px!important;
+/* RTL pages must not reverse maid and original Latin KOLFAT wordmark. */
+direction:ltr!important;unicode-bidi:isolate;
 }
 html body .site-logo > img[src*="/assets/kolfat-logo.webp"],
 html body .header .header-inner > .brand > img[src*="/assets/kolfat-logo.webp"]{
