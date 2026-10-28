@@ -1,0 +1,286 @@
+
+/* KOLFAT Guides design; matched to approved Product feature cards.
+   Scoped to Guides only. Product/Download/home visual designs are untouched. */
+html[data-kolfat-page="guide-index"] body main.kf-guides-hub,
+html[data-kolfat-page="guide-article"] body main {
+  position:relative!important;z-index:1!important;
+  box-sizing:border-box!important;
+  width:min(1170px,calc(100% - 48px))!important;
+  max-width:1170px!important;
+  margin:0 auto!important;
+  padding:38px 0 100px!important;
+  background:transparent!important;
+}
+html[data-kolfat-page^="guide-"] body{color:#f5f5f2}
+html[data-kolfat-page^="guide-"] body .breadcrumb,
+html[data-kolfat-page^="guide-"] body .kf-guide-crumb{
+  color:#b7b7b3!important;
+  font:600 12px/1.55 "Segoe UI",Tahoma,Arial,sans-serif!important;
+  letter-spacing:.025em!important;
+  margin:0 0 26px!important;
+}
+html[data-kolfat-page^="guide-"] body .breadcrumb a{color:#f6f6f2!important}
+html[data-kolfat-page="guide-index"] body .kf-guides-hero{
+  max-width:865px!important;
+  margin:0!important;
+  padding:55px 0 46px!important;
+  background:transparent!important;
+}
+html[data-kolfat-page^="guide-"] body .eyebrow,
+html[data-kolfat-page^="guide-"] body .kf-guides-eyebrow{
+  margin:0 0 16px!important;
+  color:#ff963c!important;
+  font:800 11px/1.4 "Segoe UI",Tahoma,Arial,sans-serif!important;
+  letter-spacing:.2em!important;text-transform:uppercase!important;
+}
+html[data-kolfat-page="guide-index"] body .kf-guides-hero h1,
+html[data-kolfat-page="guide-article"] body main>.hero h1{
+  color:#fff!important;
+  font:400 clamp(46px,5.5vw,80px)/.99 Georgia,"Times New Roman",serif!important;
+  letter-spacing:-.048em!important;
+  margin:0 0 24px!important;
+  overflow-wrap:break-word;
+}
+html[data-kolfat-page="guide-index"] body .kf-guides-hero .lead,
+html[data-kolfat-page="guide-article"] body main>.hero .lead{
+  color:#cfcfc9!important;
+  font:400 clamp(15px,1.5vw,19px)/1.75 "Segoe UI",Tahoma,Arial,sans-serif!important;
+  max-width:780px!important;margin:0 0 26px!important;
+}
+html[data-kolfat-page="guide-index"] body .kf-guides-hero .kf-guides-pills{
+  display:flex!important;flex-wrap:wrap!important;gap:9px!important;
+  margin:26px 0 0!important;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(255,129,46,.46);border-radius:100px;
+  color:#eee;background:rgba(9,9,9,.89);padding:8px 13px;
+  font:700 11px/1.45 "Segoe UI",Tahoma,Arial,sans-serif;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-pill::before{
+  content:"";display:block;flex:0 0 7px;width:7px;height:7px;
+  border-radius:50%;background:#ff812e;
+}
+html[data-kolfat-page="guide-index"] body .kf-guides-section{
+  position:relative!important;margin:0!important;padding:38px 0 0!important;
+  border-top:1px solid rgba(255,255,255,.22)!important;background:transparent!important;
+}
+html[data-kolfat-page="guide-index"] body .kf-guides-section-head{
+  display:flex;align-items:center;gap:13px;margin:0 0 22px;
+  color:#fff;font:700 clamp(21px,2.4vw,28px)/1.35 "Segoe UI",Tahoma,Arial,sans-serif;
+}
+html[data-kolfat-page="guide-index"] body .kf-guides-section-head::before{
+  content:"";display:block;width:5px;height:30px;flex:0 0 5px;border-radius:4px;background:#ff812e;
+}
+html[data-kolfat-page="guide-index"] body .kf-guides-grid{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:18px!important;background:transparent!important;margin:0!important;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card{
+  box-sizing:border-box!important;display:flex!important;flex-direction:column!important;
+  min-height:285px!important;min-width:0!important;
+  position:relative!important;overflow:hidden!important;
+  padding:26px 28px 25px!important;border-radius:15px!important;
+  border:1px solid rgba(255,129,46,.38)!important;
+  background:linear-gradient(140deg,rgba(22,22,22,.97),rgba(9,9,9,.98))!important;
+  box-shadow:0 12px 30px rgba(0,0,0,.27)!important;
+  text-decoration:none!important;color:#f7f7f5!important;
+  transition:border-color .2s ease,transform .2s ease!important;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card:hover{
+  border-color:#ff812e!important;transform:translateY(-3px)!important;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card:focus-visible{
+  outline:3px solid #ff963c!important;outline-offset:3px!important;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card-top{
+  display:flex;align-items:center;gap:12px;margin:0 0 18px;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card-icon,
+html[data-kolfat-page="guide-article"] body .kf-lesson-icon{
+  display:inline-flex;justify-content:center;align-items:center;
+  width:51px;height:51px;flex:0 0 51px;
+  border:1px solid rgba(255,129,46,.65);border-radius:12px;
+  background:rgba(255,129,46,.13);color:#ff963c;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card-icon svg,
+html[data-kolfat-page="guide-article"] body .kf-lesson-icon svg{
+  display:block;width:27px;height:27px;fill:none;stroke:currentColor;
+  stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card-tag{
+  font:750 10px/1.45 "Segoe UI",Tahoma,Arial,sans-serif;
+  text-transform:uppercase;letter-spacing:.11em;color:#ffac71;
+  min-width:0;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card-index{
+  margin-inline-start:auto;color:#83837f;
+  font:750 12px/1.4 "Segoe UI",Tahoma,Arial,sans-serif;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card h2{
+  color:#fff!important;font:700 clamp(18px,2vw,23px)/1.3 "Segoe UI",Tahoma,Arial,sans-serif!important;
+  margin:0 0 13px!important;letter-spacing:0!important;
+  overflow-wrap:anywhere;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card p{
+  color:#bdbdb8!important;
+  font:400 14px/1.73 "Segoe UI",Tahoma,Arial,sans-serif!important;
+  margin:0 0 23px!important;max-width:none!important;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card-cta{
+  margin-top:auto;display:flex;align-items:center;gap:9px;
+  font:800 11px/1.4 "Segoe UI",Tahoma,Arial,sans-serif;
+  letter-spacing:.07em;text-transform:uppercase;color:#ff963c;
+}
+html[data-kolfat-page="guide-index"] body .kf-guide-card-cta::after{content:"→";font-size:19px;line-height:1}
+html[dir="rtl"][data-kolfat-page="guide-index"] body .kf-guide-card-cta::after{content:"←"}
+
+/* Each article becomes a visual walkthrough without changing a single factual step. */
+html[data-kolfat-page="guide-article"] body main>.hero{
+  max-width:930px!important;min-height:0!important;
+  margin:0!important;padding:45px 0 38px!important;
+  border:0!important;background:transparent!important;
+}
+html[data-kolfat-page="guide-article"] body main>.hero>p:not(.lead):not(.eyebrow){
+  margin:14px 0!important;color:#c7c7c2!important;
+}
+html[data-kolfat-page="guide-article"] body main>.hero .notice,
+html[data-kolfat-page="guide-article"] body .notice{
+  background:rgba(26,18,11,.92)!important;
+  color:#f6e2d2!important;
+  border:1px solid rgba(255,129,46,.52)!important;
+  border-inline-start:4px solid #ff812e!important;
+  border-radius:11px!important;
+  padding:20px 24px!important;
+  margin:22px 0!important;
+}
+html[data-kolfat-page="guide-article"] body .kf-guide-roadmap{
+  margin:17px 0 36px!important;padding:23px!important;
+  border:1px solid rgba(255,129,46,.36)!important;
+  border-radius:15px!important;background:rgba(11,11,11,.94)!important;
+}
+html[data-kolfat-page="guide-article"] body .kf-guide-roadmap h2{
+  margin:0 0 15px!important;color:#fff!important;
+  font:700 19px/1.35 "Segoe UI",Tahoma,Arial,sans-serif!important;
+}
+html[data-kolfat-page="guide-article"] body .kf-guide-roadmap-grid{
+  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;
+}
+html[data-kolfat-page="guide-article"] body .kf-guide-roadmap a{
+  display:flex!important;gap:10px;align-items:center;
+  padding:14px!important;min-height:75px!important;
+  border:1px solid rgba(255,255,255,.17)!important;border-radius:9px!important;
+  background:rgba(255,255,255,.045)!important;color:#eee!important;
+  text-decoration:none!important;
+  font:650 12px/1.45 "Segoe UI",Tahoma,Arial,sans-serif!important;
+}
+html[data-kolfat-page="guide-article"] body .kf-guide-roadmap a:hover,
+html[data-kolfat-page="guide-article"] body .kf-guide-roadmap a:focus-visible{
+  border-color:#ff812e!important;background:rgba(255,129,46,.12)!important;
+}
+html[data-kolfat-page="guide-article"] body .kf-guide-roadmap-num{
+  display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;
+  border-radius:9px;color:#ffa25a;background:rgba(255,129,46,.13);
+  border:1px solid rgba(255,129,46,.43);
+  font:800 12px/1 "Segoe UI",Tahoma,Arial,sans-serif;
+}
+html[data-kolfat-page="guide-article"] body .kf-guide-progress{
+  height:4px;position:sticky;top:0;z-index:8;
+  margin:0 0 12px!important;border-radius:6px;
+  background:rgba(255,255,255,.12);overflow:hidden;
+}
+html[data-kolfat-page="guide-article"] body .kf-guide-progress>span{
+  display:block;width:0%;height:100%;background:#ff812e;
+}
+html[data-kolfat-page="guide-article"] body .section{
+  position:relative!important;
+  background:rgba(10,10,10,.91)!important;
+  border:1px solid rgba(255,255,255,.19)!important;
+  border-radius:15px!important;
+  margin:18px 0!important;padding:30px 32px!important;
+  scroll-margin-top:100px!important;
+}
+html[data-kolfat-page="guide-article"] body .section.kf-lesson-section{
+  border-inline-start:3px solid #ff812e!important;
+}
+html[data-kolfat-page="guide-article"] body .kf-lesson-heading{
+  display:flex;gap:14px;align-items:center;margin:0 0 18px;
+}
+html[data-kolfat-page="guide-article"] body .section h2{
+  font:700 clamp(21px,2.4vw,29px)/1.3 "Segoe UI",Tahoma,Arial,sans-serif!important;
+  margin:0 0 16px!important;color:#fff!important;letter-spacing:0!important;
+}
+html[data-kolfat-page="guide-article"] body .kf-lesson-heading h2{
+  margin:0!important;
+}
+html[data-kolfat-page="guide-article"] body .section p,
+html[data-kolfat-page="guide-article"] body .section li{
+  font:400 15px/1.83 "Segoe UI",Tahoma,Arial,sans-serif!important;color:#cececa!important;
+}
+html[data-kolfat-page="guide-article"] body .section strong{color:#fafafa!important}
+html[data-kolfat-page="guide-article"] body .section ol:not(.guide-steps),
+html[data-kolfat-page="guide-article"] body .section ul{
+  margin:18px 0!important;padding-inline-start:27px!important;
+}
+html[data-kolfat-page="guide-article"] body .guide-contents{
+  background:rgba(13,13,13,.94)!important;
+  border-color:rgba(255,129,46,.35)!important;
+}
+html[data-kolfat-page="guide-article"] body .guide-steps{
+  list-style:none!important;padding:0!important;counter-reset:kfstep;
+}
+html[data-kolfat-page="guide-article"] body .guide-steps>li{
+  counter-increment:kfstep;
+  position:relative!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  border-radius:13px!important;
+  padding:21px 22px!important;margin:0 0 18px!important;
+  background:rgba(19,19,19,.95)!important;
+}
+html[data-kolfat-page="guide-article"] body .guide-steps>li::before{
+  content:"STEP " counter(kfstep,decimal-leading-zero);
+  display:inline-flex;align-items:center;
+  padding:7px 10px;border-radius:7px;
+  background:rgba(255,129,46,.12);
+  color:#ffa45f;border:1px solid rgba(255,129,46,.45);
+  font:750 11px/1 "Segoe UI",Tahoma,Arial,sans-serif;
+  margin-bottom:12px;
+}
+html[data-kolfat-page="guide-article"] body figure{
+  margin:23px 0 15px!important;padding:10px!important;
+  border:1px solid rgba(255,129,46,.42)!important;
+  border-radius:12px!important;background:#080808!important;
+}
+html[data-kolfat-page="guide-article"] body figure img{
+  display:block!important;width:100%!important;height:auto!important;
+  max-height:none!important;object-fit:contain;border-radius:7px!important;
+}
+html[data-kolfat-page="guide-article"] body figcaption{
+  color:#bdbdb8!important;font:500 12px/1.6 "Segoe UI",Tahoma,Arial,sans-serif!important;
+  padding:9px 6px 3px!important;
+}
+html[data-kolfat-page="guide-article"] body .guide-outcome{
+  border-inline-start:4px solid #ff812e!important;
+  padding:14px 17px!important;border-radius:7px!important;
+  background:rgba(255,129,46,.09)!important;
+}
+html[data-kolfat-page="guide-article"] body a:focus-visible{outline:2px solid #ff812e;outline-offset:3px}
+@media(max-width:860px){
+  html[data-kolfat-page="guide-index"] body .kf-guides-grid{grid-template-columns:1fr!important}
+  html[data-kolfat-page="guide-article"] body .kf-guide-roadmap-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:600px){
+  html[data-kolfat-page^="guide-"] body main{width:calc(100% - 28px)!important;padding:25px 0 66px!important}
+  html[data-kolfat-page="guide-index"] body .kf-guides-hero{padding:30px 0 32px!important}
+  html[data-kolfat-page="guide-index"] body .kf-guide-card{padding:22px!important;min-height:0!important}
+  html[data-kolfat-page="guide-article"] body main>.hero{padding:25px 0 22px!important}
+  html[data-kolfat-page="guide-article"] body .kf-guide-roadmap{padding:15px!important}
+  html[data-kolfat-page="guide-article"] body .kf-guide-roadmap-grid{grid-template-columns:1fr!important}
+  html[data-kolfat-page="guide-article"] body .section{padding:22px 18px!important}
+  html[data-kolfat-page="guide-article"] body .kf-lesson-icon{width:43px;height:43px;flex-basis:43px}
+  html[data-kolfat-page="guide-article"] body .kf-lesson-icon svg{width:23px;height:23px}
+}
+@media(prefers-reduced-motion:reduce){
+  html[data-kolfat-page="guide-index"] body .kf-guide-card{transition:none!important}
+  html[data-kolfat-page="guide-index"] body .kf-guide-card:hover{transform:none!important}
+}

@@ -406,3 +406,149 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
 
 /* Privacy-first GA4 integration, shared by all website pages and tools. */
 (() => { const tag=document.createElement("script"); tag.src="/assets/kolfat-ga4-consent.js?v=20261027-1"; tag.defer=true; document.head.appendChild(tag); })();
+
+/* KOLFAT Guides: approved card design and accessible localized guide hub.
+ * Source guide content and destinations are read from the page's existing cards. */
+(()=>{
+"use strict";
+const paths=[
+'<path d="M4 4.5c2.8-1 5.4-.8 8 .7 2.6-1.5 5.2-1.7 8-.7v15c-2.8-1-5.4-.8-8 .8-2.6-1.6-5.2-1.8-8-.8Z"/><path d="M12 5.2v15"/>',
+'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/>',
+'<path d="M3 8V5h7l3 3h8v12H3Z"/><path d="M7 12h10M7 16h7"/>',
+'<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
+'<rect x="4" y="2" width="7" height="18" rx="2"/><path d="M7 17h1M17 4v13M14 14l3 3 3-3"/>',
+'<path d="M4 5h16v16H4Z"/><path d="M8 10h9M8 14h9M8 18h6"/>'
+];
+const localization={
+en:["Practical guides","READ GUIDE"],de:["Praktische Anleitungen","ANLEITUNG LESEN"],fa:["راهنمای کاربردی","مطالعهٔ راهنما"],es:["Guías prácticas","LEER GUÍA"],fr:["Guides pratiques","LIRE LE GUIDE"],pt:["Guias práticos","LER GUIA"],it:["Guide pratiche","LEGGI GUIDA"],ja:["実践ガイド","ガイドを読む"],zh:["实用指南","阅读指南"],hi:["व्यावहारिक गाइड","गाइड पढ़ें"],ru:["Практические руководства","ЧИТАТЬ"],ar:["أدلة عملية","قراءة الدليل"]
+};
+const stripVersion=x=>x.replace(/MEDIA KOLFAT\s+2\.0/g,"MEDIA KOLFAT");
+function init(){
+ const main=document.querySelector("main");
+ if(!main)return;
+ const u=location.pathname;
+ if(!/\/(?:guides)(?:\/|$)/.test(u))return;
+ const lang=(document.documentElement.lang||"en").split("-")[0];
+ const labels=localization[lang]||localization.en;
+ const isHub=/\/guides\/?$/.test(u);
+ document.documentElement.dataset.kolfatPage=isHub?"guide-index":"guide-article";
+ if(isHub){
+  main.classList.add("kf-guides-hub");
+  const hero=main.querySelector(":scope > .hero");
+  if(hero){
+   hero.classList.add("kf-guides-hero");
+   const pills=document.createElement("div");pills.className="kf-guides-pills";
+   for(const txt of ["06 "+labels[0],"MEDIA KOLFAT · WINDOWS"]){
+    const pill=document.createElement("span");pill.className="kf-guide-pill";pill.textContent=txt;pills.append(pill);
+   }
+   hero.append(pills);
+  }
+  const section=main.querySelector(":scope > .section"),grid=section?.querySelector(":scope > .grid");
+  if(!section||!grid)return;
+  section.classList.add("kf-guides-section");
+  const title=document.createElement("h2");title.className="kf-guides-section-head";title.textContent=labels[0];grid.before(title);
+  grid.classList.add("kf-guides-grid");
+  const cards=[...grid.querySelectorAll(":scope > article.card")];
+  if(cards.length!==6)return;
+  cards.forEach((card,i)=>{
+   const h=card.querySelector("h2"),p=card.querySelector("p"),a=card.querySelector("a[href]");
+   if(!h||!p||!a)return;
+   const dest=a.getAttribute("href"),name=stripVersion(h.textContent.trim()),body=p.textContent.trim();
+   const link=document.createElement("a");link.className="kf-guide-card";link.href=dest;
+   const top=document.createElement("div");top.className="kf-guide-card-top";
+   const icon=document.createElement("span");icon.className="kf-guide-card-icon";
+   icon.setAttribute("aria-hidden","true");icon.innerHTML='<svg viewBox="0 0 24 24">'+paths[i]+'</svg>';
+   const type=document.createElement("span");type.className="kf-guide-card-tag";type.textContent=labels[0];
+   const no=document.createElement("span");no.className="kf-guide-card-index";no.textContent=String(i+1).padStart(2,"0");
+   top.append(icon,type,no);
+   const heading=document.createElement("h2");heading.textContent=name;
+   const desc=document.createElement("p");desc.textContent=body;
+   const cta=document.createElement("span");cta.className="kf-guide-card-cta";cta.textContent=labels[1];
+   link.append(top,heading,desc,cta);card.replaceWith(link);
+  });
+ } else {
+  const h=main.querySelector(":scope > .hero h1");
+  if(h)h.textContent=stripVersion(h.textContent);
+  const eyebrow=main.querySelector(":scope > .hero .eyebrow");
+  if(eyebrow&&eyebrow.textContent.trim()==="MEDIA KOLFAT 2.0")eyebrow.textContent="MEDIA KOLFAT";
+ }
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});else init();
+})();
+
+/* Visual guidance for real KOLFAT articles. No external services and no invented steps. */
+(()=>{
+"use strict";
+const icons=[
+ '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/>',
+ '<path d="M3 8V5h7l3 3h8v12H3Z"/><path d="M7 12h10M7 16h7"/>',
+ '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
+ '<path d="M5 7h14M7 12h10M8 17h8"/><path d="m4 7 3-3M20 7l-3-3"/>',
+ '<path d="M4 19V5h16v14H4Z"/><path d="m7 15 3-3 3 2 4-5"/>',
+ '<path d="M12 2 20 6v6c0 5-3 8-8 10-5-2-8-5-8-10V6l8-4Z"/><path d="m8 12 3 3 5-6"/>'
+];
+const words={
+en:["Visual guide map","Choose a step to jump to that part of the guide"],
+de:["Visueller Leitfaden","Schritt auswählen und zum Abschnitt springen"],
+fa:["نقشهٔ تصویری راهنما","برای رفتن به بخش موردنظر، مرحله را انتخاب کنید"],
+es:["Mapa visual de la guía","Elige un paso para ir directamente a esa sección"],
+fr:["Parcours visuel","Choisissez une étape pour accéder à la section"],
+pt:["Mapa visual do guia","Escolha uma etapa para ir para essa secção"],
+it:["Percorso visivo","Scegli una fase per passare alla sezione"],
+ja:["ガイドの手順一覧","手順を選ぶと、その項目に移動できます"],
+zh:["可视化步骤导航","选择步骤即可跳转到对应部分"],
+hi:["विज़ुअल गाइड","किसी चरण को चुनकर उस भाग पर जाएँ"],
+ru:["Наглядная карта руководства","Выберите шаг для перехода к нужному разделу"],
+ar:["خريطة الدليل المرئية","اختر خطوة للانتقال إلى القسم المطلوب"]
+};
+function create(){
+ const html=document.documentElement;
+ if(html.dataset.kolfatPage!=="guide-article")return;
+ const main=document.querySelector("main"),hero=main?.querySelector(":scope > .hero");
+ if(!main||!hero||main.querySelector(".kf-guide-roadmap"))return;
+ const lang=(html.lang||"en").split("-")[0];
+ const w=words[lang]||words.en;
+ const chapters=[...main.querySelectorAll(":scope > section.section")].filter(s=>s.querySelector("h2"));
+ if(!chapters.length)return;
+ let counter=0;
+ const steps=[];
+ for(const section of chapters){
+   const h=section.querySelector("h2");if(!h)continue;
+   if(section.classList.contains("guide-contents"))continue;
+   const raw=h.textContent.trim();
+   const title=raw.replace(/^\\d+[.)]\\s*/,"");
+   if(!section.id)section.id="guide-topic-"+String(++counter).padStart(2,"0");
+   section.classList.add("kf-lesson-section");
+   const head=document.createElement("div");head.className="kf-lesson-heading";
+   const symbol=document.createElement("span");symbol.className="kf-lesson-icon";
+   symbol.setAttribute("aria-hidden","true");
+   symbol.innerHTML='<svg viewBox="0 0 24 24">'+icons[steps.length%icons.length]+'</svg>';
+   h.before(head);head.append(symbol,h);
+   steps.push({id:section.id,title});
+ }
+ if(!steps.length)return;
+ const nav=document.createElement("nav");nav.className="kf-guide-roadmap";
+ nav.setAttribute("aria-label",w[0]);
+ const heading=document.createElement("h2");heading.textContent=w[0];
+ const grid=document.createElement("div");grid.className="kf-guide-roadmap-grid";
+ for(const [i,step] of steps.entries()){
+   const link=document.createElement("a");link.href="#"+step.id;
+   const number=document.createElement("span");number.className="kf-guide-roadmap-num";number.textContent=String(i+1).padStart(2,"0");
+   const label=document.createElement("span");label.textContent=step.title;link.append(number,label);grid.append(link);
+ }
+ nav.append(heading,grid);
+ const hint=document.createElement("p");hint.textContent=w[1];hint.style.color="#bdbdb8";hint.style.margin="0 0 17px";
+ nav.insertBefore(hint,grid);
+ const progress=document.createElement("div");progress.className="kf-guide-progress";
+ progress.setAttribute("aria-hidden","true");const bar=document.createElement("span");progress.append(bar);
+ hero.after(progress,nav);
+ let busy=false;
+ const redraw=()=>{busy=false;const doc=document.documentElement;
+   const total=Math.max(1,doc.scrollHeight-doc.clientHeight);
+   bar.style.width=Math.min(100,Math.max(0,Math.round(100*doc.scrollTop/total)))+"%";
+ };
+ const update=()=>{if(!busy){busy=true;requestAnimationFrame(redraw)}};
+ addEventListener("scroll",update,{passive:true});addEventListener("resize",update,{passive:true});update();
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",create,{once:true});else create();
+})();
