@@ -25,37 +25,56 @@
   else init();
 })();
 
-/* Global stand-alone KOLFAT Online Tools CTA, all site languages. */
+/* KOLFAT Online Tools: last button in the shared top bar on every route. */
 (() => {
- const labels = {"en":"KOLFAT Online Tools","fa":"ابزارهای آنلاین KOLFAT","de":"KOLFAT Online-Tools","fr":"Outils en ligne KOLFAT","es":"Herramientas en línea KOLFAT","pt":"Ferramentas online KOLFAT","it":"Strumenti online KOLFAT","ja":"KOLFAT オンラインツール","zh":"KOLFAT 在线工具","hi":"KOLFAT ऑनलाइन टूल्स","ru":"Онлайн-инструменты KOLFAT","ar":"أدوات KOLFAT عبر الإنترنت"};
- const css = `
-html body a.kolfat-tools-direct{box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;min-height:48px!important;padding:11px 18px!important;background:#ff812e!important;color:#080808!important;border:1px solid #ffa763!important;border-radius:10px!important;box-shadow:0 8px 26px rgba(0,0,0,.45)!important;font:750 14px/1.3 "Segoe UI",Arial,sans-serif!important;letter-spacing:0!important;text-decoration:none!important;text-transform:none!important;white-space:normal!important;max-width:min(320px,calc(100vw - 24px));text-align:center!important;cursor:pointer!important;pointer-events:auto!important;z-index:100020!important}
-html body a.kolfat-tools-direct:hover{background:#ffb073!important;color:#080808!important}
-html body a.kolfat-tools-direct:focus-visible{outline:3px solid white!important;outline-offset:3px!important}
-html body .kolfat-tools-direct .tools-lang{font-size:10px;background:rgba(0,0,0,.13);padding:3px 4px;border-radius:4px}
-html body .kolfat-tools-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;max-width:100%;direction:inherit}
-html body .kolfat-tools-actions>.btn{margin:0!important}
-html body a.kolfat-tools-direct--floating{position:fixed!important;right:16px;bottom:16px}
-html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
-@media(max-width:640px){html body .kolfat-tools-actions>a.kolfat-tools-direct{position:fixed!important;right:12px!important;left:auto!important;bottom:12px!important;min-height:44px!important;padding:10px 14px!important;font-size:12px!important;max-width:min(280px,calc(100vw - 24px))}html[dir="rtl"] body .kolfat-tools-actions>a.kolfat-tools-direct{right:auto!important;left:12px!important}html body a.kolfat-tools-direct--floating{right:12px;bottom:12px;font-size:12px!important}html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:12px}}
-`;
- const init = () => {
-   if (document.querySelector("a.kolfat-tools-direct")) return;
-   const lang=(document.documentElement.lang||"en").toLowerCase().split("-")[0];
-   const label=labels[lang]||labels.en;
-   const style=document.createElement("style");style.textContent=css;document.head.append(style);
-   const a=document.createElement("a");a.className="kolfat-tools-direct";a.href=(lang==="de"||lang==="fa"||lang==="fr"||lang==="es")?"/"+lang+"/tools/":"/tools/";a.dir="auto";a.setAttribute("aria-label",label+(lang==="de"?" (deutsche Werkzeugoberfläche)":lang==="fa"?" (رابط فارسی ابزارها)":lang==="fr"?" (interface française des outils)":lang==="es"?" (interfaz de herramientas en español)":lang==="en"?"":" (English tools interface)"));
-   const span=document.createElement("span");span.textContent=label;a.append(span);
-   if(lang!=="en"&&lang!=="de"&&lang!=="fa"&&lang!=="fr"&&lang!=="es"){const badge=document.createElement("small");badge.className="tools-lang";badge.textContent="EN";badge.title="Tools currently in English";a.append(badge);}
-   const arrow=document.createElement("span");arrow.textContent="↗";arrow.setAttribute("aria-hidden","true");a.append(arrow);
-   const hero=document.querySelector('html[data-kolfat-page="home"] .hero-copy');
-   const start=hero?.querySelector('a.btn[href*="/Media_Kolfat/"]');
-   if(start){
-     const container=document.createElement("div");container.className="kolfat-tools-actions";
-     start.parentNode.insertBefore(container,start);container.append(start,a);
-   }else{a.classList.add("kolfat-tools-direct--floating");document.body.append(a);}
- };
- if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});else init();
+  "use strict";
+  const labels = {
+    en: "KOLFAT Online Tools", fa: "ابزارهای آنلاین KOLFAT",
+    de: "KOLFAT Online-Tools", fr: "Outils en ligne KOLFAT",
+    es: "Herramientas en línea KOLFAT", pt: "Ferramentas online KOLFAT",
+    it: "Strumenti online KOLFAT", ja: "KOLFAT オンラインツール",
+    zh: "KOLFAT 在线工具", hi: "KOLFAT ऑनलाइन टूल्स",
+    ru: "Онлайн-инструменты KOLFAT", ar: "أدوات KOLFAT عبر الإنترنت"
+  };
+  const shortLabels = {
+    en: "TOOLS", fa: "ابزارها", de: "TOOLS", fr: "OUTILS",
+    es: "HERRAMIENTAS", pt: "FERRAMENTAS", it: "STRUMENTI",
+    ja: "ツール", zh: "工具", hi: "टूल्स", ru: "ИНСТРУМЕНТЫ", ar: "الأدوات"
+  };
+  const init = () => {
+    const nav = document.querySelector(".top-nav");
+    if (!nav) return;
+    const lang = (document.documentElement.lang || "en").toLowerCase().split("-")[0];
+    const label = labels[lang] || labels.en;
+    const href = ["de","fa","fr","es"].includes(lang) ? "/" + lang + "/tools/" : "/tools/";
+    let link = document.querySelector("a.kolfat-tools-direct");
+    if (!link) {
+      link = document.createElement("a");
+      link.className = "kolfat-tools-direct";
+    }
+    link.classList.remove("kolfat-tools-direct--floating");
+    link.href = href;
+    link.dir = "auto";
+    link.setAttribute("aria-label", label);
+    link.title = label;
+    link.replaceChildren();
+    const symbol = document.createElement("span");
+    symbol.className = "tools-icon";
+    symbol.textContent = "🧰";
+    symbol.setAttribute("aria-hidden", "true");
+    const full = document.createElement("span");
+    full.className = "tools-label";
+    full.textContent = label;
+    const short = document.createElement("span");
+    short.className = "tools-short";
+    short.textContent = shortLabels[lang] || shortLabels.en;
+    link.append(symbol, full, short);
+    // Append after the menu and language controls; this is always the last button.
+    nav.append(link);
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init, { once: true });
+  } else init();
 })();
 
 
@@ -515,7 +534,7 @@ html[dir="rtl"] body a.kolfat-tools-direct--floating{right:auto;left:16px}
 })();
 
 /* German-first tool localization: English tools link to German counterparts. */
-(()=>{const add=()=>{if(document.documentElement.lang!=="en"||!location.pathname.startsWith("/tools/"))return;const nav=document.querySelector(".top-nav");if(!nav||nav.querySelector(".kf-tools-language"))return;const d=document.createElement("details");d.className="lang-menu kf-tools-language";const summary=document.createElement("summary");summary.textContent="🌐 EN ▾";summary.setAttribute("aria-label","Tools language");const list=document.createElement("nav");list.className="lang-list";for(const [code,label] of [["en","✓ English"],["de","Deutsch"],["fa","فارسی"],["fr","Français"],["es","Español"]]){const a=document.createElement("a");a.textContent=label;a.href=code==="en"?location.pathname:"/"+code+location.pathname;list.append(a);}d.append(summary,list);nav.append(d);d.addEventListener("toggle",()=>{if(d.open)for(const other of nav.querySelectorAll("details"))if(other!==d)other.open=false;});};if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",add,{once:true});else add();})();
+(()=>{const add=()=>{if(document.documentElement.lang!=="en"||!location.pathname.startsWith("/tools/"))return;const nav=document.querySelector(".top-nav");if(!nav||nav.querySelector(".kf-tools-language"))return;const d=document.createElement("details");d.className="lang-menu kf-tools-language";const summary=document.createElement("summary");summary.textContent="🌐 EN ▾";summary.setAttribute("aria-label","Tools language");const list=document.createElement("nav");list.className="lang-list";for(const [code,label] of [["en","✓ English"],["de","Deutsch"],["fa","فارسی"],["fr","Français"],["es","Español"]]){const a=document.createElement("a");a.textContent=label;a.href=code==="en"?location.pathname:"/"+code+location.pathname;list.append(a);}d.append(summary,list);nav.insertBefore(d,nav.querySelector("a.kolfat-tools-direct"));d.addEventListener("toggle",()=>{if(d.open)for(const other of nav.querySelectorAll("details"))if(other!==d)other.open=false;});};if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",add,{once:true});else add();})();
 
 /* Privacy-first GA4 integration, shared by all website pages and tools. */
 (() => { const tag=document.createElement("script"); tag.src="/assets/kolfat-ga4-consent.js?v=20261027-1"; tag.defer=true; document.head.appendChild(tag); })();
