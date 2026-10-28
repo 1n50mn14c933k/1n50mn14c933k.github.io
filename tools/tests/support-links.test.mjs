@@ -11,17 +11,30 @@ function walk(url){
   return e.isDirectory()?walk(u):e.name==="index.html"?[u]:[];
  });
 }
-test("one shared header support initializer and safe Ko-fi destination",()=>{
+test("global Ko-fi maid CTA works on desktop and has translated accessible mobile reveal",()=>{
  const js=read("assets/nav-dropdown.js"),css=read("assets/nav-dropdown.css");
- assert.match(js,/querySelector\("\.top-nav"\)/);
- assert.match(js,/kolfat-support-link/);
- assert.match(js,/insertBefore\(link, nav.firstElementChild\)/);
- assert.match(js,/link\.href = "https:\/\/ko-fi\.com\/kolfat_app"/);
- assert.match(js,/link\.rel = "noopener noreferrer"/);
- assert.match(js,/link\.setAttribute\("aria-label",/);
- assert.match(css,/\.top-nav > a\.kolfat-support-link/);
- assert.match(css,/@media\(max-width:640px\)/);
- assert.match(css,/focus-visible/);
+ assert.ok(js.includes('querySelector(".top-nav")'));
+ assert.ok(js.includes("kolfat-support-link"));
+ assert.ok(js.includes('const url = "https://ko-fi.com/kolfat_app"'));
+ assert.ok(js.includes("desktop.href = url"));
+ assert.ok(js.includes("donate.href = url"));
+ assert.ok(js.includes('desktop.rel = "noopener noreferrer"'));
+ assert.ok(js.includes('donate.rel = "noopener noreferrer"'));
+ assert.ok(js.includes("Keep Our Maid Alive, Strong & Cleaning!"));
+ for(const lang of ["en","fa","de","fr","es","pt","it","ja","zh","hi","ru","ar"])
+  assert.ok(js.includes(lang+": "), "Missing translated label for "+lang);
+ assert.ok(js.includes("kolfat-support-mobile-toggle"));
+ assert.ok(js.includes("kolfat-support-mobile-panel"));
+ assert.ok(js.includes('toggle.addEventListener("click"'));
+ assert.ok(js.includes("panel.hidden = !opening"));
+ assert.ok(js.includes("aria-expanded"));
+ assert.ok(js.includes("aria-controls"));
+ assert.ok(js.includes('event.key === "Escape"'));
+ assert.ok(css.includes(".top-nav > a.kolfat-support-link"));
+ assert.ok(css.includes(".top-nav > button.kolfat-support-mobile-toggle"));
+ assert.ok(css.includes(".kolfat-support-mobile-panel[hidden]"));
+ assert.ok(css.includes("@media(max-width:900px)"));
+ assert.ok(css.includes("focus-visible"));
 });
 test("every visible website HTML page includes shared nav code and MENU control",()=>{
  const pages=walk(root),issues=[];let checked=0;
