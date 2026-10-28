@@ -3,7 +3,7 @@ import re
 
 # Apply the upgraded shared navigation to every published page, all locales
 # and all tools, without touching content, metadata or other styling.
-version = "20261028-guides-visual1"
+version = "20261028-header-maid2"
 pages = sorted(Path(".").rglob("index.html"))
 seen = 0
 updated = 0
