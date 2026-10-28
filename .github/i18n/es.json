@@ -185,32 +185,32 @@
       ]
     },
     {
-      "title": "Cómo elegir un organizador de fotos para Windows",
-      "intro": "La seguridad y la claridad importan más que una lista extensa de funciones.",
+      "title": "Organizador de fotos para PC: cómo elegirlo | KOLFAT",
+      "intro": "Cómo elegir un organizador de fotos para PC con copias seguras, carpetas por fecha, detección de duplicados y procesamiento local en Windows.",
       "steps": [
         [
           "Procesamiento local",
-          "Averigua si tus fotos deben subirse a Internet."
+          "Antes de elegir un programa para organizar fotos en tu PC, comprueba si funciona sin subir tu biblioteca a un servicio externo. El procesamiento local es especialmente útil para álbumes familiares y archivos personales. Revisa también si la herramienta muestra claramente qué carpetas y unidades va a analizar."
         ],
         [
           "Modo de copia",
-          "Debe permitir ordenar sin borrar la fuente original."
+          "Un buen organizador debe ofrecer COPIAR como opción inicial y mantener intactos los originales mientras compruebas el resultado. MOVER puede ser útil después, pero conviene activarlo de forma explícita. Haz primero una prueba con una carpeta pequeña antes de organizar toda la colección."
         ],
         [
           "Carpetas transparentes",
-          "El archivo debe poder leerse fuera de la aplicación."
+          "Busca un programa que permita ordenar fotos por fecha y guardarlas en carpetas normales, por ejemplo Fotos/2026/10. El resultado debe poder abrirse desde el Explorador de archivos de Windows, sin depender de una base de datos cerrada. Los archivos que no tengan una fecha fiable deben quedar identificados para revisarlos."
         ],
         [
           "Duplicados exactos",
-          "Las comprobaciones deben ir más allá de los nombres."
+          "Para encontrar fotos duplicadas no basta con comparar nombres: dos archivos llamados IMG_0001.JPG pueden ser diferentes. La comparación mediante hash SHA-256 sirve para detectar duplicados exactos, pero una foto editada o comprimida puede requerir otra revisión. Conserva siempre al menos una copia fiable."
         ],
         [
           "Informes e historial",
-          "Es importante entender qué ocurrió en cada operación."
+          "Cuando organizas miles de fotos y vídeos, necesitas saber qué se ha copiado, qué se ha omitido y qué requiere atención. Prefiere herramientas que muestren el progreso, permitan pausar o cancelar y ofrezcan informes o un historial de actividad. Revisa los resultados antes de eliminar archivos de origen."
         ],
         [
           "Facilidad de uso",
-          "Los pasos guiados y controles legibles sirven a más usuarios."
+          "Una interfaz clara, instrucciones paso a paso y controles legibles son especialmente útiles para principiantes. MEDIA KOLFAT ofrece modos guiado y avanzado para Windows, organización local, búsqueda de duplicados y revisión de la biblioteca. Prueba primero una operación de copia con unas pocas fotos."
         ]
       ]
     }

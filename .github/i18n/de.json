@@ -65,32 +65,32 @@
   },
   "guides": [
     {
-      "title": "Fotos unter Windows nach Datum sortieren",
-      "intro": "Datumsbasierte Ordner machen umfangreiche Mediensammlungen verständlicher. Wichtig sind verlässliche Zeitangaben, Backups und eine abschließende Kontrolle.",
+      "title": "Fotos nach Datum sortieren unter Windows | KOLFAT",
+      "intro": "Fotos nach Aufnahmedatum sortieren: Organisieren Sie Bilder und Videos unter Windows nach Jahr und Monat. Mit EXIF-Daten, Backup und sicherer Duplikatprüfung.",
       "steps": [
         [
           "Zuerst sichern",
-          "Bewahren Sie eine unabhängige Kopie unersetzlicher Aufnahmen auf."
+          "Bevor Sie Fotos unter Windows nach Datum sortieren, sichern Sie die Originale auf einer zweiten Festplatte oder an einem anderen unabhängigen Speicherort. Prüfen Sie, ob sich einige Dateien aus der Sicherung öffnen lassen. Arbeiten Sie beim ersten Durchlauf nur mit einer Kopie, damit keine unersetzlichen Aufnahmen verloren gehen."
         ],
         [
           "Passendes Datum verwenden",
-          "Nutzen Sie zuverlässige Aufnahmemetadaten; Dateisystem-Zeitstempel können abweichen."
+          "Bei Smartphone- und Kamerafotos ist das EXIF-Aufnahmedatum häufig hilfreicher als das Änderungsdatum in Windows. Beim Kopieren, Herunterladen oder Bearbeiten können Dateisystem-Zeitstempel verändert werden. Fehlen verlässliche Metadaten, sollten die betreffenden Bilder zur manuellen Prüfung getrennt bleiben, statt ihnen ein erfundenes Datum zuzuweisen."
         ],
         [
           "Ordnerstruktur festlegen",
-          "Jahr, Monat und Tag ergeben eine gut lesbare Struktur."
+          "Eine übersichtliche Ordnerstruktur ist beispielsweise Fotos/2026/10 oder Fotos/2026/10/28. Verwenden Sie für alle Geräte dasselbe Schema und planen Sie einen eigenen Ordner für Fotos ohne zuverlässiges Aufnahmedatum ein. So bleibt eine große Sammlung auch ohne bestimmte Software nachvollziehbar."
         ],
         [
           "Anfangs kopieren",
-          "Erstellen Sie neue Ordner, ohne Originaldateien sofort zu verschieben."
+          "Wer Bilder chronologisch sortieren möchte, beginnt am besten mit einem kleinen Testordner und wählt zunächst Kopieren statt Verschieben. Vergleichen Sie Quell- und Zielordner, bevor Sie ganze Laufwerke einbeziehen. MEDIA KOLFAT bietet einen geführten Kopierablauf; das Verschieben ist eine bewusst auszuwählende Option im erweiterten Modus."
         ],
         [
           "Duplikate getrennt behandeln",
-          "Gleiche Namen beweisen keine Identität; Dateihashes sind aussagekräftiger."
+          "Gleiche Dateinamen wie IMG_0001.JPG bedeuten nicht, dass Dateien identisch sind. Ein SHA-256-Hash hilft, echte Byte-für-Byte-Duplikate zu erkennen; bearbeitete oder verkleinerte Bilder können trotz ähnlicher Darstellung unterschiedlich sein. Prüfen Sie die Duplikatgruppen und bewahren Sie mindestens eine verlässliche Kopie auf."
         ],
         [
           "Ergebnis prüfen",
-          "Kontrollieren Sie Stichproben, Dateianzahl, Berichte und fehlende Datumsangaben."
+          "Öffnen Sie Stichproben aus mehreren Jahren und von verschiedenen Geräten. Vergleichen Sie Dateianzahlen und überprüfen Sie Videos, Dateien ohne Aufnahmedatum und Duplikatberichte. Entfernen Sie Quelldateien erst, wenn das Ergebnis und eine unabhängige Sicherung kontrolliert wurden."
         ]
       ]
     },
