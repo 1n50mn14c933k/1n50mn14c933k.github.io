@@ -5,7 +5,7 @@ NAME = "مدیا کلفت"
 TARGETS = ("fa", "ar")
 legacy = re.compile(r"MEDIA KOLFAT|Media Kolfat|مدیا کولفات|ميديا كولفات|ميديا كلفت|میدیا کلفت")
 # Preserve literal Windows UI / output folder labels that must match the app.
-protected = re.compile(r"<bdi\\b[^>]*>.*?</bdi>", re.S | re.I)
+protected = re.compile(r"<bdi\b[^>]*>.*?</bdi>", re.S | re.I)
 changed = 0
 for lang in TARGETS:
     for p in sorted(Path(lang).rglob("*.html")):
