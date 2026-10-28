@@ -331,3 +331,21 @@ html body .top-nav details[open] > .lang-list{max-height:min(70vh,580px)!importa
 @media(prefers-reduced-motion:reduce){
   html body .top-nav .menu-chevron{transition:none!important}
 }
+
+/* FIXED-HEADER CLEARANCE (2026-10-28)
+ * Legacy legal/support pages use a fixed body-level brand, unlike modern sticky
+ * header pages. The shared generic main padding was overriding their 140px
+ * reserved title clearance and placing H1 behind the 72px fixed navigation.
+ * Restore the intended room only when the logo is outside document flow.
+ * Leave home, product and tool hero compositions completely unchanged.
+ */
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body > a.site-logo ~ main,
+html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body > a.guide-site-logo ~ main {
+  padding-top: 140px !important;
+}
+@media (max-width: 720px) {
+  html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body > a.site-logo ~ main,
+  html:not([data-kolfat-page="home"]):not([data-kolfat-page="product"]):not([data-kolfat-page="tool"]) body > a.guide-site-logo ~ main {
+    padding-top: 110px !important;
+  }
+}
