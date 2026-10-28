@@ -24,7 +24,7 @@ class Extract(HTMLParser):
   if not self.hidden:self.parts.append(data)
 patterns={
  "old-version":re.compile(r"(?<![0-9])(?:v)?1\.(?:0|2|4|6)\.0(?:\.0)?(?!\d)",re.I),
- "current-1.8":re.compile(r"(?<![0-9])(?:v)?1\.8\.0(?:\.0)?(?!\d)",re.I),
+ "current-2.0":re.compile(r"(?<![0-9])(?:v)?2\.0\.0(?:\.0)?(?!\d)",re.I),
  "copy-only":re.compile(r"\b(?:copy.only|copy only|only copy|copy.mode only|exclusively cop(?:y|ies)|copy without move)\b",re.I),
  "coming-soon":re.compile(r"\b(?:coming soon|not yet available|not yet released|launching soon|currently in development|planned feature|future update)\b",re.I),
  "old-features":re.compile(r"\b(?:albums|tagging|tags|face recognition|face tagging)\b",re.I),
@@ -40,7 +40,7 @@ for p in pages:
   for k in m[:4]:
    a=max(0,k.start()-85);b=min(len(s),k.end()+115)
    if len(hits[kind])<160:hits[kind].append((pathfor(p),s[a:b]))
- if "Media_Kolfat/index.html" in pathfor(p) and not patterns["current-1.8"].search(s):main_no_version.append(pathfor(p))
+ if "Media_Kolfat/index.html" in pathfor(p) and not patterns["current-2.0"].search(s):main_no_version.append(pathfor(p))
  for link in e.links:
   parsed=urlparse(link);path=unquote(parsed.path)
   if parsed.scheme and (parsed.scheme not in ("http","https") or parsed.netloc not in ("kolfat.app","www.kolfat.app")):continue
@@ -52,7 +52,7 @@ for p in pages:
    broken.append((pathfor(p),link))
 print("HTML_PAGES",len(pages))
 print("COUNTS",json.dumps(counts))
-print("PRODUCT_PAGES_WITHOUT_1.8",json.dumps(main_no_version))
+print("PRODUCT_PAGES_WITHOUT_2.0_REFERENCE",json.dumps(main_no_version))
 for kind in ("old-version","copy-only","coming-soon","old-features","workflow","policy"):
  print("===",kind.upper(),"HITS",len(hits[kind]))
  for path,snip in hits[kind][:70 if kind!="workflow" else 12]:
@@ -62,5 +62,5 @@ for path,link in broken[:90]:print("LINK",path,"->",link)
 for p in [Path("README.md"),Path("docs/NAVIGATION.md")]:
  if p.exists():
   c=p.read_text()
-  for ver in ("1.0.0","1.2.0","1.4.0","1.6.0","1.8.0"):
+  for ver in ("1.0.0","1.2.0","1.4.0","1.6.0","1.8.0","2.0.0"):
    if ver in c:print("DOC_VERSION",p,ver,c.count(ver))
