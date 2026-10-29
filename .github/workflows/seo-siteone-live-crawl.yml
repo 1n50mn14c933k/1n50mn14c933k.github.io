@@ -101,8 +101,20 @@ jobs:
             --output-text-file=reports/siteone-report.txt \
             2>&1 | tee reports/crawl-console.txt
 
-      - name: Generate conservative SEO action plan
+      - name: Verify crawler actually fetched the website
+        id: validity
         if: always()
+        shell: bash
+        run: |
+          if test -s reports/siteone-report.json && test -s reports/seed-urls.txt; then
+            python3 .github/scripts/seo_crawl_coverage.py reports/siteone-report.json reports/seed-urls.txt --summary reports/seo-crawl-validity.md
+          else
+            echo "::error::Missing crawler results or sitemap seeds; audit cannot be trusted."
+            exit 1
+          fi
+
+      - name: Generate conservative SEO action plan
+        if: steps.validity.outcome == 'success'
         shell: bash
         run: |
           if test -s reports/siteone-report.json; then
