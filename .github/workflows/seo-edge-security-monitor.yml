@@ -1,0 +1,50 @@
+name: KOLFAT Security - Live Edge Monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekly after offline SEO integrity scan.
+    - cron: '37 3 * * 0'
+  pull_request:
+    paths:
+      - '.github/scripts/seo_edge_security_monitor.py'
+      - '.github/scripts/test_seo_edge_security_monitor.py'
+      - '.github/workflows/seo-edge-security-monitor.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kolfat-edge-security-monitor
+  cancel-in-progress: false
+
+jobs:
+  edge:
+    name: Check HTTPS headers and TLS
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Run offline monitor unit tests
+        run: python3 -m unittest discover -s .github/scripts -p 'test_seo_edge_security_monitor.py' -v
+      - name: Perform read-only edge security probes
+        if: github.event_name != 'pull_request'
+        run: python3 .github/scripts/seo_edge_security_monitor.py --output edge-security-report.md --json edge-security-report.json
+      - name: Publish monitor report
+        if: always() && github.event_name != 'pull_request'
+        run: |
+          if test -f edge-security-report.md; then
+            cat edge-security-report.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload reports
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: kolfat-live-edge-security-report
+          path: |
+            edge-security-report.md
+            edge-security-report.json
+          if-no-files-found: warn
+          retention-days: 14
