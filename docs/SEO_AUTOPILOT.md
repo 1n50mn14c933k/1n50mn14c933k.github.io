@@ -44,3 +44,16 @@ The current `site-content-audit.yml` scans repository HTML for stale wording and
 The weekly workflow runs on Sundays at **03:17 UTC**, plus manual dispatch when desired. On every run it preserves read-only credentials, existing limits (2 requests/sec, 2 workers), and artifacts retained for 14 days. GitHub scheduled Actions are UTC-based and can start later during heavy service load. A successful scan does **not** mean there are no SEO or security findings; review the downloaded report.
 
 The workflow does not automatically remediate issues, create PRs, submit indexing requests, or ingest Google Search Console data. Those tasks require independently reviewed integrations.
+
+## Lightweight edge security monitoring (October 2026)
+
+The workflow `KOLFAT Security - Live Edge Monitor` checks the **proxied Cloudflare HTTPS edge** every Sunday at 03:37 UTC, after the offline SEO integrity audit. It also supports manual dispatch. It sends **one GET** to the English homepage plus TLS handshakes for versions 1.0, 1.1, 1.2 and 1.3. It does not crawl the website or access the Cloudflare API.
+
+- Requires HTTP 200 and identifies Cloudflare edge headers.
+- Verifies `Strict-Transport-Security` max-age at least seven days, `X-Content-Type-Options: nosniff`, and the site's current minimal CSP `object-src 'none'; base-uri 'self'`.
+- Verifies TLS 1.2/1.3 negotiation and attempts to establish that TLS 1.0/1.1 are rejected.
+- Reports **PASS**, **FAIL** or **INCONCLUSIVE** separately. A Cloudflare 403/429 challenge is INCONCLUSIVE, never counted as healthy. Local OpenSSL inability to negotiate legacy TLS is also INCONCLUSIVE, not proof that the remote edge blocks it.
+- Confirmed failures fail the workflow; inconclusive results generate warnings but do not disable security features.
+- Read-only GitHub permissions; reports are available in Markdown and JSON Actions artifacts for 14 days. No secrets, IP allowlists, changes to Cloudflare settings or production content.
+
+The monitor is deliberately small. It does not measure WAF quality, full SEO performance, origin certificates, or comprehensive CSP effectiveness. Actual live results need to be reviewed after the first manual run. This supplements the **offline weekly source audit** and replaces neither browser testing nor the manual SiteOne diagnostic.
