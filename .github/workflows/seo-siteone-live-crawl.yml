@@ -1,11 +1,8 @@
 name: KOLFAT SEO - SiteOne Live Crawl
 
-# Phase 2: read-only baseline. Enable scheduling only after reviewing the first crawl.
+# Manual diagnostic only: Cloudflare Bot Fight Mode challenges GitHub-hosted crawlers.
 on:
   workflow_dispatch:
-  schedule:
-    # Weekly Sunday 03:17 UTC; read-only baseline crawl, no website edits.
-    - cron: '17 3 * * 0'
 
 permissions:
   contents: read
