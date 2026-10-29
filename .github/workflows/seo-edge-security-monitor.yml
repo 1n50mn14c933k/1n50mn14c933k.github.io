@@ -10,6 +10,8 @@ on:
       - '.github/scripts/seo_edge_security_monitor.py'
       - '.github/scripts/test_seo_edge_security_monitor.py'
       - '.github/workflows/seo-edge-security-monitor.yml'
+      - '.github/scripts/cloudflare_config_monitor.py'
+      - '.github/scripts/test_cloudflare_config_monitor.py'
 
 permissions:
   contents: read
@@ -28,15 +30,26 @@ jobs:
         with:
           persist-credentials: false
       - name: Run offline monitor unit tests
-        run: python3 -m unittest discover -s .github/scripts -p 'test_seo_edge_security_monitor.py' -v
+        run: |
+          python3 -m unittest discover -s .github/scripts -p 'test_seo_edge_security_monitor.py' -v
+          python3 -m unittest discover -s .github/scripts -p 'test_cloudflare_config_monitor.py' -v
       - name: Perform read-only edge security probes
         if: github.event_name != 'pull_request'
         run: python3 .github/scripts/seo_edge_security_monitor.py --output edge-security-report.md --json edge-security-report.json
+      - name: Read Cloudflare security settings via API
+        if: github.event_name != 'pull_request'
+        env:
+          CLOUDFLARE_READ_TOKEN: ${{ secrets.CLOUDFLARE_READ_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: python3 .github/scripts/cloudflare_config_monitor.py
       - name: Publish monitor report
         if: always() && github.event_name != 'pull_request'
         run: |
           if test -f edge-security-report.md; then
             cat edge-security-report.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if test -f cloudflare-config-report.md; then
+            cat cloudflare-config-report.md >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload reports
         if: always() && github.event_name != 'pull_request'
@@ -46,5 +59,6 @@ jobs:
           path: |
             edge-security-report.md
             edge-security-report.json
+            cloudflare-config-report.md
           if-no-files-found: warn
           retention-days: 14
