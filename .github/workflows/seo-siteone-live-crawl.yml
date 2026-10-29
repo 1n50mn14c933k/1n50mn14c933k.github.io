@@ -59,6 +59,25 @@ jobs:
           test -x "$CRAWLER"
           echo "SiteOne Crawler v2.5.1 installed and checksum verified"
 
+      - name: Validate CLI options against the installed SiteOne release
+        shell: bash
+        run: |
+          set -euo pipefail
+          CRAWLER="$(find "$RUNNER_TEMP/siteone" -type f -name siteone-crawler -print -quit)"
+          # SiteOne 2.5.1 exits with status 2 for informational --help output.
+          "$CRAWLER" --help > "$RUNNER_TEMP/siteone-help.txt" 2>&1 || test "$?" -eq 2
+          for option in \
+            --url-list --workers --max-reqs-per-sec --max-visited-urls \
+            --timeout --ignore-html-comments --no-cache --no-color \
+            --hide-progress-bar --output-html-report --output-json-file --output-text-file
+          do
+            if ! grep -Fq -- "$option" "$RUNNER_TEMP/siteone-help.txt"; then
+              echo "::error::Unsupported SiteOne CLI option: $option"
+              exit 1
+            fi
+          done
+          echo "All configured SiteOne flags are supported by the pinned release."
+
       - name: Crawl published kolfat.app without modifying it
         shell: bash
         run: |
@@ -73,7 +92,7 @@ jobs:
             --ignore-html-comments \
             --no-cache \
             --no-color \
-            --progress-interval=15 \
+            --hide-progress-bar \
             --output-html-report=reports/siteone-report.html \
             --output-json-file=reports/siteone-report.json \
             --output-text-file=reports/siteone-report.txt \
