@@ -98,6 +98,17 @@ jobs:
             --output-text-file=reports/siteone-report.txt \
             2>&1 | tee reports/crawl-console.txt
 
+      - name: Generate conservative SEO action plan
+        if: always()
+        shell: bash
+        run: |
+          if test -s reports/siteone-report.json; then
+            python3 .github/scripts/seo_audit_triage.py reports/siteone-report.json reports/seo-action-plan.md
+            cat reports/seo-action-plan.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "SiteOne JSON report unavailable; no triage generated."
+          fi
+
       - name: Publish run summary
         if: always()
         shell: bash
