@@ -1,0 +1,109 @@
+name: KOLFAT SEO - SiteOne Live Crawl
+
+# Phase 2: read-only baseline. Enable scheduling only after reviewing the first crawl.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/seo-siteone-live-crawl.yml'
+      - 'docs/SEO_AUTOPILOT.md'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kolfat-seo-siteone
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    name: Read-only live SEO crawl
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout website source (read-only)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Generate crawl seed list from production sitemap
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          root = ET.parse("sitemap.xml").getroot()
+          ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          urls = [el.text.strip() for el in root.findall("sm:url/sm:loc", ns) if el.text]
+          if not urls or len(urls) != len(set(urls)):
+              raise SystemExit("Sitemap is empty or contains duplicate URLs")
+          if any(not url.startswith("https://kolfat.app/") for url in urls):
+              raise SystemExit("Sitemap contains URLs outside the approved HTTPS domain")
+          seeds = ["https://kolfat.app/"] + [url for url in urls if url != "https://kolfat.app/"]
+          Path("reports/seed-urls.txt").write_text("\n".join(seeds) + "\n", encoding="utf-8")
+          print(f"Prepared {len(urls)} unique sitemap URLs and a homepage seed")
+          PY
+
+      - name: Download and verify SiteOne Crawler v2.5.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --max-time 180 \
+            --output "$RUNNER_TEMP/siteone-crawler.tar.gz" \
+            "https://github.com/janreges/siteone-crawler/releases/download/v2.5.1/siteone-crawler-v2.5.1-linux-x64.tar.gz"
+          echo "09278d958d4a087fa46093805cd33b085b96618001dd31d45c448ad724c9024e  $RUNNER_TEMP/siteone-crawler.tar.gz" | sha256sum --check
+          mkdir -p "$RUNNER_TEMP/siteone"
+          tar -xzf "$RUNNER_TEMP/siteone-crawler.tar.gz" -C "$RUNNER_TEMP/siteone"
+          find "$RUNNER_TEMP/siteone" -type f -name siteone-crawler -exec chmod +x {} \;
+          CRAWLER="$(find "$RUNNER_TEMP/siteone" -type f -name siteone-crawler -print -quit)"
+          test -n "$CRAWLER"
+          "$CRAWLER" --version
+
+      - name: Crawl published kolfat.app without modifying it
+        shell: bash
+        run: |
+          set -euo pipefail
+          CRAWLER="$(find "$RUNNER_TEMP/siteone" -type f -name siteone-crawler -print -quit)"
+          "$CRAWLER" \
+            --url-list=reports/seed-urls.txt \
+            --workers=2 \
+            --max-reqs-per-sec=2 \
+            --max-visited-urls=3500 \
+            --timeout=12 \
+            --ignore-html-comments \
+            --no-cache \
+            --no-color \
+            --progress-interval=15 \
+            --output-html-report=reports/siteone-report.html \
+            --output-json-file=reports/siteone-report.json \
+            --output-text-file=reports/siteone-report.txt \
+            2>&1 | tee reports/crawl-console.txt
+
+      - name: Publish run summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## KOLFAT SiteOne live SEO audit"
+            echo
+            echo "- Mode: read-only (no website, Cloudflare, or GitHub modifications)"
+            echo "- Scope: kolfat.app homepage plus URLs from repository sitemap.xml"
+            echo "- Request rate: at most 2 requests per second; 2 concurrent workers"
+            echo "- Reports: downloadable HTML, JSON, TXT and crawl log under Artifacts"
+            echo "- After the first baseline is reviewed, scheduling can be enabled in a separate PR"
+            if test -f reports/seed-urls.txt; then
+              echo "- Prepared crawl seeds: $(wc -l < reports/seed-urls.txt)"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload crawl reports even if crawler detects errors
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2, Node.js 24
+        with:
+          name: kolfat-siteone-seo-baseline
+          path: reports/
+          if-no-files-found: warn
+          retention-days: 14
