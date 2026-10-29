@@ -11,6 +11,7 @@ on:
       - '.github/scripts/test_seo_edge_security_monitor.py'
       - '.github/workflows/seo-edge-security-monitor.yml'
       - '.github/scripts/cloudflare_config_monitor.py'
+      - '.github/scripts/test_cloudflare_config_monitor.py'
 
 permissions:
   contents: read
@@ -29,7 +30,9 @@ jobs:
         with:
           persist-credentials: false
       - name: Run offline monitor unit tests
-        run: python3 -m unittest discover -s .github/scripts -p 'test_seo_edge_security_monitor.py' -v
+        run: |
+          python3 -m unittest discover -s .github/scripts -p 'test_seo_edge_security_monitor.py' -v
+          python3 -m unittest discover -s .github/scripts -p 'test_cloudflare_config_monitor.py' -v
       - name: Perform read-only edge security probes
         if: github.event_name != 'pull_request'
         run: python3 .github/scripts/seo_edge_security_monitor.py --output edge-security-report.md --json edge-security-report.json
