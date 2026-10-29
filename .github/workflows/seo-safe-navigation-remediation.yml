@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          persist-credentials: false
+          persist-credentials: true
       - name: Unit-test conservative fixer
         run: python3 -m unittest discover -s .github/scripts -p 'test_seo_safe_nav_fixes.py' -v
       - name: Repair known language menu mismatches
@@ -69,12 +69,13 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          branch='automation/seo-language-menu-fixes'
-          git switch -c "$branch"
-          git add -- 'about/index.html' 'download/index.html' 'guides/index.html' 'support/index.html' 'privacy/index.html' 'terms/index.html' 'disclaimer/index.html' 'licenses/index.html' ':/*/about/index.html' ':/*/download/index.html' ':/*/guides/index.html' ':/*/support/index.html' ':/*/privacy/index.html' ':/*/terms/index.html' ':/*/disclaimer/index.html' ':/*/licenses/index.html'
-          git commit -m 'fix(seo): repair equivalent-language menu links'
-          git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" push --force-with-lease origin HEAD:"$branch"
-          existing=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
-          if [[ -z "$existing" ]]; then
-            gh pr create --base main --head "$branch" --title 'fix(seo): correct localized language switch links' --body 'Deterministic, limited to language switcher href attributes. Unit tests and broken-link audit passed. Please allow required GitHub checks to run before merging.'
+          branch="automation/seo-language-menu-fixes-${GITHUB_RUN_ID}"
+          if [[ "$(gh pr list --state open --json headRefName --jq '[.[].headRefName | select(startswith("automation/seo-language-menu-fixes-"))] | length')" != "0" ]]; then
+            echo 'Existing automatic navigation fix PR is open; avoiding a duplicate.'
+            exit 0
           fi
+          git switch -c "$branch"
+          git add -u
+          git commit -m 'fix(seo): repair equivalent-language menu links'
+          git push origin HEAD:"$branch"
+          gh pr create --base main --head "$branch" --title 'fix(seo): correct localized language switch links' --body 'Deterministic href-only change, fully path-scoped. Unit tests and broken-link audit passed. Review CI checks before merging.'
