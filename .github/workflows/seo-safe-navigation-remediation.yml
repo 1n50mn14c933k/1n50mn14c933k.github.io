@@ -1,0 +1,81 @@
+name: KOLFAT SEO - Safe Language Link Remediation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '43 4 * * 0'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: seo-safe-navigation-remediation
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: true
+      - name: Unit-test conservative fixer
+        run: python3 -m unittest discover -s .github/scripts -p 'test_seo_safe_nav_fixes.py' -v
+      - name: Repair known language menu mismatches
+        run: |
+          python3 .github/scripts/seo_safe_nav_fixes.py --apply
+          python3 .github/scripts/seo_safe_nav_fixes.py --check
+          python3 .github/scripts/site_content_audit.py > /tmp/kolfat-content-audit.txt
+          test "$(grep -c '^BROKEN_INTERNAL_LINKS 0$' /tmp/kolfat-content-audit.txt)" -eq 1
+      - name: Validate narrow HTML-only changes
+        id: diff
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          mapfile -t changed < <(git diff --name-only)
+          if (("${#changed[@]}" == 0)); then
+            echo 'has_changes=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          (("${#changed[@]}" <= 96)) || { echo 'Too many changed pages'; exit 1; }
+          for file in "${changed[@]}"; do
+            [[ "$file" =~ ^((fa|de|fr|es|it|pt|ja|zh|hi|ru|ar)/)?(about|download|guides|support|privacy|terms|disclaimer|licenses)/index\.html$ ]] || {
+              echo "Unsafe modified file: $file"; exit 1;
+            }
+          done
+          # The script must change href strings only, never visible copy, CSS, metadata or layout.
+          python3 - <<'PY'
+          import subprocess,re
+          from pathlib import Path
+          files=subprocess.check_output(['git','diff','--name-only'],text=True).splitlines()
+          for file in files:
+              old=subprocess.check_output(['git','show','HEAD:'+file],text=True)
+              new=Path(file).read_text(encoding='utf-8')
+              def normalize(s):
+                  return re.sub(r'(?<=href=")/(?:(?:fa|de|fr|es|it|pt|ja|zh|hi|ru|ar)/)?(?:about|download|guides|support|privacy|terms|disclaimer|licenses)/(?=")', '/{SECTION}/',s)
+              assert normalize(old)==normalize(new),f"Non-navigation changes detected in {file}"
+          print('All HTML changes limited to existing informational-page href values')
+          PY
+          echo 'has_changes=true' >> "$GITHUB_OUTPUT"
+      - name: Open reviewable fix pull request
+        if: steps.diff.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          branch="automation/seo-language-menu-fixes-${GITHUB_RUN_ID}"
+          if [[ "$(gh pr list --state open --json headRefName --jq '[.[].headRefName | select(startswith("automation/seo-language-menu-fixes-"))] | length')" != "0" ]]; then
+            echo 'Existing automatic navigation fix PR is open; avoiding a duplicate.'
+            exit 0
+          fi
+          git switch -c "$branch"
+          git add -u
+          git commit -m 'fix(seo): repair equivalent-language menu links'
+          git push origin HEAD:"$branch"
+          gh pr create --base main --head "$branch" --title 'fix(seo): correct localized language switch links' --body 'Deterministic href-only change, fully path-scoped. Unit tests and broken-link audit passed. Review CI checks before merging.'
