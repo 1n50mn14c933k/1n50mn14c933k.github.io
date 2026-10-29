@@ -1,0 +1,39 @@
+name: KOLFAT SEO - Offline Weekly Integrity Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * 0'
+  pull_request:
+    paths:
+      - '.github/scripts/seo_source_audit.py'
+      - '.github/workflows/seo-offline-weekly.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  seo-source:
+    name: Sitemap and HTML SEO integrity
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Audit sitemap, titles, descriptions, canonical, locale and hreflang signals
+        run: python3 .github/scripts/seo_source_audit.py --output seo-source-audit.md
+      - name: Publish findings
+        if: always()
+        run: |
+          if test -f seo-source-audit.md; then
+            cat seo-source-audit.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: kolfat-offline-seo-integrity
+          path: seo-source-audit.md
+          retention-days: 14
+          if-no-files-found: warn
