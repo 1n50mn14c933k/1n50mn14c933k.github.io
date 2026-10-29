@@ -1,0 +1,31 @@
+name: KOLFAT SEO - Remediation Tests
+
+on:
+  pull_request:
+    paths:
+      - '.github/scripts/seo_safe_nav_fixes.py'
+      - '.github/scripts/test_seo_safe_nav_fixes.py'
+      - '.github/workflows/seo-safe-navigation-remediation.yml'
+      - '.github/workflows/seo-remediation-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Verify Python syntax
+        run: |
+          python3 -m py_compile .github/scripts/seo_safe_nav_fixes.py .github/scripts/test_seo_safe_nav_fixes.py
+      - name: Run SEO navigation repair unit tests
+        run: python3 -m unittest discover -s .github/scripts -p 'test_seo_safe_nav_fixes.py' -v
+      - name: Verify simulated fixes are deterministic
+        run: |
+          python3 .github/scripts/seo_safe_nav_fixes.py --apply
+          python3 .github/scripts/seo_safe_nav_fixes.py --check
+          git diff --check
