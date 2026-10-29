@@ -1,0 +1,46 @@
+name: Workflow Supply Chain Policy
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  policy:
+    name: Workflow policy
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Reject unpinned external actions and high-risk triggers
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          errors=[]
+          for path in sorted(pathlib.Path('.github/workflows').glob('*.y*ml')):
+              content=path.read_text(encoding='utf-8')
+              for line_number,line in enumerate(content.splitlines(),1):
+                  match=re.match(r'^\s*-?\s*uses:\s*([^\s#]+)',line)
+                  if match:
+                      action=match.group(1)
+                      if action.startswith('./') or action.startswith('docker://'):
+                          continue
+                      if not re.fullmatch(r'[^@\s]+@[a-fA-F0-9]{40}',action):
+                          errors.append(f'{path}:{line_number}: unpinned action {action}')
+                  if re.match(r'^  (pull_request_target|issue_comment|repository_dispatch):\s*(?:#.*)?$',line):
+                      errors.append(f'{path}:{line_number}: privileged/untrusted trigger requires explicit review')
+          for error in errors: print('::error::'+error)
+          if errors: sys.exit(1)
+          print('Workflow policy passed: external actions pinned and dangerous triggers absent.')
+          PY
