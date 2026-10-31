@@ -35,13 +35,6 @@ html[data-kolfat-page="home"] body .hero-copy{
   margin:0!important;padding:0!important;transform:none!important;
   pointer-events:auto!important;
 }
-html[data-kolfat-page="home"] body .hero-foot{
-  position:relative!important;top:auto!important;bottom:auto!important;
-  left:auto!important;right:auto!important;
-  margin:36px clamp(36px,10vw,205px) 0!important;
-  padding:18px 0 0!important;width:auto!important;
-  border-top:1px solid rgba(255,255,255,.15)!important;
-}
 html[data-kolfat-page="home"] body .hero-copy > .btn{
   min-height:48px!important;min-width:195px!important;
 }
@@ -143,9 +136,6 @@ html[data-kolfat-page="home"] body .kf-cinematic-caption{
   html[data-kolfat-page="home"] body .hero-copy{
     width:min(620px,100%)!important;max-width:620px!important;
     margin:0 auto!important;
-  }
-  html[data-kolfat-page="home"] body .hero-foot{
-    margin:18px 16px 0!important;padding:14px 0 18px!important;
   }
 }
 @media(max-width:640px){
