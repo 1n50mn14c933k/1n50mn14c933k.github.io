@@ -116,6 +116,15 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
 @media(max-width:850px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.card.macos{grid-column:1/-1}.overall .total{font-size:60px}}
 @media(max-width:600px){.cards{grid-template-columns:1fr}.card.macos{grid-column:auto}.overall{padding:22px;min-height:unset}.overall .total{font-size:56px}.history-content{padding:16px}.history-head{padding:16px}.card{min-height:225px}}
 
+
+/* Operational truth: live API status only; historical snapshots are archival. */
+.status{display:inline-flex;align-items:center;gap:10px;border-color:#3f677f;background:linear-gradient(120deg,#142736,#10202d);font-weight:600}
+.status.ok{border-color:#397a5b}.status.ok .word{color:#9bf2c3}
+.status.fail{border-color:#ad5656;background:#281a21}.status.fail .word{color:#ffb0b0}
+.history-head .saved-date{font-size:12px;color:#b9c9d8;max-width:390px;text-align:right}
+.history-foot{font-size:13px;line-height:1.6}
+@media(max-width:600px){.history-head .saved-date{text-align:left}}
+
 </style>
 </head>
 <body>
@@ -125,7 +134,7 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
 </div></header>
 <main>
 <div class="eyebrow">MEDIA KOLFAT / DOWNLOAD STATISTICS</div>
-<div class="heading"><div><h1>Live GitHub downloads.</h1><p class="sub">Current release-asset download counts read directly from GitHub. No hourly cron job, stored counter, or marketing analytics service is needed to show today's totals.</p></div><button type="button" id="refresh">↻ Refresh counts</button></div>
+<div class="heading"><div><h1>Live GitHub downloads.</h1><p class="sub">Counts are checked directly against GitHub Releases when you open this page, and refreshed automatically every five minutes while it stays open. No scheduled GitHub Actions run is required.</p></div><button type="button" id="refresh">↻ Refresh counts</button></div>
 <div class="status" id="status" role="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><strong class="word" id="status-word">Checking GitHub…</strong><span id="checked" class="muted">No verified reading yet</span></div>
 <section class="overall" aria-label="Current live total"><div><h2>◈ TOTAL GITHUB PACKAGE DOWNLOADS</h2><div class="total" id="total">—</div></div><p>Official GitHub Release application-package downloads, checked live. Windows + Linux + macOS.</p></section>
 <section class="cards" aria-label="Live platform downloads">
@@ -133,22 +142,17 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
 <div class="card linux"><div class="head"><span class="os-mark" aria-hidden="true">🐧</span><h3>LINUX APPIMAGE DOWNLOADS</h3></div><div class="num" id="linux-count">—</div><p id="linux-meta">Checking official release assets</p><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases" rel="noopener noreferrer">View Linux packages ↗</a></div>
 <div class="card macos"><div class="head"><span class="os-mark" aria-hidden="true">🍎</span><h3>macOS APPLE SILICON DOWNLOADS</h3></div><div class="num soon" id="macos-count">Not released</div><p id="macos-meta">Automatically detects your first published Mac package</p><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases" rel="noopener noreferrer">View macOS packages ↗</a></div>
 </section>
-<div class="system-bar" role="group" aria-label="Download dashboard update and monitoring status">
-<div id="snapshot-health" class="signal unknown" role="status"><span class="mini-icon" aria-hidden="true">◷</span><span>Hourly snapshot: <span class="signal-word" id="snapshot-health-word">Checking…</span></span></div>
-<div id="monitor-health" class="signal unknown" role="status"><span class="mini-icon" aria-hidden="true">◈</span><span>Health monitor: <span class="signal-word" id="monitor-health-word">Checking…</span></span></div>
-<a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/actions/workflows/update-download-dashboard.yml" class="signal" rel="noopener noreferrer">GitHub Actions ↗</a>
-</div>
 <section class="history-panel" aria-label="Visible historical download dashboard">
 <div class="history-head"><h2>▥ MEDIA KOLFAT · Download trend <span class="muted">(history + live)</span></h2><span class="saved-date" id="history-time">Last saved: Checking…</span></div>
 <div class="history-content">
-<div class="chart-wrap"><div class="chart-title"><span>Actual saved observations, with the latest GitHub API reading shown as “NOW”</span><span class="chart-legend"><span class="legend-win">● Windows</span><span class="legend-lin">● Linux</span><span class="legend-mac">● macOS</span><span class="legend-now">┄ Latest live reading</span></span></div><svg id="history-chart" viewBox="0 0 760 286" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Recorded historical package counts and latest live GitHub download counts"><title>Saved history and latest verified GitHub counts</title><text x="380" y="135" fill="#b8c6d1" text-anchor="middle">Loading verified observations…</text></svg></div>
+<div class="chart-wrap"><div class="chart-title"><span>Recorded download history, with the latest live reading marked “NOW”</span><span class="chart-legend"><span class="legend-win">● Windows</span><span class="legend-lin">● Linux</span><span class="legend-mac">● macOS</span><span class="legend-now">┄ Latest live reading</span></span></div><svg id="history-chart" viewBox="0 0 760 286" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Recorded historical package counts and latest live GitHub download counts"><title>Saved history and latest verified GitHub counts</title><text x="380" y="135" fill="#b8c6d1" text-anchor="middle">Loading verified observations…</text></svg></div>
 </div>
 
-<div class="history-foot">Solid lines show saved GitHub observations. Dotted extensions show only the latest verified live reading and are not written back as historical samples. Missing hourly runs are never invented.</div>
+<div class="history-foot">Historical snapshots are archived observations, not an hourly service guarantee. The dotted NOW point is verified from the latest live GitHub API response. Missing snapshots are never fabricated.</div>
 </section>
 
 <section aria-label="Package breakdown"><div class="section-head"><h2 class="section-title">Published package breakdown</h2><small class="note">All published releases, including beta packages</small></div><div class="table-wrap"><table><thead><tr><th>Platform</th><th>Release asset</th><th>Version</th><th>Downloads</th></tr></thead><tbody id="asset-rows"><tr><td colspan="4">Waiting for GitHub API response…</td></tr></tbody></table></div></section>
-<div class="information"><strong>What these numbers mean</strong><p>Only application packages are counted. SHA-256 files, signatures, documentation, and GitHub-generated source archives are excluded. Downloads of separate packages count separately. Deleted historical release assets cannot be reconstructed from the current GitHub API.</p><p>The page checks the API on opening, every 10 minutes while it stays open, and when you return to the tab. GitHub API access requires an internet connection and is subject to rate limits. If the API fails, counters display “Unavailable” rather than pretending old values are live.</p></div>
+<div class="information"><strong>What these numbers mean</strong><p>Only application packages are counted. SHA-256 files, signatures, documentation, and GitHub-generated source archives are excluded. Downloads of separate packages count separately. Deleted historical release assets cannot be reconstructed from the current GitHub API.</p><p>Live totals are fetched on opening, every five minutes while the tab is visible, and when you return. If GitHub is unreachable or rate-limited, current totals show “Unavailable” rather than silently displaying old counts. Historical archives are optional and are never required for live counting.</p></div>
 <footer>Source: <a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases">Official MEDIA KOLFAT GitHub Releases</a> · <a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/blob/main/assets/download-dashboard-history.json">Optional historical snapshots (not live)</a> · No user telemetry, login, or paid infrastructure.</footer>
 </main>
 <script>
@@ -193,17 +197,12 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
 
   // Standalone historical visualization. Never merge saved counts into live counters.
   const historyUrl="https://raw.githubusercontent.com/"+ownerRepo+"/main/assets/download-dashboard-history.json";
-  const actionsUrl="https://api.github.com/repos/"+ownerRepo+"/actions/runs?per_page=50";
   const svgNS="http://www.w3.org/2000/svg";
   function svgEl(tag,attrs={},content){
     const n=document.createElementNS(svgNS,tag);
     Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,String(v)));
     if(content!==undefined)n.textContent=String(content);
     return n;
-  }
-  function badge(which,value,tone){
-    byId(which).className="signal "+tone;
-    byId(which+"-word").textContent=value;
   }
   function clearChart(message){
     const svg=byId("history-chart");svg.replaceChildren();
@@ -257,29 +256,19 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
   }
   async function loadHistory(){
     try{
-      const r=await fetch(historyUrl,{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);
-      const doc=await r.json();if(doc.schema_version!==2||!Array.isArray(doc.snapshots)||!doc.snapshots.length)throw Error("Invalid history");
+      const response=await fetch(historyUrl,{cache:"no-store"});
+      if(!response.ok)throw Error("HTTP "+response.status);
+      const doc=await response.json();
+      if(doc.schema_version!==2||!Array.isArray(doc.snapshots)||!doc.snapshots.length)throw Error("Invalid history format");
       lastHistory=doc;
       const saved=Date.parse(doc.last_checked_at_utc||"");
-      byId("history-time").textContent="Last saved: "+(Number.isFinite(saved)?new Date(saved).toLocaleString("en-GB",{timeZone:"UTC",dateStyle:"medium",timeStyle:"short"})+" UTC":"Unknown");
-      const minutes=(Date.now()-saved)/60000;
-      badge("snapshot-health",!Number.isFinite(saved)?"UNKNOWN":minutes<=110&&minutes>=-10?"FRESH · "+Math.floor(Math.max(0,minutes))+"m ago":"OVERDUE · "+Math.floor(Math.max(0,minutes))+"m ago",Number.isFinite(saved)&&minutes<=110&&minutes>=-10?"good":"bad");
+      byId("history-time").textContent="Archive last recorded: "+(Number.isFinite(saved)?new Date(saved).toLocaleString("en-GB",{timeZone:"UTC",dateStyle:"medium",timeStyle:"short"})+" UTC":"Unknown");
       drawHistory(doc.snapshots);
-    }catch(e){lastHistory=null;badge("snapshot-health","UNAVAILABLE","bad");byId("history-time").textContent="Last saved: Unavailable";clearChart("Saved history unavailable");}
-  }
-  async function loadMonitor(){
-    try{
-      const response=await fetch(actionsUrl,{cache:"no-store",headers:{"Accept":"application/vnd.github+json"}});
-      if(!response.ok)throw Error("HTTP "+response.status);
-      const d=await response.json();
-      const runs=(Array.isArray(d.workflow_runs)?d.workflow_runs:[]).filter(x=>x.name==="Monitor MEDIA KOLFAT downloads dashboard"&&x.head_branch==="main"&&x.status==="completed");
-      if(!runs.length)throw Error("No completed health run");
-      runs.sort((a,b)=>Date.parse(b.created_at)-Date.parse(a.created_at));
-      const r=runs[0],age=(Date.now()-Date.parse(r.created_at))/60000;
-      if(!Number.isFinite(age)||age>110)badge("monitor-health","OVERDUE","bad");
-      else if(r.conclusion==="success")badge("monitor-health","LAST CHECK PASSED","good");
-      else badge("monitor-health","LAST CHECK FAILED","bad");
-    }catch(e){badge("monitor-health","UNKNOWN","unknown");}
+    }catch(e){
+      lastHistory=null;
+      byId("history-time").textContent="History archive unavailable (live counters unaffected)";
+      clearChart("Historical archive unavailable. Live counts above are independent.");
+    }
   }
 
   function present(assets){
@@ -356,15 +345,16 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
       unavailable(err instanceof Error?err.message:"Unexpected API error");
     }finally{busy=false;button.disabled=false;}
   }
-  button.addEventListener("click",refresh);
-  window.addEventListener("online",()=>{if(!document.hidden)refresh();});
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&Date.now()-lastCompletedAt>60000)refresh();});
-  setInterval(()=>{if(!document.hidden)refresh();},10*60*1000);
+  // The live dashboard's one operational dependency is the public GitHub API.
+  // Do not show cron/monitor success or failure as a claim about live accuracy.
+  button.addEventListener("click",()=>{refresh();loadHistory();});
+  window.addEventListener("online",()=>{if(!document.hidden){refresh();loadHistory();}});
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden){refresh();loadHistory();}});
+  window.addEventListener("focus",()=>{if(!document.hidden&&Date.now()-lastCompletedAt>60*1000)refresh();});
+  setInterval(()=>{if(!document.hidden)refresh();},5*60*1000);
+  setInterval(()=>{if(!document.hidden)loadHistory();},15*60*1000);
   refresh();
   loadHistory();
-  loadMonitor();
-  setInterval(()=>{if(!document.hidden){loadHistory();loadMonitor();}},10*60*1000);
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden){loadHistory();loadMonitor();}});
 })();
 </script>
 </body>

@@ -1,0 +1,28 @@
+name: Validate MEDIA KOLFAT live downloads dashboard
+
+on:
+  pull_request:
+    paths:
+      - "download-stats/index.html"
+      - "scripts/test-download-stats.cjs"
+      - ".github/workflows/test-live-download-stats.yml"
+  push:
+    branches: [main]
+    paths:
+      - "download-stats/index.html"
+      - "scripts/test-download-stats.cjs"
+      - ".github/workflows/test-live-download-stats.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dashboard:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Check live API behavior and macOS release handling
+        run: node scripts/test-download-stats.cjs
