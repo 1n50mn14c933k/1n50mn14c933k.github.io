@@ -565,39 +565,8 @@ function init(){
  const isHub=/\/guides\/?$/.test(u);
  document.documentElement.dataset.kolfatPage=isHub?"guide-index":"guide-article";
  if(isHub){
-  main.classList.add("kf-guides-hub");
-  const hero=main.querySelector(":scope > .hero");
-  if(hero){
-   hero.classList.add("kf-guides-hero");
-   const pills=document.createElement("div");pills.className="kf-guides-pills";
-   for(const txt of ["06 "+labels[0],"MEDIA KOLFAT · WINDOWS"]){
-    const pill=document.createElement("span");pill.className="kf-guide-pill";pill.textContent=txt;pills.append(pill);
-   }
-   hero.append(pills);
-  }
-  const section=main.querySelector(":scope > .section"),grid=section?.querySelector(":scope > .grid");
-  if(!section||!grid)return;
-  section.classList.add("kf-guides-section");
-  const title=document.createElement("h2");title.className="kf-guides-section-head";title.textContent=labels[0];grid.before(title);
-  grid.classList.add("kf-guides-grid");
-  const cards=[...grid.querySelectorAll(":scope > article.card")];
-  if(cards.length!==6)return;
-  cards.forEach((card,i)=>{
-   const h=card.querySelector("h2"),p=card.querySelector("p"),a=card.querySelector("a[href]");
-   if(!h||!p||!a)return;
-   const dest=a.getAttribute("href"),name=stripVersion(h.textContent.trim()),body=p.textContent.trim();
-   const link=document.createElement("a");link.className="kf-guide-card";link.href=dest;
-   const top=document.createElement("div");top.className="kf-guide-card-top";
-   const icon=document.createElement("span");icon.className="kf-guide-card-icon";
-   icon.setAttribute("aria-hidden","true");icon.innerHTML='<svg viewBox="0 0 24 24">'+paths[i]+'</svg>';
-   const type=document.createElement("span");type.className="kf-guide-card-tag";type.textContent=labels[0];
-   const no=document.createElement("span");no.className="kf-guide-card-index";no.textContent=String(i+1).padStart(2,"0");
-   top.append(icon,type,no);
-   const heading=document.createElement("h2");heading.textContent=name;
-   const desc=document.createElement("p");desc.textContent=body;
-   const cta=document.createElement("span");cta.className="kf-guide-card-cta";cta.textContent=labels[1];
-   link.append(top,heading,desc,cta);card.replaceWith(link);
-  });
+  // Guides hub is rendered as native localized HTML. Do not inject old six-guide labels or cards.
+  return;
  } else {
   const h=main.querySelector(":scope > .hero h1");
   if(h)h.textContent=stripVersion(h.textContent);
