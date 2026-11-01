@@ -55,7 +55,17 @@ function init(){
     '<rect x="5" y="5" width="14" height="14" rx="2"/><path d="M8 12h8M12 8v8"/>',
     '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m7 15 3-3 3 2 4-5"/>'
    ];
-   grid?.querySelectorAll("article.card").forEach((original,i)=>{
+   grid?.querySelectorAll("article.card, a.card").forEach((original,i)=>{
+     if(original.matches("a.card")){
+       original.classList.add("kf-guide-card","kf-guide-card-clickable");
+       if(!original.querySelector(".kf-guide-card-mark")){
+         const mark=document.createElement("div");mark.className="kf-guide-card-mark";
+         mark.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+icons[i%icons.length]+'</svg>';
+         const tag=document.createElement("span");tag.textContent=i===0?t[2]:i>5?t[5]:t[3];
+         mark.append(tag);original.prepend(mark);
+       }
+       return;
+     }
      const source=original.querySelector("h2 a[href]")||original.querySelector("a[href]");
      if(!source)return;
      const url=source.getAttribute("href");
