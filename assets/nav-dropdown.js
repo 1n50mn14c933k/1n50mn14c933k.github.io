@@ -713,7 +713,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 /* Guide-only progressive enhancement; no dependency on the rest of site. */
 (()=>{
   const path=location.pathname;
-  if(!/(?:^|\/)guides\/(?:$|(?:organize-photos-by-date|organize-large-photo-library|find-duplicate-photos-safely|organize-photos-from-phone-and-usb|photo-organizer-for-windows|copy-vs-move-safely|photos-without-capture-dates)\/)/.test(path))return;
-  const script=document.createElement("script");script.src="/assets/guides-loader.js?v=20261101-refresh3";
+  if(!/(?:^|\/)guides\/(?:$|(?:organize-photos-by-date|organize-large-photo-library|find-duplicate-photos-safely|organize-photos-from-phone-and-usb|photo-organizer-for-windows|copy-vs-move-safely|photos-without-capture-dates|recover-interrupted-organization|understand-activity-reports)\/)/.test(path))return;
+  const script=document.createElement("script");script.src="/assets/guides-loader.js?v=20261101-refresh4";
   script.defer=true;document.head.append(script);
 })();
