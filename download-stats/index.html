@@ -85,6 +85,37 @@ footer{border-color:#36495e}
 @media(max-width:850px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.card.macos{grid-column:1/-1}.history-content{grid-template-columns:1fr}.chart-wrap{order:2}.history-tiles{order:1}}
 @media(max-width:600px){.cards{grid-template-columns:1fr}.card.macos{grid-column:auto}.card{min-height:196px}.history-content{padding:18px;gap:18px}.history-head{padding:17px}.history-tile{padding:13px;min-height:90px}.history-tile .value{font-size:25px}.history-head h2{font-size:18px}.signal{width:100%}main{padding-top:30px}}
 
+
+/* 2026-11-01 clarity redesign: one live source of truth, no duplicate stale totals */
+:root{--blue:#259bff;--orange:#ff9140}
+body{background:radial-gradient(ellipse 60% 24% at 86% -2%,rgba(33,117,191,.18),transparent 80%),radial-gradient(ellipse 42% 19% at 10% -5%,rgba(252,134,45,.09),transparent 80%),#080e15;color:#f5f7fb}
+main{max-width:1250px}.heading h1{letter-spacing:-.05em}
+.overall{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;margin-bottom:18px;min-height:150px;border:1px solid #3b6d8f;background:linear-gradient(112deg,#14273b,#0c1622);border-radius:16px;padding:24px 30px;box-shadow:0 12px 36px rgba(0,0,0,.25)}
+.overall h2{font-family:inherit;text-transform:uppercase;letter-spacing:.12em;font-size:13px;color:#a8c8df;margin:0}
+.overall .total{font-size:68px;font-weight:850;letter-spacing:-.07em;font-variant-numeric:tabular-nums;color:#fff;line-height:1.25}
+.overall p{max-width:390px;margin:0;color:#b2c7d8;line-height:1.65;font-size:14px}
+.cards{gap:18px;margin:0 0 6px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{min-height:256px;border-radius:16px;padding:24px;background:linear-gradient(135deg,#14293c,#0d1722);box-shadow:0 14px 35px #0004}
+.card.windows{border-color:#308eec}.card.linux{border-color:#d17b34}.card.macos{border-color:#687c91;background:linear-gradient(135deg,#26303d,#111c27)}
+.card .head{min-height:55px;align-items:center}
+.card h3{font-size:13px;letter-spacing:.1em;line-height:1.5}
+.card .num{margin:18px 0 10px;font-size:68px;line-height:1.2;min-height:76px;font-variant-numeric:tabular-nums}
+.card .num.soon{font-size:26px;padding-top:13px;letter-spacing:-.02em}
+.card p{line-height:1.5;min-height:36px}.card a{font-size:14px}
+.system-bar{margin:20px 0 23px}.signal{border-radius:9px;background:#112030}
+.history-panel{border-radius:16px;background:linear-gradient(135deg,#10202f,#0b1622)}
+.history-head{padding:19px 24px}.history-head h2{font-weight:800}
+.history-content{display:block;padding:20px 24px 12px}
+.chart-wrap{width:100%;max-width:none}
+.chart-title{font-size:14px;font-weight:600;gap:12px}
+.chart-legend{gap:15px}
+.legend-now{color:#79e7bd}
+#history-chart{width:100%;max-height:430px;min-height:260px;margin:8px 0 0}
+.history-foot{background:#101e2c;padding:14px 24px;font-size:12px}
+.section-head{margin-top:34px}
+@media(max-width:850px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.card.macos{grid-column:1/-1}.overall .total{font-size:60px}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}.card.macos{grid-column:auto}.overall{padding:22px;min-height:unset}.overall .total{font-size:56px}.history-content{padding:16px}.history-head{padding:16px}.card{min-height:225px}}
+
 </style>
 </head>
 <body>
@@ -96,6 +127,7 @@ footer{border-color:#36495e}
 <div class="eyebrow">MEDIA KOLFAT / DOWNLOAD STATISTICS</div>
 <div class="heading"><div><h1>Live GitHub downloads.</h1><p class="sub">Current release-asset download counts read directly from GitHub. No hourly cron job, stored counter, or marketing analytics service is needed to show today's totals.</p></div><button type="button" id="refresh">↻ Refresh counts</button></div>
 <div class="status" id="status" role="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><strong class="word" id="status-word">Checking GitHub…</strong><span id="checked" class="muted">No verified reading yet</span></div>
+<section class="overall" aria-label="Current live total"><div><h2>◈ TOTAL GITHUB PACKAGE DOWNLOADS</h2><div class="total" id="total">—</div></div><p>Official GitHub Release application-package downloads, checked live. Windows + Linux + macOS.</p></section>
 <section class="cards" aria-label="Live platform downloads">
 <div class="card windows"><div class="head"><span class="os-mark" aria-hidden="true">🪟</span><h3>WINDOWS EXE DOWNLOADS</h3></div><div class="num" id="windows-count">—</div><p id="windows-meta">Checking official release assets</p><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases" rel="noopener noreferrer">View Windows packages ↗</a></div>
 <div class="card linux"><div class="head"><span class="os-mark" aria-hidden="true">🐧</span><h3>LINUX APPIMAGE DOWNLOADS</h3></div><div class="num" id="linux-count">—</div><p id="linux-meta">Checking official release assets</p><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases" rel="noopener noreferrer">View Linux packages ↗</a></div>
@@ -107,20 +139,14 @@ footer{border-color:#36495e}
 <a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/actions/workflows/update-download-dashboard.yml" class="signal" rel="noopener noreferrer">GitHub Actions ↗</a>
 </div>
 <section class="history-panel" aria-label="Visible historical download dashboard">
-<div class="history-head"><h2>▥ MEDIA KOLFAT · Download History <span class="muted">(saved snapshots)</span></h2><span class="saved-date" id="history-time">Last saved: Checking…</span></div>
+<div class="history-head"><h2>▥ MEDIA KOLFAT · Download trend <span class="muted">(history + live)</span></h2><span class="saved-date" id="history-time">Last saved: Checking…</span></div>
 <div class="history-content">
-<div class="history-tiles" aria-label="Saved snapshot counts">
-<div class="history-tile win"><div class="label">🪟 Windows</div><div class="value" id="history-win">—</div></div>
-<div class="history-tile lin"><div class="label">🐧 Linux</div><div class="value" id="history-linux">—</div></div>
-<div class="history-tile"><div class="label">🍎 macOS</div><div class="value soon" id="history-macos">Not released</div></div>
-<div class="history-tile"><div class="label">◈ Total (saved)</div><div class="value" id="history-total">—</div></div>
-<p class="history-note">These four tiles and the chart show <strong>recorded history</strong>, not current API counters. Only real observation dates are plotted. The large cards above always use the live GitHub API.</p>
+<div class="chart-wrap"><div class="chart-title"><span>Actual saved observations, with the latest GitHub API reading shown as “NOW”</span><span class="chart-legend"><span class="legend-win">● Windows</span><span class="legend-lin">● Linux</span><span class="legend-mac">● macOS</span><span class="legend-now">┄ Latest live reading</span></span></div><svg id="history-chart" viewBox="0 0 760 286" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Recorded historical package counts and latest live GitHub download counts"><title>Saved history and latest verified GitHub counts</title><text x="380" y="135" fill="#b8c6d1" text-anchor="middle">Loading verified observations…</text></svg></div>
 </div>
-<div class="chart-wrap"><div class="chart-title"><span>Cumulative downloads · actual observation dates</span><span class="chart-legend"><span class="legend-win">● Windows</span><span class="legend-lin">● Linux</span><span class="legend-mac">● macOS</span></span></div><svg id="history-chart" viewBox="0 0 760 286" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Historical GitHub downloads by platform"><title>Recorded package-download history</title><text x="380" y="135" fill="#b8c6d1" text-anchor="middle">Loading saved observations…</text></svg></div>
-</div>
-<div class="history-foot">Historical snapshots are stored in GitHub. Missed cron jobs are never replaced with invented hourly measurements. macOS history begins with its first real package snapshot.</div>
+
+<div class="history-foot">Solid lines show saved GitHub observations. Dotted extensions show only the latest verified live reading and are not written back as historical samples. Missing hourly runs are never invented.</div>
 </section>
-<section class="overall" aria-label="Total application package downloads"><div><h2>All platform package downloads</h2><div class="total" id="total">—</div></div><p>Actual GitHub Release download events, not installations.</p></section>
+
 <section aria-label="Package breakdown"><div class="section-head"><h2 class="section-title">Published package breakdown</h2><small class="note">All published releases, including beta packages</small></div><div class="table-wrap"><table><thead><tr><th>Platform</th><th>Release asset</th><th>Version</th><th>Downloads</th></tr></thead><tbody id="asset-rows"><tr><td colspan="4">Waiting for GitHub API response…</td></tr></tbody></table></div></section>
 <div class="information"><strong>What these numbers mean</strong><p>Only application packages are counted. SHA-256 files, signatures, documentation, and GitHub-generated source archives are excluded. Downloads of separate packages count separately. Deleted historical release assets cannot be reconstructed from the current GitHub API.</p><p>The page checks the API on opening, every 10 minutes while it stays open, and when you return to the tab. GitHub API access requires an internet connection and is subject to rate limits. If the API fails, counters display “Unavailable” rather than pretending old values are live.</p></div>
 <footer>Source: <a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases">Official MEDIA KOLFAT GitHub Releases</a> · <a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/blob/main/assets/download-dashboard-history.json">Optional historical snapshots (not live)</a> · No user telemetry, login, or paid infrastructure.</footer>
@@ -183,66 +209,63 @@ footer{border-color:#36495e}
     const svg=byId("history-chart");svg.replaceChildren();
     svg.appendChild(svgEl("text",{x:380,y:140,fill:"#b6c9dc","font-size":17,"text-anchor":"middle"},message));
   }
+  let lastHistory=null,liveCounts=null;
   function drawHistory(samples){
     const svg=byId("history-chart");svg.replaceChildren();
-    const observed=samples.filter(s=>s&&typeof s.date==="string"&&s.counts&&isFinite(Date.parse(s.date+"T00:00:00Z"))).sort((a,b)=>a.date.localeCompare(b.date)).slice(-90);
+    const observed=samples.filter(x=>x&&/^\d{4}-\d{2}-\d{2}$/.test(String(x.date))&&x.counts&&Number.isFinite(Date.parse(x.date+"T00:00:00Z"))).sort((a,b)=>a.date.localeCompare(b.date)).slice(-90);
     if(!observed.length){clearChart("No saved observations yet");return;}
-    const left=45,right=740,top=30,bottom=238;
-    const times=observed.map(s=>Date.parse(s.date+"T00:00:00Z"));
-    const min=times[0],max=times[times.length-1];
-    const values=observed.flatMap(s=>oses.map(os=>s.counts[os]).filter(x=>typeof x==="number"&&Number.isFinite(x)&&x>=0));
-    const high=Math.max(4,...values);
-    const step=Math.max(1,Math.ceil(high/4));
-    const ceiling=step*4;
-    const fx=(t)=>min===max?(left+right)/2:left+(right-left)*(t-min)/(max-min);
-    const fy=(v)=>bottom-(bottom-top)*v/ceiling;
+    const left=48,right=730,top=27,bottom=232;
+    const latestSavedAt=Date.parse(lastHistory?.last_checked_at_utc||"");
+    const points=observed.map((o,i)=>({when:i===observed.length-1&&Number.isFinite(latestSavedAt)?latestSavedAt:Date.parse(o.date+"T12:00:00Z"),counts:o.counts,live:false}));
+    const liveAt=lastCompletedAt;
+    if(liveCounts&&liveAt>0&&liveAt>points[points.length-1].when){
+      points.push({when:liveAt,counts:liveCounts,live:true});
+    }
+    const ts=points.map(p=>p.when),minimum=Math.min(...ts),maximum=Math.max(...ts);
+    const values=points.flatMap(p=>oses.map(os=>p.counts[os]).filter(v=>typeof v==="number"&&Number.isFinite(v)&&v>=0));
+    const topValue=Math.max(4,...values),step=Math.max(1,Math.ceil(topValue/4)),ceiling=step*4;
+    const fx=(when)=>minimum===maximum?(left+right)/2:left+(right-left)*(when-minimum)/(maximum-minimum);
+    const fy=(value)=>bottom-(bottom-top)*(value/ceiling);
     for(let i=0;i<=4;i++){
-      const y=fy(i*step);
-      svg.appendChild(svgEl("line",{x1:left,x2:right,y1:y,y2:y,stroke:"#314254","stroke-width":"1","stroke-dasharray":i?"4 6":"0"}));
-      svg.appendChild(svgEl("text",{x:36,y:y+4,fill:"#a7bac9","font-size":12,"text-anchor":"end"},fmt(i*step)));
+      const v=i*step,y=fy(v);
+      svg.appendChild(svgEl("line",{x1:left,x2:right,y1:y,y2:y,stroke:"#2d4459","stroke-width":1,"stroke-dasharray":i?"4 6":"0"}));
+      svg.appendChild(svgEl("text",{x:36,y:y+4,fill:"#9eb4c4","font-size":12,"text-anchor":"end"},fmt(v)));
     }
-    const indexes=[...new Set([0,Math.floor((observed.length-1)/2),observed.length-1])];
-    for(const i of indexes){
-      const date=new Date(times[i]);
-      svg.appendChild(svgEl("text",{x:fx(times[i]),y:266,fill:"#a8bac9","font-size":12,"text-anchor":"middle"},date.toLocaleDateString("en-GB",{timeZone:"UTC",month:"short",day:"numeric"})));
+    const labels=[0,Math.floor((points.length-1)/2),points.length-1].filter((x,i,a)=>a.indexOf(x)===i);
+    for(const i of labels){
+      const p=points[i],stamp=p.live?"NOW":new Date(p.when).toLocaleDateString("en-GB",{timeZone:"UTC",month:"short",day:"numeric"});
+      svg.appendChild(svgEl("text",{x:fx(p.when),y:261,fill:p.live?"#7cf0c0":"#acc0d0","font-size":12,"font-weight":p.live?"700":"400","text-anchor":"middle"},stamp));
     }
-    const colors={windows:"#229bff",linux:"#ff943b",macos:"#c8d6e3"};
+    if(points.some(p=>p.live)){
+      const live=points[points.length-1];
+      svg.appendChild(svgEl("line",{x1:fx(live.when),x2:fx(live.when),y1:top,y2:bottom,stroke:"#5d8e80","stroke-width":1.2,"stroke-dasharray":"3 7"}));
+    }
+    const colors={windows:"#2aa5ff",linux:"#ff963c",macos:"#cbd9e7"};
     for(const os of oses){
-      const points=observed.map((s,i)=>({i:i,v:s.counts[os],x:fx(times[i])})).filter(x=>typeof x.v==="number"&&Number.isFinite(x.v)&&x.v>=0);
-      if(!points.length)continue;
-      let segment=[];
-      const flush=()=>{
-        if(segment.length>1)svg.appendChild(svgEl("polyline",{points:segment.map(p=>p.x.toFixed(2)+","+fy(p.v).toFixed(2)).join(" "),fill:"none",stroke:colors[os],"stroke-width":3.4,"stroke-linecap":"round","stroke-linejoin":"round"}));
-        for(const p of segment){svg.appendChild(svgEl("circle",{cx:p.x,cy:fy(p.v),r:4.1,fill:colors[os],stroke:"#09131f","stroke-width":1.4}));}
-        segment=[];
-      };
+      let prior=null;
       for(const p of points){
-        if(segment.length&&p.i-segment[segment.length-1].i>1)flush();
-        segment.push(p);
+        const v=p.counts[os],valid=typeof v==="number"&&Number.isFinite(v)&&v>=0;
+        if(!valid){prior=null;continue;}
+        const x=fx(p.when),y=fy(v);
+        if(prior){
+          svg.appendChild(svgEl("line",{x1:prior.x,y1:prior.y,x2:x,y2:y,stroke:colors[os],"stroke-width":p.live?3.4:3,"stroke-dasharray":p.live?"7 6":"0","stroke-linecap":"round"}));
+        }
+        svg.appendChild(svgEl("circle",{cx:x,cy:y,r:p.live?6.1:4.1,fill:colors[os],stroke:"#0b1723","stroke-width":p.live?2.2:1.6}));
+        prior={x,y};
       }
-      flush();
     }
   }
   async function loadHistory(){
     try{
-      const response=await fetch(historyUrl,{cache:"no-store"});
-      if(!response.ok)throw Error("HTTP "+response.status);
-      const doc=await response.json();
-      if(doc.schema_version!==2||!Array.isArray(doc.snapshots)||!doc.snapshots.length)throw Error("Invalid history");
-      const last=doc.snapshots[doc.snapshots.length-1],counts=last.counts||{};
-      const vals=oses.filter(os=>typeof counts[os]==="number").map(os=>counts[os]);
-      byId("history-win").textContent=counts.windows===null?"Not measured":typeof counts.windows==="number"?fmt(counts.windows):"Unknown";
-      byId("history-linux").textContent=counts.linux===null?"Not measured":typeof counts.linux==="number"?fmt(counts.linux):"Unknown";
-      byId("history-macos").textContent=counts.macos===null?"Not released":typeof counts.macos==="number"?fmt(counts.macos):"Unknown";
-      byId("history-macos").classList.toggle("soon",counts.macos===null);
-      byId("history-total").textContent=fmt(vals.reduce((a,b)=>a+b,0));
-      drawHistory(doc.snapshots);
+      const r=await fetch(historyUrl,{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);
+      const doc=await r.json();if(doc.schema_version!==2||!Array.isArray(doc.snapshots)||!doc.snapshots.length)throw Error("Invalid history");
+      lastHistory=doc;
       const saved=Date.parse(doc.last_checked_at_utc||"");
-      if(!Number.isFinite(saved)){badge("snapshot-health","NO UTC TIMESTAMP","bad");byId("history-time").textContent="Last saved: Unknown";return;}
-      byId("history-time").textContent="Last saved: "+new Date(saved).toLocaleString("en-GB",{timeZone:"UTC",dateStyle:"medium",timeStyle:"short"})+" UTC";
+      byId("history-time").textContent="Last saved: "+(Number.isFinite(saved)?new Date(saved).toLocaleString("en-GB",{timeZone:"UTC",dateStyle:"medium",timeStyle:"short"})+" UTC":"Unknown");
       const minutes=(Date.now()-saved)/60000;
-      badge("snapshot-health",minutes<=110&&minutes>=-10?"FRESH · "+Math.max(0,Math.floor(minutes))+"m ago":"OVERDUE · "+Math.max(0,Math.floor(minutes))+"m ago",minutes<=110&&minutes>=-10?"good":"bad");
-    }catch(e){badge("snapshot-health","UNAVAILABLE","bad");byId("history-time").textContent="Last saved: Unavailable";clearChart("Saved history unavailable");}
+      badge("snapshot-health",!Number.isFinite(saved)?"UNKNOWN":minutes<=110&&minutes>=-10?"FRESH · "+Math.floor(Math.max(0,minutes))+"m ago":"OVERDUE · "+Math.floor(Math.max(0,minutes))+"m ago",Number.isFinite(saved)&&minutes<=110&&minutes>=-10?"good":"bad");
+      drawHistory(doc.snapshots);
+    }catch(e){lastHistory=null;badge("snapshot-health","UNAVAILABLE","bad");byId("history-time").textContent="Last saved: Unavailable";clearChart("Saved history unavailable");}
   }
   async function loadMonitor(){
     try{
@@ -264,6 +287,7 @@ footer{border-color:#36495e}
     const quantities={windows:0,linux:0,macos:0};
     for(const a of assets){sums[a.os]+=a.count;quantities[a.os]++;}
     byId("total").textContent=fmt(sums.windows+sums.linux+sums.macos);
+    liveCounts={...sums};
     for(const os of oses){
       const value=byId(os+"-count"), meta=byId(os+"-meta");
       if(!quantities[os]){
@@ -324,8 +348,11 @@ footer{border-color:#36495e}
       }
       present(assets);
       lastCompletedAt=Date.now();
+      if(lastHistory)drawHistory(lastHistory.snapshots);
       setStatus("ok","LIVE DATA VERIFIED","GitHub API checked "+new Date(lastCompletedAt).toLocaleString("en-GB",{timeZone:"UTC",dateStyle:"medium",timeStyle:"short"})+" UTC");
     }catch(err){
+      liveCounts=null;
+      if(lastHistory)drawHistory(lastHistory.snapshots);
       unavailable(err instanceof Error?err.message:"Unexpected API error");
     }finally{busy=false;button.disabled=false;}
   }
