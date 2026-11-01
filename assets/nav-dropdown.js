@@ -709,3 +709,11 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addMaid, {once:true});
   else addMaid();
 })();
+
+/* Guide-only progressive enhancement; no dependency on the rest of site. */
+(()=>{
+  const path=location.pathname;
+  if(!/(?:^|\/)guides\/(?:$|(?:organize-photos-by-date|organize-large-photo-library|find-duplicate-photos-safely|organize-photos-from-phone-and-usb|photo-organizer-for-windows|copy-vs-move-safely|photos-without-capture-dates)\/)/.test(path))return;
+  const script=document.createElement("script");script.src="/assets/guides-loader.js?v=20261101-refresh3";
+  script.defer=true;document.head.append(script);
+})();

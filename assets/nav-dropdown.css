@@ -1114,3 +1114,17 @@ html body .top-nav > a.kolfat-support-link{
     margin-bottom:12px!important;
   }
 }
+
+/* Narrow phone navigation: anchor open MENU within the viewport rather than
+   allowing the 320px panel to extend left of the screen. Preserves links and
+   keyboard Escape handling on the illustrated User Guide and other pages. */
+@media(max-width:440px){
+ html body .top-nav .kolfat-menu > .kolfat-menu-panel,
+ html body .header .header-inner .top-nav .kolfat-menu > .kolfat-menu-panel{
+  position:fixed!important;
+  left:12px!important;right:12px!important;top:62px!important;
+  width:calc(100vw - 24px)!important;
+  max-width:calc(100vw - 24px)!important;
+  box-sizing:border-box!important;
+ }
+}
