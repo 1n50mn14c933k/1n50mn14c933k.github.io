@@ -27,7 +27,9 @@ const kind={
 "organize-large-photo-library":"large",
 "find-duplicate-photos-safely":"duplicate",
 "organize-photos-from-phone-and-usb":"sources",
-"photo-organizer-for-windows":"choose"
+"photo-organizer-for-windows":"choose",
+"copy-vs-move-safely":"choose",
+"photos-without-capture-dates":"date"
 }[slug];
 if(!kind)return;
 const main=document.querySelector("main"),hero=main?.querySelector(":scope > .hero");
