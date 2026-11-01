@@ -169,3 +169,22 @@ html[data-kolfat-page="information"] .kf-about-story-page .kf-official-copy{padd
  .kf-about-story-page .kf-official-download-links a{justify-content:flex-start;text-align:start}
  .kf-about-story-page .kf-channel-panel h3{font-size:16px}
 }
+
+/* Ko-fi appears after TikTok on every localized About page. */
+.kf-about-story-page .kf-channel-mark--kofi{color:#ff5e5b}
+.kf-about-story-page .kf-channel-panel .kf-channel-kofi-message{
+ margin:12px 0 0!important;font-size:13px;line-height:1.55!important;color:#ffc1bd!important;
+}
+.kf-about-story-page .kf-channel-panel .kf-channel-kofi-message a{
+ display:inline-flex;align-items:center;gap:8px;min-height:34px;
+ color:#ffd0cb!important;font-weight:700;text-decoration:none!important;
+}
+.kf-about-story-page .kf-channel-panel .kf-channel-kofi-message a:hover,
+.kf-about-story-page .kf-channel-panel .kf-channel-kofi-message a:focus-visible{
+ color:#fff!important;text-decoration:underline!important;
+}
+@media(max-width:440px){
+ .kf-about-story-page .kf-channel-panel .kf-channel-kofi-message a{
+  white-space:normal;overflow-wrap:anywhere;
+ }
+}
