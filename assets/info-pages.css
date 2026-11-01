@@ -113,3 +113,59 @@ html[data-kolfat-page="information"] .kf-about-story-page .kf-official-copy{padd
  html[data-kolfat-page="information"] .kf-about-story-page .kf-official-copy{padding-inline-start:0}
  html[data-kolfat-page="information"] .kf-about-story-page .kf-official-download-notice{padding:17px 15px}
 }
+
+/* 2026-11-01: Official channels preview design, scoped to About pages only. */
+.kf-about-story-page .kf-official-card{border-top-color:#ff812e!important}
+.kf-about-story-page .kf-official-card .kf-channel-header-icon svg{width:25px;height:25px;display:block}
+.kf-about-story-page .kf-channel-grid{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0 0;
+}
+.kf-about-story-page .kf-channel-panel{
+ min-width:0;border:1px solid rgba(255,255,255,.26);border-radius:12px;
+ padding:20px 22px;background:#111;
+}
+.kf-about-story-page .kf-channel-panel h3{
+ display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+ margin:0 0 13px!important;color:#fff;font:750 18px/1.4 "Segoe UI",Tahoma,Arial,sans-serif
+}
+.kf-about-story-page .kf-channel-panel p{
+ margin:0 0 13px!important;line-height:1.7!important;color:#d1d1cf!important;
+}
+.kf-about-story-page .kf-channel-panel a{color:#fff!important;text-underline-offset:4px}
+.kf-about-story-page .kf-channel-panel a:hover{color:#ffb47a!important}
+.kf-about-story-page .kf-channel-panel .kf-channel-social-links{
+ display:flex;flex-wrap:wrap;gap:9px 15px;align-items:center;
+}
+.kf-about-story-page .kf-channel-panel .kf-channel-social-links a{
+ display:inline-flex;align-items:center;gap:7px;min-height:32px;white-space:nowrap
+}
+.kf-about-story-page .kf-channel-brand-row{
+ display:inline-flex;align-items:center;gap:12px;direction:ltr;
+}
+.kf-about-story-page .kf-channel-mark{display:inline-block;width:25px;height:25px;flex:0 0 25px;vertical-align:middle}
+.kf-about-story-page .kf-channel-mark--github{color:#fff}
+.kf-about-story-page .kf-channel-mark--x{color:#fff}
+.kf-about-story-page .kf-channel-mark--youtube{color:#ff0033}
+.kf-about-story-page .kf-channel-mark--tiktok{color:#fff}
+.kf-about-story-page .kf-channel-mark--website{color:#fff}
+.kf-about-story-page .kf-channel-mark--microsoft{color:#fff}
+.kf-about-story-page .kf-channel-brand-row .kf-channel-mark{width:23px;height:23px;flex-basis:23px}
+.kf-about-story-page .kf-channel-social-links .kf-channel-mark{width:20px;height:20px;flex-basis:20px}
+.kf-about-story-page .kf-official-download-notice .kf-notice-heading{
+ display:flex;align-items:center;gap:12px;flex-wrap:wrap
+}
+.kf-about-story-page .kf-official-download-notice .kf-notice-heading .kf-channel-mark{
+ width:30px;height:30px;flex-basis:30px;color:#ff9b51
+}
+.kf-about-story-page .kf-official-download-links a{display:inline-flex!important;gap:11px;align-items:center;justify-content:center}
+.kf-about-story-page .kf-official-download-links .kf-channel-mark{width:25px;height:25px;flex-basis:25px}
+.kf-about-story-page .kf-official-download-links a:focus-visible,
+.kf-about-story-page .kf-channel-panel a:focus-visible{outline:2px solid #ff9b51;outline-offset:3px}
+@media(max-width:760px){
+ .kf-about-story-page .kf-channel-grid{grid-template-columns:minmax(0,1fr)}
+ .kf-about-story-page .kf-channel-panel{padding:18px 16px}
+}
+@media(max-width:440px){
+ .kf-about-story-page .kf-official-download-links a{justify-content:flex-start;text-align:start}
+ .kf-about-story-page .kf-channel-panel h3{font-size:16px}
+}
