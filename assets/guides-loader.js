@@ -17,6 +17,9 @@ if(html.dataset.kolfatGuideLoaderStarted==="1")return;
 html.dataset.kolfatGuideLoaderStarted="1";
 html.dataset.kolfatPage=isHub?"guide-index":"guide-article";
 const css=document.createElement("link");css.rel="stylesheet";css.href="/assets/guides-visual.css?v=20261101-parity1";document.head.append(css);
+const cardHitStyle=document.createElement("style");
+cardHitStyle.textContent='html[data-kolfat-page="guide-index"] .kf-guide-card-clickable .kf-guide-card-link::after{content:"";position:absolute;inset:0;z-index:1;cursor:pointer}html[data-kolfat-page="guide-index"] .kf-guide-card-clickable:focus-within{outline:3px solid #ff963c;outline-offset:3px}html[data-kolfat-page="guide-index"] .kf-guide-card-clickable{cursor:pointer}';
+document.head.append(cardHitStyle);
 const langs={en:["Choose your guide","Learn with clear steps, visual examples and practical safety checks.","START HERE","PRACTICAL GUIDE","Read the guide","EXTRA GUIDE"],
 de:["Anleitung auswählen","Klare Schritte, anschauliche Beispiele und sichere Kontrollen.","HIER STARTEN","PRAXISANLEITUNG","Anleitung lesen","EXTRA"],
 es:["Elige una guía","Pasos claros, ejemplos visuales y controles de seguridad.","EMPIEZA AQUÍ","GUÍA PRÁCTICA","Leer guía","EXTRA"],
@@ -54,6 +57,13 @@ function init(){
    ];
    grid?.querySelectorAll("article.card").forEach((card,i)=>{
      card.classList.add("kf-guide-card");
+     // Keep the existing locale-specific destination as a real anchor.
+     // Expand its hit area to the entire card, including empty space.
+     const destination=card.querySelector("h2 a[href]")||card.querySelector("a[href]");
+     if(destination){
+       destination.classList.add("kf-guide-card-link");
+       card.classList.add("kf-guide-card-clickable");
+     }
      if(!card.querySelector(".kf-guide-card-mark")){
        const mark=document.createElement("div");mark.className="kf-guide-card-mark";
        mark.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+icons[i%icons.length]+'</svg>';
