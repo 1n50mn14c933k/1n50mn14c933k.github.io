@@ -9,12 +9,12 @@ if(guideIndex<0)return;
 const slug=parts[guideIndex+1]||"";
 if(slug==="media-kolfat-2-user-guide")return;
 const types=new Set(["organize-photos-by-date","organize-large-photo-library","find-duplicate-photos-safely","organize-photos-from-phone-and-usb","photo-organizer-for-windows"]);
-const extras=new Set(["copy-vs-move-safely","photos-without-capture-dates"]);
+const extras=new Set(["copy-vs-move-safely","photos-without-capture-dates","recover-interrupted-organization","understand-activity-reports"]);
 const isHub=slug==="",isArticle=types.has(slug)||extras.has(slug);
 if(!isHub&&!isArticle)return;
 const html=document.documentElement;
 html.dataset.kolfatPage=isHub?"guide-index":"guide-article";
-const css=document.createElement("link");css.rel="stylesheet";css.href="/assets/guides-visual.css?v=20261101-refresh3";document.head.append(css);
+const css=document.createElement("link");css.rel="stylesheet";css.href="/assets/guides-visual.css?v=20261101-refresh4";document.head.append(css);
 const langs={en:["Choose your guide","Learn with clear steps, visual examples and practical safety checks.","START HERE","PRACTICAL GUIDE","Read the guide","EXTRA GUIDE"],
 de:["Anleitung auswählen","Klare Schritte, anschauliche Beispiele und sichere Kontrollen.","HIER STARTEN","PRAXISANLEITUNG","Anleitung lesen","EXTRA"],
 es:["Elige una guía","Pasos claros, ejemplos visuales y controles de seguridad.","EMPIEZA AQUÍ","GUÍA PRÁCTICA","Leer guía","EXTRA"],
@@ -60,8 +60,8 @@ function init(){
      }
    });
  }else{
-   for(const name of ["guides-walkthrough.js","guides-enrichment.js"]){
-     const src=document.createElement("script");src.src="/assets/"+name+"?v=20261101-refresh3";src.async=false;document.body.append(src);
+   for(const name of ["guides-walkthrough.js","guides-enrichment.js","guides-examples.js"]){
+     const src=document.createElement("script");src.src="/assets/"+name+"?v=20261101-refresh4";src.async=false;document.body.append(src);
    }
  }
 }

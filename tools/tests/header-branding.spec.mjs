@@ -13,7 +13,7 @@ function htmlPages(dir, found = []) {
   return found;
 }
 
-test("all 482 published HTML pages retain original KOLFAT branding contract", () => {
+test("all 506 published HTML pages retain original KOLFAT branding contract", () => {
   const pages = htmlPages(siteRoot);
   let checked = 0, redirects = 0, labels = 0;
   const failures = [];
@@ -31,7 +31,7 @@ test("all 482 published HTML pages retain original KOLFAT branding contract", ()
     if (!/\/assets\/nav-dropdown\.css\?v=20261028-brand-(?:uniform1|all-pages2)/.test(html)) failures.push(route + ": shared stylesheet reference missing");
     if (/(^|\/)support\/index\.html$/.test(route) && /<p class="eyebrow">\s*Kolfat\.app\s*<\/p>/i.test(html)) { failures.push(route + ": unwanted orange label"); labels++; }
   }
-  expect({ pages: pages.length, checked, redirects }).toEqual({ pages: 486, checked: 482, redirects: 4 });
+  expect({ pages: pages.length, checked, redirects }).toEqual({ pages: 510, checked: 506, redirects: 4 });
   expect(failures, failures.slice(0, 30).join("\n")).toEqual([]);
   expect(labels).toBe(0);
 });
