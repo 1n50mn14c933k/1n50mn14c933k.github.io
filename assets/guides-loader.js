@@ -60,7 +60,9 @@ function init(){
      }
    });
  }else{
-   const src=document.createElement("script");src.src="/assets/guides-enrichment.js?v=20261101-refresh3";src.async=false;document.body.append(src);
+   for(const name of ["guides-walkthrough.js","guides-enrichment.js"]){
+     const src=document.createElement("script");src.src="/assets/"+name+"?v=20261101-refresh3";src.async=false;document.body.append(src);
+   }
  }
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});else init();
