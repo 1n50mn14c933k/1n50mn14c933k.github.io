@@ -27,7 +27,7 @@ test("all 506 published HTML pages retain original KOLFAT branding contract", ()
     checked++;
     const logo = html.match(/<a\b[^>]*class="(?:site-logo|brand|guide-site-logo)"[^>]*>[\s\S]*?<\/a>/i);
     if (!logo || !logo[0].includes('/assets/kolfat-logo.webp?v=d2c25ec0')) failures.push(route + ": original wordmark markup missing");
-    if (!/\/assets\/nav-dropdown\.js\?v=20261028-brand-(?:uniform1|all-pages2)/.test(html)) failures.push(route + ": shared script reference missing");
+    if (!/\/assets\/nav-dropdown\.js\?v=(?:20261028-brand-(?:uniform1|all-pages2)|20261101-guides-parity1)/.test(html)) failures.push(route + ": shared script reference missing");
     if (!/\/assets\/nav-dropdown\.css\?v=20261028-brand-(?:uniform1|all-pages2)/.test(html)) failures.push(route + ": shared stylesheet reference missing");
     if (/(^|\/)support\/index\.html$/.test(route) && /<p class="eyebrow">\s*Kolfat\.app\s*<\/p>/i.test(html)) { failures.push(route + ": unwanted orange label"); labels++; }
   }
