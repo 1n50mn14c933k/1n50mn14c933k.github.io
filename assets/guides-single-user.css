@@ -123,3 +123,16 @@ html body main .kf-single-guide-card p {
   html body main .kf-single-guide-grid > a.kf-single-guide-card {transition:none}
   html body main .kf-single-guide-grid > a.kf-single-guide-card:hover {transform:none}
 }
+
+/* Defensive overrides for older cached guide-layout scripts.
+   A single guide must never render two section headings or two columns. */
+html[data-kolfat-page="guide-index"] body main .kf-single-guide-section > .kf-guides-section-head,
+html[data-kolfat-page="guide-index"] body main .kf-single-guide-section > .kf-guides-intro {
+  display: none !important;
+}
+html[data-kolfat-page="guide-index"] body main .kf-single-guide-grid.kf-guides-grid {
+  grid-template-columns: minmax(0,1fr) !important;
+}
+html[data-kolfat-page="guide-index"] body main .kf-guides-hero .kf-guides-pills {
+  display: none !important;
+}
