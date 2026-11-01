@@ -18,7 +18,7 @@ html.dataset.kolfatGuideLoaderStarted="1";
 html.dataset.kolfatPage=isHub?"guide-index":"guide-article";
 const css=document.createElement("link");css.rel="stylesheet";css.href="/assets/guides-visual.css?v=20261101-parity1";document.head.append(css);
 const cardHitStyle=document.createElement("style");
-cardHitStyle.textContent='html[data-kolfat-page="guide-index"] .kf-guide-card-clickable .kf-guide-card-link::after{content:"";position:absolute;inset:0;z-index:1;cursor:pointer}html[data-kolfat-page="guide-index"] .kf-guide-card-clickable:focus-within{outline:3px solid #ff963c;outline-offset:3px}html[data-kolfat-page="guide-index"] .kf-guide-card-clickable{cursor:pointer}';
+cardHitStyle.textContent='html[data-kolfat-page="guide-index"] a.kf-guide-card-clickable{cursor:pointer}html[data-kolfat-page="guide-index"] a.kf-guide-card-clickable:focus-visible{outline:3px solid #ff963c!important;outline-offset:3px!important}html[data-kolfat-page="guide-index"] a.kf-guide-card-clickable h2{text-decoration:none!important}';
 document.head.append(cardHitStyle);
 const langs={en:["Choose your guide","Learn with clear steps, visual examples and practical safety checks.","START HERE","PRACTICAL GUIDE","Read the guide","EXTRA GUIDE"],
 de:["Anleitung auswählen","Klare Schritte, anschauliche Beispiele und sichere Kontrollen.","HIER STARTEN","PRAXISANLEITUNG","Anleitung lesen","EXTRA"],
@@ -55,21 +55,26 @@ function init(){
     '<rect x="5" y="5" width="14" height="14" rx="2"/><path d="M8 12h8M12 8v8"/>',
     '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m7 15 3-3 3 2 4-5"/>'
    ];
-   grid?.querySelectorAll("article.card").forEach((card,i)=>{
-     card.classList.add("kf-guide-card");
-     // Keep the existing locale-specific destination as a real anchor.
-     // Expand its hit area to the entire card, including empty space.
-     const destination=card.querySelector("h2 a[href]")||card.querySelector("a[href]");
-     if(destination){
-       destination.classList.add("kf-guide-card-link");
-       card.classList.add("kf-guide-card-clickable");
-     }
-     if(!card.querySelector(".kf-guide-card-mark")){
-       const mark=document.createElement("div");mark.className="kf-guide-card-mark";
-       mark.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+icons[i%icons.length]+'</svg>';
-       const tag=document.createElement("span");tag.textContent=i===0?t[2]:i>5?t[5]:t[3];
-       mark.append(tag);card.prepend(mark);
-     }
+   grid?.querySelectorAll("article.card").forEach((original,i)=>{
+     const source=original.querySelector("h2 a[href]")||original.querySelector("a[href]");
+     if(!source)return;
+     const url=source.getAttribute("href");
+     if(!url)return;
+     const card=document.createElement("a");
+     card.href=url;
+     card.className=original.className+" kf-guide-card kf-guide-card-clickable";
+     if(original.id)card.id=original.id;
+     card.setAttribute("aria-label",(original.querySelector("h2")?.textContent||source.textContent).trim());
+     while(original.firstChild)card.append(original.firstChild);
+     card.querySelectorAll("a").forEach(link=>{
+       if(link.closest("h2,h3"))link.replaceWith(...Array.from(link.childNodes));
+       else link.remove();
+     });
+     const mark=document.createElement("div");mark.className="kf-guide-card-mark";
+     mark.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+icons[i%icons.length]+'</svg>';
+     const tag=document.createElement("span");tag.textContent=i===0?t[2]:i>5?t[5]:t[3];
+     mark.append(tag);card.prepend(mark);
+     original.replaceWith(card);
    });
  }else{
    for(const name of ["guides-walkthrough.js","guides-enrichment.js","guides-examples.js"]){
