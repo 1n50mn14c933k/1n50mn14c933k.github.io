@@ -1,0 +1,125 @@
+/* Single MEDIA KOLFAT User Guide hub, shared by all 12 language indexes.
+   Native HTML-only navigation: no client-side card transformation required. */
+.kf-single-guide-section {
+  position: relative;
+  margin-top: 56px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(255,255,255,.22);
+}
+.kf-single-guide-section .kf-single-guide-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(100%, 880px);
+  color: #fff !important;
+  font: 750 clamp(23px,3vw,34px)/1.3 "Segoe UI",Tahoma,Arial,sans-serif !important;
+  margin: 0 0 22px !important;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+.kf-single-guide-heading::before {
+  content: "";
+  flex: 0 0 5px;
+  width: 5px;
+  height: 32px;
+  background: #ff812e;
+  border-radius: 4px;
+}
+html body main .kf-single-guide-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) !important;
+  gap: 0 !important;
+  width: min(100%,880px) !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+html body main .kf-single-guide-grid > a.kf-single-guide-card {
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 235px !important;
+  padding: clamp(23px,3.5vw,38px) !important;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,129,46,.64) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(145deg,rgba(21,21,21,.98),rgba(8,8,8,.98)) !important;
+  box-shadow: 0 14px 34px rgba(0,0,0,.36);
+  color: #fff !important;
+  text-decoration: none !important;
+  text-align: start !important;
+  cursor: pointer;
+  transition: border-color .2s ease, transform .2s ease;
+}
+html body main .kf-single-guide-grid > a.kf-single-guide-card:hover {
+  border-color: #ff963c !important;
+  transform: translateY(-2px);
+}
+html body main .kf-single-guide-grid > a.kf-single-guide-card:focus-visible {
+  outline: 3px solid #ff963c !important;
+  outline-offset: 4px;
+}
+html body main .kf-single-guide-card .kf-single-guide-kicker {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #ff9d50;
+  font: 800 12px/1.5 "Segoe UI",Tahoma,Arial,sans-serif;
+  letter-spacing: .03em;
+  margin-bottom: 22px;
+}
+html[dir="rtl"] body main .kf-single-guide-card .kf-single-guide-kicker {
+  align-self: flex-start;
+}
+.kf-single-guide-kicker svg {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  background: rgba(255,129,46,.11);
+  border: 1px solid rgba(255,129,46,.58);
+  border-radius: 9px;
+}
+html body main .kf-single-guide-card h2 {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 16px !important;
+  color: #fff !important;
+  font: 750 clamp(22px,2.8vw,34px)/1.3 "Segoe UI",Tahoma,Arial,sans-serif !important;
+  text-decoration: none !important;
+  letter-spacing: 0 !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal;
+  text-align: start !important;
+}
+html body main .kf-single-guide-card p {
+  display: block !important;
+  width: 100% !important;
+  max-width: 740px;
+  margin: 0 !important;
+  color: #c8c8c4 !important;
+  font: 400 clamp(14px,1.5vw,16px)/1.85 "Segoe UI",Tahoma,Arial,sans-serif !important;
+  text-align: start !important;
+  overflow-wrap: anywhere !important;
+}
+@media (max-width:650px) {
+  html body main .kf-single-guide-grid > a.kf-single-guide-card {
+    min-height: 0 !important;
+    padding: 23px 20px !important;
+  }
+  .kf-single-guide-section {margin-top: 36px;padding-top: 25px}
+  .kf-single-guide-section .kf-single-guide-heading {font-size: 24px !important}
+}
+@media (prefers-reduced-motion:reduce) {
+  html body main .kf-single-guide-grid > a.kf-single-guide-card {transition:none}
+  html body main .kf-single-guide-grid > a.kf-single-guide-card:hover {transform:none}
+}
