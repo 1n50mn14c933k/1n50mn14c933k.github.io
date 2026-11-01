@@ -39,20 +39,6 @@ html[data-kolfat-page="information"] .kf-story-copy hr{
 }
 html[data-kolfat-page="information"] .kf-story-copy ul{margin:7px 0 15px;padding-inline-start:24px}
 html[data-kolfat-page="information"] .kf-story-copy li{margin:0 0 7px}
-html[data-kolfat-page="information"] .kf-story-more{display:block;margin-top:15px}
-html[data-kolfat-page="information"] .kf-story-more>summary{
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  cursor:pointer;min-height:50px;padding:12px 16px;list-style:none;
-  background:#151515;border:1px solid rgba(255,129,46,.72);border-radius:10px;
-  font:750 13px/1.5 "Segoe UI",Tahoma,Arial,sans-serif;color:#fff;
-}
-html[data-kolfat-page="information"] .kf-story-more>summary::-webkit-details-marker{display:none}
-html[data-kolfat-page="information"] .kf-story-more>summary::after{content:"+";font-size:22px;line-height:1;color:#ffad73}
-html[data-kolfat-page="information"] .kf-story-more[open]>summary::after{content:"−"}
-html[data-kolfat-page="information"] .kf-story-more>summary:hover,
-html[data-kolfat-page="information"] .kf-story-more>summary:focus-visible{
- border-color:#ffb278;background:#201712;outline-offset:3px
-}
 html[data-kolfat-page="information"] .kf-story-expanded{padding:18px 0 0}
 html[data-kolfat-page="information"] .kf-story-respect{
   margin:17px 0;padding:20px 22px;background:#15100d;
@@ -67,6 +53,63 @@ html[data-kolfat-page="information"] .kf-story-copy a{color:#ffd0a6}
 html[data-kolfat-page="information"] .kf-story-copy a:hover{color:#fff}
 html[data-kolfat-page="information"] .kf-story-copy [dir="ltr"]{unicode-bidi:isolate}
 @media(max-width:760px){
- html[data-kolfat-page="information"] .kf-story-more>summary{font-size:12px}
- html[data-kolfat-page="information"] .kf-story-respect{padding:16px}
+  html[data-kolfat-page="information"] .kf-story-respect{padding:16px}
+}
+
+/* About only: the story is always visible, without a second hero, sidebar,
+   duplicate information cards, or collapsed content. Other info pages untouched. */
+html[data-kolfat-page="information"] main.kf-about-story-page{
+ width:min(calc(100% - 42px),1060px)!important;
+ max-width:1060px!important;
+ padding:54px 0 88px!important;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-story-card{
+ margin-bottom:26px!important;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-legal-card-head h1{
+ margin:0!important;color:#f7f7f5!important;
+ font:750 clamp(22px,3vw,33px)/1.32 "Segoe UI",Tahoma,Arial,sans-serif!important;
+ letter-spacing:0!important;overflow-wrap:anywhere;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-story-expanded{padding:0}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-story-intro{
+ margin-bottom:17px;padding-bottom:12px;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-official-card{
+ border-top-color:#ff812e!important;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-official-download-notice{
+ margin-top:22px;padding:22px 24px;
+ background:#19120d;border:1px solid rgba(255,129,46,.7);
+ border-inline-start:4px solid #ff812e;border-radius:12px;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-official-download-notice h3{
+ margin:0 0 10px;color:#ffc28d;
+ font:750 clamp(16px,1.8vw,20px)/1.4 "Segoe UI",Tahoma,Arial,sans-serif;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-official-download-notice p{
+ margin:0 0 12px!important;color:#eee6dc!important;line-height:1.8;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-official-download-notice p:last-child{margin-bottom:0!important}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-official-download-links{
+ display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin:16px 0;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-official-download-links a{
+ flex:1 1 185px;display:flex;align-items:center;justify-content:center;
+ min-height:46px;padding:11px 14px;text-align:center;
+ border:1px solid rgba(255,255,255,.58);border-radius:9px;
+ background:#0b0b0b;color:#fff!important;font:700 13px/1.45 "Segoe UI",Tahoma,Arial,sans-serif;
+ text-decoration:none!important;overflow-wrap:anywhere;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-official-download-links a:hover,
+html[data-kolfat-page="information"] .kf-about-story-page .kf-official-download-links a:focus-visible{
+ border-color:#ff812e;background:#28180e;
+}
+html[data-kolfat-page="information"] .kf-about-story-page .kf-official-copy{padding-inline-start:59px}
+@media(max-width:760px){
+ html[data-kolfat-page="information"] main.kf-about-story-page{
+  width:calc(100% - 30px)!important;padding:32px 0 66px!important
+ }
+ html[data-kolfat-page="information"] .kf-about-story-page .kf-official-copy{padding-inline-start:0}
+ html[data-kolfat-page="information"] .kf-about-story-page .kf-official-download-notice{padding:17px 15px}
 }
