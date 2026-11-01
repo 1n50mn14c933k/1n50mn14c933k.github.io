@@ -169,6 +169,19 @@ html[data-kolfat-page="home"] body .kf-cinematic-caption{
   html[data-kolfat-page="home"] body .kf-video-yt{padding:4px 6px}
   html[data-kolfat-page="home"] body .kf-cinematic-caption{font-size:.75rem}
 }
+/* Persian and Arabic homepages must occupy the same clear left-side
+ * visual column as every other language. Keep RTL reading order and
+ * right-aligned Arabic-script copy inside that left-positioned column.
+ * This fixes text overlapping the maid's face on desktop; tablets and
+ * phones retain their existing centered/responsive layout. */
+@media (min-width:981px){
+  html:is([lang="fa"],[lang="ar"])[data-kolfat-page="home"] body .hero-copy{
+    margin-left:0!important;
+    margin-right:auto!important;
+    direction:rtl!important;
+    text-align:right!important;
+  }
+}
 html[dir="rtl"][data-kolfat-page="home"] body .kf-video-brand{direction:rtl}
 @media(prefers-reduced-motion:reduce){
   html[data-kolfat-page="home"] body .kf-video-play{transition:none}
