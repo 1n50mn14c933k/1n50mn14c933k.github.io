@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#070707">
+<meta name="description" content="Live GitHub Release application-download counts for MEDIA KOLFAT on Windows, Linux, and macOS. Data fetched directly from GitHub whenever the dashboard opens.">
+<link rel="canonical" href="https://kolfat.app/download-stats/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<title>MEDIA KOLFAT | Live GitHub Downloads</title>
+<style>
+:root{color-scheme:dark;--bg:#080808;--panel:#141414;--line:#353535;--ink:#f5f4f1;--muted:#aaa9a5;--accent:#fa8c41;--success:#b0e8c9;--bad:#ff9c9c}
+*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:radial-gradient(circle at 85% -10%,#24201d 0%,transparent 37%),var(--bg)}
+a{color:var(--ink)}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+header{border-bottom:1px solid var(--line);background:#090909ee}.header-inner{max-width:1140px;margin:auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{display:inline-flex;gap:14px;align-items:center;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.2em}.brand img{width:39px;height:39px;object-fit:contain}.header-links{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--muted)}.header-links a{text-decoration:none}.header-links a:hover{color:#fff}
+main{max-width:1140px;padding:50px 24px 90px;margin:auto}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.25em;font-size:12px;font-weight:800}.heading{display:flex;gap:28px;align-items:end;justify-content:space-between;flex-wrap:wrap}h1{font-weight:750;font-size:clamp(34px,5vw,66px);letter-spacing:-.065em;line-height:1.05;margin:10px 0 0}.sub{color:var(--muted);max-width:710px;margin:19px 0 0;line-height:1.65}
+button{cursor:pointer;border:1px solid #707070;background:#1b1b1b;color:#fff;border-radius:9px;padding:13px 19px;font-weight:700;font:inherit}button:hover:not(:disabled){border-color:var(--accent)}button:disabled{cursor:progress;opacity:.65}
+.status{display:flex;gap:10px;align-items:center;margin:29px 0 22px;font-size:14px;color:var(--muted);flex-wrap:wrap}.dot{width:9px;height:9px;border-radius:50%;background:#999;display:inline-block}.status.ok .dot{background:var(--success)}.status.fail .dot{background:var(--bad)}.status.ok .word{color:var(--success)}.status.fail .word{color:var(--bad)}
+.overall{border:1px solid #4a4a4a;border-radius:15px;background:linear-gradient(112deg,#1c1c1c,#101010);padding:28px 30px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}.overall h2{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin:0 0 7px}.total{font-size:clamp(56px,8vw,100px);font-weight:750;letter-spacing:-.07em;line-height:1.1;font-variant-numeric:tabular-nums}.overall p{font-size:13px;color:var(--muted);max-width:340px;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:17px}.card{background:var(--panel);border:1px solid var(--line);padding:24px 24px 19px;border-radius:13px;min-height:214px}.card .head{display:flex;justify-content:space-between;align-items:center;gap:12px}.card h3{font-size:13px;letter-spacing:.17em;font-weight:800;text-transform:uppercase;margin:0}.pip{height:20px;width:4px;border-radius:4px;background:#e8e8e8}.card.linux .pip{background:var(--accent)}.card.macos .pip{background:#898989}.num{font-size:53px;font-weight:750;letter-spacing:-.065em;line-height:1.35;font-variant-numeric:tabular-nums;min-height:84px;overflow-wrap:anywhere}.num.soon{font-size:27px;letter-spacing:-.02em;padding-top:20px}.card p{color:var(--muted);font-size:13px;margin:0}.card a{display:inline-block;font-size:13px;margin-top:13px;text-decoration:underline;text-underline-offset:3px}
+.section-head{margin-top:44px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}h2.section-title{font-size:22px;margin:0;letter-spacing:-.03em}small.note{color:var(--muted)}
+.table-wrap{border:1px solid var(--line);border-radius:13px;overflow-x:auto;margin-top:15px;background:#111}table{width:100%;border-collapse:collapse;min-width:600px;text-align:left}th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:#181818}td,th{padding:15px 19px;border-bottom:1px solid #2a2a2a}tr:last-child td{border-bottom:0}td{font-size:14px}td:last-child,th:last-child{text-align:right;font-variant-numeric:tabular-nums}td a{text-decoration:none;overflow-wrap:anywhere}td a:hover{text-decoration:underline}
+.information{border:1px solid #404040;border-left:4px solid var(--accent);background:#101010;border-radius:9px;padding:19px 23px;margin-top:26px}.information p{color:var(--muted);font-size:13px;line-height:1.7;margin:7px 0}.information strong{color:#fff}footer{border-top:1px solid var(--line);margin-top:45px;padding-top:20px;color:var(--muted);font-size:13px}footer a{color:#fff}.muted{color:var(--muted)}.error{color:var(--bad)!important}
+@media(max-width:720px){main{padding:31px 17px 60px}.header-inner{padding:16px 17px}.header-links{gap:12px;font-size:11px}.cards{grid-template-columns:1fr}.card{min-height:170px}.num{min-height:74px}.overall{padding:22px}.heading{gap:23px}.card p{line-height:1.5}}
+@media(prefers-reduced-motion:no-preference){button{transition:border-color .15s}}
+</style>
+</head>
+<body>
+<header><div class="header-inner">
+<a class="brand" href="/en/" aria-label="KOLFAT homepage"><img src="/assets/kolfat-logo.webp" alt="" width="39" height="39">KOLFAT</a>
+<nav class="header-links" aria-label="Site navigation"><a href="/en/Media_Kolfat/">Product</a><a href="/download/">Download</a><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT" rel="noopener noreferrer">GitHub</a></nav>
+</div></header>
+<main>
+<div class="eyebrow">MEDIA KOLFAT / DOWNLOAD STATISTICS</div>
+<div class="heading"><div><h1>Live GitHub downloads.</h1><p class="sub">Current release-asset download counts read directly from GitHub. No hourly cron job, stored counter, or marketing analytics service is needed to show today's totals.</p></div><button type="button" id="refresh">↻ Refresh counts</button></div>
+<div class="status" id="status" role="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><strong class="word" id="status-word">Checking GitHub…</strong><span id="checked" class="muted">No verified reading yet</span></div>
+<section class="overall" aria-label="Total application package downloads"><div><h2>All platform package downloads</h2><div class="total" id="total">—</div></div><p>Individual GitHub Release package-download events, not unique people, installations, or Microsoft Store downloads.</p></section>
+<section class="cards" aria-label="Platform downloads">
+<div class="card windows"><div class="head"><h3>Windows</h3><span class="pip" aria-hidden="true"></span></div><div class="num" id="windows-count">—</div><p id="windows-meta">Checking release assets</p><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases" rel="noopener noreferrer">View releases</a></div>
+<div class="card linux"><div class="head"><h3>Linux</h3><span class="pip" aria-hidden="true"></span></div><div class="num" id="linux-count">—</div><p id="linux-meta">Checking release assets</p><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases" rel="noopener noreferrer">View releases</a></div>
+<div class="card macos"><div class="head"><h3>macOS</h3><span class="pip" aria-hidden="true"></span></div><div class="num soon" id="macos-count">Not released</div><p id="macos-meta">Apple Silicon release pending</p><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases" rel="noopener noreferrer">View releases</a></div>
+</section>
+<section aria-label="Package breakdown"><div class="section-head"><h2 class="section-title">Published package breakdown</h2><small class="note">All published releases, including beta packages</small></div><div class="table-wrap"><table><thead><tr><th>Platform</th><th>Release asset</th><th>Version</th><th>Downloads</th></tr></thead><tbody id="asset-rows"><tr><td colspan="4">Waiting for GitHub API response…</td></tr></tbody></table></div></section>
+<div class="information"><strong>What these numbers mean</strong><p>Only application packages are counted. SHA-256 files, signatures, documentation, and GitHub-generated source archives are excluded. Downloads of separate packages count separately. Deleted historical release assets cannot be reconstructed from the current GitHub API.</p><p>The page checks the API on opening, every 10 minutes while it stays open, and when you return to the tab. GitHub API access requires an internet connection and is subject to rate limits. If the API fails, counters display “Unavailable” rather than pretending old values are live.</p></div>
+<footer>Source: <a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases">Official MEDIA KOLFAT GitHub Releases</a> · <a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/blob/main/assets/download-dashboard-history.json">Optional historical snapshots (not live)</a> · No user telemetry, login, or paid infrastructure.</footer>
+</main>
+<script>
+"use strict";
+(function(){
+  const ownerRepo="1n50mn14c933k/MEDIA_KOLFAT";
+  const endpoint="https://api.github.com/repos/"+ownerRepo+"/releases?per_page=100&page=";
+  const oses=["windows","linux","macos"];
+  const label={windows:"Windows",linux:"Linux",macos:"macOS"};
+  const byId=(id)=>document.getElementById(id);
+  const button=byId("refresh"), status=byId("status");
+  const excluded=/(sha[-_]?256|checksums?|signature|\.sig$|\.asc$|\.sha\d+$|sbom)/i;
+  let busy=false,lastCompletedAt=0;
+  function classify(name,tag){
+    if(excluded.test(name))return null;
+    const n=name.toLowerCase();
+    if(/\.(appimage|deb|rpm|flatpak|snap)$/.test(n))return "linux";
+    if(/\.(exe|msi|msix|msixbundle|appx|appxbundle)$/.test(n))return "windows";
+    if(/\.(dmg|pkg)$/.test(n))return "macos";
+    if(/\.(zip|7z|tgz|tar\.gz)$/.test(n)){
+      const t=name+" "+tag;
+      const hints=[/macos|mac[-_ ]?os|darwin|osx|apple[-_ ]?silicon/i.test(t),/linux|ubuntu|debian|fedora|appimage/i.test(t),/windows|win[-_ ]?(x64|arm64)|setup/i.test(t)];
+      return hints.filter(Boolean).length===1?(hints[0]?"macos":hints[1]?"linux":"windows"):null;
+    }
+    return null;
+  }
+  const fmt=(v)=>new Intl.NumberFormat("en-US").format(v);
+  const releaseLink=(tag)=>"https://github.com/"+ownerRepo+"/releases/tag/"+encodeURIComponent(tag);
+  function setStatus(kind,title,message){
+    status.className="status "+kind;
+    byId("status-word").textContent=title;
+    byId("checked").textContent=message;
+  }
+  function addCell(row,content,isLink,tag){
+    const td=document.createElement("td");
+    if(isLink){
+      const a=document.createElement("a");
+      a.href=releaseLink(tag);a.textContent=content;a.rel="noopener noreferrer";td.appendChild(a);
+    }else td.textContent=content;
+    row.appendChild(td);
+  }
+  function present(assets){
+    const sums={windows:0,linux:0,macos:0};
+    const quantities={windows:0,linux:0,macos:0};
+    for(const a of assets){sums[a.os]+=a.count;quantities[a.os]++;}
+    byId("total").textContent=fmt(sums.windows+sums.linux+sums.macos);
+    for(const os of oses){
+      const value=byId(os+"-count"), meta=byId(os+"-meta");
+      if(!quantities[os]){
+        value.textContent="Not released";value.classList.add("soon");meta.textContent="No published application package";
+      }else{
+        value.textContent=fmt(sums[os]);value.classList.remove("soon");
+        meta.textContent=fmt(quantities[os])+" published application "+(quantities[os]===1?"package":"packages");
+      }
+    }
+    const tbody=byId("asset-rows");tbody.replaceChildren();
+    if(!assets.length){
+      const tr=document.createElement("tr");const cell=document.createElement("td");
+      cell.colSpan=4;cell.textContent="No published application packages found.";tr.appendChild(cell);tbody.appendChild(tr);
+    }else{
+      assets.sort((a,b)=>b.count-a.count||a.name.localeCompare(b.name));
+      for(const a of assets){
+        const tr=document.createElement("tr");
+        addCell(tr,label[a.os],false);
+        addCell(tr,a.name,true,a.tag);
+        addCell(tr,a.tag,false);
+        addCell(tr,fmt(a.count),false);
+        tbody.appendChild(tr);
+      }
+    }
+  }
+  function unavailable(message){
+    byId("total").textContent="Unavailable";
+    for(const os of oses){byId(os+"-count").textContent="Unavailable";byId(os+"-count").classList.add("soon");byId(os+"-meta").textContent="Live count could not be verified";}
+    const body=byId("asset-rows");body.replaceChildren();
+    const row=document.createElement("tr"),cell=document.createElement("td");
+    cell.colSpan=4;cell.className="error";cell.textContent="GitHub API unavailable. Use the official release links above.";row.appendChild(cell);body.appendChild(row);
+    setStatus("fail","LIVE DATA UNAVAILABLE",message);
+  }
+  async function refresh(){
+    if(busy)return;
+    busy=true;button.disabled=true;
+    setStatus("","Checking GitHub…","Fetching official release asset counts");
+    try{
+      const assets=[],ids=new Set();
+      for(let page=1;page<=10;page++){
+        const response=await fetch(endpoint+page,{cache:"no-store",headers:{"Accept":"application/vnd.github+json"}});
+        if(!response.ok)throw Error("GitHub API HTTP "+response.status);
+        const releases=await response.json();
+        if(!Array.isArray(releases))throw Error("Invalid GitHub API response");
+        for(const r of releases){
+          if(r.draft)continue;
+          for(const a of (Array.isArray(r.assets)?r.assets:[])){
+            const os=classify(String(a.name||""),String(r.tag_name||""));
+            if(!os)continue;
+            if(!Number.isSafeInteger(a.download_count)||a.download_count<0||!Number.isSafeInteger(a.id))throw Error("Invalid asset count");
+            if(ids.has(a.id))continue;
+            ids.add(a.id);
+            assets.push({os:os,name:String(a.name),count:a.download_count,tag:String(r.tag_name||"")});
+          }
+        }
+        if(releases.length<100)break;
+        if(page===10)throw Error("Pagination limit exceeded");
+      }
+      present(assets);
+      lastCompletedAt=Date.now();
+      setStatus("ok","LIVE DATA VERIFIED","GitHub API checked "+new Date(lastCompletedAt).toLocaleString("en-GB",{timeZone:"UTC",dateStyle:"medium",timeStyle:"short"})+" UTC");
+    }catch(err){
+      unavailable(err instanceof Error?err.message:"Unexpected API error");
+    }finally{busy=false;button.disabled=false;}
+  }
+  button.addEventListener("click",refresh);
+  window.addEventListener("online",()=>{if(!document.hidden)refresh();});
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&Date.now()-lastCompletedAt>60000)refresh();});
+  setInterval(()=>{if(!document.hidden)refresh();},10*60*1000);
+  refresh();
+})();
+</script>
+</body>
+</html>
