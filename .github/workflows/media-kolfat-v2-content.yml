@@ -9,7 +9,7 @@ jobs:
     if: ${{ github.actor != 'github-actions[bot]' && contains(github.event.head_commit.message, 'Publish MEDIA KOLFAT v2 page updates') }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
       - name: Generate 24 verified localized release summaries
