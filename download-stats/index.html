@@ -125,6 +125,19 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
 .history-foot{font-size:13px;line-height:1.6}
 @media(max-width:600px){.history-head .saved-date{text-align:left}}
 
+/* Repo traffic is optional; fully isolated from live release downloads. */
+.visitor-panel{margin-top:36px;border:1px solid #3b6d8f;border-radius:16px;background:linear-gradient(130deg,#112335,#0a1723);padding:24px}
+.visitor-head{display:flex;justify-content:space-between;align-items:start;gap:16px;flex-wrap:wrap}
+.visitor-head h2{margin:0;font-size:22px;letter-spacing:-.03em}
+.visitor-head p{color:#b3c4d4;font-size:13px;margin:6px 0 0;max-width:670px}
+.visitor-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.visitor-card{border:1px solid #405a70;border-radius:12px;background:#122031;padding:19px 21px}
+.visitor-card h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#b7d2e6;margin:0}
+.visitor-count{font-size:clamp(36px,5vw,53px);line-height:1.3;font-weight:800;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.visitor-card .visitor-detail{font-size:13px;color:#b8c8d6;margin:2px 0 0}
+.visitor-foot{margin:16px 0 0;color:#a9bbcb;font-size:12px;line-height:1.6}
+@media(max-width:600px){.visitor-panel{padding:18px}.visitor-cards{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -149,6 +162,16 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
 </div>
 
 <div class="history-foot">Historical snapshots are archived observations, not an hourly service guarantee. The dotted NOW point is verified from the latest live GitHub API response. Missing snapshots are never fabricated.</div>
+</section>
+
+
+<section class="visitor-panel" aria-label="MEDIA KOLFAT GitHub repository visitors">
+  <div class="visitor-head"><div><h2>MEDIA KOLFAT · GitHub repository visitors</h2><p>Verified unique visitors to the <a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT" rel="noopener noreferrer">official MEDIA_KOLFAT repository</a>. These are repository visits, not application downloads or visits to kolfat.app.</p></div></div>
+  <div class="visitor-cards">
+    <div class="visitor-card"><h3>Daily visitors</h3><div class="visitor-count" id="repo-daily-visitors">—</div><p class="visitor-detail" id="repo-daily-period">Latest completed UTC day · No verified data yet</p></div>
+    <div class="visitor-card"><h3>Weekly visitors</h3><div class="visitor-count" id="repo-weekly-visitors">—</div><p class="visitor-detail" id="repo-weekly-period">Last completed UTC week · No verified data yet</p></div>
+  </div>
+  <p class="visitor-foot" id="repo-visitor-source" role="status" aria-live="polite">Checking archived GitHub traffic data…</p>
 </section>
 
 <section aria-label="Package breakdown"><div class="section-head"><h2 class="section-title">Published package breakdown</h2><small class="note">All published releases, including beta packages</small></div><div class="table-wrap"><table><thead><tr><th>Platform</th><th>Release asset</th><th>Version</th><th>Downloads</th></tr></thead><tbody id="asset-rows"><tr><td colspan="4">Waiting for GitHub API response…</td></tr></tbody></table></div></section>
@@ -357,5 +380,41 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
   loadHistory();
 })();
 </script>
+<script>
+/* Optional visitor snapshot, independent of the live release-download API. */
+(function(){
+  "use strict";
+  const url="https://raw.githubusercontent.com/1n50mn14c933k/MEDIA_KOLFAT/main/assets/repository-visitors.json";
+  const el=(id)=>document.getElementById(id);
+  const display=(v)=>Number.isSafeInteger(v)&&v>=0?new Intl.NumberFormat("en-US").format(v):"—";
+  const validDay=(v)=>typeof v==="string"&&/^\\d{4}-\\d{2}-\\d{2}$/.test(v)&&Number.isFinite(Date.parse(v+"T00:00:00Z"));
+  const formatDay=(v)=>validDay(v)?new Date(v+"T00:00:00Z").toLocaleDateString("en-GB",{dateStyle:"medium",timeZone:"UTC"}):"Unknown date";
+  async function updateVisitors(){
+    try{
+      const response=await fetch(url+"?t="+Date.now(),{cache:"no-store"});
+      if(!response.ok)throw Error("Visitor snapshot not published");
+      const doc=await response.json();
+      if(doc.schema_version!==1||doc.repository!=="1n50mn14c933k/MEDIA_KOLFAT"||!doc.daily||!doc.weekly||!validDay(doc.daily.date)||!validDay(doc.weekly.week_start)||!validDay(doc.weekly.week_end))throw Error("Invalid visitor snapshot");
+      const daily=doc.daily.unique_visitors,weekly=doc.weekly.unique_visitors;
+      if((daily!==null&&(!Number.isSafeInteger(daily)||daily<0))||(weekly!==null&&(!Number.isSafeInteger(weekly)||weekly<0)))throw Error("Invalid visitor counts");
+      el("repo-daily-visitors").textContent=display(daily);
+      el("repo-weekly-visitors").textContent=display(weekly);
+      el("repo-daily-period").textContent="UTC day: "+formatDay(doc.daily.date);
+      el("repo-weekly-period").textContent="UTC week: "+formatDay(doc.weekly.week_start)+" – "+formatDay(doc.weekly.week_end);
+      const time=Date.parse(doc.generated_at_utc||"");
+      el("repo-visitor-source").textContent="Source: GitHub Traffic API, archived as a verified snapshot"+(Number.isFinite(time)?" · Updated "+new Date(time).toLocaleString("en-GB",{timeZone:"UTC",dateStyle:"medium",timeStyle:"short"})+" UTC":"")+". Unique weekly visitors are measured by GitHub and are not a sum of daily visitors.";
+    }catch(err){
+      el("repo-daily-visitors").textContent="—";
+      el("repo-weekly-visitors").textContent="—";
+      el("repo-daily-period").textContent="Latest completed UTC day · Unavailable";
+      el("repo-weekly-period").textContent="Last completed UTC week · Unavailable";
+      el("repo-visitor-source").textContent="Verified visitor data unavailable. Existing live GitHub download counters remain independent and unaffected.";
+    }
+  }
+  updateVisitors();
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden)updateVisitors()});
+})();
+</script>
+
 </body>
 </html>
