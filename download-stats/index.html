@@ -387,7 +387,7 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
   const url="https://raw.githubusercontent.com/1n50mn14c933k/MEDIA_KOLFAT/main/assets/repository-visitors.json";
   const el=(id)=>document.getElementById(id);
   const display=(v)=>Number.isSafeInteger(v)&&v>=0?new Intl.NumberFormat("en-US").format(v):"—";
-  const validDay=(v)=>typeof v==="string"&&/^\\d{4}-\\d{2}-\\d{2}$/.test(v)&&Number.isFinite(Date.parse(v+"T00:00:00Z"));
+  const validDay=(v)=>typeof v==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(v)&&Number.isFinite(Date.parse(v+"T00:00:00Z"));
   const formatDay=(v)=>validDay(v)?new Date(v+"T00:00:00Z").toLocaleDateString("en-GB",{dateStyle:"medium",timeZone:"UTC"}):"Unknown date";
   async function updateVisitors(){
     try{
