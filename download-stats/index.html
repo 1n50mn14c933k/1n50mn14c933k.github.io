@@ -395,6 +395,8 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
       if(!response.ok)throw Error("Visitor snapshot not published");
       const doc=await response.json();
       if(doc.schema_version!==1||doc.repository!=="1n50mn14c933k/MEDIA_KOLFAT"||!doc.daily||!doc.weekly||!validDay(doc.daily.date)||!validDay(doc.weekly.week_start)||!validDay(doc.weekly.week_end))throw Error("Invalid visitor snapshot");
+      const publishedAt=Date.parse(doc.generated_at_utc||"");
+      if(!Number.isFinite(publishedAt)||publishedAt>Date.now()+3600000||Date.now()-publishedAt>72*60*60*1000)throw Error("Stale visitor snapshot");
       const daily=doc.daily.unique_visitors,weekly=doc.weekly.unique_visitors;
       if((daily!==null&&(!Number.isSafeInteger(daily)||daily<0))||(weekly!==null&&(!Number.isSafeInteger(weekly)||weekly<0)))throw Error("Invalid visitor counts");
       el("repo-daily-visitors").textContent=display(daily);
