@@ -13,7 +13,7 @@
 :root{color-scheme:dark;--bg:#080808;--panel:#141414;--line:#353535;--ink:#f5f4f1;--muted:#aaa9a5;--accent:#fa8c41;--success:#b0e8c9;--bad:#ff9c9c}
 *{box-sizing:border-box}html{background:var(--bg)}body{margin:0;color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:radial-gradient(circle at 85% -10%,#24201d 0%,transparent 37%),var(--bg)}
 a{color:var(--ink)}a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-header{border-bottom:1px solid var(--line);background:#090909ee}.header-inner{max-width:1140px;margin:auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{display:inline-flex;gap:14px;align-items:center;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.2em}.brand img{width:39px;height:39px;object-fit:contain}.header-links{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--muted)}.header-links a{text-decoration:none}.header-links a:hover{color:#fff}
+header{border-bottom:1px solid var(--line);background:#090909ee}.header-inner{max-width:1140px;margin:auto;padding:18px 24px;display:flex;justify-content:flex-end;align-items:center;gap:20px}.brand{display:inline-flex;gap:14px;align-items:center;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.2em}.brand img{width:39px;height:39px;object-fit:contain}.header-links{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--muted)}.header-links a{text-decoration:none}.header-links a:hover{color:#fff}
 main{max-width:1140px;padding:50px 24px 90px;margin:auto}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.25em;font-size:12px;font-weight:800}.heading{display:flex;gap:28px;align-items:end;justify-content:space-between;flex-wrap:wrap}h1{font-weight:750;font-size:clamp(34px,5vw,66px);letter-spacing:-.065em;line-height:1.05;margin:10px 0 0}.sub{color:var(--muted);max-width:710px;margin:19px 0 0;line-height:1.65}
 button{cursor:pointer;border:1px solid #707070;background:#1b1b1b;color:#fff;border-radius:9px;padding:13px 19px;font-weight:700;font:inherit}button:hover:not(:disabled){border-color:var(--accent)}button:disabled{cursor:progress;opacity:.65}
 .status{display:flex;gap:10px;align-items:center;margin:29px 0 22px;font-size:14px;color:var(--muted);flex-wrap:wrap}.dot{width:9px;height:9px;border-radius:50%;background:#999;display:inline-block}.status.ok .dot{background:var(--success)}.status.fail .dot{background:var(--bad)}.status.ok .word{color:var(--success)}.status.fail .word{color:var(--bad)}
@@ -129,7 +129,6 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
 </head>
 <body>
 <header><div class="header-inner">
-<a class="brand" href="/en/" aria-label="KOLFAT homepage"><img src="/assets/kolfat-logo.webp" alt="" width="39" height="39">KOLFAT</a>
 <nav class="header-links" aria-label="Site navigation"><a href="/en/Media_Kolfat/">Product</a><a href="/download/">Download</a><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT" rel="noopener noreferrer">GitHub</a></nav>
 </div></header>
 <main>
