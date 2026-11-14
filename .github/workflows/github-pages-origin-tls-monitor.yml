@@ -1,0 +1,29 @@
+name: KOLFAT - GitHub Pages Origin TLS Expiry
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily independent of Cloudflare's proxy and edge certificate.
+    - cron: '19 6 * * *'
+  pull_request:
+    paths:
+      - '.github/scripts/github_pages_origin_tls_monitor.py'
+      - '.github/workflows/github-pages-origin-tls-monitor.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  origin-tls:
+    name: Validate direct GitHub origin TLS expiry
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Verify monitor script syntax
+        run: python3 -m py_compile .github/scripts/github_pages_origin_tls_monitor.py
+      - name: Probe both hosts on all four GitHub Pages IPv4 endpoints
+        if: github.event_name != 'pull_request'
+        run: python3 .github/scripts/github_pages_origin_tls_monitor.py
