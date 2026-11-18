@@ -133,9 +133,9 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
 </div></header>
 <main>
 <div class="eyebrow">MEDIA KOLFAT / DOWNLOAD STATISTICS</div>
-<div class="heading"><div><h1>Live GitHub downloads.</h1><p class="sub">Counts are checked directly against GitHub Releases when you open this page, and refreshed automatically every five minutes while it stays open. No scheduled GitHub Actions run is required.</p></div><button type="button" id="refresh">↻ Refresh counts</button></div>
+<div class="heading"><div><h1>Live GitHub downloads.</h1><p class="sub">Lifetime counts combine GitHub Releases API data with a permanent, per-asset download ledger. Live counts refresh every five minutes while open; archived totals require at least one successful GitHub Actions collection before a package is deleted.</p></div><button type="button" id="refresh">↻ Refresh counts</button></div>
 <div class="status" id="status" role="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><strong class="word" id="status-word">Checking GitHub…</strong><span id="checked" class="muted">No verified reading yet</span></div>
-<section class="overall" aria-label="Current live total"><div><h2>◈ TOTAL GITHUB PACKAGE DOWNLOADS</h2><div class="total" id="total">—</div></div><p>Official GitHub Release application-package downloads, checked live. Windows + Linux + macOS.</p></section>
+<section class="overall" aria-label="Current live total"><div><h2>◈ TOTAL GITHUB PACKAGE DOWNLOADS</h2><div class="total" id="total">—</div></div><p>Lifetime GitHub application-package downloads across all released versions, including archived counts of retired packages. Windows + Linux + macOS.</p></section>
 <section class="cards" aria-label="Live platform downloads">
 <div class="card windows"><div class="head"><span class="os-mark" aria-hidden="true">🪟</span><h3>WINDOWS EXE DOWNLOADS</h3></div><div class="num" id="windows-count">—</div><p id="windows-meta">Checking official release assets</p><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases" rel="noopener noreferrer">View Windows packages ↗</a></div>
 <div class="card linux"><div class="head"><span class="os-mark" aria-hidden="true">🐧</span><h3>LINUX APPIMAGE DOWNLOADS</h3></div><div class="num" id="linux-count">—</div><p id="linux-meta">Checking official release assets</p><a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases" rel="noopener noreferrer">View Linux packages ↗</a></div>
@@ -151,7 +151,7 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
 </section>
 
 <section aria-label="Package breakdown"><div class="section-head"><h2 class="section-title">Published package breakdown</h2><small class="note">All published releases, including beta packages</small></div><div class="table-wrap"><table><thead><tr><th>Platform</th><th>Release asset</th><th>Version</th><th>Downloads</th></tr></thead><tbody id="asset-rows"><tr><td colspan="4">Waiting for GitHub API response…</td></tr></tbody></table></div></section>
-<div class="information"><strong>What these numbers mean</strong><p>Only application packages are counted. SHA-256 files, signatures, documentation, and GitHub-generated source archives are excluded. Downloads of separate packages count separately. Deleted historical release assets cannot be reconstructed from the current GitHub API.</p><p>Live totals are fetched on opening, every five minutes while the tab is visible, and when you return. If GitHub is unreachable or rate-limited, current totals show “Unavailable” rather than silently displaying old counts. Historical archives are optional and are never required for live counting.</p></div>
+<div class="information"><strong>What these numbers mean</strong><p>Only application packages are counted. SHA-256 files, signatures, documentation, and GitHub-generated source archives are excluded. Downloads of separate packages count separately. Deleted packages are preserved from their last verified count in the permanent GitHub asset ledger, then combined with current GitHub API counts without double counting.</p><p>Published-package counts and the permanent archived asset ledger are fetched on opening, every five minutes while visible, and on return. If either source is unavailable or invalid, lifetime totals display “Unavailable” rather than losing history or silently showing partial counts.</p></div>
 <footer>Source: <a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases">Official MEDIA KOLFAT GitHub Releases</a> · <a href="https://github.com/1n50mn14c933k/MEDIA_KOLFAT/blob/main/assets/download-dashboard-history.json">Optional historical snapshots (not live)</a> · No user telemetry, login, or paid infrastructure.</footer>
 </main>
 <script>
@@ -196,6 +196,7 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
 
   // Standalone historical visualization. Never merge saved counts into live counters.
   const historyUrl="https://raw.githubusercontent.com/"+ownerRepo+"/main/assets/download-dashboard-history.json";
+  const ledgerUrl="https://raw.githubusercontent.com/"+ownerRepo+"/main/assets/download-ledger.json";
   const svgNS="http://www.w3.org/2000/svg";
   function svgEl(tag,attrs={},content){
     const n=document.createElementNS(svgNS,tag);
@@ -270,19 +271,39 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
     }
   }
 
-  function present(assets){
-    const sums={windows:0,linux:0,macos:0};
+  function lifetimeCounts(assets, ledger){
+    if(ledger?.schema_version!==1||ledger.repository!==ownerRepo||!Array.isArray(ledger.assets))throw Error("Verified lifetime ledger unavailable");
+    const totals={windows:0,linux:0,macos:0},saved=new Map(),liveIds=new Set();
+    for(const archived of ledger.assets){
+      if(!Number.isSafeInteger(archived.id)||saved.has(archived.id)||!oses.includes(archived.os)||!Number.isSafeInteger(archived.download_count)||archived.download_count<0||!["published","retired"].includes(archived.state)||typeof archived.name!=="string"||typeof archived.version!=="string")throw Error("Invalid lifetime ledger asset");
+      saved.set(archived.id,archived);
+    }
+    for(const asset of assets){
+      if(liveIds.has(asset.id))throw Error("Duplicate GitHub asset ID");
+      liveIds.add(asset.id);
+      const previous=saved.get(asset.id);
+      if(previous&&(previous.os!==asset.os||previous.name!==asset.name||previous.version!==asset.tag||asset.count<previous.download_count))throw Error("Live asset mismatches archived ledger");
+      totals[asset.os]+=asset.count;
+    }
+    for(const archived of saved.values()){
+      if(!liveIds.has(archived.id))totals[archived.os]+=archived.download_count;
+    }
+    if(ledger.totals){for(const os of oses){if(totals[os]<ledger.totals[os])throw Error("Lifetime total would decrease: "+os);}}
+    return totals;
+  }
+
+  function present(assets, totals){
     const quantities={windows:0,linux:0,macos:0};
-    for(const a of assets){sums[a.os]+=a.count;quantities[a.os]++;}
-    byId("total").textContent=fmt(sums.windows+sums.linux+sums.macos);
-    liveCounts={...sums};
+    for(const a of assets)quantities[a.os]++;
+    byId("total").textContent=fmt(totals.windows+totals.linux+totals.macos);
+    liveCounts={...totals};
     for(const os of oses){
       const value=byId(os+"-count"), meta=byId(os+"-meta");
-      if(!quantities[os]){
-        value.textContent="Not released";value.classList.add("soon");meta.textContent="No published application package";
+      if(!quantities[os]&&totals[os]===0){
+        value.textContent="Not released";value.classList.add("soon");meta.textContent="No recorded application package";
       }else{
-        value.textContent=fmt(sums[os]);value.classList.remove("soon");
-        meta.textContent=fmt(quantities[os])+" published application "+(quantities[os]===1?"package":"packages");
+        value.textContent=fmt(totals[os]);value.classList.remove("soon");
+        meta.textContent=fmt(quantities[os])+" currently published "+(quantities[os]===1?"package":"packages")+" · all versions counted";
       }
     }
     const tbody=byId("asset-rows");tbody.replaceChildren();
@@ -334,7 +355,11 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
         if(releases.length<100)break;
         if(page===10)throw Error("Pagination limit exceeded");
       }
-      present(assets);
+      const ledgerReply=await fetch(ledgerUrl,{cache:"no-store"});
+      if(!ledgerReply.ok)throw Error("Lifetime ledger HTTP "+ledgerReply.status);
+      const ledger=await ledgerReply.json();
+      const totals=lifetimeCounts(assets,ledger);
+      present(assets,totals);
       lastCompletedAt=Date.now();
       if(lastHistory)drawHistory(lastHistory.snapshots);
       setStatus("ok","LIVE DATA VERIFIED","GitHub API checked "+new Date(lastCompletedAt).toLocaleString("en-GB",{timeZone:"UTC",dateStyle:"medium",timeStyle:"short"})+" UTC");
