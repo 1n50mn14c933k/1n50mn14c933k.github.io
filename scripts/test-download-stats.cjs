@@ -23,7 +23,7 @@ const history = {
   ]
 };
 
-function runScenario(publishMac) {
+function runScenario(publishMac, includeRetired=false) {
   const nodes = new Map();
   const handlers = {};
   let failLive = false;
@@ -66,11 +66,23 @@ function runScenario(publishMac) {
     ]},
     {draft:!publishMac,tag_name:"v2.4.0-macos-beta",assets:[mac]}
   ];
+  const ledgerAssets = [
+    {id:1,name:"MEDIA_KOLFAT_2.0.0_Setup.exe",os:"windows",version:"v2.0.0",download_count:32,state:"published"},
+    {id:2,name:"MEDIA_KOLFAT_Linux_Beta_2.4.0_x86_64.AppImage",os:"linux",version:"v2.4.0-linux-beta",download_count:1,state:"published"},
+    ...(publishMac?[{id:3,name:mac.name,os:"macos",version:"v2.4.0-macos-beta",download_count:0,state:"published"}]:[]),
+    ...(includeRetired?[
+      {id:101,name:"MEDIA_KOLFAT_1.0_Setup.exe",os:"windows",version:"v1.0.0",download_count:9,state:"retired"},
+      {id:102,name:"MEDIA_KOLFAT_Linux_1.0.AppImage",os:"linux",version:"v1.0.0",download_count:4,state:"retired"},
+      {id:103,name:"MEDIA_KOLFAT_macOS_1.0.dmg",os:"macos",version:"v1.0.0",download_count:2,state:"retired"}
+    ]:[])
+  ];
+  const ledger={schema_version:1,repository:"1n50mn14c933k/MEDIA_KOLFAT",assets:ledgerAssets,totals:{windows:32+(includeRetired?9:0),linux:1+(includeRetired?4:0),macos:includeRetired?2:0}};
   const fetch=async url=>{
     if(url.includes("/releases?")){
       if(failLive) return {ok:false,status:403};
       return {ok:true,json:async()=>releases};
     }
+    if(url.includes("download-ledger.json"))return {ok:true,json:async()=>ledger};
     if(url.includes("download-dashboard-history.json"))
       return {ok:true,json:async()=>history};
     throw Error("Unexpected network dependency "+url);
@@ -102,5 +114,12 @@ async function settle() {
     assert.equal(app.element("status").className,"status fail");
     assert.equal(app.element("total").textContent,"Unavailable");
   }
+  const retired=runScenario(false,true);
+  await settle();
+  assert.equal(retired.element("windows-count").textContent,"41");
+  assert.equal(retired.element("linux-count").textContent,"5");
+  assert.equal(retired.element("macos-count").textContent,"2");
+  assert.equal(retired.element("total").textContent,"48");
+  assert.equal(retired.element("status").className,"status ok");
   console.log("PASS: live API, published/draft macOS, checksum exclusion, chart, error behavior.");
 })().catch(e=>{console.error(e);process.exitCode=1;});
