@@ -349,7 +349,7 @@ main{max-width:1250px}.heading h1{letter-spacing:-.05em}
             if(!Number.isSafeInteger(a.download_count)||a.download_count<0||!Number.isSafeInteger(a.id))throw Error("Invalid asset count");
             if(ids.has(a.id))continue;
             ids.add(a.id);
-            assets.push({os:os,name:String(a.name),count:a.download_count,tag:String(r.tag_name||"")});
+            assets.push({id:a.id,os:os,name:String(a.name),count:a.download_count,tag:String(r.tag_name||"")});
           }
         }
         if(releases.length<100)break;
