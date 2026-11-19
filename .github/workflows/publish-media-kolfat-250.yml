@@ -1,0 +1,49 @@
+name: Publish MEDIA KOLFAT 2.5.0 site content on staging branch
+on:
+  push:
+    branches: [fix/launch-media-kolfat-250-20261119]
+    paths:
+      - scripts/publish-media-kolfat-250.py
+      - .github/workflows/publish-media-kolfat-250.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: kolfat-site-v250-staging
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: true
+      - name: Apply localized production release changes
+        run: |
+          python3 scripts/publish-media-kolfat-250.py
+          python3 - <<'PY'
+          import pathlib
+          langs = 'en de fa es fr pt it ja zh hi ru ar'.split()
+          for lang in langs:
+              for path in (f'{lang}/index.html', f'{lang}/Media_Kolfat/index.html', 'download/index.html' if lang == 'en' else f'{lang}/download/index.html'):
+                  text=pathlib.Path(path).read_text(encoding='utf-8')
+                  assert 'releases/tag/v2.5.0' in text, path
+                  assert 'releases/tag/v2.0.0' not in text, path
+                  assert 'coming soon' not in text.lower(), path
+                  assert '2.5.0.0' not in text, path
+          print('PASS: 36 pages verified for current GitHub v2.5.0 release')
+          PY
+      - name: Commit generated website changes to staging branch
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add en/index.html de/index.html fa/index.html es/index.html fr/index.html pt/index.html it/index.html ja/index.html zh/index.html hi/index.html ru/index.html ar/index.html
+          for lang in en de fa es fr pt it ja zh hi ru ar; do
+            git add "$lang/Media_Kolfat/index.html"
+            if [ "$lang" = en ]; then git add download/index.html; else git add "$lang/download/index.html"; fi
+          done
+          git diff --cached --quiet && exit 0
+          git commit -m "Release: publish Windows 2.5.0 website information in all 12 languages"
+          git push origin HEAD:fix/launch-media-kolfat-250-20261119
