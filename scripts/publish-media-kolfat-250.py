@@ -230,6 +230,7 @@ def update_page(path, lang, kind):
     assert content.count("releases/tag/v2.0.0") == 1, f"{path}: expected old Windows download button"
     content = content.replace("releases/tag/v2.0.0", "releases/tag/v2.5.0")
     # Correct stale homepage/download SEO metadata, hero release labels and descriptions.
+    content = content.replace("2.0.0.0", "Store version may differ")
     content = content.replace("2.0.0", "2.5.0")
     # Do not claim a Microsoft Store 2.5.0.0 rollout that hasn't been verified.
     assert "2.5.0.0" not in content, f"{path}: unverified Store version"
