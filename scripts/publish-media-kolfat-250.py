@@ -202,7 +202,7 @@ def update_page(path, lang, kind):
     texts = I18N[lang]
     if kind == "home":
         # Preserve the established home hero and download button styling.
-        pattern = r'<p id="kf-v250-preview"\b[^>]*>.*?</p>'
+        pattern = r'<p id="kf-v250-preview"[^>]*>.*?</p>'
         replacement = (
             '<p id="kf-v250-preview" style="max-width:740px;margin:10px 0 18px;'
             'font:600 13px/1.6 Segoe UI,Arial,sans-serif;color:#eee">'
@@ -213,11 +213,11 @@ def update_page(path, lang, kind):
         content, n = re.subn(pattern, lambda _: replacement, content, count=1, flags=re.S)
         assert n == 1, f"{path}: preview teaser missing"
     elif kind == "product":
-        pattern = r'<section id="kf-v250-preview"\b.*?</section>'
+        pattern = r'<section id="kf-v250-preview".*?</section>'
         content, n = re.subn(pattern, lambda _: product_box(lang, texts), content, count=1, flags=re.S)
         assert n == 1 and '<section class="kf-product-all"' in content, f"{path}: product preview/catalog missing"
     else:
-        pattern = r'<section id="kf-v250-preview"\b.*?</section>'
+        pattern = r'<section id="kf-v250-preview".*?</section>'
         content, n = re.subn(pattern, "", content, count=1, flags=re.S)
         assert n == 1, f"{path}: prior draft preview missing"
         # Replace the obsolete 2.0 "What's New" feature gallery, not the entire page.
