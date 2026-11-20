@@ -1,6 +1,6 @@
 # KOLFAT Production Website
 
-This repository contains the **production static website for KOLFAT**.
+This repository contains the **production static website for KOLFAT**.\n\n**Repository audit (November 20, 2026):** See [current operational findings](docs/GITHUB_ACCOUNT_AUDIT_2026-11-20.md).
 
 **Live domain:** https://kolfat.app/
 
@@ -24,11 +24,11 @@ The site is hosted with **GitHub Pages** and uses the custom domain defined in `
 
 ## MEDIA KOLFAT
 
-**MEDIA KOLFAT 2.0.0 is now available through Microsoft Store and official GitHub Windows EXE downloads.** 🎉
+**MEDIA KOLFAT 2.5.0 Windows Stable is published on GitHub; Linux and macOS Apple Silicon 2.4.0 Public Betas are also available.**
 
-**Current release:** **2.0.0** (Windows Microsoft Store package **2.0.0.0**, published October 27, 2026). The website's 12 localized product pages were refreshed on October 22, 2026. Read the [website update and audit log](docs/WEBSITE_UPDATES.md).
+**Current Windows GitHub release:** **2.5.0**, published November 19, 2026. Verify Microsoft Store package status separately. Read the [website update and audit log](docs/WEBSITE_UPDATES.md).
 
-- Windows EXE on GitHub: https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases/tag/v2.0.0
+- Windows EXE on GitHub: https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases/tag/v2.5.0\n- Linux Public Beta: https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases/tag/v2.4.0-linux-beta\n- macOS Apple Silicon Public Beta: https://github.com/1n50mn14c933k/MEDIA_KOLFAT/releases/tag/v2.4.0-macos-beta
 - Microsoft Store: https://apps.microsoft.com/detail/9p0x091t7mv4?ocid=webpdpshare
 - Product page: https://kolfat.app/en/Media_Kolfat/
 
@@ -63,7 +63,7 @@ The [complete illustrated user guide](https://kolfat.app/guides/media-kolfat-2-u
 
 KOLFAT TOOLS has **four collections of twelve individual tools each**. The main `/tools/` page is a compact category dashboard; all tools have their own stable URLs. Each tool performs local browser-side processing and does not send input to a KOLFAT processing backend. The privacy notice is shown once on the main TOOLS dashboard; individual tools retain their own limitations and relevant safety warnings.
 
-**Language status:** the 48 tools and their four category pages remain **English-only** as of October 25, 2026. The general website already supports twelve languages, but a multilingual tools release **has not yet been implemented**.
+**Language status (November 20, 2026):** The website supports 12 languages and localized TOOLS routes exist, including German and Persian. This inventory does not prove full translation coverage of every tool. Confirm route, functionality and translated content before announcing complete localization.
 
 - [Tool inventory, source architecture, security boundaries and localization plan](docs/TOOLS_PLATFORM.md)
 - [October 25 UI audit and visual regression scope](docs/UI_DESIGN_AUDIT_2026-10-25.md)
@@ -77,7 +77,7 @@ Every rendered page uses the shared header and an aligned divider. MENU entries 
 
 ## Website navigation (desktop and mobile)
 
-The site uses a common **KOLFAT MENU** dropdown at the top right. The language switcher is a separate control on multilingual marketing pages, next to MENU. The current English-only tools template has its own shared header without a localized tools language switcher. The brand logo remains on the top left. There is no second link/button row in the homepage hero/footer and no floating CONTACT overlay.
+The site uses a common **KOLFAT MENU** dropdown at the top right. The language switcher is a separate control on multilingual marketing pages, next to MENU. Tool template and language-switch behavior must be confirmed against each deployed locale. The brand logo remains on the top left. There is no second link/button row in the homepage hero/footer and no floating CONTACT overlay.
 
 MENU contains Home, MEDIA KOLFAT, Download, About, Guides, Support, Contact (mailto), X, YouTube, TikTok and GitHub. Localized navigation maintains the current language for Home, MEDIA KOLFAT and Support; About, Download, Guides, and the five article pages are localized into all twelve site languages.
 
@@ -85,7 +85,7 @@ The site-wide implementation is documented at [docs/NAVIGATION.md](docs/NAVIGATI
 
 ## Multilingual About, Download, and Guides
 
-All **12 supported languages** have their own About, Download, Guides hub and five photo-organization guides. English uses `/about/`, `/download/`, and `/guides/`; other languages use `/<lang>/about/`, `/<lang>/download/`, and `/<lang>/guides/`. Every article has a corresponding localized path.
+All **12 supported languages** have localized About, Download and Guides routes. Older guide pages can remain in the repository, but only reviewed guidance should be promoted publicly. English uses `/about/`, `/download/`, and `/guides/`; other languages use `/<lang>/about/`, `/<lang>/download/`, and `/<lang>/guides/`. The MEDIA KOLFAT user guide is the public guidance to prioritize; verify hubs and links before claiming additional guides are supported.
 
 The rollout keeps self-canonical URLs, reciprocal `hreflang` and `x-default`, structured data, and language-specific menu links. Translation sources live in `.github/i18n/`; see [docs/NAVIGATION.md](docs/NAVIGATION.md) for implementation and testing details.
 
