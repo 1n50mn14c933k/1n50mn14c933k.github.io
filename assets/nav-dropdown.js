@@ -655,10 +655,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
     if (!logo || logo.querySelector(".kf-header-maid")) return;
     const wordmark = logo.querySelector('img[src*="kolfat-logo.webp"]');
     if (!wordmark) return;
-    const style = document.createElement("link");
-    style.rel = "stylesheet";
-    style.href = "/assets/kolfat-header-maid.css?v=20261028-brand-all-pages2";
-    document.head.append(style);
+    // Header mascot CSS is preloaded by nav-dropdown.css; no late style recalculation.
     const mascot = document.createElement("img");
     mascot.className = "kf-header-maid";
     mascot.src = "/assets/kolfat-maid-header.webp?v=20261028-1";
