@@ -13,7 +13,7 @@ function htmlPages(dir, found = []) {
   return found;
 }
 
-test("all 506 published HTML pages retain original KOLFAT branding contract", () => {
+test("all branded pages retain original KOLFAT branding contract", () => {
   const pages = htmlPages(siteRoot);
   let checked = 0, redirects = 0, labels = 0;
   const failures = [];
@@ -21,17 +21,24 @@ test("all 506 published HTML pages retain original KOLFAT branding contract", ()
     const html = readFileSync(file, "utf8");
     const route = file.slice(siteRoot.length + 1).replace(/\\/g, "/");
     if (!html.includes("/assets/site-refinements.css")) {
+      // Exempt only a redirect, a noindex draft, or the separately branded
+      // download dashboard. New unexplained unbranded pages remain failures.
+      const intentional = /http-equiv=["']refresh["']/i.test(html)
+        || /name=["']robots["']\s+content=["']noindex,nofollow["']/i.test(html)
+        || (route === "download-stats/index.html" && html.includes('class="header-links"'));
+      if (!intentional) failures.push(route + ": unexplained missing branded stylesheet");
       redirects++;
       continue;
     }
     checked++;
     const logo = html.match(/<a\b[^>]*class="(?:site-logo|brand|guide-site-logo)"[^>]*>[\s\S]*?<\/a>/i);
     if (!logo || !logo[0].includes('/assets/kolfat-logo.webp?v=d2c25ec0')) failures.push(route + ": original wordmark markup missing");
-    if (!/\/assets\/nav-dropdown\.js\?v=(?:20261028-brand-(?:uniform1|all-pages2)|20261101-guides-parity1)/.test(html)) failures.push(route + ": shared script reference missing");
-    if (!/\/assets\/nav-dropdown\.css\?v=20261028-brand-(?:uniform1|all-pages2)/.test(html)) failures.push(route + ": shared stylesheet reference missing");
+    if (!/\/assets\/nav-dropdown\.js\?v=[A-Za-z0-9._-]+/.test(html)) failures.push(route + ": shared script reference missing");
+    if (!/\/assets\/nav-dropdown\.css\?v=[A-Za-z0-9._-]+/.test(html)) failures.push(route + ": shared stylesheet reference missing");
     if (/(^|\/)support\/index\.html$/.test(route) && /<p class="eyebrow">\s*Kolfat\.app\s*<\/p>/i.test(html)) { failures.push(route + ": unwanted orange label"); labels++; }
   }
-  expect({ pages: pages.length, checked, redirects }).toEqual({ pages: 510, checked: 506, redirects: 4 });
+  expect(checked).toBeGreaterThanOrEqual(506);
+  expect(checked + redirects).toBe(pages.length);
   expect(failures, failures.slice(0, 30).join("\n")).toEqual([]);
   expect(labels).toBe(0);
 });

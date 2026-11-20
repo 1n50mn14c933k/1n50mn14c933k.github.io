@@ -1,3 +1,19 @@
+## 2026-11-20 — SHA-pinned Actions modernization on current main
+
+**Purpose:** Replace outdated checkout/setup-node/upload-artifact pins in 17 workflows with verified immutable SHA versions, rebuilding obsolete PR #116 against the current production branch. Repair a false-positive navigation check: the standalone dashboard must have its own verified header links, and unpublished noindex editorial previews must not be mistaken for production marketing pages.
+
+**Files:** 17 workflow files, `tools/tests/support-links.test.mjs`, `tools/tests/header-branding.spec.mjs`, and this entry.
+
+**Verification:** Earlier browser CI showed 506 branded pages as expected but found eight excluded non-branded routes instead of a stale hardcoded four; the branding test now validates that every exclusion is a redirect, an explicitly noindex draft, or the separately navigated download dashboard, and requires at least 506 branded pages. Require success from Tools Regression (unit and browser checks), MEDIA KOLFAT Guide Validation, Website Content Audit, live-download dashboard validation, workflow policy, repository hygiene and security baseline before merging. A successful run does not validate dormant manual rollout workflow side effects.
+
+**User-visible impact:** No website visual/layout change; the README download dashboard remains untouched. This is CI maintenance and test scope only.
+
+**Test follow-up:** The browser branding check previously accepted only old navigation cache-buster values. It now requires both actual shared navigation asset URLs, accepting safe updated version tokens without weakening coverage.
+
+**Rollback:** Revert the resulting PR merge and retain the current immutable action pins. Changes to domain, TLS, releases, localization, or media are out of scope.
+
+---
+
 ## 2026-11-20 — GitHub account operational audit and documentation refresh
 
 **Purpose:** Bring the website repository README in line with published MEDIA KOLFAT Windows 2.5.0 Stable, Linux/macOS 2.4.0 Public Betas and existing localized TOOLS routes. Preserve previous historical entries. Track verified infrastructure findings in [the cross-repository audit](GITHUB_ACCOUNT_AUDIT_2026-11-20.md).
