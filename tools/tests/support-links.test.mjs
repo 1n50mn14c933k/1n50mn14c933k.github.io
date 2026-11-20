@@ -40,6 +40,15 @@ test("every visible website HTML page includes shared nav code and MENU control"
  const pages=walk(root),issues=[];let checked=0;
  for(const file of pages){
   const src=readFileSync(file,"utf8"),name=file.href.replace(root.href,"");
+  // Dashboard has its own independent navigation, verified directly.
+  if(name==="download-stats/index.html"){
+   assert.match(src,/class="header-links"/,"Dashboard navigation must be present");
+   assert.match(src,/href="\/download\/"/,"Dashboard download link is required");
+   assert.match(src,/href="https:\/\/github\.com\/1n50mn14c933k\/MEDIA_KOLFAT"/,"Official GitHub link is required");
+   checked++;continue;
+  }
+  // Noindex editorial review previews are intentionally separate from public navigation.
+  if(name.startsWith("guides/review-english/")&&src.includes('name="robots" content="noindex,nofollow"'))continue;
   if(!src.includes("class=\"top-nav\"")){
    if(src.includes("http-equiv=\"refresh\"")||src.includes("http-equiv='refresh'"))continue;
    issues.push(name+" missing header nav");continue;
