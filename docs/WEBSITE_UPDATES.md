@@ -1,3 +1,19 @@
+## 2026-11-20 — GitHub account operational audit and documentation refresh
+
+**Purpose:** Bring the website repository README in line with published MEDIA KOLFAT Windows 2.5.0 Stable, Linux/macOS 2.4.0 Public Betas and existing localized TOOLS routes. Preserve previous historical entries. Track verified infrastructure findings in [the cross-repository audit](GITHUB_ACCOUNT_AUDIT_2026-11-20.md).
+
+**Changed files:** `README.md`, `docs/GITHUB_ACCOUNT_AUDIT_2026-11-20.md`, `docs/WEBSITE_UPDATES.md`.
+
+**Verification:** GitHub release tags and downloadable asset inventory inspected; recent website Pages deployment, security-baseline and hygiene runs previously passed. Documentation changes require repository CI, review of rendered Markdown and link checks before merge. No claims of exhaustive browser validation or full translated tool coverage.
+
+**User-visible effect:** Documentation accurately labels platform versions and links. No deployed page content, DNS, certificates, installers or binaries are changed.
+
+**Known issue:** The [origin TLS monitor](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/actions/runs/44765222494) found a direct-origin certificate expiring December 1, 2026; [issue #128](https://github.com/1n50mn14c933k/1n50mn14c933k.github.io/issues/128) tracks follow-up.
+
+**Rollback:** Revert this documentation PR without changing production content.
+
+---
+
 ## 2026-10-28 — GitHub maid-support wording synchronization
 
 Documented the exact Ko-fi message **🧹🪣❤️ Keep Our Maid Alive, Strong & Cleaning!** for both GitHub READMEs and all six MEDIA KOLFAT release descriptions. Updated current-state website funding/navigation docs without changing the deployed website, payment destination, or scripts. The existing website mobile control reveals the localized support message when tapped. Verify the GitHub profile and MEDIA KOLFAT release-note sync workflow. Rollback by reverting these documentation changes without affecting live header code.
