@@ -7,6 +7,12 @@
       const name = visible && visible.textContent.replace(/\s+/g, " ").trim();
       if (name) link.setAttribute("aria-label", name);
     });
+    document.querySelectorAll(".kf-home-downloads a.kf-appagg-badge").forEach(link => {
+      const name = Array.from(link.children)
+        .filter(node => !node.classList.contains("kf-appagg-gem"))
+        .map(node => node.textContent.trim()).filter(Boolean).join(" ");
+      if (name) link.setAttribute("aria-label", name + ". Opens AppAgg for the latest score.");
+    });
   };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", sync, { once: true });
   else sync();
