@@ -2,9 +2,9 @@
 
 **Purpose:** Replace outdated checkout/setup-node/upload-artifact pins in 17 workflows with verified immutable SHA versions, rebuilding obsolete PR #116 against the current production branch. Repair a false-positive navigation check: the standalone dashboard must have its own verified header links, and unpublished noindex editorial previews must not be mistaken for production marketing pages.
 
-**Files:** 17 workflow files, `tools/tests/support-links.test.mjs`, and this entry.
+**Files:** 17 workflow files, `tools/tests/support-links.test.mjs`, `tools/tests/header-branding.spec.mjs`, and this entry.
 
-**Verification:** Require success from Tools Regression (unit and browser checks), MEDIA KOLFAT Guide Validation, Website Content Audit, live-download dashboard validation, workflow policy, repository hygiene and security baseline before merging. A successful run does not validate dormant manual rollout workflow side effects.
+**Verification:** Earlier browser CI showed 506 branded pages as expected but found eight excluded non-branded routes instead of a stale hardcoded four; the branding test now validates that every exclusion is a redirect, an explicitly noindex draft, or the separately navigated download dashboard, and requires at least 506 branded pages. Require success from Tools Regression (unit and browser checks), MEDIA KOLFAT Guide Validation, Website Content Audit, live-download dashboard validation, workflow policy, repository hygiene and security baseline before merging. A successful run does not validate dormant manual rollout workflow side effects.
 
 **User-visible impact:** No website visual/layout change; the README download dashboard remains untouched. This is CI maintenance and test scope only.
 
