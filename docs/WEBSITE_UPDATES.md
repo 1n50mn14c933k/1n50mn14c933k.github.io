@@ -8,6 +8,8 @@
 
 **User-visible impact:** No website visual/layout change; the README download dashboard remains untouched. This is CI maintenance and test scope only.
 
+**Test follow-up:** The browser branding check previously accepted only old navigation cache-buster values. It now requires both actual shared navigation asset URLs, accepting safe updated version tokens without weakening coverage.
+
 **Rollback:** Revert the resulting PR merge and retain the current immutable action pins. Changes to domain, TLS, releases, localization, or media are out of scope.
 
 ---
