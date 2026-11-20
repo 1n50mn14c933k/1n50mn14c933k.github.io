@@ -1,3 +1,23 @@
+/* Match interactive download badges' accessible names to their visible labels.
+   Lighthouse identified mismatches in the homepage CTA group. */
+(() => {
+  const sync = () => {
+    document.querySelectorAll(".kf-home-downloads a.kf-download-button").forEach(link => {
+      const visible = link.querySelector(".kf-download-copy");
+      const name = visible && visible.textContent.replace(/\s+/g, " ").trim();
+      if (name) link.setAttribute("aria-label", name);
+    });
+    document.querySelectorAll(".kf-home-downloads a.kf-appagg-badge").forEach(link => {
+      const name = Array.from(link.children)
+        .filter(node => !node.classList.contains("kf-appagg-gem"))
+        .map(node => node.textContent.trim()).filter(Boolean).join(" ");
+      if (name) link.setAttribute("aria-label", name + ". Opens AppAgg for the latest score.");
+    });
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", sync, { once: true });
+  else sync();
+})();
+
 /* Keep the KOLFAT menu and language chooser mutually exclusive. */
 (() => {
   const init = () => {
@@ -655,10 +675,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
     if (!logo || logo.querySelector(".kf-header-maid")) return;
     const wordmark = logo.querySelector('img[src*="kolfat-logo.webp"]');
     if (!wordmark) return;
-    const style = document.createElement("link");
-    style.rel = "stylesheet";
-    style.href = "/assets/kolfat-header-maid.css?v=20261028-brand-all-pages2";
-    document.head.append(style);
+    // Header mascot CSS is preloaded by nav-dropdown.css; no late style recalculation.
     const mascot = document.createElement("img");
     mascot.className = "kf-header-maid";
     mascot.src = "/assets/kolfat-maid-header.webp?v=20261028-1";
