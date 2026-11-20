@@ -37,7 +37,8 @@ test("all branded pages retain original KOLFAT branding contract", () => {
     if (!/\/assets\/nav-dropdown\.css\?v=20261028-brand-(?:uniform1|all-pages2)/.test(html)) failures.push(route + ": shared stylesheet reference missing");
     if (/(^|\/)support\/index\.html$/.test(route) && /<p class="eyebrow">\s*Kolfat\.app\s*<\/p>/i.test(html)) { failures.push(route + ": unwanted orange label"); labels++; }
   }
-  expect(checked).toBeGreaterThanOrEqual(506);\n  expect(checked + redirects).toBe(pages.length);
+  expect(checked).toBeGreaterThanOrEqual(506);
+  expect(checked + redirects).toBe(pages.length);
   expect(failures, failures.slice(0, 30).join("\n")).toEqual([]);
   expect(labels).toBe(0);
 });
