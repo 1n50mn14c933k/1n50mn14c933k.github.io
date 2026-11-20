@@ -1,3 +1,17 @@
+/* Match interactive download badges' accessible names to their visible labels.
+   Lighthouse identified mismatches in the homepage CTA group. */
+(() => {
+  const sync = () => {
+    document.querySelectorAll(".kf-home-downloads a.kf-download-button").forEach(link => {
+      const visible = link.querySelector(".kf-download-copy");
+      const name = visible && visible.textContent.replace(/\s+/g, " ").trim();
+      if (name) link.setAttribute("aria-label", name);
+    });
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", sync, { once: true });
+  else sync();
+})();
+
 /* Keep the KOLFAT menu and language chooser mutually exclusive. */
 (() => {
   const init = () => {
