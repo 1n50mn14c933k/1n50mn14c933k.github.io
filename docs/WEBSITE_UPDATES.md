@@ -1,3 +1,15 @@
+## 2026-11-20 — Actions dependency maintenance and navigation test boundary
+
+**Purpose:** Upgrade SHA-pinned checkout/setup-node/upload-artifact workflow actions in the Dependabot group while preserving the current business logic. Correct the navigation unit-test boundary so the separate download dashboard is validated for its own header links and unpublished noindex editorial preview pages are not incorrectly treated as public marketing pages.
+
+**Changed files:** Pinned workflow action versions included in PR #116, `tools/tests/support-links.test.mjs`, this audit record. No application releases, counters, media or DNS are modified.
+
+**Verification:** Run Tools Regression unit/browser checks, security baseline, repository hygiene, guide workflow, and Workflow Supply Chain Policy against the updated PR. Previous unit failure reported four pages without marketing MENU markup; the dashboard has a separate navigation system and the three draft pages use `noindex,nofollow`. This is a scoped exception with assertions, not blanket suppression.
+
+**Risk / rollback:** Major action updates may change runtime requirements. If any regression appears, revert the merged PR; preserve current pinned 40-character hashes and original workflow permissions. No production page layout is changed.
+
+---
+
 ## 2026-10-28 — GitHub maid-support wording synchronization
 
 Documented the exact Ko-fi message **🧹🪣❤️ Keep Our Maid Alive, Strong & Cleaning!** for both GitHub READMEs and all six MEDIA KOLFAT release descriptions. Updated current-state website funding/navigation docs without changing the deployed website, payment destination, or scripts. The existing website mobile control reveals the localized support message when tapped. Verify the GitHub profile and MEDIA KOLFAT release-note sync workflow. Rollback by reverting these documentation changes without affecting live header code.
