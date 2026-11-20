@@ -1,3 +1,17 @@
+## 2026-11-20 — SHA-pinned Actions modernization on current main
+
+**Purpose:** Replace outdated checkout/setup-node/upload-artifact pins in 17 workflows with verified immutable SHA versions, rebuilding obsolete PR #116 against the current production branch. Repair a false-positive navigation check: the standalone dashboard must have its own verified header links, and unpublished noindex editorial previews must not be mistaken for production marketing pages.
+
+**Files:** 17 workflow files, `tools/tests/support-links.test.mjs`, and this entry.
+
+**Verification:** Require success from Tools Regression (unit and browser checks), MEDIA KOLFAT Guide Validation, Website Content Audit, live-download dashboard validation, workflow policy, repository hygiene and security baseline before merging. A successful run does not validate dormant manual rollout workflow side effects.
+
+**User-visible impact:** No website visual/layout change; the README download dashboard remains untouched. This is CI maintenance and test scope only.
+
+**Rollback:** Revert the resulting PR merge and retain the current immutable action pins. Changes to domain, TLS, releases, localization, or media are out of scope.
+
+---
+
 ## 2026-11-20 — GitHub account operational audit and documentation refresh
 
 **Purpose:** Bring the website repository README in line with published MEDIA KOLFAT Windows 2.5.0 Stable, Linux/macOS 2.4.0 Public Betas and existing localized TOOLS routes. Preserve previous historical entries. Track verified infrastructure findings in [the cross-repository audit](GITHUB_ACCOUNT_AUDIT_2026-11-20.md).
