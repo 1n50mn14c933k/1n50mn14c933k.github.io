@@ -40,6 +40,18 @@ test("every visible website HTML page includes shared nav code and MENU control"
  const pages=walk(root),issues=[];let checked=0;
  for(const file of pages){
   const src=readFileSync(file,"utf8"),name=file.href.replace(root.href,"");
+  // The separate download-statistics application has its own accessible
+  // header navigation; do not require the marketing site's MENU chrome there.
+  if(name==="download-stats/index.html"){
+   assert.match(src,/class="header-links"/,"Dashboard header links must remain present");
+   assert.match(src,/href="\/download\/"/,"Dashboard must link to downloads");
+   assert.match(src,/href="https:\/\/github\.com\/1n50mn14c933k\/MEDIA_KOLFAT"/,"Dashboard must link to official GitHub");
+   checked++;
+   continue;
+  }
+  // Unpublished editorial previews are intentionally noindex and have their
+  // own simple review header rather than public navigation.
+  if(name.startsWith("guides/review-english/") && src.includes('name="robots" content="noindex,nofollow"'))continue;
   if(!src.includes("class=\"top-nav\"")){
    if(src.includes("http-equiv=\"refresh\"")||src.includes("http-equiv='refresh'"))continue;
    issues.push(name+" missing header nav");continue;
